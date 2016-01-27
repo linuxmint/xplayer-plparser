@@ -1,6 +1,6 @@
-# Brazilian Portuguese translation of Totem.
+# Brazilian Portuguese translation of Xplayer.
 # Copyright (C) 2002-2014 Free Software Foundation, Inc.
-# This file is distributed under the same license as the totem package.
+# This file is distributed under the same license as the xplayer package.
 # Welther José O. Esteves <weltherjoe@yahoo.com.br>, 2004.
 # Afonso Celso Medina <afmedina@uol.com.br>, 2005.
 # Evandro Fernandes Giovanini <evandrofg@ig.com.br>, 2005
@@ -15,9 +15,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: totem\n"
+"Project-Id-Version: xplayer\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=totem&keywords=I18N+L10N&component=playlist parser\n"
+"product=xplayer&keywords=I18N+L10N&component=playlist parser\n"
 "POT-Creation-Date: 2014-01-21 17:48+0000\n"
 "PO-Revision-Date: 2014-02-01 09:13-0300\n"
 "Last-Translator: Enrico Nicoletto <liverig@gmail.com>\n"
@@ -29,38 +29,38 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Poedit 1.6.3\n"
 
-#: ../plparse/totem-disc.c:276 ../plparse/totem-disc.c:289
-#: ../plparse/totem-disc.c:533
+#: ../plparse/xplayer-disc.c:276 ../plparse/xplayer-disc.c:289
+#: ../plparse/xplayer-disc.c:533
 #, c-format
 msgid "Failed to mount %s."
 msgstr "Falha ao montar %s."
 
-#: ../plparse/totem-disc.c:418
+#: ../plparse/xplayer-disc.c:418
 #, c-format
 msgid "No media in drive for device '%s'."
 msgstr "Nenhuma mídia no drive para o dispositivo \"%s\"."
 
-#: ../plparse/totem-disc.c:476
+#: ../plparse/xplayer-disc.c:476
 #, c-format
 msgid "Please check that a disc is present in the drive."
 msgstr "Por favor, verifique se há um disco presente no drive."
 
-#: ../plparse/totem-disc.c:947
+#: ../plparse/xplayer-disc.c:947
 msgid "Audio CD"
 msgstr "CD de áudio"
 
-#: ../plparse/totem-disc.c:949
+#: ../plparse/xplayer-disc.c:949
 msgid "Video CD"
 msgstr "CD de vídeo"
 
-#: ../plparse/totem-disc.c:951
+#: ../plparse/xplayer-disc.c:951
 msgid "DVD"
 msgstr "DVD"
 
-#: ../plparse/totem-disc.c:953
+#: ../plparse/xplayer-disc.c:953
 msgid "Digital Television"
 msgstr "TV digital"
 
-#: ../plparse/totem-disc.c:955
+#: ../plparse/xplayer-disc.c:955
 msgid "Blu-ray"
 msgstr "Blu-ray"

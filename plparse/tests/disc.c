@@ -23,17 +23,17 @@
 #include <glib.h>
 #include <gio/gio.h>
 
-#include "totem-disc.h"
+#include "xplayer-disc.h"
 
 static void
 test_disc (gconstpointer data)
 {
-	TotemDiscMediaType type;
+	XplayerDiscMediaType type;
 	GError *error = NULL;
 	char *mrl = NULL;
 	const char *device = (const char*) data;
 
-	type = totem_cd_detect_type_with_url (device, &mrl, &error);
+	type = xplayer_cd_detect_type_with_url (device, &mrl, &error);
 
 	if (type == MEDIA_TYPE_ERROR) {
 		GList *or, *list;
@@ -77,7 +77,7 @@ test_disc (gconstpointer data)
 	}
 
 	if (type != MEDIA_TYPE_DATA)
-		g_message ("%s contains a %s.", device, totem_cd_get_human_readable_name (type));
+		g_message ("%s contains a %s.", device, xplayer_cd_get_human_readable_name (type));
 	else
 		g_message ("%s contains a data disc", device);
 	g_assert (mrl != NULL);

@@ -25,30 +25,30 @@
 #include <string.h>
 #include <glib.h>
 
-#ifndef TOTEM_PL_PARSER_MINI
+#ifndef XPLAYER_PL_PARSER_MINI
 
-#include "totem-pl-parser.h"
-#include "totem-disc.h"
-#endif /* !TOTEM_PL_PARSER_MINI */
+#include "xplayer-pl-parser.h"
+#include "xplayer-disc.h"
+#endif /* !XPLAYER_PL_PARSER_MINI */
 
-#include "totem-pl-parser-mini.h"
-#include "totem-pl-parser-misc.h"
-#include "totem-pl-parser-private.h"
+#include "xplayer-pl-parser-mini.h"
+#include "xplayer-pl-parser-misc.h"
+#include "xplayer-pl-parser-private.h"
 
-#ifndef TOTEM_PL_PARSER_MINI
-TotemPlParserResult
-totem_pl_parser_add_gvp (TotemPlParser *parser,
+#ifndef XPLAYER_PL_PARSER_MINI
+XplayerPlParserResult
+xplayer_pl_parser_add_gvp (XplayerPlParser *parser,
 			 GFile *file,
 			 GFile *base_file,
-			 TotemPlParseData *parse_data,
+			 XplayerPlParseData *parse_data,
 			 gpointer data)
 {
-	TotemPlParserResult retval = TOTEM_PL_PARSER_RESULT_UNHANDLED;
+	XplayerPlParserResult retval = XPLAYER_PL_PARSER_RESULT_UNHANDLED;
 	char *contents, **lines, *title, *url_link, *version;
 	gsize size;
 
 	if (g_file_load_contents (file, NULL, &contents, &size, NULL, NULL) == FALSE)
-		return TOTEM_PL_PARSER_RESULT_ERROR;
+		return XPLAYER_PL_PARSER_RESULT_ERROR;
 
 	if (g_str_has_prefix (contents, "#.download.the.free.Google.Video.Player") == FALSE && g_str_has_prefix (contents, "# download the free Google Video Player") == FALSE) {
 		g_free (contents);
@@ -59,7 +59,7 @@ totem_pl_parser_add_gvp (TotemPlParser *parser,
 	g_free (contents);
 
 	/* We only handle GVP version 1.1 for now */
-	version = totem_pl_parser_read_ini_line_string_with_sep (lines, "gvp_version", ":");
+	version = xplayer_pl_parser_read_ini_line_string_with_sep (lines, "gvp_version", ":");
 	if (version == NULL || strcmp (version, "1.1") != 0) {
 		g_free (version);
 		g_strfreev (lines);
@@ -67,17 +67,17 @@ totem_pl_parser_add_gvp (TotemPlParser *parser,
 	}
 	g_free (version);
 
-	url_link = totem_pl_parser_read_ini_line_string_with_sep (lines, "url", ":");
+	url_link = xplayer_pl_parser_read_ini_line_string_with_sep (lines, "url", ":");
 	if (url_link == NULL) {
 		g_strfreev (lines);
 		return retval;
 	}
 
-	retval = TOTEM_PL_PARSER_RESULT_SUCCESS;
+	retval = XPLAYER_PL_PARSER_RESULT_SUCCESS;
 
-	title = totem_pl_parser_read_ini_line_string_with_sep (lines, "title", ":");
+	title = xplayer_pl_parser_read_ini_line_string_with_sep (lines, "title", ":");
 
-	totem_pl_parser_add_one_uri (parser, url_link, title);
+	xplayer_pl_parser_add_one_uri (parser, url_link, title);
 
 	g_free (url_link);
 	g_free (title);
@@ -86,18 +86,18 @@ totem_pl_parser_add_gvp (TotemPlParser *parser,
 	return retval;
 }
 
-TotemPlParserResult
-totem_pl_parser_add_desktop (TotemPlParser *parser,
+XplayerPlParserResult
+xplayer_pl_parser_add_desktop (XplayerPlParser *parser,
 			     GFile *file,
 			     GFile *base_file,
-			     TotemPlParseData *parse_data,
+			     XplayerPlParseData *parse_data,
 			     gpointer data)
 {
 	char *contents, **lines;
 	const char *path, *display_name, *type;
 	GFile *target;
 	gsize size;
-	TotemPlParserResult res = TOTEM_PL_PARSER_RESULT_ERROR;
+	XplayerPlParserResult res = XPLAYER_PL_PARSER_RESULT_ERROR;
 
 	if (g_file_load_contents (file, NULL, &contents, &size, NULL, NULL) == FALSE)
 		return res;
@@ -105,7 +105,7 @@ totem_pl_parser_add_desktop (TotemPlParser *parser,
 	lines = g_strsplit (contents, "\n", 0);
 	g_free (contents);
 
-	type = totem_pl_parser_read_ini_line_string (lines, "Type");
+	type = xplayer_pl_parser_read_ini_line_string (lines, "Type");
 	if (type == NULL)
 		goto bail;
 	
@@ -114,22 +114,22 @@ totem_pl_parser_add_desktop (TotemPlParser *parser,
 		goto bail;
 	}
 
-	path = totem_pl_parser_read_ini_line_string (lines, "URL");
+	path = xplayer_pl_parser_read_ini_line_string (lines, "URL");
 	if (path == NULL)
 		goto bail;
 	target = g_file_new_for_uri (path);
 
-	display_name = totem_pl_parser_read_ini_line_string (lines, "Name");
+	display_name = xplayer_pl_parser_read_ini_line_string (lines, "Name");
 
-	if (totem_pl_parser_ignore (parser, path) == FALSE
+	if (xplayer_pl_parser_ignore (parser, path) == FALSE
 	    && g_ascii_strcasecmp (type, "FSDevice") != 0) {
-		totem_pl_parser_add_one_file (parser, target, display_name);
+		xplayer_pl_parser_add_one_file (parser, target, display_name);
 	} else {
-		if (totem_pl_parser_parse_internal (parser, target, NULL, parse_data) != TOTEM_PL_PARSER_RESULT_SUCCESS)
-			totem_pl_parser_add_one_file (parser, target, display_name);
+		if (xplayer_pl_parser_parse_internal (parser, target, NULL, parse_data) != XPLAYER_PL_PARSER_RESULT_SUCCESS)
+			xplayer_pl_parser_add_one_file (parser, target, display_name);
 	}
 
-	res = TOTEM_PL_PARSER_RESULT_SUCCESS;
+	res = XPLAYER_PL_PARSER_RESULT_SUCCESS;
 
 bail:
 	g_strfreev (lines);
@@ -137,6 +137,6 @@ bail:
 	return res;
 }
 
-#endif /* !TOTEM_PL_PARSER_MINI */
+#endif /* !XPLAYER_PL_PARSER_MINI */
 
 

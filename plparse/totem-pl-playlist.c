@@ -20,102 +20,102 @@
  */
 
 /**
- * SECTION:totem-pl-playlist
+ * SECTION:xplayer-pl-playlist
  * @short_description: playlist object
  * @stability: Stable
- * @include: totem-pl-playlist.h
+ * @include: xplayer-pl-playlist.h
  *
- * #TotemPlPlaylist represents a playlist, provides API to either navigate through
+ * #XplayerPlPlaylist represents a playlist, provides API to either navigate through
  * the playlist elements, or perform additions or modifications. See also
- * totem_pl_parser_save().
+ * xplayer_pl_parser_save().
  *
  **/
 
 /**
- * SECTION:totem-pl-playlist-iter
+ * SECTION:xplayer-pl-playlist-iter
  * @short_description: playlist manipulation object
  * @stability: Stable
- * @include: totem-pl-playlist.h
+ * @include: xplayer-pl-playlist.h
  *
- * #TotemPlPlaylistIter refers to an element in a playlist and is designed
+ * #XplayerPlPlaylistIter refers to an element in a playlist and is designed
  * to bridge between application provided playlist widgets or objects,
- * and #TotemPlParser's saving code.
+ * and #XplayerPlParser's saving code.
  *
  **/
 
-#include "totem-pl-playlist.h"
+#include "xplayer-pl-playlist.h"
 
-typedef struct TotemPlPlaylistPrivate TotemPlPlaylistPrivate;
+typedef struct XplayerPlPlaylistPrivate XplayerPlPlaylistPrivate;
 
-struct TotemPlPlaylistPrivate {
+struct XplayerPlPlaylistPrivate {
         GList *items;
 };
 
-#define TOTEM_PL_PLAYLIST_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), TOTEM_TYPE_PL_PLAYLIST, TotemPlPlaylistPrivate))
+#define XPLAYER_PL_PLAYLIST_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), XPLAYER_TYPE_PL_PLAYLIST, XplayerPlPlaylistPrivate))
 
-static void totem_pl_playlist_finalize (GObject *object);
+static void xplayer_pl_playlist_finalize (GObject *object);
 
 
-G_DEFINE_TYPE (TotemPlPlaylist, totem_pl_playlist, G_TYPE_OBJECT)
+G_DEFINE_TYPE (XplayerPlPlaylist, xplayer_pl_playlist, G_TYPE_OBJECT)
 
 
 static void
-totem_pl_playlist_class_init (TotemPlPlaylistClass *klass)
+xplayer_pl_playlist_class_init (XplayerPlPlaylistClass *klass)
 {
         GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
-        object_class->finalize = totem_pl_playlist_finalize;
+        object_class->finalize = xplayer_pl_playlist_finalize;
 
-        g_type_class_add_private (klass, sizeof (TotemPlPlaylistPrivate));
+        g_type_class_add_private (klass, sizeof (XplayerPlPlaylistPrivate));
 }
 
 static void
-totem_pl_playlist_init (TotemPlPlaylist *playlist)
+xplayer_pl_playlist_init (XplayerPlPlaylist *playlist)
 {
 }
 
 static void
-totem_pl_playlist_finalize (GObject *object)
+xplayer_pl_playlist_finalize (GObject *object)
 {
-        TotemPlPlaylistPrivate *priv;
+        XplayerPlPlaylistPrivate *priv;
 
-        priv = TOTEM_PL_PLAYLIST_GET_PRIVATE (object);
+        priv = XPLAYER_PL_PLAYLIST_GET_PRIVATE (object);
 
         g_list_foreach (priv->items, (GFunc) g_hash_table_destroy, NULL);
         g_list_free (priv->items);
 
-        G_OBJECT_CLASS (totem_pl_playlist_parent_class)->finalize (object);
+        G_OBJECT_CLASS (xplayer_pl_playlist_parent_class)->finalize (object);
 }
 
 /**
- * totem_pl_playlist_new:
+ * xplayer_pl_playlist_new:
  *
- * Creates a new #TotemPlPlaylist object.
+ * Creates a new #XplayerPlPlaylist object.
  *
- * Returns: The newly created #TotemPlPlaylist
+ * Returns: The newly created #XplayerPlPlaylist
  **/
-TotemPlPlaylist *
-totem_pl_playlist_new (void)
+XplayerPlPlaylist *
+xplayer_pl_playlist_new (void)
 {
-        return g_object_new (TOTEM_TYPE_PL_PLAYLIST, NULL);
+        return g_object_new (XPLAYER_TYPE_PL_PLAYLIST, NULL);
 }
 
 /**
- * totem_pl_playlist_size:
- * @playlist: a #TotemPlPlaylist
+ * xplayer_pl_playlist_size:
+ * @playlist: a #XplayerPlPlaylist
  *
  * Returns the number of elements in @playlist.
  *
  * Returns: The number of elements
  **/
 guint
-totem_pl_playlist_size (TotemPlPlaylist *playlist)
+xplayer_pl_playlist_size (XplayerPlPlaylist *playlist)
 {
-        TotemPlPlaylistPrivate *priv;
+        XplayerPlPlaylistPrivate *priv;
 
-        g_return_val_if_fail (TOTEM_IS_PL_PLAYLIST (playlist), 0);
+        g_return_val_if_fail (XPLAYER_IS_PL_PLAYLIST (playlist), 0);
 
-        priv = TOTEM_PL_PLAYLIST_GET_PRIVATE (playlist);
+        priv = XPLAYER_PL_PLAYLIST_GET_PRIVATE (playlist);
 
         return g_list_length (priv->items);
 }
@@ -130,25 +130,25 @@ create_playlist_item (void)
 }
 
 /**
- * totem_pl_playlist_prepend:
- * @playlist: a #TotemPlPlaylist
- * @iter: (out): an unset #TotemPlPlaylistIter for returning the location
+ * xplayer_pl_playlist_prepend:
+ * @playlist: a #XplayerPlPlaylist
+ * @iter: (out): an unset #XplayerPlPlaylistIter for returning the location
  *
  * Prepends a new empty element to @playlist, and modifies @iter so
  * it points to it. To fill in values, you need to call
- * totem_pl_playlist_set() or totem_pl_playlist_set_value().
+ * xplayer_pl_playlist_set() or xplayer_pl_playlist_set_value().
  **/
 void
-totem_pl_playlist_prepend (TotemPlPlaylist     *playlist,
-                           TotemPlPlaylistIter *iter)
+xplayer_pl_playlist_prepend (XplayerPlPlaylist     *playlist,
+                           XplayerPlPlaylistIter *iter)
 {
-        TotemPlPlaylistPrivate *priv;
+        XplayerPlPlaylistPrivate *priv;
         GHashTable *item;
 
-        g_return_if_fail (TOTEM_IS_PL_PLAYLIST (playlist));
+        g_return_if_fail (XPLAYER_IS_PL_PLAYLIST (playlist));
         g_return_if_fail (iter != NULL);
 
-        priv = TOTEM_PL_PLAYLIST_GET_PRIVATE (playlist);
+        priv = XPLAYER_PL_PLAYLIST_GET_PRIVATE (playlist);
 
         item = create_playlist_item ();
         priv->items = g_list_prepend (priv->items, item);
@@ -158,26 +158,26 @@ totem_pl_playlist_prepend (TotemPlPlaylist     *playlist,
 }
 
 /**
- * totem_pl_playlist_append:
- * @playlist: a #TotemPlPlaylist
- * @iter: (out): an unset #TotemPlPlaylistIter for returning the location
+ * xplayer_pl_playlist_append:
+ * @playlist: a #XplayerPlPlaylist
+ * @iter: (out): an unset #XplayerPlPlaylistIter for returning the location
  *
  * Appends a new empty element to @playlist, and modifies @iter so
  * it points to it. To fill in values, you need to call
- * totem_pl_playlist_set() or totem_pl_playlist_set_value().
+ * xplayer_pl_playlist_set() or xplayer_pl_playlist_set_value().
  **/
 void
-totem_pl_playlist_append (TotemPlPlaylist     *playlist,
-                          TotemPlPlaylistIter *iter)
+xplayer_pl_playlist_append (XplayerPlPlaylist     *playlist,
+                          XplayerPlPlaylistIter *iter)
 {
-        TotemPlPlaylistPrivate *priv;
+        XplayerPlPlaylistPrivate *priv;
         GHashTable *item;
         GList *list_item;
 
-        g_return_if_fail (TOTEM_IS_PL_PLAYLIST (playlist));
+        g_return_if_fail (XPLAYER_IS_PL_PLAYLIST (playlist));
         g_return_if_fail (iter != NULL);
 
-        priv = TOTEM_PL_PLAYLIST_GET_PRIVATE (playlist);
+        priv = XPLAYER_PL_PLAYLIST_GET_PRIVATE (playlist);
 
         item = create_playlist_item ();
 
@@ -191,30 +191,30 @@ totem_pl_playlist_append (TotemPlPlaylist     *playlist,
 }
 
 /**
- * totem_pl_playlist_insert:
- * @playlist: a #TotemPlPlaylist
+ * xplayer_pl_playlist_insert:
+ * @playlist: a #XplayerPlPlaylist
  * @position: position in the playlist
- * @iter: (out): an unset #TotemPlPlaylistIter for returning the location
+ * @iter: (out): an unset #XplayerPlPlaylistIter for returning the location
  *
  * Inserts a new empty element to @playlist at @position, and modifies
  * @iter so it points to it. To fill in values, you need to call
- * totem_pl_playlist_set() or totem_pl_playlist_set_value().
+ * xplayer_pl_playlist_set() or xplayer_pl_playlist_set_value().
  *
  * @position may be minor than 0 to prepend elements, or bigger than
  * the current @playlist size to append elements.
  **/
 void
-totem_pl_playlist_insert (TotemPlPlaylist     *playlist,
+xplayer_pl_playlist_insert (XplayerPlPlaylist     *playlist,
                           gint                 position,
-                          TotemPlPlaylistIter *iter)
+                          XplayerPlPlaylistIter *iter)
 {
-        TotemPlPlaylistPrivate *priv;
+        XplayerPlPlaylistPrivate *priv;
         GHashTable *item;
 
-        g_return_if_fail (TOTEM_IS_PL_PLAYLIST (playlist));
+        g_return_if_fail (XPLAYER_IS_PL_PLAYLIST (playlist));
         g_return_if_fail (iter != NULL);
 
-        priv = TOTEM_PL_PLAYLIST_GET_PRIVATE (playlist);
+        priv = XPLAYER_PL_PLAYLIST_GET_PRIVATE (playlist);
 
         item = create_playlist_item ();
         priv->items = g_list_insert (priv->items, item, position);
@@ -224,10 +224,10 @@ totem_pl_playlist_insert (TotemPlPlaylist     *playlist,
 }
 
 static gboolean
-check_iter (TotemPlPlaylist     *playlist,
-            TotemPlPlaylistIter *iter)
+check_iter (XplayerPlPlaylist     *playlist,
+            XplayerPlPlaylistIter *iter)
 {
-        TotemPlPlaylistPrivate *priv;
+        XplayerPlPlaylistPrivate *priv;
 
         if (!iter) {
                 return FALSE;
@@ -237,7 +237,7 @@ check_iter (TotemPlPlaylist     *playlist,
                 return FALSE;
         }
 
-        priv = TOTEM_PL_PLAYLIST_GET_PRIVATE (playlist);
+        priv = XPLAYER_PL_PLAYLIST_GET_PRIVATE (playlist);
 
         if (g_list_position (priv->items, iter->data2) == -1) {
                 return FALSE;
@@ -247,24 +247,24 @@ check_iter (TotemPlPlaylist     *playlist,
 }
 
 /**
- * totem_pl_playlist_iter_first:
- * @playlist: a #TotemPlPlaylist
- * @iter: (out): an unset #TotemPlPlaylistIter for returning the location
+ * xplayer_pl_playlist_iter_first:
+ * @playlist: a #XplayerPlPlaylist
+ * @iter: (out): an unset #XplayerPlPlaylistIter for returning the location
  *
  * Modifies @iter so it points to the first element in @playlist.
  *
  * Returns: %TRUE if there is such first element.
  **/
 gboolean
-totem_pl_playlist_iter_first (TotemPlPlaylist     *playlist,
-                              TotemPlPlaylistIter *iter)
+xplayer_pl_playlist_iter_first (XplayerPlPlaylist     *playlist,
+                              XplayerPlPlaylistIter *iter)
 {
-        TotemPlPlaylistPrivate *priv;
+        XplayerPlPlaylistPrivate *priv;
 
-        g_return_val_if_fail (TOTEM_IS_PL_PLAYLIST (playlist), FALSE);
+        g_return_val_if_fail (XPLAYER_IS_PL_PLAYLIST (playlist), FALSE);
         g_return_val_if_fail (iter != NULL, FALSE);
 
-        priv = TOTEM_PL_PLAYLIST_GET_PRIVATE (playlist);
+        priv = XPLAYER_PL_PLAYLIST_GET_PRIVATE (playlist);
 
         if (!priv->items) {
                 /* Empty playlist */
@@ -278,9 +278,9 @@ totem_pl_playlist_iter_first (TotemPlPlaylist     *playlist,
 }
 
 /**
- * totem_pl_playlist_iter_next:
- * @playlist: a #TotemPlPlaylist
- * @iter: (in): a #TotemPlPlaylistIter pointing to some item in @playlist
+ * xplayer_pl_playlist_iter_next:
+ * @playlist: a #XplayerPlPlaylist
+ * @iter: (in): a #XplayerPlPlaylistIter pointing to some item in @playlist
  *
  * Modifies @iter so it points to the next element it previously
  * pointed to. This function will return %FALSE if there was no
@@ -290,10 +290,10 @@ totem_pl_playlist_iter_first (TotemPlPlaylist     *playlist,
  * Returns: %TRUE if there was next element.
  **/
 gboolean
-totem_pl_playlist_iter_next (TotemPlPlaylist     *playlist,
-                             TotemPlPlaylistIter *iter)
+xplayer_pl_playlist_iter_next (XplayerPlPlaylist     *playlist,
+                             XplayerPlPlaylistIter *iter)
 {
-        g_return_val_if_fail (TOTEM_IS_PL_PLAYLIST (playlist), FALSE);
+        g_return_val_if_fail (XPLAYER_IS_PL_PLAYLIST (playlist), FALSE);
         g_return_val_if_fail (check_iter (playlist, iter), FALSE);
 
         iter->data2 = ((GList *) iter->data2)->next;
@@ -302,9 +302,9 @@ totem_pl_playlist_iter_next (TotemPlPlaylist     *playlist,
 }
 
 /**
- * totem_pl_playlist_iter_prev:
- * @playlist: a #TotemPlPlaylist
- * @iter: (in): a #TotemPlPlaylistIter pointing to some item in @playlist
+ * xplayer_pl_playlist_iter_prev:
+ * @playlist: a #XplayerPlPlaylist
+ * @iter: (in): a #XplayerPlPlaylistIter pointing to some item in @playlist
  *
  * Modifies @iter so it points to the previous element it previously
  * pointed to. This function will return %FALSE if there was no
@@ -314,10 +314,10 @@ totem_pl_playlist_iter_next (TotemPlPlaylist     *playlist,
  * Returns: %TRUE if there was previous element.
  **/
 gboolean
-totem_pl_playlist_iter_prev (TotemPlPlaylist     *playlist,
-                             TotemPlPlaylistIter *iter)
+xplayer_pl_playlist_iter_prev (XplayerPlPlaylist     *playlist,
+                             XplayerPlPlaylistIter *iter)
 {
-        g_return_val_if_fail (TOTEM_IS_PL_PLAYLIST (playlist), FALSE);
+        g_return_val_if_fail (XPLAYER_IS_PL_PLAYLIST (playlist), FALSE);
         g_return_val_if_fail (check_iter (playlist, iter), FALSE);
 
         iter->data2 = ((GList *) iter->data2)->prev;
@@ -326,27 +326,27 @@ totem_pl_playlist_iter_prev (TotemPlPlaylist     *playlist,
 }
 
 /**
- * totem_pl_playlist_get_value:
- * @playlist: a #TotemPlPlaylist
- * @iter: a #TotemPlPlaylistIter pointing to some item in @playlist
+ * xplayer_pl_playlist_get_value:
+ * @playlist: a #XplayerPlPlaylist
+ * @iter: a #XplayerPlPlaylistIter pointing to some item in @playlist
  * @key: data key
  * @value: an empty #GValue to set
  *
- * Gets the value for @key (Such as %TOTEM_PL_PARSER_FIELD_URI) in
+ * Gets the value for @key (Such as %XPLAYER_PL_PARSER_FIELD_URI) in
  * the playlist item pointed by @iter.
  *
  * Returns: %TRUE if @iter contains data for @key.
  **/
 gboolean
-totem_pl_playlist_get_value (TotemPlPlaylist     *playlist,
-                             TotemPlPlaylistIter *iter,
+xplayer_pl_playlist_get_value (XplayerPlPlaylist     *playlist,
+                             XplayerPlPlaylistIter *iter,
                              const gchar         *key,
                              GValue              *value)
 {
         GHashTable *item_data;
         gchar *str;
 
-        g_return_val_if_fail (TOTEM_IS_PL_PLAYLIST (playlist), FALSE);
+        g_return_val_if_fail (XPLAYER_IS_PL_PLAYLIST (playlist), FALSE);
         g_return_val_if_fail (check_iter (playlist, iter), FALSE);
         g_return_val_if_fail (key != NULL, FALSE);
         g_return_val_if_fail (value != NULL, FALSE);
@@ -366,22 +366,22 @@ totem_pl_playlist_get_value (TotemPlPlaylist     *playlist,
 }
 
 /**
- * totem_pl_playlist_get_valist:
- * @playlist: a #TotemPlPlaylist
- * @iter: a #TotemPlPlaylistIter pointing to some item in @playlist
+ * xplayer_pl_playlist_get_valist:
+ * @playlist: a #XplayerPlPlaylist
+ * @iter: a #XplayerPlPlaylistIter pointing to some item in @playlist
  * @args: a va_list
  *
- * See totem_pl_playlist_get(), this function takes a va_list.
+ * See xplayer_pl_playlist_get(), this function takes a va_list.
  **/
 void
-totem_pl_playlist_get_valist (TotemPlPlaylist     *playlist,
-                              TotemPlPlaylistIter *iter,
+xplayer_pl_playlist_get_valist (XplayerPlPlaylist     *playlist,
+                              XplayerPlPlaylistIter *iter,
                               va_list              args)
 {
         GHashTable *item_data;
         gchar *key, **value;
 
-        g_return_if_fail (TOTEM_IS_PL_PLAYLIST (playlist));
+        g_return_if_fail (XPLAYER_IS_PL_PLAYLIST (playlist));
         g_return_if_fail (check_iter (playlist, iter));
 
         item_data = ((GList *) iter->data2)->data;
@@ -403,33 +403,33 @@ totem_pl_playlist_get_valist (TotemPlPlaylist     *playlist,
 }
 
 /**
- * totem_pl_playlist_get:
- * @playlist: a #TotemPlPlaylist
- * @iter: a #TotemPlPlaylistIter pointing to some item in @playlist
+ * xplayer_pl_playlist_get:
+ * @playlist: a #XplayerPlPlaylist
+ * @iter: a #XplayerPlPlaylistIter pointing to some item in @playlist
  * @...: pairs of key/return location for value, terminated by %NULL
  *
  * Gets the value for one or more keys from the element pointed
  * by @iter.
  **/
 void
-totem_pl_playlist_get (TotemPlPlaylist     *playlist,
-                       TotemPlPlaylistIter *iter,
+xplayer_pl_playlist_get (XplayerPlPlaylist     *playlist,
+                       XplayerPlPlaylistIter *iter,
                        ...)
 {
         va_list args;
 
-        g_return_if_fail (TOTEM_IS_PL_PLAYLIST (playlist));
+        g_return_if_fail (XPLAYER_IS_PL_PLAYLIST (playlist));
         g_return_if_fail (check_iter (playlist, iter));
 
         va_start (args, iter);
-        totem_pl_playlist_get_valist (playlist, iter, args);
+        xplayer_pl_playlist_get_valist (playlist, iter, args);
         va_end (args);
 }
 
 /**
- * totem_pl_playlist_set_value:
- * @playlist: a #TotemPlPlaylist
- * @iter: a #TotemPlPlaylistIter pointing to some item in @playlist
+ * xplayer_pl_playlist_set_value:
+ * @playlist: a #XplayerPlPlaylist
+ * @iter: a #XplayerPlPlaylistIter pointing to some item in @playlist
  * @key: key to set the value for
  * @value: #GValue containing the key value
  *
@@ -438,15 +438,15 @@ totem_pl_playlist_get (TotemPlPlaylist     *playlist,
  * Returns: %TRUE if the value could be stored in @playlist
  **/
 gboolean
-totem_pl_playlist_set_value (TotemPlPlaylist     *playlist,
-                             TotemPlPlaylistIter *iter,
+xplayer_pl_playlist_set_value (XplayerPlPlaylist     *playlist,
+                             XplayerPlPlaylistIter *iter,
                              const gchar         *key,
                              GValue              *value)
 {
         GHashTable *item_data;
         gchar *str;
 
-        g_return_val_if_fail (TOTEM_IS_PL_PLAYLIST (playlist), FALSE);
+        g_return_val_if_fail (XPLAYER_IS_PL_PLAYLIST (playlist), FALSE);
         g_return_val_if_fail (check_iter (playlist, iter), FALSE);
         g_return_val_if_fail (key != NULL, FALSE);
         g_return_val_if_fail (value != NULL, FALSE);
@@ -480,22 +480,22 @@ totem_pl_playlist_set_value (TotemPlPlaylist     *playlist,
 }
 
 /**
- * totem_pl_playlist_set_valist:
- * @playlist: a #TotemPlPlaylist
- * @iter: a #TotemPlPlaylistIter pointing to some item in @playlist
+ * xplayer_pl_playlist_set_valist:
+ * @playlist: a #XplayerPlPlaylist
+ * @iter: a #XplayerPlPlaylistIter pointing to some item in @playlist
  * @args: a va_list
  *
- * See totem_pl_playlist_set(), this function takes a va_list.
+ * See xplayer_pl_playlist_set(), this function takes a va_list.
  **/
 void
-totem_pl_playlist_set_valist (TotemPlPlaylist     *playlist,
-                              TotemPlPlaylistIter *iter,
+xplayer_pl_playlist_set_valist (XplayerPlPlaylist     *playlist,
+                              XplayerPlPlaylistIter *iter,
                               va_list              args)
 {
         GHashTable *item_data;
         gchar *key, *value;
 
-        g_return_if_fail (TOTEM_IS_PL_PLAYLIST (playlist));
+        g_return_if_fail (XPLAYER_IS_PL_PLAYLIST (playlist));
         g_return_if_fail (check_iter (playlist, iter));
 
         item_data = ((GList *) iter->data2)->data;
@@ -514,25 +514,25 @@ totem_pl_playlist_set_valist (TotemPlPlaylist     *playlist,
 }
 
 /**
- * totem_pl_playlist_set:
- * @playlist: a #TotemPlPlaylist
- * @iter: a #TotemPlPlaylistIter pointing to some item in @playlist
+ * xplayer_pl_playlist_set:
+ * @playlist: a #XplayerPlPlaylist
+ * @iter: a #XplayerPlPlaylistIter pointing to some item in @playlist
  * @...: key/value string pairs, terminated with %NULL
  *
  * Sets the value for one or several keys in the element pointed
  * by @iter.
  **/
 void
-totem_pl_playlist_set (TotemPlPlaylist     *playlist,
-                       TotemPlPlaylistIter *iter,
+xplayer_pl_playlist_set (XplayerPlPlaylist     *playlist,
+                       XplayerPlPlaylistIter *iter,
                        ...)
 {
         va_list args;
 
-        g_return_if_fail (TOTEM_IS_PL_PLAYLIST (playlist));
+        g_return_if_fail (XPLAYER_IS_PL_PLAYLIST (playlist));
         g_return_if_fail (check_iter (playlist, iter));
 
         va_start (args, iter);
-        totem_pl_playlist_set_valist (playlist, iter, args);
+        xplayer_pl_playlist_set_valist (playlist, iter, args);
         va_end (args);
 }

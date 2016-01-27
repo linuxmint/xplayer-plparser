@@ -1,4 +1,4 @@
-# Uighur Translation of totem-pl-parser
+# Uighur Translation of xplayer-pl-parser
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Abduxukur Abdurixit <abduxukur.abdurixit@t-systems.ch>, 2005
@@ -6,8 +6,8 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: totem-pl-parser\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=totem&component=playlist parser\n"
+"Project-Id-Version: xplayer-pl-parser\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&component=playlist parser\n"
 "POT-Creation-Date: 2010-12-23 18:39+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Sahran <sahran.ug@gmail.com>\n"
@@ -17,34 +17,34 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../plparse/totem-disc.c:359 ../plparse/totem-disc.c:503
+#: ../plparse/xplayer-disc.c:359 ../plparse/xplayer-disc.c:503
 #, c-format
 msgid "Failed to mount %s."
 msgstr "%s ئېگەرلەش مەغلۇپ بولدى."
 
-#: ../plparse/totem-disc.c:392
+#: ../plparse/xplayer-disc.c:392
 #, c-format
 msgid "No media in drive for device '%s'."
 msgstr "'%s' ئۈسكۈنىنىڭ قوزغاتقۇچىسىدا ۋاسىتە يوق."
 
-#: ../plparse/totem-disc.c:446
+#: ../plparse/xplayer-disc.c:446
 #, c-format
 msgid "Please check that a disc is present in the drive."
 msgstr "قوزغاتقۇچتا دىسكىنىڭ بار يوقلۇقىنى تەكشۈرۈڭ."
 
-#: ../plparse/totem-disc.c:889
+#: ../plparse/xplayer-disc.c:889
 msgid "Audio CD"
 msgstr "ئۈن CD"
 
-#: ../plparse/totem-disc.c:891
+#: ../plparse/xplayer-disc.c:891
 msgid "Video CD"
 msgstr "سىن CD"
 
-#: ../plparse/totem-disc.c:893
+#: ../plparse/xplayer-disc.c:893
 msgid "DVD"
 msgstr "DVD"
 
-#: ../plparse/totem-disc.c:895
+#: ../plparse/xplayer-disc.c:895
 msgid "Digital Television"
 msgstr "رەقەملىك تېلېۋىزور"
 
@@ -201,8 +201,8 @@ msgstr "رەقەملىك تېلېۋىزور"
 #~ msgid "Play movies and songs"
 #~ msgstr "كىنو ۋە ناخشىلارنى قويۇش"
 
-#~ msgid "Totem Movie Player"
-#~ msgstr "Totem كىنو قويغۇچ "
+#~ msgid "Xplayer Movie Player"
+#~ msgstr "Xplayer كىنو قويغۇچ "
 
 #~ msgid ""
 #~ "14.4 Kbps Modem\n"
@@ -604,14 +604,14 @@ msgstr "رەقەملىك تېلېۋىزور"
 #~ "ھەيدىگۈچنىڭ ئىچىدە دىسكا بار-يوقلىغىنى ۋە توغرا تەڭشەلگەنلىكىنى تەكشۈرۈپ "
 #~ "كۆرۈڭ"
 
-#~ msgid "%s - Totem Movie Player"
-#~ msgstr "كىنو قويغۇچ Totem - %s"
+#~ msgid "%s - Xplayer Movie Player"
+#~ msgstr "كىنو قويغۇچ Xplayer - %s"
 
 #~ msgid "No File"
 #~ msgstr "ھۆججەت يوق"
 
-#~ msgid "Totem"
-#~ msgstr "Totem"
+#~ msgid "Xplayer"
+#~ msgstr "Xplayer"
 
 #~ msgid "An error occured"
 #~ msgstr "خاتالىق يۈز بەردى"
@@ -622,8 +622,8 @@ msgstr "رەقەملىك تېلېۋىزور"
 #~ msgid "Open Location..."
 #~ msgstr "نى ئېچىش ....."
 
-#~ msgid "Totem could not display the help contents."
-#~ msgstr "ياردەم مۇندەرىجىسىنى كۆرسىتەلمەيدۇ Totem"
+#~ msgid "Xplayer could not display the help contents."
+#~ msgstr "ياردەم مۇندەرىجىسىنى كۆرسىتەلمەيدۇ Xplayer"
 
 #~ msgid "Movie Player using %s"
 #~ msgstr "نى ئىشلىتىۋاتقان كىنو قويغۇچ %s"
@@ -634,17 +634,17 @@ msgstr "رەقەملىك تېلېۋىزور"
 #~ msgid "translator-credits"
 #~ msgstr "ئابدۇشۈكۈر ئابدۇرىشىت, <abduxukur.abdurixit@t-systems.ch>, 2005"
 
-#~ msgid "Totem could not get a screenshot of that film."
-#~ msgstr "كىنودىن رەسىمگە ئالالمايدۇ Totem"
+#~ msgid "Xplayer could not get a screenshot of that film."
+#~ msgstr "كىنودىن رەسىمگە ئالالمايدۇ Xplayer"
 
 #~ msgid "This is not supposed to happen; please file a bug report."
 #~ msgstr "بۇ ئەھۋال يۈز بەرمەسلىكى كېرەك؛ بۇگ مەلۇماتى تەييارلاڭ"
 
-#~ msgid "Make sure that Totem is correctly installed."
-#~ msgstr "نىڭ توغرا قاچىلانغان-قاچىلانمىغانلىغىنى تەكشۈرۈڭ Totem"
+#~ msgid "Make sure that Xplayer is correctly installed."
+#~ msgstr "نىڭ توغرا قاچىلانغان-قاچىلانمىغانلىغىنى تەكشۈرۈڭ Xplayer"
 
-#~ msgid "Totem could not startup."
-#~ msgstr "قوزغالمىدى Totem"
+#~ msgid "Xplayer could not startup."
+#~ msgstr "قوزغالمىدى Xplayer"
 
 #~ msgid "No reason."
 #~ msgstr "سەۋەب يوق"

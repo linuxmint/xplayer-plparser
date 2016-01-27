@@ -1,16 +1,16 @@
-# translation of totem.pot to Russian
+# translation of xplayer.pot to Russian
 #
 # Nail Abdrahmanov <nail@gella.com.ru>, 2002.
 # Leonid Kanter <leon@asplinux.ru>, 2003, 2004, 2005, 2006, 2007.
 # Tuchinsky Artem <tuchinsky@gmail.com, 2006.
 #
-# This file is distributed under the same license as the "totem" package.
+# This file is distributed under the same license as the "xplayer" package.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: totem trunk\n"
+"Project-Id-Version: xplayer trunk\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=totem&keywords=I18N+L10N&component=playlist parser\n"
+"product=xplayer&keywords=I18N+L10N&component=playlist parser\n"
 "POT-Creation-Date: 2014-01-21 17:48+0000\n"
 "PO-Revision-Date: 2014-03-10 11:35+0300\n"
 "Last-Translator: Yuri Myasoedov <omerta13@yandex.ru>\n"
@@ -23,39 +23,39 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#: ../plparse/totem-disc.c:276 ../plparse/totem-disc.c:289
-#: ../plparse/totem-disc.c:533
+#: ../plparse/xplayer-disc.c:276 ../plparse/xplayer-disc.c:289
+#: ../plparse/xplayer-disc.c:533
 #, c-format
 msgid "Failed to mount %s."
 msgstr "Не удалось подключить %s."
 
-#: ../plparse/totem-disc.c:418
+#: ../plparse/xplayer-disc.c:418
 #, c-format
 msgid "No media in drive for device '%s'."
 msgstr "Не найден носитель в устройстве «%s»."
 
-#: ../plparse/totem-disc.c:476
+#: ../plparse/xplayer-disc.c:476
 #, c-format
 msgid "Please check that a disc is present in the drive."
 msgstr "Убедитесь, что диск вставлен в устройство."
 
-#: ../plparse/totem-disc.c:947
+#: ../plparse/xplayer-disc.c:947
 msgid "Audio CD"
 msgstr "Аудио CD"
 
-#: ../plparse/totem-disc.c:949
+#: ../plparse/xplayer-disc.c:949
 msgid "Video CD"
 msgstr "Видео CD"
 
-#: ../plparse/totem-disc.c:951
+#: ../plparse/xplayer-disc.c:951
 msgid "DVD"
 msgstr "DVD"
 
-#: ../plparse/totem-disc.c:953
+#: ../plparse/xplayer-disc.c:953
 msgid "Digital Television"
 msgstr "Цифровое телевидение"
 
-#: ../plparse/totem-disc.c:955
+#: ../plparse/xplayer-disc.c:955
 msgid "Blu-ray"
 msgstr "Blu-ray"
 
@@ -212,11 +212,11 @@ msgstr "Blu-ray"
 #~ msgid "Text Subtitles"
 #~ msgstr "Текст субтитров"
 
-#~ msgid "Totem Movie Player"
-#~ msgstr "Видеопроигрыватель Totem"
+#~ msgid "Xplayer Movie Player"
+#~ msgstr "Видеопроигрыватель Xplayer"
 
-#~ msgid "Totem Preferences"
-#~ msgstr "Параметры Totem"
+#~ msgid "Xplayer Preferences"
+#~ msgstr "Параметры Xplayer"
 
 #~ msgid "Visual Effects"
 #~ msgstr "Визуальные эффекты"
@@ -380,26 +380,26 @@ msgstr "Blu-ray"
 #~ msgid "Couldn't load the '%s' interface. %s"
 #~ msgstr "Не удалось загрузить интерфейс «%s». %s"
 
-#~ msgid "Make sure that Totem is properly installed."
-#~ msgstr "Проверьте правильность установки Totem."
+#~ msgid "Make sure that Xplayer is properly installed."
+#~ msgstr "Проверьте правильность установки Xplayer."
 
 #~ msgid ""
-#~ "Totem is free software; you can redistribute it and/or modify it under "
+#~ "Xplayer is free software; you can redistribute it and/or modify it under "
 #~ "the terms of the GNU General Public License as published by the Free "
 #~ "Software Foundation; either version 2 of the License, or (at your option) "
 #~ "any later version."
 #~ msgstr ""
-#~ "Totem - свободное программное обеспечение; вы можете распространять его и/"
+#~ "Xplayer - свободное программное обеспечение; вы можете распространять его и/"
 #~ "или модифицировать на условиях Универсальной общественной лицензии GNU "
 #~ "версии 2 либо любой более поздней версии."
 
 #~ msgid ""
-#~ "Totem is distributed in the hope that it will be useful, but WITHOUT ANY "
+#~ "Xplayer is distributed in the hope that it will be useful, but WITHOUT ANY "
 #~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
 #~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 #~ "details."
 #~ msgstr ""
-#~ "Totem распространяется в надежде, что он может быть полезен, но БЕЗ "
+#~ "Xplayer распространяется в надежде, что он может быть полезен, но БЕЗ "
 #~ "КАКОГО-ЛИБО ВИДА ГАРАНТИЙ, ВЫРАЖЕННЫХ ЯВНО ИЛИ ПОДРАЗУМЕВАЕМЫХ, ВКЛЮЧАЯ, "
 #~ "НО НЕ ОГРАНИЧИВАЯСЬ ПОДРАЗУМЕВАЕМЫМИ ГАРАНТИЯМИ КОММЕРЧЕСКОЙ ЦЕННОСТИ И "
 #~ "ПРИГОДНОСТИ ДЛЯ КОНКРЕТНОЙ ЦЕЛИ. Для получения дополнительных сведений "
@@ -407,16 +407,16 @@ msgstr "Blu-ray"
 
 #~ msgid ""
 #~ "You should have received a copy of the GNU General Public License along "
-#~ "with Totem; if not, write to the Free Software Foundation, Inc., 59 "
+#~ "with Xplayer; if not, write to the Free Software Foundation, Inc., 59 "
 #~ "Temple Place, Suite 330, Boston, MA  02111-1307  USA"
 #~ msgstr ""
-#~ "Вы должны получить копию лицензии GNU c программой Totem. Если лицензия "
+#~ "Вы должны получить копию лицензии GNU c программой Xplayer. Если лицензия "
 #~ "не была получена, известите об этом Фонд свободного программного "
 #~ "обеспечения по адресу Free Software Foundation, Inc., 59 Temple Place, "
 #~ "Suite 330, Boston, MA  02111-1307  USA"
 
 #~ msgid ""
-#~ "Totem contains an exception to allow the use of proprietary GStreamer "
+#~ "Xplayer contains an exception to allow the use of proprietary GStreamer "
 #~ "plugins."
 #~ msgstr ""
 #~ "Тотем содержит исключение, позволяющее использовать проприетарные модули "
@@ -451,8 +451,8 @@ msgstr "Blu-ray"
 #~ "Nail Abdrahmanov <nail@gella.com.ru>\n"
 #~ "Leonid Kanter <leon@asplinux.ru>"
 
-#~ msgid "Totem Website"
-#~ msgstr "Домашняя страница Totem"
+#~ msgid "Xplayer Website"
+#~ msgstr "Домашняя страница Xplayer"
 
 #~ msgid "Configure Plugins"
 #~ msgstr "Настройка модулей"
@@ -819,29 +819,29 @@ msgstr "Blu-ray"
 #~ msgstr "Включить визуальные эффекты?"
 
 #~ msgid ""
-#~ "It seems you are running Totem remotely.\n"
+#~ "It seems you are running Xplayer remotely.\n"
 #~ "Are you sure you want to enable the visual effects?"
 #~ msgstr ""
-#~ "Похоже, что Totem выполняется на удаленном экране.\n"
+#~ "Похоже, что Xplayer выполняется на удаленном экране.\n"
 #~ "Вы действительно хотите включить эффекты?"
 
 #~ msgid ""
 #~ "The change of this setting will only take effect for the next movie, or "
-#~ "when Totem is restarted."
+#~ "when Xplayer is restarted."
 #~ msgstr ""
 #~ "Изменение этого параметра вступит в силу только на следующем фильме или "
-#~ "после перезапуска Totem"
+#~ "после перезапуска Xplayer"
 
 #~ msgid ""
 #~ "Changing the visuals effect type will require a restart to take effect."
 #~ msgstr "Изменение типа визуальных эффектов требует перезапуска программы."
 
 #~ msgid ""
-#~ "The change of audio output type will only take effect when Totem is "
+#~ "The change of audio output type will only take effect when Xplayer is "
 #~ "restarted."
 #~ msgstr ""
 #~ "Изменение типа вывода звука вступит в силу только на следующем фильме или "
-#~ "после перезапуска Totem."
+#~ "после перезапуска Xplayer."
 
 #~ msgid "Preferences"
 #~ msgstr "Параметры"
@@ -1005,38 +1005,38 @@ msgstr "Blu-ray"
 #~ msgid "Paused"
 #~ msgstr "Пауза"
 
-#~ msgid "Totem could not play '%s'."
-#~ msgstr "Totem не может воспроизвести «%s»."
+#~ msgid "Xplayer could not play '%s'."
+#~ msgstr "Xplayer не может воспроизвести «%s»."
 
 #~ msgid ""
-#~ "Totem cannot play this type of media (%s) because it does not have the "
+#~ "Xplayer cannot play this type of media (%s) because it does not have the "
 #~ "appropriate plugins to be able to read from the disc."
 #~ msgstr ""
-#~ "Totem не может воспроизвести этот носитель (%s), потому что не найдено "
+#~ "Xplayer не может воспроизвести этот носитель (%s), потому что не найдено "
 #~ "модулей, способных прочитать данные с него."
 
 #~ msgid ""
-#~ "Totem cannot play this type of media (%s) because you do not have the "
+#~ "Xplayer cannot play this type of media (%s) because you do not have the "
 #~ "appropriate plugins to handle it."
 #~ msgstr ""
-#~ "Totem не может воспроизвести этот носитель (%s), потому что нет "
+#~ "Xplayer не может воспроизвести этот носитель (%s), потому что нет "
 #~ "соответствующих модулей."
 
 #~ msgid ""
-#~ "Please install the necessary plugins and restart Totem to be able to play "
+#~ "Please install the necessary plugins and restart Xplayer to be able to play "
 #~ "this media."
 #~ msgstr ""
-#~ "Установите необходимые модули и перезапустите Totem для воспроизведения "
+#~ "Установите необходимые модули и перезапустите Xplayer для воспроизведения "
 #~ "этого носителя."
 
 #~ msgid "More information about media plugins"
 #~ msgstr "Более подробная информация о модулях работы с данными"
 
 #~ msgid ""
-#~ "Totem could not play this media (%s) although a plugin is present to "
+#~ "Xplayer could not play this media (%s) although a plugin is present to "
 #~ "handle it."
 #~ msgstr ""
-#~ "Totem не может воспроизвести этот носитель (%s) несмотря на то, что "
+#~ "Xplayer не может воспроизвести этот носитель (%s) несмотря на то, что "
 #~ "модуль для его обработки установлен."
 
 #~ msgid ""
@@ -1046,14 +1046,14 @@ msgstr "Blu-ray"
 #~ "Убедитесь, что диск вставлен в устройство и устройство настроено "
 #~ "правильно."
 
-#~ msgid "Totem was not able to play this disc."
+#~ msgid "Xplayer was not able to play this disc."
 #~ msgstr "Тотем не может проиграть этот диск."
 
 #~ msgid "No reason."
 #~ msgstr "Нет причины."
 
-#~ msgid "Totem does not support playback of Audio CDs"
-#~ msgstr "Totem не поддерживает воспроизведение компакт-дисков"
+#~ msgid "Xplayer does not support playback of Audio CDs"
+#~ msgstr "Xplayer не поддерживает воспроизведение компакт-дисков"
 
 #~ msgid ""
 #~ "Please consider using a music player or a CD extractor to play this CD"
@@ -1061,7 +1061,7 @@ msgstr "Blu-ray"
 #~ "Используйте прогрыватель музыки или специальную программу для переноса с "
 #~ "компакт-дисков"
 
-#~ msgid "Totem could not get a screenshot of that film."
+#~ msgid "Xplayer could not get a screenshot of that film."
 #~ msgstr "Не удалось получить снимок экрана этого фильма."
 
 #~ msgid "This is not supposed to happen; please file a bug report."
@@ -1071,7 +1071,7 @@ msgstr "Blu-ray"
 #~ msgid "No error message"
 #~ msgstr "Отсутствуют данные об ошибке"
 
-#~ msgid "Totem could not display the help contents."
+#~ msgid "Xplayer could not display the help contents."
 #~ msgstr "Не удаётся отобразить содержимое справки."
 
 #~ msgid "An error occurred"
@@ -1086,22 +1086,22 @@ msgstr "Blu-ray"
 #~ msgid "Next Chapter/Movie"
 #~ msgstr "Следующий фрагмент/фильм"
 
-#~ msgid "Totem could not startup."
-#~ msgstr "Totem не может загрузиться."
+#~ msgid "Xplayer could not startup."
+#~ msgstr "Xplayer не может загрузиться."
 
 #~ msgid "Could not initialize the thread-safe libraries."
 #~ msgstr "Не удалось инициализировать поддержку потоков."
 
-#~ msgid "Verify your system installation. Totem will now exit."
-#~ msgstr "Проверьте установку вашей системы. Totem завершает свою работу."
+#~ msgid "Verify your system installation. Xplayer will now exit."
+#~ msgstr "Проверьте установку вашей системы. Xplayer завершает свою работу."
 
 #~ msgid "- Play movies and songs"
 #~ msgstr "- воспроизводит видеофильмы и звукозаписи"
 
-#~ msgid "Totem could not parse the command-line options"
+#~ msgid "Xplayer could not parse the command-line options"
 #~ msgstr "Не удаётся разобрать параметры командной строки"
 
-#~ msgid "Totem could not initialize the configuration engine."
+#~ msgid "Xplayer could not initialize the configuration engine."
 #~ msgstr "Не удалось инициализировать систему настройки."
 
 #~ msgid "Make sure that GNOME is properly installed."
@@ -1410,17 +1410,17 @@ msgstr "Blu-ray"
 #~ msgid "Bemused"
 #~ msgstr "Bemused"
 
-#~ msgid "Control Totem through a mobile phone with a Bemused client"
-#~ msgstr "Управление Totem'ом через мобильный телефон и клиент Bemused"
+#~ msgid "Control Xplayer through a mobile phone with a Bemused client"
+#~ msgstr "Управление Xplayer'ом через мобильный телефон и клиент Bemused"
 
 #~ msgid "Untitled %d"
 #~ msgstr "Неизвестная %d"
 
-#~ msgid "Totem Bemused Server"
-#~ msgstr "Сервер Bemused Totem"
+#~ msgid "Xplayer Bemused Server"
+#~ msgstr "Сервер Bemused Xplayer"
 
-#~ msgid "Totem Bemused Server version 1.0"
-#~ msgstr "Сервер Bemused Totem версии 1.0"
+#~ msgid "Xplayer Bemused Server version 1.0"
+#~ msgstr "Сервер Bemused Xplayer версии 1.0"
 
 #~ msgid "Instant Messenger status"
 #~ msgstr "Состояние в клиенте обмена мгновенными сообщениями"
@@ -1499,8 +1499,8 @@ msgstr "Blu-ray"
 #~ msgid "No URI to play"
 #~ msgstr "Отсутствует URI для воспроизведения"
 
-#~ msgid "Totem could not play '%s'"
-#~ msgstr "Totem не может воспроизвести «%s»"
+#~ msgid "Xplayer could not play '%s'"
+#~ msgstr "Xplayer не может воспроизвести «%s»"
 
 #~ msgid "Opening %s"
 #~ msgstr "Открывается %s"
@@ -1511,11 +1511,11 @@ msgstr "Blu-ray"
 #~ msgid "Browser Plugin using %s"
 #~ msgstr "Модуль обозревателя использует %s"
 
-#~ msgid "Totem Browser Plugin"
-#~ msgstr "Модуль Totem для обозревателя"
+#~ msgid "Xplayer Browser Plugin"
+#~ msgstr "Модуль Xplayer для обозревателя"
 
-#~ msgid "The Totem plugin could not be started."
-#~ msgstr "Модуль Totem не может загрузиться."
+#~ msgid "The Xplayer plugin could not be started."
+#~ msgstr "Модуль Xplayer не может загрузиться."
 
 #~ msgid "No playlist or playlist empty"
 #~ msgstr "Нет списка воспроизведения или список воспроизведения пуст"
@@ -1523,6 +1523,6 @@ msgstr "Blu-ray"
 #~ msgid "Could not initialise the thread-safe libraries."
 #~ msgstr "Не удалось инициализировать потокобезопасные библиотеки."
 
-#~ msgid "Verify your system installation. The Totem plugin will now exit."
+#~ msgid "Verify your system installation. The Xplayer plugin will now exit."
 #~ msgstr ""
-#~ "Проверьте установку вашей системы. Модуль Totem завершает свою работу."
+#~ "Проверьте установку вашей системы. Модуль Xplayer завершает свою работу."

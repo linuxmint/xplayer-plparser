@@ -1,13 +1,13 @@
-# translation of totem.HEAD.po to Punjabi
-# Copyright (C) 2004 THE totem'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the totem package.
+# translation of xplayer.HEAD.po to Punjabi
+# Copyright (C) 2004 THE xplayer'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the xplayer package.
 #
 # Punjab Linux Technology <punjablinux@netscape.net>, 2004.
 # A S Alam <aalam@users.sf.net>, 2005, 2006, 2007, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: totem.HEAD\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=totem&component=playlist parser\n"
+"Project-Id-Version: xplayer.HEAD\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&component=playlist parser\n"
 "POT-Creation-Date: 2009-04-17 15:51+0000\n"
 "PO-Revision-Date: 2009-07-07 06:02+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
@@ -18,34 +18,34 @@ msgstr ""
 "X-Generator: Lokalize 0.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../plparse/totem-disc.c:357 ../plparse/totem-disc.c:499, c-format
+#: ../plparse/xplayer-disc.c:357 ../plparse/xplayer-disc.c:499, c-format
 #| msgid "Failed to mount %s"
 msgid "Failed to mount %s."
 msgstr "%s ਮਾਊਂਟ ਕਰਨ ਲਈ ਫੇਲ੍ਹ ਹੈ।"
 
-#: ../plparse/totem-disc.c:388
+#: ../plparse/xplayer-disc.c:388
 #, c-format
 msgid "No media in drive for device '%s'."
 msgstr "ਜੰਤਰ '%s' ਲਈ ਡਰਾਇਵ ਵਿੱਚ ਕੋਈ ਮੀਡਿਆ ਨਹੀਂ।"
 
-#: ../plparse/totem-disc.c:442
+#: ../plparse/xplayer-disc.c:442
 #, c-format
 msgid "Please check that a disc is present in the drive."
 msgstr "ਤੁਹਾਨੂੰ ਇਹ ਪੜਤਾਲ ਕਰਨੀ ਚਾਹੀਦੀ ਹੈ ਕਿ ਡਿਸਕ ਡਰਾਇਵ ਅੰਦਰ ਹੈ।"
 
-#: ../plparse/totem-disc.c:881
+#: ../plparse/xplayer-disc.c:881
 msgid "Audio CD"
 msgstr "ਆਡੀਓ CD"
 
-#: ../plparse/totem-disc.c:883
+#: ../plparse/xplayer-disc.c:883
 msgid "Video CD"
 msgstr "ਵੀਡਿਓ CD"
 
-#: ../plparse/totem-disc.c:885
+#: ../plparse/xplayer-disc.c:885
 msgid "DVD"
 msgstr "DVD"
 
-#: ../plparse/totem-disc.c:887
+#: ../plparse/xplayer-disc.c:887
 msgid "Digital Television"
 msgstr "ਡਿਜ਼ਿਟਲ ਟੈਲੀਵੀਜ਼ਿਨ"
 
@@ -285,10 +285,10 @@ msgstr "ਡਿਜ਼ਿਟਲ ਟੈਲੀਵੀਜ਼ਿਨ"
 #~ msgid "Time:"
 #~ msgstr "ਸਮਾਂ:"
 
-#~ msgid "Totem Movie Player"
+#~ msgid "Xplayer Movie Player"
 #~ msgstr "ਟੋਟੇਮ ਵੀਡਿਓ ਪਲੇਅਰ"
 
-#~ msgid "Totem Preferences"
+#~ msgid "Xplayer Preferences"
 #~ msgstr "ਟੋਟੇਮ ਪਸੰਦ"
 
 #~ msgid "Visualisation _size:"
@@ -497,11 +497,11 @@ msgstr "ਡਿਜ਼ਿਟਲ ਟੈਲੀਵੀਜ਼ਿਨ"
 #~ msgid "Couldn't load the '%s' interface."
 #~ msgstr "ਇੰਟਰਫੇਸ '%s' ਨੂੰ ਖੋਲ੍ਹਿਆ ਨਹੀਂ ਜਾ ਸਕਿਆ।"
 
-#~ msgid "Make sure that Totem is properly installed."
+#~ msgid "Make sure that Xplayer is properly installed."
 #~ msgstr "ਪੜਤਾਲ ਕਰੋ ਕਿ ਟੋਟੇਮ ਠੀਕ ਤਰਾਂ ਇੰਸਟਾਲ ਹੈ।"
 
 #~ msgid ""
-#~ "Totem is free software; you can redistribute it and/or modify it under "
+#~ "Xplayer is free software; you can redistribute it and/or modify it under "
 #~ "the terms of the GNU General Public License as published by the Free "
 #~ "Software Foundation; either version 2 of the License, or (at your option) "
 #~ "any later version."
@@ -511,7 +511,7 @@ msgstr "ਡਿਜ਼ਿਟਲ ਟੈਲੀਵੀਜ਼ਿਨ"
 #~ "ਵੰਡ ਅਤੇ/ਜਾਂ ਸੋਧ ਸਕਦੇ ਹੋ।"
 
 #~ msgid ""
-#~ "Totem is distributed in the hope that it will be useful, but WITHOUT ANY "
+#~ "Xplayer is distributed in the hope that it will be useful, but WITHOUT ANY "
 #~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
 #~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 #~ "details."
@@ -522,7 +522,7 @@ msgstr "ਡਿਜ਼ਿਟਲ ਟੈਲੀਵੀਜ਼ਿਨ"
 
 #~ msgid ""
 #~ "You should have received a copy of the GNU General Public License along "
-#~ "with Totem; if not, write to the Free Software Foundation, Inc., 59 "
+#~ "with Xplayer; if not, write to the Free Software Foundation, Inc., 59 "
 #~ "Temple Place, Suite 330, Boston, MA  02111-1307  USA"
 #~ msgstr ""
 #~ "ਟੋਟੇਮ ਨਾਲ ਤੁਸੀਂ ਗਨੂ ਜਰਨਲ ਪਬਲਿਕ ਲਾਇਸੈਂਸ ਦੀ ਨਕਲ ਪ੍ਰਾਪਤ ਕਰੋਗੇ, ਜੇਕਰ ਤੁਹਾਨੂੰ ਨਹੀਂ ਮਿਲੀ ਹੈ ਤਾਂ "
@@ -530,7 +530,7 @@ msgstr "ਡਿਜ਼ਿਟਲ ਟੈਲੀਵੀਜ਼ਿਨ"
 #~ "ਅਮਰੀਕਾ ਨੂੰ ਲਿਖੋ।"
 
 #~ msgid ""
-#~ "Totem contains an exception to allow the use of proprietary GStreamer "
+#~ "Xplayer contains an exception to allow the use of proprietary GStreamer "
 #~ "plugins."
 #~ msgstr ""
 #~ "ਟੋਟੇਮ 'ਚ ਇੱਕ ਅਪਵਾਦ ਹੈ, ਜੋ ਕਿ ਪ੍ਰੋਪ੍ਰੀਟਰੇ ਜੀਸਟਰੀਮਰ ਪਲੱਗਇਨਾਂ ਦੀ ਵਰਤੋਂ ਕਰਨ ਲਈ ਸਹਾਇਕ ਹੈ।"
@@ -924,7 +924,7 @@ msgstr "ਡਿਜ਼ਿਟਲ ਟੈਲੀਵੀਜ਼ਿਨ"
 #~ msgstr "ਕੀ ਦਰਿਸ਼ ਪਰਭਾਵ ਯੋਗ?"
 
 #~ msgid ""
-#~ "It seems you are running Totem remotely.\n"
+#~ "It seems you are running Xplayer remotely.\n"
 #~ "Are you sure you want to enable the visual effects?"
 #~ msgstr ""
 #~ "ਇੰਜ ਜਾਪਦਾ ਹੈ ਕਿ ਤੁਸੀਂ ਟੋਟੇਮ ਨੂੰ ਰਿਮੋਟ ਤੋਂ ਚਲਾ ਰਹੇ ਹੋ।\n"
@@ -932,7 +932,7 @@ msgstr "ਡਿਜ਼ਿਟਲ ਟੈਲੀਵੀਜ਼ਿਨ"
 
 #~ msgid ""
 #~ "The change of this setting will only take effect for the next movie, or "
-#~ "when Totem is restarted."
+#~ "when Xplayer is restarted."
 #~ msgstr "ਇਹ ਤਬਦੀਲੀਆਂ ਅਗਲੀ ਫਿਲਮ ਜਾਂ ਟੋਟੇਮ ਦੇ ਮੁੜ ਚਾਲੂ ਹੋਣ ਤੇ ਹੀ ਪਰਭਾਵੀ ਹੋ ਸਕਦੀਆਂ ਹਨ।"
 
 #~ msgid ""
@@ -940,7 +940,7 @@ msgstr "ਡਿਜ਼ਿਟਲ ਟੈਲੀਵੀਜ਼ਿਨ"
 #~ msgstr "ਦਿੱਖ ਪਰਭਾਵ ਕਿਸਮ ਤਬਦੀਲ ਕਰਨ ਨੂੰ ਪਰਭਾਵੀ ਹੋਣ ਲਈ ਮੁੜ-ਚਾਲੂ ਕਰਨਾ ਲਾਜ਼ਮੀ ਹੈ।"
 
 #~ msgid ""
-#~ "The change of audio output type will only take effect when Totem is "
+#~ "The change of audio output type will only take effect when Xplayer is "
 #~ "restarted."
 #~ msgstr "ਇਹ ਤਬਦੀਲੀਆਂ ਅਗਲੀ ਫਿਲਮ ਜਾਂ ਟੋਟੇਮ ਦੇ ਮੁੜ ਚਾਲੂ ਹੋਣ ਤੇ ਹੀ ਪਰਭਾਵੀ ਹੋ ਸਕਦੀਆਂ ਹਨ।"
 
@@ -1118,27 +1118,27 @@ msgstr "ਡਿਜ਼ਿਟਲ ਟੈਲੀਵੀਜ਼ਿਨ"
 #~ msgid "Paused"
 #~ msgstr "ਰੁਕਿਆ"
 
-#~ msgid "Totem could not eject the optical media."
+#~ msgid "Xplayer could not eject the optical media."
 #~ msgstr "ਟੋਟੇਮ ਮਾਧਿਅਮ ਨੂੰ ਬਾਹਰ ਨਹੀਂ ਕੱਢ ਸਕਦਾ ਹੈ।"
 
-#~ msgid "Totem could not play '%s'."
+#~ msgid "Xplayer could not play '%s'."
 #~ msgstr "ਟੋਟੇਮ '%s' ਨੂੰ ਚਲਾ ਨਹੀਂ ਸਕਦਾ ਹੈ।"
 
 #~ msgid ""
-#~ "Totem cannot play this type of media (%s) because you do not have the "
+#~ "Xplayer cannot play this type of media (%s) because you do not have the "
 #~ "appropriate plugins to handle it."
 #~ msgstr ""
 #~ "ਟੋਟੇਮ ਇਹ ਮਾਧਿਅਮ (%s) ਨੂੰ ਚਲਾ ਨਹੀ ਸਕਦਾ ਹੈ, ਕਿਉਕਿ ਤੁਹਾਡੇ ਕੋਲ ਇਸ ਨੂੰ ਵਰਤਣ ਲਈ ਪਲੱਗਇਨ ਮੌਜੂਦ "
 #~ "ਨਹੀਂ ਹੈ।"
 
 #~ msgid ""
-#~ "Please install the necessary plugins and restart Totem to be able to play "
+#~ "Please install the necessary plugins and restart Xplayer to be able to play "
 #~ "this media."
 #~ msgstr ""
 #~ "ਕਿਰਪਾ ਕਰਕੇ ਲੋੜੀਦੀਂ ਪਲੱਗਇਨ ਇੰਸਟਾਲ ਕਰੋ ਅਤੇ ਟੋਟੇਮ ਨੂੰ ਇਸ ਮਾਧਿਅਮ ਨੂੰ ਚਲਾਉਣ ਲ਼ਈ ਮੁੜ-ਚਾਲੂ ਕਰੋ।"
 
 #~ msgid ""
-#~ "Totem could not play this media (%s) although a plugin is present to "
+#~ "Xplayer could not play this media (%s) although a plugin is present to "
 #~ "handle it."
 #~ msgstr ""
 #~ "ਟੋਟੇਮ ਇਹ ਮਾਧਿਅਮ (%s) ਨੂੰ ਚਲਾ ਨਹੀ ਸਕਦਾ ਹੈ, ਭਾਵੇਂ ਕਿ ਇਸ ਨੂੰ ਵਰਤਣ ਵਾਲੀ ਪਲੱਗਇਨ ਮੌਜੂਦ ਹੈ।"
@@ -1149,7 +1149,7 @@ msgstr "ਡਿਜ਼ਿਟਲ ਟੈਲੀਵੀਜ਼ਿਨ"
 #~ msgstr ""
 #~ "ਤੁਹਾਨੂੰ ਇਹ ਪੜਤਾਲ ਕਰਨੀ ਚਾਹੀਦੀ ਹੈ ਕਿ ਡਿਸਕ ਡਰਾਇਵ ਅੰਦਰ ਹੈ ਅਤੇ ਇਹ ਠੀਕ ਤਰਾਂ ਸੰਰਚਿਤ ਹੈ।"
 
-#~ msgid "Totem was not able to play this disc."
+#~ msgid "Xplayer was not able to play this disc."
 #~ msgstr "ਟੋਟੇਮ ਇਹ ਡਿਸਕ ਚਲਾਉਣ ਦੇ ਯੋਗ ਨਹੀਂ ਹੈ।"
 
 #~ msgid "No reason."
@@ -1158,7 +1158,7 @@ msgstr "ਡਿਜ਼ਿਟਲ ਟੈਲੀਵੀਜ਼ਿਨ"
 #~ msgid "Open Location..."
 #~ msgstr "ਟਿਕਾਣਾ ਖੋਲ੍ਹੋ..."
 
-#~ msgid "Totem could not get a screenshot of that film."
+#~ msgid "Xplayer could not get a screenshot of that film."
 #~ msgstr "ਟੋਟੇਮ ਇਸ ਫਿਲਮ ਦੀ ਸਕਰੀਨ-ਸ਼ਾਟ ਪ੍ਰਾਪਤ ਨਹੀਂ ਕਰ ਸਕਿਆ ਹੈ।"
 
 #~ msgid "This is not supposed to happen; please file a bug report."
@@ -1170,13 +1170,13 @@ msgstr "ਡਿਜ਼ਿਟਲ ਟੈਲੀਵੀਜ਼ਿਨ"
 #~ msgid "No error message"
 #~ msgstr "ਕੋਈ ਗਲਤੀ ਸੁਨੇਹਾ ਨਹੀਂ"
 
-#~ msgid "Totem could not display the help contents."
+#~ msgid "Xplayer could not display the help contents."
 #~ msgstr "ਟੋਟੇਮ ਸਹਾਇਤਾ ਅੰਸ਼ ਨਹੀਂ ਵੇਖਾ ਸਕਦਾ ਹੈ।"
 
 #~ msgid "An error occurred"
 #~ msgstr "ਇੱਕ ਗਲਤੀ ਆਈ ਹੈ"
 
-#~ msgid "Totem could not seek in '%s'."
+#~ msgid "Xplayer could not seek in '%s'."
 #~ msgstr "ਟੋਟੇਮ '%s' ਵਿੱਚ ਖੋਜ ਨਹੀਂ ਸਕਿਆ ਹੈ।"
 
 #~ msgid "Previous Chapter/Movie"
@@ -1188,22 +1188,22 @@ msgstr "ਡਿਜ਼ਿਟਲ ਟੈਲੀਵੀਜ਼ਿਨ"
 #~ msgid "Next Chapter/Movie"
 #~ msgstr "ਅੱਗੇ ਚੈਪਟਰ/ਮੂਵੀ"
 
-#~ msgid "Totem could not startup."
+#~ msgid "Xplayer could not startup."
 #~ msgstr "ਟੋਟੇਮ ਸ਼ੁਰੂ ਨਹੀਂ ਹੋ ਸਕਿਆ ਹੈ।"
 
 #~ msgid "Could not initialize the thread-safe libraries."
 #~ msgstr "ਥਰਿੱਡ-ਸੁਰੱਖਿਆ ਲਾਇਬਰੇਰੀ ਸ਼ੁਰੂ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕੀ ਹੈ।"
 
-#~ msgid "Verify your system installation. Totem will now exit."
+#~ msgid "Verify your system installation. Xplayer will now exit."
 #~ msgstr "ਤੁਹਾਡੇ ਸਿਸਟਮ ਦੀ ਇੰਸਟਾਲ ਦੀ ਪੜਤਾਲ ਹੈ। ਟੋਟੇਮ ਹੁਣ ਬੰਦ ਹੋ ਰਿਹਾ ਹੈ।"
 
 #~ msgid "- Play movies and songs"
 #~ msgstr " - ਮੂਵੀ ਅਤੇ ਗਾਣੇ ਚਲਾਓ"
 
-#~ msgid "Totem could not parse the command-line options"
+#~ msgid "Xplayer could not parse the command-line options"
 #~ msgstr "ਟੋਟੇਮ ਕਮਾਂਡ-ਲਾਇਨ ਚੋਣਾਂ ਨੂੰ ਪਾਰਸ ਨਹੀਂ ਕਰ ਸਕਿਆ"
 
-#~ msgid "Totem could not initialize the configuration engine."
+#~ msgid "Xplayer could not initialize the configuration engine."
 #~ msgstr "ਟੋਟੇਮ ਸੰਰਚਨਾ ਇੰਜਣ ਨੂੰ ਸ਼ੁਰੂ ਨਹੀਂ ਕਰ ਸਕਿਆ ਹੈ।"
 
 #~ msgid "Make sure that GNOME is properly installed."
@@ -1526,7 +1526,7 @@ msgstr "ਡਿਜ਼ਿਟਲ ਟੈਲੀਵੀਜ਼ਿਨ"
 #~ msgid "No URI to play"
 #~ msgstr "ਚਲਾਉਣ ਲਈ URI ਨਹੀਂ"
 
-#~ msgid "Totem could not play '%s'"
+#~ msgid "Xplayer could not play '%s'"
 #~ msgstr "ਟੋਟੇਮ '%s' ਨੂੰ ਚਲਾ ਨਹੀਂ ਸਕਦਾ ਹੈ।"
 
 #~ msgid "Opening %s"
@@ -1535,13 +1535,13 @@ msgstr "ਡਿਜ਼ਿਟਲ ਟੈਲੀਵੀਜ਼ਿਨ"
 #~ msgid "Browser Plugin using %s"
 #~ msgstr "%s ਵਾਸਤੇ ਪਲੱਗਇਨ ਝਲਕਾਰਾ"
 
-#~ msgid "Totem Browser Plugin"
+#~ msgid "Xplayer Browser Plugin"
 #~ msgstr "ਟੋਟੇਮ ਝਲਕਾਰਾ ਪਲੱਗਇਨ"
 
 #~ msgid "Plugin"
 #~ msgstr "ਪਲੱਗਇਨ"
 
-#~ msgid "The Totem plugin could not startup."
+#~ msgid "The Xplayer plugin could not startup."
 #~ msgstr "ਟੋਟੇਮ ਪਲੱਗਇਨ ਸ਼ੁਰੂ ਨਹੀਂ ਕਰ ਸਕਿਆ ਹੈ।"
 
 #~ msgid "Menu"
@@ -1553,5 +1553,5 @@ msgstr "ਡਿਜ਼ਿਟਲ ਟੈਲੀਵੀਜ਼ਿਨ"
 #~ msgid "Could not initialise the thread-safe libraries."
 #~ msgstr "ਥਰਿੱਡ-ਸੁਰੱਖਿਆ ਲਾਇਬਰੇਰੀ ਸ਼ੁਰੂ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕੀ ਹੈ।"
 
-#~ msgid "Verify your system installation. The Totem plugin will now exit."
+#~ msgid "Verify your system installation. The Xplayer plugin will now exit."
 #~ msgstr "ਤੁਹਾਡੇ ਸਿਸਟਮ ਇੰਸਟਾਲ  ਪੜਤਾਲ ਹੋਈ। ਟੋਟੇਮ ਪਲੱਗਇਨ ਹੁਣ ਬੰਦ ਹੋਵੇਗੀ।"

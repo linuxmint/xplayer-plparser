@@ -2,7 +2,7 @@
 # 
 # Modifications should be made to debian/control.in instead.
 # This file is regenerated automatically in the clean target.
-Source: totem-pl-parser
+Source: xplayer-pl-parser
 Section: libs
 Priority: optional
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
@@ -24,63 +24,63 @@ Build-Depends: debhelper (>= 8),
                libgirepository1.0-dev (>= 0.10.7-1~),
                gobject-introspection (>= 0.9.12-4~)
 Standards-Version: 3.9.4
-Vcs-Svn: svn://anonscm.debian.org/pkg-gnome/desktop/unstable/totem-pl-parser
-Vcs-Browser: http://anonscm.debian.org/viewvc/pkg-gnome/desktop/unstable/totem-pl-parser
+Vcs-Svn: svn://anonscm.debian.org/pkg-gnome/desktop/unstable/xplayer-pl-parser
+Vcs-Browser: http://anonscm.debian.org/viewvc/pkg-gnome/desktop/unstable/xplayer-pl-parser
 
-Package: libtotem-plparser-dev
+Package: libxplayer-plparser-dev
 Section: libdevel
 Architecture: any
 Depends: ${misc:Depends},
-         libtotem-plparser18 (= ${binary:Version}),
-         gir1.2-totem-plparser-1.0 (= ${binary:Version}),
+         libxplayer-plparser18 (= ${binary:Version}),
+         gir1.2-xplayer-plparser-1.0 (= ${binary:Version}),
          libglib2.0-dev,
          libxml2-dev,
          libgmime-2.6-dev,
          libarchive-dev
-Replaces: libtotem-plparser10
-Description: Totem Playlist Parser library - development files
- totem-pl-parser is a simple GObject-based library to parse a host of
+Replaces: libxplayer-plparser10
+Description: Xplayer Playlist Parser library - development files
+ xplayer-pl-parser is a simple GObject-based library to parse a host of
  playlist formats, as well as save those.
  .
  This package contains the development headers and documentation.
 
-Package: libtotem-plparser18
+Package: libxplayer-plparser18
 Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends}
-Replaces: libtotem-plparser10, libtotem-plparser12, libtotem-plparser17
-Description: Totem Playlist Parser library - runtime files
- totem-pl-parser is a simple GObject-based library to parse a host of
+Replaces: libxplayer-plparser10, libxplayer-plparser12, libxplayer-plparser17
+Description: Xplayer Playlist Parser library - runtime files
+ xplayer-pl-parser is a simple GObject-based library to parse a host of
  playlist formats, as well as save those.
  .
  This package contains the shared library.
 
-Package: libtotem-plparser-dbg
+Package: libxplayer-plparser-dbg
 Section: debug
 Priority: extra
 Architecture: any
-Depends: libtotem-plparser18 (= ${binary:Version}),
+Depends: libxplayer-plparser18 (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
-Description: Totem Playlist Parser library - debugging symbols
- totem-pl-parser is a simple GObject-based library to parse a host of
+Description: Xplayer Playlist Parser library - debugging symbols
+ xplayer-pl-parser is a simple GObject-based library to parse a host of
  playlist formats, as well as save those.
  .
  This package contains the debugging symbols.
 
-Package: gir1.2-totem-plparser-1.0
+Package: gir1.2-xplayer-plparser-1.0
 Section: introspection
 Architecture: any
 Depends: ${gir:Depends},
          ${shlibs:Depends},
          ${misc:Depends}
-Conflicts: gir1.0-totem-plparser-1.0
-Replaces: gir1.0-totem-plparser-1.0
-Description: GObject introspection data for the Totem Playlist Parser library
- This package contains introspection data for the Totem Playlist Parser
+Conflicts: gir1.0-xplayer-plparser-1.0
+Replaces: gir1.0-xplayer-plparser-1.0
+Description: GObject introspection data for the Xplayer Playlist Parser library
+ This package contains introspection data for the Xplayer Playlist Parser
  library.
  .
- totem-pl-parser is a simple GObject-based library to parse a host of
+ xplayer-pl-parser is a simple GObject-based library to parse a host of
  playlist formats, as well as save those.
  .
  It can be used by packages using the GIRepository format to generate

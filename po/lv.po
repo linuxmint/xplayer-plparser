@@ -1,5 +1,5 @@
 # translation of lv.po to Latvian
-# totem for Latvian.
+# xplayer for Latvian.
 # Copyright (C) 2002
 # This file is distributed under the same license as the PACKAGE package.
 #
@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lv\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=totem&keywords=I18N+L10N&component=playlist parser\n"
+"product=xplayer&keywords=I18N+L10N&component=playlist parser\n"
 "POT-Creation-Date: 2014-03-07 11:45+0000\n"
 "PO-Revision-Date: 2014-03-07 13:54+0200\n"
 "Last-Translator: Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>\n"
@@ -26,39 +26,39 @@ msgstr ""
 "Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
-#: ../plparse/totem-disc.c:276 ../plparse/totem-disc.c:289
-#: ../plparse/totem-disc.c:533
+#: ../plparse/xplayer-disc.c:276 ../plparse/xplayer-disc.c:289
+#: ../plparse/xplayer-disc.c:533
 #, c-format
 msgid "Failed to mount %s."
 msgstr "Neizdevās piemontēt %s."
 
-#: ../plparse/totem-disc.c:418
+#: ../plparse/xplayer-disc.c:418
 #, c-format
 msgid "No media in drive for device '%s'."
 msgstr "Ierīcē “%s” nav datu nesēja."
 
-#: ../plparse/totem-disc.c:476
+#: ../plparse/xplayer-disc.c:476
 #, c-format
 msgid "Please check that a disc is present in the drive."
 msgstr "Lūdzu pārliecinieties, ka disks atrodas ierīcē."
 
-#: ../plparse/totem-disc.c:947
+#: ../plparse/xplayer-disc.c:947
 msgid "Audio CD"
 msgstr "Audio CD"
 
-#: ../plparse/totem-disc.c:949
+#: ../plparse/xplayer-disc.c:949
 msgid "Video CD"
 msgstr "Video CD"
 
-#: ../plparse/totem-disc.c:951
+#: ../plparse/xplayer-disc.c:951
 msgid "DVD"
 msgstr "DVD"
 
-#: ../plparse/totem-disc.c:953
+#: ../plparse/xplayer-disc.c:953
 msgid "Digital Television"
 msgstr "Ciparu televīzija"
 
-#: ../plparse/totem-disc.c:955
+#: ../plparse/xplayer-disc.c:955
 msgid "Blu-ray"
 msgstr "Blu-ray"
 
@@ -191,33 +191,33 @@ msgstr "Blu-ray"
 #~ msgid "Couldn't load the '%s' interface. %s"
 #~ msgstr "Neizdevās ielādēt '%s' saskarni. %s"
 
-#~ msgid "Make sure that Totem is properly installed."
-#~ msgstr "Pārliecinieties vai Totem ir pareizi uzstādīts."
+#~ msgid "Make sure that Xplayer is properly installed."
+#~ msgstr "Pārliecinieties vai Xplayer ir pareizi uzstādīts."
 
 #~ msgid ""
-#~ "Totem is free software; you can redistribute it and/or modify it under "
+#~ "Xplayer is free software; you can redistribute it and/or modify it under "
 #~ "the terms of the GNU General Public License as published by the Free "
 #~ "Software Foundation; either version 2 of the License, or (at your option) "
 #~ "any later version."
 #~ msgstr ""
-#~ "Totem ir brīvās programmatūras produkts; jūs varat izpaltīt un/vai "
+#~ "Xplayer ir brīvās programmatūras produkts; jūs varat izpaltīt un/vai "
 #~ "modificēt to saskanā ar GNU Vispārējās Publiskās Licences 2. vai kādas "
 #~ "vēlākas versijas noteikumiem."
 
 #~ msgid ""
-#~ "Totem is distributed in the hope that it will be useful, but WITHOUT ANY "
+#~ "Xplayer is distributed in the hope that it will be useful, but WITHOUT ANY "
 #~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
 #~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 #~ "details."
 #~ msgstr ""
-#~ "Totem tiek izplatīts ar cerību, ka tas būs nodserīgs. Tas tiek izplatīts "
+#~ "Xplayer tiek izplatīts ar cerību, ka tas būs nodserīgs. Tas tiek izplatīts "
 #~ "BEZ jebkādas garantijas vai iekļautas ražotāja atbildības par šo "
 #~ "produktu. Sīkāku informāciju meklējiet GNU Vispārējās Publiskās Licences "
 #~ "tekstā."
 
 #~ msgid ""
 #~ "You should have received a copy of the GNU General Public License along "
-#~ "with Totem; if not, write to the Free Software Foundation, Inc., 59 "
+#~ "with Xplayer; if not, write to the Free Software Foundation, Inc., 59 "
 #~ "Temple Place, Suite 330, Boston, MA  02111-1307  USA"
 #~ msgstr ""
 #~ "GNU Vispārējās Publiskās Licence ir pieejama kopā ar šīs programmatūra "
@@ -225,7 +225,7 @@ msgstr "Blu-ray"
 #~ "Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA"
 
 #~ msgid ""
-#~ "Totem contains an exception to allow the use of proprietary GStreamer "
+#~ "Xplayer contains an exception to allow the use of proprietary GStreamer "
 #~ "plugins."
 #~ msgstr ""
 #~ "Totēm ir pieejams izņēmums, kas ļauj izmantot īpašnieciskos GStreamer "
@@ -262,8 +262,8 @@ msgstr "Blu-ray"
 #~ "Artis Trops <hornet@navigator.lv>\n"
 #~ "Lauma Pretkalninja <lauma.pret@gmail.com> Aigars Krūmiņš <akols@inbox.lv> "
 
-#~ msgid "Totem Website"
-#~ msgstr "Totem mājas lapa"
+#~ msgid "Xplayer Website"
+#~ msgstr "Xplayer mājas lapa"
 
 #~ msgid "Configure Plugins"
 #~ msgstr "Konfigurēt spraudņus"
@@ -629,18 +629,18 @@ msgstr "Blu-ray"
 #~ msgstr "Aktivizēt vizuālos efektus?"
 
 #~ msgid ""
-#~ "It seems you are running Totem remotely.\n"
+#~ "It seems you are running Xplayer remotely.\n"
 #~ "Are you sure you want to enable the visual effects?"
 #~ msgstr ""
-#~ "Šķiet, jūs darbināt Totem attālināti.\n"
+#~ "Šķiet, jūs darbināt Xplayer attālināti.\n"
 #~ "Vai jūs tiešām vēlaties aktivizēt vizuālos efektus?"
 
 #~ msgid ""
 #~ "The change of this setting will only take effect for the next movie, or "
-#~ "when Totem is restarted."
+#~ "when Xplayer is restarted."
 #~ msgstr ""
 #~ "Šīs uzstādījumu izmaiņas stāsies spēkā tikai ar nākamo filmu vai "
-#~ "pārlādējot Totem."
+#~ "pārlādējot Xplayer."
 
 #~ msgid ""
 #~ "Changing the visuals effect type will require a restart to take effect."
@@ -648,9 +648,9 @@ msgstr "Blu-ray"
 #~ "Vizuālo efektu tipa maiņai epieciešama pārlādēšana, lai tā stātos spēkā."
 
 #~ msgid ""
-#~ "The change of audio output type will only take effect when Totem is "
+#~ "The change of audio output type will only take effect when Xplayer is "
 #~ "restarted."
-#~ msgstr "Audi ozvada tipa maiņa stāsies spēkā ar Totem pārlādēšanu."
+#~ msgstr "Audi ozvada tipa maiņa stāsies spēkā ar Xplayer pārlādēšanu."
 
 #~ msgid "Preferences"
 #~ msgstr "Uzstādījumi"
@@ -820,31 +820,31 @@ msgstr "Blu-ray"
 #~ msgid "Paused"
 #~ msgstr "Pauzēts"
 
-#~ msgid "Totem could not eject the optical media."
-#~ msgstr "Totem neizdevās izgrūst optisko mēdiju."
+#~ msgid "Xplayer could not eject the optical media."
+#~ msgstr "Xplayer neizdevās izgrūst optisko mēdiju."
 
-#~ msgid "Totem could not play '%s'."
-#~ msgstr "Totem neizdevās nospēlēt '%s'."
+#~ msgid "Xplayer could not play '%s'."
+#~ msgstr "Xplayer neizdevās nospēlēt '%s'."
 
 #~ msgid ""
-#~ "Totem cannot play this type of media (%s) because you do not have the "
+#~ "Xplayer cannot play this type of media (%s) because you do not have the "
 #~ "appropriate plugins to handle it."
 #~ msgstr ""
-#~ "Totem nevar nospēlēt šo mēdija tipu (%s), jo jums nav pienācīgo spraudņu, "
+#~ "Xplayer nevar nospēlēt šo mēdija tipu (%s), jo jums nav pienācīgo spraudņu, "
 #~ "lai to paveiktu."
 
 #~ msgid ""
-#~ "Please install the necessary plugins and restart Totem to be able to play "
+#~ "Please install the necessary plugins and restart Xplayer to be able to play "
 #~ "this media."
 #~ msgstr ""
-#~ "Lūdzu uzinstalējiet nepieciešamos spraudņus un pārstartējier Totem, lai "
+#~ "Lūdzu uzinstalējiet nepieciešamos spraudņus un pārstartējier Xplayer, lai "
 #~ "varētu spēlēt šo mēdiju."
 
 #~ msgid ""
-#~ "Totem could not play this media (%s) although a plugin is present to "
+#~ "Xplayer could not play this media (%s) although a plugin is present to "
 #~ "handle it."
 #~ msgstr ""
-#~ "Totem neizdevās nospēlēt šo mēdiju (%s), kaut gan ir spraudnis to spēlētu."
+#~ "Xplayer neizdevās nospēlēt šo mēdiju (%s), kaut gan ir spraudnis to spēlētu."
 
 #~ msgid ""
 #~ "You might want to check that a disc is present in the drive and that it "
@@ -853,26 +853,26 @@ msgstr "Blu-ray"
 #~ "Jūs varētu gribēt pārliecināties, vai disks ir iekārtā un ka tā ir "
 #~ "pareizi nokonfigurēta."
 
-#~ msgid "Totem was not able to play this disc."
-#~ msgstr "Totem nevarēja atskaņot šo disku."
+#~ msgid "Xplayer was not able to play this disc."
+#~ msgstr "Xplayer nevarēja atskaņot šo disku."
 
 #~ msgid "No reason."
 #~ msgstr "Nav iemesla."
 
-#~ msgid "Totem could not get a screenshot of that film."
-#~ msgstr "Totem neizdevās dabūt šīs filmas ekrānkopiju."
+#~ msgid "Xplayer could not get a screenshot of that film."
+#~ msgstr "Xplayer neizdevās dabūt šīs filmas ekrānkopiju."
 
 #~ msgid "This is not supposed to happen; please file a bug report."
 #~ msgstr "Šim nevajadzēja notikt, lūdzu fiksējiet kļūdu atskaiti."
 
-#~ msgid "Totem Movie Player"
-#~ msgstr "Totem filmu atskaņotājs"
+#~ msgid "Xplayer Movie Player"
+#~ msgstr "Xplayer filmu atskaņotājs"
 
 #~ msgid "No error message"
 #~ msgstr "Nav dļūdu paziņojuma"
 
-#~ msgid "Totem could not display the help contents."
-#~ msgstr "Totem neizdevās atvērt palīdzības satura rādītāju."
+#~ msgid "Xplayer could not display the help contents."
+#~ msgstr "Xplayer neizdevās atvērt palīdzības satura rādītāju."
 
 #~ msgid "An error occurred"
 #~ msgstr "Notikusi kļūda"
@@ -886,23 +886,23 @@ msgstr "Blu-ray"
 #~ msgid "Next Chapter/Movie"
 #~ msgstr "Nākamā nodaļa / filma"
 
-#~ msgid "Totem could not startup."
-#~ msgstr "Totem neizdevās palaist."
+#~ msgid "Xplayer could not startup."
+#~ msgstr "Xplayer neizdevās palaist."
 
 #~ msgid "Could not initialize the thread-safe libraries."
 #~ msgstr "Neizdevās inicializēt thread-safe bibliotekas."
 
-#~ msgid "Verify your system installation. Totem will now exit."
-#~ msgstr "Pārbaudiet jūsu sistēmas instalāciju. Totem tagad aizvērsies."
+#~ msgid "Verify your system installation. Xplayer will now exit."
+#~ msgstr "Pārbaudiet jūsu sistēmas instalāciju. Xplayer tagad aizvērsies."
 
 #~ msgid "- Play movies and songs"
 #~ msgstr "- Atskaņot filmas un dziesmas"
 
-#~ msgid "Totem could not parse the command-line options"
-#~ msgstr "Totem neizdevās apstrādāt komandrindas parametrus"
+#~ msgid "Xplayer could not parse the command-line options"
+#~ msgstr "Xplayer neizdevās apstrādāt komandrindas parametrus"
 
-#~ msgid "Totem could not initialize the configuration engine."
-#~ msgstr "Totem neizdevās inicializēt konfigurācijas dzinēju."
+#~ msgid "Xplayer could not initialize the configuration engine."
+#~ msgstr "Xplayer neizdevās inicializēt konfigurācijas dzinēju."
 
 #~ msgid "Make sure that GNOME is properly installed."
 #~ msgstr "Pārliecinieties, ka GNOME ir pareizi uztādīta."
@@ -1303,8 +1303,8 @@ msgstr "Blu-ray"
 #~ msgid "No URI to play"
 #~ msgstr "Nav atskaņojamās URI"
 
-#~ msgid "Totem could not play '%s'"
-#~ msgstr "Totem neizdevās atskaņot '%s'"
+#~ msgid "Xplayer could not play '%s'"
+#~ msgstr "Xplayer neizdevās atskaņot '%s'"
 
 #~ msgid "Opening %s"
 #~ msgstr "Atver %s"
@@ -1315,11 +1315,11 @@ msgstr "Blu-ray"
 #~ msgid "Browser Plugin using %s"
 #~ msgstr "Pārlūka papildinājums izmanto %s"
 
-#~ msgid "Totem Browser Plugin"
-#~ msgstr "Totem pārlūka papildinājums"
+#~ msgid "Xplayer Browser Plugin"
+#~ msgstr "Xplayer pārlūka papildinājums"
 
-#~ msgid "The Totem plugin could not startup."
-#~ msgstr "Totem spraudnis nevarēja palaisties."
+#~ msgid "The Xplayer plugin could not startup."
+#~ msgstr "Xplayer spraudnis nevarēja palaisties."
 
 #~ msgid "No playlist or playlist empty"
 #~ msgstr "Nav repertuāra vai arī repertuārs ir tukšs"
@@ -1327,5 +1327,5 @@ msgstr "Blu-ray"
 #~ msgid "Could not initialise the thread-safe libraries."
 #~ msgstr "Neizdevās inicializēt thread-safe bibliotekas."
 
-#~ msgid "Verify your system installation. The Totem plugin will now exit."
-#~ msgstr "Pārbaudiet jūsu sistēmas instalāciju. Totem tagad aizvērsies."
+#~ msgid "Verify your system installation. The Xplayer plugin will now exit."
+#~ msgstr "Pārbaudiet jūsu sistēmas instalāciju. Xplayer tagad aizvērsies."

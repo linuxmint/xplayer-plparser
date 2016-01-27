@@ -1,7 +1,7 @@
-# translation of totem.gnome-2-20.po to Macedonian
-# translation of totem.HEAD.mk.po to
-# This file is distributed under the same license as the totem.HEAD.mk package.
-# Copyright (C) 2005 THE totem.HEAD.mk'S COPYRIGHT HOLDER, 2003
+# translation of xplayer.gnome-2-20.po to Macedonian
+# translation of xplayer.HEAD.mk.po to
+# This file is distributed under the same license as the xplayer.HEAD.mk package.
+# Copyright (C) 2005 THE xplayer.HEAD.mk'S COPYRIGHT HOLDER, 2003
 #
 #  <ufo@linux.net.mk>, 2005.
 # Арангел Ангов <ufo@linux.net.mk>, 2005.
@@ -10,7 +10,7 @@
 # Arangel Angov <arangel@linux.net.mk>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: totem.gnome-2-20\n"
+"Project-Id-Version: xplayer.gnome-2-20\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-05-07 17:14+0000\n"
 "PO-Revision-Date: 2007-09-02 19:58+0200\n"
@@ -22,39 +22,39 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural= n==1 || n%10==1 ? 0 : 1\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../plparse/totem-disc.c:314 ../plparse/totem-disc.c:460
+#: ../plparse/xplayer-disc.c:314 ../plparse/xplayer-disc.c:460
 #, c-format
 msgid "Failed to mount %s"
 msgstr "Не успеав да монтирам %s"
 
-#: ../plparse/totem-disc.c:342
+#: ../plparse/xplayer-disc.c:342
 #, c-format
 msgid "No media in drive for device '%s'"
 msgstr "Нема медиум за уредот „%s“"
 
-#: ../plparse/totem-disc.c:352
+#: ../plparse/xplayer-disc.c:352
 #, c-format
 msgid "Could not connect to the HAL daemon"
 msgstr "Не можам да се поврзам со HAL даемонот"
 
-#: ../plparse/totem-disc.c:402
+#: ../plparse/xplayer-disc.c:402
 #, c-format
 msgid "Please check that a disc is present in the drive."
 msgstr "Ве молам проверете дали има диск во уредот."
 
-#: ../plparse/totem-disc.c:976
+#: ../plparse/xplayer-disc.c:976
 msgid "Audio CD"
 msgstr "Аудио CD"
 
-#: ../plparse/totem-disc.c:978
+#: ../plparse/xplayer-disc.c:978
 msgid "Video CD"
 msgstr "Видео CD"
 
-#: ../plparse/totem-disc.c:980
+#: ../plparse/xplayer-disc.c:980
 msgid "DVD"
 msgstr "DVD"
 
-#: ../plparse/totem-disc.c:982
+#: ../plparse/xplayer-disc.c:982
 msgid "Digital Television"
 msgstr "Дигитална телевизија"
 
@@ -211,11 +211,11 @@ msgstr "Дигитална телевизија"
 #~ msgid "Text Subtitles"
 #~ msgstr "Преводи"
 
-#~ msgid "Totem Movie Player"
-#~ msgstr "Totem гледач"
+#~ msgid "Xplayer Movie Player"
+#~ msgstr "Xplayer гледач"
 
-#~ msgid "Totem Preferences"
-#~ msgstr "Преференции за Totem"
+#~ msgid "Xplayer Preferences"
+#~ msgstr "Преференции за Xplayer"
 
 #~ msgid "Visual Effects"
 #~ msgstr "Визуелни ефекти"
@@ -381,32 +381,32 @@ msgstr "Дигитална телевизија"
 #~ msgid "Couldn't load the '%s' interface. %s"
 #~ msgstr "Не можам да го вчитам интерфејсот %s за %s."
 
-#~ msgid "Make sure that Totem is properly installed."
-#~ msgstr "Осигурајте се дека Totem е инсталиран правилно."
+#~ msgid "Make sure that Xplayer is properly installed."
+#~ msgstr "Осигурајте се дека Xplayer е инсталиран правилно."
 
 #~ msgid ""
-#~ "Totem is free software; you can redistribute it and/or modify it under "
+#~ "Xplayer is free software; you can redistribute it and/or modify it under "
 #~ "the terms of the GNU General Public License as published by the Free "
 #~ "Software Foundation; either version 2 of the License, or (at your option) "
 #~ "any later version."
 #~ msgstr ""
-#~ "Totem е слободен софтвер; можете да го редистрибуирате и/или менувате во "
+#~ "Xplayer е слободен софтвер; можете да го редистрибуирате и/или менувате во "
 #~ "согласност со општата јавна ГНУ лиценца објавена од страна наФондацијата "
 #~ "за слободен софтвер; можете да ја разгледате втората или пак некоја "
 #~ "понова верзија."
 
 #~ msgid ""
-#~ "Totem is distributed in the hope that it will be useful, but WITHOUT ANY "
+#~ "Xplayer is distributed in the hope that it will be useful, but WITHOUT ANY "
 #~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
 #~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 #~ "details."
 #~ msgstr ""
-#~ "Totem се дистрибуира со надеж дека ќе биде корисен,но без БИЛО КАКВИ "
+#~ "Xplayer се дистрибуира со надеж дека ќе биде корисен,но без БИЛО КАКВИ "
 #~ "ГАРАНЦИИ.  За повеќе погледнете ја општата јавна ГНУ лиценца."
 
 #~ msgid ""
 #~ "You should have received a copy of the GNU General Public License along "
-#~ "with Totem; if not, write to the Free Software Foundation, Inc., 59 "
+#~ "with Xplayer; if not, write to the Free Software Foundation, Inc., 59 "
 #~ "Temple Place, Suite 330, Boston, MA  02111-1307  USA"
 #~ msgstr ""
 #~ "Заедно со Тотем треба да добиете и копија од општата и јавнаГНУ лиценца; "
@@ -414,10 +414,10 @@ msgstr "Дигитална телевизија"
 #~ "следнава адреса: 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA"
 
 #~ msgid ""
-#~ "Totem contains an exception to allow the use of proprietary GStreamer "
+#~ "Xplayer contains an exception to allow the use of proprietary GStreamer "
 #~ "plugins."
 #~ msgstr ""
-#~ "Totem прави исклучок со тоа што дозволува користење на додатоците за "
+#~ "Xplayer прави исклучок со тоа што дозволува користење на додатоците за "
 #~ "GStreamer кои се заштитени од некомерцијална употреба."
 
 #~ msgid "None"
@@ -447,8 +447,8 @@ msgstr "Дигитална телевизија"
 #~ msgid "translator-credits"
 #~ msgstr "Арангел Ангов <arangel@linux.net.mk>"
 
-#~ msgid "Totem Website"
-#~ msgstr "Веб страната на Totem"
+#~ msgid "Xplayer Website"
+#~ msgstr "Веб страната на Xplayer"
 
 #~ msgid "Configure Plugins"
 #~ msgstr "Конфигурирајте додатоци"
@@ -814,18 +814,18 @@ msgstr "Дигитална телевизија"
 #~ msgstr "Да вклучам визуелни ефекти?"
 
 #~ msgid ""
-#~ "It seems you are running Totem remotely.\n"
+#~ "It seems you are running Xplayer remotely.\n"
 #~ "Are you sure you want to enable the visual effects?"
 #~ msgstr ""
-#~ "Се чини дека го стартувавте Totem далечински.\n"
+#~ "Се чини дека го стартувавте Xplayer далечински.\n"
 #~ "Сигурни сте дека сакате да вклучите визуелни ефекти?"
 
 #~ msgid ""
 #~ "The change of this setting will only take effect for the next movie, or "
-#~ "when Totem is restarted."
+#~ "when Xplayer is restarted."
 #~ msgstr ""
 #~ "Промената на ова поставување ќе се примени само за наредниот филм, или "
-#~ "откако ќе го рестартирате Totem."
+#~ "откако ќе го рестартирате Xplayer."
 
 #~ msgid ""
 #~ "Changing the visuals effect type will require a restart to take effect."
@@ -833,11 +833,11 @@ msgstr "Дигитална телевизија"
 #~ "Менувањето тип на вузуелен ефект бара превклучување за да има ефект."
 
 #~ msgid ""
-#~ "The change of audio output type will only take effect when Totem is "
+#~ "The change of audio output type will only take effect when Xplayer is "
 #~ "restarted."
 #~ msgstr ""
 #~ "Промената на типот на излезот за аудио ќе се примени само откатко ќе го "
-#~ "рестартирате Totem."
+#~ "рестартирате Xplayer."
 
 #~ msgid "Preferences"
 #~ msgstr "Преференци"
@@ -1003,31 +1003,31 @@ msgstr "Дигитална телевизија"
 #~ msgid "Paused"
 #~ msgstr "Пауза"
 
-#~ msgid "Totem could not eject the optical media."
-#~ msgstr "Totem не може да го исфрли оптичкиот медиум."
+#~ msgid "Xplayer could not eject the optical media."
+#~ msgstr "Xplayer не може да го исфрли оптичкиот медиум."
 
-#~ msgid "Totem could not play '%s'."
-#~ msgstr "Totem не може да го пушти: %s."
+#~ msgid "Xplayer could not play '%s'."
+#~ msgstr "Xplayer не може да го пушти: %s."
 
 #~ msgid ""
-#~ "Totem cannot play this type of media (%s) because it does not have the "
+#~ "Xplayer cannot play this type of media (%s) because it does not have the "
 #~ "appropriate plugins to be able to read from the disc."
 #~ msgstr ""
-#~ "Totem не може да го пушти овој тип на медиум (%s) бидејќи нема соодветен "
+#~ "Xplayer не може да го пушти овој тип на медиум (%s) бидејќи нема соодветен "
 #~ "додаток за да може да го прочита од дискот."
 
 #~ msgid ""
-#~ "Totem cannot play this type of media (%s) because you do not have the "
+#~ "Xplayer cannot play this type of media (%s) because you do not have the "
 #~ "appropriate plugins to handle it."
 #~ msgstr ""
-#~ "Totem не може да го пушти овој тип (%s) бидејќи немате соодветен додадток "
+#~ "Xplayer не може да го пушти овој тип (%s) бидејќи немате соодветен додадток "
 #~ "за работа со него."
 
 #~ msgid ""
-#~ "Please install the necessary plugins and restart Totem to be able to play "
+#~ "Please install the necessary plugins and restart Xplayer to be able to play "
 #~ "this media."
 #~ msgstr ""
-#~ "Ве молам инсталирајте го потребниот додаток и повторно вклучете го Totem "
+#~ "Ве молам инсталирајте го потребниот додаток и повторно вклучете го Xplayer "
 #~ "за да може да го пушти овој тип на датотека.\n"
 #~ "                        "
 
@@ -1035,10 +1035,10 @@ msgstr "Дигитална телевизија"
 #~ msgstr "Повеќе информации за додатоците"
 
 #~ msgid ""
-#~ "Totem could not play this media (%s) although a plugin is present to "
+#~ "Xplayer could not play this media (%s) although a plugin is present to "
 #~ "handle it."
 #~ msgstr ""
-#~ "Totem не може да ја пушти оваа датотека (%s) иако постои додаток за "
+#~ "Xplayer не може да ја пушти оваа датотека (%s) иако постои додаток за "
 #~ "справување со неа."
 
 #~ msgid ""
@@ -1049,15 +1049,15 @@ msgstr "Дигитална телевизија"
 #~ "конфигуриран.\n"
 #~ "                        "
 
-#~ msgid "Totem was not able to play this disc."
-#~ msgstr "Totem не може да го пушти дискот."
+#~ msgid "Xplayer was not able to play this disc."
+#~ msgstr "Xplayer не може да го пушти дискот."
 
 #~ msgid "No reason."
 #~ msgstr "Без причина"
 
-#~ msgid "Totem could not get a screenshot of that film."
+#~ msgid "Xplayer could not get a screenshot of that film."
 #~ msgstr ""
-#~ "Totem не може да го сними екранот од овој филм.\n"
+#~ "Xplayer не може да го сними екранот од овој филм.\n"
 #~ "Причина: %s."
 
 #~ msgid "This is not supposed to happen; please file a bug report."
@@ -1066,8 +1066,8 @@ msgstr "Дигитална телевизија"
 #~ msgid "No error message"
 #~ msgstr "Нема порака за грешка"
 
-#~ msgid "Totem could not display the help contents."
-#~ msgstr "Totem не може да ја прикаже помошната содржина."
+#~ msgid "Xplayer could not display the help contents."
+#~ msgstr "Xplayer не може да ја прикаже помошната содржина."
 
 #~ msgid "An error occurred"
 #~ msgstr "Се појави грешка"
@@ -1081,26 +1081,26 @@ msgstr "Дигитална телевизија"
 #~ msgid "Next Chapter/Movie"
 #~ msgstr "Следен наслов/филм"
 
-#~ msgid "Totem could not startup."
+#~ msgid "Xplayer could not startup."
 #~ msgstr ""
-#~ "Totem не може да се подигне.\n"
+#~ "Xplayer не може да се подигне.\n"
 #~ "%s"
 
 #~ msgid "Could not initialize the thread-safe libraries."
 #~ msgstr "Не можам да ги иницирам thread-safe библиотеките."
 
-#~ msgid "Verify your system installation. Totem will now exit."
+#~ msgid "Verify your system installation. Xplayer will now exit."
 #~ msgstr ""
-#~ "Проверете ја инсталацијата на Вашиот ситем. Totem сега ќе се исклучи."
+#~ "Проверете ја инсталацијата на Вашиот ситем. Xplayer сега ќе се исклучи."
 
 #~ msgid "- Play movies and songs"
 #~ msgstr "- Пуштај филмови и песни"
 
-#~ msgid "Totem could not parse the command-line options"
+#~ msgid "Xplayer could not parse the command-line options"
 #~ msgstr "Тотем не можеше да ги парсира опциите на командната линија"
 
-#~ msgid "Totem could not initialize the configuration engine."
-#~ msgstr "Totem не може да ја иницира машината за конфигурација."
+#~ msgid "Xplayer could not initialize the configuration engine."
+#~ msgstr "Xplayer не може да ја иницира машината за конфигурација."
 
 #~ msgid "Make sure that GNOME is properly installed."
 #~ msgstr "Проверете ја инсталацијата на GNOME."
@@ -1397,17 +1397,17 @@ msgstr "Дигитална телевизија"
 #~ msgid "Bemused"
 #~ msgstr "Bemused"
 
-#~ msgid "Control Totem through a mobile phone with a Bemused client"
-#~ msgstr "Контролирајте го Totem преку мобилен телефон со Bemused клиент"
+#~ msgid "Control Xplayer through a mobile phone with a Bemused client"
+#~ msgstr "Контролирајте го Xplayer преку мобилен телефон со Bemused клиент"
 
 #~ msgid "Untitled %d"
 #~ msgstr "Без наслов %d"
 
-#~ msgid "Totem Bemused Server"
-#~ msgstr "Totem Bemused сервер"
+#~ msgid "Xplayer Bemused Server"
+#~ msgstr "Xplayer Bemused сервер"
 
-#~ msgid "Totem Bemused Server version 1.0"
-#~ msgstr "Totem Bemused сервер верзија 1.0"
+#~ msgid "Xplayer Bemused Server version 1.0"
+#~ msgstr "Xplayer Bemused сервер верзија 1.0"
 
 #~ msgid "Instant Messenger status"
 #~ msgstr "Статус на клиентот за разговор"
@@ -1482,8 +1482,8 @@ msgstr "Дигитална телевизија"
 #~ msgid "No URI to play"
 #~ msgstr "Нема URI за пуштање"
 
-#~ msgid "Totem could not play '%s'"
-#~ msgstr "Totem не може да го пушти „%s“"
+#~ msgid "Xplayer could not play '%s'"
+#~ msgstr "Xplayer не може да го пушти „%s“"
 
 #~ msgid "Opening %s"
 #~ msgstr "Отворам %s"
@@ -1494,11 +1494,11 @@ msgstr "Дигитална телевизија"
 #~ msgid "Browser Plugin using %s"
 #~ msgstr "Додаток за прелистувач со користење на %s"
 
-#~ msgid "Totem Browser Plugin"
-#~ msgstr "Прелистувач за додатоци на Totem"
+#~ msgid "Xplayer Browser Plugin"
+#~ msgstr "Прелистувач за додатоци на Xplayer"
 
-#~ msgid "The Totem plugin could not be started."
-#~ msgstr "Додатокот за Totem не може да се подигне."
+#~ msgid "The Xplayer plugin could not be started."
+#~ msgstr "Додатокот за Xplayer не може да се подигне."
 
 #~ msgid "No playlist or playlist empty"
 #~ msgstr "Нема плеј-листа или плеј-листата е празна"
@@ -1506,7 +1506,7 @@ msgstr "Дигитална телевизија"
 #~ msgid "Could not initialise the thread-safe libraries."
 #~ msgstr "Не можам да ги иницирам thread-safe библиотеките."
 
-#~ msgid "Verify your system installation. The Totem plugin will now exit."
+#~ msgid "Verify your system installation. The Xplayer plugin will now exit."
 #~ msgstr ""
-#~ "Проверете ја инсталацијата на Вашиот ситем. Totem додатокот сега ќе се "
+#~ "Проверете ја инсталацијата на Вашиот ситем. Xplayer додатокот сега ќе се "
 #~ "исклучи."

@@ -1,4 +1,4 @@
-# Chinese (Taiwan) translation of totem.
+# Chinese (Taiwan) translation of xplayer.
 # Copyright (C) 2003, 04, 05, 06, 07 Free Software Foundation, Inc.
 # Abel Cheung <abel@oaka.org>, 2003.
 # Woodman Tuen <wmtuen@gmail.com>, 2004-07.
@@ -6,9 +6,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: totem 2.25.90\n"
+"Project-Id-Version: xplayer 2.25.90\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=totem&keywords=I18N+L10N&component=playlist parser\n"
+"product=xplayer&keywords=I18N+L10N&component=playlist parser\n"
 "POT-Creation-Date: 2014-01-26 12:49+0000\n"
 "PO-Revision-Date: 2014-01-27 22:22+0800\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
@@ -20,39 +20,39 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#: ../plparse/totem-disc.c:276 ../plparse/totem-disc.c:289
-#: ../plparse/totem-disc.c:533
+#: ../plparse/xplayer-disc.c:276 ../plparse/xplayer-disc.c:289
+#: ../plparse/xplayer-disc.c:533
 #, c-format
 msgid "Failed to mount %s."
 msgstr "掛載 %s 失敗。"
 
-#: ../plparse/totem-disc.c:418
+#: ../plparse/xplayer-disc.c:418
 #, c-format
 msgid "No media in drive for device '%s'."
 msgstr "在裝置「%s」中沒有媒體。"
 
-#: ../plparse/totem-disc.c:476
+#: ../plparse/xplayer-disc.c:476
 #, c-format
 msgid "Please check that a disc is present in the drive."
 msgstr "您可能要檢查一下光碟是否已放在光碟機內。"
 
-#: ../plparse/totem-disc.c:947
+#: ../plparse/xplayer-disc.c:947
 msgid "Audio CD"
 msgstr "音訊 CD"
 
-#: ../plparse/totem-disc.c:949
+#: ../plparse/xplayer-disc.c:949
 msgid "Video CD"
 msgstr "VCD"
 
-#: ../plparse/totem-disc.c:951
+#: ../plparse/xplayer-disc.c:951
 msgid "DVD"
 msgstr "DVD"
 
-#: ../plparse/totem-disc.c:953
+#: ../plparse/xplayer-disc.c:953
 msgid "Digital Television"
 msgstr "數位電視"
 
-#: ../plparse/totem-disc.c:955
+#: ../plparse/xplayer-disc.c:955
 msgid "Blu-ray"
 msgstr "Blu-ray"
 

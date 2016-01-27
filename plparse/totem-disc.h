@@ -1,7 +1,7 @@
-/* Totem Disc Content Detection
+/* Xplayer Disc Content Detection
  * (c) 2004 Ronald Bultje <rbultje@ronald.bitfreak.net>
  *
- * totem-disc.h: media content detection
+ * xplayer-disc.h: media content detection
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -19,8 +19,8 @@
  * Boston, MA 02110-1301  USA.
  */
 
-#ifndef TOTEM_DISC_H
-#define TOTEM_DISC_H
+#ifndef XPLAYER_DISC_H
+#define XPLAYER_DISC_H
 
 #include <glib.h>
 #include <glib-object.h>
@@ -28,7 +28,7 @@
 G_BEGIN_DECLS
 
 /**
- * TotemDiscMediaType:
+ * XplayerDiscMediaType:
  * @MEDIA_TYPE_ERROR: there was an error determining the media's type
  * @MEDIA_TYPE_DATA: data disc
  * @MEDIA_TYPE_CDDA: audio CD
@@ -48,7 +48,7 @@ typedef enum {
   MEDIA_TYPE_DVD,
   MEDIA_TYPE_DVB,
   MEDIA_TYPE_BD
-} TotemDiscMediaType;
+} XplayerDiscMediaType;
 
 /**
  * MEDIA_TYPE_NUM_TYPES: (skip)
@@ -57,23 +57,23 @@ typedef enum {
  **/
 #define MEDIA_TYPE_NUM_TYPES MEDIA_TYPE_DVB + 1
 
-#define MediaType TotemDiscMediaType
+#define MediaType XplayerDiscMediaType
 
-GQuark totem_disc_media_type_quark	(void) G_GNUC_CONST;
-#define TOTEM_DISC_MEDIA_TYPE		totem_disc_media_type_quark ()
+GQuark xplayer_disc_media_type_quark	(void) G_GNUC_CONST;
+#define XPLAYER_DISC_MEDIA_TYPE		xplayer_disc_media_type_quark ()
 
-TotemDiscMediaType	totem_cd_detect_type	(const char *device,
+XplayerDiscMediaType	xplayer_cd_detect_type	(const char *device,
 						 GError     **error);
-TotemDiscMediaType	totem_cd_detect_type_with_url (const char  *device,
+XplayerDiscMediaType	xplayer_cd_detect_type_with_url (const char  *device,
 						       char       **mrl,
 						       GError     **error);
-TotemDiscMediaType	totem_cd_detect_type_from_dir (const char *dir,
+XplayerDiscMediaType	xplayer_cd_detect_type_from_dir (const char *dir,
 						       char      **mrl,
 						       GError    **error);
-const char *	totem_cd_get_human_readable_name (TotemDiscMediaType type);
-char *		totem_cd_mrl_from_type (const char *scheme, const char *dir);
-gboolean	totem_cd_has_medium (const char  *device);
+const char *	xplayer_cd_get_human_readable_name (XplayerDiscMediaType type);
+char *		xplayer_cd_mrl_from_type (const char *scheme, const char *dir);
+gboolean	xplayer_cd_has_medium (const char  *device);
 
 G_END_DECLS
 
-#endif /* TOTEM_DISC_H */
+#endif /* XPLAYER_DISC_H */

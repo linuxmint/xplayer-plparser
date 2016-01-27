@@ -12,9 +12,9 @@
 #include <stdlib.h>
 #include <time.h>
 
-#include "totem-pl-parser.h"
-#include "totem-pl-parser-mini.h"
-#include "totem-pl-parser-private.h"
+#include "xplayer-pl-parser.h"
+#include "xplayer-pl-parser-mini.h"
+#include "xplayer-pl-parser-private.h"
 
 typedef struct {
 	const char *field;
@@ -51,7 +51,7 @@ test_relative_real (const char *uri, const char *output)
 	char *base;
 
 	output_file = g_file_new_for_commandline_arg (output);
-	base = totem_pl_parser_relative (output_file, uri);
+	base = xplayer_pl_parser_relative (output_file, uri);
 	g_object_unref (output_file);
 
 	return base;
@@ -82,7 +82,7 @@ test_resolution_real (const char *base_uri,
 	else
 		base_gfile = g_file_new_for_commandline_arg (base_uri);
 
-	ret = totem_pl_parser_resolve_uri (base_gfile, relative_uri);
+	ret = xplayer_pl_parser_resolve_uri (base_gfile, relative_uri);
 	if (base_gfile)
 		g_object_unref (base_gfile);
 
@@ -114,14 +114,14 @@ test_duration (void)
 {
 	gboolean verbose = g_test_verbose ();
 
-	g_assert_cmpint (totem_pl_parser_parse_duration ("500", verbose), ==, 500);
-	g_assert_cmpint (totem_pl_parser_parse_duration ("01:01", verbose), ==, 61);
-	g_assert_cmpint (totem_pl_parser_parse_duration ("00:00:00.01", verbose), ==, 1);
-	g_assert_cmpint (totem_pl_parser_parse_duration ("01:00:01.01", verbose), ==, 3601);
-	g_assert_cmpint (totem_pl_parser_parse_duration ("01:00.01", verbose), ==, 60);
-	g_assert_cmpint (totem_pl_parser_parse_duration ("24.59", verbose), ==, 1499);
-	g_assert_cmpint (totem_pl_parser_parse_duration ("02m25s", verbose), ==, 145);
-	g_assert_cmpint (totem_pl_parser_parse_duration ("2m25s", verbose), ==, 145);
+	g_assert_cmpint (xplayer_pl_parser_parse_duration ("500", verbose), ==, 500);
+	g_assert_cmpint (xplayer_pl_parser_parse_duration ("01:01", verbose), ==, 61);
+	g_assert_cmpint (xplayer_pl_parser_parse_duration ("00:00:00.01", verbose), ==, 1);
+	g_assert_cmpint (xplayer_pl_parser_parse_duration ("01:00:01.01", verbose), ==, 3601);
+	g_assert_cmpint (xplayer_pl_parser_parse_duration ("01:00.01", verbose), ==, 60);
+	g_assert_cmpint (xplayer_pl_parser_parse_duration ("24.59", verbose), ==, 1499);
+	g_assert_cmpint (xplayer_pl_parser_parse_duration ("02m25s", verbose), ==, 145);
+	g_assert_cmpint (xplayer_pl_parser_parse_duration ("2m25s", verbose), ==, 145);
 }
 
 static void
@@ -130,12 +130,12 @@ test_date (void)
 	gboolean verbose = g_test_verbose ();
 
 	/* RSS */
-	g_assert_cmpuint (totem_pl_parser_parse_date ("28 Mar 2007 10:28:18 GMT", verbose), ==, 1175077698);
-	g_assert_cmpuint (totem_pl_parser_parse_date ("01 may 2007 12:34:19 GMT", verbose), ==, 1178022859);
+	g_assert_cmpuint (xplayer_pl_parser_parse_date ("28 Mar 2007 10:28:18 GMT", verbose), ==, 1175077698);
+	g_assert_cmpuint (xplayer_pl_parser_parse_date ("01 may 2007 12:34:19 GMT", verbose), ==, 1178022859);
 
 	/* Atom */
-	g_assert_cmpuint (totem_pl_parser_parse_date ("2003-12-13T18:30:02Z", verbose), ==, 1071340202);
-	g_assert_cmpuint (totem_pl_parser_parse_date ("1990-12-31T15:59:60-08:00", verbose), ==, 662688000);
+	g_assert_cmpuint (xplayer_pl_parser_parse_date ("2003-12-13T18:30:02Z", verbose), ==, 1071340202);
+	g_assert_cmpuint (xplayer_pl_parser_parse_date ("1990-12-31T15:59:60-08:00", verbose), ==, 662688000);
 }
 
 #define READ_CHUNK_SIZE 8192
@@ -200,7 +200,7 @@ test_videosite (void)
 	const char *uri = "http://www.youtube.com/watch?v=oMLCrzy9TEs";
 
 	g_test_message ("Testing data parsing \"%s\"...", uri);
-	g_assert (totem_pl_parser_can_parse_from_uri (uri, TRUE));
+	g_assert (xplayer_pl_parser_can_parse_from_uri (uri, TRUE));
 }
 #endif
 
@@ -253,7 +253,7 @@ test_parsability (void)
 		else if (data == NULL)
 			continue;
 
-		parsable = totem_pl_parser_can_parse_from_data (data, len, TRUE);
+		parsable = xplayer_pl_parser_can_parse_from_data (data, len, TRUE);
 		g_free (data);
 
 		if (parsable != files[i].parsable) {
@@ -273,12 +273,12 @@ test_parsability (void)
 		}
 
 		g_test_message ("Testing filename parsing \"%s\"...", files[i].uri);
-		g_assert (totem_pl_parser_can_parse_from_filename (files[i].uri, TRUE) == files[i].parsable);
+		g_assert (xplayer_pl_parser_can_parse_from_filename (files[i].uri, TRUE) == files[i].parsable);
 	}
 }
 
 static void
-entry_parsed_cb (TotemPlParser *parser,
+entry_parsed_cb (XplayerPlParser *parser,
 		 const char *uri,
 		 GHashTable *metadata,
 		 ParserResult *res)
@@ -288,7 +288,7 @@ entry_parsed_cb (TotemPlParser *parser,
 }
 
 static void
-entry_parsed_num_cb (TotemPlParser *parser,
+entry_parsed_num_cb (XplayerPlParser *parser,
 		     const char *uri,
 		     GHashTable *metadata,
 		     guint *ret)
@@ -299,9 +299,9 @@ entry_parsed_num_cb (TotemPlParser *parser,
 static guint
 parser_test_get_num_entries (const char *uri)
 {
-	TotemPlParserResult retval;
+	XplayerPlParserResult retval;
 	guint ret = 0;
-	TotemPlParser *pl = totem_pl_parser_new ();
+	XplayerPlParser *pl = xplayer_pl_parser_new ();
 
 	g_object_set (pl, "recurse", FALSE,
 			  "debug", option_debug,
@@ -311,7 +311,7 @@ parser_test_get_num_entries (const char *uri)
 	g_signal_connect (G_OBJECT (pl), "entry-parsed",
 			  G_CALLBACK (entry_parsed_num_cb), &ret);
 
-	retval = totem_pl_parser_parse_with_base (pl, uri, option_base_uri, FALSE);
+	retval = xplayer_pl_parser_parse_with_base (pl, uri, option_base_uri, FALSE);
 	g_test_message ("Got retval %d for uri '%s'", retval, uri);
 	g_object_unref (pl);
 
@@ -325,7 +325,7 @@ typedef struct {
 } PlOrderingData;
 
 static void
-playlist_started_order (TotemPlParser *parser,
+playlist_started_order (XplayerPlParser *parser,
 			const char *uri,
 			GHashTable *metadata,
 			PlOrderingData *data)
@@ -334,7 +334,7 @@ playlist_started_order (TotemPlParser *parser,
 }
 
 static void
-playlist_ended_order (TotemPlParser *parser,
+playlist_ended_order (XplayerPlParser *parser,
 		      const char *uri,
 		      PlOrderingData *data)
 {
@@ -344,7 +344,7 @@ playlist_ended_order (TotemPlParser *parser,
 }
 
 static void
-entry_parsed_cb_order (TotemPlParser *parser,
+entry_parsed_cb_order (XplayerPlParser *parser,
 		       const char *uri,
 		       GHashTable *metadata,
 		       PlOrderingData *data)
@@ -357,11 +357,11 @@ entry_parsed_cb_order (TotemPlParser *parser,
 static gboolean
 parser_test_get_order_result (const char *uri)
 {
-	TotemPlParserResult retval;
+	XplayerPlParserResult retval;
 	PlOrderingData data;
-	TotemPlParser *pl;
+	XplayerPlParser *pl;
 
-	pl = totem_pl_parser_new ();
+	pl = xplayer_pl_parser_new ();
 
 	g_object_set (pl, "recurse", !option_no_recurse,
 			  "debug", option_debug,
@@ -378,7 +378,7 @@ parser_test_get_order_result (const char *uri)
 	data.pl_started = FALSE;
 	data.pl_ended = FALSE;
 	data.parsed_item = FALSE;
-	retval = totem_pl_parser_parse_with_base (pl, uri, option_base_uri, FALSE);
+	retval = xplayer_pl_parser_parse_with_base (pl, uri, option_base_uri, FALSE);
 	g_assert (data.pl_ended != FALSE);
 	g_test_message ("Got retval %d for uri '%s'", retval, uri);
 	g_object_unref (pl);
@@ -386,11 +386,11 @@ parser_test_get_order_result (const char *uri)
 	return data.pl_started && data.pl_ended && data.parsed_item;
 }
 
-static TotemPlParserResult
+static XplayerPlParserResult
 simple_parser_test (const char *uri)
 {
-	TotemPlParserResult retval;
-	TotemPlParser *pl = totem_pl_parser_new ();
+	XplayerPlParserResult retval;
+	XplayerPlParser *pl = xplayer_pl_parser_new ();
 
 	g_object_set (pl, "recurse", !option_no_recurse,
 			  "debug", option_debug,
@@ -398,7 +398,7 @@ simple_parser_test (const char *uri)
 			  "disable-unsafe", option_disable_unsafe,
 			  NULL);
 
-	retval = totem_pl_parser_parse_with_base (pl, uri, option_base_uri, FALSE);
+	retval = xplayer_pl_parser_parse_with_base (pl, uri, option_base_uri, FALSE);
 	g_test_message ("Got retval %d for uri '%s'", retval, uri);
 	g_object_unref (pl);
 
@@ -408,8 +408,8 @@ simple_parser_test (const char *uri)
 static char *
 parser_test_get_entry_field (const char *uri, const char *field)
 {
-	TotemPlParserResult retval;
-	TotemPlParser *pl = totem_pl_parser_new ();
+	XplayerPlParserResult retval;
+	XplayerPlParser *pl = xplayer_pl_parser_new ();
 	ParserResult res;
 
 	g_object_set (pl, "recurse", !option_no_recurse,
@@ -422,7 +422,7 @@ parser_test_get_entry_field (const char *uri, const char *field)
 	g_signal_connect (G_OBJECT (pl), "entry-parsed",
 			  G_CALLBACK (entry_parsed_cb), &res);
 
-	retval = totem_pl_parser_parse_with_base (pl, uri, option_base_uri, FALSE);
+	retval = xplayer_pl_parser_parse_with_base (pl, uri, option_base_uri, FALSE);
 	g_test_message ("Got retval %d for uri '%s'", retval, uri);
 	g_object_unref (pl);
 
@@ -430,7 +430,7 @@ parser_test_get_entry_field (const char *uri, const char *field)
 }
 
 static void
-playlist_started_title_cb (TotemPlParser *parser,
+playlist_started_title_cb (XplayerPlParser *parser,
 			   const char *uri,
 			   GHashTable *metadata,
 			   char **ret)
@@ -441,9 +441,9 @@ playlist_started_title_cb (TotemPlParser *parser,
 static char *
 parser_test_get_playlist_uri (const char *uri)
 {
-	TotemPlParserResult retval;
+	XplayerPlParserResult retval;
 	char *ret = NULL;
-	TotemPlParser *pl = totem_pl_parser_new ();
+	XplayerPlParser *pl = xplayer_pl_parser_new ();
 
 	g_object_set (pl, "recurse", !option_no_recurse,
 			  "debug", option_debug,
@@ -453,7 +453,7 @@ parser_test_get_playlist_uri (const char *uri)
 	g_signal_connect (G_OBJECT (pl), "playlist-started",
 			  G_CALLBACK (playlist_started_title_cb), &ret);
 
-	retval = totem_pl_parser_parse_with_base (pl, uri, option_base_uri, FALSE);
+	retval = xplayer_pl_parser_parse_with_base (pl, uri, option_base_uri, FALSE);
 	g_test_message ("Got retval %d for uri '%s'", retval, uri);
 	g_object_unref (pl);
 
@@ -461,7 +461,7 @@ parser_test_get_playlist_uri (const char *uri)
 }
 
 static void
-playlist_started_field_cb (TotemPlParser *parser,
+playlist_started_field_cb (XplayerPlParser *parser,
 			   const char *uri,
 			   GHashTable *metadata,
 			   ParserResult *res)
@@ -473,9 +473,9 @@ static char *
 parser_test_get_playlist_field (const char *uri,
 				const char *field)
 {
-	TotemPlParserResult retval;
+	XplayerPlParserResult retval;
 	ParserResult res;
-	TotemPlParser *pl = totem_pl_parser_new ();
+	XplayerPlParser *pl = xplayer_pl_parser_new ();
 
 	g_object_set (pl, "recurse", !option_no_recurse,
 			  "debug", option_debug,
@@ -487,7 +487,7 @@ parser_test_get_playlist_field (const char *uri,
 	g_signal_connect (G_OBJECT (pl), "playlist-started",
 			  G_CALLBACK (playlist_started_field_cb), &res);
 
-	retval = totem_pl_parser_parse_with_base (pl, uri, option_base_uri, FALSE);
+	retval = xplayer_pl_parser_parse_with_base (pl, uri, option_base_uri, FALSE);
 	g_test_message ("Got retval %d for uri '%s'", retval, uri);
 	g_object_unref (pl);
 
@@ -502,7 +502,7 @@ test_image_link (void)
 
 	/* From http://www.101greatgoals.com/feed/ */
 	uri = get_relative_uri (TEST_SRCDIR "empty-feed.xml");
-	g_assert_cmpstr (parser_test_get_entry_field (uri, TOTEM_PL_PARSER_FIELD_URI), ==, NULL);
+	g_assert_cmpstr (parser_test_get_entry_field (uri, XPLAYER_PL_PARSER_FIELD_URI), ==, NULL);
 	g_free (uri);
 #endif
 }
@@ -515,7 +515,7 @@ test_no_url_podcast (void)
 
 	/* From http://feeds.guardian.co.uk/theguardian/football/rss */
 	uri = get_relative_uri (TEST_SRCDIR "no-url-podcast.xml");
-	g_assert_cmpstr (parser_test_get_entry_field (uri, TOTEM_PL_PARSER_FIELD_URI), ==, "http://www.guardian.co.uk/sport/video/2012/jul/26/london-2012-north-korea-flag-video");
+	g_assert_cmpstr (parser_test_get_entry_field (uri, XPLAYER_PL_PARSER_FIELD_URI), ==, "http://www.guardian.co.uk/sport/video/2012/jul/26/london-2012-north-korea-flag-video");
 	g_free (uri);
 #endif
 }
@@ -540,7 +540,7 @@ test_pl_content_type (void)
 	char *uri;
 
 	uri = get_relative_uri (TEST_SRCDIR "old-lastfm-output.xspf");
-	g_assert_cmpstr (parser_test_get_playlist_field (uri, TOTEM_PL_PARSER_FIELD_CONTENT_TYPE), ==, "application/xspf+xml");
+	g_assert_cmpstr (parser_test_get_playlist_field (uri, XPLAYER_PL_PARSER_FIELD_CONTENT_TYPE), ==, "application/xspf+xml");
 	g_free (uri);
 }
 
@@ -552,13 +552,13 @@ test_lastfm_parsing (void)
 	g_test_bug ("625823");
 
 	uri = get_relative_uri (TEST_SRCDIR "old-lastfm-output.xspf");
-	g_assert_cmpstr (parser_test_get_entry_field (uri, TOTEM_PL_PARSER_FIELD_DOWNLOAD_URI), ==, "http://freedownloads.last.fm/download/188024406/Kondratiev%2BWinter.mp3");
-	g_assert_cmpstr (parser_test_get_entry_field (uri, TOTEM_PL_PARSER_FIELD_ID), ==, "d092a");
+	g_assert_cmpstr (parser_test_get_entry_field (uri, XPLAYER_PL_PARSER_FIELD_DOWNLOAD_URI), ==, "http://freedownloads.last.fm/download/188024406/Kondratiev%2BWinter.mp3");
+	g_assert_cmpstr (parser_test_get_entry_field (uri, XPLAYER_PL_PARSER_FIELD_ID), ==, "d092a");
 	g_free (uri);
 
 	uri = get_relative_uri (TEST_SRCDIR "new-lastfm-output.xspf");
-	g_assert_cmpstr (parser_test_get_entry_field (uri, TOTEM_PL_PARSER_FIELD_DOWNLOAD_URI), ==, "http://freedownloads.last.fm/download/402599273/Yellow.mp3");
-	g_assert_cmpstr (parser_test_get_entry_field (uri, TOTEM_PL_PARSER_FIELD_ID), ==, "20a82");
+	g_assert_cmpstr (parser_test_get_entry_field (uri, XPLAYER_PL_PARSER_FIELD_DOWNLOAD_URI), ==, "http://freedownloads.last.fm/download/402599273/Yellow.mp3");
+	g_assert_cmpstr (parser_test_get_entry_field (uri, XPLAYER_PL_PARSER_FIELD_ID), ==, "20a82");
 	g_free (uri);
 }
 
@@ -570,7 +570,7 @@ test_m3u_separator (void)
 	g_test_bug ("609091");
 
 	uri = get_relative_uri (TEST_SRCDIR "separator.m3u");
-	g_assert_cmpstr (parser_test_get_entry_field (uri, TOTEM_PL_PARSER_FIELD_TITLE), ==, "Music Tech Sessions (Friday 22 January 2010 20:00 - 00:00)");
+	g_assert_cmpstr (parser_test_get_entry_field (uri, XPLAYER_PL_PARSER_FIELD_TITLE), ==, "Music Tech Sessions (Friday 22 January 2010 20:00 - 00:00)");
 	g_free (uri);
 }
 
@@ -579,11 +579,11 @@ test_parsing_xspf_genre (void)
 {
 	char *uri;
 	uri = get_relative_uri (TEST_SRCDIR "playlist.xspf");
-	g_assert_cmpstr (parser_test_get_entry_field (uri, TOTEM_PL_PARSER_FIELD_GENRE), ==, "Test Genre");
+	g_assert_cmpstr (parser_test_get_entry_field (uri, XPLAYER_PL_PARSER_FIELD_GENRE), ==, "Test Genre");
 	g_free (uri);
 
 	uri = get_relative_uri (TEST_SRCDIR "decrypted-amazon-track.xspf");
-	g_assert_cmpstr (parser_test_get_entry_field (uri, TOTEM_PL_PARSER_FIELD_GENRE), ==, "Dance & DJ/House");
+	g_assert_cmpstr (parser_test_get_entry_field (uri, XPLAYER_PL_PARSER_FIELD_GENRE), ==, "Dance & DJ/House");
 	g_free (uri);
 }
 
@@ -592,7 +592,7 @@ test_parsing_xspf_escaping (void)
 {
 	char *uri;
 	uri = get_relative_uri (TEST_SRCDIR "playlist.xspf");
-	g_assert_cmpstr (parser_test_get_entry_field (uri, TOTEM_PL_PARSER_FIELD_URI), ==, "http://207.200.96.226:8000 extraparam=1");
+	g_assert_cmpstr (parser_test_get_entry_field (uri, XPLAYER_PL_PARSER_FIELD_URI), ==, "http://207.200.96.226:8000 extraparam=1");
 	g_free (uri);
 }
 
@@ -607,7 +607,7 @@ test_parsing_xspf_xml_base (void)
 	/* FIXME: The URL is incorrect here as we're not on HTTP, but
 	 * the parsing is incorrect as well, as we ignore xml:base:
 	 * http://wiki.xiph.org/index.php/XSPF_v1_Notes_and_Errata#xml:base */
-	g_assert_cmpstr (parser_test_get_entry_field (uri, TOTEM_PL_PARSER_FIELD_URI), ==, "http://example.org/three/four");
+	g_assert_cmpstr (parser_test_get_entry_field (uri, XPLAYER_PL_PARSER_FIELD_URI), ==, "http://example.org/three/four");
 	g_free (uri);
 }
 
@@ -616,7 +616,7 @@ test_smi_starttime (void)
 {
 	char *uri;
 	uri = get_relative_uri (TEST_SRCDIR "big5.smi");
-	g_assert_cmpstr (parser_test_get_entry_field (uri, TOTEM_PL_PARSER_FIELD_STARTTIME), ==, "00:04:00");
+	g_assert_cmpstr (parser_test_get_entry_field (uri, XPLAYER_PL_PARSER_FIELD_STARTTIME), ==, "00:04:00");
 	g_free (uri);
 }
 
@@ -626,7 +626,7 @@ test_m3u_leading_tabs (void)
 	char *uri;
 	/* From http://media.artistserver.com/tracks/23985/21898/1/1/1/O_G_Money_-_Girl_Gotta_girlfriend_Feat._O_G_Money_Snoop_Dogg.m3u */
 	uri = get_relative_uri (TEST_SRCDIR "O_G_Money_Snoop_Dogg.m3u");
-	g_assert_cmpstr (parser_test_get_entry_field (uri, TOTEM_PL_PARSER_FIELD_TITLE), ==, "O G Money - Girl Gotta girlfriend Feat. O G Money, Snoop Dogg");
+	g_assert_cmpstr (parser_test_get_entry_field (uri, XPLAYER_PL_PARSER_FIELD_TITLE), ==, "O G Money - Girl Gotta girlfriend Feat. O G Money, Snoop Dogg");
 	g_free (uri);
 }
 
@@ -639,9 +639,9 @@ test_directory_recurse (void)
 	path = g_filename_from_uri (uri, NULL, NULL);
 	if (g_file_test (path, G_FILE_TEST_IS_DIR)) {
 		/* The file inside the directory will be ignored */
-		g_assert_cmpstr (parser_test_get_entry_field (uri, TOTEM_PL_PARSER_FIELD_TITLE), ==, NULL);
+		g_assert_cmpstr (parser_test_get_entry_field (uri, XPLAYER_PL_PARSER_FIELD_TITLE), ==, NULL);
 		/* But the parsing will succeed */
-		g_assert (simple_parser_test (uri) == TOTEM_PL_PARSER_RESULT_SUCCESS);
+		g_assert (simple_parser_test (uri) == XPLAYER_PL_PARSER_RESULT_SUCCESS);
 	}
 	g_free (path);
 	g_free (uri);
@@ -652,7 +652,7 @@ test_empty_asx (void)
 {
 	char *uri;
 	uri = get_relative_uri (TEST_SRCDIR "empty-asx.asx");
-	g_assert (simple_parser_test (uri) == TOTEM_PL_PARSER_RESULT_SUCCESS);
+	g_assert (simple_parser_test (uri) == XPLAYER_PL_PARSER_RESULT_SUCCESS);
 	g_free (uri);
 }
 
@@ -661,7 +661,7 @@ test_empty_pls (void)
 {
 	char *uri;
 	uri = get_relative_uri (TEST_SRCDIR "emptyplaylist.pls");
-	g_assert (simple_parser_test (uri) == TOTEM_PL_PARSER_RESULT_UNHANDLED);
+	g_assert (simple_parser_test (uri) == XPLAYER_PL_PARSER_RESULT_UNHANDLED);
 	g_free (uri);
 }
 
@@ -671,7 +671,7 @@ test_parsing_rtsp_text_multi (void)
 	char *uri;
 	g_test_bug ("602127");
 	uri = get_relative_uri (TEST_SRCDIR "602127.qtl");
-	g_assert_cmpstr (parser_test_get_entry_field (uri, TOTEM_PL_PARSER_FIELD_URI), ==, "rtsp://host.org/video.mp4");
+	g_assert_cmpstr (parser_test_get_entry_field (uri, XPLAYER_PL_PARSER_FIELD_URI), ==, "rtsp://host.org/video.mp4");
 	g_free (uri);
 }
 
@@ -680,7 +680,7 @@ test_parsing_rtsp_text (void)
 {
 	char *uri;
 	uri = get_relative_uri (TEST_SRCDIR "single-line.qtl");
-	g_assert_cmpstr (parser_test_get_entry_field (uri, TOTEM_PL_PARSER_FIELD_URI), ==, "rtsp://host.org/video.mp4");
+	g_assert_cmpstr (parser_test_get_entry_field (uri, XPLAYER_PL_PARSER_FIELD_URI), ==, "rtsp://host.org/video.mp4");
 	g_free (uri);
 }
 
@@ -689,7 +689,7 @@ test_parsing_content_type (void)
 {
 	char *uri;
 	uri = get_relative_uri (TEST_SRCDIR "HackerMedley");
-	g_assert_cmpstr (parser_test_get_entry_field (uri, TOTEM_PL_PARSER_FIELD_CONTENT_TYPE), ==, "audio/mpeg");
+	g_assert_cmpstr (parser_test_get_entry_field (uri, XPLAYER_PL_PARSER_FIELD_CONTENT_TYPE), ==, "audio/mpeg");
 	g_free (uri);
 }
 
@@ -697,20 +697,20 @@ static void
 test_parsing_hadess (void)
 {
 	if (g_strcmp0 (g_get_user_name (), "hadess") == 0)
-		g_assert (simple_parser_test ("file:///home/hadess/Videos") == TOTEM_PL_PARSER_RESULT_SUCCESS);
+		g_assert (simple_parser_test ("file:///home/hadess/Videos") == XPLAYER_PL_PARSER_RESULT_SUCCESS);
 }
 
 static void
 test_parsing_nonexistent_files (void)
 {
 	g_test_bug ("330120");
-	g_assert (simple_parser_test ("file:///tmp/file_doesnt_exist.wmv") == TOTEM_PL_PARSER_RESULT_SUCCESS);
+	g_assert (simple_parser_test ("file:///tmp/file_doesnt_exist.wmv") == XPLAYER_PL_PARSER_RESULT_SUCCESS);
 }
 
 static void
 test_parsing_broken_asx (void)
 {
-	TotemPlParserResult result;
+	XplayerPlParserResult result;
 
 	/* FIXME
 	 * URL is gone now */
@@ -727,13 +727,13 @@ test_parsing_broken_asx (void)
 
 	g_test_bug ("323683");
 	result = simple_parser_test ("http://www.comedycentral.com/sitewide/media_player/videoswitcher.jhtml?showid=934&category=/shows/the_daily_show/videos/headlines&sec=videoId%3D36032%3BvideoFeatureId%3D%3BpoppedFrom%3D_shows_the_daily_show_index.jhtml%3BisIE%3Dfalse%3BisPC%3Dtrue%3Bpagename%3Dmedia_player%3Bzyg%3D%27%2Bif_nt_zyg%2B%27%3Bspan%3D%27%2Bif_nt_span%2B%27%3Bdemo%3D%27%2Bif_nt_demo%2B%27%3Bbps%3D%27%2Bif_nt_bandwidth%2B%27%3Bgateway%3Dshows%3Bsection_1%3Dthe_daily_show%3Bsection_2%3Dvideos%3Bsection_3%3Dheadlines%3Bzyg%3D%27%2Bif_nt_zyg%2B%27%3Bspan%3D%27%2Bif_nt_span%2B%27%3Bdemo%3D%27%2Bif_nt_demo%2B%27%3Bera%3D%27%2Bif_nt_era%2B%27%3Bbps%3D%27%2Bif_nt_bandwidth%2B%27%3Bfla%3D%27%2Bif_nt_Flash%2B%27&itemid=36032&clip=com/dailyshow/headlines/10156_headline.wmv&mswmext=.asx");
-	g_assert (result != TOTEM_PL_PARSER_RESULT_ERROR);
+	g_assert (result != XPLAYER_PL_PARSER_RESULT_ERROR);
 }
 
 static void
 test_xml_is_text_plain (void)
 {
-	TotemPlParserResult result;
+	XplayerPlParserResult result;
 
 	if (http_supported == FALSE) {
 		g_test_message ("HTTP support required to test text/plain XML");
@@ -742,13 +742,13 @@ test_xml_is_text_plain (void)
 
 	g_test_bug ("655378");
 	result = simple_parser_test ("http://leoville.tv/podcasts/floss.xml");
-	g_assert (result == TOTEM_PL_PARSER_RESULT_SUCCESS);
+	g_assert (result == XPLAYER_PL_PARSER_RESULT_SUCCESS);
 }
 
 static void
 test_compressed_content_encoding (void)
 {
-	TotemPlParserResult result;
+	XplayerPlParserResult result;
 
 	if (http_supported == FALSE) {
 		g_test_message ("HTTP support required to test compressed content-encoding");
@@ -759,7 +759,7 @@ test_compressed_content_encoding (void)
 	 * http://git.gnome.org/browse/gvfs/commit/?id=6929e9f9661b4d1e68f8912d8e60107366255a47
 	 * http://thread.gmane.org/gmane.comp.gnome.apps.rhythmbox.devel/11887 */
 	result = simple_parser_test ("http://escapepod.org/podcast.xml");
-	g_assert (result == TOTEM_PL_PARSER_RESULT_SUCCESS);
+	g_assert (result == XPLAYER_PL_PARSER_RESULT_SUCCESS);
 }
 
 static void
@@ -808,7 +808,7 @@ test_parsing_404_error (void)
 	}
 
 	g_test_bug ("158052");
-	g_assert (simple_parser_test ("http://live.hujjat.org:7860/main") == TOTEM_PL_PARSER_RESULT_UNHANDLED);
+	g_assert (simple_parser_test ("http://live.hujjat.org:7860/main") == XPLAYER_PL_PARSER_RESULT_UNHANDLED);
 }
 
 static void
@@ -818,7 +818,7 @@ test_parsing_3gpp_not_ignored (void)
 
 	uri = get_relative_uri (TEST_SRCDIR "3gpp-file.mp4");
 	g_test_bug ("594359@bugs.debian.org");
-	g_assert (simple_parser_test (uri) == TOTEM_PL_PARSER_RESULT_UNHANDLED);
+	g_assert (simple_parser_test (uri) == XPLAYER_PL_PARSER_RESULT_UNHANDLED);
 	g_free (uri);
 }
 
@@ -829,7 +829,7 @@ test_parsing_ts_not_ignored (void)
 
 	uri = get_relative_uri (TEST_SRCDIR "dont-ignore-mp2t.ts");
 	g_test_bug ("678163");
-	g_assert (simple_parser_test (uri) == TOTEM_PL_PARSER_RESULT_UNHANDLED);
+	g_assert (simple_parser_test (uri) == XPLAYER_PL_PARSER_RESULT_UNHANDLED);
 	g_free (uri);
 }
 
@@ -840,7 +840,7 @@ test_parsing_mp4_is_flv (void)
 
 	uri = get_relative_uri (TEST_SRCDIR "really-flv.mp4");
 	g_test_bug ("620039");
-	g_assert (simple_parser_test (uri) == TOTEM_PL_PARSER_RESULT_UNHANDLED);
+	g_assert (simple_parser_test (uri) == XPLAYER_PL_PARSER_RESULT_UNHANDLED);
 	g_free (uri);
 }
 
@@ -850,7 +850,7 @@ test_parsing_xml_head_comments (void)
 	char *uri;
 	g_test_bug ("560051");
 	uri = get_relative_uri (TEST_SRCDIR "560051.xml");
-	g_assert (simple_parser_test (uri) == TOTEM_PL_PARSER_RESULT_SUCCESS);
+	g_assert (simple_parser_test (uri) == XPLAYER_PL_PARSER_RESULT_SUCCESS);
 	g_free (uri);
 }
 
@@ -860,7 +860,7 @@ test_parsing_xml_comment_whitespace (void)
 	char *uri;
 	g_test_bug ("541405");
 	uri = get_relative_uri (TEST_SRCDIR "541405.xml");
-	g_assert (simple_parser_test (uri) == TOTEM_PL_PARSER_RESULT_SUCCESS);
+	g_assert (simple_parser_test (uri) == XPLAYER_PL_PARSER_RESULT_SUCCESS);
 	g_free (uri);
 }
 
@@ -871,7 +871,7 @@ test_parsing_live_streaming (void)
 	g_test_bug ("594036");
 	/* File from http://tools.ietf.org/html/draft-pantos-http-live-streaming-02#section-7.1 */
 	uri = get_relative_uri (TEST_SRCDIR "live-streaming.m3u");
-	g_assert (simple_parser_test (uri) == TOTEM_PL_PARSER_RESULT_UNHANDLED);
+	g_assert (simple_parser_test (uri) == XPLAYER_PL_PARSER_RESULT_UNHANDLED);
 	g_free (uri);
 }
 
@@ -882,7 +882,7 @@ test_parsing_xml_mixed_cdata (void)
 	g_test_bug ("585407");
 	/* File from http://www.davidco.com/podcast.php */
 	uri = get_relative_uri (TEST_SRCDIR "585407.rss");
-	g_assert (simple_parser_test (uri) == TOTEM_PL_PARSER_RESULT_SUCCESS);
+	g_assert (simple_parser_test (uri) == XPLAYER_PL_PARSER_RESULT_SUCCESS);
 	g_free (uri);
 }
 
@@ -894,7 +894,7 @@ test_parsing_m3u_streaming (void)
 
 	/* File from http://radioclasica.rtve.stream.flumotion.com/rtve/radioclasica.mp3.m3u */
 	uri = get_relative_uri (TEST_SRCDIR "radioclasica.mp3.m3u");
-	g_assert (simple_parser_test (uri) == TOTEM_PL_PARSER_RESULT_SUCCESS);
+	g_assert (simple_parser_test (uri) == XPLAYER_PL_PARSER_RESULT_SUCCESS);
 	g_free (uri);
 }
 
@@ -904,7 +904,7 @@ test_parsing_rss_id (void)
 {
 	char *uri;
 	uri = get_relative_uri (TEST_SRCDIR "rss.xml");
-	g_assert_cmpstr (parser_test_get_entry_field (uri, TOTEM_PL_PARSER_FIELD_ID), ==, "http://example.com/video1/from-rss");
+	g_assert_cmpstr (parser_test_get_entry_field (uri, XPLAYER_PL_PARSER_FIELD_ID), ==, "http://example.com/video1/from-rss");
 	g_free (uri);
 }
 
@@ -913,7 +913,7 @@ test_parsing_rss_link (void)
 {
 	char *uri;
 	uri = get_relative_uri (TEST_SRCDIR "rss.xml");
-	g_assert_cmpstr (parser_test_get_entry_field (uri, TOTEM_PL_PARSER_FIELD_URI), ==, "http://www.guardian.co.uk/technology/audio/2011/may/03/tech-weekly-art-love-bin-laden");
+	g_assert_cmpstr (parser_test_get_entry_field (uri, XPLAYER_PL_PARSER_FIELD_URI), ==, "http://www.guardian.co.uk/technology/audio/2011/may/03/tech-weekly-art-love-bin-laden");
 	g_free (uri);
 }
 #endif /* HAVE_QUVI */
@@ -925,7 +925,7 @@ test_parsing_not_asx_playlist (void)
 	g_test_bug ("610471");
 	/* File from https://bugzilla.gnome.org/show_bug.cgi?id=610471#c0 */
 	uri = get_relative_uri (TEST_SRCDIR "asf-with-asx-suffix.asx");
-	g_assert (simple_parser_test (uri) == TOTEM_PL_PARSER_RESULT_SUCCESS);
+	g_assert (simple_parser_test (uri) == XPLAYER_PL_PARSER_RESULT_SUCCESS);
 	g_free (uri);
 }
 
@@ -936,8 +936,8 @@ test_parsing_wma_asf (void)
 	g_test_bug ("639958");
 	/* File from https://bugzilla.gnome.org/show_bug.cgi?id=639958#c5 */
 	uri = get_relative_uri (TEST_SRCDIR "WMA9.1_98_quality_48khz_vbr_s.wma");
-	g_assert (simple_parser_test (uri) == TOTEM_PL_PARSER_RESULT_SUCCESS);
-	g_assert_cmpstr (parser_test_get_entry_field (uri, TOTEM_PL_PARSER_FIELD_URI), ==, "mmsh://195.134.224.231/wma/WMA9.1_98_quality_48khz_vbr_s.wma?MSWMExt=.asf");
+	g_assert (simple_parser_test (uri) == XPLAYER_PL_PARSER_RESULT_SUCCESS);
+	g_assert_cmpstr (parser_test_get_entry_field (uri, XPLAYER_PL_PARSER_FIELD_URI), ==, "mmsh://195.134.224.231/wma/WMA9.1_98_quality_48khz_vbr_s.wma?MSWMExt=.asf");
 	g_free (uri);
 }
 
@@ -948,7 +948,7 @@ test_parsing_not_really_php (void)
 	g_test_bug ("590722");
 	/* File from http://startwars.org/dump/remote_xspf.php */
 	uri = get_relative_uri (TEST_SRCDIR "remote_xspf.php");
-	g_assert (simple_parser_test (uri) == TOTEM_PL_PARSER_RESULT_SUCCESS);
+	g_assert (simple_parser_test (uri) == XPLAYER_PL_PARSER_RESULT_SUCCESS);
 	g_free (uri);
 }
 
@@ -959,7 +959,7 @@ test_parsing_not_really_php_but_html_instead (void)
 	g_test_bug ("624341");
 	/* File from http://www.novabrasilfm.com.br/ao-vivo/audio.php */
 	uri = get_relative_uri (TEST_SRCDIR "audio.php");
-	g_assert (simple_parser_test (uri) == TOTEM_PL_PARSER_RESULT_IGNORED);
+	g_assert (simple_parser_test (uri) == XPLAYER_PL_PARSER_RESULT_IGNORED);
 	g_free (uri);
 }
 
@@ -974,9 +974,9 @@ static void
 parse_async_ready (GObject *pl, GAsyncResult *result, gpointer userdata)
 {
 	AsyncParseData *data = userdata;
-	TotemPlParserResult retval;
+	XplayerPlParserResult retval;
 
-	retval = totem_pl_parser_parse_finish (TOTEM_PL_PARSER (pl), result, NULL);
+	retval = xplayer_pl_parser_parse_finish (XPLAYER_PL_PARSER (pl), result, NULL);
 	g_test_message ("Got retval %d for uri '%s'", retval, data->uri);
 	g_test_message ("Parsed entry count is %d for uri '%s'", data->count, data->uri);
 
@@ -998,7 +998,7 @@ static void
 test_async_parsing_signal_order (void)
 {
 	AsyncParseData data;
-	TotemPlParser *pl = totem_pl_parser_new ();
+	XplayerPlParser *pl = xplayer_pl_parser_new ();
 
 	g_test_bug ("631727");
 	/* doesn't really matter what test file we use here, we just want something
@@ -1020,7 +1020,7 @@ test_async_parsing_signal_order (void)
 	 * added, so we just block it for a while.
 	 */
 	g_idle_add_full (G_PRIORITY_HIGH, block_main_loop_idle, NULL, NULL);
-	totem_pl_parser_parse_async (pl, data.uri, FALSE, NULL, parse_async_ready, &data);
+	xplayer_pl_parser_parse_async (pl, data.uri, FALSE, NULL, parse_async_ready, &data);
 	g_main_loop_run (data.mainloop);
 
 	/* The number of entries in separator.m3u */
@@ -1037,9 +1037,9 @@ test_async_parsing_signal_order (void)
 static void
 entry_metadata_foreach (const char *key, const char *value, gpointer data)
 {
-	if (g_ascii_strcasecmp (key, TOTEM_PL_PARSER_FIELD_URI) == 0)
+	if (g_ascii_strcasecmp (key, XPLAYER_PL_PARSER_FIELD_URI) == 0)
 		return;
-	if (g_ascii_strcasecmp (key, TOTEM_PL_PARSER_FIELD_DESCRIPTION) == 0
+	if (g_ascii_strcasecmp (key, XPLAYER_PL_PARSER_FIELD_DESCRIPTION) == 0
 	    && strlen (value) > MAX_DESCRIPTION_LEN) {
 	    	char *tmp = g_strndup (value, MAX_DESCRIPTION_LEN), *s;
 	    	for (s = tmp; s - tmp < MAX_DESCRIPTION_LEN; s++)
@@ -1051,12 +1051,12 @@ entry_metadata_foreach (const char *key, const char *value, gpointer data)
 		g_free (tmp);
 	    	return;
 	}
-	if (g_ascii_strcasecmp (key, TOTEM_PL_PARSER_FIELD_PUB_DATE) == 0) {
+	if (g_ascii_strcasecmp (key, XPLAYER_PL_PARSER_FIELD_PUB_DATE) == 0) {
 		struct tm *tm;
 		guint64 res;
 		char res_str[DATE_BUFSIZE];
 
-		res = totem_pl_parser_parse_date (value, option_debug);
+		res = xplayer_pl_parser_parse_date (value, option_debug);
 		if (res != (guint64) -1) {
 			tm = gmtime ((time_t *) &res);
 			strftime ((char *) &res_str, DATE_BUFSIZE, PRINT_DATE_FORMAT, tm);
@@ -1067,10 +1067,10 @@ entry_metadata_foreach (const char *key, const char *value, gpointer data)
 		}
 		return;
 	}
-	if (g_ascii_strcasecmp (key, TOTEM_PL_PARSER_FIELD_STARTTIME) == 0) {
+	if (g_ascii_strcasecmp (key, XPLAYER_PL_PARSER_FIELD_STARTTIME) == 0) {
 		gint64 res;
 
-		res = totem_pl_parser_parse_duration (value, option_debug);
+		res = xplayer_pl_parser_parse_duration (value, option_debug);
 		if (res == -1)
 			g_message ("\t%s = '%s' (duration parsing failed)", key, value);
 		else
@@ -1083,33 +1083,33 @@ entry_metadata_foreach (const char *key, const char *value, gpointer data)
 }
 
 static void
-entry_parsed (TotemPlParser *parser, const char *uri, GHashTable *metadata, gpointer data)
+entry_parsed (XplayerPlParser *parser, const char *uri, GHashTable *metadata, gpointer data)
 {
 	g_message ("Added URI \"%s\"...", uri);
 	g_hash_table_foreach (metadata, (GHFunc) entry_metadata_foreach, NULL);
 }
 
 static void
-test_parsing_real (TotemPlParser *pl, const char *uri)
+test_parsing_real (XplayerPlParser *pl, const char *uri)
 {
-	TotemPlParserResult res;
+	XplayerPlParserResult res;
 
-	res = totem_pl_parser_parse_with_base (pl, uri, option_base_uri, FALSE);
-	if (res != TOTEM_PL_PARSER_RESULT_SUCCESS) {
+	res = xplayer_pl_parser_parse_with_base (pl, uri, option_base_uri, FALSE);
+	if (res != XPLAYER_PL_PARSER_RESULT_SUCCESS) {
 		switch (res) {
-		case TOTEM_PL_PARSER_RESULT_UNHANDLED:
+		case XPLAYER_PL_PARSER_RESULT_UNHANDLED:
 			g_message ("URI \"%s\" unhandled.", uri);
 			break;
-		case TOTEM_PL_PARSER_RESULT_ERROR:
+		case XPLAYER_PL_PARSER_RESULT_ERROR:
 			g_message ("Error handling URI \"%s\".", uri);
 			break;
-		case TOTEM_PL_PARSER_RESULT_IGNORED:
+		case XPLAYER_PL_PARSER_RESULT_IGNORED:
 			g_message ("Ignored URI \"%s\".", uri);
 			break;
-		case TOTEM_PL_PARSER_RESULT_CANCELLED:
+		case XPLAYER_PL_PARSER_RESULT_CANCELLED:
 			g_message ("Cancelled URI \"%s\".", uri);
 			break;
-		case TOTEM_PL_PARSER_RESULT_SUCCESS:
+		case XPLAYER_PL_PARSER_RESULT_SUCCESS:
 		default:
 			g_assert_not_reached ();
 			;;
@@ -1121,7 +1121,7 @@ static gboolean
 push_parser (gpointer data)
 {
 	guint i;
-	TotemPlParser *pl = TOTEM_PL_PARSER (data);
+	XplayerPlParser *pl = XPLAYER_PL_PARSER (data);
 
 	for (i = 0; uris[i] != NULL; ++i)
 		test_parsing_real (pl, uris[i]);
@@ -1132,14 +1132,14 @@ push_parser (gpointer data)
 }
 
 static void
-playlist_started (TotemPlParser *parser, const char *uri, GHashTable *metadata)
+playlist_started (XplayerPlParser *parser, const char *uri, GHashTable *metadata)
 {
 	g_message ("Started playlist \"%s\"...", uri);
 	g_hash_table_foreach (metadata, (GHFunc) entry_metadata_foreach, NULL);
 }
 
 static void
-playlist_ended (TotemPlParser *parser, const char *uri)
+playlist_ended (XplayerPlParser *parser, const char *uri)
 {
 	g_message ("Playlist \"%s\" ended.", uri);
 }
@@ -1147,7 +1147,7 @@ playlist_ended (TotemPlParser *parser, const char *uri)
 static void
 test_parsing (void)
 {
-	TotemPlParser *pl = totem_pl_parser_new ();
+	XplayerPlParser *pl = xplayer_pl_parser_new ();
 
 	g_object_set (pl, "recurse", !option_no_recurse,
 			  "debug", option_debug,

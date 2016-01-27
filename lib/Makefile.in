@@ -95,9 +95,9 @@ CONFIG_HEADER = $(top_builddir)/config.h
 CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 LTLIBRARIES = $(noinst_LTLIBRARIES)
-libtotem_glibc_la_DEPENDENCIES = @LTLIBOBJS@
-am_libtotem_glibc_la_OBJECTS = stub.lo
-libtotem_glibc_la_OBJECTS = $(am_libtotem_glibc_la_OBJECTS)
+libxplayer_glibc_la_DEPENDENCIES = @LTLIBOBJS@
+am_libxplayer_glibc_la_OBJECTS = stub.lo
+libxplayer_glibc_la_OBJECTS = $(am_libxplayer_glibc_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
 am__v_lt_0 = --silent
@@ -136,8 +136,8 @@ AM_V_CCLD = $(am__v_CCLD_@AM_V@)
 am__v_CCLD_ = $(am__v_CCLD_@AM_DEFAULT_V@)
 am__v_CCLD_0 = @echo "  CCLD    " $@;
 am__v_CCLD_1 = 
-SOURCES = $(libtotem_glibc_la_SOURCES)
-DIST_SOURCES = $(libtotem_glibc_la_SOURCES)
+SOURCES = $(libxplayer_glibc_la_SOURCES)
+DIST_SOURCES = $(libxplayer_glibc_la_SOURCES)
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
     n|no|NO) false;; \
@@ -286,13 +286,13 @@ SED = @SED@
 SET_MAKE = @SET_MAKE@
 SHELL = @SHELL@
 STRIP = @STRIP@
-TOTEM_PLPARSER_CFLAGS = @TOTEM_PLPARSER_CFLAGS@
-TOTEM_PLPARSER_LIBS = @TOTEM_PLPARSER_LIBS@
-TOTEM_PLPARSER_MINI_CFLAGS = @TOTEM_PLPARSER_MINI_CFLAGS@
-TOTEM_PLPARSER_MINI_LIBS = @TOTEM_PLPARSER_MINI_LIBS@
-TOTEM_PL_PARSER_VERSION_MAJOR = @TOTEM_PL_PARSER_VERSION_MAJOR@
-TOTEM_PL_PARSER_VERSION_MICRO = @TOTEM_PL_PARSER_VERSION_MICRO@
-TOTEM_PL_PARSER_VERSION_MINOR = @TOTEM_PL_PARSER_VERSION_MINOR@
+XPLAYER_PLPARSER_CFLAGS = @XPLAYER_PLPARSER_CFLAGS@
+XPLAYER_PLPARSER_LIBS = @XPLAYER_PLPARSER_LIBS@
+XPLAYER_PLPARSER_MINI_CFLAGS = @XPLAYER_PLPARSER_MINI_CFLAGS@
+XPLAYER_PLPARSER_MINI_LIBS = @XPLAYER_PLPARSER_MINI_LIBS@
+XPLAYER_PL_PARSER_VERSION_MAJOR = @XPLAYER_PL_PARSER_VERSION_MAJOR@
+XPLAYER_PL_PARSER_VERSION_MICRO = @XPLAYER_PL_PARSER_VERSION_MICRO@
+XPLAYER_PL_PARSER_VERSION_MINOR = @XPLAYER_PL_PARSER_VERSION_MINOR@
 USEGMIME = @USEGMIME@
 USE_NLS = @USE_NLS@
 VERSION = @VERSION@
@@ -355,16 +355,16 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 noinst_LTLIBRARIES = \
-	libtotem_glibc.la
+	libxplayer_glibc.la
 
 common_defines = \
 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"	\
 	-DDATADIR=\""$(datadir)"\"			\
 	$(DISABLE_DEPRECATED)
 
-noinst_HEADERS = totem_internal.h
-libtotem_glibc_la_SOURCES = stub.c
-libtotem_glibc_la_LIBADD = @LTLIBOBJS@
+noinst_HEADERS = xplayer_internal.h
+libxplayer_glibc_la_SOURCES = stub.c
+libxplayer_glibc_la_LIBADD = @LTLIBOBJS@
 EXTRA_DIST = asprintf.c
 all: all-am
 
@@ -412,8 +412,8 @@ clean-noinstLTLIBRARIES:
 	  rm -f $${locs}; \
 	}
 
-libtotem_glibc.la: $(libtotem_glibc_la_OBJECTS) $(libtotem_glibc_la_DEPENDENCIES) $(EXTRA_libtotem_glibc_la_DEPENDENCIES) 
-	$(AM_V_CCLD)$(LINK)  $(libtotem_glibc_la_OBJECTS) $(libtotem_glibc_la_LIBADD) $(LIBS)
+libxplayer_glibc.la: $(libxplayer_glibc_la_OBJECTS) $(libxplayer_glibc_la_DEPENDENCIES) $(EXTRA_libxplayer_glibc_la_DEPENDENCIES) 
+	$(AM_V_CCLD)$(LINK)  $(libxplayer_glibc_la_OBJECTS) $(libxplayer_glibc_la_LIBADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)

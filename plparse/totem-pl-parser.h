@@ -20,372 +20,372 @@
    Author: Bastien Nocera <hadess@hadess.net>
  */
 
-#ifndef TOTEM_PL_PARSER_H
-#define TOTEM_PL_PARSER_H
+#ifndef XPLAYER_PL_PARSER_H
+#define XPLAYER_PL_PARSER_H
 
 #include <glib.h>
 #include <gio/gio.h>
 
-#include "totem-pl-parser-features.h"
-#include "totem-pl-parser-builtins.h"
-#include "totem-pl-playlist.h"
+#include "xplayer-pl-parser-features.h"
+#include "xplayer-pl-parser-builtins.h"
+#include "xplayer-pl-playlist.h"
 
 G_BEGIN_DECLS
 
-#define TOTEM_TYPE_PL_PARSER            (totem_pl_parser_get_type ())
-#define TOTEM_PL_PARSER(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), TOTEM_TYPE_PL_PARSER, TotemPlParser))
-#define TOTEM_PL_PARSER_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), TOTEM_TYPE_PL_PARSER, TotemPlParserClass))
-#define TOTEM_IS_PL_PARSER(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TOTEM_TYPE_PL_PARSER))
-#define TOTEM_IS_PL_PARSER_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), TOTEM_TYPE_PL_PARSER))
+#define XPLAYER_TYPE_PL_PARSER            (xplayer_pl_parser_get_type ())
+#define XPLAYER_PL_PARSER(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), XPLAYER_TYPE_PL_PARSER, XplayerPlParser))
+#define XPLAYER_PL_PARSER_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), XPLAYER_TYPE_PL_PARSER, XplayerPlParserClass))
+#define XPLAYER_IS_PL_PARSER(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), XPLAYER_TYPE_PL_PARSER))
+#define XPLAYER_IS_PL_PARSER_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), XPLAYER_TYPE_PL_PARSER))
 
 /**
- * TotemPlParserResult:
- * @TOTEM_PL_PARSER_RESULT_UNHANDLED: The playlist could not be handled.
- * @TOTEM_PL_PARSER_RESULT_ERROR: There was an error parsing the playlist.
- * @TOTEM_PL_PARSER_RESULT_SUCCESS: The playlist was parsed successfully.
- * @TOTEM_PL_PARSER_RESULT_IGNORED: The playlist was ignored due to its scheme or MIME type (see totem_pl_parser_add_ignored_scheme()
- * and totem_pl_parser_add_ignored_mimetype()).
- * @TOTEM_PL_PARSER_RESULT_CANCELLED: Parsing of the playlist was cancelled part-way through.
+ * XplayerPlParserResult:
+ * @XPLAYER_PL_PARSER_RESULT_UNHANDLED: The playlist could not be handled.
+ * @XPLAYER_PL_PARSER_RESULT_ERROR: There was an error parsing the playlist.
+ * @XPLAYER_PL_PARSER_RESULT_SUCCESS: The playlist was parsed successfully.
+ * @XPLAYER_PL_PARSER_RESULT_IGNORED: The playlist was ignored due to its scheme or MIME type (see xplayer_pl_parser_add_ignored_scheme()
+ * and xplayer_pl_parser_add_ignored_mimetype()).
+ * @XPLAYER_PL_PARSER_RESULT_CANCELLED: Parsing of the playlist was cancelled part-way through.
  *
  * Gives the result of parsing a playlist.
  **/
 typedef enum {
-	TOTEM_PL_PARSER_RESULT_UNHANDLED,
-	TOTEM_PL_PARSER_RESULT_ERROR,
-	TOTEM_PL_PARSER_RESULT_SUCCESS,
-	TOTEM_PL_PARSER_RESULT_IGNORED,
-	TOTEM_PL_PARSER_RESULT_CANCELLED
-} TotemPlParserResult;
+	XPLAYER_PL_PARSER_RESULT_UNHANDLED,
+	XPLAYER_PL_PARSER_RESULT_ERROR,
+	XPLAYER_PL_PARSER_RESULT_SUCCESS,
+	XPLAYER_PL_PARSER_RESULT_IGNORED,
+	XPLAYER_PL_PARSER_RESULT_CANCELLED
+} XplayerPlParserResult;
 
-typedef struct TotemPlParserPrivate TotemPlParserPrivate;
+typedef struct XplayerPlParserPrivate XplayerPlParserPrivate;
 
 /**
- * TotemPlParser:
+ * XplayerPlParser:
  *
- * All the fields in the #TotemPlParser structure are private and should never be accessed directly.
+ * All the fields in the #XplayerPlParser structure are private and should never be accessed directly.
  **/
 typedef struct {
 	GObject parent;
-	TotemPlParserPrivate *priv;
-} TotemPlParser;
+	XplayerPlParserPrivate *priv;
+} XplayerPlParser;
 
 /* Known metadata fields */
 
 /**
- * TOTEM_PL_PARSER_FIELD_URI:
+ * XPLAYER_PL_PARSER_FIELD_URI:
  *
  * Metadata field for an entry's URI.
  *
  * Since: 2.26
  **/
-#define TOTEM_PL_PARSER_FIELD_URI		"url"
+#define XPLAYER_PL_PARSER_FIELD_URI		"url"
 /**
- * TOTEM_PL_PARSER_FIELD_GENRE:
+ * XPLAYER_PL_PARSER_FIELD_GENRE:
  *
  * Metadata field for an entry's genre.
  **/
-#define TOTEM_PL_PARSER_FIELD_GENRE		"genre"
+#define XPLAYER_PL_PARSER_FIELD_GENRE		"genre"
 /**
- * TOTEM_PL_PARSER_FIELD_TITLE:
+ * XPLAYER_PL_PARSER_FIELD_TITLE:
  *
  * Metadata field for an entry's displayable title.
  **/
-#define TOTEM_PL_PARSER_FIELD_TITLE		"title"
+#define XPLAYER_PL_PARSER_FIELD_TITLE		"title"
 /**
- * TOTEM_PL_PARSER_FIELD_AUTHOR:
+ * XPLAYER_PL_PARSER_FIELD_AUTHOR:
  *
  * Metadata field for an entry's author/composer/director.
  **/
-#define TOTEM_PL_PARSER_FIELD_AUTHOR		"author"
+#define XPLAYER_PL_PARSER_FIELD_AUTHOR		"author"
 /**
- * TOTEM_PL_PARSER_FIELD_ALBUM:
+ * XPLAYER_PL_PARSER_FIELD_ALBUM:
  *
  * Metadata field for an entry's album.
  **/
-#define TOTEM_PL_PARSER_FIELD_ALBUM		"album"
+#define XPLAYER_PL_PARSER_FIELD_ALBUM		"album"
 /**
- * TOTEM_PL_PARSER_FIELD_BASE:
+ * XPLAYER_PL_PARSER_FIELD_BASE:
  *
  * Metadata field for an entry's base path.
  **/
-#define TOTEM_PL_PARSER_FIELD_BASE		"base"
+#define XPLAYER_PL_PARSER_FIELD_BASE		"base"
 /**
- * TOTEM_PL_PARSER_FIELD_SUBTITLE_URI:
+ * XPLAYER_PL_PARSER_FIELD_SUBTITLE_URI:
  *
  * The URI of the entry's subtitle file.
  **/
-#define TOTEM_PL_PARSER_FIELD_SUBTITLE_URI	"subtitle-uri"
+#define XPLAYER_PL_PARSER_FIELD_SUBTITLE_URI	"subtitle-uri"
 /**
- * TOTEM_PL_PARSER_FIELD_VOLUME:
+ * XPLAYER_PL_PARSER_FIELD_VOLUME:
  *
  * Metadata field for an entry's playback volume.
  **/
-#define TOTEM_PL_PARSER_FIELD_VOLUME		"volume"
+#define XPLAYER_PL_PARSER_FIELD_VOLUME		"volume"
 /**
- * TOTEM_PL_PARSER_FIELD_AUTOPLAY:
+ * XPLAYER_PL_PARSER_FIELD_AUTOPLAY:
  *
  * Metadata field for an entry's "autoplay" flag, which is %TRUE if the entry should play automatically.
  **/
-#define TOTEM_PL_PARSER_FIELD_AUTOPLAY		"autoplay"
+#define XPLAYER_PL_PARSER_FIELD_AUTOPLAY		"autoplay"
 /**
- * TOTEM_PL_PARSER_FIELD_DURATION:
+ * XPLAYER_PL_PARSER_FIELD_DURATION:
  *
- * Metadata field for an entry's playback duration, which should be parsed using totem_pl_parser_parse_duration().
+ * Metadata field for an entry's playback duration, which should be parsed using xplayer_pl_parser_parse_duration().
  **/
-#define TOTEM_PL_PARSER_FIELD_DURATION		"duration"
+#define XPLAYER_PL_PARSER_FIELD_DURATION		"duration"
 /**
- * TOTEM_PL_PARSER_FIELD_DURATION_MS:
+ * XPLAYER_PL_PARSER_FIELD_DURATION_MS:
  *
  * Metadata field for an entry's playback duration, in milliseconds. It's only used when an entry's
- * duration is available in that format, so one would get either the %TOTEM_PL_PARSER_FIELD_DURATION
- * or %TOTEM_PL_PARSER_FIELD_DURATION_MS as metadata.
+ * duration is available in that format, so one would get either the %XPLAYER_PL_PARSER_FIELD_DURATION
+ * or %XPLAYER_PL_PARSER_FIELD_DURATION_MS as metadata.
  **/
-#define TOTEM_PL_PARSER_FIELD_DURATION_MS	"duration-ms"
+#define XPLAYER_PL_PARSER_FIELD_DURATION_MS	"duration-ms"
 /**
- * TOTEM_PL_PARSER_FIELD_STARTTIME:
+ * XPLAYER_PL_PARSER_FIELD_STARTTIME:
  *
- * Metadata field for an entry's playback start time, which should be parsed using totem_pl_parser_parse_duration().
+ * Metadata field for an entry's playback start time, which should be parsed using xplayer_pl_parser_parse_duration().
  **/
-#define TOTEM_PL_PARSER_FIELD_STARTTIME		"starttime"
+#define XPLAYER_PL_PARSER_FIELD_STARTTIME		"starttime"
 /**
- * TOTEM_PL_PARSER_FIELD_ENDTIME:
+ * XPLAYER_PL_PARSER_FIELD_ENDTIME:
  *
  * Metadata field for an entry's playback end time.
  **/
-#define TOTEM_PL_PARSER_FIELD_ENDTIME		"endtime"
+#define XPLAYER_PL_PARSER_FIELD_ENDTIME		"endtime"
 /**
- * TOTEM_PL_PARSER_FIELD_COPYRIGHT:
+ * XPLAYER_PL_PARSER_FIELD_COPYRIGHT:
  *
  * Metadata field for an entry's copyright line.
  **/
-#define TOTEM_PL_PARSER_FIELD_COPYRIGHT		"copyright"
+#define XPLAYER_PL_PARSER_FIELD_COPYRIGHT		"copyright"
 /**
- * TOTEM_PL_PARSER_FIELD_ABSTRACT:
+ * XPLAYER_PL_PARSER_FIELD_ABSTRACT:
  *
  * Metadata field for an entry's abstract text.
  **/
-#define TOTEM_PL_PARSER_FIELD_ABSTRACT		"abstract"
+#define XPLAYER_PL_PARSER_FIELD_ABSTRACT		"abstract"
 /**
- * TOTEM_PL_PARSER_FIELD_DESCRIPTION:
+ * XPLAYER_PL_PARSER_FIELD_DESCRIPTION:
  *
  * Metadata field for an entry's description.
  **/
-#define TOTEM_PL_PARSER_FIELD_DESCRIPTION	"description"
+#define XPLAYER_PL_PARSER_FIELD_DESCRIPTION	"description"
 /**
- * TOTEM_PL_PARSER_FIELD_SUMMARY:
+ * XPLAYER_PL_PARSER_FIELD_SUMMARY:
  *
- * Metadata field for an entry's summary. (In practice, identical to %TOTEM_PL_PARSER_FIELD_DESCRIPTION.)
+ * Metadata field for an entry's summary. (In practice, identical to %XPLAYER_PL_PARSER_FIELD_DESCRIPTION.)
  **/
-#define TOTEM_PL_PARSER_FIELD_SUMMARY		TOTEM_PL_PARSER_FIELD_DESCRIPTION
+#define XPLAYER_PL_PARSER_FIELD_SUMMARY		XPLAYER_PL_PARSER_FIELD_DESCRIPTION
 /**
- * TOTEM_PL_PARSER_FIELD_MOREINFO:
+ * XPLAYER_PL_PARSER_FIELD_MOREINFO:
  *
  * Metadata field for an entry's "more info" URI.
  **/
-#define TOTEM_PL_PARSER_FIELD_MOREINFO		"moreinfo"
+#define XPLAYER_PL_PARSER_FIELD_MOREINFO		"moreinfo"
 /**
- * TOTEM_PL_PARSER_FIELD_SCREENSIZE:
+ * XPLAYER_PL_PARSER_FIELD_SCREENSIZE:
  *
  * Metadata field for an entry's preferred screen size.
  **/
-#define TOTEM_PL_PARSER_FIELD_SCREENSIZE	"screensize"
+#define XPLAYER_PL_PARSER_FIELD_SCREENSIZE	"screensize"
 /**
- * TOTEM_PL_PARSER_FIELD_UI_MODE:
+ * XPLAYER_PL_PARSER_FIELD_UI_MODE:
  *
  * Metadata field for an entry's preferred UI mode.
  **/
-#define TOTEM_PL_PARSER_FIELD_UI_MODE		"ui-mode"
+#define XPLAYER_PL_PARSER_FIELD_UI_MODE		"ui-mode"
 /**
- * TOTEM_PL_PARSER_FIELD_PUB_DATE:
+ * XPLAYER_PL_PARSER_FIELD_PUB_DATE:
  *
- * Metadata field for an entry's publication date, which should be parsed using totem_pl_parser_parse_date().
+ * Metadata field for an entry's publication date, which should be parsed using xplayer_pl_parser_parse_date().
  **/
-#define TOTEM_PL_PARSER_FIELD_PUB_DATE		"publication-date"
+#define XPLAYER_PL_PARSER_FIELD_PUB_DATE		"publication-date"
 /**
- * TOTEM_PL_PARSER_FIELD_FILESIZE:
+ * XPLAYER_PL_PARSER_FIELD_FILESIZE:
  *
  * Metadata field for an entry's filesize in bytes. This is only advisory, and can sometimes not match the actual filesize of the stream.
  **/
-#define TOTEM_PL_PARSER_FIELD_FILESIZE		"filesize"
+#define XPLAYER_PL_PARSER_FIELD_FILESIZE		"filesize"
 /**
- * TOTEM_PL_PARSER_FIELD_LANGUAGE:
+ * XPLAYER_PL_PARSER_FIELD_LANGUAGE:
  *
  * Metadata field for an entry's audio language.
  **/
-#define TOTEM_PL_PARSER_FIELD_LANGUAGE		"language"
+#define XPLAYER_PL_PARSER_FIELD_LANGUAGE		"language"
 /**
- * TOTEM_PL_PARSER_FIELD_CONTACT:
+ * XPLAYER_PL_PARSER_FIELD_CONTACT:
  *
  * Metadata field for an entry's contact details for the webmaster.
  **/
-#define TOTEM_PL_PARSER_FIELD_CONTACT		"contact"
+#define XPLAYER_PL_PARSER_FIELD_CONTACT		"contact"
 /**
- * TOTEM_PL_PARSER_FIELD_IMAGE_URI:
+ * XPLAYER_PL_PARSER_FIELD_IMAGE_URI:
  *
  * Metadata field for an entry's thumbnail image URI.
  *
  * Since: 2.26
  **/
-#define TOTEM_PL_PARSER_FIELD_IMAGE_URI		"image-url"
+#define XPLAYER_PL_PARSER_FIELD_IMAGE_URI		"image-url"
 /**
- * TOTEM_PL_PARSER_FIELD_DOWNLOAD_URI:
+ * XPLAYER_PL_PARSER_FIELD_DOWNLOAD_URI:
  *
  * Metadata field for an entry's download URI. Only used if an alternate download
  * location is available for the entry.
  *
  * Since: 2.26
  **/
-#define TOTEM_PL_PARSER_FIELD_DOWNLOAD_URI	"download-url"
+#define XPLAYER_PL_PARSER_FIELD_DOWNLOAD_URI	"download-url"
 /**
- * TOTEM_PL_PARSER_FIELD_ID:
+ * XPLAYER_PL_PARSER_FIELD_ID:
  *
  * Metadata field for an entry's identifier. Its use is dependent on the format
  * of the playlist parsed, and its origin.
  **/
-#define TOTEM_PL_PARSER_FIELD_ID		"id"
+#define XPLAYER_PL_PARSER_FIELD_ID		"id"
 /**
- * TOTEM_PL_PARSER_FIELD_IS_PLAYLIST:
+ * XPLAYER_PL_PARSER_FIELD_IS_PLAYLIST:
  *
  * Metadata field used to tell the calling code that the parsing of a playlist
- * started. It is only %TRUE for the metadata passed to #TotemPlParser::playlist-started or
- * #TotemPlParser::playlist-ended signal handlers.
+ * started. It is only %TRUE for the metadata passed to #XplayerPlParser::playlist-started or
+ * #XplayerPlParser::playlist-ended signal handlers.
  **/
-#define TOTEM_PL_PARSER_FIELD_IS_PLAYLIST	"is-playlist"
+#define XPLAYER_PL_PARSER_FIELD_IS_PLAYLIST	"is-playlist"
 /**
- * TOTEM_PL_PARSER_FIELD_CONTENT_TYPE:
+ * XPLAYER_PL_PARSER_FIELD_CONTENT_TYPE:
  *
  * Metadata field for an entry's content-type (usually a mime-type coming
  * from a web server).
  **/
-#define TOTEM_PL_PARSER_FIELD_CONTENT_TYPE	"content-type"
+#define XPLAYER_PL_PARSER_FIELD_CONTENT_TYPE	"content-type"
 /**
- * TOTEM_PL_PARSER_FIELD_PLAYING:
+ * XPLAYER_PL_PARSER_FIELD_PLAYING:
  *
  * Metadata field for an entry's status in a playlist. This is usually
  * used when saving the state of an on-going playlist.
  **/
-#define TOTEM_PL_PARSER_FIELD_PLAYING           "playing"
+#define XPLAYER_PL_PARSER_FIELD_PLAYING           "playing"
 
 /**
- * TotemPlParserClass:
+ * XplayerPlParserClass:
  * @parent_class: the parent class
- * @entry_parsed: the generic signal handler for the #TotemPlParser::entry-parsed signal,
+ * @entry_parsed: the generic signal handler for the #XplayerPlParser::entry-parsed signal,
  * which can be overridden by inheriting classes
- * @playlist_started: the generic signal handler for the #TotemPlParser::playlist-started signal,
+ * @playlist_started: the generic signal handler for the #XplayerPlParser::playlist-started signal,
  * which can be overridden by inheriting classes
- * @playlist_ended: the generic signal handler for the #TotemPlParser::playlist-ended signal,
+ * @playlist_ended: the generic signal handler for the #XplayerPlParser::playlist-ended signal,
  * which can be overridden by inheriting classes
  *
- * The class structure for the #TotemPlParser type.
+ * The class structure for the #XplayerPlParser type.
  **/
 typedef struct {
 	GObjectClass parent_class;
 
 	/* signals */
-	void (*entry_parsed) (TotemPlParser *parser,
+	void (*entry_parsed) (XplayerPlParser *parser,
 			      const char *uri,
 			      GHashTable *metadata);
-	void (*playlist_started) (TotemPlParser *parser,
+	void (*playlist_started) (XplayerPlParser *parser,
 				  const char *uri,
 				  GHashTable *metadata);
-	void (*playlist_ended) (TotemPlParser *parser,
+	void (*playlist_ended) (XplayerPlParser *parser,
 				const char *uri);
-} TotemPlParserClass;
+} XplayerPlParserClass;
 
 /**
- * TotemPlParserType:
- * @TOTEM_PL_PARSER_PLS: PLS parser
- * @TOTEM_PL_PARSER_M3U: M3U parser
- * @TOTEM_PL_PARSER_M3U_DOS: M3U (DOS linebreaks) parser
- * @TOTEM_PL_PARSER_XSPF: XSPF parser
- * @TOTEM_PL_PARSER_IRIVER_PLA: iRiver PLA parser
+ * XplayerPlParserType:
+ * @XPLAYER_PL_PARSER_PLS: PLS parser
+ * @XPLAYER_PL_PARSER_M3U: M3U parser
+ * @XPLAYER_PL_PARSER_M3U_DOS: M3U (DOS linebreaks) parser
+ * @XPLAYER_PL_PARSER_XSPF: XSPF parser
+ * @XPLAYER_PL_PARSER_IRIVER_PLA: iRiver PLA parser
  *
- * The type of playlist a #TotemPlParser will parse.
+ * The type of playlist a #XplayerPlParser will parse.
  **/
 typedef enum {
-	TOTEM_PL_PARSER_PLS,
-	TOTEM_PL_PARSER_M3U,
-	TOTEM_PL_PARSER_M3U_DOS,
-	TOTEM_PL_PARSER_XSPF,
-	TOTEM_PL_PARSER_IRIVER_PLA,
-} TotemPlParserType;
+	XPLAYER_PL_PARSER_PLS,
+	XPLAYER_PL_PARSER_M3U,
+	XPLAYER_PL_PARSER_M3U_DOS,
+	XPLAYER_PL_PARSER_XSPF,
+	XPLAYER_PL_PARSER_IRIVER_PLA,
+} XplayerPlParserType;
 
 /**
- * TotemPlParserError:
- * @TOTEM_PL_PARSER_ERROR_NO_DISC: Error attempting to open a disc device when no disc is present
- * @TOTEM_PL_PARSER_ERROR_MOUNT_FAILED: An attempted mount operation failed
- * @TOTEM_PL_PARSER_ERROR_EMPTY_PLAYLIST: Playlist to be saved is empty
+ * XplayerPlParserError:
+ * @XPLAYER_PL_PARSER_ERROR_NO_DISC: Error attempting to open a disc device when no disc is present
+ * @XPLAYER_PL_PARSER_ERROR_MOUNT_FAILED: An attempted mount operation failed
+ * @XPLAYER_PL_PARSER_ERROR_EMPTY_PLAYLIST: Playlist to be saved is empty
  *
  * Allows you to differentiate between different
- * errors occurring during file operations in a #TotemPlParser.
+ * errors occurring during file operations in a #XplayerPlParser.
  **/
 typedef enum {
-	TOTEM_PL_PARSER_ERROR_NO_DISC,
-	TOTEM_PL_PARSER_ERROR_MOUNT_FAILED,
-	TOTEM_PL_PARSER_ERROR_EMPTY_PLAYLIST
-} TotemPlParserError;
+	XPLAYER_PL_PARSER_ERROR_NO_DISC,
+	XPLAYER_PL_PARSER_ERROR_MOUNT_FAILED,
+	XPLAYER_PL_PARSER_ERROR_EMPTY_PLAYLIST
+} XplayerPlParserError;
 
-#define TOTEM_PL_PARSER_ERROR (totem_pl_parser_error_quark ())
+#define XPLAYER_PL_PARSER_ERROR (xplayer_pl_parser_error_quark ())
 
-GQuark totem_pl_parser_error_quark (void);
+GQuark xplayer_pl_parser_error_quark (void);
 
-GType    totem_pl_parser_get_type (void);
+GType    xplayer_pl_parser_get_type (void);
 
-gint64  totem_pl_parser_parse_duration (const char *duration, gboolean debug);
-guint64 totem_pl_parser_parse_date     (const char *date_str, gboolean debug);
+gint64  xplayer_pl_parser_parse_duration (const char *duration, gboolean debug);
+guint64 xplayer_pl_parser_parse_date     (const char *date_str, gboolean debug);
 
-gboolean totem_pl_parser_save (TotemPlParser      *parser,
-			       TotemPlPlaylist    *playlist,
+gboolean xplayer_pl_parser_save (XplayerPlParser      *parser,
+			       XplayerPlPlaylist    *playlist,
 			       GFile              *dest,
 			       const gchar        *title,
-			       TotemPlParserType   type,
+			       XplayerPlParserType   type,
 			       GError            **error);
 
-void	   totem_pl_parser_add_ignored_scheme (TotemPlParser *parser,
+void	   xplayer_pl_parser_add_ignored_scheme (XplayerPlParser *parser,
 					       const char *scheme);
-void       totem_pl_parser_add_ignored_mimetype (TotemPlParser *parser,
+void       xplayer_pl_parser_add_ignored_mimetype (XplayerPlParser *parser,
 						 const char *mimetype);
 
-TotemPlParserResult totem_pl_parser_parse (TotemPlParser *parser,
+XplayerPlParserResult xplayer_pl_parser_parse (XplayerPlParser *parser,
 					   const char *uri, gboolean fallback);
-void totem_pl_parser_parse_async (TotemPlParser *parser, const char *uri,
+void xplayer_pl_parser_parse_async (XplayerPlParser *parser, const char *uri,
 				  gboolean fallback, GCancellable *cancellable,
 				  GAsyncReadyCallback callback,
                                   gpointer user_data);
-TotemPlParserResult totem_pl_parser_parse_finish (TotemPlParser *parser,
+XplayerPlParserResult xplayer_pl_parser_parse_finish (XplayerPlParser *parser,
 						  GAsyncResult *async_result,
 						  GError **error);
 
-TotemPlParserResult totem_pl_parser_parse_with_base (TotemPlParser *parser,
+XplayerPlParserResult xplayer_pl_parser_parse_with_base (XplayerPlParser *parser,
 						     const char *uri,
 						     const char *base,
 						     gboolean fallback);
-void totem_pl_parser_parse_with_base_async (TotemPlParser *parser,
+void xplayer_pl_parser_parse_with_base_async (XplayerPlParser *parser,
 					    const char *uri, const char *base,
 					    gboolean fallback,
 					    GCancellable *cancellable,
 					    GAsyncReadyCallback callback,
                     			    gpointer user_data);
 
-TotemPlParser *totem_pl_parser_new (void);
+XplayerPlParser *xplayer_pl_parser_new (void);
 
 /**
- * TotemPlParserMetadata: (skip)
+ * XplayerPlParserMetadata: (skip)
  *
- * An alias for #GHashTable, used in the #TotemPlParser::entry-parsed and
- * #TotemPlParser::playlist-started signals due to #GHashTable not being a
- * boxed type when totem-pl-parser was originally written.
+ * An alias for #GHashTable, used in the #XplayerPlParser::entry-parsed and
+ * #XplayerPlParser::playlist-started signals due to #GHashTable not being a
+ * boxed type when xplayer-pl-parser was originally written.
  *
  * The hash table is a mapping from field names (such as
- * %TOTEM_PL_PARSER_FIELD_ALBUM) to their associated values.
+ * %XPLAYER_PL_PARSER_FIELD_ALBUM) to their associated values.
  *
- * It is safe to use #GHashTable instead of #TotemPlParserMetadata everywhere.
+ * It is safe to use #GHashTable instead of #XplayerPlParserMetadata everywhere.
  */
-typedef GHashTable TotemPlParserMetadata;
+typedef GHashTable XplayerPlParserMetadata;
 
-GType totem_pl_parser_metadata_get_type (void) G_GNUC_CONST;
-#define TOTEM_TYPE_PL_PARSER_METADATA (totem_pl_parser_metadata_get_type())
+GType xplayer_pl_parser_metadata_get_type (void) G_GNUC_CONST;
+#define XPLAYER_TYPE_PL_PARSER_METADATA (xplayer_pl_parser_metadata_get_type())
 
 G_END_DECLS
 
-#endif /* TOTEM_PL_PARSER_H */
+#endif /* XPLAYER_PL_PARSER_H */

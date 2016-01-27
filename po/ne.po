@@ -1,11 +1,11 @@
-# translation of totem.HEAD.po to Nepali
+# translation of xplayer.HEAD.po to Nepali
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 # Jyotsna Shrestha <jyoshrestha@hotmail.com>, 2005.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: totem.HEAD\n"
+"Project-Id-Version: xplayer.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-03-01 23:27+0100\n"
 "PO-Revision-Date: 2005-03-16 12:57+0000\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: KBabel 1.9.1\n"
 
-#: data/playlist.glade.h:1 src/totem-playlist.c:1510
+#: data/playlist.glade.h:1 src/xplayer-playlist.c:1510
 msgid "Playlist"
 msgstr "बजाऊने सुचि"
 
@@ -41,67 +41,67 @@ msgstr "नक्कल गर्नु स्थान"
 msgid "_Save..."
 msgstr "॰॰॰संग्रह गर्नुहोला।"
 
-#: data/popup.glade.h:1 data/totem.glade.h:48
+#: data/popup.glade.h:1 data/xplayer.glade.h:48
 msgid "Next chapter or movie"
 msgstr "अर्को अध्याय  वा चलचित्र"
 
-#: data/popup.glade.h:2 data/totem.glade.h:53
+#: data/popup.glade.h:2 data/xplayer.glade.h:53
 msgid "Play / Pa_use"
 msgstr "बजाउ/पज"
 
-#: data/popup.glade.h:3 data/totem.glade.h:56
+#: data/popup.glade.h:3 data/xplayer.glade.h:56
 msgid "Play or pause the movie"
 msgstr "चलचित्र बजाउनुहोला वा पज गर्नुहोला ।"
 
-#: data/popup.glade.h:4 data/totem.glade.h:59
+#: data/popup.glade.h:4 data/xplayer.glade.h:59
 msgid "Previous chapter or movie"
 msgstr "पहिलेको अध्याय वा चलचित्र"
 
-#: data/popup.glade.h:5 data/totem.glade.h:75
+#: data/popup.glade.h:5 data/xplayer.glade.h:75
 msgid "Show _Controls"
 msgstr "नियन्त्रणहरु देखाउनुहोला ।"
 
-#: data/popup.glade.h:6 data/totem.glade.h:77
+#: data/popup.glade.h:6 data/xplayer.glade.h:77
 msgid "Show controls"
 msgstr "नियन्त्रणहरु देखाउनुहोला ।"
 
-#: data/popup.glade.h:7 data/totem.glade.h:81
+#: data/popup.glade.h:7 data/xplayer.glade.h:81
 msgid "Skip _Backwards"
 msgstr "पछाडिपट्टि फड्काउनुहोला ।"
 
-#: data/popup.glade.h:8 data/totem.glade.h:82
+#: data/popup.glade.h:8 data/xplayer.glade.h:82
 msgid "Skip _Forward"
 msgstr "अगाडि फड्काउनुहोला ।"
 
-#: data/popup.glade.h:9 data/totem.glade.h:83
+#: data/popup.glade.h:9 data/xplayer.glade.h:83
 msgid "Skip backwards"
 msgstr "पछाडिपट्टि फड्काउनुहोला ।"
 
-#: data/popup.glade.h:10 data/totem.glade.h:84
+#: data/popup.glade.h:10 data/xplayer.glade.h:84
 msgid "Skip forward"
 msgstr "अगाडि फड्काउनुहोला ।"
 
-#: data/popup.glade.h:11 data/totem.glade.h:107
+#: data/popup.glade.h:11 data/xplayer.glade.h:107
 msgid "Volume _Down"
 msgstr "आवाज तल गर्नुहोला ।"
 
-#: data/popup.glade.h:12 data/totem.glade.h:108
+#: data/popup.glade.h:12 data/xplayer.glade.h:108
 msgid "Volume _Up"
 msgstr "आवाज माथि गर्नुहोला ।"
 
-#: data/popup.glade.h:13 data/totem.glade.h:110
+#: data/popup.glade.h:13 data/xplayer.glade.h:110
 msgid "Volume up"
 msgstr "आवाज माथि गर्नुहोला ।"
 
-#: data/popup.glade.h:14 data/totem.glade.h:133
+#: data/popup.glade.h:14 data/xplayer.glade.h:133
 msgid "_Next Chapter/Movie"
 msgstr "अर्को अध्याय/चलचित्र"
 
-#: data/popup.glade.h:15 data/totem.glade.h:136
+#: data/popup.glade.h:15 data/xplayer.glade.h:136
 msgid "_Previous Chapter/Movie"
 msgstr "पहिलेको अध्याय/चलचित्र"
 
-#: data/properties.glade.h:1 data/screenshot.glade.h:1 data/totem.glade.h:1
+#: data/properties.glade.h:1 data/screenshot.glade.h:1 data/xplayer.glade.h:1
 msgid "    "
 msgstr "॰॰॰॰"
 
@@ -173,7 +173,7 @@ msgstr "फ्रेम दर:"
 msgid "N/A"
 msgstr "एन/ए"
 
-#: data/properties.glade.h:17 src/totem.c:1986
+#: data/properties.glade.h:17 src/xplayer.c:1986
 msgid "Properties"
 msgstr "सम्पति॒"
 
@@ -208,7 +208,7 @@ msgstr "*"
 msgid "<b>Preview</b>"
 msgstr "<b>पूर्वदृष्य</b>"
 
-#: data/screenshot.glade.h:4 src/totem-screenshot.c:346
+#: data/screenshot.glade.h:4 src/xplayer-screenshot.c:346
 msgid "Save Screenshot"
 msgstr "स्क्रिनसट संग्रह गर्नुहोला ।"
 
@@ -224,7 +224,7 @@ msgstr "डेक्सटमा स्क्रिनसट संग्रह 
 msgid "Save screenshot to _file:"
 msgstr "फाइलको लागी स्क्रिनसट संग्रह गर्नुहोला:"
 
-#: data/skip_to.glade.h:2 src/totem-skipto.c:140
+#: data/skip_to.glade.h:2 src/xplayer-skipto.c:140
 msgid "Skip to"
 msgstr "फड्काउनु"
 
@@ -236,17 +236,17 @@ msgstr "फड्काउनु:"
 msgid "seconds"
 msgstr "सेकेन्डहरु"
 
-#: data/totem.desktop.in.in.in.h:1
+#: data/xplayer.desktop.in.in.in.h:1
 msgid "Play movies and songs"
 msgstr "चलचित्र र गीत बजाउनुहोला ।"
 
 #. Title
-#: data/totem.desktop.in.in.in.h:2 data/totem.glade.h:102 src/totem.c:580
-#: src/totem.c:3398
-msgid "Totem Movie Player"
+#: data/xplayer.desktop.in.in.in.h:2 data/xplayer.glade.h:102 src/xplayer.c:580
+#: src/xplayer.c:3398
+msgid "Xplayer Movie Player"
 msgstr "टोटेम चलचित्र बजाउने "
 
-#: data/totem.glade.h:2
+#: data/xplayer.glade.h:2
 msgid ""
 "14.4 Kbps Modem\n"
 "19.2 Kbps Modem\n"
@@ -274,255 +274,255 @@ msgstr ""
 "१॰५ मेघा बाइट प्रति टि१/इन्टरनेट/लान\n"
 "इन्टरनेट/लानn"
 
-#: data/totem.glade.h:14
+#: data/xplayer.glade.h:14
 msgid "16:9 (Widescreen)"
 msgstr "16॰९(चौडा पर्दा)"
 
-#: data/totem.glade.h:15
+#: data/xplayer.glade.h:15
 msgid "2.11:1 (DVB)"
 msgstr "२॰११॰१ (डि॰भि॰बि)"
 
-#: data/totem.glade.h:16
+#: data/xplayer.glade.h:16
 msgid "4:3 (TV)"
 msgstr "४॰३(टिभी)"
 
-#: data/totem.glade.h:17
+#: data/xplayer.glade.h:17
 msgid "<b>Audio Output</b>"
 msgstr "<b>ध्वनि प्रतिफल </b>"
 
-#: data/totem.glade.h:18
+#: data/xplayer.glade.h:18
 msgid "<b>Color balance</b>"
 msgstr "<b>रङ्ग सन्तुलन </b>"
 
-#: data/totem.glade.h:19
+#: data/xplayer.glade.h:19
 msgid "<b>Display</b>"
 msgstr "<b>देखाउनुहोला</b>"
 
-#: data/totem.glade.h:20
+#: data/xplayer.glade.h:20
 msgid "<b>Networking</b>"
 msgstr "<b>नेटवर्किङ</b>"
 
-#: data/totem.glade.h:21
+#: data/xplayer.glade.h:21
 msgid "<b>Optical Device</b>"
 msgstr "<b>दृष्य साधन</b>"
 
-#: data/totem.glade.h:22
+#: data/xplayer.glade.h:22
 msgid "<b>Proprietary Plugins</b>"
 msgstr "<b>धनी प्लगइन</b>"
 
-#: data/totem.glade.h:23
+#: data/xplayer.glade.h:23
 msgid "<b>TV-Out</b>"
 msgstr "<b>टिभी बाहिर</b>"
 
-#: data/totem.glade.h:24
+#: data/xplayer.glade.h:24
 msgid "<b>Visual Effects</b>"
 msgstr "<b>दृष्य असरहरूरु</b>"
 
-#: data/totem.glade.h:25
+#: data/xplayer.glade.h:25
 msgid "<span size=\"medium\"><b>No File</b></span>"
 msgstr "<span size=\"medium\"><b> होइन फाईल</b></span>"
 
-#: data/totem.glade.h:26
+#: data/xplayer.glade.h:26
 msgid "<span size=\"medium\"><b>No file</b></span>"
 msgstr "<span size=\"medium\"><b> होइन फाइल </b></span>"
 
-#: data/totem.glade.h:27
+#: data/xplayer.glade.h:27
 msgid "A_udio Menu"
 msgstr "श्रव्य मेनू"
 
-#: data/totem.glade.h:28
+#: data/xplayer.glade.h:28
 msgid "Always on _Top"
 msgstr "जहिलेपनि माथि॒"
 
-#: data/totem.glade.h:29
+#: data/xplayer.glade.h:29
 msgid "Always on top"
 msgstr "जहिलेपनि माथी"
 
-#: data/totem.glade.h:30
+#: data/xplayer.glade.h:30
 msgid "Audio"
 msgstr "ध्वनि॒"
 
-#: data/totem.glade.h:31 src/totem-sublang.c:112 src/totem-sublang.c:133
+#: data/xplayer.glade.h:31 src/xplayer-sublang.c:112 src/xplayer-sublang.c:133
 msgid "Auto"
 msgstr "स्वत:"
 
-#: data/totem.glade.h:32
+#: data/xplayer.glade.h:32
 msgid "Automatically _resize the window when a new video is loaded"
 msgstr "नयाँ भिडीओ लोड भएपछि स्वत विइन्डो पुन:आकारमा आउँछ ।"
 
-#: data/totem.glade.h:33
+#: data/xplayer.glade.h:33
 msgid "Co_ntrast:"
 msgstr "उज्यालो:"
 
-#: data/totem.glade.h:34
+#: data/xplayer.glade.h:34
 msgid "Connection _speed:"
 msgstr "जडानको गती"
 
-#: data/totem.glade.h:35
+#: data/xplayer.glade.h:35
 msgid "Deinterlace"
 msgstr "डेनटरलेस"
 
-#: data/totem.glade.h:36
+#: data/xplayer.glade.h:36
 msgid "Display"
 msgstr "देखाउनुहोला "
 
-#: data/totem.glade.h:37
+#: data/xplayer.glade.h:37
 msgid "Exit Fullscreen"
 msgstr "पूरा पर्दाबाट निस्कनुहोला ।"
 
-#: data/totem.glade.h:38
+#: data/xplayer.glade.h:38
 msgid "Fit Window to Movie"
 msgstr "चलचित्रको लागी र विण् ठिक छ ।डो"
 
-#: data/totem.glade.h:39
+#: data/xplayer.glade.h:39
 msgid "General"
 msgstr "साधारण॒"
 
-#: data/totem.glade.h:40
+#: data/xplayer.glade.h:40
 msgid "Go to the DVD menu"
 msgstr "डिभिडि मेनुमा जानुहोला ।"
 
-#: data/totem.glade.h:41
+#: data/xplayer.glade.h:41
 msgid "Go to the angle menu"
 msgstr "कोण मेनुमा जानुहोला ।ेनु"
 
-#: data/totem.glade.h:42
+#: data/xplayer.glade.h:42
 msgid "Go to the audio menu"
 msgstr "ध्वनी मेनुमा जानुहोला ।"
 
-#: data/totem.glade.h:43
+#: data/xplayer.glade.h:43
 msgid "Go to the chapter menu"
 msgstr "अध्याय मेनुमा जानुहोला ।"
 
-#: data/totem.glade.h:44
+#: data/xplayer.glade.h:44
 msgid "Go to the title menu"
 msgstr "शीर्षक मेनुमा जानुहोला ।"
 
-#: data/totem.glade.h:45
+#: data/xplayer.glade.h:45
 msgid "Help contents"
 msgstr "मद्दत सामग्रिहरू"
 
-#: data/totem.glade.h:46
+#: data/xplayer.glade.h:46
 msgid "Languages"
 msgstr "भाषाहरु"
 
-#: data/totem.glade.h:47 src/totem-options.c:39
+#: data/xplayer.glade.h:47 src/xplayer-options.c:39
 msgid "Next"
 msgstr "अर्को॒"
 
-#: data/totem.glade.h:49
+#: data/xplayer.glade.h:49
 msgid "No Language Selection Available"
 msgstr "छानिएको भाषा उपलब्ध छैन ।"
 
-#: data/totem.glade.h:50
+#: data/xplayer.glade.h:50
 msgid "No subtitles selection available"
 msgstr "छानिएको उपशीर्षक उपलब्ध छैन ।"
 
-#: data/totem.glade.h:51
+#: data/xplayer.glade.h:51
 msgid "Open _Location..."
 msgstr "॰॰॰ठाऊँ खोलनुहोला।"
 
-#: data/totem.glade.h:52
+#: data/xplayer.glade.h:52
 msgid "Open a non-local file"
 msgstr "अस्थानिय फाइल खोल्नुहोला ।"
 
-#: data/totem.glade.h:54
+#: data/xplayer.glade.h:54
 msgid "Play _Disc"
 msgstr "डिक्स प्लेगर्नुहोला ।उ"
 
-#: data/totem.glade.h:55
+#: data/xplayer.glade.h:55
 msgid "Play a Video or Audio Disc"
 msgstr "भिडिओ(दृष्य) वा ध्वनि डिक्स प्लेगर्नुहोला ।"
 
-#: data/totem.glade.h:57 src/totem-options.c:38
+#: data/xplayer.glade.h:57 src/xplayer-options.c:38
 msgid "Play/Pause"
 msgstr "बजाउ रोक॒"
 
-#: data/totem.glade.h:58 src/totem-options.c:40
+#: data/xplayer.glade.h:58 src/xplayer-options.c:40
 msgid "Previous"
 msgstr "पहिलेको॒"
 
-#: data/totem.glade.h:60
+#: data/xplayer.glade.h:60
 msgid "Resize _1:1"
 msgstr "पुन:आकार १:१"
 
-#: data/totem.glade.h:61
+#: data/xplayer.glade.h:61
 msgid "Resize _2:1"
 msgstr "पुन:आकार २:१"
 
-#: data/totem.glade.h:62
+#: data/xplayer.glade.h:62
 msgid "Resize to half the video size"
 msgstr "पुन:आकारको लागी भिडिओको आकार आधा पार्नुहोला । दिनुहोला ।"
 
-#: data/totem.glade.h:63
+#: data/xplayer.glade.h:63
 msgid "Resize to twice the video size"
 msgstr "पुन:आकारको लागी भिडिओको साइज दोबर गर्नुहोला ।"
 
-#: data/totem.glade.h:64
+#: data/xplayer.glade.h:64
 msgid "Resize to video size"
 msgstr "भिडिओको आकारलाई पुन:आकारमा ल्याउनुहोला ।"
 
-#: data/totem.glade.h:65
+#: data/xplayer.glade.h:65
 msgid "S_ubtitles"
 msgstr "उपशीर्षकहरू"
 
-#: data/totem.glade.h:66
+#: data/xplayer.glade.h:66
 msgid "Sat_uration:"
 msgstr "अतितृप्त:"
 
-#: data/totem.glade.h:67
+#: data/xplayer.glade.h:67
 msgid "Set the aspect ratio"
 msgstr "आकारको अनुपातमा मिलाउनुहोला ।"
 
-#: data/totem.glade.h:68
+#: data/xplayer.glade.h:68
 msgid "Set the repeat mode"
 msgstr "दोहोर्याउने शैली मिलाउनुहोला ।"
 
-#: data/totem.glade.h:69
+#: data/xplayer.glade.h:69
 msgid "Set the shuffle mode"
 msgstr "घिसरने शैलीमा मिलाउनुहोला ।"
 
-#: data/totem.glade.h:70
+#: data/xplayer.glade.h:70
 msgid "Sets 16:9 (Anamorphic) aspect ratio"
 msgstr "१६॰९(एनामोरफिक) आकारको अनुपातमा मिलाउनुहोला ।"
 
-#: data/totem.glade.h:71
+#: data/xplayer.glade.h:71
 msgid "Sets 2.11:1 (DVB) aspect ratio"
 msgstr "२॰११:१ (डि॰भी॰बि) आकारको अनुपातमा मिलाउनुहोला ।"
 
-#: data/totem.glade.h:72
+#: data/xplayer.glade.h:72
 msgid "Sets 4:3 (TV) aspect ratio"
 msgstr "४॰३ (टिभी) आकारको अनुपातमा मिलाउनुहोला ।"
 
-#: data/totem.glade.h:73
+#: data/xplayer.glade.h:73
 msgid "Sets automatic aspect ratio"
 msgstr "स्वत आकारको अनुपातमा मिलाउनुहोला ।"
 
-#: data/totem.glade.h:74
+#: data/xplayer.glade.h:74
 msgid "Sets square aspect ratio"
 msgstr "चारपाटे आकारको अनुपात मिलाउनुहोला ।"
 
-#: data/totem.glade.h:76
+#: data/xplayer.glade.h:76
 msgid "Show _visual effects when an audio file is played"
 msgstr "जब श्रव्य फाइल प्ले हुन्छ, तब दृष्य असरहरू देखाउनुहोला ।"
 
-#: data/totem.glade.h:78
+#: data/xplayer.glade.h:78
 msgid "Show or hide the playlist"
 msgstr "प्लेलिस्ट देखाउउनुहोला वा लुकाउनुहोला ।"
 
-#: data/totem.glade.h:79
+#: data/xplayer.glade.h:79
 msgid "Show/Hide Playlist"
 msgstr "प्लेलिस्ट देखाउउनुहोला वा लुकाउनुहोला ।"
 
-#: data/totem.glade.h:80
+#: data/xplayer.glade.h:80
 msgid "Shuff_le Mode"
 msgstr "घिस्रिने शैलीली"
 
-#: data/totem.glade.h:85
+#: data/xplayer.glade.h:85
 msgid "Skip to a specific time"
 msgstr "उल्लेखित समयमा नाघ्नुहोला ।"
 
-#: data/totem.glade.h:86
+#: data/xplayer.glade.h:86
 msgid ""
 "Small\n"
 "Normal\n"
@@ -534,11 +534,11 @@ msgstr ""
 "ठूल\n"
 "सबैभन्दा ठूलो"
 
-#: data/totem.glade.h:90
+#: data/xplayer.glade.h:90
 msgid "Square"
 msgstr "चारपाटे"
 
-#: data/totem.glade.h:91
+#: data/xplayer.glade.h:91
 msgid ""
 "Stereo\n"
 "4-channel\n"
@@ -554,318 +554,318 @@ msgstr ""
 "५॰१-च्यानल\n"
 "ए॰सि३ "
 
-#: data/totem.glade.h:97
+#: data/xplayer.glade.h:97
 msgid "Subtitles"
 msgstr "उपशीर्षकहरू"
 
-#: data/totem.glade.h:98
+#: data/xplayer.glade.h:98
 msgid "Switch to fullscreen"
 msgstr "पूरा पर्दामा लैजाऊ"
 
-#: data/totem.glade.h:99
+#: data/xplayer.glade.h:99
 msgid "Take _Screenshot"
 msgstr "स्क्रिसट लिनुहोला ।"
 
-#: data/totem.glade.h:100
+#: data/xplayer.glade.h:100
 msgid "Take a screenshot"
 msgstr "स्क्रिसट लिनुहोला ।"
 
-#: data/totem.glade.h:101
+#: data/xplayer.glade.h:101
 msgid "Time:"
 msgstr "समय:"
 
-#: data/totem.glade.h:103
-msgid "Totem Preferences"
+#: data/xplayer.glade.h:103
+msgid "Xplayer Preferences"
 msgstr "टोटेम प्राथमिकताहरूकता"
 
-#: data/totem.glade.h:104
+#: data/xplayer.glade.h:104
 msgid "Tv-out in fullscreen by Nvidia (NTSC)"
 msgstr "एनभिडिया (एन॰टि॰एस॰सि)बाट पुरैपर्दामा टिभी-"
 
-#: data/totem.glade.h:105
+#: data/xplayer.glade.h:105
 msgid "Tv-out in fullscreen by Nvidia (PAL)"
 msgstr "एनभिडिया (सि)बाट पुरैपर्दामा टिभी-आउट भयो ।"
 
-#: data/totem.glade.h:106
+#: data/xplayer.glade.h:106
 msgid "Visualisation _size:"
 msgstr "दृष्टिगत आकार:"
 
-#: data/totem.glade.h:109
+#: data/xplayer.glade.h:109
 msgid "Volume down"
 msgstr "आवाज तल गर्नुहोला ।"
 
-#: data/totem.glade.h:111
+#: data/xplayer.glade.h:111
 msgid "Zoom In"
 msgstr "भित्र जूम गर्नुहोला ।"
 
-#: data/totem.glade.h:112
+#: data/xplayer.glade.h:112
 msgid "Zoom Out"
 msgstr "बाहिर जूम गर्नुहोला ।"
 
-#: data/totem.glade.h:113
+#: data/xplayer.glade.h:113
 msgid "Zoom Reset"
 msgstr "जूम फेरि मिलाउनुहोला ।"
 
-#: data/totem.glade.h:114
+#: data/xplayer.glade.h:114
 msgid "Zoom in"
 msgstr "भित्र जूम गर्नुहोला ।"
 
-#: data/totem.glade.h:115
+#: data/xplayer.glade.h:115
 msgid "Zoom out"
 msgstr "बाहिर जूम गर्नुहोला ।"
 
-#: data/totem.glade.h:116
+#: data/xplayer.glade.h:116
 msgid "Zoom reset"
 msgstr "जूम फेरि सुरूगर्नुहोला ।"
 
-#: data/totem.glade.h:117
+#: data/xplayer.glade.h:117
 msgid "_Add Proprietary Plugins..."
 msgstr "स्वामिगत प्लगईनहरू थप गर्नुहोला।"
 
-#: data/totem.glade.h:118
+#: data/xplayer.glade.h:118
 msgid "_Angle Menu"
 msgstr "कोण मेनू"
 
-#: data/totem.glade.h:119
+#: data/xplayer.glade.h:119
 msgid "_Aspect Ratio"
 msgstr "आकार अनुपात"
 
-#: data/totem.glade.h:120
+#: data/xplayer.glade.h:120
 msgid "_Audio output type:"
 msgstr "ध्वनि प्रतिफलको प्रकार:"
 
-#: data/totem.glade.h:121
+#: data/xplayer.glade.h:121
 msgid "_Brightness:"
 msgstr "उज्यालोपन:"
 
-#: data/totem.glade.h:122
+#: data/xplayer.glade.h:122
 msgid "_Chapter Menu"
 msgstr "अध्याय मेनूनू"
 
-#: data/totem.glade.h:123
+#: data/xplayer.glade.h:123
 msgid "_Contents"
 msgstr "विषयसूचीहरु"
 
-#: data/totem.glade.h:124
+#: data/xplayer.glade.h:124
 msgid "_DVD Menu"
 msgstr "डिभिडि मेनू॒"
 
-#: data/totem.glade.h:125
+#: data/xplayer.glade.h:125
 msgid "_DXR3 TV-out"
 msgstr "डि॰एक्स॰आर॰३ टिभि-आउट"
 
-#: data/totem.glade.h:126
+#: data/xplayer.glade.h:126
 msgid "_Deinterlace"
 msgstr "डेनटरलेस"
 
-#: data/totem.glade.h:127
+#: data/xplayer.glade.h:127
 msgid "_Eject"
 msgstr "निकाल॒"
 
-#: data/totem.glade.h:128
+#: data/xplayer.glade.h:128
 msgid "_Fullscreen"
 msgstr "पूरा पर्दा॒"
 
-#: data/totem.glade.h:129
+#: data/xplayer.glade.h:129
 msgid "_Go"
 msgstr "_जाऊ"
 
-#: data/totem.glade.h:130
+#: data/xplayer.glade.h:130
 msgid "_Hue:"
 msgstr "_गाढा रङ्ग:"
 
-#: data/totem.glade.h:131
+#: data/xplayer.glade.h:131
 msgid "_Languages"
 msgstr "भाषाहरु"
 
-#: data/totem.glade.h:132
+#: data/xplayer.glade.h:132
 msgid "_Movie"
 msgstr "चलचित्र"
 
-#: data/totem.glade.h:134
+#: data/xplayer.glade.h:134
 msgid "_No TV-out"
 msgstr "टिभि-आउट होईन"
 
-#: data/totem.glade.h:135
+#: data/xplayer.glade.h:135
 msgid "_Optical device path:"
 msgstr "दृष्य साधन मार्ग:"
 
-#: data/totem.glade.h:137
+#: data/xplayer.glade.h:137
 msgid "_Repeat Mode"
 msgstr "दोहोर्याउनुस् शैली॒"
 
-#: data/totem.glade.h:138
+#: data/xplayer.glade.h:138
 msgid "_Reset To Defaults"
 msgstr "पूर्वनिर्देशित फेरि मिलाउनुहोला "
 
-#: data/totem.glade.h:139
+#: data/xplayer.glade.h:139
 msgid "_Resize 1:2"
 msgstr "पुन:आकार १:२"
 
-#: data/totem.glade.h:140
+#: data/xplayer.glade.h:140
 msgid "_Show/Hide Playlist"
 msgstr "देखाउनु/लुकाउनु को प्लेसुचि"
 
-#: data/totem.glade.h:141
+#: data/xplayer.glade.h:141
 msgid "_Skip to..."
 msgstr "॰॰॰॰मा नाघ्नुहोला।"
 
-#: data/totem.glade.h:142
+#: data/xplayer.glade.h:142
 msgid "_Sound"
 msgstr "ध्वनि॒"
 
-#: data/totem.glade.h:143
+#: data/xplayer.glade.h:143
 msgid "_Title Menu"
 msgstr "शीर्षक मेनू॒"
 
-#: data/totem.glade.h:144
+#: data/xplayer.glade.h:144
 msgid "_Type of visualisation:"
 msgstr "दृष्टिगतको प्रकार:"
 
-#: data/totem.schemas.in.h:1
+#: data/xplayer.schemas.in.h:1
 msgid "Enable deinterlacing"
 msgstr "डेनटरलेस सक्षम"
 
-#: data/totem.schemas.in.h:2
+#: data/xplayer.schemas.in.h:2
 msgid "Enable deinterlacing."
 msgstr "डेनटरलेस सक्षम छ।"
 
-#: data/totem.schemas.in.h:3
+#: data/xplayer.schemas.in.h:3
 msgid "Height of the video widget"
 msgstr "भिडियो औजारको उचाईं "
 
-#: data/totem.schemas.in.h:4
+#: data/xplayer.schemas.in.h:4
 msgid "Name of the visual effects plugins"
 msgstr "दृष्य प्लगइन गर्दा हुने असरहरूको नाम दिनुहोला ।"
 
-#: data/totem.schemas.in.h:5
+#: data/xplayer.schemas.in.h:5
 msgid "Name of the visual effects plugins."
 msgstr "दृष्य प्लगइन गर्दा हुने असरहरूको नाम दिनुहोला।"
 
-#: data/totem.schemas.in.h:6
+#: data/xplayer.schemas.in.h:6
 msgid "Path to the optical media device"
 msgstr "दृष्टि मिडिया साधनलाई बाटो"
 
-#: data/totem.schemas.in.h:7
+#: data/xplayer.schemas.in.h:7
 msgid "Path to the optical media device."
 msgstr "दृष्य मिडिया साधनको लागी मार्ग."
 
-#: data/totem.schemas.in.h:8
+#: data/xplayer.schemas.in.h:8
 msgid "Repeat mode"
 msgstr "दोहोर्याउनुस् शैली॒"
 
-#: data/totem.schemas.in.h:9
+#: data/xplayer.schemas.in.h:9
 msgid "Repeat mode."
 msgstr "दोहोर्याउनुस् शैली."
 
-#: data/totem.schemas.in.h:10
+#: data/xplayer.schemas.in.h:10
 msgid "Resize the canvas automatically on file load"
 msgstr "फाईल लोडमा चित्रपट स्वत पुन:आकारमा आयो ।"
 
-#: data/totem.schemas.in.h:11
+#: data/xplayer.schemas.in.h:11
 msgid "Resize the canvas automatically on file load."
 msgstr "फाईल लोडमा चित्रपट स्वत पुन:आकारमा आयो।"
 
-#: data/totem.schemas.in.h:12
+#: data/xplayer.schemas.in.h:12
 msgid "Show visual effects when no video is displayed"
 msgstr "दृष्य असरहरू देखाउनुहोला, जब भिडियो डिसप्ले हुदैंन ।"
 
-#: data/totem.schemas.in.h:13
+#: data/xplayer.schemas.in.h:13
 msgid "Show visual effects when playing an audio only file."
 msgstr "दृष्य असरहरू देखाउनुहोला जब श्रव्य फाइल मात्र प्ले भइरहन्छ।"
 
-#: data/totem.schemas.in.h:14
+#: data/xplayer.schemas.in.h:14
 msgid "Shuffle mode"
 msgstr "घिस्रिएको शैली"
 
-#: data/totem.schemas.in.h:15
+#: data/xplayer.schemas.in.h:15
 msgid "Shuffle mode."
 msgstr "घिस्रिएको शैली।"
 
-#: data/totem.schemas.in.h:16
+#: data/xplayer.schemas.in.h:16
 msgid "Sound volume"
 msgstr "ध्वनि आयतन "
 
-#: data/totem.schemas.in.h:17
+#: data/xplayer.schemas.in.h:17
 msgid "Sound volume, in percent, between 0 and 100"
 msgstr "ध्वनि आयतन ० र १०० प्रतिशत बिच छ ।"
 
-#: data/totem.schemas.in.h:18
+#: data/xplayer.schemas.in.h:18
 msgid "The brightness of the video"
 msgstr "भिडियोको उज्यालोपन"
 
-#: data/totem.schemas.in.h:19
+#: data/xplayer.schemas.in.h:19
 msgid "The brightness of the video."
 msgstr "भिडियोको उज्यालोपन।"
 
-#: data/totem.schemas.in.h:20
+#: data/xplayer.schemas.in.h:20
 msgid "The contrast of the video"
 msgstr "भिडियोको छायाँ"
 
-#: data/totem.schemas.in.h:21
+#: data/xplayer.schemas.in.h:21
 msgid "The contrast of the video."
 msgstr "भिडियोको छायाँ।"
 
-#: data/totem.schemas.in.h:22
+#: data/xplayer.schemas.in.h:22
 msgid "The hue of the video"
 msgstr "भिडियोको गाढा रंग"
 
-#: data/totem.schemas.in.h:23
+#: data/xplayer.schemas.in.h:23
 msgid "The hue of the video."
 msgstr "भिडियोको गाढा रंग।"
 
-#: data/totem.schemas.in.h:24
+#: data/xplayer.schemas.in.h:24
 msgid "The saturation of the video"
 msgstr "भिडियोको संतृप्ती"
 
-#: data/totem.schemas.in.h:25
+#: data/xplayer.schemas.in.h:25
 msgid "The saturation of the video."
 msgstr "भिडियोको संतृप्ती।"
 
-#: data/totem.schemas.in.h:26
+#: data/xplayer.schemas.in.h:26
 msgid "Type of audio output to use"
 msgstr "प्रयोगको लागी श्रव्य प्रतिफलको प्रकार"
 
-#: data/totem.schemas.in.h:27
+#: data/xplayer.schemas.in.h:27
 msgid ""
 "Type of audio output to use: \"0\" for stereo, \"1\" for 4-channel output, "
 "\"2\" for 5.0 channel output, \"3\" for 5.1 channel output, \"4\" for AC3 "
 "Passthrough."
 msgstr "प्रयोगको लागी श्रव्य प्रतिफलको प्रकार:\"०\"स्टेरियोको लागी, \"१\" ४-च्यानल प्रतिफलको लागी, \"२\" ५॰० च्यानल प्रतिफलको लागी, \"३\" ५॰१ च्यानल प्रतिफलको लागी \"४\" एसि३ पासथ्रुको लागी"
 
-#: data/totem.schemas.in.h:28
+#: data/xplayer.schemas.in.h:28
 msgid "Whether the main window should stay on top"
 msgstr "मुख्य विन्डो माथी गएर बस्छ कि"
 
-#: data/totem.schemas.in.h:29
+#: data/xplayer.schemas.in.h:29
 msgid "Whether the main window should stay on top of the other ones"
 msgstr "मुख्य विन्डो अरूको माथी गएर बस्छ कि"
 
-#: data/totem.schemas.in.h:30
+#: data/xplayer.schemas.in.h:30
 msgid "Whether to enable debug for the playback engine"
 msgstr "प्लेब्याक ईन्जिनको लागी डिबग सक्षम पार्ने हो कि"
 
-#: data/totem.schemas.in.h:31
+#: data/xplayer.schemas.in.h:31
 msgid "Whether to enable debug for the playback engine."
 msgstr "प्लेब्याक ईन्जिनको लागी डिबग सक्षम पार्ने"
 
-#: data/totem.schemas.in.h:32
+#: data/xplayer.schemas.in.h:32
 msgid "Width of the video widget"
 msgstr "भिडियो विडगेटको चौडाई"
 
-#: data/totem.schemas.in.h:33
+#: data/xplayer.schemas.in.h:33
 msgid "X coordinate for the Playlist"
 msgstr "प्लेसुचीको लागी एक्स संयोजन"
 
-#: data/totem.schemas.in.h:34
+#: data/xplayer.schemas.in.h:34
 msgid "X coordinate for the Playlist."
 msgstr "प्लेसुचीको लागी एक्स संयोजन।"
 
-#: data/totem.schemas.in.h:35
+#: data/xplayer.schemas.in.h:35
 msgid "Y coordinate for the Playlist"
 msgstr "प्लेसुचीको लागी वाई संयोजन"
 
-#: data/totem.schemas.in.h:36
+#: data/xplayer.schemas.in.h:36
 msgid "Y coordinate for the Playlist."
 msgstr "प्लेसुचीको लागी वाई संयोजन"
 
@@ -930,7 +930,7 @@ msgid "Unnamed CDROM"
 msgstr "नाम नदिईएको सिडिरो"
 
 #: src/bacon-video-widget-gst.c:68
-msgid "Totem Video Window"
+msgid "Xplayer Video Window"
 msgstr "टोटेम भिडिओ(दृष्य) विण्डो"
 
 #: src/bacon-video-widget-gst.c:2913
@@ -1083,437 +1083,437 @@ msgstr "समात्नको लागी कुनै भिडियो �
 msgid "Video codec is not handled."
 msgstr "भिडिओ(दृष्य) कोडेक हेन्डल छैन ।"
 
-#: src/totem-disc.c:114
+#: src/xplayer-disc.c:114
 #, c-format
 msgid "Failed to find real device node for %s: %s"
 msgstr "%s: %s को लागी सहि साधन नोड पत्ता लगाउन असफल "
 
-#: src/totem-disc.c:125
+#: src/xplayer-disc.c:125
 #, c-format
 msgid "Failed to read symbolic link %s: %s"
 msgstr "%s: %s संकेतिक सम्बन्ध पढन ता लगाउन असफल"
 
-#: src/totem-disc.c:209
+#: src/xplayer-disc.c:209
 #, c-format
 msgid "Failed to find mountpoint for device %s in /etc/fstab"
 msgstr "/etc/fstab मा साधन %s को माउन्टप्वाईन्ट पत्ता लगाउन असफल "
 
-#: src/totem-disc.c:247
+#: src/xplayer-disc.c:247
 msgid "Please check that a disc is present in the drive."
 msgstr "डिक्स अहिलेसम्म पनि ड्राईभमा नै छ कि हेर्नुहोला ।"
 
-#: src/totem-disc.c:250
+#: src/xplayer-disc.c:250
 #, c-format
 msgid "Failed to open device %s for reading: %s"
 msgstr "%s पढनको लागी साधन %s खोल्न असफल भयो।"
 
-#: src/totem-disc.c:261
+#: src/xplayer-disc.c:261
 #, c-format
 msgid "Failed to retrieve capabilities of device %s: %s"
 msgstr "साधनको %s: %s खोजेर पत्ता लगाउने क्षमता असफल"
 
-#: src/totem-disc.c:294
+#: src/xplayer-disc.c:294
 #, c-format
 msgid "Drive status 0x%x (%s) - check disc"
 msgstr "ड्राईभ स्थिति ०x%x (%s) - डिक्स जाँच्नुहोला ।"
 
-#: src/totem-disc.c:327
+#: src/xplayer-disc.c:327
 #, c-format
 msgid "Unexpected error status %d while mounting %s"
 msgstr "त्रुटि स्थिति %d,  %s माउन्टिङ गर्दा भेटियो।"
 
-#: src/totem-disc.c:379
+#: src/xplayer-disc.c:379
 #, c-format
 msgid "Error getting %s disc status: %s"
 msgstr "%s डिक्सको स्थिति पाउँनमा त्रुटि: %s"
 
-#: src/totem-disc.c:408
+#: src/xplayer-disc.c:408
 #, c-format
 msgid "Unexpected/unknown cd type 0x%x (%s)"
 msgstr "अज्ञात प्रकारको सिडि ०x%x (%s)"
 
-#: src/totem-disc.c:572
+#: src/xplayer-disc.c:572
 msgid "Audio CD"
 msgstr "ध्वनि सिडि॒"
 
-#: src/totem-disc.c:574
+#: src/xplayer-disc.c:574
 msgid "Video CD"
 msgstr "भिडिओ(दृष्य) सिडि"
 
-#: src/totem-disc.c:576
+#: src/xplayer-disc.c:576
 msgid "DVD"
 msgstr "डिभिडि॒"
 
-#: src/totem-interface.c:112
+#: src/xplayer-interface.c:112
 #, c-format
 msgid "Couldn't load the '%s' interface."
 msgstr "'%s' जोर्ने तरिका लोड हुन सकेन।"
 
-#: src/totem-interface.c:114 src/totem-interface.c:116
-msgid "Make sure that Totem is properly installed."
+#: src/xplayer-interface.c:114 src/xplayer-interface.c:116
+msgid "Make sure that Xplayer is properly installed."
 msgstr "यकिन गर्नुहोला कि टोटेम सहि तरिकाले स्थापना गरिएको छ।"
 
-#. disp = gnome_vfs_unescape_string_for_display (totem->mrl);
-#: src/totem-mozilla-viewer.c:59 src/totem.c:312 src/totem.c:339
-#: src/totem.c:713 src/totem.c:818
+#. disp = gnome_vfs_unescape_string_for_display (xplayer->mrl);
+#: src/xplayer-mozilla-viewer.c:59 src/xplayer.c:312 src/xplayer.c:339
+#: src/xplayer.c:713 src/xplayer.c:818
 #, c-format
-msgid "Totem could not play '%s'."
+msgid "Xplayer could not play '%s'."
 msgstr "टोटेमले '%s' बजाउन सकेन ।"
 
-#: src/totem-mozilla-viewer.c:91 src/totem-mozilla-viewer.c:98
+#: src/xplayer-mozilla-viewer.c:91 src/xplayer-mozilla-viewer.c:98
 msgid "Couldn't load the main interface (mozilla-viewer.glade)."
 msgstr "मुख्य जोड्ने तरिका (मजिल्ला-दर्शक मार्ग) लोड हुन सकेन ।"
 
-#: src/totem-mozilla-viewer.c:91 src/totem-mozilla-viewer.c:98
-msgid "Make sure that the Totem plugin is properly installed."
+#: src/xplayer-mozilla-viewer.c:91 src/xplayer-mozilla-viewer.c:98
+msgid "Make sure that the Xplayer plugin is properly installed."
 msgstr "यकिन गर्नुहोला कि टोटेम प्लईन सहि तरिकाले स्थापना गरिएको छ ।"
 
-#: src/totem-mozilla-viewer.c:109
-msgid "The Totem plugin could not startup."
+#: src/xplayer-mozilla-viewer.c:109
+msgid "The Xplayer plugin could not startup."
 msgstr "टोटेम प्लगइन शुरू भएन ।"
 
-#: src/totem-mozilla-viewer.c:109 src/totem.c:3222
+#: src/xplayer-mozilla-viewer.c:109 src/xplayer.c:3222
 msgid "No reason."
 msgstr "कारण छैन."
 
-#: src/totem-mozilla-viewer.c:141 src/totem.c:3403
+#: src/xplayer-mozilla-viewer.c:141 src/xplayer.c:3403
 msgid "Could not initialise the thread-safe libraries."
 msgstr "थ्रड-सेफ पुस्तकालयहरू थालनि भएको छैन ।"
 
-#: src/totem-mozilla-viewer.c:141
-msgid "Verify your system installation. The Totem plugin will now exit."
+#: src/xplayer-mozilla-viewer.c:141
+msgid "Verify your system installation. The Xplayer plugin will now exit."
 msgstr "तपाईको प्रणाली स्थापनाको रूज्जु गर्नुहोला ।टोटेम प्लगईन अब  बन्द हुंदैछ ।"
 
-#: src/totem-options.c:36
+#: src/xplayer-options.c:36
 msgid "Backend options"
 msgstr "ब्याकईन्ड बिकल्पहरू"
 
-#: src/totem-options.c:37
+#: src/xplayer-options.c:37
 msgid "Enable debug"
 msgstr "डिबग सक्षम"
 
-#: src/totem-options.c:41
+#: src/xplayer-options.c:41
 msgid "Seek Forwards"
 msgstr "अगाडि खोज्नुहोला ।"
 
-#: src/totem-options.c:42
+#: src/xplayer-options.c:42
 msgid "Seek Backwards"
 msgstr "पछाडि खोज्नुहोला ।"
 
-#: src/totem-options.c:43
+#: src/xplayer-options.c:43
 msgid "Volume Up"
 msgstr "आवाज माथि॒"
 
-#: src/totem-options.c:44
+#: src/xplayer-options.c:44
 msgid "Volume Down"
 msgstr "आवाज तल"
 
-#: src/totem-options.c:45
+#: src/xplayer-options.c:45
 msgid "Toggle Fullscreen"
 msgstr "टोग्गल पूरा पर्दा"
 
-#: src/totem-options.c:46
+#: src/xplayer-options.c:46
 msgid "Show/Hide Controls"
 msgstr "देखाउन/लुकाउन नु नियन्त्रणहरु"
 
-#: src/totem-options.c:47
+#: src/xplayer-options.c:47
 msgid "Quit"
 msgstr "बाहिर जानुस॒"
 
-#: src/totem-options.c:48
+#: src/xplayer-options.c:48
 msgid "Enqueue"
 msgstr "लाईनमा"
 
-#: src/totem-options.c:49
+#: src/xplayer-options.c:49
 msgid "Replace"
 msgstr "बदलनुहोला "
 
-#: src/totem-options.c:110
+#: src/xplayer-options.c:110
 #, c-format
 msgid "Option '%s' is unknown and was ignored\n"
 msgstr "विकल्प '%s' अपरिचित छ र उपेक्षा गर्यो ।\n"
 
-#: src/totem-pl-parser.c:215
+#: src/xplayer-pl-parser.c:215
 #, c-format
 msgid "Couldn't write parser: %s"
 msgstr "पार्सर लेख्न सकिएन: %s"
 
-#: src/totem-pl-parser.c:321 src/totem-pl-parser.c:444
+#: src/xplayer-pl-parser.c:321 src/xplayer-pl-parser.c:444
 #, c-format
 msgid "Couldn't open file '%s': %s"
 msgstr "फाइल '%s': %s खोलिएन ।"
 
-#: src/totem-playlist.c:299
+#: src/xplayer-playlist.c:299
 msgid "Could not save the playlist"
 msgstr "प्लेसुची भण्डार भएन ।"
 
-#: src/totem-playlist.c:631
+#: src/xplayer-playlist.c:631
 msgid "Select Movies or Playlists"
 msgstr "चलचित्र वा प्लेसुची छनोट गर्नुहोला ।"
 
-#: src/totem-playlist.c:808
+#: src/xplayer-playlist.c:808
 msgid "Save playlist"
 msgstr "प्लेसुचि संग्रह गर्नुहोला ।"
 
-#: src/totem-playlist.c:853
+#: src/xplayer-playlist.c:853
 msgid "Overwrite file?"
 msgstr "फाईल अधिलेखन गर्ने हो ?"
 
-#: src/totem-playlist.c:855
+#: src/xplayer-playlist.c:855
 #, c-format
 msgid "A file named '%s' already exists.  Are you sure you want to overwrite it?"
 msgstr "दिनुभएको फाईल नाम '%s' पहिले नै राखिसकेको छ । के तपाई त्यसैमा अधिलेखन गर्न चाहानुहुन्छ?"
 
-#: src/totem-playlist.c:1054
+#: src/xplayer-playlist.c:1054
 msgid "Filename"
 msgstr "लेखपत्रनाम॒"
 
-#: src/totem-playlist.c:1501
+#: src/xplayer-playlist.c:1501
 msgid "playlist"
 msgstr "प्लेसुची"
 
-#: src/totem-playlist.c:1645
+#: src/xplayer-playlist.c:1645
 msgid "Playlist error"
 msgstr "बजाउने सुचीमा त्रुटिुचीमा स्ट"
 
-#: src/totem-playlist.c:1645
+#: src/xplayer-playlist.c:1645
 #, c-format
 msgid "The playlist '%s' could not be parsed, it might be damaged."
 msgstr "प्लेसुची '%s' ले अफ्नो परिचय दिनसकेन, यो सायद बिग्रिएको हुनसक्छ ।"
 
-#: src/totem-preferences.c:87
+#: src/xplayer-preferences.c:87
 msgid "Enable visual effects?"
 msgstr "दृष्य असरहरू सक्षम छ ?"
 
-#: src/totem-preferences.c:89
+#: src/xplayer-preferences.c:89
 msgid ""
-"It seems you are running Totem remotely.\n"
+"It seems you are running Xplayer remotely.\n"
 "Are you sure you want to enable the visual effects?"
 msgstr ""
 "यो देखिन्छ कि तपाई दूरबाटै टोटेम चलाउन चहानुहुन्छ ।\n"
 "के तपाई दृष्य असरहरू सक्षम पार्न चाहानुहुन्छ ?"
 
-#: src/totem-preferences.c:142
+#: src/xplayer-preferences.c:142
 msgid ""
 "The change of this setting will only take effect for the next movie, or when "
-"Totem is restarted."
+"Xplayer is restarted."
 msgstr "यस सेेटिङको परिवर्तनले अर्को चलचित्रक लागी असर मात्र लिन्दछ वा जव टोटेम फेरि शुरू हुन्छ।फेरी शुरू हुन्छ ।"
 
-#: src/totem-preferences.c:186
+#: src/xplayer-preferences.c:186
 msgid "Switching on or off this type of TV-Out requires a restart to take effect."
 msgstr "स्विच खुल्ला वा बन्द गर्ने यस्तो प्रकारको टिभी-आउटको असर प्राप्त गर्नको लागी फेरी शुरू गर्नुपर्दछ।"
 
-#: src/totem-preferences.c:336
-msgid "Totem could not start the file manager."
+#: src/xplayer-preferences.c:336
+msgid "Xplayer could not start the file manager."
 msgstr "टोटेमले फाईल प्रबन्धक शुरू गर्न सकेन।"
 
-#: src/totem-preferences.c:364
+#: src/xplayer-preferences.c:364
 msgid "Changing the visuals effect type will require a restart to take effect."
 msgstr "दृष्यहरूको असर परिवर्तन हुने प्रकारको असर प्राप्तको लागी फेरी शुरू गर्नुहोला ।"
 
-#: src/totem-preferences.c:457
+#: src/xplayer-preferences.c:457
 msgid ""
-"The change of audio output type will only take effect when Totem is "
+"The change of audio output type will only take effect when Xplayer is "
 "restarted."
 msgstr "जब टोटेम पुन:शुरू हुन्छ "
 
-#: src/totem-properties-main.c:112
+#: src/xplayer-properties-main.c:112
 msgid "Audio/Video"
 msgstr "ध्वनि/भिडिओ(दृष्य)"
 
-#: src/totem-screenshot.c:151 src/totem-screenshot.c:162
+#: src/xplayer-screenshot.c:151 src/xplayer-screenshot.c:162
 #, c-format
 msgid "Screenshot%d.png"
 msgstr "स्क्रिनसट%d पि॰एन॰जि॰"
 
-#: src/totem-screenshot.c:204
+#: src/xplayer-screenshot.c:204
 #, c-format
 msgid "File '%s' already exists."
 msgstr "फाईल.'%s' पहिलेनै राखिसकेको छ।"
 
-#: src/totem-screenshot.c:206
+#: src/xplayer-screenshot.c:206
 msgid "The screenshot was not saved"
 msgstr "स्क्रिनसट भण्डार भएको छैन ।"
 
-#: src/totem-screenshot.c:217
+#: src/xplayer-screenshot.c:217
 msgid "There was an error saving the screenshot."
 msgstr "स्क्रिनसट भण्डारमा त्रुटि छ ।"
 
-#: src/totem-screenshot.c:250
+#: src/xplayer-screenshot.c:250
 msgid "Screenshot.png"
 msgstr "स्क्रिनसट पि॰एन॰जि"
 
-#: src/totem-statusbar.c:91
+#: src/xplayer-statusbar.c:91
 msgid "Shadow type"
 msgstr "छाँया प्रकार॒"
 
-#: src/totem-statusbar.c:92
+#: src/xplayer-statusbar.c:92
 msgid "Style of bevel around the statusbar text"
 msgstr "स्टाटसबार पाठको वरिपरि बिभेलको शैली॒"
 
-#: src/totem-statusbar.c:124 src/totem.c:251 src/totem.c:564
+#: src/xplayer-statusbar.c:124 src/xplayer.c:251 src/xplayer.c:564
 msgid "Stopped"
 msgstr "रोकियो॒"
 
-#: src/totem-statusbar.c:141
+#: src/xplayer-statusbar.c:141
 msgid "0:00 / 0:00"
 msgstr "०:०० / ०:००"
 
-#: src/totem-statusbar.c:166
+#: src/xplayer-statusbar.c:166
 #, c-format
 msgid "%s (Streaming)"
 msgstr "%s (प्रवाह)"
 
 #. Elapsed / Total Length
-#: src/totem-statusbar.c:173 src/totem-time-label.c:70
+#: src/xplayer-statusbar.c:173 src/xplayer-time-label.c:70
 #, c-format
 msgid "%s / %s"
 msgstr "%s / %s"
 
 #. Seeking to Time / Total Length
-#: src/totem-statusbar.c:176
+#: src/xplayer-statusbar.c:176
 #, c-format
 msgid "Seek to %s / %s"
 msgstr "%s / %s खोज्दै"
 
-#: src/totem-statusbar.c:234
+#: src/xplayer-statusbar.c:234
 msgid "Buffering"
 msgstr "आघात"
 
 #. eg: 75 %
-#: src/totem-statusbar.c:237
+#: src/xplayer-statusbar.c:237
 #, c-format
 msgid "%d %%"
 msgstr "%d %%"
 
-#: src/totem-sublang.c:108 src/totem-sublang.c:130
+#: src/xplayer-sublang.c:108 src/xplayer-sublang.c:130
 msgid "None"
 msgstr "कोहिपनि होइन॒"
 
-#: src/totem.c:241
+#: src/xplayer.c:241
 msgid "Playing"
 msgstr "बजाउदै छ॒"
 
-#: src/totem.c:246
+#: src/xplayer.c:246
 msgid "Paused"
 msgstr "रोकियो॒"
 
-#: src/totem.c:287
-msgid "Totem could not eject the optical media."
+#: src/xplayer.c:287
+msgid "Xplayer could not eject the optical media."
 msgstr "टोटेमले दृष्य मिडिया निकाल्न सकेन ।"
 
-#: src/totem.c:365
+#: src/xplayer.c:365
 #, c-format
 msgid ""
-"Totem cannot play this type of media (%s) because you do not have the "
+"Xplayer cannot play this type of media (%s) because you do not have the "
 "appropriate plugins to handle it."
 msgstr "टोटेमले यस्तो प्रकारको मिडिया (%s) प्ले गर्न सकेन किनभने तपाईसंग त्यसलाई हेन्डल गर्ने उपयुक्तक प्लगईन छैन ।"
 
-#: src/totem.c:366
+#: src/xplayer.c:366
 msgid ""
-"Please install the necessary plugins and restart Totem to be able to play "
+"Please install the necessary plugins and restart Xplayer to be able to play "
 "this media."
 msgstr "कृपया चाहिएको प्लगइन स्थापना गर्नुहोला र टोटेमले यो मिडिया प्ले गर्न सक्छ कि फेरी शुरू गर्नुहोला ।"
 
-#: src/totem.c:374
+#: src/xplayer.c:374
 #, c-format
 msgid ""
-"Totem could not play this media (%s) although a plugin is present to handle "
+"Xplayer could not play this media (%s) although a plugin is present to handle "
 "it."
 msgstr "टोटेमले यो मिडिया (%s) प्ले गर्न सकेन तैपनि हेन्डल गर्नको लागी प्लगईन छ ।"
 
-#: src/totem.c:375
+#: src/xplayer.c:375
 msgid ""
 "You might want to check that a disc is present in the drive and that it is "
 "correctly configured."
 msgstr "तपाईले सायद डिक्स अहिलेसम्म पनि ड्राईभमा नै छ कि जाँच्न र ठीक तरिकाले कन्फिगर गर्न चहानुहुन्छ ।"
 
 #. Title
-#: src/totem.c:557
+#: src/xplayer.c:557
 #, c-format
-msgid "%s - Totem Movie Player"
+msgid "%s - Xplayer Movie Player"
 msgstr "%s -टोटेम चलचित्र प्लेयर"
 
-#: src/totem.c:571
+#: src/xplayer.c:571
 msgid "No file"
 msgstr "फाईल छैन"
 
-#: src/totem.c:607 src/totem.c:1901
-msgid "Totem"
+#: src/xplayer.c:607 src/xplayer.c:1901
+msgid "Xplayer"
 msgstr "टोटेम"
 
-#: src/totem.c:1158 src/totem.c:1160
+#: src/xplayer.c:1158 src/xplayer.c:1160
 msgid "An error occured"
 msgstr "त्रुटि रहयो ।"
 
-#: src/totem.c:1492
+#: src/xplayer.c:1492
 msgid "Select files"
 msgstr "फाईल छनोट"
 
-#: src/totem.c:1563
+#: src/xplayer.c:1563
 msgid "Open Location..."
 msgstr "स्थान खोलनुस..."
 
-#: src/totem.c:1859
-msgid "Totem could not display the help contents."
+#: src/xplayer.c:1859
+msgid "Xplayer could not display the help contents."
 msgstr "टोटेमले सहयोग सामग्रीहरू देखाउन सकेन ।"
 
-#: src/totem.c:1897
+#: src/xplayer.c:1897
 #, c-format
 msgid "Movie Player using %s"
 msgstr "%s प्रयोग गरेर चलचित्र प्लेयर "
 
-#: src/totem.c:1903 src/vanity.c:261
+#: src/xplayer.c:1903 src/vanity.c:261
 msgid "Copyright © 2002-2005 Bastien Nocera"
 msgstr "प्रतिलिपि अधिकार © २००२-२००५ ब्यासटेन नोसेेरा"
 
-#: src/totem.c:1908 src/vanity.c:266
+#: src/xplayer.c:1908 src/vanity.c:266
 msgid "translator-credits"
 msgstr "अनुवादकको श्रेय॒हरू"
 
-#: src/totem.c:1941 src/totem.c:1949 src/vanity.c:299 src/vanity.c:307
-msgid "Totem could not get a screenshot of that film."
+#: src/xplayer.c:1941 src/xplayer.c:1949 src/vanity.c:299 src/vanity.c:307
+msgid "Xplayer could not get a screenshot of that film."
 msgstr "टोटेमले त्यो फिल्मको स्क्रिनसट पाउन सकेन ।"
 
-#: src/totem.c:1949
+#: src/xplayer.c:1949
 msgid "Please file a bug, this isn't supposed to happen."
 msgstr "कृपया बग फाईल गर्नुहोला, यो हुनु नहुने थियो ।"
 
-#: src/totem.c:1976
-msgid "Totem couldn't show the movie properties window."
+#: src/xplayer.c:1976
+msgid "Xplayer couldn't show the movie properties window."
 msgstr "टोटेमले चलचित्र गुण विन्डो देखाउन सकेन ।"
 
-#: src/totem.c:1976
-msgid "Make sure that Totem is correctly installed."
+#: src/xplayer.c:1976
+msgid "Make sure that Xplayer is correctly installed."
 msgstr "टिटेम ठिक तरिकाले स्थापना गरीएको छ वा छैन यकिन गर्नुहोला ।"
 
-#: src/totem.c:2062
+#: src/xplayer.c:2062
 #, c-format
-msgid "Totem could not seek in '%s'."
+msgid "Xplayer could not seek in '%s'."
 msgstr "'%s' खोजी गर्न टोटेमले सकेन ।"
 
-#: src/totem.c:3222
-msgid "Totem could not startup."
+#: src/xplayer.c:3222
+msgid "Xplayer could not startup."
 msgstr "टोटेम शुरू हुनसकेन ।"
 
-#: src/totem.c:3403
-msgid "Verify your system installation. Totem will now exit."
+#: src/xplayer.c:3403
+msgid "Verify your system installation. Xplayer will now exit."
 msgstr "तपाईको प्रणाली स्थापना रूज्जु गर्नुहोला ।टोटेम बन्द हुंदैछ ।्"
 
-#: src/totem.c:3423
-msgid "Totem couln't initialise the configuration engine."
+#: src/xplayer.c:3423
+msgid "Xplayer couln't initialise the configuration engine."
 msgstr "टोटेमले ईन्जिनको रूपलाई थालनी गर्न सकेन ।"
 
-#: src/totem.c:3423
+#: src/xplayer.c:3423
 msgid "Make sure that GNOME is properly installed."
 msgstr "जिनोम सहि तरिकाले स्थापना भएको छ छैन यकिन गर्नुहोला ।"
 
 #. Main window
-#: src/totem.c:3450
+#: src/xplayer.c:3450
 msgid "main window"
 msgstr "मुख्य विन्डो"
 
-#: src/totem.c:3455
+#: src/xplayer.c:3455
 msgid "video popup menu"
 msgstr "भिडियो पपअप मेनु"
 

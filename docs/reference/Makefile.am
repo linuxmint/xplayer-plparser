@@ -9,7 +9,7 @@ AUTOMAKE_OPTIONS = 1.6
 # of using the various options.
 
 # The name of the module, e.g. 'glib'.
-DOC_MODULE=totem-pl-parser
+DOC_MODULE=xplayer-pl-parser
 
 # The top-level SGML file. You can change this if you want to.
 DOC_MAIN_SGML_FILE=$(DOC_MODULE)-docs.xml
@@ -29,7 +29,7 @@ SCAN_OPTIONS=--rebuild-types
 
 # Extra options to supply to gtkdoc-mkdb.
 # e.g. MKDB_OPTIONS=--sgml-mode --output-format=xml
-MKDB_OPTIONS=--sgml-mode --output-format=xml --name-space=totem_
+MKDB_OPTIONS=--sgml-mode --output-format=xml --name-space=xplayer_
 
 # Extra options to supply to gtkdoc-fixref. Not normally needed.
 # e.g. FIXXREF_OPTIONS=--extra-dir=../gdk-pixbuf/html --extra-dir=../gdk/html
@@ -48,24 +48,24 @@ CFILE_GLOB=$(top_srcdir)/plparse/*.c
 # e.g. IGNORE_HFILES=gtkdebug.h gtkintl.h
 IGNORE_HFILES=					\
 	bswap.h					\
-	stamp-totem-pl-parser-builtins.h	\
-	totem-disc.h				\
-	totem-pl-parser-amz.h			\
-	totem-pl-parser-builtins.h		\
-	totem-pl-parser-features.h		\
-	totem-pl-parser-lines.h			\
-	totemplparser-marshal.h			\
-	totem-pl-parser-media.h			\
-	totem-pl-parser-misc.h			\
-	totem-pl-parser-pla.h			\
-	totem-pl-parser-pls.h			\
-	totem-pl-parser-podcast.h		\
-	totem-pl-parser-private.h		\
-	totem-pl-parser-qt.h			\
-	totem-pl-parser-smil.h			\
-	totem-pl-parser-videosite.h		\
-	totem-pl-parser-wm.h			\
-	totem-pl-parser-xspf.h			\
+	stamp-xplayer-pl-parser-builtins.h	\
+	xplayer-disc.h				\
+	xplayer-pl-parser-amz.h			\
+	xplayer-pl-parser-builtins.h		\
+	xplayer-pl-parser-features.h		\
+	xplayer-pl-parser-lines.h			\
+	xplayerplparser-marshal.h			\
+	xplayer-pl-parser-media.h			\
+	xplayer-pl-parser-misc.h			\
+	xplayer-pl-parser-pla.h			\
+	xplayer-pl-parser-pls.h			\
+	xplayer-pl-parser-podcast.h		\
+	xplayer-pl-parser-private.h		\
+	xplayer-pl-parser-qt.h			\
+	xplayer-pl-parser-smil.h			\
+	xplayer-pl-parser-videosite.h		\
+	xplayer-pl-parser-wm.h			\
+	xplayer-pl-parser-xspf.h			\
 	xmllexer.h				\
 	xmlparser.h
 
@@ -87,8 +87,8 @@ expand_content_files=
 # signals and properties.
 # e.g. INCLUDES=-I$(top_srcdir) -I$(top_builddir) $(GTK_DEBUG_FLAGS)
 # e.g. GTKDOC_LIBS=$(top_builddir)/gtk/$(gtktargetlib)
-INCLUDES=-I$(top_srcdir) -I$(top_builddir) $(TOTEM_PLPARSER_CFLAGS)
-GTKDOC_LIBS=$(top_builddir)/plparse/libtotem-plparser.la $(TOTEM_PLPARSER_LIBS)
+INCLUDES=-I$(top_srcdir) -I$(top_builddir) $(XPLAYER_PLPARSER_CFLAGS)
+GTKDOC_LIBS=$(top_builddir)/plparse/libxplayer-plparser.la $(XPLAYER_PLPARSER_LIBS)
 
 # This includes the standard gtk-doc make rules, copied by gtkdocize.
 include $(top_srcdir)/gtk-doc.make

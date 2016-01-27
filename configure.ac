@@ -1,14 +1,14 @@
 AC_PREREQ(2.62)
 
-m4_define(totem_version_major, 3)
-m4_define(totem_version_minor, 10)
-m4_define(totem_version_micro, 2)
+m4_define(xplayer_version_major, 3)
+m4_define(xplayer_version_minor, 10)
+m4_define(xplayer_version_micro, 2)
 
-AC_INIT([totem-pl-parser],
-        [totem_version_major.totem_version_minor.totem_version_micro],
-        [http://bugzilla.gnome.org/enter_bug.cgi?product=totem-pl-parser&component=General])
+AC_INIT([xplayer-pl-parser],
+        [xplayer_version_major.xplayer_version_minor.xplayer_version_micro],
+        [http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer-pl-parser&component=General])
 
-AC_CONFIG_SRCDIR([plparse/totem-pl-parser.c])
+AC_CONFIG_SRCDIR([plparse/xplayer-pl-parser.c])
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_MACRO_DIR([m4])
 
@@ -20,7 +20,7 @@ AC_USE_SYSTEM_EXTENSIONS
 m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
 
 dnl Add the languages which your application supports to po/LINGUAS
-GETTEXT_PACKAGE=totem-pl-parser
+GETTEXT_PACKAGE=xplayer-pl-parser
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, ["$GETTEXT_PACKAGE"], [Define to the Gettext package name])
 AC_SUBST(GETTEXT_PACKAGE)
 IT_PROG_INTLTOOL([0.35.0])
@@ -59,12 +59,12 @@ LIBSOUP_REQS=2.43.0
 PLPARSER_LT_VERSION=19:0:1
 AC_SUBST(PLPARSER_LT_VERSION)
 
-TOTEM_PL_PARSER_VERSION_MAJOR=totem_version_major
-TOTEM_PL_PARSER_VERSION_MINOR=totem_version_minor
-TOTEM_PL_PARSER_VERSION_MICRO=totem_version_micro
-AC_SUBST(TOTEM_PL_PARSER_VERSION_MAJOR)
-AC_SUBST(TOTEM_PL_PARSER_VERSION_MINOR)
-AC_SUBST(TOTEM_PL_PARSER_VERSION_MICRO)
+XPLAYER_PL_PARSER_VERSION_MAJOR=xplayer_version_major
+XPLAYER_PL_PARSER_VERSION_MINOR=xplayer_version_minor
+XPLAYER_PL_PARSER_VERSION_MICRO=xplayer_version_micro
+AC_SUBST(XPLAYER_PL_PARSER_VERSION_MAJOR)
+AC_SUBST(XPLAYER_PL_PARSER_VERSION_MINOR)
+AC_SUBST(XPLAYER_PL_PARSER_VERSION_MICRO)
 
 pkg_modules="glib-2.0 >= $GLIB_REQS libxml-2.0 gthread-2.0 gio-2.0 >= $GIO_REQS libsoup-2.4 >= $LIBSOUP_REQS"
 
@@ -91,13 +91,13 @@ if test "x$enable_gmime" = "xyes" ; then
       AC_DEFINE(HAVE_GMIME, 1, [GMime available in the system])
       pkg_modules="$pkg_modules $GMIME"
    else
-      AC_MSG_ERROR([libgmime is required to compile totem-pl-parser.])
+      AC_MSG_ERROR([libgmime is required to compile xplayer-pl-parser.])
    fi
 else
    AC_SUBST(USEGMIME, no)
    gmime_message="
  **************************************************************
- Compiling totem-pl-parser without libgmime.
+ Compiling xplayer-pl-parser without libgmime.
  This will break podcast support and is completely unsupported.
  **************************************************************"
 fi
@@ -174,12 +174,12 @@ if test "x$enable_libgcrypt" != "xno" ; then
 	fi
 fi
 
-dnl Check for packages for building libtotem-plparser.la
-PKG_CHECK_MODULES(TOTEM_PLPARSER, [$pkg_modules])
-AC_SUBST(TOTEM_PLPARSER_CFLAGS)
-AC_SUBST(TOTEM_PLPARSER_LIBS)
+dnl Check for packages for building libxplayer-plparser.la
+PKG_CHECK_MODULES(XPLAYER_PLPARSER, [$pkg_modules])
+AC_SUBST(XPLAYER_PLPARSER_CFLAGS)
+AC_SUBST(XPLAYER_PLPARSER_LIBS)
 
-PKG_CHECK_MODULES([TOTEM_PLPARSER_MINI], [gio-2.0])
+PKG_CHECK_MODULES([XPLAYER_PLPARSER_MINI], [gio-2.0])
 
 GNOME_DEBUG_CHECK
 GNOME_COMPILE_WARNINGS([maximum])
@@ -207,15 +207,15 @@ GNOME_CODE_COVERAGE
 
 AC_CONFIG_FILES([
 Makefile
-totem-plparser.pc
-totem-plparser-uninstalled.pc
-totem-plparser-mini.pc
-totem-plparser-mini-uninstalled.pc
-totem-pl-parser.spec
+xplayer-plparser.pc
+xplayer-plparser-uninstalled.pc
+xplayer-plparser-mini.pc
+xplayer-plparser-mini-uninstalled.pc
+xplayer-pl-parser.spec
 lib/Makefile
 plparse/Makefile
 plparse/tests/Makefile
-plparse/totem-pl-parser-features.h
+plparse/xplayer-pl-parser-features.h
 po/Makefile.in
 docs/Makefile
 docs/reference/Makefile

@@ -1,11 +1,11 @@
-# Biełaruski pierakład Totem.
+# Biełaruski pierakład Xplayer.
 # Copyright (C) 2007 Free Software Foundation.
-# This file is distributed under the same license as the Totem package.
+# This file is distributed under the same license as the Xplayer package.
 # Ihar Hračyška <ihar.hrachyshka@gmail.com>, 2007.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Totem\n"
+"Project-Id-Version: Xplayer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-12-30 12:15+0200\n"
 "PO-Revision-Date: 2008-12-30 12:15+0200\n"
@@ -17,34 +17,34 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: ../plparse/totem-disc.c:357 ../plparse/totem-disc.c:498
+#: ../plparse/xplayer-disc.c:357 ../plparse/xplayer-disc.c:498
 #, c-format
 msgid "Failed to mount %s."
 msgstr "Nie ŭdałosia zmantavać %s."
 
-#: ../plparse/totem-disc.c:387
+#: ../plparse/xplayer-disc.c:387
 #, c-format
 msgid "No media in drive for device '%s'."
 msgstr "U pryładzie \"%s\" ničoha niama."
 
-#: ../plparse/totem-disc.c:441
+#: ../plparse/xplayer-disc.c:441
 #, c-format
 msgid "Please check that a disc is present in the drive."
 msgstr "Pravier najaŭnaść dysku ŭ pryładzie."
 
-#: ../plparse/totem-disc.c:880
+#: ../plparse/xplayer-disc.c:880
 msgid "Audio CD"
 msgstr "Aŭdyjo CD"
 
-#: ../plparse/totem-disc.c:882
+#: ../plparse/xplayer-disc.c:882
 msgid "Video CD"
 msgstr "Videa CD"
 
-#: ../plparse/totem-disc.c:884
+#: ../plparse/xplayer-disc.c:884
 msgid "DVD"
 msgstr "DVD"
 
-#: ../plparse/totem-disc.c:886
+#: ../plparse/xplayer-disc.c:886
 msgid "Digital Television"
 msgstr "Ličbavaja televizija"
 
@@ -154,7 +154,7 @@ msgstr "Ličbavaja televizija"
 #~ msgstr "Hod:"
 
 #~ msgid "Movie Player"
-#~ msgstr "Videaplayer Totem"
+#~ msgstr "Videaplayer Xplayer"
 
 #~ msgid "Play movies and songs"
 #~ msgstr "Hraje filmy j pieśni"
@@ -204,11 +204,11 @@ msgstr "Ličbavaja televizija"
 #~ msgid "Text Subtitles"
 #~ msgstr "Tekstavyja subtytry"
 
-#~ msgid "Totem Movie Player"
-#~ msgstr "Videaplayer Totem"
+#~ msgid "Xplayer Movie Player"
+#~ msgstr "Videaplayer Xplayer"
 
-#~ msgid "Totem Preferences"
-#~ msgstr "Nałady Totemu"
+#~ msgid "Xplayer Preferences"
+#~ msgstr "Nałady Xplayeru"
 
 #~ msgid "Visual Effects"
 #~ msgstr "Vizualnyja efekty"
@@ -383,45 +383,45 @@ msgstr "Ličbavaja televizija"
 #~ msgid "Couldn't load the '%s' interface. %s"
 #~ msgstr "Niemahčyma adčytać interfejs '%s'. %s"
 
-#~ msgid "Make sure that Totem is properly installed."
-#~ msgstr "Upeŭnisia ŭ pravilnaśći instalacyi Totema."
+#~ msgid "Make sure that Xplayer is properly installed."
+#~ msgstr "Upeŭnisia ŭ pravilnaśći instalacyi Xplayera."
 
 #~ msgid ""
-#~ "Totem is free software; you can redistribute it and/or modify it under "
+#~ "Xplayer is free software; you can redistribute it and/or modify it under "
 #~ "the terms of the GNU General Public License as published by the Free "
 #~ "Software Foundation; either version 2 of the License, or (at your option) "
 #~ "any later version."
 #~ msgstr ""
-#~ "Totem heta svabodnaja prahrama; ty možaš raspaŭsiudžvać jaje i/albo "
+#~ "Xplayer heta svabodnaja prahrama; ty možaš raspaŭsiudžvać jaje i/albo "
 #~ "madyfikavać zhodna z umovami Ahulnaj hramadzkaj licenzii GNU (GNU GPL), "
 #~ "apublikavanaj Fundacyjaj svabodnych prahramaŭ (Free Software Foundation), "
 #~ "u versii 2 albo (pry žadańni) luboj paźniejšaj."
 
 #~ msgid ""
-#~ "Totem is distributed in the hope that it will be useful, but WITHOUT ANY "
+#~ "Xplayer is distributed in the hope that it will be useful, but WITHOUT ANY "
 #~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
 #~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 #~ "details."
 #~ msgstr ""
-#~ "Prahrama Totem raspaŭsiudžvajecca sa spadziavańniami, što jana budzie "
+#~ "Prahrama Xplayer raspaŭsiudžvajecca sa spadziavańniami, što jana budzie "
 #~ "karysnaj, ale BIEŹ NIJAKICH HARANTYJAŬ; navat biez harantavańnia "
 #~ "PRYDATNAŚCI DA KANKRETNAHA VYKARYSTAŃNIA. Padrabiaznaści možna pračytać u "
 #~ "Ahulnaj hramadzkaj licenzii GNU (GNU GPL)."
 
 #~ msgid ""
 #~ "You should have received a copy of the GNU General Public License along "
-#~ "with Totem; if not, write to the Free Software Foundation, Inc., 59 "
+#~ "with Xplayer; if not, write to the Free Software Foundation, Inc., 59 "
 #~ "Temple Place, Suite 330, Boston, MA  02111-1307  USA"
 #~ msgstr ""
 #~ "Ty musiŭ atrymać kopiju Ahulnaj hramadzkaj licenzii GNU (GNU GPL) razam z "
-#~ "Totemam; kali ty nie atrymaŭ jaje, napišy pra heta (pa-anhielsku) pa "
+#~ "Xplayeram; kali ty nie atrymaŭ jaje, napišy pra heta (pa-anhielsku) pa "
 #~ "adrasie: Free Software Foundation, Inc., 59 Temple Place, Suite 330, "
 #~ "Boston, MA  02111-1307 USA"
 
 #~ msgid ""
-#~ "Totem contains an exception to allow the use of proprietary GStreamer "
+#~ "Xplayer contains an exception to allow the use of proprietary GStreamer "
 #~ "plugins."
-#~ msgstr "Totem dazvalaje vykarystańnie ŭłaśnickich pluginaŭ GStreamer."
+#~ msgstr "Xplayer dazvalaje vykarystańnie ŭłaśnickich pluginaŭ GStreamer."
 
 #~ msgid "None"
 #~ msgstr "Niama"
@@ -450,8 +450,8 @@ msgstr "Ličbavaja televizija"
 #~ msgid "translator-credits"
 #~ msgstr "Ihar Hračyška <ihar.hrachyshka@gmail.com>"
 
-#~ msgid "Totem Website"
-#~ msgstr "Sajt Totema"
+#~ msgid "Xplayer Website"
+#~ msgstr "Sajt Xplayera"
 
 #~ msgid "Configure Plugins"
 #~ msgstr "Kanfihuruj pluginy"
@@ -614,25 +614,25 @@ msgstr "Ličbavaja televizija"
 #~ msgstr "Uklučyć vizualnyja efekty?"
 
 #~ msgid ""
-#~ "It seems you are running Totem remotely.\n"
+#~ "It seems you are running Xplayer remotely.\n"
 #~ "Are you sure you want to enable the visual effects?"
 #~ msgstr ""
-#~ "Totem pracuje ŭ dystancyjnym režymie.\n"
+#~ "Xplayer pracuje ŭ dystancyjnym režymie.\n"
 #~ "Sapraŭdy ŭklučyć vizualnyja efekty?"
 
 #~ msgid ""
 #~ "The change of this setting will only take effect for the next movie, or "
-#~ "when Totem is restarted."
+#~ "when Xplayer is restarted."
 #~ msgstr ""
 #~ "Ty ŭbačyš źmieny hetaj nałady pry nastupnym filmie, albo kali ty "
-#~ "ŭruchomiš Totema."
+#~ "ŭruchomiš Xplayera."
 
 #~ msgid ""
 #~ "Changing the visuals effect type will require a restart to take effect."
 #~ msgstr "Ty ŭbačyš źmieny typu vizualnych efektaŭ tolki paśla ŭruchamleńnia."
 
 #~ msgid ""
-#~ "The change of audio output type will only take effect when Totem is "
+#~ "The change of audio output type will only take effect when Xplayer is "
 #~ "restarted."
 #~ msgstr "Ty ŭbačyš źmieny typu vyjścia huku tolki paśla ŭruchomieńnia."
 
@@ -798,38 +798,38 @@ msgstr "Ličbavaja televizija"
 #~ msgid "Paused"
 #~ msgstr "Prypynieny"
 
-#~ msgid "Totem could not play '%s'."
-#~ msgstr "Totem nia zmoh adčynić '%s'."
+#~ msgid "Xplayer could not play '%s'."
+#~ msgstr "Xplayer nia zmoh adčynić '%s'."
 
 #~ msgid ""
-#~ "Totem cannot play this type of media (%s) because it does not have the "
+#~ "Xplayer cannot play this type of media (%s) because it does not have the "
 #~ "appropriate plugins to be able to read from the disc."
 #~ msgstr ""
-#~ "Totem nia moža hrać fajły takoha typu (%s), bo nie staje nieabchodnych "
+#~ "Xplayer nia moža hrać fajły takoha typu (%s), bo nie staje nieabchodnych "
 #~ "pluginaŭ, kab mahčy pračytać z dysku."
 
 #~ msgid ""
-#~ "Totem cannot play this type of media (%s) because you do not have the "
+#~ "Xplayer cannot play this type of media (%s) because you do not have the "
 #~ "appropriate plugins to handle it."
 #~ msgstr ""
-#~ "Totem nia moža hrać fajły takoha typu (%s), bo nie staje nieabchodnych "
+#~ "Xplayer nia moža hrać fajły takoha typu (%s), bo nie staje nieabchodnych "
 #~ "pluginaŭ."
 
 #~ msgid ""
-#~ "Please install the necessary plugins and restart Totem to be able to play "
+#~ "Please install the necessary plugins and restart Xplayer to be able to play "
 #~ "this media."
 #~ msgstr ""
-#~ "Zainstaluj nieabchodnyja pluginy i restartuj Totem, kab jon zmoh hrać "
+#~ "Zainstaluj nieabchodnyja pluginy i restartuj Xplayer, kab jon zmoh hrać "
 #~ "takija fajły."
 
 #~ msgid "More information about media plugins"
 #~ msgstr "Bolš źviestak ab medyjapluginach"
 
 #~ msgid ""
-#~ "Totem could not play this media (%s) although a plugin is present to "
+#~ "Xplayer could not play this media (%s) although a plugin is present to "
 #~ "handle it."
 #~ msgstr ""
-#~ "Totem nia moža hrać taki fajł (%s), choć užo zainstalavany plugin, jaki "
+#~ "Xplayer nia moža hrać taki fajł (%s), choć užo zainstalavany plugin, jaki "
 #~ "dapamahaje jamu ŭ hetym."
 
 # FIXME: Z hetym drive treba niešta rabić... Zašmat pryładaŭ vychodzić.
@@ -839,14 +839,14 @@ msgstr "Ličbavaja televizija"
 #~ msgstr ""
 #~ "Pravier najaŭnaść dysku ŭ pryładzie i pravilnaść naładaŭ hetaj pryłady."
 
-#~ msgid "Totem was not able to play this disc."
-#~ msgstr "Totem nia moža hrać taki dysk."
+#~ msgid "Xplayer was not able to play this disc."
+#~ msgstr "Xplayer nia moža hrać taki dysk."
 
 #~ msgid "No reason."
 #~ msgstr "Biez pryčyny."
 
-#~ msgid "Totem does not support playback of Audio CDs"
-#~ msgstr "Totem nie padtrymvaje vykanańnia aŭdyjo CD"
+#~ msgid "Xplayer does not support playback of Audio CDs"
+#~ msgstr "Xplayer nie padtrymvaje vykanańnia aŭdyjo CD"
 
 #~ msgid ""
 #~ "Please consider using a music player or a CD extractor to play this CD"
@@ -854,8 +854,8 @@ msgstr "Ličbavaja televizija"
 #~ "Kali łaska, kab pasłuchać hety CD, vykarystaj muzyčny player ci skapijuj "
 #~ "CD"
 
-#~ msgid "Totem could not get a screenshot of that film."
-#~ msgstr "Totem nia moža zrabić zdymak ekranu ŭ vypadku hetaha filmu."
+#~ msgid "Xplayer could not get a screenshot of that film."
+#~ msgstr "Xplayer nia moža zrabić zdymak ekranu ŭ vypadku hetaha filmu."
 
 #~ msgid "This is not supposed to happen; please file a bug report."
 #~ msgstr ""
@@ -864,8 +864,8 @@ msgstr "Ličbavaja televizija"
 #~ msgid "No error message"
 #~ msgstr "Niama tekstu pamyłki"
 
-#~ msgid "Totem could not display the help contents."
-#~ msgstr "Totem nia moža pakazać źmiest dapamohi."
+#~ msgid "Xplayer could not display the help contents."
+#~ msgstr "Xplayer nia moža pakazać źmiest dapamohi."
 
 #~ msgid "An error occurred"
 #~ msgstr "Adbyłasia pamyłka"
@@ -879,23 +879,23 @@ msgstr "Ličbavaja televizija"
 #~ msgid "Next Chapter/Movie"
 #~ msgstr "Nastupny raździeł/film"
 
-#~ msgid "Totem could not startup."
-#~ msgstr "Niemahčyma ŭruchomić Totem."
+#~ msgid "Xplayer could not startup."
+#~ msgstr "Niemahčyma ŭruchomić Xplayer."
 
 #~ msgid "Could not initialize the thread-safe libraries."
 #~ msgstr "Niemahčyma inicyjavać biblijateku, biaśpiečnuju dla niciaŭ."
 
-#~ msgid "Verify your system installation. Totem will now exit."
-#~ msgstr "Pravier instalacyju systemy. Totem zakančvaje pracu."
+#~ msgid "Verify your system installation. Xplayer will now exit."
+#~ msgstr "Pravier instalacyju systemy. Xplayer zakančvaje pracu."
 
 #~ msgid "- Play movies and songs"
 #~ msgstr "– Hraje filmy j pieśni"
 
-#~ msgid "Totem could not parse the command-line options"
-#~ msgstr "Totem nia zmoh razabrać opcyi zahadnaha radka"
+#~ msgid "Xplayer could not parse the command-line options"
+#~ msgstr "Xplayer nia zmoh razabrać opcyi zahadnaha radka"
 
-#~ msgid "Totem could not initialize the configuration engine."
-#~ msgstr "Totem nia zmoh inicyjavać kiravańnie naładami."
+#~ msgid "Xplayer could not initialize the configuration engine."
+#~ msgstr "Xplayer nia zmoh inicyjavać kiravańnie naładami."
 
 #~ msgid "Make sure that GNOME is properly installed."
 #~ msgstr "Pravier pravilnaść instalacyi GNOME."
@@ -1200,17 +1200,17 @@ msgstr "Ličbavaja televizija"
 #~ msgid "Bemused"
 #~ msgstr "Bemused"
 
-#~ msgid "Control Totem through a mobile phone with a Bemused client"
-#~ msgstr "Kiruj Totemam praz mabilny telefon z dapamohaj klijenta Bemused"
+#~ msgid "Control Xplayer through a mobile phone with a Bemused client"
+#~ msgstr "Kiruj Xplayeram praz mabilny telefon z dapamohaj klijenta Bemused"
 
 #~ msgid "Untitled %d"
 #~ msgstr "Nienazvany %d"
 
-#~ msgid "Totem Bemused Server"
-#~ msgstr "Totem Bemused Server"
+#~ msgid "Xplayer Bemused Server"
+#~ msgstr "Xplayer Bemused Server"
 
-#~ msgid "Totem Bemused Server version 1.0"
-#~ msgstr "Totem Bemused Server versii 1.0"
+#~ msgid "Xplayer Bemused Server version 1.0"
+#~ msgstr "Xplayer Bemused Server versii 1.0"
 
 #~ msgid "Instant Messenger status"
 #~ msgstr "Stan klijenta imhniennych paviedamleńniaŭ"
@@ -1325,8 +1325,8 @@ msgstr "Ličbavaja televizija"
 #~ msgid "No URI to play"
 #~ msgstr "Niama URI, kab hrać"
 
-#~ msgid "Totem could not play '%s'"
-#~ msgstr "Totem nia moža hrać '%s'"
+#~ msgid "Xplayer could not play '%s'"
+#~ msgstr "Xplayer nia moža hrać '%s'"
 
 #~ msgid "Opening %s"
 #~ msgstr "Adčyniajecca %s"
@@ -1337,11 +1337,11 @@ msgstr "Ličbavaja televizija"
 #~ msgid "Browser Plugin using %s"
 #~ msgstr "Plugin hartača na bazie %s"
 
-#~ msgid "Totem Browser Plugin"
-#~ msgstr "Plugin hartača na bazie Totema"
+#~ msgid "Xplayer Browser Plugin"
+#~ msgstr "Plugin hartača na bazie Xplayera"
 
-#~ msgid "The Totem plugin could not be started."
-#~ msgstr "Niemahčyma było ŭruchomić plugin Totema."
+#~ msgid "The Xplayer plugin could not be started."
+#~ msgstr "Niemahčyma było ŭruchomić plugin Xplayera."
 
 #~ msgid "No playlist or playlist empty"
 #~ msgstr "Niama śpisu albo śpis pusty"
@@ -1349,8 +1349,8 @@ msgstr "Ličbavaja televizija"
 #~ msgid "Could not initialise the thread-safe libraries."
 #~ msgstr "Niemahčyma inicyjavać biblijateki, biaśpiečnyja dla niciaŭ."
 
-#~ msgid "Verify your system installation. The Totem plugin will now exit."
-#~ msgstr "Pravier instalacyju systemy. Plugin Totema zakančvaje pracu."
+#~ msgid "Verify your system installation. The Xplayer plugin will now exit."
+#~ msgstr "Pravier instalacyju systemy. Plugin Xplayera zakančvaje pracu."
 
 #~ msgid "Please enter a search."
 #~ msgstr "Uviadzi, što šukać."
@@ -1548,5 +1548,5 @@ msgstr "Ličbavaja televizija"
 #~ msgid "Copy the location to the clipboard"
 #~ msgstr "Skapijuj pałažeńnie ŭ bufer abmienu"
 
-#~ msgid "Totem could not eject the optical media."
-#~ msgstr "Totem nia zmoh vysunuć aptyčny nośbit."
+#~ msgid "Xplayer could not eject the optical media."
+#~ msgstr "Xplayer nia zmoh vysunuć aptyčny nośbit."

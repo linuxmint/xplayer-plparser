@@ -1,15 +1,15 @@
-# translation of totem-pl-parser.HEAD.mr.po to marathi
-# Marathi translation for totem
+# translation of xplayer-pl-parser.HEAD.mr.po to marathi
+# Marathi translation for xplayer
 # Copyright (c) (c) 2006 Canonical Ltd, and Rosetta Contributors 2006
-# This file is distributed under the same license as the totem package.
+# This file is distributed under the same license as the xplayer package.
 #
 # Onkar Shinde <onkarshinde@gmail.com>, 2006.
 # Rahul Bhalerao <b.rahul.pm@gmail.com>, 2006.
 # Sandeep Shedmake <sandeep.shedmake@gmail.com>, 2008, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: totem-pl-parser.HEAD.mr\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=totem&amp;component=playlist parser\n"
+"Project-Id-Version: xplayer-pl-parser.HEAD.mr\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&amp;component=playlist parser\n"
 "POT-Creation-Date: 2008-11-27 17:18+0000\n"
 "PO-Revision-Date: 2009-03-14 16:59+0530\n"
 "Last-Translator: Sandeep Shedmake <sandeep.shedmake@gmail.com>\n"
@@ -20,34 +20,34 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../plparse/totem-disc.c:319 ../plparse/totem-disc.c:460
+#: ../plparse/xplayer-disc.c:319 ../plparse/xplayer-disc.c:460
 #, c-format
 msgid "Failed to mount %s."
 msgstr "%s माऊन्ट करण्यास अपयशी."
 
-#: ../plparse/totem-disc.c:349
+#: ../plparse/xplayer-disc.c:349
 #, c-format
 msgid "No media in drive for device '%s'."
 msgstr "साधन '%s' करीता ड्राइव मध्ये मिडीया आढळली नाही."
 
-#: ../plparse/totem-disc.c:403
+#: ../plparse/xplayer-disc.c:403
 #, c-format
 msgid "Please check that a disc is present in the drive."
 msgstr "कृपया ड्राइव मध्ये डीस्क आहे याची खात्री करा."
 
-#: ../plparse/totem-disc.c:843
+#: ../plparse/xplayer-disc.c:843
 msgid "Audio CD"
 msgstr "ऑडीओ CD"
 
-#: ../plparse/totem-disc.c:845
+#: ../plparse/xplayer-disc.c:845
 msgid "Video CD"
 msgstr "व्हिडीओ CD"
 
-#: ../plparse/totem-disc.c:847
+#: ../plparse/xplayer-disc.c:847
 msgid "DVD"
 msgstr "2DVD"
 
-#: ../plparse/totem-disc.c:849
+#: ../plparse/xplayer-disc.c:849
 msgid "Digital Television"
 msgstr "डिजीटल टेलीवीशन"
 

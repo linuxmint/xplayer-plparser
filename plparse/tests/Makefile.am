@@ -11,8 +11,8 @@ TEST_PROGS			+= parser
 parser_SOURCES			 = parser.c
 parser_LDADD			 = \
 				$(progs_ldadd)		\
-				$(TOTEM_PLPARSER_LIBS)	\
-				../libtotem-plparser.la
+				$(XPLAYER_PLPARSER_LIBS)	\
+				../libxplayer-plparser.la
 parser_CPPFLAGS			 = \
 				-I$(top_srcdir)			\
 				-I$(top_srcdir)/lib		\
@@ -22,7 +22,7 @@ parser_CPPFLAGS			 = \
 				$(INCLUDES)			\
 				$(AM_CPPFLAGS)
 parser_CFLAGS			 = \
-				$(TOTEM_PLPARSER_CFLAGS)\
+				$(XPLAYER_PLPARSER_CFLAGS)\
 				$(HAL_CFLAGS)		\
 				$(DBUS_CFLAGS)		\
 				$(WARN_CFLAGS)		\
@@ -32,15 +32,15 @@ TEST_PROGS			+= disc
 disc_SOURCES			 = disc.c
 disc_LDADD			 = \
 				$(progs_ldadd)		\
-				../libtotem-plparser.la	\
-				$(TOTEM_PLPARSER_LIBS)
+				../libxplayer-plparser.la	\
+				$(XPLAYER_PLPARSER_LIBS)
 disc_CPPFLAGS			 = \
 				$(common_defines)	\
 				$(INCLUDES)		\
 				$(AM_CPPFLAGS)
 disc_CFLAGS			 = \
 				$(WARN_CFLAGS)		\
-				$(TOTEM_PLPARSER_CFLAGS)\
+				$(XPLAYER_PLPARSER_CFLAGS)\
 				$(AM_CFLAGS)
 disc_LDFLAGS			 = $(AM_LDFLAGS)
 

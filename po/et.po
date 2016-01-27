@@ -1,9 +1,9 @@
-# Totem'i esitusnimekirja analüüsija eesti keele tõlge.
-# Estonian translation of Totem Playlist Parser.
+# Xplayer'i esitusnimekirja analüüsija eesti keele tõlge.
+# Estonian translation of Xplayer Playlist Parser.
 #
 # Copyright (C) 2002, 2005, 2006 The Free Software Foundation
 # Copyright (C) 2007-2009 The GNOME Project.
-# This file is distributed under the same license as the totem package.
+# This file is distributed under the same license as the xplayer package.
 #
 # Ilmar Kerm <ikerm@hot.ee>, 2002.
 # Ivar Smolin <okul@linux.ee>, 2005-2009.
@@ -11,9 +11,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: totem-pl-parser HEAD\n"
+"Project-Id-Version: xplayer-pl-parser HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=totem&component=playlist parser\n"
+"product=xplayer&component=playlist parser\n"
 "POT-Creation-Date: 2010-12-14 20:34+0000\n"
 "PO-Revision-Date: 2009-01-23 22:14+0200\n"
 "Last-Translator: Ivar Smolin <okul@linux.ee>\n"

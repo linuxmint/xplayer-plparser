@@ -1,13 +1,13 @@
-# Friulian translation for totem-pl-parser.
-# Copyright (C) 2012 totem-pl-parser's COPYRIGHT HOLDER
-# This file is distributed under the same license as the totem-pl-parser package.
+# Friulian translation for xplayer-pl-parser.
+# Copyright (C) 2012 xplayer-pl-parser's COPYRIGHT HOLDER
+# This file is distributed under the same license as the xplayer-pl-parser package.
 # TmTFx <f.t.public@gmail.com>, 2012.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: totem-pl-parser master\n"
+"Project-Id-Version: xplayer-pl-parser master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=totem&keywords=I18N+L10N&component=playlist parser\n"
+"product=xplayer&keywords=I18N+L10N&component=playlist parser\n"
 "POT-Creation-Date: 2014-03-05 23:45+0000\n"
 "PO-Revision-Date: 2014-03-06 12:04+0100\n"
 "Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
@@ -18,38 +18,38 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#: ../plparse/totem-disc.c:276 ../plparse/totem-disc.c:289
-#: ../plparse/totem-disc.c:533
+#: ../plparse/xplayer-disc.c:276 ../plparse/xplayer-disc.c:289
+#: ../plparse/xplayer-disc.c:533
 #, c-format
 msgid "Failed to mount %s."
 msgstr "Falît a montâ %s."
 
-#: ../plparse/totem-disc.c:418
+#: ../plparse/xplayer-disc.c:418
 #, c-format
 msgid "No media in drive for device '%s'."
 msgstr "Nissun supuart tal argagn '%s'."
 
-#: ../plparse/totem-disc.c:476
+#: ../plparse/xplayer-disc.c:476
 #, c-format
 msgid "Please check that a disc is present in the drive."
 msgstr "Par plasê, controle che un disc al sedi inserît."
 
-#: ../plparse/totem-disc.c:947
+#: ../plparse/xplayer-disc.c:947
 msgid "Audio CD"
 msgstr "CD Audio"
 
-#: ../plparse/totem-disc.c:949
+#: ../plparse/xplayer-disc.c:949
 msgid "Video CD"
 msgstr "CD Video"
 
-#: ../plparse/totem-disc.c:951
+#: ../plparse/xplayer-disc.c:951
 msgid "DVD"
 msgstr "DVD"
 
-#: ../plparse/totem-disc.c:953
+#: ../plparse/xplayer-disc.c:953
 msgid "Digital Television"
 msgstr "Television Digjitâl"
 
-#: ../plparse/totem-disc.c:955
+#: ../plparse/xplayer-disc.c:955
 msgid "Blu-ray"
 msgstr "Blu-ray"

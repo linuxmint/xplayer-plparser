@@ -4,7 +4,7 @@
 srcdir=`dirname $0`
 test -z "$srcdir" && srcdir=.
 
-PKG_NAME="totem-pl-parser"
+PKG_NAME="xplayer-pl-parser"
 REQUIRED_M4MACROS=introspection.m4
 
 (test -f $srcdir/configure.ac) || {

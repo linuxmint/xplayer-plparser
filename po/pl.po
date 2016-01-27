@@ -15,7 +15,7 @@
 # Aviary.pl <gnomepl@aviary.pl>, 2007-2014.
 msgid ""
 msgstr ""
-"Project-Id-Version: totem-pl-parser\n"
+"Project-Id-Version: xplayer-pl-parser\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-21 19:23+0100\n"
 "PO-Revision-Date: 2014-01-21 19:24+0100\n"
@@ -30,38 +30,38 @@ msgstr ""
 "X-Poedit-Language: Polish\n"
 "X-Poedit-Country: Poland\n"
 
-#: ../plparse/totem-disc.c:276 ../plparse/totem-disc.c:289
-#: ../plparse/totem-disc.c:533
+#: ../plparse/xplayer-disc.c:276 ../plparse/xplayer-disc.c:289
+#: ../plparse/xplayer-disc.c:533
 #, c-format
 msgid "Failed to mount %s."
 msgstr "Zamontowanie %s się nie powiodło."
 
-#: ../plparse/totem-disc.c:418
+#: ../plparse/xplayer-disc.c:418
 #, c-format
 msgid "No media in drive for device '%s'."
 msgstr "Brak nośnika w napędzie dla urządzenia \"%s\"."
 
-#: ../plparse/totem-disc.c:476
+#: ../plparse/xplayer-disc.c:476
 #, c-format
 msgid "Please check that a disc is present in the drive."
 msgstr "Proszę sprawdzić, czy płyta znajduje się w napędzie."
 
-#: ../plparse/totem-disc.c:947
+#: ../plparse/xplayer-disc.c:947
 msgid "Audio CD"
 msgstr "CD-Audio"
 
-#: ../plparse/totem-disc.c:949
+#: ../plparse/xplayer-disc.c:949
 msgid "Video CD"
 msgstr "Video CD"
 
-#: ../plparse/totem-disc.c:951
+#: ../plparse/xplayer-disc.c:951
 msgid "DVD"
 msgstr "DVD"
 
-#: ../plparse/totem-disc.c:953
+#: ../plparse/xplayer-disc.c:953
 msgid "Digital Television"
 msgstr "Telewizja cyfrowa"
 
-#: ../plparse/totem-disc.c:955
+#: ../plparse/xplayer-disc.c:955
 msgid "Blu-ray"
 msgstr "Blu-ray"

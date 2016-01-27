@@ -1,10 +1,10 @@
-# Totem Bahasa Melayu (ms) .. menonton carekawawa
+# Xplayer Bahasa Melayu (ms) .. menonton carekawawa
 # Jika takut risiko, Jangan bicara tentang Perjuangan
 # Hasbullah Bin Pit (sebol) <sebol@ikhlas.com>, 2002
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Totem HEAD\n"
+"Project-Id-Version: Xplayer HEAD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-10-18 00:41+0800\n"
 "PO-Revision-Date: 2005-03-02 19:38+0800\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: data/playlist.glade.h:1 src/totem-playlist.c:1418
+#: data/playlist.glade.h:1 src/xplayer-playlist.c:1418
 msgid "Playlist"
 msgstr "Senaraimain"
 
@@ -39,7 +39,7 @@ msgstr "_Salin Lokasi"
 msgid "_Save..."
 msgstr "_Simpan..."
 
-#: data/properties.glade.h:1 data/screenshot.glade.h:1 data/totem.glade.h:1
+#: data/properties.glade.h:1 data/screenshot.glade.h:1 data/xplayer.glade.h:1
 msgid "    "
 msgstr "    "
 
@@ -53,7 +53,7 @@ msgid "0 kbps"
 msgstr "0 kbps"
 
 #. 0 seconds
-#: data/properties.glade.h:4 data/totem.glade.h:2 src/video-utils.c:344
+#: data/properties.glade.h:4 data/xplayer.glade.h:2 src/video-utils.c:344
 msgid "0 seconds"
 msgstr "0 saat"
 
@@ -107,7 +107,7 @@ msgstr "Kadar kerangka:"
 msgid "N/A"
 msgstr "TIADA"
 
-#: data/properties.glade.h:16 src/totem.c:2090
+#: data/properties.glade.h:16 src/xplayer.c:2090
 msgid "Properties"
 msgstr "Ciri-ciri"
 
@@ -139,7 +139,7 @@ msgstr "*"
 msgid "<b>Preview</b>"
 msgstr "<b>Prebiu</b>"
 
-#: data/screenshot.glade.h:4 src/totem-screenshot.c:268
+#: data/screenshot.glade.h:4 src/xplayer-screenshot.c:268
 msgid "Save Screenshot"
 msgstr "Simpan Cekupanskrin"
 
@@ -155,657 +155,657 @@ msgstr "Simpan cekupanskrin ke _desktop"
 msgid "Save screenshot to _file:"
 msgstr "Simpan cekupanskrin ke _fail:"
 
-#: data/totem.desktop.in.in.h:1
+#: data/xplayer.desktop.in.in.h:1
 msgid "Play movies and songs"
 msgstr "Mainkan cereka dan lagu"
 
 #. Title
-#: data/totem.desktop.in.in.h:2 data/totem.glade.h:97 src/totem.c:719
-#: src/totem.c:3775
-msgid "Totem Movie Player"
-msgstr "Pemain Cereka Totem"
+#: data/xplayer.desktop.in.in.h:2 data/xplayer.glade.h:97 src/xplayer.c:719
+#: src/xplayer.c:3775
+msgid "Xplayer Movie Player"
+msgstr "Pemain Cereka Xplayer"
 
-#: data/totem.glade.h:3
+#: data/xplayer.glade.h:3
 msgid "1.5 Mbps T1/Intranet/LAN"
 msgstr "1.5 Mbps T1/Intranet/LAN"
 
-#: data/totem.glade.h:4
+#: data/xplayer.glade.h:4
 msgid "112 Kbps Dual ISDN/DSL"
 msgstr "112 Kbps Dwi ISDN/DSL"
 
-#: data/totem.glade.h:5
+#: data/xplayer.glade.h:5
 msgid "14.4 Kbps Modem"
 msgstr "14.4 Kbps Modem"
 
-#: data/totem.glade.h:6
+#: data/xplayer.glade.h:6
 msgid "16:9 (Widescreen)"
 msgstr "16:9 (Skrinlebar)"
 
-#: data/totem.glade.h:7
+#: data/xplayer.glade.h:7
 msgid "19.2 Kbps Modem"
 msgstr "19.2 Kbps Modem"
 
-#: data/totem.glade.h:8
+#: data/xplayer.glade.h:8
 msgid "2.11:1 (DVB)"
 msgstr "2.11:1 (DVB)"
 
-#: data/totem.glade.h:9
+#: data/xplayer.glade.h:9
 msgid "256 Kbps DSL/Cable"
 msgstr "256 Kbps DSL/Kabel"
 
-#: data/totem.glade.h:10
+#: data/xplayer.glade.h:10
 msgid "28.8 Kbps Modem"
 msgstr "28.8 Kbps Modem"
 
-#: data/totem.glade.h:11
+#: data/xplayer.glade.h:11
 msgid "33.6 Kbps Modem"
 msgstr "33.6 Kbps Modem"
 
-#: data/totem.glade.h:12
+#: data/xplayer.glade.h:12
 msgid "34.4 Kbps Modem"
 msgstr "34.4 Kbps Modem"
 
-#: data/totem.glade.h:13
+#: data/xplayer.glade.h:13
 msgid "384 Kbps DSL/Cable"
 msgstr "384 Kbps DSL/Kabel"
 
-#: data/totem.glade.h:14
+#: data/xplayer.glade.h:14
 msgid "4-channel"
 msgstr "4-saluran"
 
-#: data/totem.glade.h:15
+#: data/xplayer.glade.h:15
 msgid "4:3 (TV)"
 msgstr "4:3 (TV)"
 
-#: data/totem.glade.h:16
+#: data/xplayer.glade.h:16
 msgid "5.0-channel"
 msgstr "5.0-saluran"
 
-#: data/totem.glade.h:17
+#: data/xplayer.glade.h:17
 msgid "5.1-channel"
 msgstr "5.1-saluran"
 
-#: data/totem.glade.h:18
+#: data/xplayer.glade.h:18
 msgid "512 Kbps DSL/Cable"
 msgstr "512 Kbps DSL/Kabel"
 
-#: data/totem.glade.h:19
+#: data/xplayer.glade.h:19
 msgid "56 Kbps Modem/ISDN"
 msgstr "56 Kbps Modem/ISDN"
 
-#: data/totem.glade.h:20
+#: data/xplayer.glade.h:20
 msgid "<b>Audio Output</b>"
 msgstr "<b>Output Audio</b>"
 
-#: data/totem.glade.h:21
+#: data/xplayer.glade.h:21
 msgid "<b>Color balance</b>"
 msgstr "<b>Imbangan warna</b>"
 
-#: data/totem.glade.h:22
+#: data/xplayer.glade.h:22
 msgid "<b>Display</b>"
 msgstr "<b>Papar</b>"
 
-#: data/totem.glade.h:23
+#: data/xplayer.glade.h:23
 msgid "<b>Networking</b>"
 msgstr "<b>Rangkaian</b>"
 
-#: data/totem.glade.h:24
+#: data/xplayer.glade.h:24
 msgid "<b>Optical Device</b>"
 msgstr "<b>Peranti Optikal</b>"
 
-#: data/totem.glade.h:25
+#: data/xplayer.glade.h:25
 msgid "<b>Proprietary Plugins</b>"
 msgstr "<b>Plugin Proprietari</b>"
 
-#: data/totem.glade.h:26
+#: data/xplayer.glade.h:26
 msgid "<b>TV-Out</b>"
 msgstr "<b>TV-Out</b>"
 
-#: data/totem.glade.h:27
+#: data/xplayer.glade.h:27
 msgid "<b>Visual Effects</b>"
 msgstr "<b>Kesan Visual</b>"
 
-#: data/totem.glade.h:28
+#: data/xplayer.glade.h:28
 msgid "AC3 Passthrough"
 msgstr "Perentasan  AC3"
 
-#: data/totem.glade.h:29
+#: data/xplayer.glade.h:29
 msgid "A_udio Menu"
 msgstr "Menu A_udio"
 
-#: data/totem.glade.h:30
+#: data/xplayer.glade.h:30
 msgid "Always on _Top"
 msgstr "Sentiasa di _Atas"
 
-#: data/totem.glade.h:31
+#: data/xplayer.glade.h:31
 msgid "Always on top"
 msgstr "Sentiasa di atas"
 
-#: data/totem.glade.h:32
+#: data/xplayer.glade.h:32
 msgid "Audio"
 msgstr "Audio"
 
-#: data/totem.glade.h:33 src/totem.c:2991 src/totem.c:3012
+#: data/xplayer.glade.h:33 src/xplayer.c:2991 src/xplayer.c:3012
 msgid "Auto"
 msgstr "Auto"
 
-#: data/totem.glade.h:34
+#: data/xplayer.glade.h:34
 msgid "Automatically _resize the window when a new video is loaded"
 msgstr "Automatik _ubahsaiz tetingkap bila video baru dimuatkan"
 
-#: data/totem.glade.h:35
+#: data/xplayer.glade.h:35
 msgid "Co_ntrast:"
 msgstr "_Kontras:"
 
-#: data/totem.glade.h:36
+#: data/xplayer.glade.h:36
 msgid "Connection _speed:"
 msgstr "Kelajuan Sambungan:"
 
-#: data/totem.glade.h:37
+#: data/xplayer.glade.h:37
 msgid "Deinterlace"
 msgstr "Deinterlace"
 
-#: data/totem.glade.h:38
+#: data/xplayer.glade.h:38
 msgid "Display"
 msgstr "Papar"
 
-#: data/totem.glade.h:39
+#: data/xplayer.glade.h:39
 msgid "Exit Fullscreen"
 msgstr "Keluar Skrinpenuh"
 
-#: data/totem.glade.h:40
+#: data/xplayer.glade.h:40
 msgid "Extra Large"
 msgstr "Sangat Besar"
 
-#: data/totem.glade.h:41
+#: data/xplayer.glade.h:41
 msgid "File name"
 msgstr "Nama fail"
 
-#: data/totem.glade.h:42
+#: data/xplayer.glade.h:42
 msgid "General"
 msgstr "Umum"
 
-#: data/totem.glade.h:43
+#: data/xplayer.glade.h:43
 msgid "Go to the DVD menu"
 msgstr "Pergi ke menu DVD"
 
-#: data/totem.glade.h:44
+#: data/xplayer.glade.h:44
 msgid "Go to the angle menu"
 msgstr "Pergi ke menu sudut"
 
-#: data/totem.glade.h:45
+#: data/xplayer.glade.h:45
 msgid "Go to the audio menu"
 msgstr "Pergi ke menu audio"
 
-#: data/totem.glade.h:46
+#: data/xplayer.glade.h:46
 msgid "Go to the chapter menu"
 msgstr "Pergi ke menu bab"
 
-#: data/totem.glade.h:47
+#: data/xplayer.glade.h:47
 msgid "Go to the title menu"
 msgstr "Pergi ke menu tajuk"
 
-#: data/totem.glade.h:48
+#: data/xplayer.glade.h:48
 msgid "Help contents"
 msgstr "Kandungan bantuan"
 
-#: data/totem.glade.h:49
+#: data/xplayer.glade.h:49
 msgid "Intranet/LAN"
 msgstr "Intranet/LAN"
 
-#: data/totem.glade.h:50
+#: data/xplayer.glade.h:50
 msgid "Languages"
 msgstr "Bahasa"
 
-#: data/totem.glade.h:51
+#: data/xplayer.glade.h:51
 msgid "Large"
 msgstr "Besar"
 
-#: data/totem.glade.h:52 src/totem.c:85
+#: data/xplayer.glade.h:52 src/xplayer.c:85
 msgid "Next"
 msgstr "Seterusnya"
 
-#: data/totem.glade.h:53
+#: data/xplayer.glade.h:53
 msgid "Next chapter or movie"
 msgstr "Cereka atau bab berikutnya"
 
-#: data/totem.glade.h:54
+#: data/xplayer.glade.h:54
 msgid "No Language Selection Available"
 msgstr "Tiada Pemilihan Bahasa yang Ada"
 
-#: data/totem.glade.h:55
+#: data/xplayer.glade.h:55
 msgid "No subtitles selection available"
 msgstr "Tiada pemilihan subtajuk yang ada"
 
-#: data/totem.glade.h:56
+#: data/xplayer.glade.h:56
 msgid "Normal"
 msgstr "Normal"
 
-#: data/totem.glade.h:57
+#: data/xplayer.glade.h:57
 msgid "Open _Location..."
 msgstr "Buka _Lokasi ..."
 
-#: data/totem.glade.h:58
+#: data/xplayer.glade.h:58
 msgid "Open a non-local file"
 msgstr "Buka fail bukan-lokal"
 
-#: data/totem.glade.h:59
+#: data/xplayer.glade.h:59
 msgid "Play / Pa_use"
 msgstr "Play / Pa_use"
 
-#: data/totem.glade.h:60
+#: data/xplayer.glade.h:60
 msgid "Play _Disc"
 msgstr "Mainkan _Cakera"
 
-#: data/totem.glade.h:61
+#: data/xplayer.glade.h:61
 msgid "Play a Video or Audio Disc"
 msgstr "Mainkan CD Video atau Audio"
 
-#: data/totem.glade.h:62
+#: data/xplayer.glade.h:62
 msgid "Play or pause the movie"
 msgstr "Main atau kakukan careka"
 
-#: data/totem.glade.h:63 src/totem.c:84
+#: data/xplayer.glade.h:63 src/xplayer.c:84
 msgid "Play/Pause"
 msgstr "Main/Kaku"
 
-#: data/totem.glade.h:64 src/totem.c:86
+#: data/xplayer.glade.h:64 src/xplayer.c:86
 msgid "Previous"
 msgstr "Terdahulu"
 
-#: data/totem.glade.h:65
+#: data/xplayer.glade.h:65
 msgid "Previous chapter or movie"
 msgstr "Cereka dan bab  terdahulu"
 
-#: data/totem.glade.h:66
+#: data/xplayer.glade.h:66
 msgid "S_ubtitles"
 msgstr "Sari _kata"
 
-#: data/totem.glade.h:67
+#: data/xplayer.glade.h:67
 msgid "Sat_uration:"
 msgstr "Ke_tepuan:"
 
-#: data/totem.glade.h:68
+#: data/xplayer.glade.h:68
 msgid "Set the aspect ratio"
 msgstr "Tetapkan nisbah aspek"
 
-#: data/totem.glade.h:69
+#: data/xplayer.glade.h:69
 msgid "Set the repeat mode"
 msgstr "tetapkan mod ulangan"
 
-#: data/totem.glade.h:70
+#: data/xplayer.glade.h:70
 msgid "Set the shuffle mode"
 msgstr "Tetapkan mod kocok"
 
-#: data/totem.glade.h:71
+#: data/xplayer.glade.h:71
 msgid "Sets 16:9 (Anamorphic) aspect ratio"
 msgstr "Tetapkan nisbah aspek 16:9 (Anamorfik)"
 
-#: data/totem.glade.h:72
+#: data/xplayer.glade.h:72
 msgid "Sets 2.11:1 (DVB) aspect ratio"
 msgstr "Tetapkan nisbah aspek 2.11:1 (DVB)"
 
-#: data/totem.glade.h:73
+#: data/xplayer.glade.h:73
 msgid "Sets 4:3 (TV) aspect ratio"
 msgstr "Togol nisbah aspek 4:3 (TV)"
 
-#: data/totem.glade.h:74
+#: data/xplayer.glade.h:74
 msgid "Sets automatic aspect ratio"
 msgstr "Tetapkan nisbah aspek automatik"
 
-#: data/totem.glade.h:75
+#: data/xplayer.glade.h:75
 msgid "Sets square aspect ratio"
 msgstr "Tetapkan nisbah aspek segiempat sama"
 
-#: data/totem.glade.h:76
+#: data/xplayer.glade.h:76
 msgid "Show _Controls"
 msgstr "Papar _Kawalan"
 
-#: data/totem.glade.h:77
+#: data/xplayer.glade.h:77
 msgid "Show _visual effects when an audio file is played"
 msgstr "Papar kesan _visual bila fail audio dimainkan"
 
-#: data/totem.glade.h:78
+#: data/xplayer.glade.h:78
 msgid "Show controls"
 msgstr "Papar kawalan"
 
-#: data/totem.glade.h:79
+#: data/xplayer.glade.h:79
 msgid "Show or hide the playlist"
 msgstr "Papar atau sorok senaraimain"
 
-#: data/totem.glade.h:80
+#: data/xplayer.glade.h:80
 msgid "Show/Hide Playlist"
 msgstr "Papar/Sorok Senaraimain"
 
-#: data/totem.glade.h:81
+#: data/xplayer.glade.h:81
 msgid "Shuff_le Mode"
 msgstr "Mod _Kocok"
 
-#: data/totem.glade.h:82
+#: data/xplayer.glade.h:82
 msgid "Skip _Backwards"
 msgstr "Langkah Meng_undur"
 
-#: data/totem.glade.h:83
+#: data/xplayer.glade.h:83
 msgid "Skip _Forward"
 msgstr "Langkah _Maju"
 
-#: data/totem.glade.h:84
+#: data/xplayer.glade.h:84
 msgid "Skip backwards"
 msgstr "Langkah mengundur"
 
-#: data/totem.glade.h:85
+#: data/xplayer.glade.h:85
 msgid "Skip forward"
 msgstr "Langkah maju"
 
-#: data/totem.glade.h:86
+#: data/xplayer.glade.h:86
 msgid "Skip to"
 msgstr "Langkah ke"
 
-#: data/totem.glade.h:87
+#: data/xplayer.glade.h:87
 msgid "Skip to a specific time"
 msgstr "Langkah ke masa tertentu"
 
-#: data/totem.glade.h:88
+#: data/xplayer.glade.h:88
 msgid "Small"
 msgstr "Kecil"
 
-#: data/totem.glade.h:89
+#: data/xplayer.glade.h:89
 msgid "Square"
 msgstr "Segiempat sama"
 
-#: data/totem.glade.h:90
+#: data/xplayer.glade.h:90
 msgid "Stereo"
 msgstr "Stereo"
 
-#: data/totem.glade.h:91
+#: data/xplayer.glade.h:91
 msgid "Subtitles"
 msgstr "Subtajuk"
 
-#: data/totem.glade.h:92
+#: data/xplayer.glade.h:92
 msgid "Switch to double size"
 msgstr "Bertukar ke saiz berganda 2"
 
-#: data/totem.glade.h:93
+#: data/xplayer.glade.h:93
 msgid "Switch to fullscreen"
 msgstr "Bertukar ke skrinpenuh"
 
-#: data/totem.glade.h:94
+#: data/xplayer.glade.h:94
 msgid "Take _Screenshot"
 msgstr "Tangkap _Cekupansktin"
 
-#: data/totem.glade.h:95
+#: data/xplayer.glade.h:95
 msgid "Take a screenshot"
 msgstr "Tangkap cekupanskrin"
 
-#: data/totem.glade.h:96
+#: data/xplayer.glade.h:96
 msgid "Time:"
 msgstr "Masa:"
 
-#: data/totem.glade.h:98
-msgid "Totem Preferences"
-msgstr "Keutamaan Totem"
+#: data/xplayer.glade.h:98
+msgid "Xplayer Preferences"
+msgstr "Keutamaan Xplayer"
 
-#: data/totem.glade.h:99
+#: data/xplayer.glade.h:99
 msgid "Tv-out in fullscreen by Nvidia (NTSC)"
 msgstr "TV-keluar pada skrinpeluh oleh Nvidia (NTSC)"
 
-#: data/totem.glade.h:100
+#: data/xplayer.glade.h:100
 msgid "Tv-out in fullscreen by Nvidia (PAL)"
 msgstr "TV-keluar pada skrinpeluh oleh Nvidia (PAL)"
 
-#: data/totem.glade.h:101
+#: data/xplayer.glade.h:101
 msgid "Visualisation _size:"
 msgstr "_Saiz visualisasi:"
 
-#: data/totem.glade.h:102
+#: data/xplayer.glade.h:102
 msgid "Volume _Down"
 msgstr "Volum _Turun"
 
-#: data/totem.glade.h:103
+#: data/xplayer.glade.h:103
 msgid "Volume _Up"
 msgstr "Volum _Naik"
 
-#: data/totem.glade.h:104
+#: data/xplayer.glade.h:104
 msgid "Volume down"
 msgstr "Volum turun"
 
-#: data/totem.glade.h:105
+#: data/xplayer.glade.h:105
 msgid "Volume up"
 msgstr "Volum naik"
 
-#: data/totem.glade.h:106 data/vanity.glade.h:7
+#: data/xplayer.glade.h:106 data/vanity.glade.h:7
 msgid "Zoom _1:1"
 msgstr "Zoom _1:1"
 
-#: data/totem.glade.h:107 data/vanity.glade.h:8
+#: data/xplayer.glade.h:107 data/vanity.glade.h:8
 msgid "Zoom _2:1"
 msgstr "Zoom _2:1"
 
-#: data/totem.glade.h:108
+#: data/xplayer.glade.h:108
 msgid "Zoom to half size"
 msgstr "Zum ke saiz separuh"
 
-#: data/totem.glade.h:109
+#: data/xplayer.glade.h:109
 msgid "Zoom to one for one size"
 msgstr "Zum ke saiz satu ke satu"
 
-#: data/totem.glade.h:110
+#: data/xplayer.glade.h:110
 msgid "_Add Proprietary Plugins..."
 msgstr "_Tambah Plugin Proprietari..."
 
-#: data/totem.glade.h:111
+#: data/xplayer.glade.h:111
 msgid "_Angle Menu"
 msgstr "Menu _Sudut"
 
-#: data/totem.glade.h:112
+#: data/xplayer.glade.h:112
 msgid "_Aspect Ratio"
 msgstr "Nisbah _Aspek"
 
-#: data/totem.glade.h:113
+#: data/xplayer.glade.h:113
 msgid "_Audio output type:"
 msgstr "_Jenis output audio:"
 
-#: data/totem.glade.h:114
+#: data/xplayer.glade.h:114
 msgid "_Brightness:"
 msgstr "_Kecerahan:"
 
-#: data/totem.glade.h:115
+#: data/xplayer.glade.h:115
 msgid "_Chapter Menu"
 msgstr "Menu _Bab"
 
-#: data/totem.glade.h:116
+#: data/xplayer.glade.h:116
 msgid "_Contents"
 msgstr "_Kandungan"
 
-#: data/totem.glade.h:117
+#: data/xplayer.glade.h:117
 msgid "_DVD Menu"
 msgstr "Menu _DVD"
 
-#: data/totem.glade.h:118
+#: data/xplayer.glade.h:118
 msgid "_DXR3 TV-out"
 msgstr "_DXR3 TV-out"
 
-#: data/totem.glade.h:119
+#: data/xplayer.glade.h:119
 msgid "_Deinterlace"
 msgstr "_Deinterlace"
 
-#: data/totem.glade.h:120
+#: data/xplayer.glade.h:120
 msgid "_Eject"
 msgstr "_Lenting"
 
-#: data/totem.glade.h:121
+#: data/xplayer.glade.h:121
 msgid "_Fullscreen"
 msgstr "_Skrinpenuh"
 
-#: data/totem.glade.h:122
+#: data/xplayer.glade.h:122
 msgid "_Go"
 msgstr "_Pergi ke"
 
-#: data/totem.glade.h:123
+#: data/xplayer.glade.h:123
 msgid "_Hue:"
 msgstr "_Warna:"
 
-#: data/totem.glade.h:124
+#: data/xplayer.glade.h:124
 msgid "_Languages"
 msgstr "_Bahasa"
 
-#: data/totem.glade.h:125
+#: data/xplayer.glade.h:125
 msgid "_Movie"
 msgstr "_Cereka"
 
-#: data/totem.glade.h:126
+#: data/xplayer.glade.h:126
 msgid "_Next Chapter/Movie"
 msgstr "Bab/Cereka _Berikutnya"
 
-#: data/totem.glade.h:127
+#: data/xplayer.glade.h:127
 msgid "_No TV-out"
 msgstr "_Tiada TV-out"
 
-#: data/totem.glade.h:128
+#: data/xplayer.glade.h:128
 msgid "_Optical device path:"
 msgstr "Laluan peranti _optikal:"
 
-#: data/totem.glade.h:129
+#: data/xplayer.glade.h:129
 msgid "_Previous Chapter/Movie"
 msgstr "Bab/Cereka _Terdahulu"
 
-#: data/totem.glade.h:130
+#: data/xplayer.glade.h:130
 msgid "_Repeat Mode"
 msgstr "Mod _Ulangan"
 
-#: data/totem.glade.h:131
+#: data/xplayer.glade.h:131
 msgid "_Reset defaults"
 msgstr "_Ulangtetap default"
 
-#: data/totem.glade.h:132
+#: data/xplayer.glade.h:132
 msgid "_Show/Hide Playlist"
 msgstr "_Papar/Sorok SenaraiMain"
 
-#: data/totem.glade.h:133
+#: data/xplayer.glade.h:133
 msgid "_Skip to..."
 msgstr "_Langkah ke..."
 
-#: data/totem.glade.h:134
+#: data/xplayer.glade.h:134
 msgid "_Skip to:"
 msgstr "_Langkah ke:"
 
-#: data/totem.glade.h:135
+#: data/xplayer.glade.h:135
 msgid "_Sound"
 msgstr "B_unyi"
 
-#: data/totem.glade.h:136
+#: data/xplayer.glade.h:136
 msgid "_Title Menu"
 msgstr "Menu _Tajuk"
 
-#: data/totem.glade.h:137
+#: data/xplayer.glade.h:137
 msgid "_Type of visualisation:"
 msgstr "_Jenis visualisasi:"
 
-#: data/totem.glade.h:138 data/vanity.glade.h:10
+#: data/xplayer.glade.h:138 data/vanity.glade.h:10
 msgid "_Zoom 1:2"
 msgstr "_Zoom 1:2"
 
-#: data/totem.glade.h:139
+#: data/xplayer.glade.h:139
 msgid "seconds"
 msgstr "saat"
 
-#: data/totem.schemas.in.h:1
+#: data/xplayer.schemas.in.h:1
 msgid "Enable deinterlacing"
 msgstr "Hidupkan deinterlace"
 
-#: data/totem.schemas.in.h:2
+#: data/xplayer.schemas.in.h:2
 msgid "Enable deinterlacing."
 msgstr "Hidupkan deinterlace."
 
-#: data/totem.schemas.in.h:3
+#: data/xplayer.schemas.in.h:3
 msgid "Height of the video widget"
 msgstr "Tinggi bagi wiget video"
 
-#: data/totem.schemas.in.h:4
+#: data/xplayer.schemas.in.h:4
 msgid "Name of the visual effects plugins"
 msgstr "Nama bagi plugin kesan visual"
 
-#: data/totem.schemas.in.h:5
+#: data/xplayer.schemas.in.h:5
 msgid "Name of the visual effects plugins."
 msgstr "Nama bagi plugin kesan visual."
 
-#: data/totem.schemas.in.h:6
+#: data/xplayer.schemas.in.h:6
 msgid "Path to the optical media device"
 msgstr "Path ke peranti media optikal"
 
-#: data/totem.schemas.in.h:7
+#: data/xplayer.schemas.in.h:7
 msgid "Path to the optical media device."
 msgstr "Laluan ke peranti media optikal."
 
-#: data/totem.schemas.in.h:8
+#: data/xplayer.schemas.in.h:8
 msgid "Repeat mode"
 msgstr "mod ulangan"
 
-#: data/totem.schemas.in.h:9
+#: data/xplayer.schemas.in.h:9
 msgid "Repeat mode."
 msgstr "mod ulangan."
 
-#: data/totem.schemas.in.h:10
+#: data/xplayer.schemas.in.h:10
 msgid "Resize the canvas automatically on file load"
 msgstr "Ubahsaiz kanvas secara automatik pada pemuatan fail"
 
-#: data/totem.schemas.in.h:11
+#: data/xplayer.schemas.in.h:11
 msgid "Resize the canvas automatically on file load."
 msgstr "Ubahsaiz kanvas secara automatik pada pemuatan fail."
 
-#: data/totem.schemas.in.h:12
+#: data/xplayer.schemas.in.h:12
 msgid "Show visual effects when no video is displayed"
 msgstr "Papar kesan visual bila tiada video dipapar"
 
-#: data/totem.schemas.in.h:13
+#: data/xplayer.schemas.in.h:13
 msgid "Show visual effects when playing an audio only file."
 msgstr "Papar kesan visual bila memainkan hanya fail audio."
 
-#: data/totem.schemas.in.h:14
+#: data/xplayer.schemas.in.h:14
 msgid "Shuffle mode"
 msgstr "Mod kocok"
 
-#: data/totem.schemas.in.h:15
+#: data/xplayer.schemas.in.h:15
 msgid "Shuffle mode."
 msgstr "Mod kocok."
 
-#: data/totem.schemas.in.h:16
+#: data/xplayer.schemas.in.h:16
 msgid "The brightness of the video"
 msgstr "Kecerahan bagi video"
 
-#: data/totem.schemas.in.h:17
+#: data/xplayer.schemas.in.h:17
 msgid "The brightness of the video."
 msgstr "Kecerahan bagi video."
 
-#: data/totem.schemas.in.h:18
+#: data/xplayer.schemas.in.h:18
 msgid "The contrast of the video"
 msgstr "Kontras bagi video"
 
-#: data/totem.schemas.in.h:19
+#: data/xplayer.schemas.in.h:19
 msgid "The contrast of the video."
 msgstr "Kontras bagi video."
 
-#: data/totem.schemas.in.h:20
+#: data/xplayer.schemas.in.h:20
 msgid "The hue of the video"
 msgstr "Warna bagi video"
 
-#: data/totem.schemas.in.h:21
+#: data/xplayer.schemas.in.h:21
 msgid "The hue of the video."
 msgstr "Warna bagi video."
 
-#: data/totem.schemas.in.h:22
+#: data/xplayer.schemas.in.h:22
 msgid "The saturation of the video"
 msgstr "Ketepuan bagi video"
 
-#: data/totem.schemas.in.h:23
+#: data/xplayer.schemas.in.h:23
 msgid "The saturation of the video."
 msgstr "Ketepuan bagi video."
 
-#: data/totem.schemas.in.h:24
+#: data/xplayer.schemas.in.h:24
 msgid "Type of audio output to use"
 msgstr "Jenis output audio untuk diguna"
 
-#: data/totem.schemas.in.h:25
+#: data/xplayer.schemas.in.h:25
 msgid ""
 "Type of audio output to use: \"0\" for stereo, \"1\" for 4-channel output, "
 "\"2\" for 5.0 channel output, \"3\" for 5.1 channel output, \"4\" for AC3 "
@@ -815,39 +815,39 @@ msgstr ""
 "saluran, \"2\" untuk output  5.0 saluran, \"3\" untuk output  5.1 saluran, "
 "\"4\" untuk Perentasan AC3."
 
-#: data/totem.schemas.in.h:26
+#: data/xplayer.schemas.in.h:26
 msgid "Whether the main window should stay on top"
 msgstr "Samada tetingkap utama patut kekal di atas"
 
-#: data/totem.schemas.in.h:27
+#: data/xplayer.schemas.in.h:27
 msgid "Whether the main window should stay on top of the other ones"
 msgstr "Samada tetingkap utama patut kekal di atas yang lain"
 
-#: data/totem.schemas.in.h:28
+#: data/xplayer.schemas.in.h:28
 msgid "Whether to enable debug for the playback engine"
 msgstr "Samasa untuk menghidupkan nyahpepijat bagi jentera pemain"
 
-#: data/totem.schemas.in.h:29
+#: data/xplayer.schemas.in.h:29
 msgid "Whether to enable debug for the playback engine."
 msgstr "Samasa untuk menghidupkan nyahpepijat bagi jentera pemain."
 
-#: data/totem.schemas.in.h:30
+#: data/xplayer.schemas.in.h:30
 msgid "Width of the video widget"
 msgstr "Tinggi bagi wiget video"
 
-#: data/totem.schemas.in.h:31
+#: data/xplayer.schemas.in.h:31
 msgid "X coordinate for the Playlist"
 msgstr "Kordinat X bagi Senaraimain"
 
-#: data/totem.schemas.in.h:32
+#: data/xplayer.schemas.in.h:32
 msgid "X coordinate for the Playlist."
 msgstr "Kordinat X bagi Senaraimain."
 
-#: data/totem.schemas.in.h:33
+#: data/xplayer.schemas.in.h:33
 msgid "Y coordinate for the Playlist"
 msgstr "Kordinat Y bagi Senaraimain"
 
-#: data/totem.schemas.in.h:34
+#: data/xplayer.schemas.in.h:34
 msgid "Y coordinate for the Playlist."
 msgstr "Kordinat Y bagi Senaraimain."
 
@@ -900,8 +900,8 @@ msgid "Unnamed CDROM"
 msgstr "CDROM Tidakbernama"
 
 #: src/bacon-video-widget-gst.c:54
-msgid "Totem Video Window"
-msgstr "Tetingkap Video Totem"
+msgid "Xplayer Video Window"
+msgstr "Tetingkap Video Xplayer"
 
 #: src/bacon-video-widget-gst.c:2123
 msgid "Failed to create a GStreamer play object"
@@ -1055,99 +1055,99 @@ msgstr "Tiada video untuk dicekup."
 msgid "Video codec is not handled."
 msgstr "Codec video tidak ditangani."
 
-#: src/totem-disc.c:98
+#: src/xplayer-disc.c:98
 #, c-format
 msgid "Failed to find real device node for %s: %s"
 msgstr "Gagal mencari nod peranti sebenar bagi %s: %s"
 
-#: src/totem-disc.c:109
+#: src/xplayer-disc.c:109
 #, c-format
 msgid "Failed to read symbolic link %s: %s"
 msgstr "Gagal membaca pautan simbolik %s: %s"
 
-#: src/totem-disc.c:182
+#: src/xplayer-disc.c:182
 #, c-format
 msgid "Failed to find mountpoint for device %s in /etc/fstab"
 msgstr "Gagal menjumpai titik lekapan bagi peranti %s pada /etc/fstab"
 
-#: src/totem-disc.c:220
+#: src/xplayer-disc.c:220
 msgid "Please check that a disc is present in the drive."
 msgstr "Sila periksa cekera ada di pemacu."
 
-#: src/totem-disc.c:223
+#: src/xplayer-disc.c:223
 #, c-format
 msgid "Failed to open device %s for reading: %s"
 msgstr "Gagal membuka peranti %s untuk dibaca: %s"
 
-#: src/totem-disc.c:234
+#: src/xplayer-disc.c:234
 #, c-format
 msgid "Failed to retrieve capabilities of device %s: %s"
 msgstr "Gagal memperoleh kebolehan peranti %s: %s"
 
-#: src/totem-disc.c:267
+#: src/xplayer-disc.c:267
 #, c-format
 msgid "Drive status 0x%x (%s) - check disc"
 msgstr "Status pemacu  0x%x (%s) - periksa cakera"
 
-#: src/totem-disc.c:300
+#: src/xplayer-disc.c:300
 #, fuzzy, c-format
 msgid "Unexpected error status %d while mounting %s"
 msgstr "Status ralat luardugaan %s ketika melekapkan %s"
 
-#: src/totem-disc.c:354
+#: src/xplayer-disc.c:354
 #, c-format
 msgid "Error getting %s disc status: %s"
 msgstr "Ralat memperoleh status cakera %s : %s"
 
-#: src/totem-disc.c:384
+#: src/xplayer-disc.c:384
 #, c-format
 msgid "Unexpected/unknown cd type 0x%x (%s)"
 msgstr "Jenis cd luardugaan/takdiketahui 0x%x (%s)"
 
-#. disp = gnome_vfs_unescape_string_for_display (totem->mrl);
-#: src/totem-mozilla-viewer.c:59 src/totem.c:389 src/totem.c:417
-#: src/totem.c:841 src/totem.c:964
+#. disp = gnome_vfs_unescape_string_for_display (xplayer->mrl);
+#: src/xplayer-mozilla-viewer.c:59 src/xplayer.c:389 src/xplayer.c:417
+#: src/xplayer.c:841 src/xplayer.c:964
 #, c-format
-msgid "Totem could not play '%s'."
-msgstr "Totem tak dapat memainkan '%s'."
+msgid "Xplayer could not play '%s'."
+msgstr "Xplayer tak dapat memainkan '%s'."
 
-#: src/totem-mozilla-viewer.c:91 src/totem-mozilla-viewer.c:98
+#: src/xplayer-mozilla-viewer.c:91 src/xplayer-mozilla-viewer.c:98
 msgid "Couldn't load the main interface (mozilla-viewer.glade)."
 msgstr "Tak dapat memuatkan antaramuka utama (mozilla-viewer.glade)."
 
-#: src/totem-mozilla-viewer.c:91 src/totem-mozilla-viewer.c:98
-msgid "Make sure that the Totem plugin is properly installed."
-msgstr "Pastikan plugin Totem dipasang dengan betul."
+#: src/xplayer-mozilla-viewer.c:91 src/xplayer-mozilla-viewer.c:98
+msgid "Make sure that the Xplayer plugin is properly installed."
+msgstr "Pastikan plugin Xplayer dipasang dengan betul."
 
-#: src/totem-mozilla-viewer.c:109
-msgid "The Totem plugin could not startup."
-msgstr "PLugin totem tak dapat dimulakan."
+#: src/xplayer-mozilla-viewer.c:109
+msgid "The Xplayer plugin could not startup."
+msgstr "PLugin xplayer tak dapat dimulakan."
 
-#: src/totem-mozilla-viewer.c:109 src/totem.c:3453
+#: src/xplayer-mozilla-viewer.c:109 src/xplayer.c:3453
 msgid "No reason."
 msgstr "Tiada alasan."
 
-#: src/totem-mozilla-viewer.c:141 src/totem.c:3780
+#: src/xplayer-mozilla-viewer.c:141 src/xplayer.c:3780
 msgid "Could not initialise the thread-safe libraries."
 msgstr "Tak dapat menginitialisasikan pustaka thread-safe."
 
-#: src/totem-mozilla-viewer.c:141
-msgid "Verify your system installation. The Totem plugin will now exit."
-msgstr "Tentusahkan pemasangan sistem anda. Plugin totem akan keluar."
+#: src/xplayer-mozilla-viewer.c:141
+msgid "Verify your system installation. The Xplayer plugin will now exit."
+msgstr "Tentusahkan pemasangan sistem anda. Plugin xplayer akan keluar."
 
-#: src/totem-playlist.c:300
+#: src/xplayer-playlist.c:300
 msgid "Could not save the playlist"
 msgstr "Tak dapat menyimpan senaraimain"
 
-#: src/totem-playlist.c:574
+#: src/xplayer-playlist.c:574
 msgid "Select Movies or Playlists"
 msgstr "Pilih Cereka atau Senaraimain"
 
-#: src/totem-playlist.c:755
+#: src/xplayer-playlist.c:755
 msgid "Save playlist"
 msgstr "Simpan senaraimain"
 
-#: src/totem-playlist.c:803
+#: src/xplayer-playlist.c:803
 #, c-format
 msgid ""
 "A file named '%s' already exists.\n"
@@ -1156,224 +1156,224 @@ msgstr ""
 "Fail bernama '%s' tersedia wujud.\n"
 "Adakah anda ingin menindihnya?"
 
-#: src/totem-playlist.c:997
+#: src/xplayer-playlist.c:997
 msgid "Filename"
 msgstr "Namafail"
 
-#: src/totem-playlist.c:1548
+#: src/xplayer-playlist.c:1548
 msgid "Playlist error"
 msgstr "Ralat senaraimain"
 
-#: src/totem-playlist.c:1548
+#: src/xplayer-playlist.c:1548
 #, c-format
 msgid "The playlist '%s' could not be parsed, it might be damaged."
 msgstr "Senaraimain '%s' tak dapat dibaca. Mungkin rosak."
 
-#: src/totem-pl-parser.c:208
+#: src/xplayer-pl-parser.c:208
 #, c-format
 msgid "Couldn't write parser: %s"
 msgstr "Tak dapat menulis penghantar: %s"
 
-#: src/totem-pl-parser.c:311 src/totem-pl-parser.c:434
+#: src/xplayer-pl-parser.c:311 src/xplayer-pl-parser.c:434
 #, c-format
 msgid "Couldn't open file '%s': %s"
 msgstr "Tak dapat membuka fail '%s': %s"
 
-#: src/totem-preferences.c:82
+#: src/xplayer-preferences.c:82
 msgid ""
-"It seems you are running Totem remotely.\n"
+"It seems you are running Xplayer remotely.\n"
 "Are you sure you want to enable the visual effects?"
 msgstr ""
-"Nampaknya anda melaksanakan Totem secara jauh.\n"
+"Nampaknya anda melaksanakan Xplayer secara jauh.\n"
 "Anda pasti untuk menghidupkan kesan visual?"
 
-#: src/totem-preferences.c:135
+#: src/xplayer-preferences.c:135
 msgid ""
 "The change of this setting will only take effect for the next movie, or when "
-"Totem is restarted"
+"Xplayer is restarted"
 msgstr ""
 "Perubahan ini akan bertindakbalas hanya bagi cereka berikutnya, atau bila "
-"Totem diulanghidupkan"
+"Xplayer diulanghidupkan"
 
-#: src/totem-preferences.c:179
+#: src/xplayer-preferences.c:179
 msgid ""
 "Switching on or off this type of TV-Out requires a restart to take effect."
 msgstr ""
 "Penghidupkan atau pematian jenios TV-Keluar ini memerlukan satu ulanghidup "
 "supaya berkesan."
 
-#: src/totem-preferences.c:312
-msgid "Totem could not start the file manager."
-msgstr "Totem tak dapat memulakan pengurus fail."
+#: src/xplayer-preferences.c:312
+msgid "Xplayer could not start the file manager."
+msgstr "Xplayer tak dapat memulakan pengurus fail."
 
-#: src/totem-preferences.c:340
+#: src/xplayer-preferences.c:340
 msgid "Changing the visuals effect type will require a restart to take effect."
 msgstr "Perubahan jenis kesan visual memerlukan ulanghidup supaya bertindak."
 
-#: src/totem-properties-page.c:123
+#: src/xplayer-properties-page.c:123
 msgid "URI currently displayed"
 msgstr "URI kini dipaparkan"
 
-#: src/totem-properties-page.c:193
+#: src/xplayer-properties-page.c:193
 msgid "Video and Audio information properties page"
 msgstr "Halaman ciri-ciri maklumat video dan audio"
 
-#: src/totem-screenshot.c:146 src/totem-screenshot.c:157
+#: src/xplayer-screenshot.c:146 src/xplayer-screenshot.c:157
 #, c-format
 msgid "Screenshot%d.png"
 msgstr "Cekupanskrin-%d.png"
 
-#: src/totem-screenshot.c:199
+#: src/xplayer-screenshot.c:199
 #, c-format
 msgid "File '%s' already exists."
 msgstr "Fail '%s' tersedia wujud."
 
-#: src/totem-screenshot.c:201
+#: src/xplayer-screenshot.c:201
 msgid "The screenshot was not saved"
 msgstr "Cekupanskrin tidak akan disimpan."
 
-#: src/totem-screenshot.c:212
+#: src/xplayer-screenshot.c:212
 msgid "There was an error saving the screenshot."
 msgstr "Terdapat ralat menyimpan cekupanskrin."
 
-#: src/totem-statusbar.c:91
+#: src/xplayer-statusbar.c:91
 msgid "Shadow type"
 msgstr "Jenis bayang"
 
-#: src/totem-statusbar.c:92
+#: src/xplayer-statusbar.c:92
 msgid "Style of bevel around the statusbar text"
 msgstr "Gaya bevel sekeliling teks bar status"
 
-#: src/totem-statusbar.c:124 src/totem.c:330 src/totem.c:701
+#: src/xplayer-statusbar.c:124 src/xplayer.c:330 src/xplayer.c:701
 msgid "Stopped"
 msgstr "Berhenti"
 
-#: src/totem-statusbar.c:133
+#: src/xplayer-statusbar.c:133
 msgid "0:00 / 0:00"
 msgstr "0:00 / 0:00"
 
-#: src/totem-statusbar.c:161
+#: src/xplayer-statusbar.c:161
 #, c-format
 msgid "%s (Streaming)"
 msgstr "%s (Aliran)"
 
 #. Elapsed / Total Length
-#: src/totem-statusbar.c:168 src/totem-time-label.c:56
+#: src/xplayer-statusbar.c:168 src/xplayer-time-label.c:56
 #, c-format
 msgid "%s / %s"
 msgstr "%s / %s"
 
 #. Seeking to Time / Total Length
-#: src/totem-statusbar.c:171
+#: src/xplayer-statusbar.c:171
 #, c-format
 msgid "Seek to %s / %s"
 msgstr "Pergi ke %s /%s"
 
-#: src/totem-statusbar.c:233
+#: src/xplayer-statusbar.c:233
 msgid "Buffering"
 msgstr "Menimbal"
 
 #. eg: 75 %
-#: src/totem-statusbar.c:236
+#: src/xplayer-statusbar.c:236
 #, c-format
 msgid "%d %%"
 msgstr "%d %%"
 
-#: src/totem.c:82
+#: src/xplayer.c:82
 msgid "Backend options"
 msgstr "Opsyen belakang"
 
-#: src/totem.c:83
+#: src/xplayer.c:83
 msgid "Enable debug"
 msgstr "Hidupkan nyahpepijat"
 
-#: src/totem.c:87
+#: src/xplayer.c:87
 msgid "Seek Forwards"
 msgstr "Langkah Maju"
 
-#: src/totem.c:88
+#: src/xplayer.c:88
 msgid "Seek Backwards"
 msgstr "Langkah Mengundur"
 
-#: src/totem.c:89
+#: src/xplayer.c:89
 msgid "Volume Up"
 msgstr "Volum Naik"
 
-#: src/totem.c:90
+#: src/xplayer.c:90
 msgid "Volume Down"
 msgstr "Volum Turun"
 
-#: src/totem.c:91
+#: src/xplayer.c:91
 msgid "Toggle Fullscreen"
 msgstr "Togol Skrinpenuh"
 
-#: src/totem.c:92
+#: src/xplayer.c:92
 msgid "Show/Hide Controls"
 msgstr "Papar/Sorok Kawalan"
 
-#: src/totem.c:93
+#: src/xplayer.c:93
 msgid "Quit"
 msgstr "Keluar"
 
-#: src/totem.c:94
+#: src/xplayer.c:94
 msgid "Enqueue"
 msgstr "Enqueue"
 
-#: src/totem.c:95
+#: src/xplayer.c:95
 msgid "Replace"
 msgstr "Ganti"
 
-#: src/totem.c:320
+#: src/xplayer.c:320
 msgid "Playing"
 msgstr "Bermain"
 
-#: src/totem.c:325
+#: src/xplayer.c:325
 msgid "Paused"
 msgstr "Dikaku"
 
-#: src/totem.c:367
-msgid "Totem could not eject the optical media."
-msgstr "Totem tak dapat melenting media optikal."
+#: src/xplayer.c:367
+msgid "Xplayer could not eject the optical media."
+msgstr "Xplayer tak dapat melenting media optikal."
 
-#: src/totem.c:437
+#: src/xplayer.c:437
 msgid "DVD"
 msgstr "DVD"
 
-#: src/totem.c:438
+#: src/xplayer.c:438
 msgid "Video CD"
 msgstr "CD Video"
 
-#: src/totem.c:439
+#: src/xplayer.c:439
 msgid "Audio CD"
 msgstr "CD Audio"
 
-#: src/totem.c:450
+#: src/xplayer.c:450
 #, c-format
 msgid ""
-"Totem cannot play this type of media (%s) because you do not have the "
+"Xplayer cannot play this type of media (%s) because you do not have the "
 "appropriate plugins to handle it."
 msgstr ""
-"Totem tidak dapat memainkan jenis media ini (%s) kerana anda tidak mempunyai "
+"Xplayer tidak dapat memainkan jenis media ini (%s) kerana anda tidak mempunyai "
 "plugin yg sesuai untuk mengendalinya."
 
-#: src/totem.c:451
+#: src/xplayer.c:451
 msgid ""
-"Please install the necessary plugins and restart Totem to be able to play "
+"Please install the necessary plugins and restart Xplayer to be able to play "
 "this media."
 msgstr ""
-"Sila pasang plugin yang diperlukan dan ulanghidup Totem supaya boleh "
+"Sila pasang plugin yang diperlukan dan ulanghidup Xplayer supaya boleh "
 "memainkan media ini."
 
-#: src/totem.c:459
+#: src/xplayer.c:459
 #, c-format
 msgid ""
-"Totem could not play this media (%s) although a plugin is present to handle "
+"Xplayer could not play this media (%s) although a plugin is present to handle "
 "it."
 msgstr ""
-"Totem tak dapat memainkan media ini (%s) walaupun plugin ada untuk "
+"Xplayer tak dapat memainkan media ini (%s) walaupun plugin ada untuk "
 "mengendalinya."
 
-#: src/totem.c:460
+#: src/xplayer.c:460
 msgid ""
 "You might want to check that a disc is present in the drive and that it is "
 "correctly configured."
@@ -1382,100 +1382,100 @@ msgstr ""
 "betul."
 
 #. Title
-#: src/totem.c:694
+#: src/xplayer.c:694
 #, c-format
-msgid "%s - Totem Movie Player"
-msgstr "%s - Pemain Cereka Totem"
+msgid "%s - Xplayer Movie Player"
+msgstr "%s - Pemain Cereka Xplayer"
 
-#: src/totem.c:708 src/totem.c:3548
+#: src/xplayer.c:708 src/xplayer.c:3548
 msgid "No file"
 msgstr "Tiada fail"
 
-#: src/totem.c:745 src/totem.c:2008
-msgid "Totem"
-msgstr "Totem"
+#: src/xplayer.c:745 src/xplayer.c:2008
+msgid "Xplayer"
+msgstr "Xplayer"
 
-#: src/totem.c:1272 src/totem.c:1274
+#: src/xplayer.c:1272 src/xplayer.c:1274
 msgid "An error occured"
 msgstr "Ralat  berlaku"
 
-#: src/totem.c:1612
+#: src/xplayer.c:1612
 msgid "Select files"
 msgstr "Semua fail"
 
-#: src/totem.c:1689 src/totem.c:1697
+#: src/xplayer.c:1689 src/xplayer.c:1697
 msgid "Couldn't load the 'Open Location...' interface."
 msgstr "Tak dapat memuatkan antaramuka 'Buka Lokasi...'."
 
-#: src/totem.c:1689 src/totem.c:1697 src/totem.c:3818 src/totem.c:3845
-#: src/totem.c:3870
-msgid "Make sure that Totem is properly installed."
-msgstr "Pastikan Totem dipasang dengan betul."
+#: src/xplayer.c:1689 src/xplayer.c:1697 src/xplayer.c:3818 src/xplayer.c:3845
+#: src/xplayer.c:3870
+msgid "Make sure that Xplayer is properly installed."
+msgstr "Pastikan Xplayer dipasang dengan betul."
 
-#: src/totem.c:1960
-msgid "Totem could not display the help contents."
-msgstr "Totem tak dapat memapar kandungan bantuan."
+#: src/xplayer.c:1960
+msgid "Xplayer could not display the help contents."
+msgstr "Xplayer tak dapat memapar kandungan bantuan."
 
-#: src/totem.c:1979 src/vanity.c:235
+#: src/xplayer.c:1979 src/vanity.c:235
 msgid "translator_credits"
 msgstr "Hasbullah Bin Pit <sebol@my-penguin.org>, Merlimau."
 
-#: src/totem.c:2005
+#: src/xplayer.c:2005
 #, c-format
 msgid "Movie Player using %s"
 msgstr "Pemain Cereka menggunakan %s"
 
-#: src/totem.c:2045 src/totem.c:2053 src/vanity.c:300 src/vanity.c:308
-msgid "Totem could not get a screenshot of that film."
-msgstr "Totem tak dapat memperolehi cekupanskrin filem itu."
+#: src/xplayer.c:2045 src/xplayer.c:2053 src/vanity.c:300 src/vanity.c:308
+msgid "Xplayer could not get a screenshot of that film."
+msgstr "Xplayer tak dapat memperolehi cekupanskrin filem itu."
 
-#: src/totem.c:2053
+#: src/xplayer.c:2053
 msgid "Please file a bug, this isn't supposed to happen."
 msgstr "Sila failkan pepijat, Ini tidak sepatutnya berlaku."
 
-#: src/totem.c:2080
-msgid "Totem couldn't show the movie properties window."
-msgstr "Totem tak dapat memapar tetingkap ciri-ciri Cereka."
+#: src/xplayer.c:2080
+msgid "Xplayer couldn't show the movie properties window."
+msgstr "Xplayer tak dapat memapar tetingkap ciri-ciri Cereka."
 
-#: src/totem.c:2080
-msgid "Make sure that Totem is correctly installed."
-msgstr "Pastikan Totem dipasang dengan betul."
+#: src/xplayer.c:2080
+msgid "Make sure that Xplayer is correctly installed."
+msgstr "Pastikan Xplayer dipasang dengan betul."
 
-#: src/totem.c:2166
+#: src/xplayer.c:2166
 #, c-format
-msgid "Totem could not seek in '%s'."
-msgstr "Totem tak dapat mencari di '%s'."
+msgid "Xplayer could not seek in '%s'."
+msgstr "Xplayer tak dapat mencari di '%s'."
 
-#: src/totem.c:2987 src/totem.c:3009
+#: src/xplayer.c:2987 src/xplayer.c:3009
 msgid "None"
 msgstr "Tiada"
 
-#: src/totem.c:3453
-msgid "Totem could not startup."
-msgstr "Totem tak dapat dimulakan"
+#: src/xplayer.c:3453
+msgid "Xplayer could not startup."
+msgstr "Xplayer tak dapat dimulakan"
 
-#: src/totem.c:3661
+#: src/xplayer.c:3661
 #, c-format
 msgid "Option '%s' is unknown and was ignored\n"
 msgstr "Opsyen '%s' tak diketahui dan diabaikan\n"
 
-#: src/totem.c:3780
-msgid "Verify your system installation. Totem will now exit."
-msgstr "Tentusahkan pemasangan sistem anda. Totem akan keluar."
+#: src/xplayer.c:3780
+msgid "Verify your system installation. Xplayer will now exit."
+msgstr "Tentusahkan pemasangan sistem anda. Xplayer akan keluar."
 
-#: src/totem.c:3802
-msgid "Totem couln't initialise the configuration engine."
-msgstr "Totem tak dapat menginitialisasi jentera konfigurasi."
+#: src/xplayer.c:3802
+msgid "Xplayer couln't initialise the configuration engine."
+msgstr "Xplayer tak dapat menginitialisasi jentera konfigurasi."
 
-#: src/totem.c:3802
+#: src/xplayer.c:3802
 msgid "Make sure that GNOME is properly installed."
 msgstr "Pastikan GNOME dipasang dengan betul."
 
-#: src/totem.c:3818 src/totem.c:3845
-msgid "Couldn't load the main interface (totem.glade)."
-msgstr "Tak dapat memuatkan antaramuka utama (totem.glade)."
+#: src/xplayer.c:3818 src/xplayer.c:3845
+msgid "Couldn't load the main interface (xplayer.glade)."
+msgstr "Tak dapat memuatkan antaramuka utama (xplayer.glade)."
 
-#: src/totem.c:3870
+#: src/xplayer.c:3870
 msgid "Couldn't load the interface for the playlist."
 msgstr "Tak dapat memuatkan antaramuka bagi senaraimain."
 

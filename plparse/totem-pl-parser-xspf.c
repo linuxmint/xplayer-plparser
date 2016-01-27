@@ -22,26 +22,26 @@
 
 #include "config.h"
 
-#ifndef TOTEM_PL_PARSER_MINI
+#ifndef XPLAYER_PL_PARSER_MINI
 #include <string.h>
 #include <glib.h>
 #include <glib/gi18n-lib.h>
 #include <libxml/tree.h>
 #include <libxml/parser.h>
 
-#include "totem-pl-parser.h"
-#endif /* !TOTEM_PL_PARSER_MINI */
+#include "xplayer-pl-parser.h"
+#endif /* !XPLAYER_PL_PARSER_MINI */
 
-#include "totem-pl-parser-mini.h"
-#include "totem-pl-parser-xspf.h"
-#include "totem-pl-parser-private.h"
+#include "xplayer-pl-parser-mini.h"
+#include "xplayer-pl-parser-xspf.h"
+#include "xplayer-pl-parser-private.h"
 
-#ifndef TOTEM_PL_PARSER_MINI
+#ifndef XPLAYER_PL_PARSER_MINI
 
 #define SAFE_FREE(x) { if (x != NULL) xmlFree (x); }
 
 static xmlDocPtr
-totem_pl_parser_parse_xml_file (GFile *file)
+xplayer_pl_parser_parse_xml_file (GFile *file)
 {
 	xmlDocPtr doc;
 	char *contents;
@@ -76,26 +76,26 @@ static struct {
 	const char *field;
 	const char *element;
 } fields[] = {
-	{ TOTEM_PL_PARSER_FIELD_TITLE, "title" },
-	{ TOTEM_PL_PARSER_FIELD_AUTHOR, "creator" },
-	{ TOTEM_PL_PARSER_FIELD_IMAGE_URI, "image" },
-	{ TOTEM_PL_PARSER_FIELD_ALBUM, "album" },
-	{ TOTEM_PL_PARSER_FIELD_DURATION_MS, "duration" },
-	{ TOTEM_PL_PARSER_FIELD_GENRE, NULL },
-	{ TOTEM_PL_PARSER_FIELD_STARTTIME, NULL },
-	{ TOTEM_PL_PARSER_FIELD_SUBTITLE_URI, NULL },
-	{ TOTEM_PL_PARSER_FIELD_PLAYING, NULL },
-	{ TOTEM_PL_PARSER_FIELD_CONTENT_TYPE, NULL }
+	{ XPLAYER_PL_PARSER_FIELD_TITLE, "title" },
+	{ XPLAYER_PL_PARSER_FIELD_AUTHOR, "creator" },
+	{ XPLAYER_PL_PARSER_FIELD_IMAGE_URI, "image" },
+	{ XPLAYER_PL_PARSER_FIELD_ALBUM, "album" },
+	{ XPLAYER_PL_PARSER_FIELD_DURATION_MS, "duration" },
+	{ XPLAYER_PL_PARSER_FIELD_GENRE, NULL },
+	{ XPLAYER_PL_PARSER_FIELD_STARTTIME, NULL },
+	{ XPLAYER_PL_PARSER_FIELD_SUBTITLE_URI, NULL },
+	{ XPLAYER_PL_PARSER_FIELD_PLAYING, NULL },
+	{ XPLAYER_PL_PARSER_FIELD_CONTENT_TYPE, NULL }
 };
 
 gboolean
-totem_pl_parser_save_xspf (TotemPlParser    *parser,
-                           TotemPlPlaylist  *playlist,
+xplayer_pl_parser_save_xspf (XplayerPlParser    *parser,
+                           XplayerPlPlaylist  *playlist,
                            GFile            *output,
                            const char       *title,
                            GError          **error)
 {
-        TotemPlPlaylistIter iter;
+        XplayerPlPlaylistIter iter;
 	GFileOutputStream *stream;
 	char *buf;
 	gboolean valid, success;
@@ -107,25 +107,25 @@ totem_pl_parser_save_xspf (TotemPlParser    *parser,
 	buf = g_strdup_printf ("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
 				"<playlist version=\"1\" xmlns=\"http://xspf.org/ns/0/\">\n"
 				" <trackList>\n");
-	success = totem_pl_parser_write_string (G_OUTPUT_STREAM (stream), buf, error);
+	success = xplayer_pl_parser_write_string (G_OUTPUT_STREAM (stream), buf, error);
 	g_free (buf);
 	if (success == FALSE)
 		return FALSE;
 
-        valid = totem_pl_playlist_iter_first (playlist, &iter);
+        valid = xplayer_pl_playlist_iter_first (playlist, &iter);
 
         while (valid) {
 		char *uri, *uri_escaped, *relative;
 		guint i;
 		gboolean wrote_ext;
 
-                totem_pl_playlist_get (playlist, &iter,
-                                       TOTEM_PL_PARSER_FIELD_URI, &uri,
+                xplayer_pl_playlist_get (playlist, &iter,
+                                       XPLAYER_PL_PARSER_FIELD_URI, &uri,
                                        NULL);
 
 
                 if (!uri) {
-			valid = totem_pl_playlist_iter_next (playlist, &iter);
+			valid = xplayer_pl_playlist_iter_next (playlist, &iter);
                         continue;
 		}
 
@@ -133,11 +133,11 @@ totem_pl_parser_save_xspf (TotemPlParser    *parser,
 		 * for that particular track */
 		wrote_ext = FALSE;
 
-		relative = totem_pl_parser_relative (output, uri);
+		relative = xplayer_pl_parser_relative (output, uri);
 		uri_escaped = g_markup_escape_text (relative ? relative : uri, -1);
 		buf = g_strdup_printf ("  <track>\n"
                                        "   <location>%s</location>\n", uri_escaped);
-		success = totem_pl_parser_write_string (G_OUTPUT_STREAM (stream), buf, error);
+		success = xplayer_pl_parser_write_string (G_OUTPUT_STREAM (stream), buf, error);
 		g_free (uri);
 		g_free (uri_escaped);
 		g_free (relative);
@@ -149,7 +149,7 @@ totem_pl_parser_save_xspf (TotemPlParser    *parser,
 		for (i = 0; i < G_N_ELEMENTS (fields); i++) {
 			char *str, *escaped;
 
-			totem_pl_playlist_get (playlist, &iter,
+			xplayer_pl_playlist_get (playlist, &iter,
 					       fields[i].field, &str,
 					       NULL);
 			if (!str || *str == '\0') {
@@ -160,15 +160,15 @@ totem_pl_parser_save_xspf (TotemPlParser    *parser,
 			g_free (str);
 			if (!escaped)
 				continue;
-			if (g_str_equal (fields[i].field, TOTEM_PL_PARSER_FIELD_GENRE)) {
+			if (g_str_equal (fields[i].field, XPLAYER_PL_PARSER_FIELD_GENRE)) {
 				buf = g_strdup_printf ("   <extension application=\"http://www.rhythmbox.org\">\n"
 						       "     <genre>%s</genre>\n"
 						       "   </extension>\n",
 						       escaped);
-			} else if (g_str_equal (fields[i].field, TOTEM_PL_PARSER_FIELD_SUBTITLE_URI) ||
-				   g_str_equal (fields[i].field, TOTEM_PL_PARSER_FIELD_PLAYING) ||
-				   g_str_equal (fields[i].field, TOTEM_PL_PARSER_FIELD_CONTENT_TYPE) ||
-				   g_str_equal (fields[i].field, TOTEM_PL_PARSER_FIELD_STARTTIME)) {
+			} else if (g_str_equal (fields[i].field, XPLAYER_PL_PARSER_FIELD_SUBTITLE_URI) ||
+				   g_str_equal (fields[i].field, XPLAYER_PL_PARSER_FIELD_PLAYING) ||
+				   g_str_equal (fields[i].field, XPLAYER_PL_PARSER_FIELD_CONTENT_TYPE) ||
+				   g_str_equal (fields[i].field, XPLAYER_PL_PARSER_FIELD_STARTTIME)) {
 				if (!wrote_ext) {
 					buf = g_strdup_printf ("   <extension application=\"http://www.gnome.org\">\n"
 							       "     <%s>%s</%s>\n",
@@ -178,14 +178,14 @@ totem_pl_parser_save_xspf (TotemPlParser    *parser,
 					buf = g_strdup_printf ("     <%s>%s</%s>\n",
 							       fields[i].field, escaped, fields[i].field);
 				}
-			} else if (g_str_equal (fields[i].field, TOTEM_PL_PARSER_FIELD_GENRE) == FALSE) {
+			} else if (g_str_equal (fields[i].field, XPLAYER_PL_PARSER_FIELD_GENRE) == FALSE) {
 				buf = g_strdup_printf ("   <%s>%s</%s>\n",
 						       fields[i].element,
 						       escaped,
 						       fields[i].element);
 			}
 
-			success = totem_pl_parser_write_string (G_OUTPUT_STREAM (stream), buf, error);
+			success = xplayer_pl_parser_write_string (G_OUTPUT_STREAM (stream), buf, error);
 			g_free (buf);
 			g_free (escaped);
 
@@ -197,21 +197,21 @@ totem_pl_parser_save_xspf (TotemPlParser    *parser,
 			return FALSE;
 
 		if (wrote_ext)
-			success = totem_pl_parser_write_string (G_OUTPUT_STREAM (stream), "   </extension>\n", error);
+			success = xplayer_pl_parser_write_string (G_OUTPUT_STREAM (stream), "   </extension>\n", error);
 
 		if (success == FALSE)
 			return FALSE;
 
-		success = totem_pl_parser_write_string (G_OUTPUT_STREAM (stream), "  </track>\n", error);
+		success = xplayer_pl_parser_write_string (G_OUTPUT_STREAM (stream), "  </track>\n", error);
 		if (success == FALSE)
 			return FALSE;
 
-                valid = totem_pl_playlist_iter_next (playlist, &iter);
+                valid = xplayer_pl_playlist_iter_next (playlist, &iter);
 	}
 
 	buf = g_strdup_printf (" </trackList>\n"
                                "</playlist>");
-	success = totem_pl_parser_write_string (G_OUTPUT_STREAM (stream), buf, error);
+	success = xplayer_pl_parser_write_string (G_OUTPUT_STREAM (stream), buf, error);
 	g_free (buf);
 
 	g_object_unref (stream);
@@ -232,7 +232,7 @@ parse_bool_str (const char *str)
 }
 
 static gboolean
-parse_xspf_track (TotemPlParser *parser, GFile *base_file, xmlDocPtr doc,
+parse_xspf_track (XplayerPlParser *parser, GFile *base_file, xmlDocPtr doc,
 		xmlNodePtr parent)
 {
 	xmlNodePtr node;
@@ -241,7 +241,7 @@ parse_xspf_track (TotemPlParser *parser, GFile *base_file, xmlDocPtr doc,
 	xmlChar *playing, *starttime;
 	GFile *resolved;
 	char *resolved_uri;
-	TotemPlParserResult retval = TOTEM_PL_PARSER_RESULT_ERROR;
+	XplayerPlParserResult retval = XPLAYER_PL_PARSER_RESULT_ERROR;
 
 	title = NULL;
 	uri = NULL;
@@ -356,56 +356,56 @@ parse_xspf_track (TotemPlParser *parser, GFile *base_file, xmlDocPtr doc,
 	}
 
 	if (uri == NULL) {
-		retval = TOTEM_PL_PARSER_RESULT_ERROR;
+		retval = XPLAYER_PL_PARSER_RESULT_ERROR;
 		goto bail;
 	}
 
-	resolved_uri = totem_pl_parser_resolve_uri (base_file, (char *) uri);
+	resolved_uri = xplayer_pl_parser_resolve_uri (base_file, (char *) uri);
 
 	if (g_strcmp0 (resolved_uri, (char *) uri) == 0) {
 		g_free (resolved_uri);
-		totem_pl_parser_add_uri (parser,
-					 TOTEM_PL_PARSER_FIELD_URI, uri,
-					 TOTEM_PL_PARSER_FIELD_TITLE, title,
-					 TOTEM_PL_PARSER_FIELD_DURATION_MS, duration,
-					 TOTEM_PL_PARSER_FIELD_IMAGE_URI, image_uri,
-					 TOTEM_PL_PARSER_FIELD_AUTHOR, artist,
-					 TOTEM_PL_PARSER_FIELD_ALBUM, album,
-					 TOTEM_PL_PARSER_FIELD_MOREINFO, moreinfo,
-					 TOTEM_PL_PARSER_FIELD_DOWNLOAD_URI, download_uri,
-					 TOTEM_PL_PARSER_FIELD_ID, id,
-					 TOTEM_PL_PARSER_FIELD_GENRE, genre,
-					 TOTEM_PL_PARSER_FIELD_FILESIZE, filesize,
-					 TOTEM_PL_PARSER_FIELD_SUBTITLE_URI, subtitle,
-					 TOTEM_PL_PARSER_FIELD_PLAYING, playing,
-					 TOTEM_PL_PARSER_FIELD_CONTENT_TYPE, mime_type,
-					 TOTEM_PL_PARSER_FIELD_STARTTIME, starttime,
+		xplayer_pl_parser_add_uri (parser,
+					 XPLAYER_PL_PARSER_FIELD_URI, uri,
+					 XPLAYER_PL_PARSER_FIELD_TITLE, title,
+					 XPLAYER_PL_PARSER_FIELD_DURATION_MS, duration,
+					 XPLAYER_PL_PARSER_FIELD_IMAGE_URI, image_uri,
+					 XPLAYER_PL_PARSER_FIELD_AUTHOR, artist,
+					 XPLAYER_PL_PARSER_FIELD_ALBUM, album,
+					 XPLAYER_PL_PARSER_FIELD_MOREINFO, moreinfo,
+					 XPLAYER_PL_PARSER_FIELD_DOWNLOAD_URI, download_uri,
+					 XPLAYER_PL_PARSER_FIELD_ID, id,
+					 XPLAYER_PL_PARSER_FIELD_GENRE, genre,
+					 XPLAYER_PL_PARSER_FIELD_FILESIZE, filesize,
+					 XPLAYER_PL_PARSER_FIELD_SUBTITLE_URI, subtitle,
+					 XPLAYER_PL_PARSER_FIELD_PLAYING, playing,
+					 XPLAYER_PL_PARSER_FIELD_CONTENT_TYPE, mime_type,
+					 XPLAYER_PL_PARSER_FIELD_STARTTIME, starttime,
 					 NULL);
 	} else {
 		resolved = g_file_new_for_uri (resolved_uri);
 		g_free (resolved_uri);
 
-		totem_pl_parser_add_uri (parser,
-					 TOTEM_PL_PARSER_FIELD_FILE, resolved,
-					 TOTEM_PL_PARSER_FIELD_TITLE, title,
-					 TOTEM_PL_PARSER_FIELD_DURATION_MS, duration,
-					 TOTEM_PL_PARSER_FIELD_IMAGE_URI, image_uri,
-					 TOTEM_PL_PARSER_FIELD_AUTHOR, artist,
-					 TOTEM_PL_PARSER_FIELD_ALBUM, album,
-					 TOTEM_PL_PARSER_FIELD_MOREINFO, moreinfo,
-					 TOTEM_PL_PARSER_FIELD_DOWNLOAD_URI, download_uri,
-					 TOTEM_PL_PARSER_FIELD_ID, id,
-					 TOTEM_PL_PARSER_FIELD_GENRE, genre,
-					 TOTEM_PL_PARSER_FIELD_FILESIZE, filesize,
-					 TOTEM_PL_PARSER_FIELD_SUBTITLE_URI, subtitle,
-					 TOTEM_PL_PARSER_FIELD_PLAYING, playing,
-					 TOTEM_PL_PARSER_FIELD_CONTENT_TYPE, mime_type,
-					 TOTEM_PL_PARSER_FIELD_STARTTIME, starttime,
+		xplayer_pl_parser_add_uri (parser,
+					 XPLAYER_PL_PARSER_FIELD_FILE, resolved,
+					 XPLAYER_PL_PARSER_FIELD_TITLE, title,
+					 XPLAYER_PL_PARSER_FIELD_DURATION_MS, duration,
+					 XPLAYER_PL_PARSER_FIELD_IMAGE_URI, image_uri,
+					 XPLAYER_PL_PARSER_FIELD_AUTHOR, artist,
+					 XPLAYER_PL_PARSER_FIELD_ALBUM, album,
+					 XPLAYER_PL_PARSER_FIELD_MOREINFO, moreinfo,
+					 XPLAYER_PL_PARSER_FIELD_DOWNLOAD_URI, download_uri,
+					 XPLAYER_PL_PARSER_FIELD_ID, id,
+					 XPLAYER_PL_PARSER_FIELD_GENRE, genre,
+					 XPLAYER_PL_PARSER_FIELD_FILESIZE, filesize,
+					 XPLAYER_PL_PARSER_FIELD_SUBTITLE_URI, subtitle,
+					 XPLAYER_PL_PARSER_FIELD_PLAYING, playing,
+					 XPLAYER_PL_PARSER_FIELD_CONTENT_TYPE, mime_type,
+					 XPLAYER_PL_PARSER_FIELD_STARTTIME, starttime,
 					 NULL);
 		g_object_unref (resolved);
 	}
 
-	retval = TOTEM_PL_PARSER_RESULT_SUCCESS;
+	retval = XPLAYER_PL_PARSER_RESULT_SUCCESS;
 
 bail:
 	SAFE_FREE (title);
@@ -423,11 +423,11 @@ bail:
 }
 
 static gboolean
-parse_xspf_trackList (TotemPlParser *parser, GFile *base_file, xmlDocPtr doc,
+parse_xspf_trackList (XplayerPlParser *parser, GFile *base_file, xmlDocPtr doc,
 		xmlNodePtr parent)
 {
 	xmlNodePtr node;
-	TotemPlParserResult retval = TOTEM_PL_PARSER_RESULT_ERROR;
+	XplayerPlParserResult retval = XPLAYER_PL_PARSER_RESULT_ERROR;
 
 	for (node = parent->children; node != NULL; node = node->next)
 	{
@@ -436,21 +436,21 @@ parse_xspf_trackList (TotemPlParser *parser, GFile *base_file, xmlDocPtr doc,
 
 		if (g_ascii_strcasecmp ((char *)node->name, "track") == 0)
 			if (parse_xspf_track (parser, base_file, doc, node) != FALSE)
-				retval = TOTEM_PL_PARSER_RESULT_SUCCESS;
+				retval = XPLAYER_PL_PARSER_RESULT_SUCCESS;
 	}
 
 	return retval;
 }
 
 static gboolean
-parse_xspf_entries (TotemPlParser *parser,
+parse_xspf_entries (XplayerPlParser *parser,
 		    GFile         *file,
 		    GFile         *base_file,
 		    xmlDocPtr      doc,
 		    xmlNodePtr     parent)
 {
 	xmlNodePtr node;
-	TotemPlParserResult retval = TOTEM_PL_PARSER_RESULT_ERROR;
+	XplayerPlParserResult retval = XPLAYER_PL_PARSER_RESULT_ERROR;
 	const xmlChar *title;
 	char *uri;
 
@@ -470,11 +470,11 @@ parse_xspf_entries (TotemPlParser *parser,
 		}
 	}
 
-	totem_pl_parser_add_uri (parser,
-				 TOTEM_PL_PARSER_FIELD_IS_PLAYLIST, TRUE,
-				 TOTEM_PL_PARSER_FIELD_URI, uri,
-				 TOTEM_PL_PARSER_FIELD_TITLE, title,
-				 TOTEM_PL_PARSER_FIELD_CONTENT_TYPE, "application/xspf+xml",
+	xplayer_pl_parser_add_uri (parser,
+				 XPLAYER_PL_PARSER_FIELD_IS_PLAYLIST, TRUE,
+				 XPLAYER_PL_PARSER_FIELD_URI, uri,
+				 XPLAYER_PL_PARSER_FIELD_TITLE, title,
+				 XPLAYER_PL_PARSER_FIELD_CONTENT_TYPE, "application/xspf+xml",
 				 NULL);
 
 	for (node = parent->children; node != NULL; node = node->next) {
@@ -483,12 +483,12 @@ parse_xspf_entries (TotemPlParser *parser,
 
 		if (g_ascii_strcasecmp ((char *)node->name, "trackList") == 0) {
 			if (parse_xspf_trackList (parser, base_file, doc, node) != FALSE)
-				retval = TOTEM_PL_PARSER_RESULT_SUCCESS;
+				retval = XPLAYER_PL_PARSER_RESULT_SUCCESS;
 		}
 	}
 
 	if (uri != NULL) {
-		totem_pl_parser_playlist_end (parser, uri);
+		xplayer_pl_parser_playlist_end (parser, uri);
 		g_free (uri);
 	}
 
@@ -508,16 +508,16 @@ is_xspf_doc (xmlDocPtr doc)
 	return TRUE;
 }
 
-TotemPlParserResult
-totem_pl_parser_add_xspf_with_contents (TotemPlParser *parser,
+XplayerPlParserResult
+xplayer_pl_parser_add_xspf_with_contents (XplayerPlParser *parser,
 					GFile *file,
 					GFile *base_file,
 					const char *contents,
-					TotemPlParseData *parse_data)
+					XplayerPlParseData *parse_data)
 {
 	xmlDocPtr doc;
 	xmlNodePtr node;
-	TotemPlParserResult retval = TOTEM_PL_PARSER_RESULT_UNHANDLED;
+	XplayerPlParserResult retval = XPLAYER_PL_PARSER_RESULT_UNHANDLED;
 
 	doc = xmlParseMemory (contents, strlen (contents));
 	if (doc == NULL)
@@ -526,43 +526,43 @@ totem_pl_parser_add_xspf_with_contents (TotemPlParser *parser,
 	if (is_xspf_doc (doc) == FALSE) {
 		if (doc != NULL)
 			xmlFreeDoc(doc);
-		return TOTEM_PL_PARSER_RESULT_ERROR;
+		return XPLAYER_PL_PARSER_RESULT_ERROR;
 	}
 
 	for (node = doc->children; node != NULL; node = node->next) {
 		if (parse_xspf_entries (parser, file, base_file, doc, node) != FALSE)
-			retval = TOTEM_PL_PARSER_RESULT_SUCCESS;
+			retval = XPLAYER_PL_PARSER_RESULT_SUCCESS;
 	}
 
 	xmlFreeDoc(doc);
 	return retval;
 }
 
-TotemPlParserResult
-totem_pl_parser_add_xspf (TotemPlParser *parser,
+XplayerPlParserResult
+xplayer_pl_parser_add_xspf (XplayerPlParser *parser,
 			  GFile *file,
 			  GFile *base_file,
-			  TotemPlParseData *parse_data,
+			  XplayerPlParseData *parse_data,
 			  gpointer data)
 {
 	xmlDocPtr doc;
 	xmlNodePtr node;
-	TotemPlParserResult retval = TOTEM_PL_PARSER_RESULT_UNHANDLED;
+	XplayerPlParserResult retval = XPLAYER_PL_PARSER_RESULT_UNHANDLED;
 
-	doc = totem_pl_parser_parse_xml_file (file);
+	doc = xplayer_pl_parser_parse_xml_file (file);
 	if (is_xspf_doc (doc) == FALSE) {
 		if (doc != NULL)
 			xmlFreeDoc(doc);
-		return TOTEM_PL_PARSER_RESULT_ERROR;
+		return XPLAYER_PL_PARSER_RESULT_ERROR;
 	}
 
 	for (node = doc->children; node != NULL; node = node->next) {
 		if (parse_xspf_entries (parser, file, base_file, doc, node) != FALSE)
-			retval = TOTEM_PL_PARSER_RESULT_SUCCESS;
+			retval = XPLAYER_PL_PARSER_RESULT_SUCCESS;
 	}
 
 	xmlFreeDoc(doc);
 	return retval;
 }
-#endif /* !TOTEM_PL_PARSER_MINI */
+#endif /* !XPLAYER_PL_PARSER_MINI */
 

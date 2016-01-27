@@ -3,10 +3,10 @@ exec_prefix=${prefix}
 libdir=/home/hadess/Projects/gnome-install/lib64
 includedir=${prefix}/include
 
-Name: totem-plparser-mini
-Description: Totem Playlist Parser library, mini version
+Name: xplayer-plparser-mini
+Description: Xplayer Playlist Parser library, mini version
 Version: 3.10.2
 Requires: glib-2.0 gobject-2.0 gio-2.0
 Requires.private: gthread-2.0
-Libs: -L${libdir} -ltotem-plparser-mini
-Cflags: -I${includedir}/totem-pl-parser/1/plparser
+Libs: -L${libdir} -lxplayer-plparser-mini
+Cflags: -I${includedir}/xplayer-pl-parser/1/plparser

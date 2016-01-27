@@ -20,11 +20,11 @@
    Author: Bastien Nocera <hadess@hadess.net>
  */
 
-#ifndef TOTEM_PL_PARSER_PRIVATE_H
-#define TOTEM_PL_PARSER_PRIVATE_H
+#ifndef XPLAYER_PL_PARSER_PRIVATE_H
+#define XPLAYER_PL_PARSER_PRIVATE_H
 
 #include <glib.h>
-#include "totem_internal.h"
+#include "xplayer_internal.h"
 
 /* A macro to call functions synchronously or asynchronously, depending on whether
  * we're parsing sync or async. This is necessary because when doing a sync parse,
@@ -39,13 +39,13 @@
  *
  * We determine if we're in the main thread by comparing the GThread pointer of the current
  * thread to a stored GThread pointer known to be from the main thread
- * (TotemPlParser->priv->main_thread).
+ * (XplayerPlParser->priv->main_thread).
  *
  * When using idle functions for async signal emission, we specify the same priority as
  * GSimpleAsyncResult uses for its completion function (G_PRIORITY_DEFAULT). If the
  * completion function has higher priority, the main loop will call it first.
  *
- * @p: a #TotemPlParser
+ * @p: a #XplayerPlParser
  * @c: callback (as if for g_idle_add())
  * @d: callback data
  */
@@ -56,16 +56,16 @@
 		g_idle_add_full (G_PRIORITY_DEFAULT, (GSourceFunc) c, d, NULL);	\
 }
 
-#ifndef TOTEM_PL_PARSER_MINI
-#include "totem-pl-parser.h"
+#ifndef XPLAYER_PL_PARSER_MINI
+#include "xplayer-pl-parser.h"
 #include <glib-object.h>
 #include <gio/gio.h>
 #include <gio/gio.h>
 #include <string.h>
 #include "xmlparser.h"
 #else
-#include "totem-pl-parser-mini.h"
-#endif /* !TOTEM_PL_PARSER_MINI */
+#include "xplayer-pl-parser-mini.h"
+#endif /* !XPLAYER_PL_PARSER_MINI */
 
 #define MIME_READ_CHUNK_SIZE 1024
 #define UNKNOWN_TYPE "application/octet-stream"
@@ -81,11 +81,11 @@
 #define ASX_MIME_TYPE "audio/x-ms-asx"
 #define ASF_REF_MIME_TYPE "video/x-ms-asf"
 
-#define TOTEM_PL_PARSER_FIELD_FILE		"gfile-object"
-#define TOTEM_PL_PARSER_FIELD_BASE_FILE		"gfile-object-base"
+#define XPLAYER_PL_PARSER_FIELD_FILE		"gfile-object"
+#define XPLAYER_PL_PARSER_FIELD_BASE_FILE		"gfile-object-base"
 
 #define DEBUG(file, x) {					\
-	if (totem_pl_parser_is_debugging_enabled (parser)) {	\
+	if (xplayer_pl_parser_is_debugging_enabled (parser)) {	\
 		if (file != NULL) {				\
 			char *uri;				\
 								\
@@ -99,7 +99,7 @@
 	}							\
 }
 #define DEBUG1(x) {						\
-	if (totem_pl_parser_is_debugging_enabled (parser)) {	\
+	if (xplayer_pl_parser_is_debugging_enabled (parser)) {	\
 		x;						\
 	}							\
 }
@@ -110,62 +110,62 @@ typedef struct {
 	guint recurse : 1;
 	guint force : 1;
 	guint disable_unsafe : 1;
-} TotemPlParseData;
+} XplayerPlParseData;
 
-#ifndef TOTEM_PL_PARSER_MINI
-char *totem_pl_parser_read_ini_line_string	(char **lines, const char *key);
-int   totem_pl_parser_read_ini_line_int		(char **lines, const char *key);
-char *totem_pl_parser_read_ini_line_string_with_sep (char **lines, const char *key,
+#ifndef XPLAYER_PL_PARSER_MINI
+char *xplayer_pl_parser_read_ini_line_string	(char **lines, const char *key);
+int   xplayer_pl_parser_read_ini_line_int		(char **lines, const char *key);
+char *xplayer_pl_parser_read_ini_line_string_with_sep (char **lines, const char *key,
 						     const char *sep);
-gboolean totem_pl_parser_is_debugging_enabled	(TotemPlParser *parser);
-char *totem_pl_parser_base_uri			(GFile *file);
-void totem_pl_parser_playlist_end		(TotemPlParser *parser,
+gboolean xplayer_pl_parser_is_debugging_enabled	(XplayerPlParser *parser);
+char *xplayer_pl_parser_base_uri			(GFile *file);
+void xplayer_pl_parser_playlist_end		(XplayerPlParser *parser,
 						 const char *playlist_title);
 
-int totem_pl_parser_num_entries			(TotemPlParser   *parser,
-                                                 TotemPlPlaylist *playlist);
+int xplayer_pl_parser_num_entries			(XplayerPlParser   *parser,
+                                                 XplayerPlPlaylist *playlist);
 
-gboolean totem_pl_parser_scheme_is_ignored	(TotemPlParser *parser,
+gboolean xplayer_pl_parser_scheme_is_ignored	(XplayerPlParser *parser,
 						 GFile *file);
-gboolean totem_pl_parser_line_is_empty		(const char *line);
-gboolean totem_pl_parser_write_string		(GOutputStream *stream,
+gboolean xplayer_pl_parser_line_is_empty		(const char *line);
+gboolean xplayer_pl_parser_write_string		(GOutputStream *stream,
 						 const char *buf,
 						 GError **error);
-gboolean totem_pl_parser_write_buffer		(GOutputStream *stream,
+gboolean xplayer_pl_parser_write_buffer		(GOutputStream *stream,
 						 const char *buf,
 						 guint size,
 						 GError **error);
-char * totem_pl_parser_relative			(GFile *output,
+char * xplayer_pl_parser_relative			(GFile *output,
 						 const char *filepath);
-char * totem_pl_parser_resolve_uri		(GFile *base_gfile,
+char * xplayer_pl_parser_resolve_uri		(GFile *base_gfile,
 						 const char *relative_uri);
-TotemPlParserResult totem_pl_parser_parse_internal (TotemPlParser *parser,
+XplayerPlParserResult xplayer_pl_parser_parse_internal (XplayerPlParser *parser,
 						    GFile *file,
 						    GFile *base_file,
-						    TotemPlParseData *parse_data);
-void totem_pl_parser_add_one_uri		(TotemPlParser *parser,
+						    XplayerPlParseData *parse_data);
+void xplayer_pl_parser_add_one_uri		(XplayerPlParser *parser,
 						 const char *uri,
 						 const char *title);
-void totem_pl_parser_add_one_file		(TotemPlParser *parser,
+void xplayer_pl_parser_add_one_file		(XplayerPlParser *parser,
 						 GFile *file,
 						 const char *title);
-void totem_pl_parser_add_uri			(TotemPlParser *parser,
+void xplayer_pl_parser_add_uri			(XplayerPlParser *parser,
 						 const char *first_property_name,
 						 ...);
-void totem_pl_parser_add_hash_table		(TotemPlParser *parser,
+void xplayer_pl_parser_add_hash_table		(XplayerPlParser *parser,
 						 GHashTable    *metadata,
 						 const char    *uri,
 						 gboolean       is_playlist);
-gboolean totem_pl_parser_ignore			(TotemPlParser *parser,
+gboolean xplayer_pl_parser_ignore			(XplayerPlParser *parser,
 						 const char *uri);
-xml_node_t * totem_pl_parser_parse_xml_relaxed	(char *contents,
+xml_node_t * xplayer_pl_parser_parse_xml_relaxed	(char *contents,
 						 gsize size);
-gboolean totem_pl_parser_fix_string		(const char  *name,
+gboolean xplayer_pl_parser_fix_string		(const char  *name,
 						 const char  *value,
 						 char       **ret);
 
-#endif /* !TOTEM_PL_PARSER_MINI */
+#endif /* !XPLAYER_PL_PARSER_MINI */
 
 G_END_DECLS
 
-#endif /* TOTEM_PL_PARSER_PRIVATE_H */
+#endif /* XPLAYER_PL_PARSER_PRIVATE_H */

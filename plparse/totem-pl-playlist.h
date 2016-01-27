@@ -19,95 +19,95 @@
    Author: Carlos Garnacho <carlos@lanedo.com>
  */
 
-#ifndef __TOTEM_PL_PLAYLIST_H__
-#define __TOTEM_PL_PLAYLIST_H__
+#ifndef __XPLAYER_PL_PLAYLIST_H__
+#define __XPLAYER_PL_PLAYLIST_H__
 
 #include <glib-object.h>
 
 G_BEGIN_DECLS
 
-#define TOTEM_TYPE_PL_PLAYLIST            (totem_pl_playlist_get_type ())
-#define TOTEM_PL_PLAYLIST(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), TOTEM_TYPE_PL_PLAYLIST, TotemPlPlaylist))
-#define TOTEM_PL_PLAYLIST_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), TOTEM_TYPE_PL_PLAYLIST, TotemPlPlaylistClass))
-#define TOTEM_IS_PL_PLAYLIST(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TOTEM_TYPE_PL_PLAYLIST))
-#define TOTEM_IS_PL_PLAYLIST_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), TOTEM_TYPE_PL_PLAYLIST))
+#define XPLAYER_TYPE_PL_PLAYLIST            (xplayer_pl_playlist_get_type ())
+#define XPLAYER_PL_PLAYLIST(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), XPLAYER_TYPE_PL_PLAYLIST, XplayerPlPlaylist))
+#define XPLAYER_PL_PLAYLIST_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), XPLAYER_TYPE_PL_PLAYLIST, XplayerPlPlaylistClass))
+#define XPLAYER_IS_PL_PLAYLIST(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), XPLAYER_TYPE_PL_PLAYLIST))
+#define XPLAYER_IS_PL_PLAYLIST_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), XPLAYER_TYPE_PL_PLAYLIST))
 
 /**
- * TotemPlPlaylist:
+ * XplayerPlPlaylist:
  *
- * All the fields in the #TotemPlPlaylist structure are private and should never be accessed directly.
+ * All the fields in the #XplayerPlPlaylist structure are private and should never be accessed directly.
  **/
 typedef struct {
         GObject parent_instance;
-} TotemPlPlaylist;
+} XplayerPlPlaylist;
 
 /**
- * TotemPlPlaylistClass:
+ * XplayerPlPlaylistClass:
  * @parent_class: the parent class
  *
- * All the fields in the #TotemPlPlaylistClass structure are private and should never be accessed directly.
+ * All the fields in the #XplayerPlPlaylistClass structure are private and should never be accessed directly.
  **/
 typedef struct {
         GObjectClass parent_class;
-} TotemPlPlaylistClass;
+} XplayerPlPlaylistClass;
 
 /**
- * TotemPlPlaylistIter:
+ * XplayerPlPlaylistIter:
  *
- * All the fields in the #TotemPlPlaylistIter structure are private and should never be accessed directly.
+ * All the fields in the #XplayerPlPlaylistIter structure are private and should never be accessed directly.
  **/
 typedef struct {
         /*< private >*/
         gpointer data1;
         gpointer data2;
-} TotemPlPlaylistIter;
+} XplayerPlPlaylistIter;
 
-GType totem_pl_playlist_get_type (void) G_GNUC_CONST;
+GType xplayer_pl_playlist_get_type (void) G_GNUC_CONST;
 
-TotemPlPlaylist * totem_pl_playlist_new (void);
+XplayerPlPlaylist * xplayer_pl_playlist_new (void);
 
-guint totem_pl_playlist_size   (TotemPlPlaylist     *playlist);
+guint xplayer_pl_playlist_size   (XplayerPlPlaylist     *playlist);
 
 /* Item insertion methods */
-void totem_pl_playlist_prepend (TotemPlPlaylist     *playlist,
-                                TotemPlPlaylistIter *iter);
-void totem_pl_playlist_append  (TotemPlPlaylist     *playlist,
-                                TotemPlPlaylistIter *iter);
-void totem_pl_playlist_insert  (TotemPlPlaylist     *playlist,
+void xplayer_pl_playlist_prepend (XplayerPlPlaylist     *playlist,
+                                XplayerPlPlaylistIter *iter);
+void xplayer_pl_playlist_append  (XplayerPlPlaylist     *playlist,
+                                XplayerPlPlaylistIter *iter);
+void xplayer_pl_playlist_insert  (XplayerPlPlaylist     *playlist,
                                 gint                 position,
-                                TotemPlPlaylistIter *iter);
+                                XplayerPlPlaylistIter *iter);
 
 /* Navigation methods */
-gboolean totem_pl_playlist_iter_first (TotemPlPlaylist     *playlist,
-                                       TotemPlPlaylistIter *iter);
-gboolean totem_pl_playlist_iter_next  (TotemPlPlaylist     *playlist,
-                                       TotemPlPlaylistIter *iter);
-gboolean totem_pl_playlist_iter_prev  (TotemPlPlaylist     *playlist,
-                                       TotemPlPlaylistIter *iter);
+gboolean xplayer_pl_playlist_iter_first (XplayerPlPlaylist     *playlist,
+                                       XplayerPlPlaylistIter *iter);
+gboolean xplayer_pl_playlist_iter_next  (XplayerPlPlaylist     *playlist,
+                                       XplayerPlPlaylistIter *iter);
+gboolean xplayer_pl_playlist_iter_prev  (XplayerPlPlaylist     *playlist,
+                                       XplayerPlPlaylistIter *iter);
 
 /* Item edition methods */
-gboolean totem_pl_playlist_get_value (TotemPlPlaylist     *playlist,
-                                      TotemPlPlaylistIter *iter,
+gboolean xplayer_pl_playlist_get_value (XplayerPlPlaylist     *playlist,
+                                      XplayerPlPlaylistIter *iter,
                                       const gchar         *key,
                                       GValue              *value);
-void totem_pl_playlist_get_valist    (TotemPlPlaylist     *playlist,
-                                      TotemPlPlaylistIter *iter,
+void xplayer_pl_playlist_get_valist    (XplayerPlPlaylist     *playlist,
+                                      XplayerPlPlaylistIter *iter,
                                       va_list              args);
-void totem_pl_playlist_get           (TotemPlPlaylist     *playlist,
-                                      TotemPlPlaylistIter *iter,
+void xplayer_pl_playlist_get           (XplayerPlPlaylist     *playlist,
+                                      XplayerPlPlaylistIter *iter,
                                       ...) G_GNUC_NULL_TERMINATED;
 
-gboolean totem_pl_playlist_set_value (TotemPlPlaylist     *playlist,
-                                      TotemPlPlaylistIter *iter,
+gboolean xplayer_pl_playlist_set_value (XplayerPlPlaylist     *playlist,
+                                      XplayerPlPlaylistIter *iter,
                                       const gchar         *key,
                                       GValue              *value);
-void totem_pl_playlist_set_valist    (TotemPlPlaylist     *playlist,
-                                      TotemPlPlaylistIter *iter,
+void xplayer_pl_playlist_set_valist    (XplayerPlPlaylist     *playlist,
+                                      XplayerPlPlaylistIter *iter,
                                       va_list              args);
-void totem_pl_playlist_set           (TotemPlPlaylist     *playlist,
-                                      TotemPlPlaylistIter *iter,
+void xplayer_pl_playlist_set           (XplayerPlPlaylist     *playlist,
+                                      XplayerPlPlaylistIter *iter,
                                       ...) G_GNUC_NULL_TERMINATED;
 
 G_END_DECLS
 
-#endif /* __TOTEM_PL_PLAYLIST_H__ */
+#endif /* __XPLAYER_PL_PLAYLIST_H__ */

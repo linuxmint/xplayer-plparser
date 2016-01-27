@@ -1,5 +1,5 @@
-# Korean translation for totem-pl-parser
-# This file is distributed under the same license as the totem-pl-parser package.
+# Korean translation for xplayer-pl-parser
+# This file is distributed under the same license as the xplayer-pl-parser package.
 #
 # Jang,Jae-Man <jacojang@korea.com>, 2003.
 # Young-Ho Cha <ganadist@gmail.com>, 2006
@@ -7,8 +7,8 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: totem-pl-parser\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=totem&keywords=I18N+L10N&component=playlist parser\n"
+"Project-Id-Version: xplayer-pl-parser\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&component=playlist parser\n"
 "POT-Creation-Date: 2014-03-07 11:45+0000\n"
 "PO-Revision-Date: 2014-03-08 02:57+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
@@ -19,38 +19,38 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../plparse/totem-disc.c:276 ../plparse/totem-disc.c:289
-#: ../plparse/totem-disc.c:533
+#: ../plparse/xplayer-disc.c:276 ../plparse/xplayer-disc.c:289
+#: ../plparse/xplayer-disc.c:533
 #, c-format
 msgid "Failed to mount %s."
 msgstr "%s 마운트 실패."
 
-#: ../plparse/totem-disc.c:418
+#: ../plparse/xplayer-disc.c:418
 #, c-format
 msgid "No media in drive for device '%s'."
 msgstr "'%s' 장치의 드라이브에 미디어가 없습니다."
 
-#: ../plparse/totem-disc.c:476
+#: ../plparse/xplayer-disc.c:476
 #, c-format
 msgid "Please check that a disc is present in the drive."
 msgstr "디스크가 드라이브 안에 들어 있는 지 확인하십시오."
 
-#: ../plparse/totem-disc.c:947
+#: ../plparse/xplayer-disc.c:947
 msgid "Audio CD"
 msgstr "오디오 CD"
 
-#: ../plparse/totem-disc.c:949
+#: ../plparse/xplayer-disc.c:949
 msgid "Video CD"
 msgstr "비디오 CD"
 
-#: ../plparse/totem-disc.c:951
+#: ../plparse/xplayer-disc.c:951
 msgid "DVD"
 msgstr "DVD"
 
-#: ../plparse/totem-disc.c:953
+#: ../plparse/xplayer-disc.c:953
 msgid "Digital Television"
 msgstr "디지털 TV"
 
-#: ../plparse/totem-disc.c:955
+#: ../plparse/xplayer-disc.c:955
 msgid "Blu-ray"
 msgstr "블루레이"

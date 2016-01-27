@@ -1,12 +1,12 @@
-# Catalan translation of totem.
+# Catalan translation of xplayer.
 # Copyright © 2002, 2003, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
-# This file is distributed under the same license as the totem package.
+# This file is distributed under the same license as the xplayer package.
 # Jordi Mallach <jordi@sindominio.net>, 2002, 2003, 2004, 2005, 2006, 2007.
 # Gil Forcada <gilforcada@guifi.net>, 2006, 2007, 2008.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: totem 2.14\n"
+"Project-Id-Version: xplayer 2.14\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-10-29 21:50+0100\n"
 "PO-Revision-Date: 2009-01-10 14:50+0100\n"
@@ -18,34 +18,34 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n!=1;\n"
 
-#: ../plparse/totem-disc.c:359 ../plparse/totem-disc.c:503
+#: ../plparse/xplayer-disc.c:359 ../plparse/xplayer-disc.c:503
 #, c-format
 msgid "Failed to mount %s."
 msgstr "No s'ha pogut muntar %s."
 
-#: ../plparse/totem-disc.c:392
+#: ../plparse/xplayer-disc.c:392
 #, c-format
 msgid "No media in drive for device '%s'."
 msgstr "No hi ha cap suport a la unitat del dispositiu «%s»."
 
-#: ../plparse/totem-disc.c:446
+#: ../plparse/xplayer-disc.c:446
 #, c-format
 msgid "Please check that a disc is present in the drive."
 msgstr "Comproveu que hi ha un disc en la unitat."
 
-#: ../plparse/totem-disc.c:889
+#: ../plparse/xplayer-disc.c:889
 msgid "Audio CD"
 msgstr "CD d'àudio"
 
-#: ../plparse/totem-disc.c:891
+#: ../plparse/xplayer-disc.c:891
 msgid "Video CD"
 msgstr "CD de vídeo"
 
-#: ../plparse/totem-disc.c:893
+#: ../plparse/xplayer-disc.c:893
 msgid "DVD"
 msgstr "DVD"
 
-#: ../plparse/totem-disc.c:895
+#: ../plparse/xplayer-disc.c:895
 msgid "Digital Television"
 msgstr "Televisió digital"
 
@@ -218,11 +218,11 @@ msgstr "Televisió digital"
 #~ msgid "Text Subtitles"
 #~ msgstr "Subtítols"
 
-#~ msgid "Totem Movie Player"
-#~ msgstr "Reproductor de vídeo Totem"
+#~ msgid "Xplayer Movie Player"
+#~ msgstr "Reproductor de vídeo Xplayer"
 
-#~ msgid "Totem Preferences"
-#~ msgstr "Preferències del Totem"
+#~ msgid "Xplayer Preferences"
+#~ msgstr "Preferències del Xplayer"
 
 #~ msgid "Visual Effects"
 #~ msgstr "Efectes visuals"
@@ -392,45 +392,45 @@ msgstr "Televisió digital"
 #~ msgid "Couldn't load the '%s' interface. %s"
 #~ msgstr "No s'ha pogut carregar la interfície «%s». %s"
 
-#~ msgid "Make sure that Totem is properly installed."
-#~ msgstr "Assegureu-vos que el Totem està instal·lat correctament."
+#~ msgid "Make sure that Xplayer is properly installed."
+#~ msgstr "Assegureu-vos que el Xplayer està instal·lat correctament."
 
 #~ msgid ""
-#~ "Totem is free software; you can redistribute it and/or modify it under "
+#~ "Xplayer is free software; you can redistribute it and/or modify it under "
 #~ "the terms of the GNU General Public License as published by the Free "
 #~ "Software Foundation; either version 2 of the License, or (at your option) "
 #~ "any later version."
 #~ msgstr ""
-#~ "El Totem és programari lliure; podeu redistribuir-lo i/o modificar-lo "
+#~ "El Xplayer és programari lliure; podeu redistribuir-lo i/o modificar-lo "
 #~ "sota els termes de la Llicència Pública General de GNU tal com ha estat "
 #~ "publicada per la Free Software Foundation; ja sigui la versió 2 de la "
 #~ "llicència o bé (si ho preferiu) qualsevol altra versió posterior."
 
 #~ msgid ""
-#~ "Totem is distributed in the hope that it will be useful, but WITHOUT ANY "
+#~ "Xplayer is distributed in the hope that it will be useful, but WITHOUT ANY "
 #~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
 #~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 #~ "details."
 #~ msgstr ""
-#~ "El Totem es distribueix amb l'expectativa que serà útil, però SENSE CAP "
+#~ "El Xplayer es distribueix amb l'expectativa que serà útil, però SENSE CAP "
 #~ "GARANTIA; ni tan sols la garantia implícita de COMERCIABILITAT o "
 #~ "ADEQUACIÓ PER UN PROPÒSIT PARTICULAR. Vegeu la Llicència Pública General "
 #~ "de GNU per a obtenir-ne més detalls."
 
 #~ msgid ""
 #~ "You should have received a copy of the GNU General Public License along "
-#~ "with Totem; if not, write to the Free Software Foundation, Inc., 59 "
+#~ "with Xplayer; if not, write to the Free Software Foundation, Inc., 59 "
 #~ "Temple Place, Suite 330, Boston, MA  02111-1307  USA"
 #~ msgstr ""
 #~ "Hauríeu d'haver rebut una còpia de la Llicència Pública General GNU "
-#~ "juntament amb el Totem; en cas contrari, escriviu a la Free Software "
+#~ "juntament amb el Xplayer; en cas contrari, escriviu a la Free Software "
 #~ "Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA "
 
 #~ msgid ""
-#~ "Totem contains an exception to allow the use of proprietary GStreamer "
+#~ "Xplayer contains an exception to allow the use of proprietary GStreamer "
 #~ "plugins."
 #~ msgstr ""
-#~ "El Totem conté una excepció per permetre l'ús de connectors GStreamer de "
+#~ "El Xplayer conté una excepció per permetre l'ús de connectors GStreamer de "
 #~ "propietat."
 
 #~ msgid "None"
@@ -462,8 +462,8 @@ msgstr "Televisió digital"
 #~ "Jordi Mallach <jordi@sindominio.net>\n"
 #~ "Gil Forcada <gilforcada@guifi.net>"
 
-#~ msgid "Totem Website"
-#~ msgstr "Pàgina web del Totem"
+#~ msgid "Xplayer Website"
+#~ msgstr "Pàgina web del Xplayer"
 
 #~ msgid "Configure Plugins"
 #~ msgstr "Configura els connectors"
@@ -832,18 +832,18 @@ msgstr "Televisió digital"
 #~ msgstr "Voleu habilitar els efectes visuals?"
 
 #~ msgid ""
-#~ "It seems you are running Totem remotely.\n"
+#~ "It seems you are running Xplayer remotely.\n"
 #~ "Are you sure you want to enable the visual effects?"
 #~ msgstr ""
-#~ "Sembla que esteu executant el Totem remotament.\n"
+#~ "Sembla que esteu executant el Xplayer remotament.\n"
 #~ "Esteu segur que voleu habilitar els efectes visuals?"
 
 #~ msgid ""
 #~ "The change of this setting will only take effect for the next movie, or "
-#~ "when Totem is restarted."
+#~ "when Xplayer is restarted."
 #~ msgstr ""
 #~ "El canvi d'aquest paràmetre es veurà a partir de la propera pel·lícula o "
-#~ "quan es reiniciï el Totem."
+#~ "quan es reiniciï el Xplayer."
 
 #~ msgid ""
 #~ "Changing the visuals effect type will require a restart to take effect."
@@ -852,11 +852,11 @@ msgstr "Televisió digital"
 #~ "canvis siguin efectius."
 
 #~ msgid ""
-#~ "The change of audio output type will only take effect when Totem is "
+#~ "The change of audio output type will only take effect when Xplayer is "
 #~ "restarted."
 #~ msgstr ""
 #~ "El canvi del tipus de sortida d'àudio serà efectiu quan es reiniciï el "
-#~ "Totem."
+#~ "Xplayer."
 
 #~ msgid "Preferences"
 #~ msgstr "Preferències"
@@ -1021,38 +1021,38 @@ msgstr "Televisió digital"
 #~ msgid "Paused"
 #~ msgstr "En pausa"
 
-#~ msgid "Totem could not play '%s'."
-#~ msgstr "El Totem no ha pogut reproduir «%s»."
+#~ msgid "Xplayer could not play '%s'."
+#~ msgstr "El Xplayer no ha pogut reproduir «%s»."
 
 #~ msgid ""
-#~ "Totem cannot play this type of media (%s) because it does not have the "
+#~ "Xplayer cannot play this type of media (%s) because it does not have the "
 #~ "appropriate plugins to be able to read from the disc."
 #~ msgstr ""
-#~ "El Totem no pot reproduir aquest tipus de medi (%s) perquè no té els "
+#~ "El Xplayer no pot reproduir aquest tipus de medi (%s) perquè no té els "
 #~ "connectors adequats per a poder llegir-lo del disc."
 
 #~ msgid ""
-#~ "Totem cannot play this type of media (%s) because you do not have the "
+#~ "Xplayer cannot play this type of media (%s) because you do not have the "
 #~ "appropriate plugins to handle it."
 #~ msgstr ""
-#~ "El Totem no pot reproduir aquest tipus de medi (%s) perquè no teniu el "
+#~ "El Xplayer no pot reproduir aquest tipus de medi (%s) perquè no teniu el "
 #~ "connector adequat per a gestionar-lo."
 
 #~ msgid ""
-#~ "Please install the necessary plugins and restart Totem to be able to play "
+#~ "Please install the necessary plugins and restart Xplayer to be able to play "
 #~ "this media."
 #~ msgstr ""
-#~ "Instal·leu els connectors necessaris i reinicieu el Totem per a poder "
+#~ "Instal·leu els connectors necessaris i reinicieu el Xplayer per a poder "
 #~ "reproduir aquest medi."
 
 #~ msgid "More information about media plugins"
 #~ msgstr "Més informació sobre els connectors de medi"
 
 #~ msgid ""
-#~ "Totem could not play this media (%s) although a plugin is present to "
+#~ "Xplayer could not play this media (%s) although a plugin is present to "
 #~ "handle it."
 #~ msgstr ""
-#~ "El Totem no ha pogut reproduir aquest medi (%s) encara que hi ha un "
+#~ "El Xplayer no ha pogut reproduir aquest medi (%s) encara que hi ha un "
 #~ "connector per a gestionar-lo."
 
 #~ msgid ""
@@ -1062,14 +1062,14 @@ msgstr "Televisió digital"
 #~ "Hauríeu de comprovar que hi ha un disc en la unitat i que està "
 #~ "correctament configurada."
 
-#~ msgid "Totem was not able to play this disc."
-#~ msgstr "El Totem no pot reproduir aquest disc."
+#~ msgid "Xplayer was not able to play this disc."
+#~ msgstr "El Xplayer no pot reproduir aquest disc."
 
 #~ msgid "No reason."
 #~ msgstr "Sense motiu."
 
-#~ msgid "Totem does not support playback of Audio CDs"
-#~ msgstr "El Totem no sap reproduir els cd d'àudio"
+#~ msgid "Xplayer does not support playback of Audio CDs"
+#~ msgstr "El Xplayer no sap reproduir els cd d'àudio"
 
 #~ msgid ""
 #~ "Please consider using a music player or a CD extractor to play this CD"
@@ -1077,9 +1077,9 @@ msgstr "Televisió digital"
 #~ "Podeu utilitzar un reproductor de música o un extractor de cd per "
 #~ "reproduir-lo"
 
-#~ msgid "Totem could not get a screenshot of that film."
+#~ msgid "Xplayer could not get a screenshot of that film."
 #~ msgstr ""
-#~ "El Totem no ha pogut obtenir una captura de pantalla d'aquesta pel·lícula."
+#~ "El Xplayer no ha pogut obtenir una captura de pantalla d'aquesta pel·lícula."
 
 #~ msgid "This is not supposed to happen; please file a bug report."
 #~ msgstr "Això no hauria de passar. Envieu un informe d'error."
@@ -1087,8 +1087,8 @@ msgstr "Televisió digital"
 #~ msgid "No error message"
 #~ msgstr "No hi ha cap missatge d'error"
 
-#~ msgid "Totem could not display the help contents."
-#~ msgstr "El Totem no ha pogut mostrar els continguts de l'ajuda."
+#~ msgid "Xplayer could not display the help contents."
+#~ msgstr "El Xplayer no ha pogut mostrar els continguts de l'ajuda."
 
 #~ msgid "An error occurred"
 #~ msgstr "S'ha produït un error"
@@ -1102,24 +1102,24 @@ msgstr "Televisió digital"
 #~ msgid "Next Chapter/Movie"
 #~ msgstr "Capítol/pel·lícula següent"
 
-#~ msgid "Totem could not startup."
-#~ msgstr "No s'ha pogut executar el Totem."
+#~ msgid "Xplayer could not startup."
+#~ msgstr "No s'ha pogut executar el Xplayer."
 
 #~ msgid "Could not initialize the thread-safe libraries."
 #~ msgstr ""
 #~ "No s'han pogut inicialitzar les biblioteques que permeten fils segurs."
 
-#~ msgid "Verify your system installation. Totem will now exit."
-#~ msgstr "Verifiqueu la instal·lació del sistema. El Totem sortirà ara."
+#~ msgid "Verify your system installation. Xplayer will now exit."
+#~ msgstr "Verifiqueu la instal·lació del sistema. El Xplayer sortirà ara."
 
 #~ msgid "- Play movies and songs"
 #~ msgstr "- Reproduïu vídeos i cançons"
 
-#~ msgid "Totem could not parse the command-line options"
-#~ msgstr "El Totem no ha pogut analitzar les opcions de la línia d'ordres"
+#~ msgid "Xplayer could not parse the command-line options"
+#~ msgstr "El Xplayer no ha pogut analitzar les opcions de la línia d'ordres"
 
-#~ msgid "Totem could not initialize the configuration engine."
-#~ msgstr "El Totem no ha pogut inicialitzar el motor de configuració."
+#~ msgid "Xplayer could not initialize the configuration engine."
+#~ msgstr "El Xplayer no ha pogut inicialitzar el motor de configuració."
 
 #~ msgid "Make sure that GNOME is properly installed."
 #~ msgstr "Assegureu-vos que el GNOME està instal·lat correctament."
@@ -1415,18 +1415,18 @@ msgstr "Televisió digital"
 #~ msgid "Bemused"
 #~ msgstr "Bemused"
 
-#~ msgid "Control Totem through a mobile phone with a Bemused client"
+#~ msgid "Control Xplayer through a mobile phone with a Bemused client"
 #~ msgstr ""
-#~ "Controleu el Totem a través d'un telèfon mòbil amb un client Bemused"
+#~ "Controleu el Xplayer a través d'un telèfon mòbil amb un client Bemused"
 
 #~ msgid "Untitled %d"
 #~ msgstr "%d desconegut"
 
-#~ msgid "Totem Bemused Server"
-#~ msgstr "Servidor Bemused del Totem"
+#~ msgid "Xplayer Bemused Server"
+#~ msgstr "Servidor Bemused del Xplayer"
 
-#~ msgid "Totem Bemused Server version 1.0"
-#~ msgstr "Servidor Bemused del Totem (versió 1.0)"
+#~ msgid "Xplayer Bemused Server version 1.0"
+#~ msgstr "Servidor Bemused del Xplayer (versió 1.0)"
 
 #~ msgid "Instant Messenger status"
 #~ msgstr "Estat en la missatgeria instantània"
@@ -1507,8 +1507,8 @@ msgstr "Televisió digital"
 #~ msgid "No URI to play"
 #~ msgstr "No hi ha cap URI per a reproduir"
 
-#~ msgid "Totem could not play '%s'"
-#~ msgstr "El Totem no ha pogut reproduir «%s»"
+#~ msgid "Xplayer could not play '%s'"
+#~ msgstr "El Xplayer no ha pogut reproduir «%s»"
 
 #~ msgid "Opening %s"
 #~ msgstr "S'està obrint %s"
@@ -1519,11 +1519,11 @@ msgstr "Televisió digital"
 #~ msgid "Browser Plugin using %s"
 #~ msgstr "Connector de navegació que utilitza %s"
 
-#~ msgid "Totem Browser Plugin"
-#~ msgstr "Navegador de connectors del Totem"
+#~ msgid "Xplayer Browser Plugin"
+#~ msgstr "Navegador de connectors del Xplayer"
 
-#~ msgid "The Totem plugin could not be started."
-#~ msgstr "No s'ha pogut iniciar el connector del Totem."
+#~ msgid "The Xplayer plugin could not be started."
+#~ msgstr "No s'ha pogut iniciar el connector del Xplayer."
 
 #~ msgid "No playlist or playlist empty"
 #~ msgstr "No hi ha cap llista de reproducció o bé és buida"
@@ -1532,13 +1532,13 @@ msgstr "Televisió digital"
 #~ msgid "Could not initialise the thread-safe libraries."
 #~ msgstr "No s'han pogut inicialitzar les biblioteques de fils segurs."
 
-#~ msgid "Verify your system installation. The Totem plugin will now exit."
+#~ msgid "Verify your system installation. The Xplayer plugin will now exit."
 #~ msgstr ""
-#~ "Verifiqueu la instal·lació del sistema. El connector del Totem sortirà "
+#~ "Verifiqueu la instal·lació del sistema. El connector del Xplayer sortirà "
 #~ "ara."
 
-#~ msgid "Totem could not eject the optical media."
-#~ msgstr "El Totem no ha pogut expulsar el medi òptic."
+#~ msgid "Xplayer could not eject the optical media."
+#~ msgstr "El Xplayer no ha pogut expulsar el medi òptic."
 
 #~ msgid "Media Player Keys"
 #~ msgstr "Tecles del reproductor multimèdia"
@@ -1648,8 +1648,8 @@ msgstr "Televisió digital"
 #~ msgid "playlist"
 #~ msgstr "llista de reproducció"
 
-#~ msgid "Totem could not seek in '%s'."
-#~ msgstr "El Totem no ha pogut cercar en «%s»."
+#~ msgid "Xplayer could not seek in '%s'."
+#~ msgstr "El Xplayer no ha pogut cercar en «%s»."
 
 #~ msgid "main window"
 #~ msgstr "finestra principal"
@@ -1896,21 +1896,21 @@ msgstr "Televisió digital"
 #~ msgid "Failed to read symbolic link %s: %s"
 #~ msgstr "No s'ha pogut llegir l'enllaç simbòlic %s: %s"
 
-#~ msgid "Totem couldn't show the movie properties window."
+#~ msgid "Xplayer couldn't show the movie properties window."
 #~ msgstr ""
-#~ "El Totem no ha pogut mostrar la finestra de propietats de la pel·lícula."
+#~ "El Xplayer no ha pogut mostrar la finestra de propietats de la pel·lícula."
 
-#~ msgid "Make sure that Totem is correctly installed."
-#~ msgstr "Assegureu-vos que el Totem està instal·lat correctament."
+#~ msgid "Make sure that Xplayer is correctly installed."
+#~ msgstr "Assegureu-vos que el Xplayer està instal·lat correctament."
 
 #~ msgid "_DXR3 TV-out"
 #~ msgstr "Sortida-TV _DXR3"
 
-#~ msgid "Totem"
-#~ msgstr "Totem"
+#~ msgid "Xplayer"
+#~ msgstr "Xplayer"
 
-#~ msgid "Totem Video Window"
-#~ msgstr "Finestra de vídeo del Totem"
+#~ msgid "Xplayer Video Window"
+#~ msgstr "Finestra de vídeo del Xplayer"
 
 #~ msgid "Failed to open media file; unknown error"
 #~ msgstr ""
@@ -2050,15 +2050,15 @@ msgstr "Televisió digital"
 #~ msgstr ""
 #~ "No s'ha pogut carregar la interfície principal (mozilla-viewer.glade)."
 
-#~ msgid "Make sure that the Totem plugin is properly installed."
+#~ msgid "Make sure that the Xplayer plugin is properly installed."
 #~ msgstr ""
-#~ "Assegureu-vos que el connector del Totem està instal·lat correctament."
+#~ "Assegureu-vos que el connector del Xplayer està instal·lat correctament."
 
-#~ msgid "Totem could not start the file manager."
-#~ msgstr "El Totem no ha pogut iniciar el gestor de fitxers."
+#~ msgid "Xplayer could not start the file manager."
+#~ msgstr "El Xplayer no ha pogut iniciar el gestor de fitxers."
 
-#~ msgid "%s - Totem Movie Player"
-#~ msgstr "%s - Reproductor de vídeo Totem"
+#~ msgid "%s - Xplayer Movie Player"
+#~ msgstr "%s - Reproductor de vídeo Xplayer"
 
 #~ msgid "Please file a bug, this isn't supposed to happen."
 #~ msgstr "Si us plau, envieu un informe d'error, açò no hauria de passar."
@@ -2141,8 +2141,8 @@ msgstr "Televisió digital"
 #~ msgid "Video and Audio information properties page"
 #~ msgstr "Pàgina d'informació de propietats de vídeo i àudio"
 
-#~ msgid "Couldn't load the main interface (totem.glade)."
-#~ msgstr "No s'ha pogut carregar la interfície principal (totem.glade)."
+#~ msgid "Couldn't load the main interface (xplayer.glade)."
+#~ msgstr "No s'ha pogut carregar la interfície principal (xplayer.glade)."
 
 #~ msgid "Couldn't load the interface for the playlist."
 #~ msgstr ""
@@ -2223,8 +2223,8 @@ msgstr "Televisió digital"
 #~ msgid "Download"
 #~ msgstr "Descarrega"
 
-#~ msgid "%s - Totem"
-#~ msgstr "%s - Totem"
+#~ msgid "%s - Xplayer"
+#~ msgstr "%s - Xplayer"
 
 #~ msgid "Buffering: %d%%"
 #~ msgstr "S'està fent «buffering»: %d%%"
@@ -2267,14 +2267,14 @@ msgstr "Televisió digital"
 #~ msgstr "No s'ha trobat una eixida de vídeo convenient."
 
 #~ msgid ""
-#~ "There is no plugin for Totem to handle '%s'.\n"
-#~ "Totem will not be able to play it."
+#~ "There is no plugin for Xplayer to handle '%s'.\n"
+#~ "Xplayer will not be able to play it."
 #~ msgstr ""
-#~ "No hi ha cap connector del Totem per a gestionar «%s».\n"
-#~ "El Totem no podrà reproduir-ho."
+#~ "No hi ha cap connector del Xplayer per a gestionar «%s».\n"
+#~ "El Xplayer no podrà reproduir-ho."
 
-#~ msgid "Only start if there isn't already a Totem application running"
-#~ msgstr "Només s'inicia si no hi ha una aplicació del Totem executant-se"
+#~ msgid "Only start if there isn't already a Xplayer application running"
+#~ msgstr "Només s'inicia si no hi ha una aplicació del Xplayer executant-se"
 
 #~ msgid "Next stream"
 #~ msgstr "Següent flux"

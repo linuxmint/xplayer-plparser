@@ -1,6 +1,6 @@
-# Danish translation of totem-pl-parser.
+# Danish translation of xplayer-pl-parser.
 # Copyright (C) 2002-2009 Free Software Foundation, Inc.
-# This file is distributed under the same license as the totem-pl-parser package.
+# This file is distributed under the same license as the xplayer-pl-parser package.
 # Ole Laursen <olau@hardworking.dk>, 2002, 03.
 # Martin Willemoes Hansen <mwh@sysrq.dk>, 2005.
 # Lasse Bang Mikkelsen <lbm@fatalerror.dk>, 2006.
@@ -13,7 +13,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: totem-pl-parser\n"
+"Project-Id-Version: xplayer-pl-parser\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-03-19 22:34+0100\n"
 "PO-Revision-Date: 2014-03-15 13:43+0100\n"
@@ -28,39 +28,39 @@ msgstr ""
 "X-Poedit-Country: DENMARK\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: ../plparse/totem-disc.c:276 ../plparse/totem-disc.c:289
-#: ../plparse/totem-disc.c:533
+#: ../plparse/xplayer-disc.c:276 ../plparse/xplayer-disc.c:289
+#: ../plparse/xplayer-disc.c:533
 #, c-format
 msgid "Failed to mount %s."
 msgstr "Kunne ikke montere %s."
 
-#: ../plparse/totem-disc.c:418
+#: ../plparse/xplayer-disc.c:418
 #, c-format
 msgid "No media in drive for device '%s'."
 msgstr "Intet medie i drev for enhed \"%s\"."
 
-#: ../plparse/totem-disc.c:476
+#: ../plparse/xplayer-disc.c:476
 #, c-format
 msgid "Please check that a disc is present in the drive."
 msgstr "Kontrollér venligst at der er en disk i drevet."
 
-#: ../plparse/totem-disc.c:947
+#: ../plparse/xplayer-disc.c:947
 msgid "Audio CD"
 msgstr "Lyd-cd"
 
-#: ../plparse/totem-disc.c:949
+#: ../plparse/xplayer-disc.c:949
 msgid "Video CD"
 msgstr "Video-cd"
 
-#: ../plparse/totem-disc.c:951
+#: ../plparse/xplayer-disc.c:951
 msgid "DVD"
 msgstr "DVD"
 
-#: ../plparse/totem-disc.c:953
+#: ../plparse/xplayer-disc.c:953
 msgid "Digital Television"
 msgstr "Digitalt fjernsyn"
 
-#: ../plparse/totem-disc.c:955
+#: ../plparse/xplayer-disc.c:955
 msgid "Blu-ray"
 msgstr "Blu-ray"
 
@@ -220,11 +220,11 @@ msgstr "Blu-ray"
 #~ msgid "Text Subtitles"
 #~ msgstr "Undertekster som tekst"
 
-#~ msgid "Totem Movie Player"
-#~ msgstr "Totem - filmafspiller"
+#~ msgid "Xplayer Movie Player"
+#~ msgstr "Xplayer - filmafspiller"
 
-#~ msgid "Totem Preferences"
-#~ msgstr "Indstillinger for Totem"
+#~ msgid "Xplayer Preferences"
+#~ msgstr "Indstillinger for Xplayer"
 
 #~ msgid "Visual Effects"
 #~ msgstr "Visuelle effekter"
@@ -390,45 +390,45 @@ msgstr "Blu-ray"
 #~ msgid "Couldn't load the '%s' interface. %s"
 #~ msgstr "Kunne ikke indlæse grænsefladen \"%s\". %s"
 
-#~ msgid "Make sure that Totem is properly installed."
-#~ msgstr "Sikr dig at Totem er korrekt installeret."
+#~ msgid "Make sure that Xplayer is properly installed."
+#~ msgstr "Sikr dig at Xplayer er korrekt installeret."
 
 #~ msgid ""
-#~ "Totem is free software; you can redistribute it and/or modify it under "
+#~ "Xplayer is free software; you can redistribute it and/or modify it under "
 #~ "the terms of the GNU General Public License as published by the Free "
 #~ "Software Foundation; either version 2 of the License, or (at your option) "
 #~ "any later version."
 #~ msgstr ""
-#~ "Totem er fri software; det kan distribueres og/eller modificeres som "
+#~ "Xplayer er fri software; det kan distribueres og/eller modificeres som "
 #~ "betinget af GNU General Public License, udarbejdet af Free Software "
 #~ "Foundation; enten version 2 af licensen eller, efter eget valg, enhver "
 #~ "nyere version."
 
 #~ msgid ""
-#~ "Totem is distributed in the hope that it will be useful, but WITHOUT ANY "
+#~ "Xplayer is distributed in the hope that it will be useful, but WITHOUT ANY "
 #~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
 #~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 #~ "details."
 #~ msgstr ""
-#~ "Totem distribueres i håb om at det viser sig nyttigt, men UDEN NOGEN "
+#~ "Xplayer distribueres i håb om at det viser sig nyttigt, men UDEN NOGEN "
 #~ "GARANTI; selv uden de underforståede garantier SALGBARHED eller EGNETHED "
 #~ "TIL ET BESTEMT FORMÅL, idet der henvises til GNU General Public License "
 #~ "for detaljer."
 
 #~ msgid ""
 #~ "You should have received a copy of the GNU General Public License along "
-#~ "with Totem; if not, write to the Free Software Foundation, Inc., 59 "
+#~ "with Xplayer; if not, write to the Free Software Foundation, Inc., 59 "
 #~ "Temple Place, Suite 330, Boston, MA  02111-1307  USA"
 #~ msgstr ""
 #~ "Du bør have modtaget en kopi af GNU General Public License sammen med "
-#~ "Totem; er dette ikke tilfældet, så skriv til Free Software Foundation, "
+#~ "Xplayer; er dette ikke tilfældet, så skriv til Free Software Foundation, "
 #~ "Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA"
 
 #~ msgid ""
-#~ "Totem contains an exception to allow the use of proprietary GStreamer "
+#~ "Xplayer contains an exception to allow the use of proprietary GStreamer "
 #~ "plugins."
 #~ msgstr ""
-#~ "Totem indeholder en undtagelse for at tillade brug af proprietære "
+#~ "Xplayer indeholder en undtagelse for at tillade brug af proprietære "
 #~ "GStreamer-udvidelsesmoduler."
 
 #~ msgid "None"
@@ -465,8 +465,8 @@ msgstr "Blu-ray"
 #~ "Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
 #~ "Mere info: http://www.dansk-gruppen.dk"
 
-#~ msgid "Totem Website"
-#~ msgstr "Totems hjemmeside"
+#~ msgid "Xplayer Website"
+#~ msgstr "Xplayers hjemmeside"
 
 #~ msgid "Configure Plugins"
 #~ msgstr "Konfigurér udvidelsesmoduler"
@@ -520,7 +520,7 @@ msgstr "Blu-ray"
 #~ msgstr "Ryd afspilningsliste"
 
 #~ msgid "Prefere_nces"
-#~ msgstr "_Indstillinger for Totem"
+#~ msgstr "_Indstillinger for Xplayer"
 
 #~ msgid "Plugins..."
 #~ msgstr "Udvidelsesmoduler..."
@@ -835,18 +835,18 @@ msgstr "Blu-ray"
 #~ msgstr "Aktivér visuelle effekter?"
 
 #~ msgid ""
-#~ "It seems you are running Totem remotely.\n"
+#~ "It seems you are running Xplayer remotely.\n"
 #~ "Are you sure you want to enable the visual effects?"
 #~ msgstr ""
-#~ "Det ser ud til at du kører Totem via et netværk.\n"
+#~ "Det ser ud til at du kører Xplayer via et netværk.\n"
 #~ "Er du sikker på du vil aktivere de visuelle effekter?"
 
 #~ msgid ""
 #~ "The change of this setting will only take effect for the next movie, or "
-#~ "when Totem is restarted."
+#~ "when Xplayer is restarted."
 #~ msgstr ""
 #~ "Ændringen af denne indstilling træder først i kraft for den næste film "
-#~ "eller når Totem bliver genstartet."
+#~ "eller når Xplayer bliver genstartet."
 
 #~ msgid ""
 #~ "Changing the visuals effect type will require a restart to take effect."
@@ -854,10 +854,10 @@ msgstr "Blu-ray"
 #~ "Skift af typen af visuel effekt kræver en genstart for at træde i kraft."
 
 #~ msgid ""
-#~ "The change of audio output type will only take effect when Totem is "
+#~ "The change of audio output type will only take effect when Xplayer is "
 #~ "restarted."
 #~ msgstr ""
-#~ "Ændringen af lyduddatatype træder først i kraft når Totem bliver "
+#~ "Ændringen af lyduddatatype træder først i kraft når Xplayer bliver "
 #~ "genstartet."
 
 #~ msgid "Preferences"
@@ -1023,38 +1023,38 @@ msgstr "Blu-ray"
 #~ msgid "Paused"
 #~ msgstr "På pause"
 
-#~ msgid "Totem could not play '%s'."
-#~ msgstr "Totem kunne ikke afspille \"%s\"."
+#~ msgid "Xplayer could not play '%s'."
+#~ msgstr "Xplayer kunne ikke afspille \"%s\"."
 
 #~ msgid ""
-#~ "Totem cannot play this type of media (%s) because it does not have the "
+#~ "Xplayer cannot play this type of media (%s) because it does not have the "
 #~ "appropriate plugins to be able to read from the disc."
 #~ msgstr ""
-#~ "Totem kan ikke afspille denne medietype (%s) fordi du ikke har de "
+#~ "Xplayer kan ikke afspille denne medietype (%s) fordi du ikke har de "
 #~ "nødvendige udvidelsesmoduler til at læse dem fra disken."
 
 #~ msgid ""
-#~ "Totem cannot play this type of media (%s) because you do not have the "
+#~ "Xplayer cannot play this type of media (%s) because you do not have the "
 #~ "appropriate plugins to handle it."
 #~ msgstr ""
-#~ "Totem kan ikke afspille denne medietype (%s) fordi du ikke har de "
+#~ "Xplayer kan ikke afspille denne medietype (%s) fordi du ikke har de "
 #~ "nødvendige udvidelsesmoduler til at håndtere den."
 
 #~ msgid ""
-#~ "Please install the necessary plugins and restart Totem to be able to play "
+#~ "Please install the necessary plugins and restart Xplayer to be able to play "
 #~ "this media."
 #~ msgstr ""
-#~ "Installér de nødvendige moduler og genstart Totem hvis du vil afspille "
+#~ "Installér de nødvendige moduler og genstart Xplayer hvis du vil afspille "
 #~ "denne type."
 
 #~ msgid "More information about media plugins"
 #~ msgstr "Mere information om mediemoduler"
 
 #~ msgid ""
-#~ "Totem could not play this media (%s) although a plugin is present to "
+#~ "Xplayer could not play this media (%s) although a plugin is present to "
 #~ "handle it."
 #~ msgstr ""
-#~ "Totem kunne ikke afspille dette medie (%s) selvom et modul er "
+#~ "Xplayer kunne ikke afspille dette medie (%s) selvom et modul er "
 #~ "tilgængeligt til at håndtere det."
 
 #~ msgid ""
@@ -1063,14 +1063,14 @@ msgstr "Blu-ray"
 #~ msgstr ""
 #~ "Kontrollér at disken sidder i drevet og at det er korrekt konfigureret."
 
-#~ msgid "Totem was not able to play this disc."
-#~ msgstr "Totem kunne ikke afspille disken."
+#~ msgid "Xplayer was not able to play this disc."
+#~ msgstr "Xplayer kunne ikke afspille disken."
 
 #~ msgid "No reason."
 #~ msgstr "Ingen begrundelse."
 
-#~ msgid "Totem could not get a screenshot of that film."
-#~ msgstr "Totem kunne ikke skaffe et skærmbillede af den film."
+#~ msgid "Xplayer could not get a screenshot of that film."
+#~ msgstr "Xplayer kunne ikke skaffe et skærmbillede af den film."
 
 #~ msgid "This is not supposed to happen; please file a bug report."
 #~ msgstr "Dette burde ikke ske. Rapportér venligst fejlen."
@@ -1078,8 +1078,8 @@ msgstr "Blu-ray"
 #~ msgid "No error message"
 #~ msgstr "Ingen fejlmeddelelse"
 
-#~ msgid "Totem could not display the help contents."
-#~ msgstr "Totem kunne ikke vise indholdet af hjælp."
+#~ msgid "Xplayer could not display the help contents."
+#~ msgstr "Xplayer kunne ikke vise indholdet af hjælp."
 
 #~ msgid "An error occurred"
 #~ msgstr "Der opstod en fejl"
@@ -1093,23 +1093,23 @@ msgstr "Blu-ray"
 #~ msgid "Next Chapter/Movie"
 #~ msgstr "Næste kapitel/film"
 
-#~ msgid "Totem could not startup."
-#~ msgstr "Totem kunne ikke starte."
+#~ msgid "Xplayer could not startup."
+#~ msgstr "Xplayer kunne ikke starte."
 
 #~ msgid "Could not initialize the thread-safe libraries."
 #~ msgstr "Kunne ikke klargøre de trådsikre biblioteker."
 
-#~ msgid "Verify your system installation. Totem will now exit."
-#~ msgstr "Kontrollér din systeminstallation. Totem vil nu afslutte."
+#~ msgid "Verify your system installation. Xplayer will now exit."
+#~ msgstr "Kontrollér din systeminstallation. Xplayer vil nu afslutte."
 
 #~ msgid "- Play movies and songs"
 #~ msgstr "- Afspil film og sange"
 
-#~ msgid "Totem could not parse the command-line options"
-#~ msgstr "Totem kunne ikke fortolke kommandolinje-parametrene"
+#~ msgid "Xplayer could not parse the command-line options"
+#~ msgstr "Xplayer kunne ikke fortolke kommandolinje-parametrene"
 
-#~ msgid "Totem could not initialize the configuration engine."
-#~ msgstr "Totem kunne ikke klargøre konfigurationsmotoren."
+#~ msgid "Xplayer could not initialize the configuration engine."
+#~ msgstr "Xplayer kunne ikke klargøre konfigurationsmotoren."
 
 #~ msgid "Make sure that GNOME is properly installed."
 #~ msgstr "Kontrollér at Gnome er korrekt installeret."
@@ -1241,7 +1241,7 @@ msgstr "Blu-ray"
 #~ "No video output is available. Make sure that the program is correctly "
 #~ "installed."
 #~ msgstr ""
-#~ "Ingen video-uddata tilgængelig. Kontrollér at Totem er korrekt "
+#~ "Ingen video-uddata tilgængelig. Kontrollér at Xplayer er korrekt "
 #~ "installeret."
 
 #~ msgid "The server you are trying to connect to is not known."
@@ -1406,17 +1406,17 @@ msgstr "Blu-ray"
 #~ msgid "Bemused"
 #~ msgstr "Bemused"
 
-#~ msgid "Control Totem through a mobile phone with a Bemused client"
-#~ msgstr "Betjen Totem gennem en mobiltelefon med en Bemused-klient"
+#~ msgid "Control Xplayer through a mobile phone with a Bemused client"
+#~ msgstr "Betjen Xplayer gennem en mobiltelefon med en Bemused-klient"
 
 #~ msgid "Untitled %d"
 #~ msgstr "Unavngiven %d"
 
-#~ msgid "Totem Bemused Server"
-#~ msgstr "Totem Bemused Server"
+#~ msgid "Xplayer Bemused Server"
+#~ msgstr "Xplayer Bemused Server"
 
-#~ msgid "Totem Bemused Server version 1.0"
-#~ msgstr "Totem Bemused Server version 1.0"
+#~ msgid "Xplayer Bemused Server version 1.0"
+#~ msgstr "Xplayer Bemused Server version 1.0"
 
 #~ msgid "Instant Messenger status"
 #~ msgstr "Online-status for samtaleklienter"
@@ -1492,8 +1492,8 @@ msgstr "Blu-ray"
 #~ msgid "No URI to play"
 #~ msgstr "Ingen URI at afspille"
 
-#~ msgid "Totem could not play '%s'"
-#~ msgstr "Totem kunne ikke afspille \"%s\"."
+#~ msgid "Xplayer could not play '%s'"
+#~ msgstr "Xplayer kunne ikke afspille \"%s\"."
 
 #~ msgid "Opening %s"
 #~ msgstr "Åbner \"%s\""

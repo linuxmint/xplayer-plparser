@@ -24,14 +24,14 @@
 
 #include "config.h"
 
-#ifndef TOTEM_PL_PARSER_MINI
+#ifndef XPLAYER_PL_PARSER_MINI
 #include <string.h>
 #include <glib.h>
 
-#include "totem-pl-parser-mini.h"
-#include "totem-pl-parser-amz.h"
-#include "totem-pl-parser-xspf.h"
-#include "totem-pl-parser-private.h"
+#include "xplayer-pl-parser-mini.h"
+#include "xplayer-pl-parser-amz.h"
+#include "xplayer-pl-parser-xspf.h"
+#include "xplayer-pl-parser-private.h"
 
 #ifdef HAVE_LIBGCRYPT
 #include <gcrypt.h>
@@ -121,35 +121,35 @@ amzfile_decrypt_blob(gchar *indata, gsize inlen, gchar **outdata)
 }
 #endif /* HAVE_LIBGCRYPT */
 
-TotemPlParserResult
-totem_pl_parser_add_amz (TotemPlParser *parser,
+XplayerPlParserResult
+xplayer_pl_parser_add_amz (XplayerPlParser *parser,
 			 GFile *file,
 			 GFile *base_file,
-			 TotemPlParseData *parse_data,
+			 XplayerPlParseData *parse_data,
 			 gpointer data)
 {
 #ifdef HAVE_LIBGCRYPT
 	char *b64data, *contents;
-	TotemPlParserResult ret;
+	XplayerPlParserResult ret;
 	gsize b64len;
 
 	if (g_file_load_contents (file, NULL, &b64data, &b64len, NULL, NULL) == FALSE)
-		return TOTEM_PL_PARSER_RESULT_ERROR;
+		return XPLAYER_PL_PARSER_RESULT_ERROR;
 
 	if (amzfile_decrypt_blob (b64data, b64len, &contents) == FALSE) {
 		g_free (b64data);
-		return TOTEM_PL_PARSER_RESULT_ERROR;
+		return XPLAYER_PL_PARSER_RESULT_ERROR;
 	}
 
-	ret = totem_pl_parser_add_xspf_with_contents (parser, file, base_file,
+	ret = xplayer_pl_parser_add_xspf_with_contents (parser, file, base_file,
 						      contents, parse_data);
 
 	g_free (contents);
 
 	return ret;
 #else
-	return TOTEM_PL_PARSER_RESULT_UNHANDLED;
+	return XPLAYER_PL_PARSER_RESULT_UNHANDLED;
 #endif /* HAVE_LIBGCRYPT */
 }
 
-#endif /* !TOTEM_PL_PARSER_MINI */
+#endif /* !XPLAYER_PL_PARSER_MINI */

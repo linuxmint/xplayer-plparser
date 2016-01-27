@@ -134,7 +134,7 @@ Date:   Tue Feb 18 17:04:33 2014 +0100
 
     plparse: Fix obsolete gtk-doc syntax
 
- plparse/totem-pl-parser.c | 4 ++--
+ plparse/xplayer-pl-parser.c | 4 ++--
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 commit cc1b6232f371195af0f2c5216c4b8179c64128b7
@@ -229,7 +229,7 @@ Date:   Sun Jan 26 01:43:10 2014 +0100
     Will give us thumbnails for:
     http://www.theguardian.com/video/rss
 
- plparse/totem-pl-parser-podcast.c | 10 +++++++---
+ plparse/xplayer-pl-parser-podcast.c | 10 +++++++---
  1 file changed, 7 insertions(+), 3 deletions(-)
 
 commit cf9653fdaf107aad2f90530ff0848a01c9003c8d
@@ -322,9 +322,9 @@ Date:   Tue Jan 21 18:47:10 2014 +0100
 
     Update project URL
     
-    Totem's homepage moved.
+    Xplayer's homepage moved.
 
- totem-pl-parser.doap | 2 +-
+ xplayer-pl-parser.doap | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit 2ea7afe2b6d403e8c5abdc3e4541adfd665301f2
@@ -333,15 +333,15 @@ Date:   Tue Jan 21 18:45:19 2014 +0100
 
     disc: Add support for detecting Blu-ray discs
 
- plparse/totem-disc.c | 45 ++++++++++++++++++++++++++++++++++++++++++---
- plparse/totem-disc.h |  4 +++-
+ plparse/xplayer-disc.c | 45 ++++++++++++++++++++++++++++++++++++++++++---
+ plparse/xplayer-disc.h |  4 +++-
  2 files changed, 45 insertions(+), 4 deletions(-)
 
 commit 74d1ab52597c4776b231834e33363f2dccf94b1c
 Author: Michael Catanzaro <mcatanzaro@gnome.org>
 Date:   Sat Nov 23 20:22:12 2013 -0600
 
-    build: don't distribute totem-pl-parser-builtins.[ch]
+    build: don't distribute xplayer-pl-parser-builtins.[ch]
     
     These are unconditionally generated at build time, and are also listed
     in CLEANFILES.
@@ -357,7 +357,7 @@ Date:   Sat Nov 23 19:59:30 2013 -0600
 
     build: fix a race
     
-    totem-pl-parser-builtins.h was not generated before compiling its dependencies
+    xplayer-pl-parser-builtins.h was not generated before compiling its dependencies
     
     https://bugzilla.gnome.org/show_bug.cgi?id=715093
 
@@ -370,12 +370,12 @@ Date:   Sun Oct 6 14:37:03 2013 +0200
 
     plparse: Fix possible crash in iTunes Podcast parsing
     
-    Check the return value of totem_pl_parser_load_http_itunes()
+    Check the return value of xplayer_pl_parser_load_http_itunes()
     to avoid possible crash.
     
     https://bugzilla.gnome.org/show_bug.cgi?id=709296
 
- plparse/totem-pl-parser-podcast.c | 25 ++++++++++++-------------
+ plparse/xplayer-pl-parser-podcast.c | 25 ++++++++++++-------------
  1 file changed, 12 insertions(+), 13 deletions(-)
 
 commit 2bd6b00ae187ec5adbe1bd2c9d0a662d00cbd51f
@@ -388,7 +388,7 @@ Date:   Mon Sep 23 08:46:53 2013 +0200
     
     https://bugzilla.gnome.org/show_bug.cgi?id=673587
 
- plparse/totem-pl-parser.c | 61 +++++++++++++----------------------------------
+ plparse/xplayer-pl-parser.c | 61 +++++++++++++----------------------------------
  1 file changed, 17 insertions(+), 44 deletions(-)
 
 commit 825e9a64beea735191e5c99aec266aa4c2b77aaf
@@ -405,20 +405,20 @@ commit d35e1d33faa4e94c25227f27925de3844a116291
 Author: Arnel A. Borja <arnelborja@src.gnome.org>
 Date:   Sat Sep 7 00:16:09 2013 +0800
 
-    plparse: Add missing direction annotations to TotemPlPlaylist
+    plparse: Add missing direction annotations to XplayerPlPlaylist
     
     https://bugzilla.gnome.org/show_bug.cgi?id=707642
 
- plparse/totem-pl-playlist.c | 12 ++++++------
+ plparse/xplayer-pl-playlist.c | 12 ++++++------
  1 file changed, 6 insertions(+), 6 deletions(-)
 
 commit 56f9ffaef28286eab41420ca6c4b7ae2e4613e75
 Author: Arnel A. Borja <arnelborja@src.gnome.org>
 Date:   Sat Sep 7 00:12:05 2013 +0800
 
-    build: Add totem-pl-playlist.c to plparser_sources
+    build: Add xplayer-pl-playlist.c to plparser_sources
     
-    The source file totem-pl-playlist.c is not being parsed by g-ir-scanner
+    The source file xplayer-pl-playlist.c is not being parsed by g-ir-scanner
     because it is missing in instrospection_sources. This will implicitly
     add it to that variable.
     
@@ -441,7 +441,7 @@ commit 57f9e3910e1c7e4b8f74371e9fae4b4f7902bd81
 Author: Bastien Nocera <hadess@hadess.net>
 Date:   Sat Aug 24 04:36:22 2013 +0200
 
-    build: Don't link totem-pl-parser to libquvi
+    build: Don't link xplayer-pl-parser to libquvi
     
     We're not using it in the main library, and the license is
     incompatible with our own.
@@ -453,7 +453,7 @@ commit deec38404a9a77b70ca426682179f5170e17a481
 Author: Bastien Nocera <hadess@hadess.net>
 Date:   Sat Aug 24 04:25:57 2013 +0200
 
-    build: totem-pl-parser-mini doesn't need QUVI
+    build: xplayer-pl-parser-mini doesn't need QUVI
     
     It will call out to the quvi helper instead.
 
@@ -464,7 +464,7 @@ commit eae25aeaaf5482678b387477f572c4330c0ec0e3
 Author: Bastien Nocera <hadess@hadess.net>
 Date:   Sat Aug 24 04:27:28 2013 +0200
 
-    build: Bump soname after totem-disc API removal
+    build: Bump soname after xplayer-disc API removal
 
  configure.ac | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
@@ -473,7 +473,7 @@ commit f44b309d37a96536d42303cde580a8a91adb4365
 Author: Bastien Nocera <hadess@hadess.net>
 Date:   Sat Aug 24 03:18:52 2013 +0200
 
-    plparse: Remove totem-disc from the public API
+    plparse: Remove xplayer-disc from the public API
     
     It's ugly, with no async APIs, and plenty of gross stuff
     that we need to hide.
@@ -481,8 +481,8 @@ Date:   Sat Aug 24 03:18:52 2013 +0200
     https://bugzilla.gnome.org/show_bug.cgi?id=673589
 
  docs/reference/Makefile.am                  |  1 +
- docs/reference/totem-pl-parser-docs.xml     |  1 -
- docs/reference/totem-pl-parser-sections.txt | 19 -------------------
+ docs/reference/xplayer-pl-parser-docs.xml     |  1 -
+ docs/reference/xplayer-pl-parser-sections.txt | 19 -------------------
  plparse/Makefile.am                         |  7 +++----
  4 files changed, 4 insertions(+), 24 deletions(-)
 
@@ -520,7 +520,7 @@ Date:   Sat Jul 13 11:14:04 2013 +0200
 
     plparse: Fix small memleaks in XSPF parser
 
- plparse/totem-pl-parser-xspf.c | 2 ++
+ plparse/xplayer-pl-parser-xspf.c | 2 ++
  1 file changed, 2 insertions(+)
 
 commit 0c5f3d3e91372dda5649ccb0ab9e84da1a1bf23b
@@ -532,7 +532,7 @@ Date:   Mon Jul 1 15:49:32 2013 +0200
     It's now built into libsoup and used as required.
 
  configure.ac                      | 3 ++-
- plparse/totem-pl-parser-podcast.c | 3 +--
+ plparse/xplayer-pl-parser-podcast.c | 3 +--
  2 files changed, 3 insertions(+), 3 deletions(-)
 
 commit 600100b25474f5af29514501f8995aa69cf2b89a
@@ -547,7 +547,7 @@ Date:   Fri Jun 21 18:50:08 2013 +0200
     
     https://bugzilla.gnome.org/show_bug.cgi?id=702828
 
- plparse/totem-disc.c | 3 +--
+ plparse/xplayer-disc.c | 3 +--
  1 file changed, 1 insertion(+), 2 deletions(-)
 
 commit ee6a083d628b4176a6c3895fc9ec03f974737dd6
@@ -562,7 +562,7 @@ Date:   Fri Jun 21 18:40:00 2013 +0200
     https://bugzilla.gnome.org/show_bug.cgi?id=702828
 
  configure.ac         | 2 +-
- plparse/totem-disc.c | 4 ++--
+ plparse/xplayer-disc.c | 4 ++--
  2 files changed, 3 insertions(+), 3 deletions(-)
 
 commit 24970018abfcedcaa4965e1f0f987aaf63323f31
@@ -575,12 +575,12 @@ Date:   Fri Jun 21 13:08:36 2013 +0200
 
  configure.ac                          |   9 +-
  plparse/Makefile.am                   |   9 ++
- plparse/totem-pl-parser-videosite.c   | 162 ++++++++++++++---------------
+ plparse/xplayer-pl-parser-videosite.c   | 162 ++++++++++++++---------------
  plparse/videosite-parser.c            | 187 ++++++++++++++++++++++++++++++++++
- totem-plparser-mini-uninstalled.pc.in |   2 +-
- totem-plparser-mini.pc.in             |   2 +-
- totem-plparser-uninstalled.pc.in      |   2 +-
- totem-plparser.pc.in                  |   2 +-
+ xplayer-plparser-mini-uninstalled.pc.in |   2 +-
+ xplayer-plparser-mini.pc.in             |   2 +-
+ xplayer-plparser-uninstalled.pc.in      |   2 +-
+ xplayer-plparser.pc.in                  |   2 +-
  8 files changed, 281 insertions(+), 94 deletions(-)
 
 commit 5785325b9ce3bf3143d67a3de6e11c94391c3f66
@@ -593,8 +593,8 @@ Date:   Tue Jun 25 16:43:59 2013 +0200
     
     https://bugzilla.gnome.org/show_bug.cgi?id=700768
 
- plparse/totem-pl-parser-private.h |  7 +++++++
- plparse/totem-pl-parser.c         | 12 ++++++------
+ plparse/xplayer-pl-parser-private.h |  7 +++++++
+ plparse/xplayer-pl-parser.c         | 12 ++++++------
  2 files changed, 13 insertions(+), 6 deletions(-)
 
 commit 7ec29b4c3edffd0131d408c4da17ce8dcab78308
@@ -605,7 +605,7 @@ Date:   Tue Jun 25 16:35:28 2013 +0200
     
     https://bugzilla.gnome.org/show_bug.cgi?id=700768
 
- plparse/totem-pl-parser.c | 48 ++++++++++++++++++++++++++++++++---------------
+ plparse/xplayer-pl-parser.c | 48 ++++++++++++++++++++++++++++++++---------------
  1 file changed, 33 insertions(+), 15 deletions(-)
 
 commit 5ab0f92bca40c019774bbd6183eee0f3e58ea775
@@ -616,7 +616,7 @@ Date:   Tue Jun 25 16:42:11 2013 +0200
     
     https://bugzilla.gnome.org/show_bug.cgi?id=700768
 
- plparse/totem-pl-parser.c | 46 +++++++++++++++++++++++++++++-----------------
+ plparse/xplayer-pl-parser.c | 46 +++++++++++++++++++++++++++++-----------------
  1 file changed, 29 insertions(+), 17 deletions(-)
 
 commit 04f6d6c32927ddc5ef86264e4535194e97be2f95
@@ -648,9 +648,9 @@ Date:   Fri Apr 26 18:42:21 2013 +0200
     whether the scheme is ignored, the front-end (which populates
     that list) can do that just as well.
     
-    This fixes DVDs not being saved in the Totem session.
+    This fixes DVDs not being saved in the Xplayer session.
 
- plparse/totem-pl-parser-xspf.c | 11 -----------
+ plparse/xplayer-pl-parser-xspf.c | 11 -----------
  1 file changed, 11 deletions(-)
 
 commit 8dd63c9f8aa85ae4687bb4b90c9c1de886069ac0
@@ -672,7 +672,7 @@ Date:   Thu Apr 25 12:44:53 2013 +0200
  plparse/tests/Makefile.am          |  3 ++-
  plparse/tests/parser.c             | 13 +++++++++++++
  plparse/tests/radioclasica.mp3.m3u |  3 +++
- plparse/totem-pl-parser-lines.c    | 34 ++++++++++++++++++++++++++++++++-
+ plparse/xplayer-pl-parser-lines.c    | 34 ++++++++++++++++++++++++++++++++-
  5 files changed, 90 insertions(+), 2 deletions(-)
 
 commit ba8ee7f0e957eacc990318ed2580a3f27e58fe3e
@@ -687,7 +687,7 @@ Date:   Fri Mar 29 18:08:41 2013 +0100
     This fixes: ./disc /dev/loop0
     when an ISO is loopback mounted with udisks2
 
- plparse/totem-disc.c | 6 ++++--
+ plparse/xplayer-disc.c | 6 ++++--
  1 file changed, 4 insertions(+), 2 deletions(-)
 
 commit 4ba8cc2d94c1721f9310370db3452337f51c4d9a
@@ -696,7 +696,7 @@ Date:   Fri Mar 29 17:37:36 2013 +0100
 
     disc: Avoid warnings when the volume doesn't have a mount
 
- plparse/totem-disc.c | 6 ++++--
+ plparse/xplayer-disc.c | 6 ++++--
  1 file changed, 4 insertions(+), 2 deletions(-)
 
 commit 5718016386b123d735a9b45bd537867f62a1ac7c
@@ -717,7 +717,7 @@ Date:   Tue Mar 26 08:44:22 2013 +0100
     
     Sigh.
     
-    make[6]: Leaving directory `/home/hadess/Projects/jhbuild/totem-pl-parser/totem-pl-parser-3.4.4/_build/docs/reference'
+    make[6]: Leaving directory `/home/hadess/Projects/jhbuild/xplayer-pl-parser/xplayer-pl-parser-3.4.4/_build/docs/reference'
     fatal: making test-suite.log: failed to create /home/hadess/Projects/gnome-install/bin/gtkdoc-check.trs
     fatal: making test-suite.log: failed to create /home/hadess/Projects/gnome-install/bin/gtkdoc-check.log
 
@@ -743,9 +743,9 @@ Date:   Wed Mar 20 11:57:49 2013 +0100
     type in the parsers. This allows us to detect such playlists,
     and offer to save them back in the same location.
 
- plparse/totem-pl-parser-lines.c | 1 +
- plparse/totem-pl-parser-pls.c   | 1 +
- plparse/totem-pl-parser-xspf.c  | 1 +
+ plparse/xplayer-pl-parser-lines.c | 1 +
+ plparse/xplayer-pl-parser-pls.c   | 1 +
+ plparse/xplayer-pl-parser-xspf.c  | 1 +
  3 files changed, 3 insertions(+)
 
 commit 6f7001fec750f9d41392ff99b1296f356f7142eb
@@ -754,7 +754,7 @@ Date:   Wed Mar 20 11:49:48 2013 +0100
 
     lines: Add playlist-started/ended support for M3U files
 
- plparse/totem-pl-parser-lines.c | 11 +++++++++++
+ plparse/xplayer-pl-parser-lines.c | 11 +++++++++++
  1 file changed, 11 insertions(+)
 
 commit ec255a8148714860f2637c3b42fbec7ff3554359
@@ -763,7 +763,7 @@ Date:   Wed Mar 20 11:37:45 2013 +0100
 
     pla: playlist-ended expects a URI, not a title
 
- plparse/totem-pl-parser-pla.c | 22 +++++++++++-----------
+ plparse/xplayer-pl-parser-pla.c | 22 +++++++++++-----------
  1 file changed, 11 insertions(+), 11 deletions(-)
 
 commit 80ed94e669236f25c5ebb836a462c0c40b1c6a3a
@@ -772,7 +772,7 @@ Date:   Wed Mar 20 11:29:29 2013 +0100
 
     pls: Simplify _add_pls_with_contents() code
 
- plparse/totem-pl-parser-pls.c | 8 ++------
+ plparse/xplayer-pl-parser-pls.c | 8 ++------
  1 file changed, 2 insertions(+), 6 deletions(-)
 
 commit a3a4bdaee3f5416b27311f8ab1f5d4cd8323735b
@@ -781,7 +781,7 @@ Date:   Wed Mar 20 11:21:32 2013 +0100
 
     pls: Always send playlist-started/ended
 
- plparse/totem-pl-parser-pls.c | 21 ++++++++++-----------
+ plparse/xplayer-pl-parser-pls.c | 21 ++++++++++-----------
  1 file changed, 10 insertions(+), 11 deletions(-)
 
 commit 71d2e347034edbed2ffa587dd115e17ae371ed4f
@@ -809,7 +809,7 @@ Date:   Tue Mar 19 21:34:16 2013 +0100
 
     xspf: Add playlist-started/ended signals
 
- plparse/totem-pl-parser-xspf.c | 43 +++++++++++++++++++++++++++++++++++++-----
+ plparse/xplayer-pl-parser-xspf.c | 43 +++++++++++++++++++++++++++++++++++++-----
  1 file changed, 38 insertions(+), 5 deletions(-)
 
 commit 721671435fa4782530949aafdba4f54755e28f2e
@@ -866,7 +866,7 @@ Date:   Sat Mar 9 00:31:00 2013 +0100
 
     plparse: Read and write the starttime for XSPF tracks
 
- plparse/totem-pl-parser-xspf.c | 11 +++++++++--
+ plparse/xplayer-pl-parser-xspf.c | 11 +++++++++--
  1 file changed, 9 insertions(+), 2 deletions(-)
 
 commit 4315b628588235b2d8761a8012f2830624151a98
@@ -875,7 +875,7 @@ Date:   Fri Mar 8 18:22:55 2013 +0100
 
     plparser: Add support for saving GNOME XSPF extensions
 
- plparse/totem-pl-parser-xspf.c | 42 +++++++++++++++++++++++++++++++++++-------
+ plparse/xplayer-pl-parser-xspf.c | 42 +++++++++++++++++++++++++++++++++++-------
  1 file changed, 35 insertions(+), 7 deletions(-)
 
 commit d213b83c84ba0feed2c9683ea09737c60457ecbd
@@ -893,10 +893,10 @@ Date:   Fri Mar 8 18:01:25 2013 +0100
 
     plparser: Add support for some GNOME XSPF extensions
     
-    That should allow Totem to save all its metadata in the playlist
+    That should allow Xplayer to save all its metadata in the playlist
     file rather than using side storage.
 
- plparse/totem-pl-parser-xspf.c | 39 ++++++++++++++++++++++++++++++++++++++-
+ plparse/xplayer-pl-parser-xspf.c | 39 ++++++++++++++++++++++++++++++++++++++-
  1 file changed, 38 insertions(+), 1 deletion(-)
 
 commit 40223365aa55302b65bdcc18a20f39a5c391d4a5
@@ -905,19 +905,19 @@ Date:   Fri Mar 8 17:58:20 2013 +0100
 
     plparser: Add support for the "playing" attribute
 
- plparse/totem-pl-parser.c | 4 ++++
- plparse/totem-pl-parser.h | 7 +++++++
+ plparse/xplayer-pl-parser.c | 4 ++++
+ plparse/xplayer-pl-parser.h | 7 +++++++
  2 files changed, 11 insertions(+)
 
 commit b2ec65f76e5951fb85031b6e80861b5dcb58de5e
 Author: Mateu Batle <mateu.batle@collabora.com>
 Date:   Fri Mar 1 16:13:02 2013 +0000
 
-    plparser: Fixed memleak in totem_pl_parser_can_parse_from_data
+    plparser: Fixed memleak in xplayer_pl_parser_can_parse_from_data
     
     https://bugzilla.gnome.org/show_bug.cgi?id=694941
 
- plparse/totem-pl-parser.c | 5 +++++
+ plparse/xplayer-pl-parser.c | 5 +++++
  1 file changed, 5 insertions(+)
 
 commit 977d4b9746d86df139f819088bcbc861fc17fa5d
@@ -1054,7 +1054,7 @@ Date:   Wed Nov 7 21:51:50 2012 +0100
     for example.
 
  plparse/tests/parser.c            | 2 ++
- plparse/totem-pl-parser-podcast.c | 4 +++-
+ plparse/xplayer-pl-parser-podcast.c | 4 +++-
  2 files changed, 5 insertions(+), 1 deletion(-)
 
 commit 487d2dafc45363e0174c86fbb2ca071ceb558b6d
@@ -1086,7 +1086,7 @@ Date:   Mon Oct 29 08:22:10 2012 +0100
 
  plparse/tests/parser.c         | 10 ++++++++
  plparse/tests/playlist.xspf    |  2 +-
- plparse/totem-pl-parser-xspf.c | 52 ++++++++++++++++++++++++++++--------------
+ plparse/xplayer-pl-parser-xspf.c | 52 ++++++++++++++++++++++++++++--------------
  3 files changed, 46 insertions(+), 18 deletions(-)
 
 commit 386c1cca31ee41e888540c8dc4f47023eaeb65bb
@@ -1108,7 +1108,7 @@ Date:   Tue Sep 18 16:28:51 2012 +0200
     
     https://bugzilla.gnome.org/show_bug.cgi?id=684292
 
- plparse/totem-pl-parser.c | 6 ++++--
+ plparse/xplayer-pl-parser.c | 6 ++++--
  1 file changed, 4 insertions(+), 2 deletions(-)
 
 commit 954b678334c307f51b537bef0d901c636e1dea1a
@@ -1127,12 +1127,12 @@ Date:   Tue Aug 21 21:27:55 2012 +0100
 
     build: Use gnome-common code coverage macros to add gcov support
     
-    This replaces totem-pl-parser’s existing home-grown solution with the
+    This replaces xplayer-pl-parser’s existing home-grown solution with the
     gnome-common code coverage macros added in gnome-common 3.5.6/3.6.0.
     
     To use:
         cd plparse && make check-code-coverage
-    this will run the totem-pl-parser test suite and build a code coverage
+    this will run the xplayer-pl-parser test suite and build a code coverage
     report of the code which was touched. The report will be an HTML file and
     its URI will be printed on completion.
     
@@ -1157,7 +1157,7 @@ Date:   Tue Aug 21 22:50:17 2012 +0100
 
     docs: Remove a reference to a private function from the documentation
 
- plparse/totem-pl-parser.c | 7 +++++--
+ plparse/xplayer-pl-parser.c | 7 +++++--
  1 file changed, 5 insertions(+), 2 deletions(-)
 
 commit 9832f68fce1aaa7dad20a47d0993fb1042c6bbd4
@@ -1233,7 +1233,7 @@ Date:   Sun Jul 29 21:23:51 2012 +0200
     
     This fixes the “resolution” test case.
 
- plparse/totem-pl-parser.c | 2 +-
+ plparse/xplayer-pl-parser.c | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit 8b623e8ee8d150e5f7567b519b2c472fae2c8c63
@@ -1245,7 +1245,7 @@ Date:   Thu Jul 26 23:32:58 2012 +0100
  plparse/tests/Makefile.am         |  3 ++-
  plparse/tests/no-url-podcast.xml  | 52 +++++++++++++++++++++++++++++++++++++++
  plparse/tests/parser.c            | 14 +++++++++++
- plparse/totem-pl-parser-podcast.c |  5 ++++
+ plparse/xplayer-pl-parser-podcast.c |  5 ++++
  4 files changed, 73 insertions(+), 1 deletion(-)
 
 commit 951e1fd908294477827629855c63302891d9d56d
@@ -1257,7 +1257,7 @@ Date:   Thu Jul 26 23:15:02 2012 +0100
     They're not directories, we don't know how to handle directories
     on HTTP, so don't be silly.
 
- plparse/totem-pl-parser.c | 5 +++++
+ plparse/xplayer-pl-parser.c | 5 +++++
  1 file changed, 5 insertions(+)
 
 commit 573e83cd7d0f079ad2122e6ad4a87dccd8e28d19
@@ -1272,7 +1272,7 @@ Date:   Thu Jul 26 23:01:05 2012 +0100
  plparse/tests/Makefile.am         |  3 ++-
  plparse/tests/empty-feed.xml      | 47 +++++++++++++++++++++++++++++++++++++++
  plparse/tests/parser.c            | 14 ++++++++++++
- plparse/totem-pl-parser-podcast.c | 17 +++++++++++++-
+ plparse/xplayer-pl-parser-podcast.c | 17 +++++++++++++-
  4 files changed, 79 insertions(+), 2 deletions(-)
 
 commit 47cf084189b83e2f60ff8e168732bf3a2358a2e8
@@ -1283,7 +1283,7 @@ Date:   Fri Jul 20 13:05:52 2012 +0100
     
     If it's zero, it's unknown.
 
- plparse/totem-pl-parser-videosite.c | 2 +-
+ plparse/xplayer-pl-parser-videosite.c | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit f21c8e2b283ef9304f7e930c1b65a4f3bb02f202
@@ -1292,7 +1292,7 @@ Date:   Fri Jun 15 14:34:37 2012 +0100
 
     lib: Handle both variants for Qt Linguist files
 
- plparse/totem-pl-parser.c | 3 ++-
+ plparse/xplayer-pl-parser.c | 3 ++-
  1 file changed, 2 insertions(+), 1 deletion(-)
 
 commit 374a4b782956bfc953c9b4b8cc3eae5a30414d92
@@ -1307,7 +1307,7 @@ Date:   Fri Jun 15 14:22:46 2012 +0100
     
     https://bugzilla.gnome.org/show_bug.cgi?id=678163
 
- plparse/totem-pl-parser.c | 6 ++++++
+ plparse/xplayer-pl-parser.c | 6 ++++++
  1 file changed, 6 insertions(+)
 
 commit e3b8ffeaa706e40bdd939aeed9d39f5847fb33a4
@@ -1329,10 +1329,10 @@ Date:   Wed Jun 13 19:07:34 2012 +0100
 
     build: Remove unused variables
 
- totem-plparser-mini-uninstalled.pc.in | 2 --
- totem-plparser-mini.pc.in             | 2 --
- totem-plparser-uninstalled.pc.in      | 2 --
- totem-plparser.pc.in                  | 2 --
+ xplayer-plparser-mini-uninstalled.pc.in | 2 --
+ xplayer-plparser-mini.pc.in             | 2 --
+ xplayer-plparser-uninstalled.pc.in      | 2 --
+ xplayer-plparser.pc.in                  | 2 --
  4 files changed, 8 deletions(-)
 
 commit 39bf6f4d06415fe2e51feaa575f2a592da4a8f3b
@@ -1341,7 +1341,7 @@ Date:   Mon May 28 12:53:13 2012 +0100
 
     lib: Report "unsupported" errors from quvi
 
- plparse/totem-pl-parser-videosite.c | 5 +++--
+ plparse/xplayer-pl-parser-videosite.c | 5 +++--
  1 file changed, 3 insertions(+), 2 deletions(-)
 
 commit 9d7c0b31cb7a966cfd1b5d1721d60835bfa29649
@@ -1362,7 +1362,7 @@ Date:   Sun May 13 13:02:54 2012 +0100
     
     Closes: https://bugzilla.gnome.org/show_bug.cgi?id=675824
 
- plparse/totem-pl-parser.c | 1 +
+ plparse/xplayer-pl-parser.c | 1 +
  1 file changed, 1 insertion(+)
 
 commit 058ba04627b51659983cf76eaa88089feb81307e
@@ -1371,12 +1371,12 @@ Date:   Thu Apr 26 13:00:06 2012 +0100
 
     docs: Add missing -mini documentation
     
-    Include totem_pl_parser_can_parse_from_uri() which checks
+    Include xplayer_pl_parser_can_parse_from_uri() which checks
     whether a URI is that of a videosite.
 
  docs/reference/Makefile.am                  | 1 -
- docs/reference/totem-pl-parser-sections.txt | 3 +++
- plparse/totem-pl-parser.c                   | 3 +--
+ docs/reference/xplayer-pl-parser-sections.txt | 3 +++
+ plparse/xplayer-pl-parser.c                   | 3 +--
  3 files changed, 4 insertions(+), 3 deletions(-)
 
 commit f9ebc4a9f76296e44817f6c2f4062dbb17c26a22
@@ -1423,7 +1423,7 @@ Date:   Thu Apr 5 16:47:34 2012 +0100
 
     media: Add non-DVD block devices as directories
 
- plparse/totem-pl-parser-media.c | 2 +-
+ plparse/xplayer-pl-parser-media.c | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit 13f385a2273ddfc1b8418a5a698074d6b303c4ed
@@ -1432,7 +1432,7 @@ Date:   Thu Apr 5 16:47:04 2012 +0100
 
     disc: Fix _from_dir() when dir is archive:///...
 
- plparse/totem-disc.c | 2 +-
+ plparse/xplayer-disc.c | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit 962a8a8b7ca4a8643507d92c2424e526c1df9890
@@ -1441,7 +1441,7 @@ Date:   Thu Apr 5 16:46:40 2012 +0100
 
     disc: Get the original filename for ISO images
 
- plparse/totem-disc.c | 12 ++++++++++--
+ plparse/xplayer-disc.c | 12 ++++++++++--
  1 file changed, 10 insertions(+), 2 deletions(-)
 
 commit 3c01d126ea6bde21149ec004b7c828a3144f32c5
@@ -1455,7 +1455,7 @@ Date:   Thu Apr 5 16:42:06 2012 +0100
     to:
     file:///foo.iso
 
- plparse/totem-disc.c | 23 +++++++++++++++++++++++
+ plparse/xplayer-disc.c | 23 +++++++++++++++++++++++
  1 file changed, 23 insertions(+)
 
 commit cdb702d494ca7c8a11fdcf61a88f6bcb5359c474
@@ -1464,7 +1464,7 @@ Date:   Thu Apr 5 15:49:23 2012 +0100
 
     disc: Fix whitespace
 
- plparse/totem-disc.h | 2 +-
+ plparse/xplayer-disc.h | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit ec8caf12734bb944ea0ffe7a6c1c38d2b353bfd2
@@ -1473,7 +1473,7 @@ Date:   Thu Apr 5 15:47:58 2012 +0100
 
     lib: Fix small memory leak
 
- plparse/totem-pl-parser-media.c | 2 ++
+ plparse/xplayer-pl-parser-media.c | 2 ++
  1 file changed, 2 insertions(+)
 
 commit 274b2f0ba82da30a9343e7ae86935f11e44d2293
@@ -1484,7 +1484,7 @@ Date:   Thu Apr 5 15:46:40 2012 +0100
     
     When we meant "@parser".
 
- plparse/totem-pl-parser.c | 4 ++--
+ plparse/xplayer-pl-parser.c | 4 ++--
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 commit 254724230abb2f00148aed0918d51511a273e468
@@ -1495,7 +1495,7 @@ Date:   Thu Apr 5 15:46:03 2012 +0100
     
     It's unlikely to have an incidence on what we're doing.
 
- plparse/totem-disc.c | 7 +------
+ plparse/xplayer-disc.c | 7 +------
  1 file changed, 1 insertion(+), 6 deletions(-)
 
 commit 35acb99c6555fae30045726fec8c7f9d7dcce25d
@@ -1517,7 +1517,7 @@ Date:   Mon Apr 2 16:38:46 2012 +0100
     
     https://bugzilla.gnome.org/show_bug.cgi?id=673209
 
- plparse/totem-pl-parser-videosite.c | 1 +
+ plparse/xplayer-pl-parser-videosite.c | 1 +
  1 file changed, 1 insertion(+)
 
 commit 0aa789f47809730f6200b6c7483d74ab05d7d423
@@ -1578,7 +1578,7 @@ Date:   Tue Mar 13 14:23:16 2012 +0100
  plparse/tests/Makefile.am         |  3 ++-
  plparse/tests/parser.c            | 20 ++++++++++++++++++++
  plparse/tests/rss.xml             | 14 ++++++++++++++
- plparse/totem-pl-parser-podcast.c | 11 +++++++++--
+ plparse/xplayer-pl-parser-podcast.c | 11 +++++++++--
  4 files changed, 45 insertions(+), 3 deletions(-)
 
 commit e7a78fc974bda7c87d1b2e0b0845ddf988e10e35
@@ -1616,27 +1616,27 @@ commit b39cd3367627691ef4686ca4c0ad12b5b9e447fd
 Author: Philip Withnall <philip@tecnocode.co.uk>
 Date:   Sun Feb 5 14:05:03 2012 +0000
 
-    introspection: Skip TotemPlParserMetadata because it’s evil
+    introspection: Skip XplayerPlParserMetadata because it’s evil
     
-    TotemPlParserMetadata is a GHashTable wearing a fake moustache, originating
+    XplayerPlParserMetadata is a GHashTable wearing a fake moustache, originating
     from the days when GHashTable wasn’t a proper boxed type. GIR knows about the
     peculiarities of GHashTable (for example, its key and value element types);
     but is fooled by the fake moustache and doesn’t know what to make of
-    TotemPlParserMetadata.
+    XplayerPlParserMetadata.
     
     This is bad. Nobody likes fake moustaches.
     
-    This commit marks TotemPlParserMetadata as to be (skip)ped by GIR, and
+    This commit marks XplayerPlParserMetadata as to be (skip)ped by GIR, and
     overrides the locations where it used to pretend to be GHashTables. Since
-    the copy/free functions for the boxed TotemPlParserMetadata and boxed
+    the copy/free functions for the boxed XplayerPlParserMetadata and boxed
     GHashTable are the same, this shouldn’t cause problems for bindings when
     they try and unbox the GHashTables, since no boxed type identifier is carried
     along with the box.
     
     Closes: https://bugzilla.gnome.org/show_bug.cgi?id=669398
 
- plparse/totem-pl-parser.c | 7 +++++--
- plparse/totem-pl-parser.h | 2 +-
+ plparse/xplayer-pl-parser.c | 7 +++++--
+ plparse/xplayer-pl-parser.h | 2 +-
  2 files changed, 6 insertions(+), 3 deletions(-)
 
 commit a24e51a8ecb3f8af12543ed5afb18cb2d877dfd5
@@ -1661,9 +1661,9 @@ Date:   Mon Feb 20 01:30:59 2012 +0100
     https://bugzilla.gnome.org/show_bug.cgi?id=668686
 
  plparse/Makefile.am           |   4 ++
- plparse/totem-pl-parser-amz.c | 155 ++++++++++++++++++++++++++++++++++++++++++
- plparse/totem-pl-parser-amz.h |  45 ++++++++++++
- plparse/totem-pl-parser.c     |   2 +
+ plparse/xplayer-pl-parser-amz.c | 155 ++++++++++++++++++++++++++++++++++++++++++
+ plparse/xplayer-pl-parser-amz.h |  45 ++++++++++++
+ plparse/xplayer-pl-parser.c     |   2 +
  4 files changed, 206 insertions(+)
 
 commit 145065a0edfb4821844100f5f1ebcf8f0f591152
@@ -1673,8 +1673,8 @@ Date:   Mon Feb 20 01:30:16 2012 +0100
     build: Check for optional libgcrypt
 
  configure.in                     | 27 +++++++++++++++++++++++++++
- totem-plparser-uninstalled.pc.in |  3 ++-
- totem-plparser.pc.in             |  3 ++-
+ xplayer-plparser-uninstalled.pc.in |  3 ++-
+ xplayer-plparser.pc.in             |  3 ++-
  3 files changed, 31 insertions(+), 2 deletions(-)
 
 commit 447209886ae9c8eacdc9066327d75a088a427275
@@ -1683,8 +1683,8 @@ Date:   Mon Feb 20 01:29:44 2012 +0100
 
     lib: Split out XSPF parsing from data
 
- plparse/totem-pl-parser-xspf.c | 50 +++++++++++++++++++++++++++++++++++++-----
- plparse/totem-pl-parser-xspf.h |  5 +++++
+ plparse/xplayer-pl-parser-xspf.c | 50 +++++++++++++++++++++++++++++++++++++-----
+ plparse/xplayer-pl-parser-xspf.h |  5 +++++
  2 files changed, 49 insertions(+), 6 deletions(-)
 
 commit 40b55190631f8c0ef48a81827d9858d2d4004c85
@@ -1696,7 +1696,7 @@ Date:   Tue Dec 6 01:08:17 2011 +0100
     Otherwise one-time links could very well expire in front of our
     very eyes.
 
- plparse/totem-pl-parser-videosite.c | 2 ++
+ plparse/xplayer-pl-parser-videosite.c | 2 ++
  1 file changed, 2 insertions(+)
 
 commit 061cc3bdc62bc0729a540d4e65ad8f58525458a8
@@ -1705,7 +1705,7 @@ Date:   Tue Dec 6 00:27:45 2011 +0100
 
     lib: Add missing line feed
 
- plparse/totem-pl-parser-videosite.c | 2 +-
+ plparse/xplayer-pl-parser-videosite.c | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit 235ad19dbfee68174e2e17b56386f95a6eb6aa46
@@ -1749,7 +1749,7 @@ Date:   Wed Jan 25 19:36:28 2012 +0000
     
     https://bugzilla.gnome.org/show_bug.cgi?id=668686
 
- plparse/totem-pl-parser-xspf.c | 17 ++++++++++++++++-
+ plparse/xplayer-pl-parser-xspf.c | 17 ++++++++++++++++-
  1 file changed, 16 insertions(+), 1 deletion(-)
 
 commit e5bc1d58bba7b018659f65615adf92506c0c15f0
@@ -1763,14 +1763,14 @@ Date:   Wed Dec 21 13:43:34 2011 +0000
  lib/stub.c                        |  2 ++
  plparse/tests/disc.c              | 18 +++++++++---------
  plparse/tests/parser.c            |  4 +++-
- plparse/totem-disc.c              | 20 ++++++++++++--------
- plparse/totem-pl-parser-lines.c   |  2 +-
- plparse/totem-pl-parser-media.c   |  8 ++++----
- plparse/totem-pl-parser-misc.c    | 10 +++++-----
- plparse/totem-pl-parser-pls.c     | 16 ++++++++--------
- plparse/totem-pl-parser-podcast.c | 12 ++++++------
- plparse/totem-pl-parser-qt.c      |  2 --
- plparse/totem-pl-parser.c         |  6 +-----
+ plparse/xplayer-disc.c              | 20 ++++++++++++--------
+ plparse/xplayer-pl-parser-lines.c   |  2 +-
+ plparse/xplayer-pl-parser-media.c   |  8 ++++----
+ plparse/xplayer-pl-parser-misc.c    | 10 +++++-----
+ plparse/xplayer-pl-parser-pls.c     | 16 ++++++++--------
+ plparse/xplayer-pl-parser-podcast.c | 12 ++++++------
+ plparse/xplayer-pl-parser-qt.c      |  2 --
+ plparse/xplayer-pl-parser.c         |  6 +-----
  plparse/xmllexer.c                | 17 +++++++++++------
  plparse/xmllexer.h                |  8 +++++++-
  plparse/xmlparser.c               |  8 +++++---
@@ -1782,7 +1782,7 @@ Date:   Wed Dec 21 13:19:16 2011 +0000
 
     introspection: Fix ::entry-parsed and ::playlist-started signals
 
- plparse/totem-pl-parser.c | 4 ++--
+ plparse/xplayer-pl-parser.c | 4 ++--
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 commit 96475716081db3e6e49e9a29c9b0adeb7bbcd2ae
@@ -1791,8 +1791,8 @@ Date:   Wed Dec 21 12:55:15 2011 +0000
 
     docs: Fix ID conflicts in documentation
 
- plparse/totem-pl-parser.h   | 14 ++++++--------
- plparse/totem-pl-playlist.h | 18 ++++++++----------
+ plparse/xplayer-pl-parser.h   | 14 ++++++--------
+ plparse/xplayer-pl-playlist.h | 18 ++++++++----------
  2 files changed, 14 insertions(+), 18 deletions(-)
 
 commit 81e48fdccd3ea0b3269ca13c4dbbbeb250f634db
@@ -1806,7 +1806,7 @@ Date:   Wed Dec 21 12:15:43 2011 +0000
     Also remove a generated file from git.
 
  Makefile.am                        | 24 +++++++++++++++++++++++-
- plparse/totem-pl-parser-builtins.h | 25 -------------------------
+ plparse/xplayer-pl-parser-builtins.h | 25 -------------------------
  2 files changed, 23 insertions(+), 26 deletions(-)
 
 commit 1cae7bf4c60674e37102d14ae31226eb9e7ee906
@@ -1832,8 +1832,8 @@ Date:   Wed Dec 21 11:47:12 2011 +0000
     docs: Add unused symbols to documentation sections file
 
  docs/reference/Makefile.am                  |  1 +
- docs/reference/totem-pl-parser-sections.txt |  2 ++
- plparse/totem-pl-parser.h                   | 14 ++++++++++++++
+ docs/reference/xplayer-pl-parser-sections.txt |  2 ++
+ plparse/xplayer-pl-parser.h                   | 14 ++++++++++++++
  3 files changed, 17 insertions(+)
 
 commit 4994055c9e75e0f3359baac5cb67094425af2820
@@ -1842,8 +1842,8 @@ Date:   Wed Dec 21 11:45:58 2011 +0000
 
     docs: Fix some broken documentation comments
 
- plparse/totem-disc.h        | 3 ++-
- plparse/totem-pl-playlist.c | 2 +-
+ plparse/xplayer-disc.h        | 3 ++-
+ plparse/xplayer-pl-playlist.c | 2 +-
  2 files changed, 3 insertions(+), 2 deletions(-)
 
 commit 4a044c149cc8e1e54e829eda7f2ccc4cbdd4908f
@@ -1864,7 +1864,7 @@ Date:   Wed Dec 21 11:36:32 2011 +0000
     This removes one more file we have to maintain.
 
  docs/reference/Makefile.am           | 6 +++++-
- docs/reference/totem-pl-parser.types | 2 --
+ docs/reference/xplayer-pl-parser.types | 2 --
  2 files changed, 5 insertions(+), 3 deletions(-)
 
 commit 506f0999d69d405e8b1d026a470413304ea9f934
@@ -1909,16 +1909,16 @@ Date:   Fri Nov 4 17:56:40 2011 +0000
 
     lib: Remove unneeded includes
 
- plparse/totem-pl-parser-lines.c   | 1 -
- plparse/totem-pl-parser-media.c   | 1 -
- plparse/totem-pl-parser-misc.c    | 1 -
- plparse/totem-pl-parser-pla.c     | 1 -
- plparse/totem-pl-parser-pls.c     | 1 -
- plparse/totem-pl-parser-podcast.c | 1 -
- plparse/totem-pl-parser-qt.c      | 1 -
- plparse/totem-pl-parser-smil.c    | 1 -
- plparse/totem-pl-parser-wm.c      | 1 -
- plparse/totem-pl-parser-xspf.c    | 1 -
+ plparse/xplayer-pl-parser-lines.c   | 1 -
+ plparse/xplayer-pl-parser-media.c   | 1 -
+ plparse/xplayer-pl-parser-misc.c    | 1 -
+ plparse/xplayer-pl-parser-pla.c     | 1 -
+ plparse/xplayer-pl-parser-pls.c     | 1 -
+ plparse/xplayer-pl-parser-podcast.c | 1 -
+ plparse/xplayer-pl-parser-qt.c      | 1 -
+ plparse/xplayer-pl-parser-smil.c    | 1 -
+ plparse/xplayer-pl-parser-wm.c      | 1 -
+ plparse/xplayer-pl-parser-xspf.c    | 1 -
  10 files changed, 10 deletions(-)
 
 commit 4226db008a7849e11a1f71f4b2625e57002aaad2
@@ -1927,7 +1927,7 @@ Date:   Fri Oct 21 17:18:28 2011 +0100
 
     lib: Remove another GIR warning
 
- plparse/totem-disc.h | 5 +++++
+ plparse/xplayer-disc.h | 5 +++++
  1 file changed, 5 insertions(+)
 
 commit ca08aca9a333864c18b1b6108321d94243f5a84c
@@ -1939,7 +1939,7 @@ Date:   Fri Oct 21 17:18:00 2011 +0100
     Seems to work correctly now, at least the test suite still
     passes correctly.
 
- plparse/totem-pl-parser-wm.c | 1 -
+ plparse/xplayer-pl-parser-wm.c | 1 -
  1 file changed, 1 deletion(-)
 
 commit e390e68854fbbc7a13104702ad1dfdd80ce160c9
@@ -1967,7 +1967,7 @@ Date:   Fri Oct 21 16:36:26 2011 +0100
     https://bugzilla.gnome.org/show_bug.cgi?id=661451
 
  configure.in                        | 2 +-
- plparse/totem-pl-parser-videosite.c | 6 +++---
+ plparse/xplayer-pl-parser-videosite.c | 6 +++---
  2 files changed, 4 insertions(+), 4 deletions(-)
 
 commit 8a9c5a7c81bbbea91eb2bfef33e7d9482095228f
@@ -1980,7 +1980,7 @@ Date:   Fri Oct 21 16:12:14 2011 +0100
     functions, causing warnings from the introspection tools.
 
  plparse/Makefile.am       | 4 ++--
- plparse/totem-pl-parser.c | 4 ++--
+ plparse/xplayer-pl-parser.c | 4 ++--
  2 files changed, 4 insertions(+), 4 deletions(-)
 
 commit c3701d43da1dcb3ce53e1d2cb3a0fb157c22df00
@@ -1994,7 +1994,7 @@ Date:   Fri Oct 7 15:08:58 2011 -0400
     https://bugzilla.gnome.org/show_bug.cgi?id=661219
 
  configure.in              |  2 +-
- plparse/totem-pl-parser.c | 31 ++++++++++++++-----------------
+ plparse/xplayer-pl-parser.c | 31 ++++++++++++++-----------------
  2 files changed, 15 insertions(+), 18 deletions(-)
 
 commit 8eb7dd1c59f967966f7317373819c91a3417bc6f
@@ -2036,8 +2036,8 @@ Date:   Sun Sep 18 11:41:39 2011 +0100
     
     We don't use the URI, so don't use a macro that uses it.
 
- plparse/totem-pl-parser-pla.c     | 10 +++++-----
- plparse/totem-pl-parser-private.h |  9 +++++----
+ plparse/xplayer-pl-parser-pla.c     | 10 +++++-----
+ plparse/xplayer-pl-parser-private.h |  9 +++++----
  2 files changed, 10 insertions(+), 9 deletions(-)
 
 commit 7aae4c6ecaab2ba07e965032253199d9fa4f0a18
@@ -2048,7 +2048,7 @@ Date:   Sun Sep 18 11:40:44 2011 +0100
     
     A number of set but unused variables.
 
- plparse/totem-pl-playlist.c | 8 --------
+ plparse/xplayer-pl-playlist.c | 8 --------
  1 file changed, 8 deletions(-)
 
 commit cd23f16eec5c8c81118e8da51fd810250cf37077
@@ -2057,9 +2057,9 @@ Date:   Sun Sep 18 03:36:10 2011 +0100
 
     Add support for M4U/MXU playlists
 
- plparse/totem-pl-parser-lines.c | 11 +++++++++++
- plparse/totem-pl-parser-lines.h |  5 +++++
- plparse/totem-pl-parser.c       |  1 +
+ plparse/xplayer-pl-parser-lines.c | 11 +++++++++++
+ plparse/xplayer-pl-parser-lines.h |  5 +++++
+ plparse/xplayer-pl-parser.c       |  1 +
  3 files changed, 17 insertions(+)
 
 commit 139e1c04072669cceb2c78fc6ceb0b63b14818a2
@@ -2085,7 +2085,7 @@ Date:   Tue Aug 30 15:05:06 2011 +0100
     https://bugzilla.gnome.org/show_bug.cgi?id=655378
 
  plparse/tests/parser.c    | 12 ++++++++++++
- plparse/totem-pl-parser.c |  5 ++++-
+ plparse/xplayer-pl-parser.c |  5 ++++-
  2 files changed, 16 insertions(+), 1 deletion(-)
 
 commit 467d79dc172d17bb840ff64a359a679ed131ea76
@@ -2094,7 +2094,7 @@ Date:   Tue Aug 30 11:21:40 2011 +0100
 
     Add missing linefeed in debug output
 
- plparse/totem-pl-parser-videosite.c | 2 +-
+ plparse/xplayer-pl-parser-videosite.c | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit d97010304e423a9b85445484d5c17b830a8da345
@@ -2137,7 +2137,7 @@ Date:   Tue May 3 14:23:33 2011 +0100
     
     https://bugzilla.gnome.org/show_bug.cgi?id=649171
 
- plparse/totem-pl-parser-podcast.c | 116 ++++++++++++++++++++------------------
+ plparse/xplayer-pl-parser-podcast.c | 116 ++++++++++++++++++++------------------
  1 file changed, 62 insertions(+), 54 deletions(-)
 
 commit cdee229e67a3b88557cc01545af05a860f559ba4
@@ -2146,7 +2146,7 @@ Date:   Tue May 3 13:07:52 2011 +0100
 
     lib: Add debug to the podcast functions
 
- plparse/totem-pl-parser-podcast.c | 17 +++++++++++------
+ plparse/xplayer-pl-parser-podcast.c | 17 +++++++++++------
  1 file changed, 11 insertions(+), 6 deletions(-)
 
 commit e57948ce6ef79af728e40722c8478122270b845e
@@ -2160,8 +2160,8 @@ Date:   Sat Apr 2 20:42:08 2011 +0100
 
  configure.in         |  35 ++++++++++++++
  plparse/Makefile.am  |   2 +
- plparse/totem-disc.c | 130 ++++++++++++++++++++++++---------------------------
- totem-plparser.pc.in |   2 +-
+ plparse/xplayer-disc.c | 130 ++++++++++++++++++++++++---------------------------
+ xplayer-plparser.pc.in |   2 +-
  4 files changed, 98 insertions(+), 71 deletions(-)
 
 commit aba65d92aa4a82de84a3135af2cbfb88124a319b
@@ -2173,7 +2173,7 @@ Date:   Fri Mar 25 01:31:39 2011 +0000
     Duration, and Thumbnail URL are now available.
 
  configure.in                        |  2 +-
- plparse/totem-pl-parser-videosite.c | 16 +++++++++++++---
+ plparse/xplayer-pl-parser-videosite.c | 16 +++++++++++++---
  2 files changed, 14 insertions(+), 4 deletions(-)
 
 commit 7a717c19076b504324e99db2707f24de1ce0c645
@@ -2203,7 +2203,7 @@ Date:   Mon Mar 21 14:50:33 2011 +0000
     Using the newly added property
 
  plparse/tests/parser.c            | 10 ++++++++++
- plparse/totem-pl-parser-podcast.c |  6 ++++--
+ plparse/xplayer-pl-parser-podcast.c |  6 ++++--
  2 files changed, 14 insertions(+), 2 deletions(-)
 
 commit 52e11d77a79ce5790889e91cd3bc6d1339d69a46
@@ -2221,9 +2221,9 @@ Date:   Thu Mar 17 01:20:52 2011 +0000
 
     Add "content-type" property
 
- plparse/totem-pl-parser-videosite.c | 3 +++
- plparse/totem-pl-parser.c           | 6 +++++-
- plparse/totem-pl-parser.h           | 7 +++++++
+ plparse/xplayer-pl-parser-videosite.c | 3 +++
+ plparse/xplayer-pl-parser.c           | 6 +++++-
+ plparse/xplayer-pl-parser.h           | 7 +++++++
  3 files changed, 15 insertions(+), 1 deletion(-)
 
 commit 3e598e4e6a20905dccb97f70a4c62e41ef1a61f4
@@ -2236,7 +2236,7 @@ Date:   Wed Mar 2 14:57:32 2011 +0000
     
     https://bugzilla.gnome.org/show_bug.cgi?id=643667
 
- plparse/totem-pl-parser-pls.c | 2 +-
+ plparse/xplayer-pl-parser-pls.c | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit af13421e30dd30fc4adc2e8740564e9413f7c2cc
@@ -2295,10 +2295,10 @@ commit 0c63fa02401190e0cfa1033f011722964b5031a2
 Author: Yaakov Selkowitz <yselkowitz@users.sourceforge.net>
 Date:   Mon Jan 31 19:12:56 2011 -0600
 
-    Fix undefined symbol in libtotem-plparser-mini
+    Fix undefined symbol in libxplayer-plparser-mini
     
-    totem-pl-parser.c:totem_pl_parser_can_parse_from_uri() calls
-    totem_pl_parser_is_videosite(), which relies on libquvi.
+    xplayer-pl-parser.c:xplayer_pl_parser_can_parse_from_uri() calls
+    xplayer_pl_parser_is_videosite(), which relies on libquvi.
     
     https://bugzilla.gnome.org/show_bug.cgi?id=640986
 
@@ -2347,7 +2347,7 @@ Date:   Wed Jan 19 16:08:48 2011 +0000
  plparse/tests/Makefile.am                       |  3 ++-
  plparse/tests/WMA9.1_98_quality_48khz_vbr_s.wma |  3 +++
  plparse/tests/parser.c                          | 13 +++++++++++++
- plparse/totem-pl-parser.c                       |  1 +
+ plparse/xplayer-pl-parser.c                       |  1 +
  4 files changed, 19 insertions(+), 1 deletion(-)
 
 commit 716db54b5f1c90e0f24ad06632a97aa86d3ed6a9
@@ -2399,12 +2399,12 @@ Date:   Tue Dec 14 14:47:29 2010 +0000
     we list libquvi in the private dependencies in pkg-config files.
 
  configure.in                          |  3 +++
- plparse/totem-pl-parser-videosite.c   | 10 +++++++---
- plparse/totem-pl-parser.c             |  5 +----
- totem-plparser-mini-uninstalled.pc.in |  2 +-
- totem-plparser-mini.pc.in             |  2 +-
- totem-plparser-uninstalled.pc.in      |  2 +-
- totem-plparser.pc.in                  |  2 +-
+ plparse/xplayer-pl-parser-videosite.c   | 10 +++++++---
+ plparse/xplayer-pl-parser.c             |  5 +----
+ xplayer-plparser-mini-uninstalled.pc.in |  2 +-
+ xplayer-plparser-mini.pc.in             |  2 +-
+ xplayer-plparser-uninstalled.pc.in      |  2 +-
+ xplayer-plparser.pc.in                  |  2 +-
  7 files changed, 15 insertions(+), 11 deletions(-)
 
 commit e3feb714f97c10fda5a7723a5567546c136fff81
@@ -2413,7 +2413,7 @@ Date:   Wed Nov 24 16:24:14 2010 +0000
 
     Parse links to video websites
     
-    And load them up as videos. Add totem_pl_parser_can_parse_from_uri
+    And load them up as videos. Add xplayer_pl_parser_can_parse_from_uri
     that could be used with the mini parser.
     
     Expand the starttime parsing to include the YouTube format.
@@ -2425,10 +2425,10 @@ Date:   Wed Nov 24 16:24:14 2010 +0000
  plparse/plparser-mini.symbols       |   1 +
  plparse/plparser.symbols            |   1 +
  plparse/tests/parser.c              |  14 ++++
- plparse/totem-pl-parser-mini.h      |   2 +
- plparse/totem-pl-parser-videosite.c | 132 ++++++++++++++++++++++++++++++++++++
- plparse/totem-pl-parser-videosite.h |  49 +++++++++++++
- plparse/totem-pl-parser.c           |  40 +++++++++++
+ plparse/xplayer-pl-parser-mini.h      |   2 +
+ plparse/xplayer-pl-parser-videosite.c | 132 ++++++++++++++++++++++++++++++++++++
+ plparse/xplayer-pl-parser-videosite.h |  49 +++++++++++++
+ plparse/xplayer-pl-parser.c           |  40 +++++++++++
  9 files changed, 266 insertions(+)
 
 commit 7b69a00ecab4c517f5dc3083fe70a2a73f527b4c
@@ -2446,10 +2446,10 @@ Date:   Fri Dec 10 20:30:26 2010 +0000
  plparse/plparser-mini.symbols       |   1 -
  plparse/plparser.symbols            |   1 -
  plparse/tests/parser.c              |  20 ------
- plparse/totem-pl-parser-mini.h      |   2 -
- plparse/totem-pl-parser-videosite.c | 136 ------------------------------------
- plparse/totem-pl-parser-videosite.h |  49 -------------
- plparse/totem-pl-parser.c           |  42 -----------
+ plparse/xplayer-pl-parser-mini.h      |   2 -
+ plparse/xplayer-pl-parser-videosite.c | 136 ------------------------------------
+ plparse/xplayer-pl-parser-videosite.h |  49 -------------
+ plparse/xplayer-pl-parser.c           |  42 -----------
  9 files changed, 278 deletions(-)
 
 commit 57b47813b5fb2978537ed21d2050c5fad44fd106
@@ -2470,7 +2470,7 @@ Date:   Wed Nov 24 16:24:14 2010 +0000
 
     Parse links to video websites
     
-    And load them up as videos. Add totem_pl_parser_can_parse_from_uri
+    And load them up as videos. Add xplayer_pl_parser_can_parse_from_uri
     that could be used with the mini parser.
     
     Expand the starttime parsing to include the YouTube format.
@@ -2482,10 +2482,10 @@ Date:   Wed Nov 24 16:24:14 2010 +0000
  plparse/plparser-mini.symbols       |   1 +
  plparse/plparser.symbols            |   1 +
  plparse/tests/parser.c              |  20 ++++++
- plparse/totem-pl-parser-mini.h      |   2 +
- plparse/totem-pl-parser-videosite.c | 136 ++++++++++++++++++++++++++++++++++++
- plparse/totem-pl-parser-videosite.h |  49 +++++++++++++
- plparse/totem-pl-parser.c           |  42 +++++++++++
+ plparse/xplayer-pl-parser-mini.h      |   2 +
+ plparse/xplayer-pl-parser-videosite.c | 136 ++++++++++++++++++++++++++++++++++++
+ plparse/xplayer-pl-parser-videosite.h |  49 +++++++++++++
+ plparse/xplayer-pl-parser.c           |  42 +++++++++++
  9 files changed, 278 insertions(+)
 
 commit dd628228e8294bf26ec4edad33f605e358c0584a
@@ -2494,7 +2494,7 @@ Date:   Fri Nov 26 18:58:06 2010 +0000
 
     tests: Add assert for double-insert when parsing playlists
     
-    Doesn't actually happen in totem-pl-parser, but we'll want
+    Doesn't actually happen in xplayer-pl-parser, but we'll want
     to check, to be certain.
 
  plparse/tests/parser.c | 4 ++++
@@ -2506,7 +2506,7 @@ Date:   Thu Nov 25 18:04:05 2010 +0000
 
     Use GOnce to initialise the i18n system
 
- plparse/totem-pl-parser.c | 17 ++++++++++-------
+ plparse/xplayer-pl-parser.c | 17 ++++++++++-------
  1 file changed, 10 insertions(+), 7 deletions(-)
 
 commit 794bc01a53872b613b51ac36d1f37f247fec2b5c
@@ -2541,7 +2541,7 @@ Date:   Mon Nov 15 11:49:32 2010 +0000
     https://bugzilla.gnome.org/show_bug.cgi?id=634770
 
  plparse/tests/parser.c    | 1 +
- plparse/totem-pl-parser.c | 8 ++++----
+ plparse/xplayer-pl-parser.c | 8 ++++----
  2 files changed, 5 insertions(+), 4 deletions(-)
 
 commit f2d217b74e5818ebc7164bb0a2f29769f396af96
@@ -2552,7 +2552,7 @@ Date:   Mon Nov 15 11:40:09 2010 +0000
     
     The enumerator is NULL, so there's nothing to close or unref.
 
- plparse/totem-pl-parser-media.c | 2 --
+ plparse/xplayer-pl-parser-media.c | 2 --
  1 file changed, 2 deletions(-)
 
 commit a45d8655cb579ef8838c0f9bb5003983377143ff
@@ -2605,11 +2605,11 @@ Date:   Sun Oct 17 06:29:25 2010 +0100
     Don't add directories as playlist items
     
     This will avoid unreadable playlist items showing up in
-    Totem when drag'n'dropping really deep directory hierarchies.
+    Xplayer when drag'n'dropping really deep directory hierarchies.
 
  plparse/tests/foo/bar/baz/boz/biz/buz/really-flv.mp4 |  1 +
  plparse/tests/parser.c                               | 18 ++++++++++++++++++
- plparse/totem-pl-parser-media.c                      |  4 +++-
+ plparse/xplayer-pl-parser-media.c                      |  4 +++-
  3 files changed, 22 insertions(+), 1 deletion(-)
 
 commit e436fc69eacf17e8b15d089f8b59d12e1d7644c6
@@ -2627,7 +2627,7 @@ Date:   Mon Oct 11 22:19:14 2010 +0100
 
     And a little more iTunes Podcast
 
- plparse/totem-pl-parser-podcast.c | 2 +-
+ plparse/xplayer-pl-parser-podcast.c | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit 40cd5e4eddae32f4b3cffaca2f478ccad053a3e6
@@ -2639,7 +2639,7 @@ Date:   Mon Oct 11 22:10:44 2010 +0100
     https://bugzilla.gnome.org/show_bug.cgi?id=617745
 
  plparse/tests/parser.c            |   5 +-
- plparse/totem-pl-parser-podcast.c | 125 ++++++++++++++++++++++++++------------
+ plparse/xplayer-pl-parser-podcast.c | 125 ++++++++++++++++++++++++++------------
  2 files changed, 89 insertions(+), 41 deletions(-)
 
 commit df96a5635643be596b18a42f2aeec5bd0af45711
@@ -2666,7 +2666,7 @@ Date:   Sat Oct 9 15:59:14 2010 +1000
     
     https://bugzilla.gnome.org/show_bug.cgi?id=631727
 
- plparse/totem-pl-parser-private.h | 14 +++++++++-----
+ plparse/xplayer-pl-parser-private.h | 14 +++++++++-----
  1 file changed, 9 insertions(+), 5 deletions(-)
 
 commit cd01b63cb314107d80e7c239dcf8001d5911e9b3
@@ -2692,14 +2692,14 @@ Date:   Wed Oct 6 09:41:28 2010 +0100
  plparse/tests/Makefile.am                          |  3 +-
  ...Gotta_girlfriend_Feat._O_G_Money_Snoop_Dogg.m3u |  3 ++
  plparse/tests/parser.c                             | 11 +++++++
- plparse/totem-pl-parser-lines.c                    | 38 +++++++++++++---------
+ plparse/xplayer-pl-parser-lines.c                    | 38 +++++++++++++---------
  4 files changed, 39 insertions(+), 16 deletions(-)
 
 commit 63016825462ad5e101012f6a33978147b523013e
 Author: Bastien Nocera <hadess@hadess.net>
 Date:   Mon Oct 4 15:34:59 2010 +0100
 
-    Make sure TotemCd and TotemDisc introspection works
+    Make sure XplayerCd and XplayerDisc introspection works
     
     The namespaces would have been ignored with previous versions
     of gobject-introspection, or done something random.
@@ -2756,7 +2756,7 @@ Date:   Tue Sep 14 00:01:13 2010 +0100
 
     Update g-ir-scanner options
     
-    This changes the prefix used in totem-pl-parser's GIR file to “TotemPl”,
+    This changes the prefix used in xplayer-pl-parser's GIR file to “XplayerPl”,
     breaking introspection API. It makes things neater, however, and does fix the
     introspection build. This works with old versions of gobject-introspection,
     but ideally we'd depend on 0.9.5 with this change. Closes: bgo#629342
@@ -2770,9 +2770,9 @@ Date:   Wed Sep 15 21:29:39 2010 +0100
 
     Add missing documentation
 
- docs/reference/totem-pl-parser-docs.xml     |  4 ++++
- docs/reference/totem-pl-parser-sections.txt |  4 ++++
- plparse/totem-pl-playlist.h                 | 15 +++++++++++++++
+ docs/reference/xplayer-pl-parser-docs.xml     |  4 ++++
+ docs/reference/xplayer-pl-parser-sections.txt |  4 ++++
+ plparse/xplayer-pl-playlist.h                 | 15 +++++++++++++++
  3 files changed, 23 insertions(+)
 
 commit 178cc697bd65fd21b4cc0209c3b24554d5fa037d
@@ -2819,7 +2819,7 @@ Date:   Mon Sep 13 14:32:17 2010 +0100
  plparse/tests/Makefile.am    |   3 ++-
  plparse/tests/parser.c       |  12 ++++++++++++
  plparse/tests/really-flv.mp4 | Bin 0 -> 204800 bytes
- plparse/totem-pl-parser.c    |   5 ++---
+ plparse/xplayer-pl-parser.c    |   5 ++---
  4 files changed, 16 insertions(+), 4 deletions(-)
 
 commit 3e2dc648a694b15352c2b7e54ff797986c238511
@@ -2837,7 +2837,7 @@ Date:   Thu Aug 26 14:11:49 2010 +0100
  plparse/tests/3gpp-file.mp4 | Bin 0 -> 524288 bytes
  plparse/tests/Makefile.am   |   3 ++-
  plparse/tests/parser.c      |  12 ++++++++++++
- plparse/totem-pl-parser.c   |   1 +
+ plparse/xplayer-pl-parser.c   |   1 +
  4 files changed, 15 insertions(+), 1 deletion(-)
 
 commit a0824aa8e003b62b8976d2cb683c0cae09d2d6a2
@@ -2853,7 +2853,7 @@ Date:   Mon Aug 23 10:45:53 2010 +0100
  plparse/tests/Makefile.am       |  3 ++-
  plparse/tests/parser.c          | 13 +++++++++++++
  plparse/tests/separator.m3u     |  3 +++
- plparse/totem-pl-parser-lines.c |  7 -------
+ plparse/xplayer-pl-parser-lines.c |  7 -------
  4 files changed, 18 insertions(+), 8 deletions(-)
 
 commit 41d13b6ff351716818451d570fda64417e2284e0
@@ -2882,8 +2882,8 @@ Date:   Mon Aug 2 14:22:56 2010 +0100
 
     Add support for Last.fm's new XSPF extensions
     
-    Support the TOTEM_PL_PARSER_FIELD_ID and
-    TOTEM_PL_PARSER_FIELD_DOWNLOAD_URI fields in newer last.fm XSPF
+    Support the XPLAYER_PL_PARSER_FIELD_ID and
+    XPLAYER_PL_PARSER_FIELD_DOWNLOAD_URI fields in newer last.fm XSPF
     playlists.
     
     https://bugzilla.gnome.org/show_bug.cgi?id=625823
@@ -2892,7 +2892,7 @@ Date:   Mon Aug 2 14:22:56 2010 +0100
  plparse/tests/new-lastfm-output.xspf | 37 ++++++++++++++++
  plparse/tests/old-lastfm-output.xspf | 25 +++++++++++
  plparse/tests/parser.c               | 83 ++++++++++++++++++++++++++++++++++++
- plparse/totem-pl-parser-xspf.c       | 14 ++++++
+ plparse/xplayer-pl-parser-xspf.c       | 14 ++++++
  5 files changed, 162 insertions(+), 1 deletion(-)
 
 commit 85779b0e2a962feefa96233722b8e1e0c3116bf3
@@ -2922,7 +2922,7 @@ Date:   Thu Jul 22 12:19:44 2010 +0100
     Fix parsing podcasts links used in the iTunes Music Store.
 
  configure.in                      |   2 +-
- plparse/totem-pl-parser-podcast.c | 127 +++++++++-----------------------------
+ plparse/xplayer-pl-parser-podcast.c | 127 +++++++++-----------------------------
  plparse/xmlparser.c               |   2 +-
  3 files changed, 32 insertions(+), 99 deletions(-)
 
@@ -2946,7 +2946,7 @@ Date:   Sun Jul 18 03:01:30 2010 +0100
  plparse/tests/Makefile.am      |  3 ++-
  plparse/tests/parser.c         | 42 ++++++++++++++++++++++++++++++++++++++++++
  plparse/tests/playlist.xspf    | 14 ++++++++++++++
- plparse/totem-pl-parser-xspf.c | 37 +++++++++++++++++++++++++++++++------
+ plparse/xplayer-pl-parser-xspf.c | 37 +++++++++++++++++++++++++++++++------
  4 files changed, 89 insertions(+), 7 deletions(-)
 
 commit 88d4973586e75e8c71d458f64828bc9b69329957
@@ -2955,7 +2955,7 @@ Date:   Thu Jul 15 23:21:33 2010 +0100
 
     Make MEDIA_TYPE_NUM_TYPES a #define rather than an enum member
 
- plparse/totem-disc.h | 5 ++---
+ plparse/xplayer-disc.h | 5 ++---
  1 file changed, 2 insertions(+), 3 deletions(-)
 
 commit f67db2fdd04a97b819859e649d463f94c0f13d13
@@ -2985,20 +2985,20 @@ Date:   Wed Jul 14 22:54:52 2010 +0100
     
     Whoops.
 
- plparse/totem-pl-parser.c | 2 +-
+ plparse/xplayer-pl-parser.c | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit 342238a1336f9d66efca9edb9a1d3d5558d8a188
 Author: Philip Withnall <philip@tecnocode.co.uk>
 Date:   Wed Jul 14 22:48:56 2010 +0100
 
-    Bug 624341 — crash in totem_pl_parser_parse_with_base
+    Bug 624341 — crash in xplayer_pl_parser_parse_with_base
     
     Fix a crash with application/x-php dual-types if
     my_g_file_info_get_mime_type_with_data() can't find a real MIME type for the
     playlist. Closes: bgo#624341
 
- plparse/totem-pl-parser.c | 4 ++--
+ plparse/xplayer-pl-parser.c | 4 ++--
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 commit ef834f5a728b439630f7314b88591915bae6d78c
@@ -3041,13 +3041,13 @@ commit 14b9b021554e054a748d2a9ffc9b9e243e2c6202
 Author: Philip Withnall <philip@tecnocode.co.uk>
 Date:   Sat Jun 26 22:03:32 2010 +0100
 
-    Move TotemDiscMediaType get_type() and quark() functions from Totem
+    Move XplayerDiscMediaType get_type() and quark() functions from Xplayer
 
  plparse/Makefile.am                | 10 +++++-----
  plparse/plparser.symbols           |  2 ++
- plparse/totem-disc.c               | 10 ++++++++++
- plparse/totem-disc.h               |  6 +++++-
- plparse/totem-pl-parser-builtins.h |  7 +++++--
+ plparse/xplayer-disc.c               | 10 ++++++++++
+ plparse/xplayer-disc.h               |  6 +++++-
+ plparse/xplayer-pl-parser-builtins.h |  7 +++++--
  5 files changed, 27 insertions(+), 8 deletions(-)
 
 commit 291b01c80a76a70b8fa1a9cdf26b56ed882322d9
@@ -3083,7 +3083,7 @@ Date:   Tue Jun 1 19:07:16 2010 +0100
 
     Fix small compile-time warning
 
- plparse/totem-pl-parser-pls.c | 2 +-
+ plparse/xplayer-pl-parser-pls.c | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit f5c6405416ae14841e72828ba6220836395509bd
@@ -3095,14 +3095,14 @@ Date:   Tue Jun 1 18:49:33 2010 +0100
     Fix missing entries when parsing a PLS file which has "holes"
     in its numbering.
 
- plparse/totem-pl-parser-pls.c | 5 ++++-
+ plparse/xplayer-pl-parser-pls.c | 5 ++++-
  1 file changed, 4 insertions(+), 1 deletion(-)
 
 commit 234749a7e9fe84aeec358a9958cb0d25975d5aed
 Author: Adrian Bunk <adrian.bunk@movial.com>
 Date:   Tue May 18 16:00:40 2010 +0300
 
-    plparse/Makefile.am: Improve the rules for totemplparser-marshal.{c,h}
+    plparse/Makefile.am: Improve the rules for xplayerplparser-marshal.{c,h}
     
     Based on a suggestion by Christian Persch.
     
@@ -3119,8 +3119,8 @@ Date:   Thu May 13 10:32:22 2010 +0200
 
     Remove -lz from Libs.private now that GZlibDecompressor is used instead of zlib
 
- totem-plparser-uninstalled.pc.in | 1 -
- totem-plparser.pc.in             | 1 -
+ xplayer-plparser-uninstalled.pc.in | 1 -
+ xplayer-plparser.pc.in             | 1 -
  2 files changed, 2 deletions(-)
 
 commit e4fbb2b8e49215ba9c06cc1d2e952c2eac8ca7ae
@@ -3160,7 +3160,7 @@ Date:   Wed May 12 14:16:45 2010 +0100
 
     Remove generated file from repository
 
- plparse/totem-pl-parser-builtins.c | 58 --------------------------------------
+ plparse/xplayer-pl-parser-builtins.c | 58 --------------------------------------
  1 file changed, 58 deletions(-)
 
 commit 05efbbecdbf20d8bb87096661f45a705bd78c0f1
@@ -3198,8 +3198,8 @@ Date:   Wed May 5 12:06:55 2010 +0100
     
     https://bugzilla.gnome.org/show_bug.cgi?id=616538
 
- plparse/totem-pl-parser.c | 5 +++++
- plparse/totem-pl-parser.h | 4 +++-
+ plparse/xplayer-pl-parser.c | 5 +++++
+ plparse/xplayer-pl-parser.h | 4 +++-
  2 files changed, 8 insertions(+), 1 deletion(-)
 
 commit d548b44d7dd8d943493288d3fab1a25b2f1f2797
@@ -3222,7 +3222,7 @@ Date:   Wed May 5 01:40:37 2010 +0200
     Bug #617664.
 
  configure.in                      |   2 +-
- plparse/totem-pl-parser-podcast.c | 180 +++++++++++++-------------------------
+ plparse/xplayer-pl-parser-podcast.c | 180 +++++++++++++-------------------------
  2 files changed, 64 insertions(+), 118 deletions(-)
 
 commit 5676ce6ffa59dd2b2e826b47f8de16f7ad83aad9
@@ -3260,10 +3260,10 @@ Date:   Tue May 4 17:43:17 2010 +0200
 
     Fix Requires/Libs of the pkg-config files to list everything required
 
- totem-plparser-mini-uninstalled.pc.in | 2 ++
- totem-plparser-mini.pc.in             | 2 ++
- totem-plparser-uninstalled.pc.in      | 4 +++-
- totem-plparser.pc.in                  | 4 +++-
+ xplayer-plparser-mini-uninstalled.pc.in | 2 ++
+ xplayer-plparser-mini.pc.in             | 2 ++
+ xplayer-plparser-uninstalled.pc.in      | 4 +++-
+ xplayer-plparser.pc.in                  | 4 +++-
  4 files changed, 10 insertions(+), 2 deletions(-)
 
 commit bbd84a522acbcb1615485d48c44f78c4df72c5b2
@@ -3330,7 +3330,7 @@ Date:   Tue Apr 20 15:43:36 2010 -0500
     
     https://bugzilla.gnome.org/show_bug.cgi?id=575373
 
- plparse/totem-pl-parser.c | 2 ++
+ plparse/xplayer-pl-parser.c | 2 ++
  1 file changed, 2 insertions(+)
 
 commit 0e03a4fc36870e2851fd63d03d28e0d7d86fd4d8
@@ -3352,7 +3352,7 @@ Date:   Mon Apr 19 17:22:09 2010 -0500
     
     https://bugzilla.gnome.org/show_bug.cgi?id=575373
 
- lib/totem_internal.h | 6 +++++-
+ lib/xplayer_internal.h | 6 +++++-
  1 file changed, 5 insertions(+), 1 deletion(-)
 
 commit 145f8d281f5abfe22eac027f4e7186d9a4f0e52f
@@ -3430,7 +3430,7 @@ Date:   Mon Apr 12 00:03:36 2010 +0100
  plparse/tests/Makefile.am     |   3 +-
  plparse/tests/parser.c        |  12 +++++
  plparse/tests/remote_xspf.php | 116 ++++++++++++++++++++++++++++++++++++++++++
- plparse/totem-pl-parser.c     |  45 ++++++++++------
+ plparse/xplayer-pl-parser.c     |  45 ++++++++++------
  4 files changed, 160 insertions(+), 16 deletions(-)
 
 commit 916df6eb174a4cefc925d5786ee90cb295048bfe
@@ -3439,7 +3439,7 @@ Date:   Sun Apr 11 22:51:22 2010 +0100
 
     Fix use of the wrong iterator in loop
 
- plparse/totem-pl-parser.c | 5 +++--
+ plparse/xplayer-pl-parser.c | 5 +++--
  1 file changed, 3 insertions(+), 2 deletions(-)
 
 commit 12316e257478b6e144186427eb92b0c1ab2d1c42
@@ -3460,7 +3460,7 @@ Date:   Wed Apr 7 17:55:07 2010 +0100
  plparse/tests/Makefile.am             |   3 ++-
  plparse/tests/asf-with-asx-suffix.asx | Bin 0 -> 94230 bytes
  plparse/tests/parser.c                |  12 ++++++++++++
- plparse/totem-pl-parser.c             |  19 +++++++++++++++++++
+ plparse/xplayer-pl-parser.c             |  19 +++++++++++++++++++
  4 files changed, 33 insertions(+), 1 deletion(-)
 
 commit ae5a941de79d336bd73448d1ddcd58fb614c1a85
@@ -3545,7 +3545,7 @@ Date:   Sun Mar 7 11:30:28 2010 +0100
     
     https://bugzilla.gnome.org/show_bug.cgi?id=612067
 
- plparse/totem-pl-parser-media.c | 4 ++++
+ plparse/xplayer-pl-parser-media.c | 4 ++++
  1 file changed, 4 insertions(+)
 
 commit 58be46c568c9fb582ca8f99c1cbed31d450eec6c
@@ -3562,7 +3562,7 @@ Date:   Tue Mar 2 16:50:58 2010 +0000
 
  plparse/tests/parser.c       | 58 ++++++++++++++++++++++++++++++++++++++++++++
  plparse/tests/pukas.wax      | 15 ++++++++++++
- plparse/totem-pl-parser-wm.c |  9 ++++++-
+ plparse/xplayer-pl-parser-wm.c |  9 ++++++-
  3 files changed, 81 insertions(+), 1 deletion(-)
 
 commit 13930a90705d7fe490dcf0fd63c9161c27870a07
@@ -3601,7 +3601,7 @@ Date:   Mon Feb 8 18:23:49 2010 +0000
     As available from:
     http://www.guardian.co.uk/media/series/media-talk-usa/rss
 
- plparse/totem-pl-parser-podcast.c | 21 +++++++++++++++++++++
+ plparse/xplayer-pl-parser-podcast.c | 21 +++++++++++++++++++++
  1 file changed, 21 insertions(+)
 
 commit b187641f8802a5e619e229516041ca23d9d329c0
@@ -3613,8 +3613,8 @@ Date:   Wed Jan 27 17:55:02 2010 +0000
     Thanks for Stefan Kost for his help
 
  docs/reference/Makefile.am                  | 2 +-
- docs/reference/totem-pl-parser-docs.xml     | 1 +
- docs/reference/totem-pl-parser-sections.txt | 7 +++++++
+ docs/reference/xplayer-pl-parser-docs.xml     | 1 +
+ docs/reference/xplayer-pl-parser-sections.txt | 7 +++++++
  3 files changed, 9 insertions(+), 1 deletion(-)
 
 commit bb7be07cb259b1f81ddf07a5d2126358b3999c7a
@@ -3652,8 +3652,8 @@ Date:   Tue Jan 26 11:05:23 2010 +0000
 
     gtk-doc fixes
 
- plparse/totem-pl-parser.c   |  2 +-
- plparse/totem-pl-playlist.c | 13 +++++++++++++
+ plparse/xplayer-pl-parser.c   |  2 +-
+ plparse/xplayer-pl-playlist.c | 13 +++++++++++++
  2 files changed, 14 insertions(+), 1 deletion(-)
 
 commit 5a0d8853141a21fb2a512747776ca2cc253714e4
@@ -3684,7 +3684,7 @@ Date:   Fri Jan 8 17:30:59 2010 +0000
     
     https://bugzilla.gnome.org/show_bug.cgi?id=551393
 
- plparse/totem-pl-parser-xspf.c | 66 ++++++++++++++++++++++++++++++------------
+ plparse/xplayer-pl-parser-xspf.c | 66 ++++++++++++++++++++++++++++++------------
  1 file changed, 47 insertions(+), 19 deletions(-)
 
 commit 4ee3fbc5cfe266858a950820bd23befc3518aab4
@@ -3698,7 +3698,7 @@ Date:   Fri Jan 8 16:42:39 2010 +0100
     
     Fixes https://bugzilla.gnome.org/show_bug.cgi?id=602550
 
- plparse/totem-disc.c | 16 +++++++++-------
+ plparse/xplayer-disc.c | 16 +++++++++-------
  1 file changed, 9 insertions(+), 7 deletions(-)
 
 commit f79a344775f8e28218ddc508abaeefda4917a1ad
@@ -3734,38 +3734,38 @@ Date:   Fri Dec 18 14:25:57 2009 +0100
 
     Remove GTK+ dependency.
     
-    TotemPlPlaylist has been added to replace GtkTreeModel usage in the
+    XplayerPlPlaylist has been added to replace GtkTreeModel usage in the
     write API, internal playlist implementations now use this to get
     songs/titles in order to write the playlist. Older write API has been
-    replaced by totem_pl_parser_save().
+    replaced by xplayer_pl_parser_save().
 
  configure.in                                |   2 +-
- docs/reference/totem-pl-parser-docs.xml     |   1 +
- docs/reference/totem-pl-parser-sections.txt |  32 +-
- docs/reference/totem-pl-parser.types        |   1 +
+ docs/reference/xplayer-pl-parser-docs.xml     |   1 +
+ docs/reference/xplayer-pl-parser-sections.txt |  32 +-
+ docs/reference/xplayer-pl-parser.types        |   1 +
  plparse/Makefile.am                         |   7 +-
  plparse/plparser.symbols                    |  18 +-
- plparse/totem-pl-parser-lines.c             |  41 ++-
- plparse/totem-pl-parser-lines.h             |  13 +-
- plparse/totem-pl-parser-media.c             |   3 +-
- plparse/totem-pl-parser-misc.c              |   2 +-
- plparse/totem-pl-parser-pla.c               |  50 +--
- plparse/totem-pl-parser-pla.h               |   8 +-
- plparse/totem-pl-parser-pls.c               | 107 +++---
- plparse/totem-pl-parser-pls.h               |   6 +-
- plparse/totem-pl-parser-podcast.c           |   2 +-
- plparse/totem-pl-parser-private.h           |   8 +-
- plparse/totem-pl-parser-qt.c                |   2 +-
- plparse/totem-pl-parser-smil.c              |   2 +-
- plparse/totem-pl-parser-wm.c                |   2 +-
- plparse/totem-pl-parser-xspf.c              |  58 +--
- plparse/totem-pl-parser-xspf.h              |  15 +-
- plparse/totem-pl-parser.c                   | 195 +++++-----
- plparse/totem-pl-parser.h                   |  43 +--
- plparse/totem-pl-playlist.c                 | 533 ++++++++++++++++++++++++++++
- plparse/totem-pl-playlist.h                 | 100 ++++++
- totem-plparser-uninstalled.pc.in            |   1 -
- totem-plparser.pc.in                        |   1 -
+ plparse/xplayer-pl-parser-lines.c             |  41 ++-
+ plparse/xplayer-pl-parser-lines.h             |  13 +-
+ plparse/xplayer-pl-parser-media.c             |   3 +-
+ plparse/xplayer-pl-parser-misc.c              |   2 +-
+ plparse/xplayer-pl-parser-pla.c               |  50 +--
+ plparse/xplayer-pl-parser-pla.h               |   8 +-
+ plparse/xplayer-pl-parser-pls.c               | 107 +++---
+ plparse/xplayer-pl-parser-pls.h               |   6 +-
+ plparse/xplayer-pl-parser-podcast.c           |   2 +-
+ plparse/xplayer-pl-parser-private.h           |   8 +-
+ plparse/xplayer-pl-parser-qt.c                |   2 +-
+ plparse/xplayer-pl-parser-smil.c              |   2 +-
+ plparse/xplayer-pl-parser-wm.c                |   2 +-
+ plparse/xplayer-pl-parser-xspf.c              |  58 +--
+ plparse/xplayer-pl-parser-xspf.h              |  15 +-
+ plparse/xplayer-pl-parser.c                   | 195 +++++-----
+ plparse/xplayer-pl-parser.h                   |  43 +--
+ plparse/xplayer-pl-playlist.c                 | 533 ++++++++++++++++++++++++++++
+ plparse/xplayer-pl-playlist.h                 | 100 ++++++
+ xplayer-plparser-uninstalled.pc.in            |   1 -
+ xplayer-plparser.pc.in                        |   1 -
  27 files changed, 954 insertions(+), 299 deletions(-)
 
 commit 49ee29f128687c8b23febfe3fdbfa3db20866556
@@ -3811,10 +3811,10 @@ Date:   Mon Jan 4 16:51:40 2010 +0000
     Fix documentation section references
     
     Fix ID collision between two sections which were both trying to call
-    themselves "TotemPlParser". This stops the irritating stream of warnings from
+    themselves "XplayerPlParser". This stops the irritating stream of warnings from
     gtk-doc when building.
 
- plparse/totem-pl-parser.h | 10 +++++-----
+ plparse/xplayer-pl-parser.h | 10 +++++-----
  1 file changed, 5 insertions(+), 5 deletions(-)
 
 commit 067ef7123e389f071758712717c175c42c9af820
@@ -3823,7 +3823,7 @@ Date:   Mon Jan 4 16:43:27 2010 +0000
 
     Add gtk-doc support for introspection annotations
 
- docs/reference/totem-pl-parser-docs.xml | 4 ++++
+ docs/reference/xplayer-pl-parser-docs.xml | 4 ++++
  1 file changed, 4 insertions(+)
 
 commit fa45f9b86eb1523e1ee981c6a2aeb28b0230bab5
@@ -3832,16 +3832,16 @@ Date:   Sat Jan 2 00:26:32 2010 +0000
 
     Bug 555848 — Add introspection support
     
-    Add complete introspection support to totem-pl-parser, including enough
+    Add complete introspection support to xplayer-pl-parser, including enough
     annotations to ensure the GIR file is accurate. Closes: bgo#555848
 
  Makefile.am               |  4 ++-
  autogen.sh                |  1 +
  configure.in              |  3 ++-
  plparse/Makefile.am       | 69 +++++++++++++++++++++++++++++++++++++----------
- plparse/totem-disc.c      |  4 +--
- plparse/totem-pl-parser.c | 12 ++++-----
- plparse/totem-pl-parser.h |  6 ++---
+ plparse/xplayer-disc.c      |  4 +--
+ plparse/xplayer-pl-parser.c | 12 ++++-----
+ plparse/xplayer-pl-parser.h |  6 ++---
  7 files changed, 72 insertions(+), 27 deletions(-)
 
 commit fc603d2f98802ae20f4902f2b1dd589b891595b6
@@ -3850,7 +3850,7 @@ Date:   Mon Dec 14 10:53:20 2009 +0000
 
     Use g_strstr_len() instead of GNU extension memmem
 
- plparse/totem-pl-parser.c | 3 +--
+ plparse/xplayer-pl-parser.c | 3 +--
  1 file changed, 1 insertion(+), 2 deletions(-)
 
 commit a8efeafbe2591dff240821655ce3be13ef1c9d8a
@@ -3896,7 +3896,7 @@ Date:   Fri Dec 4 15:18:04 2009 +0000
     
     https://bugzilla.gnome.org/show_bug.cgi?id=585407
 
- plparse/totem-pl-parser.c | 24 ++++++++++++++----------
+ plparse/xplayer-pl-parser.c | 24 ++++++++++++++----------
  1 file changed, 14 insertions(+), 10 deletions(-)
 
 commit 7f6b568668e0381a95f6a9227b85c44abc293ee3
@@ -3905,7 +3905,7 @@ Date:   Fri Dec 4 14:59:10 2009 +0000
 
     Make erasing comments from XML files slightly faster
 
- plparse/totem-pl-parser.c | 3 ++-
+ plparse/xplayer-pl-parser.c | 3 ++-
  1 file changed, 2 insertions(+), 1 deletion(-)
 
 commit fe01f1bbcbbc67dbfe5d9b702314f3868c892bba
@@ -3922,11 +3922,11 @@ commit 9cec1603cbd7991ef1eb23679acc74fdfce36f12
 Author: Matt Kraai <kraai@ftbfs.org>
 Date:   Thu Dec 3 00:48:55 2009 -0800
 
-    Make totem-pl-parser thread-safe
+    Make xplayer-pl-parser thread-safe
     
     https://bugzilla.gnome.org/show_bug.cgi?id=572705
 
- plparse/totem-pl-parser.c |  15 +++-
+ plparse/xplayer-pl-parser.c |  15 +++-
  plparse/xmllexer.c        | 215 +++++++++++++++++++++++++++-------------------
  plparse/xmllexer.h        |  24 +++++-
  plparse/xmlparser.c       | 194 ++++++++++++++++++++++++++++++++++-------
@@ -3951,7 +3951,7 @@ Date:   Fri Dec 4 13:24:51 2009 +0000
     
     https://bugzilla.gnome.org/show_bug.cgi?id=602127
 
- plparse/totem-pl-parser-qt.c | 2 +-
+ plparse/xplayer-pl-parser-qt.c | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit 0410d8f1dbc9be8d8ad1e09cac4ef17d5099adeb
@@ -3970,7 +3970,7 @@ Date:   Fri Dec 4 13:15:19 2009 +0000
 
     Make "make check" pass by adding a doc
 
- docs/reference/totem-pl-parser-sections.txt | 1 +
+ docs/reference/xplayer-pl-parser-sections.txt | 1 +
  1 file changed, 1 insertion(+)
 
 commit 8751b19ec4795f23042a2861b43dc6cd2d2aa037
@@ -3988,7 +3988,7 @@ Date:   Fri Dec 4 13:11:59 2009 +0000
 
     Fix parsing of RSS feeds being detected as HTML files
 
- plparse/totem-pl-parser.c | 3 ++-
+ plparse/xplayer-pl-parser.c | 3 ++-
  1 file changed, 2 insertions(+), 1 deletion(-)
 
 commit e78f18f1402a441e638f5b69aa798db1eba41223
@@ -3999,21 +3999,21 @@ Date:   Mon Nov 30 12:00:08 2009 +0000
     
     https://bugzilla.gnome.org/show_bug.cgi?id=603359
 
- plparse/totem-pl-parser-smil.c | 119 +++++++++++++++++++++++++++++++----------
- plparse/totem-pl-parser.c      |   4 ++
- plparse/totem-pl-parser.h      |   6 +++
+ plparse/xplayer-pl-parser-smil.c | 119 +++++++++++++++++++++++++++++++----------
+ plparse/xplayer-pl-parser.c      |   4 ++
+ plparse/xplayer-pl-parser.h      |   6 +++
  3 files changed, 100 insertions(+), 29 deletions(-)
 
 commit 6a68766bf79f2e7574c23fb05925661dff203483
 Author: Sebastian Dröge <sebastian.droege@collabora.co.uk>
 Date:   Mon Nov 30 09:32:26 2009 +0100
 
-    Include gio/gio.h in totem-pl-parser.h for GCancellable and friends
+    Include gio/gio.h in xplayer-pl-parser.h for GCancellable and friends
     
-    gtk/gtk.h only includes gio/gio.h since 2.16 but totem-pl-parser
+    gtk/gtk.h only includes gio/gio.h since 2.16 but xplayer-pl-parser
     works with older GTK+ too.
 
- plparse/totem-pl-parser.h | 2 +-
+ plparse/xplayer-pl-parser.h | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit 2c15e74f7cca406a28e18e94e092b545d199f0ea
@@ -4050,7 +4050,7 @@ Date:   Thu Nov 26 18:22:53 2009 +0000
 
     Fix getting a DVD title from remote directories
 
- plparse/totem-pl-parser-media.c | 5 ++---
+ plparse/xplayer-pl-parser-media.c | 5 ++---
  1 file changed, 2 insertions(+), 3 deletions(-)
 
 commit cb381ad89e9d001e70ae6ca4918d831ac55609ee
@@ -4072,7 +4072,7 @@ Date:   Thu Nov 26 17:57:08 2009 +0000
     And make sure we only umount archives that we mounted
     ourselves.
 
- plparse/totem-disc.c | 25 ++++++++++++++-----------
+ plparse/xplayer-disc.c | 25 ++++++++++++++-----------
  1 file changed, 14 insertions(+), 11 deletions(-)
 
 commit a74d316cfbf814d899f9b7ec9f24748c9d08be2e
@@ -4159,7 +4159,7 @@ Date:   Thu Sep 24 19:31:39 2009 +0100
     which seems to happen a lot for MPEG-4 files, and their ever-growing
     ftypes.
 
- plparse/totem-pl-parser.c | 2 +-
+ plparse/xplayer-pl-parser.c | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit 8d20acca930c0c0cc844798d7057c2a784e06869
@@ -4170,7 +4170,7 @@ Date:   Thu Sep 17 15:51:23 2009 +0100
     
     https://bugzilla.gnome.org/show_bug.cgi?id=595471
 
- plparse/totem-pl-parser-pls.c | 2 --
+ plparse/xplayer-pl-parser-pls.c | 2 --
  1 file changed, 2 deletions(-)
 
 commit ff46f8db0ca329616838c70f1a009fd7628f8754
@@ -4181,7 +4181,7 @@ Date:   Thu Sep 17 15:49:36 2009 +0100
     
     https://bugzilla.gnome.org/show_bug.cgi?id=595471
 
- plparse/totem-pl-parser-podcast.c | 6 ++----
+ plparse/xplayer-pl-parser-podcast.c | 6 ++----
  1 file changed, 2 insertions(+), 4 deletions(-)
 
 commit 04db71f49d05b9beccd0c360993d3fd050e7ad7f
@@ -4192,7 +4192,7 @@ Date:   Thu Sep 17 15:39:51 2009 +0100
     
     https://bugzilla.gnome.org/show_bug.cgi?id=595471
 
- plparse/totem-pl-parser-pla.c | 2 +-
+ plparse/xplayer-pl-parser-pla.c | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit b83ac49f4d1b45ee59209c0a5afb16b1dce0d1c9
@@ -4203,7 +4203,7 @@ Date:   Thu Sep 17 15:36:05 2009 +0100
     
     https://bugzilla.gnome.org/show_bug.cgi?id=595471
 
- plparse/totem-disc.c | 1 -
+ plparse/xplayer-disc.c | 1 -
  1 file changed, 1 deletion(-)
 
 commit 5a5c6a52ab87fe5f204b865e4bba65c908bd8988
@@ -4214,7 +4214,7 @@ Date:   Thu Sep 17 15:33:44 2009 +0100
     
     https://bugzilla.gnome.org/show_bug.cgi?id=595471
 
- plparse/totem-pl-parser-pla.c | 3 +--
+ plparse/xplayer-pl-parser-pla.c | 3 +--
  1 file changed, 1 insertion(+), 2 deletions(-)
 
 commit 57de94db5b11d2aa12af139782a107ecf3d57c71
@@ -4226,7 +4226,7 @@ Date:   Thu Sep 17 15:32:45 2009 +0100
     https://bugzilla.gnome.org/show_bug.cgi?id=595471
 
  configure.in              | 2 +-
- plparse/totem-pl-parser.c | 2 +-
+ plparse/xplayer-pl-parser.c | 2 +-
  2 files changed, 2 insertions(+), 2 deletions(-)
 
 commit 181e6836e0ef2905097486844c21b0c0280fbf6d
@@ -4237,7 +4237,7 @@ Date:   Thu Sep 17 15:31:40 2009 +0100
     
     https://bugzilla.gnome.org/show_bug.cgi?id=595471
 
- plparse/totem-pl-parser.c | 4 ++--
+ plparse/xplayer-pl-parser.c | 4 ++--
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 commit 3a9df5f8ca6400fe29060e249761ca2997bed79f
@@ -4248,7 +4248,7 @@ Date:   Thu Sep 17 15:28:56 2009 +0100
     
     https://bugzilla.gnome.org/show_bug.cgi?id=595471
 
- plparse/totem-pl-parser-podcast.c | 1 +
+ plparse/xplayer-pl-parser-podcast.c | 1 +
  1 file changed, 1 insertion(+)
 
 commit 4744d6b524fee2efafdb51f8742f9f79ecf40576
@@ -4259,7 +4259,7 @@ Date:   Thu Sep 17 15:27:30 2009 +0100
     
     https://bugzilla.gnome.org/show_bug.cgi?id=595471
 
- plparse/totem-pl-parser-podcast.c | 4 ++--
+ plparse/xplayer-pl-parser-podcast.c | 4 ++--
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 commit de101c1d651e70fe9a5ca076697ebd222a36819b
@@ -4270,7 +4270,7 @@ Date:   Thu Sep 17 15:25:39 2009 +0100
     
     https://bugzilla.gnome.org/show_bug.cgi?id=595471
 
- plparse/totem-pl-parser-xspf.c | 3 +--
+ plparse/xplayer-pl-parser-xspf.c | 3 +--
  1 file changed, 1 insertion(+), 2 deletions(-)
 
 commit 853deec5fad8f62dce1a48faf2dd8ec58422c7d8
@@ -4366,9 +4366,9 @@ Date:   Wed Sep 2 18:21:53 2009 +0100
     When asking for a URI, give back a URI
     
     We ask for a URI, and ended up getting a local path for the
-    mountpoint. Fixes playing data mounts from Totem's Movie menu.
+    mountpoint. Fixes playing data mounts from Xplayer's Movie menu.
 
- plparse/totem-disc.c | 4 +++-
+ plparse/xplayer-disc.c | 4 +++-
  1 file changed, 3 insertions(+), 1 deletion(-)
 
 commit 908ec9f43d9a0e3762870c0efa5726ade211645f
@@ -4436,24 +4436,24 @@ Date:   Fri Jul 31 20:01:14 2009 +0100
     Change how signals are emitted from the playlist parsing process so they're
     once more emitted synchronously when we're parsing synchronously, and in
     idle callbacks when we're parsing asynchronously. This solves the awkward
-    problem of all the TotemPlParser::entry-parsed signals being emitted after
+    problem of all the XplayerPlParser::entry-parsed signals being emitted after
     a call to a synchronous parse function had returned. Closes: bgo#590389
 
- plparse/totem-pl-parser-private.h | 26 ++++++++++++++++++++++++++
- plparse/totem-pl-parser.c         |  6 ++++--
+ plparse/xplayer-pl-parser-private.h | 26 ++++++++++++++++++++++++++
+ plparse/xplayer-pl-parser.c         |  6 ++++--
  2 files changed, 30 insertions(+), 2 deletions(-)
 
 commit 73db4d176c48deec762dc042befab4b0a4bda5ab
 Author: Bastien Nocera <hadess@hadess.net>
 Date:   Fri Jul 31 17:36:09 2009 +0100
 
-    Bug 584312 – Totem does not ignore text files when adding to queue
+    Bug 584312 – Xplayer does not ignore text files when adding to queue
     
     Ignore dual-types that are still text/plain after data check.
     Before that, this only happened if we didn't have data for the
     file yet, but we're certain we do now, so we can gently ignore.
 
- plparse/totem-pl-parser.c | 15 +++++++++------
+ plparse/xplayer-pl-parser.c | 15 +++++++++------
  1 file changed, 9 insertions(+), 6 deletions(-)
 
 commit 12b5111cfdd3e8b0dc94b0ba448d43615e49de9d
@@ -4483,7 +4483,7 @@ Date:   Fri Jul 24 01:48:33 2009 +0100
     We still use gmime, but we keep the name "uselibcamel", as
     that's what Rhythmbox' configure uses too.
 
- totem-plparser.pc.in | 2 +-
+ xplayer-plparser.pc.in | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit 44411d9b71d3d7a6ef11700ecb41e309c3d58092
@@ -4495,7 +4495,7 @@ Date:   Thu Jul 23 21:19:32 2009 +0100
     Speed up PLS parsing by using a hashtable to store and lookup
     the data. Original patch by Ivan Frade <ivan.frade@nokia.com>
 
- plparse/totem-pl-parser-pls.c | 72 ++++++++++++++++++++++++-------------------
+ plparse/xplayer-pl-parser-pls.c | 72 ++++++++++++++++++++++++-------------------
  1 file changed, 41 insertions(+), 31 deletions(-)
 
 commit 50dd9e2beb9927d0864721e67e5bfbfe0c632e17
@@ -4554,25 +4554,25 @@ Date:   Thu Jul 23 20:02:28 2009 +0100
     
     	* README:
     	* configure.in:
-    	* plparse/totem-pl-parser-podcast.c (totem_pl_parser_add_rss),
-    	(totem_pl_parser_add_itpc), (totem_pl_parser_add_zune),
-    	(totem_pl_parser_add_atom), (totem_pl_parser_add_xml_feed),
-    	(totem_pl_parser_add_itms), (totem_pl_parser_add_opml):
-    	* plparse/totem-pl-parser-podcast.h:
-    	* plparse/totem-pl-parser.c (totem_pl_parser_parse_date):
-    	* totem-plparser-uninstalled.pc.in:
-    	* totem-plparser.pc.in: Use GMime instead of libcamel
+    	* plparse/xplayer-pl-parser-podcast.c (xplayer_pl_parser_add_rss),
+    	(xplayer_pl_parser_add_itpc), (xplayer_pl_parser_add_zune),
+    	(xplayer_pl_parser_add_atom), (xplayer_pl_parser_add_xml_feed),
+    	(xplayer_pl_parser_add_itms), (xplayer_pl_parser_add_opml):
+    	* plparse/xplayer-pl-parser-podcast.h:
+    	* plparse/xplayer-pl-parser.c (xplayer_pl_parser_parse_date):
+    	* xplayer-plparser-uninstalled.pc.in:
+    	* xplayer-plparser.pc.in: Use GMime instead of libcamel
     	for dates parsing. Hopefully good enough for people to
-    	stop shipping crippled versions of totem-pl-parser
+    	stop shipping crippled versions of xplayer-pl-parser
 
  ChangeLog                         | 15 +++++++++++
  README                            |  1 +
  configure.in                      | 52 +++++++++++++++++++--------------------
- plparse/totem-pl-parser-podcast.c | 42 +++++++++++++++----------------
- plparse/totem-pl-parser-podcast.h |  8 +++---
- plparse/totem-pl-parser.c         | 12 ++++-----
- totem-plparser-uninstalled.pc.in  |  2 +-
- totem-plparser.pc.in              |  2 +-
+ plparse/xplayer-pl-parser-podcast.c | 42 +++++++++++++++----------------
+ plparse/xplayer-pl-parser-podcast.h |  8 +++---
+ plparse/xplayer-pl-parser.c         | 12 ++++-----
+ xplayer-plparser-uninstalled.pc.in  |  2 +-
+ xplayer-plparser.pc.in              |  2 +-
  8 files changed, 75 insertions(+), 59 deletions(-)
 
 commit aa5ce8f3b1deeef1f44c39bb1d528b991f924336

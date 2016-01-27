@@ -21,17 +21,17 @@
 
 #include "config.h"
 
-#ifndef TOTEM_PL_PARSER_MINI
+#ifndef XPLAYER_PL_PARSER_MINI
 #include <string.h>
 #include <glib.h>
 #include <glib/gi18n-lib.h>
 
-#include "totem-pl-parser.h"
-#endif /* !TOTEM_PL_PARSER_MINI */
+#include "xplayer-pl-parser.h"
+#endif /* !XPLAYER_PL_PARSER_MINI */
 
-#include "totem-pl-parser-mini.h"
-#include "totem-pl-parser-pla.h"
-#include "totem-pl-parser-private.h"
+#include "xplayer-pl-parser-mini.h"
+#include "xplayer-pl-parser-pla.h"
+#include "xplayer-pl-parser-private.h"
 
 /* things we know */
 #define PATH_OFFSET		2
@@ -42,15 +42,15 @@
 #define TITLE_OFFSET		32
 #define TITLE_SIZE		64
 
-#ifndef TOTEM_PL_PARSER_MINI
+#ifndef XPLAYER_PL_PARSER_MINI
 gboolean
-totem_pl_parser_save_pla (TotemPlParser    *parser,
-                          TotemPlPlaylist  *playlist,
+xplayer_pl_parser_save_pla (XplayerPlParser    *parser,
+                          XplayerPlPlaylist  *playlist,
                           GFile            *output,
                           const char       *title,
                           GError          **error)
 {
-        TotemPlPlaylistIter iter;
+        XplayerPlPlaylistIter iter;
 	GFileOutputStream *stream;
         gint num_entries_total, i;
 	char *buffer;
@@ -60,7 +60,7 @@ totem_pl_parser_save_pla (TotemPlParser    *parser,
 	if (stream == NULL)
 		return FALSE;
 
-        num_entries_total = totem_pl_playlist_size (playlist);
+        num_entries_total = xplayer_pl_playlist_size (playlist);
 
 	/* write the header */
 	buffer = g_malloc0 (RECORD_SIZE);
@@ -71,7 +71,7 @@ totem_pl_parser_save_pla (TotemPlParser    *parser,
 	 * the 'quick list' name there.
 	 */
 	strncpy (buffer + TITLE_OFFSET, title, TITLE_SIZE);
-	if (totem_pl_parser_write_buffer (G_OUTPUT_STREAM (stream), buffer, RECORD_SIZE, error) == FALSE)
+	if (xplayer_pl_parser_write_buffer (G_OUTPUT_STREAM (stream), buffer, RECORD_SIZE, error) == FALSE)
 	{
 		DEBUG(output, g_print ("Couldn't write header block for '%s'", uri));
 		g_free (buffer);
@@ -79,7 +79,7 @@ totem_pl_parser_save_pla (TotemPlParser    *parser,
 	}
 
 	ret = TRUE;
-        valid = totem_pl_playlist_iter_first (playlist, &iter);
+        valid = xplayer_pl_playlist_iter_first (playlist, &iter);
         i = 0;
 
         while (valid)
@@ -87,11 +87,11 @@ totem_pl_parser_save_pla (TotemPlParser    *parser,
 		char *euri, *path, *converted, *filename;
 		gsize written;
 
-                totem_pl_playlist_get (playlist, &iter,
-                                       TOTEM_PL_PARSER_FIELD_URI, &euri,
+                xplayer_pl_playlist_get (playlist, &iter,
+                                       XPLAYER_PL_PARSER_FIELD_URI, &euri,
                                        NULL);
 
-                valid = totem_pl_playlist_iter_next (playlist, &iter);
+                valid = xplayer_pl_playlist_iter_next (playlist, &iter);
 
                 if (!euri) {
                         continue;
@@ -149,7 +149,7 @@ totem_pl_parser_save_pla (TotemPlParser    *parser,
 		memcpy (buffer + PATH_OFFSET, converted, written);
 		g_free (converted);
 
-		if (totem_pl_parser_write_buffer (G_OUTPUT_STREAM (stream), buffer, RECORD_SIZE, error) == FALSE)
+		if (xplayer_pl_parser_write_buffer (G_OUTPUT_STREAM (stream), buffer, RECORD_SIZE, error) == FALSE)
 		{
 			DEBUG1(g_print ("Couldn't write entry %d to the file\n", i));
 			ret = FALSE;
@@ -163,26 +163,26 @@ totem_pl_parser_save_pla (TotemPlParser    *parser,
 	return ret;
 }
 
-TotemPlParserResult
-totem_pl_parser_add_pla (TotemPlParser *parser,
+XplayerPlParserResult
+xplayer_pl_parser_add_pla (XplayerPlParser *parser,
 			 GFile *file,
 			 GFile *base_file,
-			 TotemPlParseData *parse_data,
+			 XplayerPlParseData *parse_data,
 			 gpointer data)
 {
-	TotemPlParserResult retval = TOTEM_PL_PARSER_RESULT_UNHANDLED;
+	XplayerPlParserResult retval = XPLAYER_PL_PARSER_RESULT_UNHANDLED;
 	char *contents, *title, *uri;
 	guint offset, max_entries, entry;
 	gsize size;
 
 	if (g_file_load_contents (file, NULL, &contents, &size, NULL, NULL) == FALSE)
-		return TOTEM_PL_PARSER_RESULT_ERROR;
+		return XPLAYER_PL_PARSER_RESULT_ERROR;
 
 	if (size < RECORD_SIZE)
 	{
 		g_free (contents);
 		DEBUG(file, g_print ("playlist '%s' is too short: %d\n", uri, (unsigned int) size));
-		return TOTEM_PL_PARSER_RESULT_ERROR;
+		return XPLAYER_PL_PARSER_RESULT_ERROR;
 	}
 
 	/* read header block */
@@ -191,7 +191,7 @@ totem_pl_parser_add_pla (TotemPlParser *parser,
 	{
 		DEBUG(file, g_print ("playlist '%s' signature doesn't match: %s\n", uri, contents + 4));
 		g_free (contents);
-		return TOTEM_PL_PARSER_RESULT_ERROR;
+		return XPLAYER_PL_PARSER_RESULT_ERROR;
 	}
 
 	/* read playlist title starting at offset 32 */
@@ -199,10 +199,10 @@ totem_pl_parser_add_pla (TotemPlParser *parser,
 	if (contents[TITLE_OFFSET] != '\0')
 		title = contents + TITLE_OFFSET;
 
-	totem_pl_parser_add_uri (parser,
-				 TOTEM_PL_PARSER_FIELD_IS_PLAYLIST, TRUE,
-				 TOTEM_PL_PARSER_FIELD_FILE, file,
-				 TOTEM_PL_PARSER_FIELD_TITLE, title,
+	xplayer_pl_parser_add_uri (parser,
+				 XPLAYER_PL_PARSER_FIELD_IS_PLAYLIST, TRUE,
+				 XPLAYER_PL_PARSER_FIELD_FILE, file,
+				 XPLAYER_PL_PARSER_FIELD_TITLE, title,
 				 NULL);
 
 	offset = RECORD_SIZE;
@@ -220,7 +220,7 @@ totem_pl_parser_add_pla (TotemPlParser *parser,
 		{
 			DEBUG1(g_print ("error converting entry %d to UTF-8: %s\n", entry, error->message));
 			g_error_free (error);
-			retval = TOTEM_PL_PARSER_RESULT_ERROR;
+			retval = XPLAYER_PL_PARSER_RESULT_ERROR;
 			break;
 		}
 
@@ -233,11 +233,11 @@ totem_pl_parser_add_pla (TotemPlParser *parser,
 		{
 			DEBUG1(g_print ("error converting path %s to URI: %s\n", path, error->message));
 			g_error_free (error);
-			retval = TOTEM_PL_PARSER_RESULT_ERROR;
+			retval = XPLAYER_PL_PARSER_RESULT_ERROR;
 			break;
 		}
 
-		totem_pl_parser_add_uri (parser, TOTEM_PL_PARSER_FIELD_URI, uri, NULL);
+		xplayer_pl_parser_add_uri (parser, XPLAYER_PL_PARSER_FIELD_URI, uri, NULL);
 
 		g_free (uri);
 		g_free (path);
@@ -246,7 +246,7 @@ totem_pl_parser_add_pla (TotemPlParser *parser,
 	}
 
 	uri = g_file_get_uri (file);
-	totem_pl_parser_playlist_end (parser, uri);
+	xplayer_pl_parser_playlist_end (parser, uri);
 	g_free (uri);
 
 	g_free (contents);
@@ -254,5 +254,5 @@ totem_pl_parser_add_pla (TotemPlParser *parser,
 	return retval;
 }
 
-#endif /* !TOTEM_PL_PARSER_MINI */
+#endif /* !XPLAYER_PL_PARSER_MINI */
 

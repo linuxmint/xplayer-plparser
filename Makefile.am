@@ -10,14 +10,14 @@ EXTRA_DIST =			\
 	intltool-update.in	\
 	AUTHORS NEWS		\
 	gtk-doc.make		\
-	totem-plparser.pc.in	\
-	totem-plparser-mini.pc	\
-	totem-pl-parser.spec	\
-	totem-pl-parser.doap	\
+	xplayer-plparser.pc.in	\
+	xplayer-plparser-mini.pc	\
+	xplayer-pl-parser.spec	\
+	xplayer-pl-parser.doap	\
 	MAINTAINERS		\
 	$(NULL)
 
-CLEANFILES = totem-plparser.pc
+CLEANFILES = xplayer-plparser.pc
 
 DISTCLEANFILES = intltool-extract intltool-merge intltool-update \
 		 gtk-doc.make
@@ -42,7 +42,7 @@ MAINTAINERCLEANFILES = \
 	$(NULL)
 
 pkgconfigdir = $(libdir)/pkgconfig
-pkgconfig_DATA = totem-plparser.pc totem-plparser-mini.pc
+pkgconfig_DATA = xplayer-plparser.pc xplayer-plparser-mini.pc
 
 DISTCHECK_CONFIGURE_FLAGS = --disable-scrollkeeper --enable-gtk-doc --enable-introspection
 

@@ -1,4 +1,4 @@
-# translation of totem.HEAD.he.po to Hebrew
+# translation of xplayer.HEAD.he.po to Hebrew
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) 2005 THE PACKAGE'S COPYRIGHT HOLDER.
 # Gil 'Dolfin' Osher <dolfin@rpg.org.il>, 2003.
@@ -7,7 +7,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: totem.HEAD.he\n"
+"Project-Id-Version: xplayer.HEAD.he\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-26 05:47+0200\n"
 "PO-Revision-Date: 2014-01-26 05:48+0200\n"
@@ -20,39 +20,39 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Gtranslator 2.91.6\n"
 
-#: ../plparse/totem-disc.c:276 ../plparse/totem-disc.c:289
-#: ../plparse/totem-disc.c:533
+#: ../plparse/xplayer-disc.c:276 ../plparse/xplayer-disc.c:289
+#: ../plparse/xplayer-disc.c:533
 #, c-format
 msgid "Failed to mount %s."
 msgstr "נכשל בעיגון %s."
 
-#: ../plparse/totem-disc.c:418
+#: ../plparse/xplayer-disc.c:418
 #, c-format
 msgid "No media in drive for device '%s'."
 msgstr "אין מדיה בכונן עבור התקן '%s'."
 
-#: ../plparse/totem-disc.c:476
+#: ../plparse/xplayer-disc.c:476
 #, c-format
 msgid "Please check that a disc is present in the drive."
 msgstr "אנא בדוק שקיים דיסק בכונן"
 
-#: ../plparse/totem-disc.c:947
+#: ../plparse/xplayer-disc.c:947
 msgid "Audio CD"
 msgstr "תקליטור שמע"
 
-#: ../plparse/totem-disc.c:949
+#: ../plparse/xplayer-disc.c:949
 msgid "Video CD"
 msgstr "תקליטור וידאו"
 
-#: ../plparse/totem-disc.c:951
+#: ../plparse/xplayer-disc.c:951
 msgid "DVD"
 msgstr "DVD"
 
-#: ../plparse/totem-disc.c:953
+#: ../plparse/xplayer-disc.c:953
 msgid "Digital Television"
 msgstr "טלוויזיה דיגיטלית"
 
-#: ../plparse/totem-disc.c:955
+#: ../plparse/xplayer-disc.c:955
 msgid "Blu-ray"
 msgstr "Blu-ray"
 
@@ -221,11 +221,11 @@ msgstr "Blu-ray"
 #~ msgid "Text Subtitles"
 #~ msgstr "‏‏כתוביות"
 
-#~ msgid "Totem Movie Player"
-#~ msgstr "נגן הסרטים Totem"
+#~ msgid "Xplayer Movie Player"
+#~ msgstr "נגן הסרטים Xplayer"
 
-#~ msgid "Totem Preferences"
-#~ msgstr "העדפות Totem"
+#~ msgid "Xplayer Preferences"
+#~ msgstr "העדפות Xplayer"
 
 #~ msgid "Visual Effects"
 #~ msgstr "אפקטים חזותיים"
@@ -383,45 +383,45 @@ msgstr "Blu-ray"
 #~ msgid "Couldn't load the '%s' interface. %s"
 #~ msgstr "לא ניתן לטעון את הממשק '%s'. %s"
 
-#~ msgid "Make sure that Totem is properly installed."
-#~ msgstr "וודא ש- Totem מותקן כראוי."
+#~ msgid "Make sure that Xplayer is properly installed."
+#~ msgstr "וודא ש- Xplayer מותקן כראוי."
 
 #~ msgid ""
-#~ "Totem is free software; you can redistribute it and/or modify it under "
+#~ "Xplayer is free software; you can redistribute it and/or modify it under "
 #~ "the terms of the GNU General Public License as published by the Free "
 #~ "Software Foundation; either version 2 of the License, or (at your option) "
 #~ "any later version."
 #~ msgstr ""
-#~ "Totem is free software; you can redistribute it and/or modify it under "
+#~ "Xplayer is free software; you can redistribute it and/or modify it under "
 #~ "the terms of the GNU General Public License as published by the Free "
 #~ "Software Foundation; either version 2 of the License, or (at your option) "
 #~ "any later version."
 
 #~ msgid ""
-#~ "Totem is distributed in the hope that it will be useful, but WITHOUT ANY "
+#~ "Xplayer is distributed in the hope that it will be useful, but WITHOUT ANY "
 #~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
 #~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 #~ "details."
 #~ msgstr ""
-#~ "Totem is distributed in the hope that it will be useful, but WITHOUT ANY "
+#~ "Xplayer is distributed in the hope that it will be useful, but WITHOUT ANY "
 #~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
 #~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 #~ "details."
 
 #~ msgid ""
 #~ "You should have received a copy of the GNU General Public License along "
-#~ "with Totem; if not, write to the Free Software Foundation, Inc., 59 "
+#~ "with Xplayer; if not, write to the Free Software Foundation, Inc., 59 "
 #~ "Temple Place, Suite 330, Boston, MA  02111-1307  USA"
 #~ msgstr ""
 #~ "You should have received a copy of the GNU General Public License along "
-#~ "with Totem; if not, write to the Free Software Foundation, Inc., 59 "
+#~ "with Xplayer; if not, write to the Free Software Foundation, Inc., 59 "
 #~ "Temple Place, Suite 330, Boston, MA  02111-1307  USA"
 
 #~ msgid ""
-#~ "Totem contains an exception to allow the use of proprietary GStreamer "
+#~ "Xplayer contains an exception to allow the use of proprietary GStreamer "
 #~ "plugins."
 #~ msgstr ""
-#~ "Totem contains an exception to allow the use of proprietary GStreamer "
+#~ "Xplayer contains an exception to allow the use of proprietary GStreamer "
 #~ "plugins."
 
 #~ msgid "None"
@@ -822,25 +822,25 @@ msgstr "Blu-ray"
 #~ msgstr "לאפשר אפקטים חזותיים?"
 
 #~ msgid ""
-#~ "It seems you are running Totem remotely.\n"
+#~ "It seems you are running Xplayer remotely.\n"
 #~ "Are you sure you want to enable the visual effects?"
 #~ msgstr ""
-#~ "נראה שאתה מפעיל את Totem מרחוק.\n"
+#~ "נראה שאתה מפעיל את Xplayer מרחוק.\n"
 #~ "אתה בטוח שברצונך להפעיל את האפקטים החזותיים?"
 
 #~ msgid ""
 #~ "The change of this setting will only take effect for the next movie, or "
-#~ "when Totem is restarted."
-#~ msgstr "שינוי הגדרה זו יכנס לתוקף עבור הסרט הבא, או כאשר Totem יופעל מחדש"
+#~ "when Xplayer is restarted."
+#~ msgstr "שינוי הגדרה זו יכנס לתוקף עבור הסרט הבא, או כאשר Xplayer יופעל מחדש"
 
 #~ msgid ""
 #~ "Changing the visuals effect type will require a restart to take effect."
 #~ msgstr "שינוי סוג האפקטים החזותיים ידרוש הפעלה מחדש כדי להכנס לתוקף."
 
 #~ msgid ""
-#~ "The change of audio output type will only take effect when Totem is "
+#~ "The change of audio output type will only take effect when Xplayer is "
 #~ "restarted."
-#~ msgstr "שינוי סוג פלט השמע יכנס לתוקף רק כאשר Totem יופעל מחדש."
+#~ msgstr "שינוי סוג פלט השמע יכנס לתוקף רק כאשר Xplayer יופעל מחדש."
 
 #~ msgid "Preferences"
 #~ msgstr "העדפות"
@@ -1004,50 +1004,50 @@ msgstr "Blu-ray"
 #~ msgid "Paused"
 #~ msgstr "מושהה"
 
-#~ msgid "Totem could not eject the optical media."
-#~ msgstr "Totem אינו יכול להוציא את המדיה האופטית."
+#~ msgid "Xplayer could not eject the optical media."
+#~ msgstr "Xplayer אינו יכול להוציא את המדיה האופטית."
 
-#~ msgid "Totem could not play '%s'."
-#~ msgstr "Totem אינו יכול לנגן את '%s'."
+#~ msgid "Xplayer could not play '%s'."
+#~ msgstr "Xplayer אינו יכול לנגן את '%s'."
 
 #~ msgid ""
-#~ "Totem cannot play this type of media (%s) because it does not have the "
+#~ "Xplayer cannot play this type of media (%s) because it does not have the "
 #~ "appropriate plugins to be able to read from the disc."
 #~ msgstr ""
-#~ "‏Totem אינו יכול לנגן סוג מדיה זה (%s) מכיוון שאין לך את התוספים המתאימים "
+#~ "‏Xplayer אינו יכול לנגן סוג מדיה זה (%s) מכיוון שאין לך את התוספים המתאימים "
 #~ "בכדי לקרוא מהדיסק."
 
 #~ msgid ""
-#~ "Totem cannot play this type of media (%s) because you do not have the "
+#~ "Xplayer cannot play this type of media (%s) because you do not have the "
 #~ "appropriate plugins to handle it."
 #~ msgstr ""
-#~ "Totem אינו יכול לנגן סוג מדיה זה (%s) מכיוון שאין לך את התוספים המתאימים "
+#~ "Xplayer אינו יכול לנגן סוג מדיה זה (%s) מכיוון שאין לך את התוספים המתאימים "
 #~ "בכדי לטפל בו."
 
 #~ msgid ""
-#~ "Please install the necessary plugins and restart Totem to be able to play "
+#~ "Please install the necessary plugins and restart Xplayer to be able to play "
 #~ "this media."
 #~ msgstr ""
-#~ "אנא התקן את התוספים הדרושים והפעל מחדש את Totem בכדי שתוכל לנגן מדיה זו."
+#~ "אנא התקן את התוספים הדרושים והפעל מחדש את Xplayer בכדי שתוכל לנגן מדיה זו."
 
 #~ msgid ""
-#~ "Totem could not play this media (%s) although a plugin is present to "
+#~ "Xplayer could not play this media (%s) although a plugin is present to "
 #~ "handle it."
-#~ msgstr "Totem לא יכול לנגן מדיה זו (%s) למרות שקיים תוסף לטפל בו."
+#~ msgstr "Xplayer לא יכול לנגן מדיה זו (%s) למרות שקיים תוסף לטפל בו."
 
 #~ msgid ""
 #~ "You might want to check that a disc is present in the drive and that it "
 #~ "is correctly configured."
 #~ msgstr "ייתכן ותרצה לבדוק אם קיים דיסק בכונן ושהוא מוגדר כראוי."
 
-#~ msgid "Totem was not able to play this disc."
-#~ msgstr "‏Totem לא הצליח לנגן את דיסק זה."
+#~ msgid "Xplayer was not able to play this disc."
+#~ msgstr "‏Xplayer לא הצליח לנגן את דיסק זה."
 
 #~ msgid "No reason."
 #~ msgstr "אין סיבה."
 
-#~ msgid "Totem could not get a screenshot of that film."
-#~ msgstr "Totem לא הצליח לקחת תצלום מסך מסרט זה."
+#~ msgid "Xplayer could not get a screenshot of that film."
+#~ msgstr "Xplayer לא הצליח לקחת תצלום מסך מסרט זה."
 
 #~ msgid "This is not supposed to happen; please file a bug report."
 #~ msgstr "זה לא אמור לקרות, אנא שלח דיווח על באג."
@@ -1055,8 +1055,8 @@ msgstr "Blu-ray"
 #~ msgid "No error message"
 #~ msgstr "אין הודעת שגיה"
 
-#~ msgid "Totem could not display the help contents."
-#~ msgstr "Totem אינו יכול להציג את תוכן העזרה."
+#~ msgid "Xplayer could not display the help contents."
+#~ msgstr "Xplayer אינו יכול להציג את תוכן העזרה."
 
 #~ msgid "An error occurred"
 #~ msgstr "אירעה שגיאה"
@@ -1070,23 +1070,23 @@ msgstr "Blu-ray"
 #~ msgid "Next Chapter/Movie"
 #~ msgstr "הפרק/סרט הבא"
 
-#~ msgid "Totem could not startup."
-#~ msgstr "Totem לא יכול לאתחל."
+#~ msgid "Xplayer could not startup."
+#~ msgstr "Xplayer לא יכול לאתחל."
 
 #~ msgid "Could not initialize the thread-safe libraries."
 #~ msgstr "לא ניתן לאתחל את ספריות thread-safe."
 
-#~ msgid "Verify your system installation. Totem will now exit."
-#~ msgstr "וודא את התקנת המערכת שלך. Totem ייצא עכשיו."
+#~ msgid "Verify your system installation. Xplayer will now exit."
+#~ msgstr "וודא את התקנת המערכת שלך. Xplayer ייצא עכשיו."
 
 #~ msgid "- Play movies and songs"
 #~ msgstr "- Play movies and songs"
 
-#~ msgid "Totem could not parse the command-line options"
-#~ msgstr "‏Totem נכשל בניתוח אפשרויות שורת הפקודה."
+#~ msgid "Xplayer could not parse the command-line options"
+#~ msgstr "‏Xplayer נכשל בניתוח אפשרויות שורת הפקודה."
 
-#~ msgid "Totem could not initialize the configuration engine."
-#~ msgstr "‏Totem אינו יכול לאתחל את מנוע ההגדרות."
+#~ msgid "Xplayer could not initialize the configuration engine."
+#~ msgstr "‏Xplayer אינו יכול לאתחל את מנוע ההגדרות."
 
 #~ msgid "Make sure that GNOME is properly installed."
 #~ msgstr "וודא ש- GNOME מותקן כראוי."
@@ -1351,17 +1351,17 @@ msgstr "Blu-ray"
 #~ msgid "Bemused"
 #~ msgstr "Bemused"
 
-#~ msgid "Control Totem through a mobile phone with a Bemused client"
-#~ msgstr "שלוט ב-Totem בעזרת סלולרי עם לקוח Bemused"
+#~ msgid "Control Xplayer through a mobile phone with a Bemused client"
+#~ msgstr "שלוט ב-Xplayer בעזרת סלולרי עם לקוח Bemused"
 
 #~ msgid "Untitled %d"
 #~ msgstr "ללא שם %d"
 
-#~ msgid "Totem Bemused Server"
-#~ msgstr "שרת Bemused של Totem"
+#~ msgid "Xplayer Bemused Server"
+#~ msgstr "שרת Bemused של Xplayer"
 
-#~ msgid "Totem Bemused Server version 1.0"
-#~ msgstr "שרת Bemused של Totem גירסה 1.0"
+#~ msgid "Xplayer Bemused Server version 1.0"
+#~ msgstr "שרת Bemused של Xplayer גירסה 1.0"
 
 #~ msgid "Instant Messenger status"
 #~ msgstr "מצב תוכנת מסרים מידיים"
@@ -1425,8 +1425,8 @@ msgstr "Blu-ray"
 #~ msgid "No URI to play"
 #~ msgstr "אין כתובת לניגון"
 
-#~ msgid "Totem could not play '%s'"
-#~ msgstr "‏Totem אינו יכול לנגן את '%s'"
+#~ msgid "Xplayer could not play '%s'"
+#~ msgstr "‏Xplayer אינו יכול לנגן את '%s'"
 
 #~ msgid "Opening %s"
 #~ msgstr "פותח %s"
@@ -1437,12 +1437,12 @@ msgstr "Blu-ray"
 #~ msgid "Browser Plugin using %s"
 #~ msgstr "תוסף דפדפן בשימוש %s"
 
-#~ msgid "Totem Browser Plugin"
-#~ msgstr "תוסף Totem לדפדן"
+#~ msgid "Xplayer Browser Plugin"
+#~ msgstr "תוסף Xplayer לדפדן"
 
 #, fuzzy
-#~ msgid "The Totem plugin could not be started."
-#~ msgstr "תוסף Totem לא יכול לעלות."
+#~ msgid "The Xplayer plugin could not be started."
+#~ msgstr "תוסף Xplayer לא יכול לעלות."
 
 #~ msgid "No playlist or playlist empty"
 #~ msgstr "אין רשימת שמע או שרשימת השמע רקע"
@@ -1450,7 +1450,7 @@ msgstr "Blu-ray"
 #~ msgid "Could not initialise the thread-safe libraries."
 #~ msgstr "לא ניתן לאתחל את ספריות thread-safe."
 
-#~ msgid "Verify your system installation. The Totem plugin will now exit."
+#~ msgid "Verify your system installation. The Xplayer plugin will now exit."
 #~ msgstr "וודא את התקנת המערכת שלך. תוסף טוטם ייצא עכשיו."
 
 #~ msgid "Rhythmbox Plugins"
@@ -1563,8 +1563,8 @@ msgstr "Blu-ray"
 #~ msgid "Open Location"
 #~ msgstr "פתח מיקום"
 
-#~ msgid "Totem could not seek in '%s'."
-#~ msgstr "Totem לא יכול לדלג בתוך '%s'."
+#~ msgid "Xplayer could not seek in '%s'."
+#~ msgstr "Xplayer לא יכול לדלג בתוך '%s'."
 
 #~ msgid "<b>Audio</b>"
 #~ msgstr "<b>שמע</b>"
@@ -1731,7 +1731,7 @@ msgstr "Blu-ray"
 #~ msgstr "Failed to read symbolic link %s: %s"
 
 #~ msgid "Option '%s' is unknown and was ignored\n"
-#~ msgstr "האפשרות '%s' אינה ידועה ו- Totem התעלם ממנה\n"
+#~ msgstr "האפשרות '%s' אינה ידועה ו- Xplayer התעלם ממנה\n"
 
 #~ msgid ""
 #~ "Switching on or off this type of TV-Out requires a restart to take effect."
@@ -1796,17 +1796,17 @@ msgstr "Blu-ray"
 #~ msgid "_DXR3 TV-out"
 #~ msgstr "יציאת טלוויזיה _DXR3"
 
-#~ msgid "Totem"
-#~ msgstr "Totem"
+#~ msgid "Xplayer"
+#~ msgstr "Xplayer"
 
-#~ msgid "Totem couldn't show the movie properties window."
-#~ msgstr "Totem אינו יכול להציג את חלון מאפייני הסרט."
+#~ msgid "Xplayer couldn't show the movie properties window."
+#~ msgstr "Xplayer אינו יכול להציג את חלון מאפייני הסרט."
 
-#~ msgid "Make sure that Totem is correctly installed."
-#~ msgstr "וודא שאכן Totem מותקן כראוי."
+#~ msgid "Make sure that Xplayer is correctly installed."
+#~ msgstr "וודא שאכן Xplayer מותקן כראוי."
 
-#~ msgid "Totem Video Window"
-#~ msgstr "חלון וידאו של Totem"
+#~ msgid "Xplayer Video Window"
+#~ msgstr "חלון וידאו של Xplayer"
 
 #~ msgid "Failed to open media file; unknown error"
 #~ msgstr "נכשל בפתיחת קובץ מדיה; שגיאה לא ידועה"
@@ -2033,10 +2033,10 @@ msgstr "Blu-ray"
 #~ msgid "Couldn't load the main interface (mozilla-viewer.glade)."
 #~ msgstr "לא ניתן לטעון את הממשק הראשי (mozilla-viewer.glade)."
 
-#~ msgid "Make sure that the Totem plugin is properly installed."
+#~ msgid "Make sure that the Xplayer plugin is properly installed."
 #~ msgstr "וודא כי תוסף טוטם מותקן כראוי."
 
-#~ msgid "Totem could not start the file manager."
+#~ msgid "Xplayer could not start the file manager."
 #~ msgstr "טוטם לא יכל להפעיל את מנהל הקבצים."
 
 #~ msgid "URI currently displayed"
@@ -2048,14 +2048,14 @@ msgstr "Blu-ray"
 #~ msgid "No reason given."
 #~ msgstr "לא ניתנה סיבה."
 
-#~ msgid "%s - Totem Movie Player"
+#~ msgid "%s - Xplayer Movie Player"
 #~ msgstr "%s - נגן הסרטים טוטם"
 
 #~ msgid "Please file a bug, this isn't supposed to happen."
 #~ msgstr "אנא מלא באג, זה לא אמור לקרות."
 
-#~ msgid "Couldn't load the main interface (totem.glade)."
-#~ msgstr "לא ניתן לטעון את הממשק הראשי (totem.glade)."
+#~ msgid "Couldn't load the main interface (xplayer.glade)."
+#~ msgstr "לא ניתן לטעון את הממשק הראשי (xplayer.glade)."
 
 #~ msgid "Couldn't load the interface for the playlist."
 #~ msgstr "לא ניתן לטעון ממשק לרשימת השמע."

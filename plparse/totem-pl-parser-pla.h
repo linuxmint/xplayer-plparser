@@ -20,32 +20,32 @@
    Author: Bastien Nocera <hadess@hadess.net>
  */
 
-#ifndef TOTEM_PL_PARSER_PLA_H
-#define TOTEM_PL_PARSER_PLA_H
+#ifndef XPLAYER_PL_PARSER_PLA_H
+#define XPLAYER_PL_PARSER_PLA_H
 
 G_BEGIN_DECLS
 
-#ifndef TOTEM_PL_PARSER_MINI
-#include "totem-pl-parser.h"
-#include "totem-pl-parser-private.h"
+#ifndef XPLAYER_PL_PARSER_MINI
+#include "xplayer-pl-parser.h"
+#include "xplayer-pl-parser-private.h"
 #include <gio/gio.h>
-#endif /* !TOTEM_PL_PARSER_MINI */
+#endif /* !XPLAYER_PL_PARSER_MINI */
 
-#ifndef TOTEM_PL_PARSER_MINI
+#ifndef XPLAYER_PL_PARSER_MINI
 
-gboolean totem_pl_parser_save_pla				(TotemPlParser *parser,
-                                                                 TotemPlPlaylist *playlist,
+gboolean xplayer_pl_parser_save_pla				(XplayerPlParser *parser,
+                                                                 XplayerPlPlaylist *playlist,
 								 GFile *output,
 								 const char *title,
 								 GError **error);
 
-TotemPlParserResult totem_pl_parser_add_pla			(TotemPlParser *parser,
+XplayerPlParserResult xplayer_pl_parser_add_pla			(XplayerPlParser *parser,
 								 GFile *file,
 								 GFile *base_file,
-								 TotemPlParseData *parse_data,
+								 XplayerPlParseData *parse_data,
 								 gpointer data);
-#endif /* !TOTEM_PL_PARSER_MINI */
+#endif /* !XPLAYER_PL_PARSER_MINI */
 
 G_END_DECLS
 
-#endif /* TOTEM_PL_PARSER_PLA_H */
+#endif /* XPLAYER_PL_PARSER_PLA_H */

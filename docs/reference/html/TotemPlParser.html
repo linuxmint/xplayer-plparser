@@ -2,162 +2,162 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Totem Playlist Parser Reference Manual: TotemPlParser</title>
+<title>Xplayer Playlist Parser Reference Manual: XplayerPlParser</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
-<link rel="home" href="index.html" title="Totem Playlist Parser Reference Manual">
+<link rel="home" href="index.html" title="Xplayer Playlist Parser Reference Manual">
 <link rel="up" href="api-reference.html" title="API Reference">
 <link rel="prev" href="api-reference.html" title="API Reference">
-<link rel="next" href="TotemPlPlaylist.html" title="TotemPlPlaylist">
+<link rel="next" href="XplayerPlPlaylist.html" title="XplayerPlPlaylist">
 <meta name="generator" content="GTK-Doc V1.20.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
 <table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
 <td width="100%" align="left" class="shortcuts">
-<a href="#" class="shortcut">Top</a><span id="nav_description"> <span class="dim">|</span><a href="#TotemPlParser.description" class="shortcut">Description</a></span><span id="nav_hierarchy"> <span class="dim">|</span><a href="#TotemPlParser.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties"> <span class="dim">|</span><a href="#TotemPlParser.properties" class="shortcut">Properties</a></span><span id="nav_signals"> <span class="dim">|</span><a href="#TotemPlParser.signals" class="shortcut">Signals</a></span>
+<a href="#" class="shortcut">Top</a><span id="nav_description"> <span class="dim">|</span><a href="#XplayerPlParser.description" class="shortcut">Description</a></span><span id="nav_hierarchy"> <span class="dim">|</span><a href="#XplayerPlParser.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties"> <span class="dim">|</span><a href="#XplayerPlParser.properties" class="shortcut">Properties</a></span><span id="nav_signals"> <span class="dim">|</span><a href="#XplayerPlParser.signals" class="shortcut">Signals</a></span>
 </td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
 <td><a accesskey="u" href="api-reference.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
 <td><a accesskey="p" href="api-reference.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
-<td><a accesskey="n" href="TotemPlPlaylist.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+<td><a accesskey="n" href="XplayerPlPlaylist.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
 </tr></table>
 <div class="refentry">
-<a name="TotemPlParser"></a><div class="titlepage"></div>
+<a name="XplayerPlParser"></a><div class="titlepage"></div>
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
-<h2><span class="refentrytitle"><a name="TotemPlParser.top_of_page"></a>TotemPlParser</span></h2>
-<p>TotemPlParser — playlist parser</p>
+<h2><span class="refentrytitle"><a name="XplayerPlParser.top_of_page"></a>XplayerPlParser</span></h2>
+<p>XplayerPlParser — playlist parser</p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
 <div class="refsect1">
-<a name="TotemPlParser.stability-level"></a><h2>Stability Level</h2>
+<a name="XplayerPlParser.stability-level"></a><h2>Stability Level</h2>
 Stable, unless otherwise indicated
 </div>
 <div class="refsynopsisdiv">
-<a name="TotemPlParser.synopsis"></a><h2>Synopsis</h2>
-<a name="TotemPlParserMetadata"></a><pre class="synopsis">
-#include &lt;totem-pl-parser.h&gt;
+<a name="XplayerPlParser.synopsis"></a><h2>Synopsis</h2>
+<a name="XplayerPlParserMetadata"></a><pre class="synopsis">
+#include &lt;xplayer-pl-parser.h&gt;
 
-                    <a class="link" href="TotemPlParser.html#TotemPlParser-struct" title="TotemPlParser">TotemPlParser</a>;
-                    <a class="link" href="TotemPlParser.html#TotemPlParserClass" title="TotemPlParserClass">TotemPlParserClass</a>;
-enum                <a class="link" href="TotemPlParser.html#TotemPlParserResult" title="enum TotemPlParserResult">TotemPlParserResult</a>;
-enum                <a class="link" href="TotemPlParser.html#TotemPlParserType" title="enum TotemPlParserType">TotemPlParserType</a>;
-enum                <a class="link" href="TotemPlParser.html#TotemPlParserError" title="enum TotemPlParserError">TotemPlParserError</a>;
-typedef             <a class="link" href="TotemPlParser.html#TotemPlParserMetadata">TotemPlParserMetadata</a>;
-<a class="link" href="TotemPlParser.html" title="TotemPlParser"><span class="returnvalue">TotemPlParser</span></a> *     <a class="link" href="TotemPlParser.html#totem-pl-parser-new" title="totem_pl_parser_new ()">totem_pl_parser_new</a>                 (<em class="parameter"><code><span class="type">void</span></code></em>);
-<a class="link" href="TotemPlParser.html#TotemPlParserResult" title="enum TotemPlParserResult"><span class="returnvalue">TotemPlParserResult</span></a> <a class="link" href="TotemPlParser.html#totem-pl-parser-parse" title="totem_pl_parser_parse ()">totem_pl_parser_parse</a>               (<em class="parameter"><code><a class="link" href="TotemPlParser.html" title="TotemPlParser"><span class="type">TotemPlParser</span></a> *parser</code></em>,
+                    <a class="link" href="XplayerPlParser.html#XplayerPlParser-struct" title="XplayerPlParser">XplayerPlParser</a>;
+                    <a class="link" href="XplayerPlParser.html#XplayerPlParserClass" title="XplayerPlParserClass">XplayerPlParserClass</a>;
+enum                <a class="link" href="XplayerPlParser.html#XplayerPlParserResult" title="enum XplayerPlParserResult">XplayerPlParserResult</a>;
+enum                <a class="link" href="XplayerPlParser.html#XplayerPlParserType" title="enum XplayerPlParserType">XplayerPlParserType</a>;
+enum                <a class="link" href="XplayerPlParser.html#XplayerPlParserError" title="enum XplayerPlParserError">XplayerPlParserError</a>;
+typedef             <a class="link" href="XplayerPlParser.html#XplayerPlParserMetadata">XplayerPlParserMetadata</a>;
+<a class="link" href="XplayerPlParser.html" title="XplayerPlParser"><span class="returnvalue">XplayerPlParser</span></a> *     <a class="link" href="XplayerPlParser.html#xplayer-pl-parser-new" title="xplayer_pl_parser_new ()">xplayer_pl_parser_new</a>                 (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a class="link" href="XplayerPlParser.html#XplayerPlParserResult" title="enum XplayerPlParserResult"><span class="returnvalue">XplayerPlParserResult</span></a> <a class="link" href="XplayerPlParser.html#xplayer-pl-parser-parse" title="xplayer_pl_parser_parse ()">xplayer_pl_parser_parse</a>               (<em class="parameter"><code><a class="link" href="XplayerPlParser.html" title="XplayerPlParser"><span class="type">XplayerPlParser</span></a> *parser</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *uri</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> fallback</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="TotemPlParser.html#totem-pl-parser-parse-async" title="totem_pl_parser_parse_async ()">totem_pl_parser_parse_async</a>         (<em class="parameter"><code><a class="link" href="TotemPlParser.html" title="TotemPlParser"><span class="type">TotemPlParser</span></a> *parser</code></em>,
+<span class="returnvalue">void</span>                <a class="link" href="XplayerPlParser.html#xplayer-pl-parser-parse-async" title="xplayer_pl_parser_parse_async ()">xplayer_pl_parser_parse_async</a>         (<em class="parameter"><code><a class="link" href="XplayerPlParser.html" title="XplayerPlParser"><span class="type">XplayerPlParser</span></a> *parser</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *uri</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> fallback</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);
-<a class="link" href="TotemPlParser.html#TotemPlParserResult" title="enum TotemPlParserResult"><span class="returnvalue">TotemPlParserResult</span></a> <a class="link" href="TotemPlParser.html#totem-pl-parser-parse-finish" title="totem_pl_parser_parse_finish ()">totem_pl_parser_parse_finish</a>        (<em class="parameter"><code><a class="link" href="TotemPlParser.html" title="TotemPlParser"><span class="type">TotemPlParser</span></a> *parser</code></em>,
+<a class="link" href="XplayerPlParser.html#XplayerPlParserResult" title="enum XplayerPlParserResult"><span class="returnvalue">XplayerPlParserResult</span></a> <a class="link" href="XplayerPlParser.html#xplayer-pl-parser-parse-finish" title="xplayer_pl_parser_parse_finish ()">xplayer_pl_parser_parse_finish</a>        (<em class="parameter"><code><a class="link" href="XplayerPlParser.html" title="XplayerPlParser"><span class="type">XplayerPlParser</span></a> *parser</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GAsyncResult.html"><span class="type">GAsyncResult</span></a> *async_result</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
-<a class="link" href="TotemPlParser.html#TotemPlParserResult" title="enum TotemPlParserResult"><span class="returnvalue">TotemPlParserResult</span></a> <a class="link" href="TotemPlParser.html#totem-pl-parser-parse-with-base" title="totem_pl_parser_parse_with_base ()">totem_pl_parser_parse_with_base</a>     (<em class="parameter"><code><a class="link" href="TotemPlParser.html" title="TotemPlParser"><span class="type">TotemPlParser</span></a> *parser</code></em>,
+<a class="link" href="XplayerPlParser.html#XplayerPlParserResult" title="enum XplayerPlParserResult"><span class="returnvalue">XplayerPlParserResult</span></a> <a class="link" href="XplayerPlParser.html#xplayer-pl-parser-parse-with-base" title="xplayer_pl_parser_parse_with_base ()">xplayer_pl_parser_parse_with_base</a>     (<em class="parameter"><code><a class="link" href="XplayerPlParser.html" title="XplayerPlParser"><span class="type">XplayerPlParser</span></a> *parser</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *uri</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *base</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> fallback</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="TotemPlParser.html#totem-pl-parser-parse-with-base-async" title="totem_pl_parser_parse_with_base_async ()">totem_pl_parser_parse_with_base_async</a>
-                                                        (<em class="parameter"><code><a class="link" href="TotemPlParser.html" title="TotemPlParser"><span class="type">TotemPlParser</span></a> *parser</code></em>,
+<span class="returnvalue">void</span>                <a class="link" href="XplayerPlParser.html#xplayer-pl-parser-parse-with-base-async" title="xplayer_pl_parser_parse_with_base_async ()">xplayer_pl_parser_parse_with_base_async</a>
+                                                        (<em class="parameter"><code><a class="link" href="XplayerPlParser.html" title="XplayerPlParser"><span class="type">XplayerPlParser</span></a> *parser</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *uri</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *base</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> fallback</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);
-<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="TotemPlParser.html#totem-pl-parser-save" title="totem_pl_parser_save ()">totem_pl_parser_save</a>                (<em class="parameter"><code><a class="link" href="TotemPlParser.html" title="TotemPlParser"><span class="type">TotemPlParser</span></a> *parser</code></em>,
-                                                         <em class="parameter"><code><a class="link" href="TotemPlPlaylist.html" title="TotemPlPlaylist"><span class="type">TotemPlPlaylist</span></a> *playlist</code></em>,
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="XplayerPlParser.html#xplayer-pl-parser-save" title="xplayer_pl_parser_save ()">xplayer_pl_parser_save</a>                (<em class="parameter"><code><a class="link" href="XplayerPlParser.html" title="XplayerPlParser"><span class="type">XplayerPlParser</span></a> *parser</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="XplayerPlPlaylist.html" title="XplayerPlPlaylist"><span class="type">XplayerPlPlaylist</span></a> *playlist</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GFile.html"><span class="type">GFile</span></a> *dest</code></em>,
                                                          <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *title</code></em>,
-                                                         <em class="parameter"><code><a class="link" href="TotemPlParser.html#TotemPlParserType" title="enum TotemPlParserType"><span class="type">TotemPlParserType</span></a> type</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="XplayerPlParser.html#XplayerPlParserType" title="enum XplayerPlParserType"><span class="type">XplayerPlParserType</span></a> type</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
-<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint64"><span class="returnvalue">gint64</span></a>              <a class="link" href="TotemPlParser.html#totem-pl-parser-parse-duration" title="totem_pl_parser_parse_duration ()">totem_pl_parser_parse_duration</a>      (<em class="parameter"><code>const <span class="type">char</span> *duration</code></em>,
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint64"><span class="returnvalue">gint64</span></a>              <a class="link" href="XplayerPlParser.html#xplayer-pl-parser-parse-duration" title="xplayer_pl_parser_parse_duration ()">xplayer_pl_parser_parse_duration</a>      (<em class="parameter"><code>const <span class="type">char</span> *duration</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> debug</code></em>);
-<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint64"><span class="returnvalue">guint64</span></a>             <a class="link" href="TotemPlParser.html#totem-pl-parser-parse-date" title="totem_pl_parser_parse_date ()">totem_pl_parser_parse_date</a>          (<em class="parameter"><code>const <span class="type">char</span> *date_str</code></em>,
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint64"><span class="returnvalue">guint64</span></a>             <a class="link" href="XplayerPlParser.html#xplayer-pl-parser-parse-date" title="xplayer_pl_parser_parse_date ()">xplayer_pl_parser_parse_date</a>          (<em class="parameter"><code>const <span class="type">char</span> *date_str</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> debug</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="TotemPlParser.html#totem-pl-parser-add-ignored-scheme" title="totem_pl_parser_add_ignored_scheme ()">totem_pl_parser_add_ignored_scheme</a>  (<em class="parameter"><code><a class="link" href="TotemPlParser.html" title="TotemPlParser"><span class="type">TotemPlParser</span></a> *parser</code></em>,
+<span class="returnvalue">void</span>                <a class="link" href="XplayerPlParser.html#xplayer-pl-parser-add-ignored-scheme" title="xplayer_pl_parser_add_ignored_scheme ()">xplayer_pl_parser_add_ignored_scheme</a>  (<em class="parameter"><code><a class="link" href="XplayerPlParser.html" title="XplayerPlParser"><span class="type">XplayerPlParser</span></a> *parser</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *scheme</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="TotemPlParser.html#totem-pl-parser-add-ignored-mimetype" title="totem_pl_parser_add_ignored_mimetype ()">totem_pl_parser_add_ignored_mimetype</a>
-                                                        (<em class="parameter"><code><a class="link" href="TotemPlParser.html" title="TotemPlParser"><span class="type">TotemPlParser</span></a> *parser</code></em>,
+<span class="returnvalue">void</span>                <a class="link" href="XplayerPlParser.html#xplayer-pl-parser-add-ignored-mimetype" title="xplayer_pl_parser_add_ignored_mimetype ()">xplayer_pl_parser_add_ignored_mimetype</a>
+                                                        (<em class="parameter"><code><a class="link" href="XplayerPlParser.html" title="XplayerPlParser"><span class="type">XplayerPlParser</span></a> *parser</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *mimetype</code></em>);
-<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="TotemPlParser.html#totem-pl-parser-can-parse-from-data" title="totem_pl_parser_can_parse_from_data ()">totem_pl_parser_can_parse_from_data</a> (<em class="parameter"><code>const <span class="type">char</span> *data</code></em>,
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="XplayerPlParser.html#xplayer-pl-parser-can-parse-from-data" title="xplayer_pl_parser_can_parse_from_data ()">xplayer_pl_parser_can_parse_from_data</a> (<em class="parameter"><code>const <span class="type">char</span> *data</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> len</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> debug</code></em>);
-<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="TotemPlParser.html#totem-pl-parser-can-parse-from-filename" title="totem_pl_parser_can_parse_from_filename ()">totem_pl_parser_can_parse_from_filename</a>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="XplayerPlParser.html#xplayer-pl-parser-can-parse-from-filename" title="xplayer_pl_parser_can_parse_from_filename ()">xplayer_pl_parser_can_parse_from_filename</a>
                                                         (<em class="parameter"><code>const <span class="type">char</span> *filename</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> debug</code></em>);
-<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="TotemPlParser.html#totem-pl-parser-can-parse-from-uri" title="totem_pl_parser_can_parse_from_uri ()">totem_pl_parser_can_parse_from_uri</a>  (<em class="parameter"><code>const <span class="type">char</span> *uri</code></em>,
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="XplayerPlParser.html#xplayer-pl-parser-can-parse-from-uri" title="xplayer_pl_parser_can_parse_from_uri ()">xplayer_pl_parser_can_parse_from_uri</a>  (<em class="parameter"><code>const <span class="type">char</span> *uri</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> debug</code></em>);
-#define             <a class="link" href="TotemPlParser.html#TOTEM-PL-PARSER-FIELD-URI:CAPS" title="TOTEM_PL_PARSER_FIELD_URI">TOTEM_PL_PARSER_FIELD_URI</a>
-#define             <a class="link" href="TotemPlParser.html#TOTEM-PL-PARSER-FIELD-GENRE:CAPS" title="TOTEM_PL_PARSER_FIELD_GENRE">TOTEM_PL_PARSER_FIELD_GENRE</a>
-#define             <a class="link" href="TotemPlParser.html#TOTEM-PL-PARSER-FIELD-TITLE:CAPS" title="TOTEM_PL_PARSER_FIELD_TITLE">TOTEM_PL_PARSER_FIELD_TITLE</a>
-#define             <a class="link" href="TotemPlParser.html#TOTEM-PL-PARSER-FIELD-AUTHOR:CAPS" title="TOTEM_PL_PARSER_FIELD_AUTHOR">TOTEM_PL_PARSER_FIELD_AUTHOR</a>
-#define             <a class="link" href="TotemPlParser.html#TOTEM-PL-PARSER-FIELD-ALBUM:CAPS" title="TOTEM_PL_PARSER_FIELD_ALBUM">TOTEM_PL_PARSER_FIELD_ALBUM</a>
-#define             <a class="link" href="TotemPlParser.html#TOTEM-PL-PARSER-FIELD-BASE:CAPS" title="TOTEM_PL_PARSER_FIELD_BASE">TOTEM_PL_PARSER_FIELD_BASE</a>
-#define             <a class="link" href="TotemPlParser.html#TOTEM-PL-PARSER-FIELD-VOLUME:CAPS" title="TOTEM_PL_PARSER_FIELD_VOLUME">TOTEM_PL_PARSER_FIELD_VOLUME</a>
-#define             <a class="link" href="TotemPlParser.html#TOTEM-PL-PARSER-FIELD-AUTOPLAY:CAPS" title="TOTEM_PL_PARSER_FIELD_AUTOPLAY">TOTEM_PL_PARSER_FIELD_AUTOPLAY</a>
-#define             <a class="link" href="TotemPlParser.html#TOTEM-PL-PARSER-FIELD-DURATION:CAPS" title="TOTEM_PL_PARSER_FIELD_DURATION">TOTEM_PL_PARSER_FIELD_DURATION</a>
-#define             <a class="link" href="TotemPlParser.html#TOTEM-PL-PARSER-FIELD-DURATION-MS:CAPS" title="TOTEM_PL_PARSER_FIELD_DURATION_MS">TOTEM_PL_PARSER_FIELD_DURATION_MS</a>
-#define             <a class="link" href="TotemPlParser.html#TOTEM-PL-PARSER-FIELD-STARTTIME:CAPS" title="TOTEM_PL_PARSER_FIELD_STARTTIME">TOTEM_PL_PARSER_FIELD_STARTTIME</a>
-#define             <a class="link" href="TotemPlParser.html#TOTEM-PL-PARSER-FIELD-ENDTIME:CAPS" title="TOTEM_PL_PARSER_FIELD_ENDTIME">TOTEM_PL_PARSER_FIELD_ENDTIME</a>
-#define             <a class="link" href="TotemPlParser.html#TOTEM-PL-PARSER-FIELD-COPYRIGHT:CAPS" title="TOTEM_PL_PARSER_FIELD_COPYRIGHT">TOTEM_PL_PARSER_FIELD_COPYRIGHT</a>
-#define             <a class="link" href="TotemPlParser.html#TOTEM-PL-PARSER-FIELD-ABSTRACT:CAPS" title="TOTEM_PL_PARSER_FIELD_ABSTRACT">TOTEM_PL_PARSER_FIELD_ABSTRACT</a>
-#define             <a class="link" href="TotemPlParser.html#TOTEM-PL-PARSER-FIELD-DESCRIPTION:CAPS" title="TOTEM_PL_PARSER_FIELD_DESCRIPTION">TOTEM_PL_PARSER_FIELD_DESCRIPTION</a>
-#define             <a class="link" href="TotemPlParser.html#TOTEM-PL-PARSER-FIELD-SUMMARY:CAPS" title="TOTEM_PL_PARSER_FIELD_SUMMARY">TOTEM_PL_PARSER_FIELD_SUMMARY</a>
-#define             <a class="link" href="TotemPlParser.html#TOTEM-PL-PARSER-FIELD-MOREINFO:CAPS" title="TOTEM_PL_PARSER_FIELD_MOREINFO">TOTEM_PL_PARSER_FIELD_MOREINFO</a>
-#define             <a class="link" href="TotemPlParser.html#TOTEM-PL-PARSER-FIELD-SCREENSIZE:CAPS" title="TOTEM_PL_PARSER_FIELD_SCREENSIZE">TOTEM_PL_PARSER_FIELD_SCREENSIZE</a>
-#define             <a class="link" href="TotemPlParser.html#TOTEM-PL-PARSER-FIELD-UI-MODE:CAPS" title="TOTEM_PL_PARSER_FIELD_UI_MODE">TOTEM_PL_PARSER_FIELD_UI_MODE</a>
-#define             <a class="link" href="TotemPlParser.html#TOTEM-PL-PARSER-FIELD-PUB-DATE:CAPS" title="TOTEM_PL_PARSER_FIELD_PUB_DATE">TOTEM_PL_PARSER_FIELD_PUB_DATE</a>
-#define             <a class="link" href="TotemPlParser.html#TOTEM-PL-PARSER-FIELD-FILESIZE:CAPS" title="TOTEM_PL_PARSER_FIELD_FILESIZE">TOTEM_PL_PARSER_FIELD_FILESIZE</a>
-#define             <a class="link" href="TotemPlParser.html#TOTEM-PL-PARSER-FIELD-LANGUAGE:CAPS" title="TOTEM_PL_PARSER_FIELD_LANGUAGE">TOTEM_PL_PARSER_FIELD_LANGUAGE</a>
-#define             <a class="link" href="TotemPlParser.html#TOTEM-PL-PARSER-FIELD-CONTACT:CAPS" title="TOTEM_PL_PARSER_FIELD_CONTACT">TOTEM_PL_PARSER_FIELD_CONTACT</a>
-#define             <a class="link" href="TotemPlParser.html#TOTEM-PL-PARSER-FIELD-IMAGE-URI:CAPS" title="TOTEM_PL_PARSER_FIELD_IMAGE_URI">TOTEM_PL_PARSER_FIELD_IMAGE_URI</a>
-#define             <a class="link" href="TotemPlParser.html#TOTEM-PL-PARSER-FIELD-DOWNLOAD-URI:CAPS" title="TOTEM_PL_PARSER_FIELD_DOWNLOAD_URI">TOTEM_PL_PARSER_FIELD_DOWNLOAD_URI</a>
-#define             <a class="link" href="TotemPlParser.html#TOTEM-PL-PARSER-FIELD-ID:CAPS" title="TOTEM_PL_PARSER_FIELD_ID">TOTEM_PL_PARSER_FIELD_ID</a>
-#define             <a class="link" href="TotemPlParser.html#TOTEM-PL-PARSER-FIELD-IS-PLAYLIST:CAPS" title="TOTEM_PL_PARSER_FIELD_IS_PLAYLIST">TOTEM_PL_PARSER_FIELD_IS_PLAYLIST</a>
-#define             <a class="link" href="TotemPlParser.html#TOTEM-PL-PARSER-FIELD-SUBTITLE-URI:CAPS" title="TOTEM_PL_PARSER_FIELD_SUBTITLE_URI">TOTEM_PL_PARSER_FIELD_SUBTITLE_URI</a>
-#define             <a class="link" href="TotemPlParser.html#TOTEM-PL-PARSER-FIELD-CONTENT-TYPE:CAPS" title="TOTEM_PL_PARSER_FIELD_CONTENT_TYPE">TOTEM_PL_PARSER_FIELD_CONTENT_TYPE</a>
+#define             <a class="link" href="XplayerPlParser.html#XPLAYER-PL-PARSER-FIELD-URI:CAPS" title="XPLAYER_PL_PARSER_FIELD_URI">XPLAYER_PL_PARSER_FIELD_URI</a>
+#define             <a class="link" href="XplayerPlParser.html#XPLAYER-PL-PARSER-FIELD-GENRE:CAPS" title="XPLAYER_PL_PARSER_FIELD_GENRE">XPLAYER_PL_PARSER_FIELD_GENRE</a>
+#define             <a class="link" href="XplayerPlParser.html#XPLAYER-PL-PARSER-FIELD-TITLE:CAPS" title="XPLAYER_PL_PARSER_FIELD_TITLE">XPLAYER_PL_PARSER_FIELD_TITLE</a>
+#define             <a class="link" href="XplayerPlParser.html#XPLAYER-PL-PARSER-FIELD-AUTHOR:CAPS" title="XPLAYER_PL_PARSER_FIELD_AUTHOR">XPLAYER_PL_PARSER_FIELD_AUTHOR</a>
+#define             <a class="link" href="XplayerPlParser.html#XPLAYER-PL-PARSER-FIELD-ALBUM:CAPS" title="XPLAYER_PL_PARSER_FIELD_ALBUM">XPLAYER_PL_PARSER_FIELD_ALBUM</a>
+#define             <a class="link" href="XplayerPlParser.html#XPLAYER-PL-PARSER-FIELD-BASE:CAPS" title="XPLAYER_PL_PARSER_FIELD_BASE">XPLAYER_PL_PARSER_FIELD_BASE</a>
+#define             <a class="link" href="XplayerPlParser.html#XPLAYER-PL-PARSER-FIELD-VOLUME:CAPS" title="XPLAYER_PL_PARSER_FIELD_VOLUME">XPLAYER_PL_PARSER_FIELD_VOLUME</a>
+#define             <a class="link" href="XplayerPlParser.html#XPLAYER-PL-PARSER-FIELD-AUTOPLAY:CAPS" title="XPLAYER_PL_PARSER_FIELD_AUTOPLAY">XPLAYER_PL_PARSER_FIELD_AUTOPLAY</a>
+#define             <a class="link" href="XplayerPlParser.html#XPLAYER-PL-PARSER-FIELD-DURATION:CAPS" title="XPLAYER_PL_PARSER_FIELD_DURATION">XPLAYER_PL_PARSER_FIELD_DURATION</a>
+#define             <a class="link" href="XplayerPlParser.html#XPLAYER-PL-PARSER-FIELD-DURATION-MS:CAPS" title="XPLAYER_PL_PARSER_FIELD_DURATION_MS">XPLAYER_PL_PARSER_FIELD_DURATION_MS</a>
+#define             <a class="link" href="XplayerPlParser.html#XPLAYER-PL-PARSER-FIELD-STARTTIME:CAPS" title="XPLAYER_PL_PARSER_FIELD_STARTTIME">XPLAYER_PL_PARSER_FIELD_STARTTIME</a>
+#define             <a class="link" href="XplayerPlParser.html#XPLAYER-PL-PARSER-FIELD-ENDTIME:CAPS" title="XPLAYER_PL_PARSER_FIELD_ENDTIME">XPLAYER_PL_PARSER_FIELD_ENDTIME</a>
+#define             <a class="link" href="XplayerPlParser.html#XPLAYER-PL-PARSER-FIELD-COPYRIGHT:CAPS" title="XPLAYER_PL_PARSER_FIELD_COPYRIGHT">XPLAYER_PL_PARSER_FIELD_COPYRIGHT</a>
+#define             <a class="link" href="XplayerPlParser.html#XPLAYER-PL-PARSER-FIELD-ABSTRACT:CAPS" title="XPLAYER_PL_PARSER_FIELD_ABSTRACT">XPLAYER_PL_PARSER_FIELD_ABSTRACT</a>
+#define             <a class="link" href="XplayerPlParser.html#XPLAYER-PL-PARSER-FIELD-DESCRIPTION:CAPS" title="XPLAYER_PL_PARSER_FIELD_DESCRIPTION">XPLAYER_PL_PARSER_FIELD_DESCRIPTION</a>
+#define             <a class="link" href="XplayerPlParser.html#XPLAYER-PL-PARSER-FIELD-SUMMARY:CAPS" title="XPLAYER_PL_PARSER_FIELD_SUMMARY">XPLAYER_PL_PARSER_FIELD_SUMMARY</a>
+#define             <a class="link" href="XplayerPlParser.html#XPLAYER-PL-PARSER-FIELD-MOREINFO:CAPS" title="XPLAYER_PL_PARSER_FIELD_MOREINFO">XPLAYER_PL_PARSER_FIELD_MOREINFO</a>
+#define             <a class="link" href="XplayerPlParser.html#XPLAYER-PL-PARSER-FIELD-SCREENSIZE:CAPS" title="XPLAYER_PL_PARSER_FIELD_SCREENSIZE">XPLAYER_PL_PARSER_FIELD_SCREENSIZE</a>
+#define             <a class="link" href="XplayerPlParser.html#XPLAYER-PL-PARSER-FIELD-UI-MODE:CAPS" title="XPLAYER_PL_PARSER_FIELD_UI_MODE">XPLAYER_PL_PARSER_FIELD_UI_MODE</a>
+#define             <a class="link" href="XplayerPlParser.html#XPLAYER-PL-PARSER-FIELD-PUB-DATE:CAPS" title="XPLAYER_PL_PARSER_FIELD_PUB_DATE">XPLAYER_PL_PARSER_FIELD_PUB_DATE</a>
+#define             <a class="link" href="XplayerPlParser.html#XPLAYER-PL-PARSER-FIELD-FILESIZE:CAPS" title="XPLAYER_PL_PARSER_FIELD_FILESIZE">XPLAYER_PL_PARSER_FIELD_FILESIZE</a>
+#define             <a class="link" href="XplayerPlParser.html#XPLAYER-PL-PARSER-FIELD-LANGUAGE:CAPS" title="XPLAYER_PL_PARSER_FIELD_LANGUAGE">XPLAYER_PL_PARSER_FIELD_LANGUAGE</a>
+#define             <a class="link" href="XplayerPlParser.html#XPLAYER-PL-PARSER-FIELD-CONTACT:CAPS" title="XPLAYER_PL_PARSER_FIELD_CONTACT">XPLAYER_PL_PARSER_FIELD_CONTACT</a>
+#define             <a class="link" href="XplayerPlParser.html#XPLAYER-PL-PARSER-FIELD-IMAGE-URI:CAPS" title="XPLAYER_PL_PARSER_FIELD_IMAGE_URI">XPLAYER_PL_PARSER_FIELD_IMAGE_URI</a>
+#define             <a class="link" href="XplayerPlParser.html#XPLAYER-PL-PARSER-FIELD-DOWNLOAD-URI:CAPS" title="XPLAYER_PL_PARSER_FIELD_DOWNLOAD_URI">XPLAYER_PL_PARSER_FIELD_DOWNLOAD_URI</a>
+#define             <a class="link" href="XplayerPlParser.html#XPLAYER-PL-PARSER-FIELD-ID:CAPS" title="XPLAYER_PL_PARSER_FIELD_ID">XPLAYER_PL_PARSER_FIELD_ID</a>
+#define             <a class="link" href="XplayerPlParser.html#XPLAYER-PL-PARSER-FIELD-IS-PLAYLIST:CAPS" title="XPLAYER_PL_PARSER_FIELD_IS_PLAYLIST">XPLAYER_PL_PARSER_FIELD_IS_PLAYLIST</a>
+#define             <a class="link" href="XplayerPlParser.html#XPLAYER-PL-PARSER-FIELD-SUBTITLE-URI:CAPS" title="XPLAYER_PL_PARSER_FIELD_SUBTITLE_URI">XPLAYER_PL_PARSER_FIELD_SUBTITLE_URI</a>
+#define             <a class="link" href="XplayerPlParser.html#XPLAYER-PL-PARSER-FIELD-CONTENT-TYPE:CAPS" title="XPLAYER_PL_PARSER_FIELD_CONTENT_TYPE">XPLAYER_PL_PARSER_FIELD_CONTENT_TYPE</a>
 </pre>
 </div>
 <div class="refsect1">
-<a name="TotemPlParser.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<a name="XplayerPlParser.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="synopsis">
   <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
-   +----TotemPlParser
+   +----XplayerPlParser
 </pre>
 <pre class="synopsis">
   GBoxed
-   +----TotemPlParserMetadata
+   +----XplayerPlParserMetadata
 </pre>
 </div>
 <div class="refsect1">
-<a name="TotemPlParser.properties"></a><h2>Properties</h2>
+<a name="XplayerPlParser.properties"></a><h2>Properties</h2>
 <pre class="synopsis">
-  "<a class="link" href="TotemPlParser.html#TotemPlParser--debug" title='The "debug" property'>debug</a>"                    <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
-  "<a class="link" href="TotemPlParser.html#TotemPlParser--disable-unsafe" title='The "disable-unsafe" property'>disable-unsafe</a>"           <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
-  "<a class="link" href="TotemPlParser.html#TotemPlParser--force" title='The "force" property'>force</a>"                    <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
-  "<a class="link" href="TotemPlParser.html#TotemPlParser--recurse" title='The "recurse" property'>recurse</a>"                  <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write / Construct
+  "<a class="link" href="XplayerPlParser.html#XplayerPlParser--debug" title='The "debug" property'>debug</a>"                    <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
+  "<a class="link" href="XplayerPlParser.html#XplayerPlParser--disable-unsafe" title='The "disable-unsafe" property'>disable-unsafe</a>"           <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
+  "<a class="link" href="XplayerPlParser.html#XplayerPlParser--force" title='The "force" property'>force</a>"                    <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
+  "<a class="link" href="XplayerPlParser.html#XplayerPlParser--recurse" title='The "recurse" property'>recurse</a>"                  <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write / Construct
 </pre>
 </div>
 <div class="refsect1">
-<a name="TotemPlParser.signals"></a><h2>Signals</h2>
+<a name="XplayerPlParser.signals"></a><h2>Signals</h2>
 <pre class="synopsis">
-  "<a class="link" href="TotemPlParser.html#TotemPlParser-entry-parsed" title='The "entry-parsed" signal'>entry-parsed</a>"                                   : <code class="literal">Run Last</code>
-  "<a class="link" href="TotemPlParser.html#TotemPlParser-playlist-ended" title='The "playlist-ended" signal'>playlist-ended</a>"                                 : <code class="literal">Run Last</code>
-  "<a class="link" href="TotemPlParser.html#TotemPlParser-playlist-started" title='The "playlist-started" signal'>playlist-started</a>"                               : <code class="literal">Run Last</code>
+  "<a class="link" href="XplayerPlParser.html#XplayerPlParser-entry-parsed" title='The "entry-parsed" signal'>entry-parsed</a>"                                   : <code class="literal">Run Last</code>
+  "<a class="link" href="XplayerPlParser.html#XplayerPlParser-playlist-ended" title='The "playlist-ended" signal'>playlist-ended</a>"                                 : <code class="literal">Run Last</code>
+  "<a class="link" href="XplayerPlParser.html#XplayerPlParser-playlist-started" title='The "playlist-started" signal'>playlist-started</a>"                               : <code class="literal">Run Last</code>
 </pre>
 </div>
 <div class="refsect1">
-<a name="TotemPlParser.description"></a><h2>Description</h2>
+<a name="XplayerPlParser.description"></a><h2>Description</h2>
 <p>
-<a class="link" href="TotemPlParser.html" title="TotemPlParser"><span class="type">TotemPlParser</span></a> is a general-purpose playlist parser and writer, with
-support for several different types of playlist. Note that totem-pl-parser requires a main loop
-to operate properly (e.g. for the <a class="link" href="TotemPlParser.html#TotemPlParser-entry-parsed" title='The "entry-parsed" signal'><span class="type">"entry-parsed"</span></a> signal to be emitted).
+<a class="link" href="XplayerPlParser.html" title="XplayerPlParser"><span class="type">XplayerPlParser</span></a> is a general-purpose playlist parser and writer, with
+support for several different types of playlist. Note that xplayer-pl-parser requires a main loop
+to operate properly (e.g. for the <a class="link" href="XplayerPlParser.html#XplayerPlParser-entry-parsed" title='The "entry-parsed" signal'><span class="type">"entry-parsed"</span></a> signal to be emitted).
 </p>
 <p>
 </p>
@@ -176,12 +176,12 @@ to operate properly (e.g. for the <a class="link" href="TotemPlParser.html#Totem
 7
 8
 9</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="usertype">TotemPlParser</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">pl </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="TotemPlParser.html#totem-pl-parser-new">totem_pl_parser_new</a></span><span class="normal"> </span><span class="symbol">();</span>
+        <td class="listing_code"><pre class="programlisting"><span class="usertype">XplayerPlParser</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">pl </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="XplayerPlParser.html#xplayer-pl-parser-new">xplayer_pl_parser_new</a></span><span class="normal"> </span><span class="symbol">();</span>
 <span class="function"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-set">g_object_set</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">pl</span><span class="symbol">,</span><span class="normal"> </span><span class="string">"recurse"</span><span class="symbol">,</span><span class="normal"> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a></span><span class="symbol">,</span><span class="normal"> </span><span class="string">"disable-unsafe"</span><span class="symbol">,</span><span class="normal"> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a></span><span class="symbol">,</span><span class="normal"> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></span><span class="symbol">);</span>
 <span class="function"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#g-signal-connect">g_signal_connect</a></span><span class="normal"> </span><span class="symbol">(</span><span class="function"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#G-OBJECT:CAPS">G_OBJECT</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">pl</span><span class="symbol">),</span><span class="normal"> </span><span class="string">"playlist-started"</span><span class="symbol">,</span><span class="normal"> </span><span class="function"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Closures.html#G-CALLBACK:CAPS">G_CALLBACK</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">playlist_started</span><span class="symbol">),</span><span class="normal"> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></span><span class="symbol">);</span>
 <span class="function"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#g-signal-connect">g_signal_connect</a></span><span class="normal"> </span><span class="symbol">(</span><span class="function"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#G-OBJECT:CAPS">G_OBJECT</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">pl</span><span class="symbol">),</span><span class="normal"> </span><span class="string">"entry-parsed"</span><span class="symbol">,</span><span class="normal"> </span><span class="function"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Closures.html#G-CALLBACK:CAPS">G_CALLBACK</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">entry_parsed</span><span class="symbol">),</span><span class="normal"> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></span><span class="symbol">);</span>
 
-<span class="keyword">if</span><span class="normal"> </span><span class="symbol">(</span><span class="function"><a href="TotemPlParser.html#totem-pl-parser-parse">totem_pl_parser_parse</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">pl</span><span class="symbol">,</span><span class="normal"> </span><span class="string">"http://example.com/playlist.pls"</span><span class="symbol">,</span><span class="normal"> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a></span><span class="symbol">)</span><span class="normal"> </span><span class="symbol">!=</span><span class="normal"> <a href="TotemPlParser.html#TOTEM-PL-PARSER-RESULT-SUCCESS:CAPS">TOTEM_PL_PARSER_RESULT_SUCCESS</a></span><span class="symbol">)</span>
+<span class="keyword">if</span><span class="normal"> </span><span class="symbol">(</span><span class="function"><a href="XplayerPlParser.html#xplayer-pl-parser-parse">xplayer_pl_parser_parse</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">pl</span><span class="symbol">,</span><span class="normal"> </span><span class="string">"http://example.com/playlist.pls"</span><span class="symbol">,</span><span class="normal"> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a></span><span class="symbol">)</span><span class="normal"> </span><span class="symbol">!=</span><span class="normal"> <a href="XplayerPlParser.html#XPLAYER-PL-PARSER-RESULT-SUCCESS:CAPS">XPLAYER_PL_PARSER_RESULT_SUCCESS</a></span><span class="symbol">)</span>
 <span class="normal">    </span><span class="function"><a href="http://library.gnome.org/devel/glib/unstable/glib-Message-Logging.html#g-error">g_error</a></span><span class="normal"> </span><span class="symbol">(</span><span class="string">"Playlist parsing failed."</span><span class="symbol">);</span>
 
 <span class="function"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref">g_object_unref</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">pl</span><span class="symbol">);</span></pre></td>
@@ -218,19 +218,19 @@ to operate properly (e.g. for the <a class="link" href="TotemPlParser.html#Totem
 15
 16
 17</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="usertype">TotemPlParser</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">pl </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="TotemPlParser.html#totem-pl-parser-new">totem_pl_parser_new</a></span><span class="normal"> </span><span class="symbol">();</span>
+        <td class="listing_code"><pre class="programlisting"><span class="usertype">XplayerPlParser</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">pl </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="XplayerPlParser.html#xplayer-pl-parser-new">xplayer_pl_parser_new</a></span><span class="normal"> </span><span class="symbol">();</span>
 <span class="function"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-set">g_object_set</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">pl</span><span class="symbol">,</span><span class="normal"> </span><span class="string">"recurse"</span><span class="symbol">,</span><span class="normal"> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a></span><span class="symbol">,</span><span class="normal"> </span><span class="string">"disable-unsafe"</span><span class="symbol">,</span><span class="normal"> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a></span><span class="symbol">,</span><span class="normal"> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></span><span class="symbol">);</span>
 <span class="function"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#g-signal-connect">g_signal_connect</a></span><span class="normal"> </span><span class="symbol">(</span><span class="function"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#G-OBJECT:CAPS">G_OBJECT</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">pl</span><span class="symbol">),</span><span class="normal"> </span><span class="string">"playlist-started"</span><span class="symbol">,</span><span class="normal"> </span><span class="function"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Closures.html#G-CALLBACK:CAPS">G_CALLBACK</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">playlist_started</span><span class="symbol">),</span><span class="normal"> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></span><span class="symbol">);</span>
 <span class="function"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#g-signal-connect">g_signal_connect</a></span><span class="normal"> </span><span class="symbol">(</span><span class="function"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#G-OBJECT:CAPS">G_OBJECT</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">pl</span><span class="symbol">),</span><span class="normal"> </span><span class="string">"entry-parsed"</span><span class="symbol">,</span><span class="normal"> </span><span class="function"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Closures.html#G-CALLBACK:CAPS">G_CALLBACK</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">entry_parsed</span><span class="symbol">),</span><span class="normal"> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></span><span class="symbol">);</span>
 
-<span class="function"><a href="TotemPlParser.html#totem-pl-parser-parse-async">totem_pl_parser_parse_async</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">pl</span><span class="symbol">,</span><span class="normal"> </span><span class="string">"http://example.com/playlist.pls"</span><span class="symbol">,</span><span class="normal"> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a></span><span class="symbol">,</span><span class="normal"> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></span><span class="symbol">,</span><span class="normal"> parse_cb</span><span class="symbol">,</span><span class="normal"> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></span><span class="symbol">);</span>
+<span class="function"><a href="XplayerPlParser.html#xplayer-pl-parser-parse-async">xplayer_pl_parser_parse_async</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">pl</span><span class="symbol">,</span><span class="normal"> </span><span class="string">"http://example.com/playlist.pls"</span><span class="symbol">,</span><span class="normal"> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a></span><span class="symbol">,</span><span class="normal"> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></span><span class="symbol">,</span><span class="normal"> parse_cb</span><span class="symbol">,</span><span class="normal"> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></span><span class="symbol">);</span>
 <span class="function"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref">g_object_unref</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">pl</span><span class="symbol">);</span>
 
 <span class="keyword">static</span><span class="normal"> </span><span class="type">void</span>
-<span class="function">parse_cb</span><span class="normal"> </span><span class="symbol">(</span><span class="usertype">TotemPlParser</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">parser</span><span class="symbol">,</span><span class="normal"> </span><span class="usertype">GAsyncResult</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">result</span><span class="symbol">,</span><span class="normal"> </span><span class="usertype">gpointer</span><span class="normal"> user_data</span><span class="symbol">)</span>
+<span class="function">parse_cb</span><span class="normal"> </span><span class="symbol">(</span><span class="usertype">XplayerPlParser</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">parser</span><span class="symbol">,</span><span class="normal"> </span><span class="usertype">GAsyncResult</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">result</span><span class="symbol">,</span><span class="normal"> </span><span class="usertype">gpointer</span><span class="normal"> user_data</span><span class="symbol">)</span>
 <span class="cbracket">{</span>
 <span class="usertype">GError</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">error </span><span class="symbol">=</span><span class="normal"> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></span><span class="symbol">;</span>
-<span class="normal">    </span><span class="keyword">if</span><span class="normal"> </span><span class="symbol">(</span><span class="function"><a href="TotemPlParser.html#totem-pl-parser-parse-finish">totem_pl_parser_parse_finish</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">parser</span><span class="symbol">,</span><span class="normal"> result</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">&amp;</span><span class="normal">error</span><span class="symbol">)</span><span class="normal"> </span><span class="symbol">!=</span><span class="normal"> <a href="TotemPlParser.html#TOTEM-PL-PARSER-RESULT-SUCCESS:CAPS">TOTEM_PL_PARSER_RESULT_SUCCESS</a></span><span class="symbol">)</span><span class="normal"> </span><span class="cbracket">{</span>
+<span class="normal">    </span><span class="keyword">if</span><span class="normal"> </span><span class="symbol">(</span><span class="function"><a href="XplayerPlParser.html#xplayer-pl-parser-parse-finish">xplayer_pl_parser_parse_finish</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">parser</span><span class="symbol">,</span><span class="normal"> result</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">&amp;</span><span class="normal">error</span><span class="symbol">)</span><span class="normal"> </span><span class="symbol">!=</span><span class="normal"> <a href="XplayerPlParser.html#XPLAYER-PL-PARSER-RESULT-SUCCESS:CAPS">XPLAYER_PL_PARSER_RESULT_SUCCESS</a></span><span class="symbol">)</span><span class="normal"> </span><span class="cbracket">{</span>
 <span class="normal">        </span><span class="function"><a href="http://library.gnome.org/devel/glib/unstable/glib-Message-Logging.html#g-error">g_error</a></span><span class="normal"> </span><span class="symbol">(</span><span class="string">"Playlist parsing failed: %s"</span><span class="symbol">,</span><span class="normal"> error</span><span class="symbol">-&gt;</span><span class="normal">message</span><span class="symbol">);</span>
 <span class="normal">        </span><span class="function"><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#g-error-free">g_error_free</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">error</span><span class="symbol">);</span>
 <span class="normal">    </span><span class="cbracket">}</span>
@@ -261,9 +261,9 @@ to operate properly (e.g. for the <a class="link" href="TotemPlParser.html#Totem
 8
 9</pre></td>
         <td class="listing_code"><pre class="programlisting"><span class="keyword">static</span><span class="normal"> </span><span class="type">void</span>
-<span class="function">entry_parsed</span><span class="normal"> </span><span class="symbol">(</span><span class="usertype">TotemPlParser</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">parser</span><span class="symbol">,</span><span class="normal"> </span><span class="keyword">const</span><span class="normal"> </span><span class="usertype">gchar</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">uri</span><span class="symbol">,</span><span class="normal"> </span><span class="usertype">GHashTable</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">metadata</span><span class="symbol">,</span><span class="normal"> </span><span class="usertype">gpointer</span><span class="normal"> user_data</span><span class="symbol">)</span>
+<span class="function">entry_parsed</span><span class="normal"> </span><span class="symbol">(</span><span class="usertype">XplayerPlParser</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">parser</span><span class="symbol">,</span><span class="normal"> </span><span class="keyword">const</span><span class="normal"> </span><span class="usertype">gchar</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">uri</span><span class="symbol">,</span><span class="normal"> </span><span class="usertype">GHashTable</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">metadata</span><span class="symbol">,</span><span class="normal"> </span><span class="usertype">gpointer</span><span class="normal"> user_data</span><span class="symbol">)</span>
 <span class="cbracket">{</span>
-<span class="normal">    </span><span class="usertype">gchar</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">title </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="http://library.gnome.org/devel/glib/unstable/glib-Hash-Tables.html#g-hash-table-lookup">g_hash_table_lookup</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">metadata</span><span class="symbol">,</span><span class="normal"> <a href="TotemPlParser.html#TOTEM-PL-PARSER-FIELD-TITLE:CAPS">TOTEM_PL_PARSER_FIELD_TITLE</a></span><span class="symbol">);</span>
+<span class="normal">    </span><span class="usertype">gchar</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">title </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="http://library.gnome.org/devel/glib/unstable/glib-Hash-Tables.html#g-hash-table-lookup">g_hash_table_lookup</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">metadata</span><span class="symbol">,</span><span class="normal"> <a href="XplayerPlParser.html#XPLAYER-PL-PARSER-FIELD-TITLE:CAPS">XPLAYER_PL_PARSER_FIELD_TITLE</a></span><span class="symbol">);</span>
 <span class="normal">    </span><span class="keyword">if</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">title </span><span class="symbol">!=</span><span class="normal"> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></span><span class="symbol">)</span>
 <span class="normal">        </span><span class="function"><a href="http://library.gnome.org/devel/glib/unstable/glib-Message-Logging.html#g-message">g_message</a></span><span class="normal"> </span><span class="symbol">(</span><span class="string">"Entry title: %s"</span><span class="symbol">,</span><span class="normal"> title</span><span class="symbol">);</span>
 <span class="normal">    </span><span class="keyword">else</span>
@@ -316,28 +316,28 @@ to operate properly (e.g. for the <a class="link" href="TotemPlParser.html#Totem
 29
 30</pre></td>
         <td class="listing_code"><pre class="programlisting"><span class="cbracket">{</span>
-<span class="normal">    </span><span class="usertype">TotemPlParser</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">pl</span><span class="symbol">;</span>
-<span class="normal">    </span><span class="usertype">TotemPlPlaylist</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">playlist</span><span class="symbol">;</span>
-<span class="normal">    </span><span class="usertype">TotemPlPlaylistIter</span><span class="normal"> iter</span><span class="symbol">;</span>
+<span class="normal">    </span><span class="usertype">XplayerPlParser</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">pl</span><span class="symbol">;</span>
+<span class="normal">    </span><span class="usertype">XplayerPlPlaylist</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">playlist</span><span class="symbol">;</span>
+<span class="normal">    </span><span class="usertype">XplayerPlPlaylistIter</span><span class="normal"> iter</span><span class="symbol">;</span>
 <span class="normal">    </span><span class="usertype">GFile</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">file</span><span class="symbol">;</span>
 
-<span class="normal">    pl </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="TotemPlParser.html#totem-pl-parser-new">totem_pl_parser_new</a></span><span class="normal"> </span><span class="symbol">();</span>
-<span class="normal">    playlist </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="TotemPlPlaylist.html#totem-pl-playlist-new">totem_pl_playlist_new</a></span><span class="normal"> </span><span class="symbol">();</span>
+<span class="normal">    pl </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="XplayerPlParser.html#xplayer-pl-parser-new">xplayer_pl_parser_new</a></span><span class="normal"> </span><span class="symbol">();</span>
+<span class="normal">    playlist </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="XplayerPlPlaylist.html#xplayer-pl-playlist-new">xplayer_pl_playlist_new</a></span><span class="normal"> </span><span class="symbol">();</span>
 <span class="normal">    file </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="http://library.gnome.org/devel/gio/unstable/GFile.html#g-file-new-for-path">g_file_new_for_path</a></span><span class="normal"> </span><span class="symbol">(</span><span class="string">"/tmp/playlist.pls"</span><span class="symbol">);</span>
 
-<span class="normal">    </span><span class="function"><a href="TotemPlPlaylist.html#totem-pl-playlist-append">totem_pl_playlist_append</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">playlist</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">&amp;</span><span class="normal">iter</span><span class="symbol">);</span>
-<span class="normal">    </span><span class="function"><a href="TotemPlPlaylist.html#totem-pl-playlist-set">totem_pl_playlist_set</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">playlist</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">&amp;</span><span class="normal">iter</span><span class="symbol">,</span>
-<span class="normal">                   <a href="TotemPlParser.html#TOTEM-PL-PARSER-FIELD-URI:CAPS">TOTEM_PL_PARSER_FIELD_URI</a></span><span class="symbol">,</span><span class="normal"> </span><span class="string">"file:///1.ogg"</span><span class="symbol">,</span>
-<span class="normal">                   <a href="TotemPlParser.html#TOTEM-PL-PARSER-FIELD-TITLE:CAPS">TOTEM_PL_PARSER_FIELD_TITLE</a></span><span class="symbol">,</span><span class="normal"> </span><span class="string">"1.ogg"</span><span class="symbol">,</span>
+<span class="normal">    </span><span class="function"><a href="XplayerPlPlaylist.html#xplayer-pl-playlist-append">xplayer_pl_playlist_append</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">playlist</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">&amp;</span><span class="normal">iter</span><span class="symbol">);</span>
+<span class="normal">    </span><span class="function"><a href="XplayerPlPlaylist.html#xplayer-pl-playlist-set">xplayer_pl_playlist_set</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">playlist</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">&amp;</span><span class="normal">iter</span><span class="symbol">,</span>
+<span class="normal">                   <a href="XplayerPlParser.html#XPLAYER-PL-PARSER-FIELD-URI:CAPS">XPLAYER_PL_PARSER_FIELD_URI</a></span><span class="symbol">,</span><span class="normal"> </span><span class="string">"file:///1.ogg"</span><span class="symbol">,</span>
+<span class="normal">                   <a href="XplayerPlParser.html#XPLAYER-PL-PARSER-FIELD-TITLE:CAPS">XPLAYER_PL_PARSER_FIELD_TITLE</a></span><span class="symbol">,</span><span class="normal"> </span><span class="string">"1.ogg"</span><span class="symbol">,</span>
 <span class="normal">                   <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></span><span class="symbol">);</span>
 
-<span class="normal">    </span><span class="function"><a href="TotemPlPlaylist.html#totem-pl-playlist-append">totem_pl_playlist_append</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">playlist</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">&amp;</span><span class="normal">iter</span><span class="symbol">);</span>
-<span class="normal">    </span><span class="function"><a href="TotemPlPlaylist.html#totem-pl-playlist-set">totem_pl_playlist_set</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">playlist</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">&amp;</span><span class="normal">iter</span><span class="symbol">,</span>
-<span class="normal">                   <a href="TotemPlParser.html#TOTEM-PL-PARSER-FIELD-URI:CAPS">TOTEM_PL_PARSER_FIELD_URI</a></span><span class="symbol">,</span><span class="normal"> </span><span class="string">"file:///2.ogg"</span><span class="symbol">,</span>
+<span class="normal">    </span><span class="function"><a href="XplayerPlPlaylist.html#xplayer-pl-playlist-append">xplayer_pl_playlist_append</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">playlist</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">&amp;</span><span class="normal">iter</span><span class="symbol">);</span>
+<span class="normal">    </span><span class="function"><a href="XplayerPlPlaylist.html#xplayer-pl-playlist-set">xplayer_pl_playlist_set</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">playlist</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">&amp;</span><span class="normal">iter</span><span class="symbol">,</span>
+<span class="normal">                   <a href="XplayerPlParser.html#XPLAYER-PL-PARSER-FIELD-URI:CAPS">XPLAYER_PL_PARSER_FIELD_URI</a></span><span class="symbol">,</span><span class="normal"> </span><span class="string">"file:///2.ogg"</span><span class="symbol">,</span>
 <span class="normal">                   <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></span><span class="symbol">);</span>
 
-<span class="normal">    </span><span class="keyword">if</span><span class="normal"> </span><span class="symbol">(</span><span class="function"><a href="TotemPlParser.html#totem-pl-parser-save">totem_pl_parser_save</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">pl</span><span class="symbol">,</span><span class="normal"> playlist</span><span class="symbol">,</span><span class="normal"> file</span><span class="symbol">,</span><span class="normal"> </span><span class="string">"Title"</span><span class="symbol">,</span>
-<span class="normal">                  <a href="TotemPlParser.html#TOTEM-PL-PARSER-PLS:CAPS">TOTEM_PL_PARSER_PLS</a></span><span class="symbol">,</span><span class="normal"> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></span><span class="symbol">)</span><span class="normal"> </span><span class="symbol">!=</span><span class="normal"> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a></span><span class="symbol">)</span><span class="normal"> </span><span class="cbracket">{</span>
+<span class="normal">    </span><span class="keyword">if</span><span class="normal"> </span><span class="symbol">(</span><span class="function"><a href="XplayerPlParser.html#xplayer-pl-parser-save">xplayer_pl_parser_save</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">pl</span><span class="symbol">,</span><span class="normal"> playlist</span><span class="symbol">,</span><span class="normal"> file</span><span class="symbol">,</span><span class="normal"> </span><span class="string">"Title"</span><span class="symbol">,</span>
+<span class="normal">                  <a href="XplayerPlParser.html#XPLAYER-PL-PARSER-PLS:CAPS">XPLAYER_PL_PARSER_PLS</a></span><span class="symbol">,</span><span class="normal"> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></span><span class="symbol">)</span><span class="normal"> </span><span class="symbol">!=</span><span class="normal"> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a></span><span class="symbol">)</span><span class="normal"> </span><span class="cbracket">{</span>
 <span class="normal">        </span><span class="function"><a href="http://library.gnome.org/devel/glib/unstable/glib-Message-Logging.html#g-error">g_error</a></span><span class="normal"> </span><span class="symbol">(</span><span class="string">"Playlist writing failed."</span><span class="symbol">);</span>
 <span class="normal">    </span><span class="cbracket">}</span>
 
@@ -355,33 +355,33 @@ to operate properly (e.g. for the <a class="link" href="TotemPlParser.html#Totem
 </p>
 </div>
 <div class="refsect1">
-<a name="TotemPlParser.details"></a><h2>Details</h2>
+<a name="XplayerPlParser.details"></a><h2>Details</h2>
 <div class="refsect2">
-<a name="TotemPlParser-struct"></a><h3>TotemPlParser</h3>
-<pre class="programlisting">typedef struct _TotemPlParser TotemPlParser;</pre>
+<a name="XplayerPlParser-struct"></a><h3>XplayerPlParser</h3>
+<pre class="programlisting">typedef struct _XplayerPlParser XplayerPlParser;</pre>
 <p>
-All the fields in the <a class="link" href="TotemPlParser.html" title="TotemPlParser"><span class="type">TotemPlParser</span></a> structure are private and should never be accessed directly.
+All the fields in the <a class="link" href="XplayerPlParser.html" title="XplayerPlParser"><span class="type">XplayerPlParser</span></a> structure are private and should never be accessed directly.
 </p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="TotemPlParserClass"></a><h3>TotemPlParserClass</h3>
+<a name="XplayerPlParserClass"></a><h3>XplayerPlParserClass</h3>
 <pre class="programlisting">typedef struct {
 	GObjectClass parent_class;
 
 	/* signals */
-	void (*entry_parsed) (TotemPlParser *parser,
+	void (*entry_parsed) (XplayerPlParser *parser,
 			      const char *uri,
 			      GHashTable *metadata);
-	void (*playlist_started) (TotemPlParser *parser,
+	void (*playlist_started) (XplayerPlParser *parser,
 				  const char *uri,
 				  GHashTable *metadata);
-	void (*playlist_ended) (TotemPlParser *parser,
+	void (*playlist_ended) (XplayerPlParser *parser,
 				const char *uri);
-} TotemPlParserClass;
+} XplayerPlParserClass;
 </pre>
 <p>
-The class structure for the <a class="link" href="TotemPlParser.html" title="TotemPlParser"><span class="type">TotemPlParser</span></a> type.
+The class structure for the <a class="link" href="XplayerPlParser.html" title="XplayerPlParser"><span class="type">XplayerPlParser</span></a> type.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
 <colgroup>
@@ -390,22 +390,22 @@ The class structure for the <a class="link" href="TotemPlParser.html" title="Tot
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObjectClass"><span class="type">GObjectClass</span></a> <em class="structfield"><code><a name="TotemPlParserClass.parent-class"></a>parent_class</code></em>;</span></p></td>
+<td><p><span class="term"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObjectClass"><span class="type">GObjectClass</span></a> <em class="structfield"><code><a name="XplayerPlParserClass.parent-class"></a>parent_class</code></em>;</span></p></td>
 <td>the parent class</td>
 </tr>
 <tr>
-<td><p><span class="term"><em class="structfield"><code><a name="TotemPlParserClass.entry-parsed"></a>entry_parsed</code></em> ()</span></p></td>
-<td>the generic signal handler for the <a class="link" href="TotemPlParser.html#TotemPlParser-entry-parsed" title='The "entry-parsed" signal'><span class="type">"entry-parsed"</span></a> signal,
+<td><p><span class="term"><em class="structfield"><code><a name="XplayerPlParserClass.entry-parsed"></a>entry_parsed</code></em> ()</span></p></td>
+<td>the generic signal handler for the <a class="link" href="XplayerPlParser.html#XplayerPlParser-entry-parsed" title='The "entry-parsed" signal'><span class="type">"entry-parsed"</span></a> signal,
 which can be overridden by inheriting classes</td>
 </tr>
 <tr>
-<td><p><span class="term"><em class="structfield"><code><a name="TotemPlParserClass.playlist-started"></a>playlist_started</code></em> ()</span></p></td>
-<td>the generic signal handler for the <a class="link" href="TotemPlParser.html#TotemPlParser-playlist-started" title='The "playlist-started" signal'><span class="type">"playlist-started"</span></a> signal,
+<td><p><span class="term"><em class="structfield"><code><a name="XplayerPlParserClass.playlist-started"></a>playlist_started</code></em> ()</span></p></td>
+<td>the generic signal handler for the <a class="link" href="XplayerPlParser.html#XplayerPlParser-playlist-started" title='The "playlist-started" signal'><span class="type">"playlist-started"</span></a> signal,
 which can be overridden by inheriting classes</td>
 </tr>
 <tr>
-<td><p><span class="term"><em class="structfield"><code><a name="TotemPlParserClass.playlist-ended"></a>playlist_ended</code></em> ()</span></p></td>
-<td>the generic signal handler for the <a class="link" href="TotemPlParser.html#TotemPlParser-playlist-ended" title='The "playlist-ended" signal'><span class="type">"playlist-ended"</span></a> signal,
+<td><p><span class="term"><em class="structfield"><code><a name="XplayerPlParserClass.playlist-ended"></a>playlist_ended</code></em> ()</span></p></td>
+<td>the generic signal handler for the <a class="link" href="XplayerPlParser.html#XplayerPlParser-playlist-ended" title='The "playlist-ended" signal'><span class="type">"playlist-ended"</span></a> signal,
 which can be overridden by inheriting classes</td>
 </tr>
 </tbody>
@@ -413,14 +413,14 @@ which can be overridden by inheriting classes</td>
 </div>
 <hr>
 <div class="refsect2">
-<a name="TotemPlParserResult"></a><h3>enum TotemPlParserResult</h3>
+<a name="XplayerPlParserResult"></a><h3>enum XplayerPlParserResult</h3>
 <pre class="programlisting">typedef enum {
-	TOTEM_PL_PARSER_RESULT_UNHANDLED,
-	TOTEM_PL_PARSER_RESULT_ERROR,
-	TOTEM_PL_PARSER_RESULT_SUCCESS,
-	TOTEM_PL_PARSER_RESULT_IGNORED,
-	TOTEM_PL_PARSER_RESULT_CANCELLED
-} TotemPlParserResult;
+	XPLAYER_PL_PARSER_RESULT_UNHANDLED,
+	XPLAYER_PL_PARSER_RESULT_ERROR,
+	XPLAYER_PL_PARSER_RESULT_SUCCESS,
+	XPLAYER_PL_PARSER_RESULT_IGNORED,
+	XPLAYER_PL_PARSER_RESULT_CANCELLED
+} XplayerPlParserResult;
 </pre>
 <p>
 Gives the result of parsing a playlist.
@@ -432,28 +432,28 @@ Gives the result of parsing a playlist.
 </colgroup>
 <tbody>
 <tr>
-<td><p><a name="TOTEM-PL-PARSER-RESULT-UNHANDLED:CAPS"></a><span class="term"><code class="literal">TOTEM_PL_PARSER_RESULT_UNHANDLED</code></span></p></td>
+<td><p><a name="XPLAYER-PL-PARSER-RESULT-UNHANDLED:CAPS"></a><span class="term"><code class="literal">XPLAYER_PL_PARSER_RESULT_UNHANDLED</code></span></p></td>
 <td>The playlist could not be handled.
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-PL-PARSER-RESULT-ERROR:CAPS"></a><span class="term"><code class="literal">TOTEM_PL_PARSER_RESULT_ERROR</code></span></p></td>
+<td><p><a name="XPLAYER-PL-PARSER-RESULT-ERROR:CAPS"></a><span class="term"><code class="literal">XPLAYER_PL_PARSER_RESULT_ERROR</code></span></p></td>
 <td>There was an error parsing the playlist.
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-PL-PARSER-RESULT-SUCCESS:CAPS"></a><span class="term"><code class="literal">TOTEM_PL_PARSER_RESULT_SUCCESS</code></span></p></td>
+<td><p><a name="XPLAYER-PL-PARSER-RESULT-SUCCESS:CAPS"></a><span class="term"><code class="literal">XPLAYER_PL_PARSER_RESULT_SUCCESS</code></span></p></td>
 <td>The playlist was parsed successfully.
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-PL-PARSER-RESULT-IGNORED:CAPS"></a><span class="term"><code class="literal">TOTEM_PL_PARSER_RESULT_IGNORED</code></span></p></td>
-<td>The playlist was ignored due to its scheme or MIME type (see <a class="link" href="TotemPlParser.html#totem-pl-parser-add-ignored-scheme" title="totem_pl_parser_add_ignored_scheme ()"><code class="function">totem_pl_parser_add_ignored_scheme()</code></a>
-and <a class="link" href="TotemPlParser.html#totem-pl-parser-add-ignored-mimetype" title="totem_pl_parser_add_ignored_mimetype ()"><code class="function">totem_pl_parser_add_ignored_mimetype()</code></a>).
+<td><p><a name="XPLAYER-PL-PARSER-RESULT-IGNORED:CAPS"></a><span class="term"><code class="literal">XPLAYER_PL_PARSER_RESULT_IGNORED</code></span></p></td>
+<td>The playlist was ignored due to its scheme or MIME type (see <a class="link" href="XplayerPlParser.html#xplayer-pl-parser-add-ignored-scheme" title="xplayer_pl_parser_add_ignored_scheme ()"><code class="function">xplayer_pl_parser_add_ignored_scheme()</code></a>
+and <a class="link" href="XplayerPlParser.html#xplayer-pl-parser-add-ignored-mimetype" title="xplayer_pl_parser_add_ignored_mimetype ()"><code class="function">xplayer_pl_parser_add_ignored_mimetype()</code></a>).
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-PL-PARSER-RESULT-CANCELLED:CAPS"></a><span class="term"><code class="literal">TOTEM_PL_PARSER_RESULT_CANCELLED</code></span></p></td>
+<td><p><a name="XPLAYER-PL-PARSER-RESULT-CANCELLED:CAPS"></a><span class="term"><code class="literal">XPLAYER_PL_PARSER_RESULT_CANCELLED</code></span></p></td>
 <td>Parsing of the playlist was cancelled part-way through.
 </td>
 </tr>
@@ -462,17 +462,17 @@ and <a class="link" href="TotemPlParser.html#totem-pl-parser-add-ignored-mimetyp
 </div>
 <hr>
 <div class="refsect2">
-<a name="TotemPlParserType"></a><h3>enum TotemPlParserType</h3>
+<a name="XplayerPlParserType"></a><h3>enum XplayerPlParserType</h3>
 <pre class="programlisting">typedef enum {
-	TOTEM_PL_PARSER_PLS,
-	TOTEM_PL_PARSER_M3U,
-	TOTEM_PL_PARSER_M3U_DOS,
-	TOTEM_PL_PARSER_XSPF,
-	TOTEM_PL_PARSER_IRIVER_PLA,
-} TotemPlParserType;
+	XPLAYER_PL_PARSER_PLS,
+	XPLAYER_PL_PARSER_M3U,
+	XPLAYER_PL_PARSER_M3U_DOS,
+	XPLAYER_PL_PARSER_XSPF,
+	XPLAYER_PL_PARSER_IRIVER_PLA,
+} XplayerPlParserType;
 </pre>
 <p>
-The type of playlist a <a class="link" href="TotemPlParser.html" title="TotemPlParser"><span class="type">TotemPlParser</span></a> will parse.
+The type of playlist a <a class="link" href="XplayerPlParser.html" title="XplayerPlParser"><span class="type">XplayerPlParser</span></a> will parse.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
 <colgroup>
@@ -481,27 +481,27 @@ The type of playlist a <a class="link" href="TotemPlParser.html" title="TotemPlP
 </colgroup>
 <tbody>
 <tr>
-<td><p><a name="TOTEM-PL-PARSER-PLS:CAPS"></a><span class="term"><code class="literal">TOTEM_PL_PARSER_PLS</code></span></p></td>
+<td><p><a name="XPLAYER-PL-PARSER-PLS:CAPS"></a><span class="term"><code class="literal">XPLAYER_PL_PARSER_PLS</code></span></p></td>
 <td>PLS parser
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-PL-PARSER-M3U:CAPS"></a><span class="term"><code class="literal">TOTEM_PL_PARSER_M3U</code></span></p></td>
+<td><p><a name="XPLAYER-PL-PARSER-M3U:CAPS"></a><span class="term"><code class="literal">XPLAYER_PL_PARSER_M3U</code></span></p></td>
 <td>M3U parser
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-PL-PARSER-M3U-DOS:CAPS"></a><span class="term"><code class="literal">TOTEM_PL_PARSER_M3U_DOS</code></span></p></td>
+<td><p><a name="XPLAYER-PL-PARSER-M3U-DOS:CAPS"></a><span class="term"><code class="literal">XPLAYER_PL_PARSER_M3U_DOS</code></span></p></td>
 <td>M3U (DOS linebreaks) parser
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-PL-PARSER-XSPF:CAPS"></a><span class="term"><code class="literal">TOTEM_PL_PARSER_XSPF</code></span></p></td>
+<td><p><a name="XPLAYER-PL-PARSER-XSPF:CAPS"></a><span class="term"><code class="literal">XPLAYER_PL_PARSER_XSPF</code></span></p></td>
 <td>XSPF parser
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-PL-PARSER-IRIVER-PLA:CAPS"></a><span class="term"><code class="literal">TOTEM_PL_PARSER_IRIVER_PLA</code></span></p></td>
+<td><p><a name="XPLAYER-PL-PARSER-IRIVER-PLA:CAPS"></a><span class="term"><code class="literal">XPLAYER_PL_PARSER_IRIVER_PLA</code></span></p></td>
 <td>iRiver PLA parser
 </td>
 </tr>
@@ -510,16 +510,16 @@ The type of playlist a <a class="link" href="TotemPlParser.html" title="TotemPlP
 </div>
 <hr>
 <div class="refsect2">
-<a name="TotemPlParserError"></a><h3>enum TotemPlParserError</h3>
+<a name="XplayerPlParserError"></a><h3>enum XplayerPlParserError</h3>
 <pre class="programlisting">typedef enum {
-	TOTEM_PL_PARSER_ERROR_NO_DISC,
-	TOTEM_PL_PARSER_ERROR_MOUNT_FAILED,
-	TOTEM_PL_PARSER_ERROR_EMPTY_PLAYLIST
-} TotemPlParserError;
+	XPLAYER_PL_PARSER_ERROR_NO_DISC,
+	XPLAYER_PL_PARSER_ERROR_MOUNT_FAILED,
+	XPLAYER_PL_PARSER_ERROR_EMPTY_PLAYLIST
+} XplayerPlParserError;
 </pre>
 <p>
 Allows you to differentiate between different
-errors occurring during file operations in a <a class="link" href="TotemPlParser.html" title="TotemPlParser"><span class="type">TotemPlParser</span></a>.
+errors occurring during file operations in a <a class="link" href="XplayerPlParser.html" title="XplayerPlParser"><span class="type">XplayerPlParser</span></a>.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
 <colgroup>
@@ -528,17 +528,17 @@ errors occurring during file operations in a <a class="link" href="TotemPlParser
 </colgroup>
 <tbody>
 <tr>
-<td><p><a name="TOTEM-PL-PARSER-ERROR-NO-DISC:CAPS"></a><span class="term"><code class="literal">TOTEM_PL_PARSER_ERROR_NO_DISC</code></span></p></td>
+<td><p><a name="XPLAYER-PL-PARSER-ERROR-NO-DISC:CAPS"></a><span class="term"><code class="literal">XPLAYER_PL_PARSER_ERROR_NO_DISC</code></span></p></td>
 <td>Error attempting to open a disc device when no disc is present
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-PL-PARSER-ERROR-MOUNT-FAILED:CAPS"></a><span class="term"><code class="literal">TOTEM_PL_PARSER_ERROR_MOUNT_FAILED</code></span></p></td>
+<td><p><a name="XPLAYER-PL-PARSER-ERROR-MOUNT-FAILED:CAPS"></a><span class="term"><code class="literal">XPLAYER_PL_PARSER_ERROR_MOUNT_FAILED</code></span></p></td>
 <td>An attempted mount operation failed
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-PL-PARSER-ERROR-EMPTY-PLAYLIST:CAPS"></a><span class="term"><code class="literal">TOTEM_PL_PARSER_ERROR_EMPTY_PLAYLIST</code></span></p></td>
+<td><p><a name="XPLAYER-PL-PARSER-ERROR-EMPTY-PLAYLIST:CAPS"></a><span class="term"><code class="literal">XPLAYER_PL_PARSER_ERROR_EMPTY_PLAYLIST</code></span></p></td>
 <td>Playlist to be saved is empty
 </td>
 </tr>
@@ -547,16 +547,16 @@ errors occurring during file operations in a <a class="link" href="TotemPlParser
 </div>
 <hr>
 <div class="refsect2">
-<a name="TotemPlParserMetadata"></a><h3>TotemPlParserMetadata</h3>
-<pre class="programlisting">typedef GHashTable TotemPlParserMetadata;
+<a name="XplayerPlParserMetadata"></a><h3>XplayerPlParserMetadata</h3>
+<pre class="programlisting">typedef GHashTable XplayerPlParserMetadata;
 </pre>
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-pl-parser-new"></a><h3>totem_pl_parser_new ()</h3>
-<pre class="programlisting"><a class="link" href="TotemPlParser.html" title="TotemPlParser"><span class="returnvalue">TotemPlParser</span></a> *     totem_pl_parser_new                 (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<a name="xplayer-pl-parser-new"></a><h3>xplayer_pl_parser_new ()</h3>
+<pre class="programlisting"><a class="link" href="XplayerPlParser.html" title="XplayerPlParser"><span class="returnvalue">XplayerPlParser</span></a> *     xplayer_pl_parser_new                 (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>
-Creates a <a class="link" href="TotemPlParser.html" title="TotemPlParser"><span class="type">TotemPlParser</span></a> object.
+Creates a <a class="link" href="XplayerPlParser.html" title="XplayerPlParser"><span class="type">XplayerPlParser</span></a> object.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
 <colgroup>
@@ -565,24 +565,24 @@ Creates a <a class="link" href="TotemPlParser.html" title="TotemPlParser"><span 
 </colgroup>
 <tbody><tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>a new <a class="link" href="TotemPlParser.html" title="TotemPlParser"><span class="type">TotemPlParser</span></a>
+<td>a new <a class="link" href="XplayerPlParser.html" title="XplayerPlParser"><span class="type">XplayerPlParser</span></a>
 </td>
 </tr></tbody>
 </table></div>
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-pl-parser-parse"></a><h3>totem_pl_parser_parse ()</h3>
-<pre class="programlisting"><a class="link" href="TotemPlParser.html#TotemPlParserResult" title="enum TotemPlParserResult"><span class="returnvalue">TotemPlParserResult</span></a> totem_pl_parser_parse               (<em class="parameter"><code><a class="link" href="TotemPlParser.html" title="TotemPlParser"><span class="type">TotemPlParser</span></a> *parser</code></em>,
+<a name="xplayer-pl-parser-parse"></a><h3>xplayer_pl_parser_parse ()</h3>
+<pre class="programlisting"><a class="link" href="XplayerPlParser.html#XplayerPlParserResult" title="enum XplayerPlParserResult"><span class="returnvalue">XplayerPlParserResult</span></a> xplayer_pl_parser_parse               (<em class="parameter"><code><a class="link" href="XplayerPlParser.html" title="XplayerPlParser"><span class="type">XplayerPlParser</span></a> *parser</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *uri</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> fallback</code></em>);</pre>
 <p>
 Parses a playlist given by the absolute URI <em class="parameter"><code>uri</code></em>. This method is
 synchronous, and will block on (e.g.) network requests to slow
-servers. <a class="link" href="TotemPlParser.html#totem-pl-parser-parse-async" title="totem_pl_parser_parse_async ()"><code class="function">totem_pl_parser_parse_async()</code></a> is recommended instead.
+servers. <a class="link" href="XplayerPlParser.html#xplayer-pl-parser-parse-async" title="xplayer_pl_parser_parse_async ()"><code class="function">xplayer_pl_parser_parse_async()</code></a> is recommended instead.
 </p>
 <p>
-Return values are as <a class="link" href="TotemPlParser.html#totem-pl-parser-parse-with-base" title="totem_pl_parser_parse_with_base ()"><code class="function">totem_pl_parser_parse_with_base()</code></a>.
+Return values are as <a class="link" href="XplayerPlParser.html#xplayer-pl-parser-parse-with-base" title="xplayer_pl_parser_parse_with_base ()"><code class="function">xplayer_pl_parser_parse_with_base()</code></a>.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
 <colgroup>
@@ -592,7 +592,7 @@ Return values are as <a class="link" href="TotemPlParser.html#totem-pl-parser-pa
 <tbody>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>parser</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemPlParser.html" title="TotemPlParser"><span class="type">TotemPlParser</span></a>
+<td>a <a class="link" href="XplayerPlParser.html" title="XplayerPlParser"><span class="type">XplayerPlParser</span></a>
 </td>
 </tr>
 <tr>
@@ -607,7 +607,7 @@ end of the playlist on parse failure</td>
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>a <a class="link" href="TotemPlParser.html#TotemPlParserResult" title="enum TotemPlParserResult"><span class="type">TotemPlParserResult</span></a>
+<td>a <a class="link" href="XplayerPlParser.html#XplayerPlParserResult" title="enum XplayerPlParserResult"><span class="type">XplayerPlParserResult</span></a>
 </td>
 </tr>
 </tbody>
@@ -615,8 +615,8 @@ end of the playlist on parse failure</td>
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-pl-parser-parse-async"></a><h3>totem_pl_parser_parse_async ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_pl_parser_parse_async         (<em class="parameter"><code><a class="link" href="TotemPlParser.html" title="TotemPlParser"><span class="type">TotemPlParser</span></a> *parser</code></em>,
+<a name="xplayer-pl-parser-parse-async"></a><h3>xplayer_pl_parser_parse_async ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_pl_parser_parse_async         (<em class="parameter"><code><a class="link" href="XplayerPlParser.html" title="XplayerPlParser"><span class="type">XplayerPlParser</span></a> *parser</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *uri</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> fallback</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
@@ -627,10 +627,10 @@ Starts asynchronous parsing of a playlist given by the absolute URI <em class="p
 when this function is called, so can safely be freed after this function returns.
 </p>
 <p>
-For more details, see <a class="link" href="TotemPlParser.html#totem-pl-parser-parse" title="totem_pl_parser_parse ()"><code class="function">totem_pl_parser_parse()</code></a>, which is the synchronous version of this function.
+For more details, see <a class="link" href="XplayerPlParser.html#xplayer-pl-parser-parse" title="xplayer_pl_parser_parse ()"><code class="function">xplayer_pl_parser_parse()</code></a>, which is the synchronous version of this function.
 </p>
 <p>
-When the operation is finished, <em class="parameter"><code>callback</code></em> will be called. You can then call <a class="link" href="TotemPlParser.html#totem-pl-parser-parse-finish" title="totem_pl_parser_parse_finish ()"><code class="function">totem_pl_parser_parse_finish()</code></a>
+When the operation is finished, <em class="parameter"><code>callback</code></em> will be called. You can then call <a class="link" href="XplayerPlParser.html#xplayer-pl-parser-parse-finish" title="xplayer_pl_parser_parse_finish ()"><code class="function">xplayer_pl_parser_parse_finish()</code></a>
 to get the results of the operation.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
@@ -641,7 +641,7 @@ to get the results of the operation.
 <tbody>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>parser</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemPlParser.html" title="TotemPlParser"><span class="type">TotemPlParser</span></a>
+<td>a <a class="link" href="XplayerPlParser.html" title="XplayerPlParser"><span class="type">XplayerPlParser</span></a>
 </td>
 </tr>
 <tr>
@@ -673,16 +673,16 @@ end of the playlist on parse failure</td>
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-pl-parser-parse-finish"></a><h3>totem_pl_parser_parse_finish ()</h3>
-<pre class="programlisting"><a class="link" href="TotemPlParser.html#TotemPlParserResult" title="enum TotemPlParserResult"><span class="returnvalue">TotemPlParserResult</span></a> totem_pl_parser_parse_finish        (<em class="parameter"><code><a class="link" href="TotemPlParser.html" title="TotemPlParser"><span class="type">TotemPlParser</span></a> *parser</code></em>,
+<a name="xplayer-pl-parser-parse-finish"></a><h3>xplayer_pl_parser_parse_finish ()</h3>
+<pre class="programlisting"><a class="link" href="XplayerPlParser.html#XplayerPlParserResult" title="enum XplayerPlParserResult"><span class="returnvalue">XplayerPlParserResult</span></a> xplayer_pl_parser_parse_finish        (<em class="parameter"><code><a class="link" href="XplayerPlParser.html" title="XplayerPlParser"><span class="type">XplayerPlParser</span></a> *parser</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GAsyncResult.html"><span class="type">GAsyncResult</span></a> *async_result</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
 <p>
-Finishes an asynchronous playlist parsing operation started with <a class="link" href="TotemPlParser.html#totem-pl-parser-parse-async" title="totem_pl_parser_parse_async ()"><code class="function">totem_pl_parser_parse_async()</code></a>
-or <a class="link" href="TotemPlParser.html#totem-pl-parser-parse-with-base-async" title="totem_pl_parser_parse_with_base_async ()"><code class="function">totem_pl_parser_parse_with_base_async()</code></a>.
+Finishes an asynchronous playlist parsing operation started with <a class="link" href="XplayerPlParser.html#xplayer-pl-parser-parse-async" title="xplayer_pl_parser_parse_async ()"><code class="function">xplayer_pl_parser_parse_async()</code></a>
+or <a class="link" href="XplayerPlParser.html#xplayer-pl-parser-parse-with-base-async" title="xplayer_pl_parser_parse_with_base_async ()"><code class="function">xplayer_pl_parser_parse_with_base_async()</code></a>.
 </p>
 <p>
-If parsing of the playlist is cancelled part-way through, <a class="link" href="TotemPlParser.html#TOTEM-PL-PARSER-RESULT-CANCELLED:CAPS"><code class="literal">TOTEM_PL_PARSER_RESULT_CANCELLED</code></a> is returned when
+If parsing of the playlist is cancelled part-way through, <a class="link" href="XplayerPlParser.html#XPLAYER-PL-PARSER-RESULT-CANCELLED:CAPS"><code class="literal">XPLAYER_PL_PARSER_RESULT_CANCELLED</code></a> is returned when
 this function is called.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
@@ -693,7 +693,7 @@ this function is called.
 <tbody>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>parser</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemPlParser.html" title="TotemPlParser"><span class="type">TotemPlParser</span></a>
+<td>a <a class="link" href="XplayerPlParser.html" title="XplayerPlParser"><span class="type">XplayerPlParser</span></a>
 </td>
 </tr>
 <tr>
@@ -708,7 +708,7 @@ this function is called.
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>a <a class="link" href="TotemPlParser.html#TotemPlParserResult" title="enum TotemPlParserResult"><span class="type">TotemPlParserResult</span></a>
+<td>a <a class="link" href="XplayerPlParser.html#XplayerPlParserResult" title="enum XplayerPlParserResult"><span class="type">XplayerPlParserResult</span></a>
 </td>
 </tr>
 </tbody>
@@ -716,8 +716,8 @@ this function is called.
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-pl-parser-parse-with-base"></a><h3>totem_pl_parser_parse_with_base ()</h3>
-<pre class="programlisting"><a class="link" href="TotemPlParser.html#TotemPlParserResult" title="enum TotemPlParserResult"><span class="returnvalue">TotemPlParserResult</span></a> totem_pl_parser_parse_with_base     (<em class="parameter"><code><a class="link" href="TotemPlParser.html" title="TotemPlParser"><span class="type">TotemPlParser</span></a> *parser</code></em>,
+<a name="xplayer-pl-parser-parse-with-base"></a><h3>xplayer_pl_parser_parse_with_base ()</h3>
+<pre class="programlisting"><a class="link" href="XplayerPlParser.html#XplayerPlParserResult" title="enum XplayerPlParserResult"><span class="returnvalue">XplayerPlParserResult</span></a> xplayer_pl_parser_parse_with_base     (<em class="parameter"><code><a class="link" href="XplayerPlParser.html" title="XplayerPlParser"><span class="type">XplayerPlParser</span></a> *parser</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *uri</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *base</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> fallback</code></em>);</pre>
@@ -733,7 +733,7 @@ Parses a playlist given by the absolute URI <em class="parameter"><code>uri</cod
 <tbody>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>parser</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemPlParser.html" title="TotemPlParser"><span class="type">TotemPlParser</span></a>
+<td>a <a class="link" href="XplayerPlParser.html" title="XplayerPlParser"><span class="type">XplayerPlParser</span></a>
 </td>
 </tr>
 <tr>
@@ -753,7 +753,7 @@ end of the playlist on parse failure</td>
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>a <a class="link" href="TotemPlParser.html#TotemPlParserResult" title="enum TotemPlParserResult"><span class="type">TotemPlParserResult</span></a>
+<td>a <a class="link" href="XplayerPlParser.html#XplayerPlParserResult" title="enum XplayerPlParserResult"><span class="type">XplayerPlParserResult</span></a>
 </td>
 </tr>
 </tbody>
@@ -761,9 +761,9 @@ end of the playlist on parse failure</td>
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-pl-parser-parse-with-base-async"></a><h3>totem_pl_parser_parse_with_base_async ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_pl_parser_parse_with_base_async
-                                                        (<em class="parameter"><code><a class="link" href="TotemPlParser.html" title="TotemPlParser"><span class="type">TotemPlParser</span></a> *parser</code></em>,
+<a name="xplayer-pl-parser-parse-with-base-async"></a><h3>xplayer_pl_parser_parse_with_base_async ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_pl_parser_parse_with_base_async
+                                                        (<em class="parameter"><code><a class="link" href="XplayerPlParser.html" title="XplayerPlParser"><span class="type">XplayerPlParser</span></a> *parser</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *uri</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *base</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> fallback</code></em>,
@@ -775,10 +775,10 @@ Starts asynchronous parsing of a playlist given by the absolute URI <em class="p
 <em class="parameter"><code>parser</code></em> and <em class="parameter"><code>uri</code></em> are both reffed/copied when this function is called, so can safely be freed after this function returns.
 </p>
 <p>
-For more details, see <a class="link" href="TotemPlParser.html#totem-pl-parser-parse-with-base" title="totem_pl_parser_parse_with_base ()"><code class="function">totem_pl_parser_parse_with_base()</code></a>, which is the synchronous version of this function.
+For more details, see <a class="link" href="XplayerPlParser.html#xplayer-pl-parser-parse-with-base" title="xplayer_pl_parser_parse_with_base ()"><code class="function">xplayer_pl_parser_parse_with_base()</code></a>, which is the synchronous version of this function.
 </p>
 <p>
-When the operation is finished, <em class="parameter"><code>callback</code></em> will be called. You can then call <a class="link" href="TotemPlParser.html#totem-pl-parser-parse-finish" title="totem_pl_parser_parse_finish ()"><code class="function">totem_pl_parser_parse_finish()</code></a>
+When the operation is finished, <em class="parameter"><code>callback</code></em> will be called. You can then call <a class="link" href="XplayerPlParser.html#xplayer-pl-parser-parse-finish" title="xplayer_pl_parser_parse_finish ()"><code class="function">xplayer_pl_parser_parse_finish()</code></a>
 to get the results of the operation.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
@@ -789,7 +789,7 @@ to get the results of the operation.
 <tbody>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>parser</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemPlParser.html" title="TotemPlParser"><span class="type">TotemPlParser</span></a>
+<td>a <a class="link" href="XplayerPlParser.html" title="XplayerPlParser"><span class="type">XplayerPlParser</span></a>
 </td>
 </tr>
 <tr>
@@ -826,12 +826,12 @@ end of the playlist on parse failure</td>
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-pl-parser-save"></a><h3>totem_pl_parser_save ()</h3>
-<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            totem_pl_parser_save                (<em class="parameter"><code><a class="link" href="TotemPlParser.html" title="TotemPlParser"><span class="type">TotemPlParser</span></a> *parser</code></em>,
-                                                         <em class="parameter"><code><a class="link" href="TotemPlPlaylist.html" title="TotemPlPlaylist"><span class="type">TotemPlPlaylist</span></a> *playlist</code></em>,
+<a name="xplayer-pl-parser-save"></a><h3>xplayer_pl_parser_save ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            xplayer_pl_parser_save                (<em class="parameter"><code><a class="link" href="XplayerPlParser.html" title="XplayerPlParser"><span class="type">XplayerPlParser</span></a> *parser</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="XplayerPlPlaylist.html" title="XplayerPlPlaylist"><span class="type">XplayerPlPlaylist</span></a> *playlist</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GFile.html"><span class="type">GFile</span></a> *dest</code></em>,
                                                          <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *title</code></em>,
-                                                         <em class="parameter"><code><a class="link" href="TotemPlParser.html#TotemPlParserType" title="enum TotemPlParserType"><span class="type">TotemPlParserType</span></a> type</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="XplayerPlParser.html#XplayerPlParserType" title="enum XplayerPlParserType"><span class="type">XplayerPlParserType</span></a> type</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
 <p>
 Writes the playlist held by <em class="parameter"><code>parser</code></em> and <em class="parameter"><code>playlist</code></em> out to the path
@@ -863,12 +863,12 @@ a code from <a href="http://library.gnome.org/devel/glib/unstable/glib-Character
 <tbody>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>parser</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemPlParser.html" title="TotemPlParser"><span class="type">TotemPlParser</span></a>
+<td>a <a class="link" href="XplayerPlParser.html" title="XplayerPlParser"><span class="type">XplayerPlParser</span></a>
 </td>
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>playlist</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemPlPlaylist.html" title="TotemPlPlaylist"><span class="type">TotemPlPlaylist</span></a>
+<td>a <a class="link" href="XplayerPlPlaylist.html" title="XplayerPlPlaylist"><span class="type">XplayerPlPlaylist</span></a>
 </td>
 </tr>
 <tr>
@@ -882,7 +882,7 @@ a code from <a href="http://library.gnome.org/devel/glib/unstable/glib-Character
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>type</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemPlParser.html#TotemPlParserType" title="enum TotemPlParserType"><span class="type">TotemPlParserType</span></a> for the outputted playlist</td>
+<td>a <a class="link" href="XplayerPlParser.html#XplayerPlParserType" title="enum XplayerPlParserType"><span class="type">XplayerPlParserType</span></a> for the outputted playlist</td>
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
@@ -899,8 +899,8 @@ a code from <a href="http://library.gnome.org/devel/glib/unstable/glib-Character
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-pl-parser-parse-duration"></a><h3>totem_pl_parser_parse_duration ()</h3>
-<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint64"><span class="returnvalue">gint64</span></a>              totem_pl_parser_parse_duration      (<em class="parameter"><code>const <span class="type">char</span> *duration</code></em>,
+<a name="xplayer-pl-parser-parse-duration"></a><h3>xplayer_pl_parser_parse_duration ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint64"><span class="returnvalue">gint64</span></a>              xplayer_pl_parser_parse_duration      (<em class="parameter"><code>const <span class="type">char</span> *duration</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> debug</code></em>);</pre>
 <p>
 Parses the given duration string and returns it as a <span class="type">gint64</span>
@@ -930,8 +930,8 @@ denoting the duration in seconds.
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-pl-parser-parse-date"></a><h3>totem_pl_parser_parse_date ()</h3>
-<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint64"><span class="returnvalue">guint64</span></a>             totem_pl_parser_parse_date          (<em class="parameter"><code>const <span class="type">char</span> *date_str</code></em>,
+<a name="xplayer-pl-parser-parse-date"></a><h3>xplayer_pl_parser_parse_date ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint64"><span class="returnvalue">guint64</span></a>             xplayer_pl_parser_parse_date          (<em class="parameter"><code>const <span class="type">char</span> *date_str</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> debug</code></em>);</pre>
 <p>
 Parses the given date string and returns it as a <span class="type">gint64</span>
@@ -961,8 +961,8 @@ denoting the date in seconds since the UNIX Epoch.
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-pl-parser-add-ignored-scheme"></a><h3>totem_pl_parser_add_ignored_scheme ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_pl_parser_add_ignored_scheme  (<em class="parameter"><code><a class="link" href="TotemPlParser.html" title="TotemPlParser"><span class="type">TotemPlParser</span></a> *parser</code></em>,
+<a name="xplayer-pl-parser-add-ignored-scheme"></a><h3>xplayer_pl_parser_add_ignored_scheme ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_pl_parser_add_ignored_scheme  (<em class="parameter"><code><a class="link" href="XplayerPlParser.html" title="XplayerPlParser"><span class="type">XplayerPlParser</span></a> *parser</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *scheme</code></em>);</pre>
 <p>
 Adds a scheme to the list of schemes to ignore, so that
@@ -976,7 +976,7 @@ any URI using that scheme is ignored during playlist parsing.
 <tbody>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>parser</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemPlParser.html" title="TotemPlParser"><span class="type">TotemPlParser</span></a>
+<td>a <a class="link" href="XplayerPlParser.html" title="XplayerPlParser"><span class="type">XplayerPlParser</span></a>
 </td>
 </tr>
 <tr>
@@ -988,9 +988,9 @@ any URI using that scheme is ignored during playlist parsing.
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-pl-parser-add-ignored-mimetype"></a><h3>totem_pl_parser_add_ignored_mimetype ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_pl_parser_add_ignored_mimetype
-                                                        (<em class="parameter"><code><a class="link" href="TotemPlParser.html" title="TotemPlParser"><span class="type">TotemPlParser</span></a> *parser</code></em>,
+<a name="xplayer-pl-parser-add-ignored-mimetype"></a><h3>xplayer_pl_parser_add_ignored_mimetype ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_pl_parser_add_ignored_mimetype
+                                                        (<em class="parameter"><code><a class="link" href="XplayerPlParser.html" title="XplayerPlParser"><span class="type">XplayerPlParser</span></a> *parser</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *mimetype</code></em>);</pre>
 <p>
 Adds a mimetype to the list of mimetypes to ignore, so that
@@ -1004,7 +1004,7 @@ any URI of that mimetype is ignored during playlist parsing.
 <tbody>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>parser</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemPlParser.html" title="TotemPlParser"><span class="type">TotemPlParser</span></a>
+<td>a <a class="link" href="XplayerPlParser.html" title="XplayerPlParser"><span class="type">XplayerPlParser</span></a>
 </td>
 </tr>
 <tr>
@@ -1016,28 +1016,28 @@ any URI of that mimetype is ignored during playlist parsing.
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-pl-parser-can-parse-from-data"></a><h3>totem_pl_parser_can_parse_from_data ()</h3>
-<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            totem_pl_parser_can_parse_from_data (<em class="parameter"><code>const <span class="type">char</span> *data</code></em>,
+<a name="xplayer-pl-parser-can-parse-from-data"></a><h3>xplayer_pl_parser_can_parse_from_data ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            xplayer_pl_parser_can_parse_from_data (<em class="parameter"><code>const <span class="type">char</span> *data</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> len</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> debug</code></em>);</pre>
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-pl-parser-can-parse-from-filename"></a><h3>totem_pl_parser_can_parse_from_filename ()</h3>
-<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            totem_pl_parser_can_parse_from_filename
+<a name="xplayer-pl-parser-can-parse-from-filename"></a><h3>xplayer_pl_parser_can_parse_from_filename ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            xplayer_pl_parser_can_parse_from_filename
                                                         (<em class="parameter"><code>const <span class="type">char</span> *filename</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> debug</code></em>);</pre>
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-pl-parser-can-parse-from-uri"></a><h3>totem_pl_parser_can_parse_from_uri ()</h3>
-<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            totem_pl_parser_can_parse_from_uri  (<em class="parameter"><code>const <span class="type">char</span> *uri</code></em>,
+<a name="xplayer-pl-parser-can-parse-from-uri"></a><h3>xplayer_pl_parser_can_parse_from_uri ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            xplayer_pl_parser_can_parse_from_uri  (<em class="parameter"><code>const <span class="type">char</span> *uri</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> debug</code></em>);</pre>
 </div>
 <hr>
 <div class="refsect2">
-<a name="TOTEM-PL-PARSER-FIELD-URI:CAPS"></a><h3>TOTEM_PL_PARSER_FIELD_URI</h3>
-<pre class="programlisting">#define TOTEM_PL_PARSER_FIELD_URI		"url"
+<a name="XPLAYER-PL-PARSER-FIELD-URI:CAPS"></a><h3>XPLAYER_PL_PARSER_FIELD_URI</h3>
+<pre class="programlisting">#define XPLAYER_PL_PARSER_FIELD_URI		"url"
 </pre>
 <p>
 Metadata field for an entry's URI.
@@ -1046,8 +1046,8 @@ Metadata field for an entry's URI.
 </div>
 <hr>
 <div class="refsect2">
-<a name="TOTEM-PL-PARSER-FIELD-GENRE:CAPS"></a><h3>TOTEM_PL_PARSER_FIELD_GENRE</h3>
-<pre class="programlisting">#define TOTEM_PL_PARSER_FIELD_GENRE		"genre"
+<a name="XPLAYER-PL-PARSER-FIELD-GENRE:CAPS"></a><h3>XPLAYER_PL_PARSER_FIELD_GENRE</h3>
+<pre class="programlisting">#define XPLAYER_PL_PARSER_FIELD_GENRE		"genre"
 </pre>
 <p>
 Metadata field for an entry's genre.
@@ -1055,8 +1055,8 @@ Metadata field for an entry's genre.
 </div>
 <hr>
 <div class="refsect2">
-<a name="TOTEM-PL-PARSER-FIELD-TITLE:CAPS"></a><h3>TOTEM_PL_PARSER_FIELD_TITLE</h3>
-<pre class="programlisting">#define TOTEM_PL_PARSER_FIELD_TITLE		"title"
+<a name="XPLAYER-PL-PARSER-FIELD-TITLE:CAPS"></a><h3>XPLAYER_PL_PARSER_FIELD_TITLE</h3>
+<pre class="programlisting">#define XPLAYER_PL_PARSER_FIELD_TITLE		"title"
 </pre>
 <p>
 Metadata field for an entry's displayable title.
@@ -1064,8 +1064,8 @@ Metadata field for an entry's displayable title.
 </div>
 <hr>
 <div class="refsect2">
-<a name="TOTEM-PL-PARSER-FIELD-AUTHOR:CAPS"></a><h3>TOTEM_PL_PARSER_FIELD_AUTHOR</h3>
-<pre class="programlisting">#define TOTEM_PL_PARSER_FIELD_AUTHOR		"author"
+<a name="XPLAYER-PL-PARSER-FIELD-AUTHOR:CAPS"></a><h3>XPLAYER_PL_PARSER_FIELD_AUTHOR</h3>
+<pre class="programlisting">#define XPLAYER_PL_PARSER_FIELD_AUTHOR		"author"
 </pre>
 <p>
 Metadata field for an entry's author/composer/director.
@@ -1073,8 +1073,8 @@ Metadata field for an entry's author/composer/director.
 </div>
 <hr>
 <div class="refsect2">
-<a name="TOTEM-PL-PARSER-FIELD-ALBUM:CAPS"></a><h3>TOTEM_PL_PARSER_FIELD_ALBUM</h3>
-<pre class="programlisting">#define TOTEM_PL_PARSER_FIELD_ALBUM		"album"
+<a name="XPLAYER-PL-PARSER-FIELD-ALBUM:CAPS"></a><h3>XPLAYER_PL_PARSER_FIELD_ALBUM</h3>
+<pre class="programlisting">#define XPLAYER_PL_PARSER_FIELD_ALBUM		"album"
 </pre>
 <p>
 Metadata field for an entry's album.
@@ -1082,8 +1082,8 @@ Metadata field for an entry's album.
 </div>
 <hr>
 <div class="refsect2">
-<a name="TOTEM-PL-PARSER-FIELD-BASE:CAPS"></a><h3>TOTEM_PL_PARSER_FIELD_BASE</h3>
-<pre class="programlisting">#define TOTEM_PL_PARSER_FIELD_BASE		"base"
+<a name="XPLAYER-PL-PARSER-FIELD-BASE:CAPS"></a><h3>XPLAYER_PL_PARSER_FIELD_BASE</h3>
+<pre class="programlisting">#define XPLAYER_PL_PARSER_FIELD_BASE		"base"
 </pre>
 <p>
 Metadata field for an entry's base path.
@@ -1091,8 +1091,8 @@ Metadata field for an entry's base path.
 </div>
 <hr>
 <div class="refsect2">
-<a name="TOTEM-PL-PARSER-FIELD-VOLUME:CAPS"></a><h3>TOTEM_PL_PARSER_FIELD_VOLUME</h3>
-<pre class="programlisting">#define TOTEM_PL_PARSER_FIELD_VOLUME		"volume"
+<a name="XPLAYER-PL-PARSER-FIELD-VOLUME:CAPS"></a><h3>XPLAYER_PL_PARSER_FIELD_VOLUME</h3>
+<pre class="programlisting">#define XPLAYER_PL_PARSER_FIELD_VOLUME		"volume"
 </pre>
 <p>
 Metadata field for an entry's playback volume.
@@ -1100,8 +1100,8 @@ Metadata field for an entry's playback volume.
 </div>
 <hr>
 <div class="refsect2">
-<a name="TOTEM-PL-PARSER-FIELD-AUTOPLAY:CAPS"></a><h3>TOTEM_PL_PARSER_FIELD_AUTOPLAY</h3>
-<pre class="programlisting">#define TOTEM_PL_PARSER_FIELD_AUTOPLAY		"autoplay"
+<a name="XPLAYER-PL-PARSER-FIELD-AUTOPLAY:CAPS"></a><h3>XPLAYER_PL_PARSER_FIELD_AUTOPLAY</h3>
+<pre class="programlisting">#define XPLAYER_PL_PARSER_FIELD_AUTOPLAY		"autoplay"
 </pre>
 <p>
 Metadata field for an entry's "autoplay" flag, which is <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the entry should play automatically.
@@ -1109,37 +1109,37 @@ Metadata field for an entry's "autoplay" flag, which is <a href="http://library.
 </div>
 <hr>
 <div class="refsect2">
-<a name="TOTEM-PL-PARSER-FIELD-DURATION:CAPS"></a><h3>TOTEM_PL_PARSER_FIELD_DURATION</h3>
-<pre class="programlisting">#define TOTEM_PL_PARSER_FIELD_DURATION		"duration"
+<a name="XPLAYER-PL-PARSER-FIELD-DURATION:CAPS"></a><h3>XPLAYER_PL_PARSER_FIELD_DURATION</h3>
+<pre class="programlisting">#define XPLAYER_PL_PARSER_FIELD_DURATION		"duration"
 </pre>
 <p>
-Metadata field for an entry's playback duration, which should be parsed using <a class="link" href="TotemPlParser.html#totem-pl-parser-parse-duration" title="totem_pl_parser_parse_duration ()"><code class="function">totem_pl_parser_parse_duration()</code></a>.
+Metadata field for an entry's playback duration, which should be parsed using <a class="link" href="XplayerPlParser.html#xplayer-pl-parser-parse-duration" title="xplayer_pl_parser_parse_duration ()"><code class="function">xplayer_pl_parser_parse_duration()</code></a>.
 </p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="TOTEM-PL-PARSER-FIELD-DURATION-MS:CAPS"></a><h3>TOTEM_PL_PARSER_FIELD_DURATION_MS</h3>
-<pre class="programlisting">#define TOTEM_PL_PARSER_FIELD_DURATION_MS "duration-ms"
+<a name="XPLAYER-PL-PARSER-FIELD-DURATION-MS:CAPS"></a><h3>XPLAYER_PL_PARSER_FIELD_DURATION_MS</h3>
+<pre class="programlisting">#define XPLAYER_PL_PARSER_FIELD_DURATION_MS "duration-ms"
 </pre>
 <p>
 Metadata field for an entry's playback duration, in milliseconds. It's only used when an entry's
-duration is available in that format, so one would get either the <a class="link" href="TotemPlParser.html#TOTEM-PL-PARSER-FIELD-DURATION:CAPS" title="TOTEM_PL_PARSER_FIELD_DURATION"><code class="literal">TOTEM_PL_PARSER_FIELD_DURATION</code></a>
-or <a class="link" href="TotemPlParser.html#TOTEM-PL-PARSER-FIELD-DURATION-MS:CAPS" title="TOTEM_PL_PARSER_FIELD_DURATION_MS"><code class="literal">TOTEM_PL_PARSER_FIELD_DURATION_MS</code></a> as metadata.
+duration is available in that format, so one would get either the <a class="link" href="XplayerPlParser.html#XPLAYER-PL-PARSER-FIELD-DURATION:CAPS" title="XPLAYER_PL_PARSER_FIELD_DURATION"><code class="literal">XPLAYER_PL_PARSER_FIELD_DURATION</code></a>
+or <a class="link" href="XplayerPlParser.html#XPLAYER-PL-PARSER-FIELD-DURATION-MS:CAPS" title="XPLAYER_PL_PARSER_FIELD_DURATION_MS"><code class="literal">XPLAYER_PL_PARSER_FIELD_DURATION_MS</code></a> as metadata.
 </p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="TOTEM-PL-PARSER-FIELD-STARTTIME:CAPS"></a><h3>TOTEM_PL_PARSER_FIELD_STARTTIME</h3>
-<pre class="programlisting">#define TOTEM_PL_PARSER_FIELD_STARTTIME		"starttime"
+<a name="XPLAYER-PL-PARSER-FIELD-STARTTIME:CAPS"></a><h3>XPLAYER_PL_PARSER_FIELD_STARTTIME</h3>
+<pre class="programlisting">#define XPLAYER_PL_PARSER_FIELD_STARTTIME		"starttime"
 </pre>
 <p>
-Metadata field for an entry's playback start time, which should be parsed using <a class="link" href="TotemPlParser.html#totem-pl-parser-parse-duration" title="totem_pl_parser_parse_duration ()"><code class="function">totem_pl_parser_parse_duration()</code></a>.
+Metadata field for an entry's playback start time, which should be parsed using <a class="link" href="XplayerPlParser.html#xplayer-pl-parser-parse-duration" title="xplayer_pl_parser_parse_duration ()"><code class="function">xplayer_pl_parser_parse_duration()</code></a>.
 </p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="TOTEM-PL-PARSER-FIELD-ENDTIME:CAPS"></a><h3>TOTEM_PL_PARSER_FIELD_ENDTIME</h3>
-<pre class="programlisting">#define TOTEM_PL_PARSER_FIELD_ENDTIME		"endtime"
+<a name="XPLAYER-PL-PARSER-FIELD-ENDTIME:CAPS"></a><h3>XPLAYER_PL_PARSER_FIELD_ENDTIME</h3>
+<pre class="programlisting">#define XPLAYER_PL_PARSER_FIELD_ENDTIME		"endtime"
 </pre>
 <p>
 Metadata field for an entry's playback end time.
@@ -1147,8 +1147,8 @@ Metadata field for an entry's playback end time.
 </div>
 <hr>
 <div class="refsect2">
-<a name="TOTEM-PL-PARSER-FIELD-COPYRIGHT:CAPS"></a><h3>TOTEM_PL_PARSER_FIELD_COPYRIGHT</h3>
-<pre class="programlisting">#define TOTEM_PL_PARSER_FIELD_COPYRIGHT		"copyright"
+<a name="XPLAYER-PL-PARSER-FIELD-COPYRIGHT:CAPS"></a><h3>XPLAYER_PL_PARSER_FIELD_COPYRIGHT</h3>
+<pre class="programlisting">#define XPLAYER_PL_PARSER_FIELD_COPYRIGHT		"copyright"
 </pre>
 <p>
 Metadata field for an entry's copyright line.
@@ -1156,8 +1156,8 @@ Metadata field for an entry's copyright line.
 </div>
 <hr>
 <div class="refsect2">
-<a name="TOTEM-PL-PARSER-FIELD-ABSTRACT:CAPS"></a><h3>TOTEM_PL_PARSER_FIELD_ABSTRACT</h3>
-<pre class="programlisting">#define TOTEM_PL_PARSER_FIELD_ABSTRACT		"abstract"
+<a name="XPLAYER-PL-PARSER-FIELD-ABSTRACT:CAPS"></a><h3>XPLAYER_PL_PARSER_FIELD_ABSTRACT</h3>
+<pre class="programlisting">#define XPLAYER_PL_PARSER_FIELD_ABSTRACT		"abstract"
 </pre>
 <p>
 Metadata field for an entry's abstract text.
@@ -1165,8 +1165,8 @@ Metadata field for an entry's abstract text.
 </div>
 <hr>
 <div class="refsect2">
-<a name="TOTEM-PL-PARSER-FIELD-DESCRIPTION:CAPS"></a><h3>TOTEM_PL_PARSER_FIELD_DESCRIPTION</h3>
-<pre class="programlisting">#define TOTEM_PL_PARSER_FIELD_DESCRIPTION "description"
+<a name="XPLAYER-PL-PARSER-FIELD-DESCRIPTION:CAPS"></a><h3>XPLAYER_PL_PARSER_FIELD_DESCRIPTION</h3>
+<pre class="programlisting">#define XPLAYER_PL_PARSER_FIELD_DESCRIPTION "description"
 </pre>
 <p>
 Metadata field for an entry's description.
@@ -1174,17 +1174,17 @@ Metadata field for an entry's description.
 </div>
 <hr>
 <div class="refsect2">
-<a name="TOTEM-PL-PARSER-FIELD-SUMMARY:CAPS"></a><h3>TOTEM_PL_PARSER_FIELD_SUMMARY</h3>
-<pre class="programlisting">#define TOTEM_PL_PARSER_FIELD_SUMMARY		TOTEM_PL_PARSER_FIELD_DESCRIPTION
+<a name="XPLAYER-PL-PARSER-FIELD-SUMMARY:CAPS"></a><h3>XPLAYER_PL_PARSER_FIELD_SUMMARY</h3>
+<pre class="programlisting">#define XPLAYER_PL_PARSER_FIELD_SUMMARY		XPLAYER_PL_PARSER_FIELD_DESCRIPTION
 </pre>
 <p>
-Metadata field for an entry's summary. (In practice, identical to <a class="link" href="TotemPlParser.html#TOTEM-PL-PARSER-FIELD-DESCRIPTION:CAPS" title="TOTEM_PL_PARSER_FIELD_DESCRIPTION"><code class="literal">TOTEM_PL_PARSER_FIELD_DESCRIPTION</code></a>.)
+Metadata field for an entry's summary. (In practice, identical to <a class="link" href="XplayerPlParser.html#XPLAYER-PL-PARSER-FIELD-DESCRIPTION:CAPS" title="XPLAYER_PL_PARSER_FIELD_DESCRIPTION"><code class="literal">XPLAYER_PL_PARSER_FIELD_DESCRIPTION</code></a>.)
 </p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="TOTEM-PL-PARSER-FIELD-MOREINFO:CAPS"></a><h3>TOTEM_PL_PARSER_FIELD_MOREINFO</h3>
-<pre class="programlisting">#define TOTEM_PL_PARSER_FIELD_MOREINFO		"moreinfo"
+<a name="XPLAYER-PL-PARSER-FIELD-MOREINFO:CAPS"></a><h3>XPLAYER_PL_PARSER_FIELD_MOREINFO</h3>
+<pre class="programlisting">#define XPLAYER_PL_PARSER_FIELD_MOREINFO		"moreinfo"
 </pre>
 <p>
 Metadata field for an entry's "more info" URI.
@@ -1192,8 +1192,8 @@ Metadata field for an entry's "more info" URI.
 </div>
 <hr>
 <div class="refsect2">
-<a name="TOTEM-PL-PARSER-FIELD-SCREENSIZE:CAPS"></a><h3>TOTEM_PL_PARSER_FIELD_SCREENSIZE</h3>
-<pre class="programlisting">#define TOTEM_PL_PARSER_FIELD_SCREENSIZE "screensize"
+<a name="XPLAYER-PL-PARSER-FIELD-SCREENSIZE:CAPS"></a><h3>XPLAYER_PL_PARSER_FIELD_SCREENSIZE</h3>
+<pre class="programlisting">#define XPLAYER_PL_PARSER_FIELD_SCREENSIZE "screensize"
 </pre>
 <p>
 Metadata field for an entry's preferred screen size.
@@ -1201,8 +1201,8 @@ Metadata field for an entry's preferred screen size.
 </div>
 <hr>
 <div class="refsect2">
-<a name="TOTEM-PL-PARSER-FIELD-UI-MODE:CAPS"></a><h3>TOTEM_PL_PARSER_FIELD_UI_MODE</h3>
-<pre class="programlisting">#define TOTEM_PL_PARSER_FIELD_UI_MODE		"ui-mode"
+<a name="XPLAYER-PL-PARSER-FIELD-UI-MODE:CAPS"></a><h3>XPLAYER_PL_PARSER_FIELD_UI_MODE</h3>
+<pre class="programlisting">#define XPLAYER_PL_PARSER_FIELD_UI_MODE		"ui-mode"
 </pre>
 <p>
 Metadata field for an entry's preferred UI mode.
@@ -1210,17 +1210,17 @@ Metadata field for an entry's preferred UI mode.
 </div>
 <hr>
 <div class="refsect2">
-<a name="TOTEM-PL-PARSER-FIELD-PUB-DATE:CAPS"></a><h3>TOTEM_PL_PARSER_FIELD_PUB_DATE</h3>
-<pre class="programlisting">#define TOTEM_PL_PARSER_FIELD_PUB_DATE		"publication-date"
+<a name="XPLAYER-PL-PARSER-FIELD-PUB-DATE:CAPS"></a><h3>XPLAYER_PL_PARSER_FIELD_PUB_DATE</h3>
+<pre class="programlisting">#define XPLAYER_PL_PARSER_FIELD_PUB_DATE		"publication-date"
 </pre>
 <p>
-Metadata field for an entry's publication date, which should be parsed using <a class="link" href="TotemPlParser.html#totem-pl-parser-parse-date" title="totem_pl_parser_parse_date ()"><code class="function">totem_pl_parser_parse_date()</code></a>.
+Metadata field for an entry's publication date, which should be parsed using <a class="link" href="XplayerPlParser.html#xplayer-pl-parser-parse-date" title="xplayer_pl_parser_parse_date ()"><code class="function">xplayer_pl_parser_parse_date()</code></a>.
 </p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="TOTEM-PL-PARSER-FIELD-FILESIZE:CAPS"></a><h3>TOTEM_PL_PARSER_FIELD_FILESIZE</h3>
-<pre class="programlisting">#define TOTEM_PL_PARSER_FIELD_FILESIZE		"filesize"
+<a name="XPLAYER-PL-PARSER-FIELD-FILESIZE:CAPS"></a><h3>XPLAYER_PL_PARSER_FIELD_FILESIZE</h3>
+<pre class="programlisting">#define XPLAYER_PL_PARSER_FIELD_FILESIZE		"filesize"
 </pre>
 <p>
 Metadata field for an entry's filesize in bytes. This is only advisory, and can sometimes not match the actual filesize of the stream.
@@ -1228,8 +1228,8 @@ Metadata field for an entry's filesize in bytes. This is only advisory, and can 
 </div>
 <hr>
 <div class="refsect2">
-<a name="TOTEM-PL-PARSER-FIELD-LANGUAGE:CAPS"></a><h3>TOTEM_PL_PARSER_FIELD_LANGUAGE</h3>
-<pre class="programlisting">#define TOTEM_PL_PARSER_FIELD_LANGUAGE		"language"
+<a name="XPLAYER-PL-PARSER-FIELD-LANGUAGE:CAPS"></a><h3>XPLAYER_PL_PARSER_FIELD_LANGUAGE</h3>
+<pre class="programlisting">#define XPLAYER_PL_PARSER_FIELD_LANGUAGE		"language"
 </pre>
 <p>
 Metadata field for an entry's audio language.
@@ -1237,8 +1237,8 @@ Metadata field for an entry's audio language.
 </div>
 <hr>
 <div class="refsect2">
-<a name="TOTEM-PL-PARSER-FIELD-CONTACT:CAPS"></a><h3>TOTEM_PL_PARSER_FIELD_CONTACT</h3>
-<pre class="programlisting">#define TOTEM_PL_PARSER_FIELD_CONTACT		"contact"
+<a name="XPLAYER-PL-PARSER-FIELD-CONTACT:CAPS"></a><h3>XPLAYER_PL_PARSER_FIELD_CONTACT</h3>
+<pre class="programlisting">#define XPLAYER_PL_PARSER_FIELD_CONTACT		"contact"
 </pre>
 <p>
 Metadata field for an entry's contact details for the webmaster.
@@ -1246,8 +1246,8 @@ Metadata field for an entry's contact details for the webmaster.
 </div>
 <hr>
 <div class="refsect2">
-<a name="TOTEM-PL-PARSER-FIELD-IMAGE-URI:CAPS"></a><h3>TOTEM_PL_PARSER_FIELD_IMAGE_URI</h3>
-<pre class="programlisting">#define TOTEM_PL_PARSER_FIELD_IMAGE_URI		"image-url"
+<a name="XPLAYER-PL-PARSER-FIELD-IMAGE-URI:CAPS"></a><h3>XPLAYER_PL_PARSER_FIELD_IMAGE_URI</h3>
+<pre class="programlisting">#define XPLAYER_PL_PARSER_FIELD_IMAGE_URI		"image-url"
 </pre>
 <p>
 Metadata field for an entry's thumbnail image URI.
@@ -1256,8 +1256,8 @@ Metadata field for an entry's thumbnail image URI.
 </div>
 <hr>
 <div class="refsect2">
-<a name="TOTEM-PL-PARSER-FIELD-DOWNLOAD-URI:CAPS"></a><h3>TOTEM_PL_PARSER_FIELD_DOWNLOAD_URI</h3>
-<pre class="programlisting">#define TOTEM_PL_PARSER_FIELD_DOWNLOAD_URI "download-url"
+<a name="XPLAYER-PL-PARSER-FIELD-DOWNLOAD-URI:CAPS"></a><h3>XPLAYER_PL_PARSER_FIELD_DOWNLOAD_URI</h3>
+<pre class="programlisting">#define XPLAYER_PL_PARSER_FIELD_DOWNLOAD_URI "download-url"
 </pre>
 <p>
 Metadata field for an entry's download URI. Only used if an alternate download
@@ -1267,8 +1267,8 @@ location is available for the entry.
 </div>
 <hr>
 <div class="refsect2">
-<a name="TOTEM-PL-PARSER-FIELD-ID:CAPS"></a><h3>TOTEM_PL_PARSER_FIELD_ID</h3>
-<pre class="programlisting">#define TOTEM_PL_PARSER_FIELD_ID		"id"
+<a name="XPLAYER-PL-PARSER-FIELD-ID:CAPS"></a><h3>XPLAYER_PL_PARSER_FIELD_ID</h3>
+<pre class="programlisting">#define XPLAYER_PL_PARSER_FIELD_ID		"id"
 </pre>
 <p>
 Metadata field for an entry's identifier. Its use is dependent on the format
@@ -1277,19 +1277,19 @@ of the playlist parsed, and its origin.
 </div>
 <hr>
 <div class="refsect2">
-<a name="TOTEM-PL-PARSER-FIELD-IS-PLAYLIST:CAPS"></a><h3>TOTEM_PL_PARSER_FIELD_IS_PLAYLIST</h3>
-<pre class="programlisting">#define TOTEM_PL_PARSER_FIELD_IS_PLAYLIST "is-playlist"
+<a name="XPLAYER-PL-PARSER-FIELD-IS-PLAYLIST:CAPS"></a><h3>XPLAYER_PL_PARSER_FIELD_IS_PLAYLIST</h3>
+<pre class="programlisting">#define XPLAYER_PL_PARSER_FIELD_IS_PLAYLIST "is-playlist"
 </pre>
 <p>
 Metadata field used to tell the calling code that the parsing of a playlist
-started. It is only <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> for the metadata passed to <a class="link" href="TotemPlParser.html#TotemPlParser-playlist-started" title='The "playlist-started" signal'><span class="type">"playlist-started"</span></a> or
-<a class="link" href="TotemPlParser.html#TotemPlParser-playlist-ended" title='The "playlist-ended" signal'><span class="type">"playlist-ended"</span></a> signal handlers.
+started. It is only <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> for the metadata passed to <a class="link" href="XplayerPlParser.html#XplayerPlParser-playlist-started" title='The "playlist-started" signal'><span class="type">"playlist-started"</span></a> or
+<a class="link" href="XplayerPlParser.html#XplayerPlParser-playlist-ended" title='The "playlist-ended" signal'><span class="type">"playlist-ended"</span></a> signal handlers.
 </p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="TOTEM-PL-PARSER-FIELD-SUBTITLE-URI:CAPS"></a><h3>TOTEM_PL_PARSER_FIELD_SUBTITLE_URI</h3>
-<pre class="programlisting">#define TOTEM_PL_PARSER_FIELD_SUBTITLE_URI "subtitle-uri"
+<a name="XPLAYER-PL-PARSER-FIELD-SUBTITLE-URI:CAPS"></a><h3>XPLAYER_PL_PARSER_FIELD_SUBTITLE_URI</h3>
+<pre class="programlisting">#define XPLAYER_PL_PARSER_FIELD_SUBTITLE_URI "subtitle-uri"
 </pre>
 <p>
 The URI of the entry's subtitle file.
@@ -1297,15 +1297,15 @@ The URI of the entry's subtitle file.
 </div>
 <hr>
 <div class="refsect2">
-<a name="TOTEM-PL-PARSER-FIELD-CONTENT-TYPE:CAPS"></a><h3>TOTEM_PL_PARSER_FIELD_CONTENT_TYPE</h3>
-<pre class="programlisting">#define TOTEM_PL_PARSER_FIELD_CONTENT_TYPE "content-type"
+<a name="XPLAYER-PL-PARSER-FIELD-CONTENT-TYPE:CAPS"></a><h3>XPLAYER_PL_PARSER_FIELD_CONTENT_TYPE</h3>
+<pre class="programlisting">#define XPLAYER_PL_PARSER_FIELD_CONTENT_TYPE "content-type"
 </pre>
 </div>
 </div>
 <div class="refsect1">
-<a name="TotemPlParser.property-details"></a><h2>Property Details</h2>
+<a name="XplayerPlParser.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
-<a name="TotemPlParser--debug"></a><h3>The <code class="literal">"debug"</code> property</h3>
+<a name="XplayerPlParser--debug"></a><h3>The <code class="literal">"debug"</code> property</h3>
 <pre class="programlisting">  "debug"                    <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write</pre>
 <p>
 If <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, the parser will output debug information.
@@ -1314,7 +1314,7 @@ If <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.ht
 </div>
 <hr>
 <div class="refsect2">
-<a name="TotemPlParser--disable-unsafe"></a><h3>The <code class="literal">"disable-unsafe"</code> property</h3>
+<a name="XplayerPlParser--disable-unsafe"></a><h3>The <code class="literal">"disable-unsafe"</code> property</h3>
 <pre class="programlisting">  "disable-unsafe"           <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write</pre>
 <p>
 If <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, the parser will not parse unsafe locations, such as local devices
@@ -1325,7 +1325,7 @@ is parsing a playlist from a remote location such as a website.
 </div>
 <hr>
 <div class="refsect2">
-<a name="TotemPlParser--force"></a><h3>The <code class="literal">"force"</code> property</h3>
+<a name="XplayerPlParser--force"></a><h3>The <code class="literal">"force"</code> property</h3>
 <pre class="programlisting">  "force"                    <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write</pre>
 <p>
 If <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, the parser will attempt to parse a playlist, even if it
@@ -1335,7 +1335,7 @@ appears to be unsupported (usually because of its filename extension).
 </div>
 <hr>
 <div class="refsect2">
-<a name="TotemPlParser--recurse"></a><h3>The <code class="literal">"recurse"</code> property</h3>
+<a name="XplayerPlParser--recurse"></a><h3>The <code class="literal">"recurse"</code> property</h3>
 <pre class="programlisting">  "recurse"                  <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write / Construct</pre>
 <p>
 If <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, the parser will recursively fetch playlists linked to by
@@ -1345,12 +1345,12 @@ the current one.
 </div>
 </div>
 <div class="refsect1">
-<a name="TotemPlParser.signal-details"></a><h2>Signal Details</h2>
+<a name="XplayerPlParser.signal-details"></a><h2>Signal Details</h2>
 <div class="refsect2">
-<a name="TotemPlParser-entry-parsed"></a><h3>The <code class="literal">"entry-parsed"</code> signal</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="TotemPlParser.html" title="TotemPlParser"><span class="type">TotemPlParser</span></a>         *parser,
+<a name="XplayerPlParser-entry-parsed"></a><h3>The <code class="literal">"entry-parsed"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="XplayerPlParser.html" title="XplayerPlParser"><span class="type">XplayerPlParser</span></a>         *parser,
                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>                 *uri,
-                                                        <a class="link" href="TotemPlParser.html#TotemPlParserMetadata"><span class="type">TotemPlParserMetadata</span></a> *metadata,
+                                                        <a class="link" href="XplayerPlParser.html#XplayerPlParserMetadata"><span class="type">XplayerPlParserMetadata</span></a> *metadata,
                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>               user_data)      : <code class="literal">Run Last</code></pre>
 <p>
 The ::entry-parsed signal is emitted when a new entry is parsed.
@@ -1383,13 +1383,13 @@ The ::entry-parsed signal is emitted when a new entry is parsed.
 </div>
 <hr>
 <div class="refsect2">
-<a name="TotemPlParser-playlist-ended"></a><h3>The <code class="literal">"playlist-ended"</code> signal</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="TotemPlParser.html" title="TotemPlParser"><span class="type">TotemPlParser</span></a> *parser,
+<a name="XplayerPlParser-playlist-ended"></a><h3>The <code class="literal">"playlist-ended"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="XplayerPlParser.html" title="XplayerPlParser"><span class="type">XplayerPlParser</span></a> *parser,
                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>         *uri,
                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>       user_data)      : <code class="literal">Run Last</code></pre>
 <p>
 The ::playlist-ended signal is emitted when a playlist is finished
-parsing. It is only called when <a class="link" href="TotemPlParser.html#TotemPlParser-playlist-started" title='The "playlist-started" signal'><span class="type">"playlist-started"</span></a>
+parsing. It is only called when <a class="link" href="XplayerPlParser.html#XplayerPlParser-playlist-started" title='The "playlist-started" signal'><span class="type">"playlist-started"</span></a>
 has been called for that playlist.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
@@ -1415,10 +1415,10 @@ has been called for that playlist.
 </div>
 <hr>
 <div class="refsect2">
-<a name="TotemPlParser-playlist-started"></a><h3>The <code class="literal">"playlist-started"</code> signal</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="TotemPlParser.html" title="TotemPlParser"><span class="type">TotemPlParser</span></a>         *parser,
+<a name="XplayerPlParser-playlist-started"></a><h3>The <code class="literal">"playlist-started"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="XplayerPlParser.html" title="XplayerPlParser"><span class="type">XplayerPlParser</span></a>         *parser,
                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>                 *uri,
-                                                        <a class="link" href="TotemPlParser.html#TotemPlParserMetadata"><span class="type">TotemPlParserMetadata</span></a> *metadata,
+                                                        <a class="link" href="XplayerPlParser.html#XplayerPlParserMetadata"><span class="type">XplayerPlParserMetadata</span></a> *metadata,
                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>               user_data)      : <code class="literal">Run Last</code></pre>
 <p>
 The ::playlist-started signal is emitted when a playlist parsing has

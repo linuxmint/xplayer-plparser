@@ -20,24 +20,24 @@
    Authors: William Jon McCann <mccann@jhu.edu>
  */
 
-#ifndef __TOTEM_PL_PARSER_VERSION_H__
-#define __TOTEM_PL_PARSER_VERSION_H__
+#ifndef __XPLAYER_PL_PARSER_VERSION_H__
+#define __XPLAYER_PL_PARSER_VERSION_H__
 
 /* compile time version
  */
-#define TOTEM_PL_PARSER_VERSION_MAJOR	(3)
-#define TOTEM_PL_PARSER_VERSION_MINOR	(10)
-#define TOTEM_PL_PARSER_VERSION_MICRO	(2)
+#define XPLAYER_PL_PARSER_VERSION_MAJOR	(3)
+#define XPLAYER_PL_PARSER_VERSION_MINOR	(10)
+#define XPLAYER_PL_PARSER_VERSION_MICRO	(2)
 
 /* check whether a version equal to or greater than
  * major.minor.micro is present.
  */
-#define	TOTEM_PL_PARSER_CHECK_VERSION(major,minor,micro)	\
-    (TOTEM_PL_PARSER_VERSION_MAJOR > (major) || \
-     (TOTEM_PL_PARSER_VERSION_MAJOR == (major) && TOTEM_PL_PARSER_VERSION_MINOR > (minor)) || \
-     (TOTEM_PL_PARSER_VERSION_MAJOR == (major) && TOTEM_PL_PARSER_VERSION_MINOR == (minor) && \
-      TOTEM_PL_PARSER_VERSION_MICRO >= (micro)))
+#define	XPLAYER_PL_PARSER_CHECK_VERSION(major,minor,micro)	\
+    (XPLAYER_PL_PARSER_VERSION_MAJOR > (major) || \
+     (XPLAYER_PL_PARSER_VERSION_MAJOR == (major) && XPLAYER_PL_PARSER_VERSION_MINOR > (minor)) || \
+     (XPLAYER_PL_PARSER_VERSION_MAJOR == (major) && XPLAYER_PL_PARSER_VERSION_MINOR == (minor) && \
+      XPLAYER_PL_PARSER_VERSION_MICRO >= (micro)))
 
 
-#endif /* __TOTEM_PL_PARSER_VERSION_H__ */
+#endif /* __XPLAYER_PL_PARSER_VERSION_H__ */
 

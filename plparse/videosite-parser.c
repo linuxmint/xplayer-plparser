@@ -25,7 +25,7 @@
 
 #include <glib.h>
 #include <quvi.h>
-#include "totem-pl-parser.h"
+#include "xplayer-pl-parser.h"
 
 #define BASE 20
 
@@ -104,7 +104,7 @@ parse_videosite (const char *uri)
 	char *starttime_str = NULL;
 
 	if (!supports_uri (uri)) {
-		g_print ("TOTEM_PL_PARSER_RESULT_UNHANDLED");
+		g_print ("XPLAYER_PL_PARSER_RESULT_UNHANDLED");
 		return;
 	}
 
@@ -116,7 +116,7 @@ parse_videosite (const char *uri)
 		if (debug)
 			g_print ("Parsing '%s' failed with error: %s\n",
 				 uri, quvi_errmsg (q));
-		g_print ("TOTEM_PL_PARSER_RESULT_ERROR");
+		g_print ("XPLAYER_PL_PARSER_RESULT_ERROR");
 		goto out;
 	}
 
@@ -138,14 +138,14 @@ parse_videosite (const char *uri)
 	content_type = container_to_content_type (container);
 
 	if (video_uri != NULL) {
-		print (TOTEM_PL_PARSER_FIELD_TITLE, title);
-		print (TOTEM_PL_PARSER_FIELD_ID, id);
-		print (TOTEM_PL_PARSER_FIELD_MOREINFO, uri);
-		print (TOTEM_PL_PARSER_FIELD_URI, video_uri);
-		print (TOTEM_PL_PARSER_FIELD_STARTTIME, starttime_str);
-		print (TOTEM_PL_PARSER_FIELD_CONTENT_TYPE, content_type);
-		print (TOTEM_PL_PARSER_FIELD_IMAGE_URI, thumb_url);
-		print (TOTEM_PL_PARSER_FIELD_DURATION, duration_str);
+		print (XPLAYER_PL_PARSER_FIELD_TITLE, title);
+		print (XPLAYER_PL_PARSER_FIELD_ID, id);
+		print (XPLAYER_PL_PARSER_FIELD_MOREINFO, uri);
+		print (XPLAYER_PL_PARSER_FIELD_URI, video_uri);
+		print (XPLAYER_PL_PARSER_FIELD_STARTTIME, starttime_str);
+		print (XPLAYER_PL_PARSER_FIELD_CONTENT_TYPE, content_type);
+		print (XPLAYER_PL_PARSER_FIELD_IMAGE_URI, thumb_url);
+		print (XPLAYER_PL_PARSER_FIELD_DURATION, duration_str);
 	}
 
 	g_free (starttime_str);
@@ -163,7 +163,7 @@ int main (int argc, char **argv)
 	setlocale (LC_ALL, "");
 
 	context = g_option_context_new (NULL);
-	g_option_context_set_summary (context, "totem-pl-parser libquvi Helper");
+	g_option_context_set_summary (context, "xplayer-pl-parser libquvi Helper");
 	g_option_context_add_main_entries (context, options, NULL);
 	g_option_context_parse (context, &argc, &argv, NULL);
 

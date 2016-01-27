@@ -20,32 +20,32 @@
    Author: Bastien Nocera <hadess@hadess.net>
  */
 
-#ifndef TOTEM_PL_PARSER_SMIL_H
-#define TOTEM_PL_PARSER_SMIL_H
+#ifndef XPLAYER_PL_PARSER_SMIL_H
+#define XPLAYER_PL_PARSER_SMIL_H
 
 G_BEGIN_DECLS
 
-#ifndef TOTEM_PL_PARSER_MINI
-#include "totem-pl-parser.h"
-#include "totem-pl-parser-private.h"
+#ifndef XPLAYER_PL_PARSER_MINI
+#include "xplayer-pl-parser.h"
+#include "xplayer-pl-parser-private.h"
 #include <gio/gio.h>
 #else
-#include "totem-pl-parser-mini.h"
-#endif /* !TOTEM_PL_PARSER_MINI */
+#include "xplayer-pl-parser-mini.h"
+#endif /* !XPLAYER_PL_PARSER_MINI */
 
-#ifndef TOTEM_PL_PARSER_MINI
-TotemPlParserResult totem_pl_parser_add_smil (TotemPlParser *parser,
+#ifndef XPLAYER_PL_PARSER_MINI
+XplayerPlParserResult xplayer_pl_parser_add_smil (XplayerPlParser *parser,
 					      GFile *file,
 					      GFile *base_file,
-					      TotemPlParseData *parse_data,
+					      XplayerPlParseData *parse_data,
 					      gpointer data);
-TotemPlParserResult totem_pl_parser_add_smil_with_data (TotemPlParser *parser,
+XplayerPlParserResult xplayer_pl_parser_add_smil_with_data (XplayerPlParser *parser,
 							GFile *file,
 							GFile *base_file,
 							const char *contents,
 							int size);
-#endif /* !TOTEM_PL_PARSER_MINI */
+#endif /* !XPLAYER_PL_PARSER_MINI */
 
 G_END_DECLS
 
-#endif /* TOTEM_PL_PARSER_SMIL_H */
+#endif /* XPLAYER_PL_PARSER_SMIL_H */

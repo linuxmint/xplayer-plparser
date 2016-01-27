@@ -1,9 +1,9 @@
-# Translation of totem to Croatiann
+# Translation of xplayer to Croatiann
 # Copyright (C) Croatiann team
 # Translators: Automatski Prijevod <>,Danijel Studen <dstuden@vuka.hr>,Denis Lackovic <delacko@fly.srk.fer.hr>,Diana Ćorluka <dina@iskrameco.hr>,Ivan Jankovic <rbrrneck@gmx.net>,Nikola Planinac <>,Robert Sedak <robert.sedak@sk.tel.hr>,
 msgid ""
 msgstr ""
-"Project-Id-Version: totem 0\n"
+"Project-Id-Version: xplayer 0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-09-09 18:46+0200\n"
 "PO-Revision-Date: 2008-05-17 14:51+0000\n"
@@ -18,32 +18,32 @@ msgstr ""
 "X-Launchpad-Export-Date: 2008-05-28 14:51+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
-#: ../plparse/totem-disc.c:284 ../plparse/totem-disc.c:423
+#: ../plparse/xplayer-disc.c:284 ../plparse/xplayer-disc.c:423
 #, c-format
 msgid "Failed to mount %s"
 msgstr "Greška kod montiranja %s"
 
-#: ../plparse/totem-disc.c:314
+#: ../plparse/xplayer-disc.c:314
 #, c-format
 msgid "No media in drive for device '%s'"
 msgstr "Nema medija u uređaju '%s'"
 
-#: ../plparse/totem-disc.c:366
+#: ../plparse/xplayer-disc.c:366
 msgid "Please check that a disc is present in the drive."
 msgstr "Molim, provjerite nalazi li se disk u uređaju."
 
-#: ../plparse/totem-disc.c:792
+#: ../plparse/xplayer-disc.c:792
 msgid "Audio CD"
 msgstr "Zvučni CD"
 
-#: ../plparse/totem-disc.c:794
+#: ../plparse/xplayer-disc.c:794
 msgid "Video CD"
 msgstr "Video CD"
 
-#: ../plparse/totem-disc.c:796
+#: ../plparse/xplayer-disc.c:796
 msgid "DVD"
 msgstr "DVD"
 
-#: ../plparse/totem-disc.c:798
+#: ../plparse/xplayer-disc.c:798
 msgid "Digital Television"
 msgstr "Digitalna televizija"

@@ -22,28 +22,28 @@
 
 #include "config.h"
 
-#ifndef TOTEM_PL_PARSER_MINI
+#ifndef XPLAYER_PL_PARSER_MINI
 #include <string.h>
 #include <glib.h>
 #include <stdio.h>
 
-#include "totem-pl-parser.h"
-#include "totem-disc.h"
-#endif /* !TOTEM_PL_PARSER_MINI */
+#include "xplayer-pl-parser.h"
+#include "xplayer-disc.h"
+#endif /* !XPLAYER_PL_PARSER_MINI */
 
-#include "totem-pl-parser-mini.h"
-#include "totem-pl-parser-media.h"
-#include "totem-pl-parser-private.h"
+#include "xplayer-pl-parser-mini.h"
+#include "xplayer-pl-parser-media.h"
+#include "xplayer-pl-parser-private.h"
 
 /* Files that start with these characters sort after files that don't. */
 #define SORT_LAST_CHAR1 '.'
 #define SORT_LAST_CHAR2 '#'
 
-#ifndef TOTEM_PL_PARSER_MINI
+#ifndef XPLAYER_PL_PARSER_MINI
 /* Returns NULL if we don't have an ISO image,
  * or an empty string if it's non-UTF-8 data */
 static char *
-totem_pl_parser_iso_get_title (GFile *_file)
+xplayer_pl_parser_iso_get_title (GFile *_file)
 {
 	char *fname;
 	FILE  *file;
@@ -113,55 +113,55 @@ totem_pl_parser_iso_get_title (GFile *_file)
 	return str;
 }
 
-TotemPlParserResult
-totem_pl_parser_add_iso (TotemPlParser *parser,
+XplayerPlParserResult
+xplayer_pl_parser_add_iso (XplayerPlParser *parser,
 			 GFile *file,
 			 GFile *base_file,
-			 TotemPlParseData *parse_data,
+			 XplayerPlParseData *parse_data,
 			 gpointer data)
 {
-	TotemDiscMediaType type;
+	XplayerDiscMediaType type;
 	char *uri, *retval;
 
 	uri = g_file_get_uri (file);
-	type = totem_cd_detect_type_with_url (uri, &retval, NULL);
+	type = xplayer_cd_detect_type_with_url (uri, &retval, NULL);
 	g_free (uri);
 	if (type == MEDIA_TYPE_DVD || type == MEDIA_TYPE_VCD) {
 		char *label;
 
-		label = totem_pl_parser_iso_get_title (file);
-		totem_pl_parser_add_one_uri (parser, retval, label);
+		label = xplayer_pl_parser_iso_get_title (file);
+		xplayer_pl_parser_add_one_uri (parser, retval, label);
 		g_free (label);
 		g_free (retval);
-		return TOTEM_PL_PARSER_RESULT_SUCCESS;
+		return XPLAYER_PL_PARSER_RESULT_SUCCESS;
 	}
 
-	return TOTEM_PL_PARSER_RESULT_IGNORED;
+	return XPLAYER_PL_PARSER_RESULT_IGNORED;
 }
 
-TotemPlParserResult
-totem_pl_parser_add_cue (TotemPlParser *parser,
+XplayerPlParserResult
+xplayer_pl_parser_add_cue (XplayerPlParser *parser,
 			 GFile *file,
 			 GFile *base_file,
-			 TotemPlParseData *parse_data,
+			 XplayerPlParseData *parse_data,
 			 gpointer data)
 {
 	char *vcduri, *path;
 
 	path = g_file_get_path (file);
 	if (path == NULL)
-		return TOTEM_PL_PARSER_RESULT_IGNORED;
+		return XPLAYER_PL_PARSER_RESULT_IGNORED;
 
-	vcduri = totem_cd_mrl_from_type ("vcd", path);
+	vcduri = xplayer_cd_mrl_from_type ("vcd", path);
 	g_free (path);
-	totem_pl_parser_add_one_uri (parser, vcduri, NULL);
+	xplayer_pl_parser_add_one_uri (parser, vcduri, NULL);
 	g_free (vcduri);
 
-	return TOTEM_PL_PARSER_RESULT_SUCCESS;
+	return XPLAYER_PL_PARSER_RESULT_SUCCESS;
 }
 
 static int
-totem_pl_parser_dir_compare (GFileInfo *a, GFileInfo *b)
+xplayer_pl_parser_dir_compare (GFileInfo *a, GFileInfo *b)
 {
 	const char *name_1, *name_2;
 	char *key_1, *key_2;
@@ -197,7 +197,7 @@ totem_pl_parser_dir_compare (GFileInfo *a, GFileInfo *b)
 }
 
 static gboolean
-totem_pl_parser_load_directory (GFile *file, GList **list, gboolean *unhandled)
+xplayer_pl_parser_load_directory (GFile *file, GList **list, gboolean *unhandled)
 {
 	GFileEnumerator *e;
 	GFileInfo *info;
@@ -225,21 +225,21 @@ totem_pl_parser_load_directory (GFile *file, GList **list, gboolean *unhandled)
 	return TRUE;
 }
 
-TotemPlParserResult
-totem_pl_parser_add_directory (TotemPlParser *parser,
+XplayerPlParserResult
+xplayer_pl_parser_add_directory (XplayerPlParser *parser,
 			       GFile *file,
 			       GFile *base_file,
-			       TotemPlParseData *parse_data,
+			       XplayerPlParseData *parse_data,
 			       gpointer data)
 {
-	TotemDiscMediaType type;
+	XplayerDiscMediaType type;
 	GList *list, *l;
 	char *media_uri, *uri;
 	gboolean unhandled;
 
 	uri = g_file_get_uri (file);
 	media_uri = NULL;
-	type = totem_cd_detect_type_from_dir (uri, &media_uri, NULL);
+	type = xplayer_cd_detect_type_from_dir (uri, &media_uri, NULL);
 	g_free (uri);
 
 	if (type != MEDIA_TYPE_DATA && type != MEDIA_TYPE_ERROR && media_uri != NULL) {
@@ -250,37 +250,37 @@ totem_pl_parser_add_directory (TotemPlParser *parser,
 			base_name = g_filename_display_basename (fname);
 			g_free (fname);
 		}
-		totem_pl_parser_add_one_uri (parser, media_uri, base_name);
+		xplayer_pl_parser_add_one_uri (parser, media_uri, base_name);
 		g_free (base_name);
 		g_free (media_uri);
-		return TOTEM_PL_PARSER_RESULT_SUCCESS;
+		return XPLAYER_PL_PARSER_RESULT_SUCCESS;
 	}
 	g_free (media_uri);
 
-	if (totem_pl_parser_load_directory (file, &list, &unhandled) == FALSE) {
+	if (xplayer_pl_parser_load_directory (file, &list, &unhandled) == FALSE) {
 		if (unhandled != FALSE)
-			return TOTEM_PL_PARSER_RESULT_UNHANDLED;
-		return TOTEM_PL_PARSER_RESULT_ERROR;
+			return XPLAYER_PL_PARSER_RESULT_UNHANDLED;
+		return XPLAYER_PL_PARSER_RESULT_ERROR;
 	}
 
-	list = g_list_sort (list, (GCompareFunc) totem_pl_parser_dir_compare);
+	list = g_list_sort (list, (GCompareFunc) xplayer_pl_parser_dir_compare);
 	l = list;
 
 	while (l != NULL) {
 		GFileInfo *info = l->data;
 		GFile *item;
-		TotemPlParserResult ret;
+		XplayerPlParserResult ret;
 
 		item = g_file_get_child (file, g_file_info_get_name (info));
 
-		ret = totem_pl_parser_parse_internal (parser, item, NULL, parse_data);
-		if (ret != TOTEM_PL_PARSER_RESULT_SUCCESS &&
-		    ret != TOTEM_PL_PARSER_RESULT_IGNORED &&
-		    ret != TOTEM_PL_PARSER_RESULT_ERROR) {
+		ret = xplayer_pl_parser_parse_internal (parser, item, NULL, parse_data);
+		if (ret != XPLAYER_PL_PARSER_RESULT_SUCCESS &&
+		    ret != XPLAYER_PL_PARSER_RESULT_IGNORED &&
+		    ret != XPLAYER_PL_PARSER_RESULT_ERROR) {
 			char *item_uri;
 
 			item_uri = g_file_get_uri (item);
-			totem_pl_parser_add_one_uri (parser, item_uri, NULL);
+			xplayer_pl_parser_add_one_uri (parser, item_uri, NULL);
 			g_free (item_uri);
 		}
 
@@ -292,40 +292,40 @@ totem_pl_parser_add_directory (TotemPlParser *parser,
 
 	g_list_free (list);
 
-	return TOTEM_PL_PARSER_RESULT_SUCCESS;
+	return XPLAYER_PL_PARSER_RESULT_SUCCESS;
 }
 
-TotemPlParserResult
-totem_pl_parser_add_block (TotemPlParser *parser,
+XplayerPlParserResult
+xplayer_pl_parser_add_block (XplayerPlParser *parser,
 			   GFile *file,
 			   GFile *base_file,
-			   TotemPlParseData *parse_data,
+			   XplayerPlParseData *parse_data,
 			   gpointer data)
 {
-	TotemDiscMediaType type;
+	XplayerDiscMediaType type;
 	char *media_uri, *path;
 	GError *err = NULL;
 
 	path = g_file_get_path (file);
 	if (path == NULL)
-		return TOTEM_PL_PARSER_RESULT_UNHANDLED;
+		return XPLAYER_PL_PARSER_RESULT_UNHANDLED;
 
-	type = totem_cd_detect_type_with_url (path, &media_uri, &err);
+	type = xplayer_cd_detect_type_with_url (path, &media_uri, &err);
 	g_free (path);
 	if (err != NULL) {
 		DEBUG(file, g_print ("Couldn't get CD type for URI '%s': %s\n", uri, err->message));
 		g_error_free (err);
 	}
 	if (media_uri == NULL)
-		return TOTEM_PL_PARSER_RESULT_UNHANDLED;
+		return XPLAYER_PL_PARSER_RESULT_UNHANDLED;
 	else if (type == MEDIA_TYPE_ERROR)
-		return TOTEM_PL_PARSER_RESULT_ERROR;
+		return XPLAYER_PL_PARSER_RESULT_ERROR;
 
-	totem_pl_parser_add_one_uri (parser, media_uri, NULL);
+	xplayer_pl_parser_add_one_uri (parser, media_uri, NULL);
 	g_free (media_uri);
-	return TOTEM_PL_PARSER_RESULT_SUCCESS;
+	return XPLAYER_PL_PARSER_RESULT_SUCCESS;
 }
 
-#endif /* !TOTEM_PL_PARSER_MINI */
+#endif /* !XPLAYER_PL_PARSER_MINI */
 
 

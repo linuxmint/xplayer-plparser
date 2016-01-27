@@ -19,73 +19,73 @@
    Author: Bastien Nocera <hadess@hadess.net>
  */
 
-#ifndef TOTEM_PL_PARSER_PODCAST_H
-#define TOTEM_PL_PARSER_PODCAST_H
+#ifndef XPLAYER_PL_PARSER_PODCAST_H
+#define XPLAYER_PL_PARSER_PODCAST_H
 
 G_BEGIN_DECLS
 
-#ifndef TOTEM_PL_PARSER_MINI
-#include "totem-pl-parser.h"
-#include "totem-pl-parser-private.h"
+#ifndef XPLAYER_PL_PARSER_MINI
+#include "xplayer-pl-parser.h"
+#include "xplayer-pl-parser-private.h"
 #include <gio/gio.h>
 #else
-#include "totem-pl-parser-mini.h"
-#endif /* !TOTEM_PL_PARSER_MINI */
+#include "xplayer-pl-parser-mini.h"
+#endif /* !XPLAYER_PL_PARSER_MINI */
 
-const char * totem_pl_parser_is_rss (const char *data, gsize len);
-const char * totem_pl_parser_is_atom (const char *data, gsize len);
-const char * totem_pl_parser_is_opml (const char *data, gsize len);
-const char * totem_pl_parser_is_xml_feed (const char *data, gsize len);
+const char * xplayer_pl_parser_is_rss (const char *data, gsize len);
+const char * xplayer_pl_parser_is_atom (const char *data, gsize len);
+const char * xplayer_pl_parser_is_opml (const char *data, gsize len);
+const char * xplayer_pl_parser_is_xml_feed (const char *data, gsize len);
 
-#ifndef TOTEM_PL_PARSER_MINI
+#ifndef XPLAYER_PL_PARSER_MINI
 
 #ifndef HAVE_GMIME
 #define WARN_NO_GMIME { \
-	g_warning("Trying to parse a podcast, but totem-pl-parser built without libgmime support. Please contact your distribution provider."); \
-	return TOTEM_PL_PARSER_RESULT_ERROR; \
+	g_warning("Trying to parse a podcast, but xplayer-pl-parser built without libgmime support. Please contact your distribution provider."); \
+	return XPLAYER_PL_PARSER_RESULT_ERROR; \
 }
 #endif /* !HAVE_GMIME */
 
-gboolean totem_pl_parser_is_itms_feed (GFile *file);
+gboolean xplayer_pl_parser_is_itms_feed (GFile *file);
 
-TotemPlParserResult totem_pl_parser_add_xml_feed (TotemPlParser *parser,
+XplayerPlParserResult xplayer_pl_parser_add_xml_feed (XplayerPlParser *parser,
 						  GFile *file,
 						  GFile *base_file,
-						  TotemPlParseData *parse_data,
+						  XplayerPlParseData *parse_data,
 						  gpointer data);
-TotemPlParserResult totem_pl_parser_add_atom (TotemPlParser *parser,
+XplayerPlParserResult xplayer_pl_parser_add_atom (XplayerPlParser *parser,
 					      GFile *file,
 					      GFile *base_file,
-					      TotemPlParseData *parse_data,
+					      XplayerPlParseData *parse_data,
 					      gpointer data);
-TotemPlParserResult totem_pl_parser_add_rss (TotemPlParser *parser,
+XplayerPlParserResult xplayer_pl_parser_add_rss (XplayerPlParser *parser,
 					     GFile *file,
 					     GFile *base_file,
-					     TotemPlParseData *parse_data,
+					     XplayerPlParseData *parse_data,
 					     gpointer data);
-TotemPlParserResult totem_pl_parser_add_itpc (TotemPlParser *parser,
+XplayerPlParserResult xplayer_pl_parser_add_itpc (XplayerPlParser *parser,
 					      GFile *file,
 					      GFile *base_file,
-					      TotemPlParseData *parse_data,
+					      XplayerPlParseData *parse_data,
 					      gpointer data);
-TotemPlParserResult totem_pl_parser_add_zune (TotemPlParser *parser,
+XplayerPlParserResult xplayer_pl_parser_add_zune (XplayerPlParser *parser,
 					      GFile *file,
 					      GFile *base_file,
-					      TotemPlParseData *parse_data,
+					      XplayerPlParseData *parse_data,
 					      gpointer data);
-TotemPlParserResult totem_pl_parser_add_itms (TotemPlParser *parser,
+XplayerPlParserResult xplayer_pl_parser_add_itms (XplayerPlParser *parser,
 					      GFile *file,
 					      GFile *base_file,
-					      TotemPlParseData *parse_data,
+					      XplayerPlParseData *parse_data,
 					      gpointer data);
-TotemPlParserResult totem_pl_parser_add_opml (TotemPlParser *parser,
+XplayerPlParserResult xplayer_pl_parser_add_opml (XplayerPlParser *parser,
 					      GFile *file,
 					      GFile *base_file,
-					      TotemPlParseData *parse_data,
+					      XplayerPlParseData *parse_data,
 					      gpointer data);
 
-#endif /* !TOTEM_PL_PARSER_MINI */
+#endif /* !XPLAYER_PL_PARSER_MINI */
 
 G_END_DECLS
 
-#endif /* TOTEM_PL_PARSER_PODCAST_H */
+#endif /* XPLAYER_PL_PARSER_PODCAST_H */

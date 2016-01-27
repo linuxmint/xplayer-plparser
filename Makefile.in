@@ -82,11 +82,11 @@ subdir = .
 DIST_COMMON = INSTALL NEWS README AUTHORS ChangeLog \
 	$(srcdir)/Makefile.in $(srcdir)/Makefile.am \
 	$(top_srcdir)/configure $(am__configure_deps) \
-	$(srcdir)/config.h.in $(srcdir)/totem-plparser.pc.in \
-	$(srcdir)/totem-plparser-uninstalled.pc.in \
-	$(srcdir)/totem-plparser-mini.pc.in \
-	$(srcdir)/totem-plparser-mini-uninstalled.pc.in \
-	$(srcdir)/totem-pl-parser.spec.in COPYING.LIB compile \
+	$(srcdir)/config.h.in $(srcdir)/xplayer-plparser.pc.in \
+	$(srcdir)/xplayer-plparser-uninstalled.pc.in \
+	$(srcdir)/xplayer-plparser-mini.pc.in \
+	$(srcdir)/xplayer-plparser-mini-uninstalled.pc.in \
+	$(srcdir)/xplayer-pl-parser.spec.in COPYING.LIB compile \
 	config.guess config.sub depcomp install-sh missing ltmain.sh
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/gtk-doc.m4 \
@@ -100,9 +100,9 @@ am__CONFIG_DISTCLEAN_FILES = config.status config.cache config.log \
  configure.lineno config.status.lineno
 mkinstalldirs = $(install_sh) -d
 CONFIG_HEADER = config.h
-CONFIG_CLEAN_FILES = totem-plparser.pc totem-plparser-uninstalled.pc \
-	totem-plparser-mini.pc totem-plparser-mini-uninstalled.pc \
-	totem-pl-parser.spec
+CONFIG_CLEAN_FILES = xplayer-plparser.pc xplayer-plparser-uninstalled.pc \
+	xplayer-plparser-mini.pc xplayer-plparser-mini-uninstalled.pc \
+	xplayer-pl-parser.spec
 CONFIG_CLEAN_VPATH_FILES =
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
@@ -354,13 +354,13 @@ SED = @SED@
 SET_MAKE = @SET_MAKE@
 SHELL = @SHELL@
 STRIP = @STRIP@
-TOTEM_PLPARSER_CFLAGS = @TOTEM_PLPARSER_CFLAGS@
-TOTEM_PLPARSER_LIBS = @TOTEM_PLPARSER_LIBS@
-TOTEM_PLPARSER_MINI_CFLAGS = @TOTEM_PLPARSER_MINI_CFLAGS@
-TOTEM_PLPARSER_MINI_LIBS = @TOTEM_PLPARSER_MINI_LIBS@
-TOTEM_PL_PARSER_VERSION_MAJOR = @TOTEM_PL_PARSER_VERSION_MAJOR@
-TOTEM_PL_PARSER_VERSION_MICRO = @TOTEM_PL_PARSER_VERSION_MICRO@
-TOTEM_PL_PARSER_VERSION_MINOR = @TOTEM_PL_PARSER_VERSION_MINOR@
+XPLAYER_PLPARSER_CFLAGS = @XPLAYER_PLPARSER_CFLAGS@
+XPLAYER_PLPARSER_LIBS = @XPLAYER_PLPARSER_LIBS@
+XPLAYER_PLPARSER_MINI_CFLAGS = @XPLAYER_PLPARSER_MINI_CFLAGS@
+XPLAYER_PLPARSER_MINI_LIBS = @XPLAYER_PLPARSER_MINI_LIBS@
+XPLAYER_PL_PARSER_VERSION_MAJOR = @XPLAYER_PL_PARSER_VERSION_MAJOR@
+XPLAYER_PL_PARSER_VERSION_MICRO = @XPLAYER_PL_PARSER_VERSION_MICRO@
+XPLAYER_PL_PARSER_VERSION_MINOR = @XPLAYER_PL_PARSER_VERSION_MINOR@
 USEGMIME = @USEGMIME@
 USE_NLS = @USE_NLS@
 VERSION = @VERSION@
@@ -432,14 +432,14 @@ EXTRA_DIST = \
 	intltool-update.in	\
 	AUTHORS NEWS		\
 	gtk-doc.make		\
-	totem-plparser.pc.in	\
-	totem-plparser-mini.pc	\
-	totem-pl-parser.spec	\
-	totem-pl-parser.doap	\
+	xplayer-plparser.pc.in	\
+	xplayer-plparser-mini.pc	\
+	xplayer-pl-parser.spec	\
+	xplayer-pl-parser.doap	\
 	MAINTAINERS		\
 	$(NULL)
 
-CLEANFILES = totem-plparser.pc
+CLEANFILES = xplayer-plparser.pc
 DISTCLEANFILES = intltool-extract intltool-merge intltool-update \
 		 gtk-doc.make
 
@@ -463,7 +463,7 @@ MAINTAINERCLEANFILES = \
 	$(NULL)
 
 pkgconfigdir = $(libdir)/pkgconfig
-pkgconfig_DATA = totem-plparser.pc totem-plparser-mini.pc
+pkgconfig_DATA = xplayer-plparser.pc xplayer-plparser-mini.pc
 DISTCHECK_CONFIGURE_FLAGS = --disable-scrollkeeper --enable-gtk-doc --enable-introspection
 all: config.h
 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
@@ -518,15 +518,15 @@ $(srcdir)/config.h.in: @MAINTAINER_MODE_TRUE@ $(am__configure_deps)
 
 distclean-hdr:
 	-rm -f config.h stamp-h1
-totem-plparser.pc: $(top_builddir)/config.status $(srcdir)/totem-plparser.pc.in
+xplayer-plparser.pc: $(top_builddir)/config.status $(srcdir)/xplayer-plparser.pc.in
 	cd $(top_builddir) && $(SHELL) ./config.status $@
-totem-plparser-uninstalled.pc: $(top_builddir)/config.status $(srcdir)/totem-plparser-uninstalled.pc.in
+xplayer-plparser-uninstalled.pc: $(top_builddir)/config.status $(srcdir)/xplayer-plparser-uninstalled.pc.in
 	cd $(top_builddir) && $(SHELL) ./config.status $@
-totem-plparser-mini.pc: $(top_builddir)/config.status $(srcdir)/totem-plparser-mini.pc.in
+xplayer-plparser-mini.pc: $(top_builddir)/config.status $(srcdir)/xplayer-plparser-mini.pc.in
 	cd $(top_builddir) && $(SHELL) ./config.status $@
-totem-plparser-mini-uninstalled.pc: $(top_builddir)/config.status $(srcdir)/totem-plparser-mini-uninstalled.pc.in
+xplayer-plparser-mini-uninstalled.pc: $(top_builddir)/config.status $(srcdir)/xplayer-plparser-mini-uninstalled.pc.in
 	cd $(top_builddir) && $(SHELL) ./config.status $@
-totem-pl-parser.spec: $(top_builddir)/config.status $(srcdir)/totem-pl-parser.spec.in
+xplayer-pl-parser.spec: $(top_builddir)/config.status $(srcdir)/xplayer-pl-parser.spec.in
 	cd $(top_builddir) && $(SHELL) ./config.status $@
 
 mostlyclean-libtool:

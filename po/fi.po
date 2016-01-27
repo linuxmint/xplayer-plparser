@@ -1,4 +1,4 @@
-# Finnish messages for totem-pl-parser.
+# Finnish messages for xplayer-pl-parser.
 # Copyright (C) 2002, 2003, 2005-2009 Free Software Foundation, Inc.
 # Suomennos: http://gnome.fi/
 #
@@ -8,9 +8,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: totem-pl-parser\n"
+"Project-Id-Version: xplayer-pl-parser\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=totem&keywords=I18N+L10N&component=playlist parser\n"
+"product=xplayer&keywords=I18N+L10N&component=playlist parser\n"
 "POT-Creation-Date: 2014-01-21 17:48+0000\n"
 "PO-Revision-Date: 2014-02-24 21:36+0200\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
@@ -22,39 +22,39 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Gtranslator 2.91.6\n"
 
-#: ../plparse/totem-disc.c:276 ../plparse/totem-disc.c:289
-#: ../plparse/totem-disc.c:533
+#: ../plparse/xplayer-disc.c:276 ../plparse/xplayer-disc.c:289
+#: ../plparse/xplayer-disc.c:533
 #, c-format
 msgid "Failed to mount %s."
 msgstr "Levyä \"%s\" ei voitu liittää."
 
-#: ../plparse/totem-disc.c:418
+#: ../plparse/xplayer-disc.c:418
 #, c-format
 msgid "No media in drive for device '%s'."
 msgstr "Laitteen \"%s\" asemassa ei ole levyä."
 
-#: ../plparse/totem-disc.c:476
+#: ../plparse/xplayer-disc.c:476
 #, c-format
 msgid "Please check that a disc is present in the drive."
 msgstr "Varmista, että levy on asemassa."
 
-#: ../plparse/totem-disc.c:947
+#: ../plparse/xplayer-disc.c:947
 msgid "Audio CD"
 msgstr "Ääni-CD"
 
-#: ../plparse/totem-disc.c:949
+#: ../plparse/xplayer-disc.c:949
 msgid "Video CD"
 msgstr "Video-CD"
 
-#: ../plparse/totem-disc.c:951
+#: ../plparse/xplayer-disc.c:951
 msgid "DVD"
 msgstr "DVD"
 
-#: ../plparse/totem-disc.c:953
+#: ../plparse/xplayer-disc.c:953
 msgid "Digital Television"
 msgstr "Digi-TV"
 
-#: ../plparse/totem-disc.c:955
+#: ../plparse/xplayer-disc.c:955
 msgid "Blu-ray"
 msgstr "Blu-ray"
 
@@ -214,11 +214,11 @@ msgstr "Blu-ray"
 #~ msgid "Text Subtitles"
 #~ msgstr "Tekstitys"
 
-#~ msgid "Totem Movie Player"
-#~ msgstr "Totem-elokuvasoitin"
+#~ msgid "Xplayer Movie Player"
+#~ msgstr "Xplayer-elokuvasoitin"
 
-#~ msgid "Totem Preferences"
-#~ msgstr "Totemin asetukset"
+#~ msgid "Xplayer Preferences"
+#~ msgstr "Xplayerin asetukset"
 
 #~ msgid "Visual Effects"
 #~ msgstr "Visualliset tehosteet"
@@ -382,34 +382,34 @@ msgstr "Blu-ray"
 #~ msgid "Couldn't load the '%s' interface. %s"
 #~ msgstr "\"%s\"-käyttöliittymää ei voi ladata: %s"
 
-#~ msgid "Make sure that Totem is properly installed."
-#~ msgstr "Tarkista, että Totem on oikein asennettu."
+#~ msgid "Make sure that Xplayer is properly installed."
+#~ msgstr "Tarkista, että Xplayer on oikein asennettu."
 
 #~ msgid ""
-#~ "Totem is free software; you can redistribute it and/or modify it under "
+#~ "Xplayer is free software; you can redistribute it and/or modify it under "
 #~ "the terms of the GNU General Public License as published by the Free "
 #~ "Software Foundation; either version 2 of the License, or (at your option) "
 #~ "any later version."
 #~ msgstr ""
-#~ "Totem on vapaa ohjelma; sitä on sallittu levittää edelleen ja muuttaa GNU "
+#~ "Xplayer on vapaa ohjelma; sitä on sallittu levittää edelleen ja muuttaa GNU "
 #~ "yleisen lisenssin (GPL lisenssin) ehtojen mukaan  sellaisina kuin Free "
 #~ "Software Foundation on ne julkaissut; joko lisenssin version 2, tai "
 #~ "(valinnan mukaan) minkä tahansa myöhemmän version mukaisesti."
 
 #~ msgid ""
-#~ "Totem is distributed in the hope that it will be useful, but WITHOUT ANY "
+#~ "Xplayer is distributed in the hope that it will be useful, but WITHOUT ANY "
 #~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
 #~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 #~ "details."
 #~ msgstr ""
-#~ "Totemia levitetään siinä toivossa, että se olisi hyödyllinen, mutta ilman "
+#~ "Xplayeria levitetään siinä toivossa, että se olisi hyödyllinen, mutta ilman "
 #~ "mitään takuuta; ilman edes hiljaista takuuta kaupallisesti "
 #~ "hyväksyttävästä laadusta tai soveltuvuudesta tiettyyn tarkoitukseen. "
 #~ "Katso GPL lisenssistä lisää yksityiskohtia."
 
 #~ msgid ""
 #~ "You should have received a copy of the GNU General Public License along "
-#~ "with Totem; if not, write to the Free Software Foundation, Inc., 59 "
+#~ "with Xplayer; if not, write to the Free Software Foundation, Inc., 59 "
 #~ "Temple Place, Suite 330, Boston, MA  02111-1307  USA"
 #~ msgstr ""
 #~ "Tämän ohjelman mukana pitäisi tulla kopio GPL-lisenssistä; jos näin ei "
@@ -417,10 +417,10 @@ msgstr "Blu-ray"
 #~ "Place, Suite 330, Boston, MA  02111-1307  USA"
 
 #~ msgid ""
-#~ "Totem contains an exception to allow the use of proprietary GStreamer "
+#~ "Xplayer contains an exception to allow the use of proprietary GStreamer "
 #~ "plugins."
 #~ msgstr ""
-#~ "Totem sisältää poikkeuksen, joka sallii ei-vapaiden GStreamer -"
+#~ "Xplayer sisältää poikkeuksen, joka sallii ei-vapaiden GStreamer -"
 #~ "liitännäisten käytön."
 
 #~ msgid "None"
@@ -454,8 +454,8 @@ msgstr "Blu-ray"
 #~ "\n"
 #~ "http://gnome.fi/"
 
-#~ msgid "Totem Website"
-#~ msgstr "Totemin www-sivut"
+#~ msgid "Xplayer Website"
+#~ msgstr "Xplayerin www-sivut"
 
 #~ msgid "Configure Plugins"
 #~ msgstr "Liitännäisten asetukset"
@@ -821,18 +821,18 @@ msgstr "Blu-ray"
 #~ msgstr "Ota visuaaliset tehosteet käyttöön?"
 
 #~ msgid ""
-#~ "It seems you are running Totem remotely.\n"
+#~ "It seems you are running Xplayer remotely.\n"
 #~ "Are you sure you want to enable the visual effects?"
 #~ msgstr ""
-#~ "Etäkäytät Totemia.\n"
+#~ "Etäkäytät Xplayeria.\n"
 #~ "Haluatko varmasti käyttää visuaalisia tehosteita?"
 
 #~ msgid ""
 #~ "The change of this setting will only take effect for the next movie, or "
-#~ "when Totem is restarted."
+#~ "when Xplayer is restarted."
 #~ msgstr ""
 #~ "Tämän asetuksen muutos astuu voimaan vasta seuraavassa elokuvassa tai kun "
-#~ "uudelleenkäynnistät Totemin."
+#~ "uudelleenkäynnistät Xplayerin."
 
 #~ msgid ""
 #~ "Changing the visuals effect type will require a restart to take effect."
@@ -841,10 +841,10 @@ msgstr "Blu-ray"
 #~ "uudelleenkäynnistettäessä."
 
 #~ msgid ""
-#~ "The change of audio output type will only take effect when Totem is "
+#~ "The change of audio output type will only take effect when Xplayer is "
 #~ "restarted."
 #~ msgstr ""
-#~ "Ääniulostulon muutos astuu voimaan vasta kun uudelleenkäynnistät Totemin."
+#~ "Ääniulostulon muutos astuu voimaan vasta kun uudelleenkäynnistät Xplayerin."
 
 #~ msgid "Preferences"
 #~ msgstr "Asetukset"
@@ -1008,38 +1008,38 @@ msgstr "Blu-ray"
 #~ msgid "Paused"
 #~ msgstr "Tauko"
 
-#~ msgid "Totem could not play '%s'."
-#~ msgstr "Totem ei voinut toistaa sijaintia \"%s\"."
+#~ msgid "Xplayer could not play '%s'."
+#~ msgstr "Xplayer ei voinut toistaa sijaintia \"%s\"."
 
 #~ msgid ""
-#~ "Totem cannot play this type of media (%s) because it does not have the "
+#~ "Xplayer cannot play this type of media (%s) because it does not have the "
 #~ "appropriate plugins to be able to read from the disc."
 #~ msgstr ""
-#~ "Totem ei voi soittaa tämäntyyppisiä tiedostoja (%s), koska sopivaa "
+#~ "Xplayer ei voi soittaa tämäntyyppisiä tiedostoja (%s), koska sopivaa "
 #~ "liitännäistä levyltä lukua varten ei ole asennettu."
 
 #~ msgid ""
-#~ "Totem cannot play this type of media (%s) because you do not have the "
+#~ "Xplayer cannot play this type of media (%s) because you do not have the "
 #~ "appropriate plugins to handle it."
 #~ msgstr ""
-#~ "Totem ei voi soittaa tämäntyyppisiä tiedostoja (%s), koska sopivaa "
+#~ "Xplayer ei voi soittaa tämäntyyppisiä tiedostoja (%s), koska sopivaa "
 #~ "liitännäistä ei ole asennettu."
 
 #~ msgid ""
-#~ "Please install the necessary plugins and restart Totem to be able to play "
+#~ "Please install the necessary plugins and restart Xplayer to be able to play "
 #~ "this media."
 #~ msgstr ""
-#~ "Soittaaksesi tiedoston asenna tarvittavat liitännäiset ja käynnistä Totem "
+#~ "Soittaaksesi tiedoston asenna tarvittavat liitännäiset ja käynnistä Xplayer "
 #~ "uudestaan."
 
 #~ msgid "More information about media plugins"
 #~ msgstr "Lisätietoja medialiitännäisistä"
 
 #~ msgid ""
-#~ "Totem could not play this media (%s) although a plugin is present to "
+#~ "Xplayer could not play this media (%s) although a plugin is present to "
 #~ "handle it."
 #~ msgstr ""
-#~ "Totem ei voi soittaa mediaa (%s), vaikka sille tarkoitettu liitännäinen "
+#~ "Xplayer ei voi soittaa mediaa (%s), vaikka sille tarkoitettu liitännäinen "
 #~ "on asennettu."
 
 #~ msgid ""
@@ -1048,22 +1048,22 @@ msgstr "Blu-ray"
 #~ msgstr ""
 #~ "Varmista, että levy on asemassa ja että aseman asetukset ovat oikein."
 
-#~ msgid "Totem was not able to play this disc."
-#~ msgstr "Totem ei voinut soittaa tätä levyä."
+#~ msgid "Xplayer was not able to play this disc."
+#~ msgstr "Xplayer ei voinut soittaa tätä levyä."
 
 #~ msgid "No reason."
 #~ msgstr "Ei syytä"
 
-#~ msgid "Totem does not support playback of Audio CDs"
-#~ msgstr "Totem ei osaa soittaa tavallisia CD-levyjä"
+#~ msgid "Xplayer does not support playback of Audio CDs"
+#~ msgstr "Xplayer ei osaa soittaa tavallisia CD-levyjä"
 
 #~ msgid ""
 #~ "Please consider using a music player or a CD extractor to play this CD"
 #~ msgstr ""
 #~ "Soita tavalliset CD-levyt musiikkisoittimella tai kopiointiohjelmalla"
 
-#~ msgid "Totem could not get a screenshot of that film."
-#~ msgstr "Totem ei voinut kaapata kuvaa tästä elokuvasta."
+#~ msgid "Xplayer could not get a screenshot of that film."
+#~ msgstr "Xplayer ei voinut kaapata kuvaa tästä elokuvasta."
 
 #~ msgid "This is not supposed to happen; please file a bug report."
 #~ msgstr "Näin ei pitäisi päästä tapahtumaan. Ole hyvä ja ilmoita viasta."
@@ -1071,8 +1071,8 @@ msgstr "Blu-ray"
 #~ msgid "No error message"
 #~ msgstr "Ei virheviestiä"
 
-#~ msgid "Totem could not display the help contents."
-#~ msgstr "Totem ei voinut näyttää ohjeen sisältöä."
+#~ msgid "Xplayer could not display the help contents."
+#~ msgstr "Xplayer ei voinut näyttää ohjeen sisältöä."
 
 #~ msgid "An error occurred"
 #~ msgstr "Tapahtui virhe"
@@ -1086,23 +1086,23 @@ msgstr "Blu-ray"
 #~ msgid "Next Chapter/Movie"
 #~ msgstr "Seuraava kappale/elokuva"
 
-#~ msgid "Totem could not startup."
-#~ msgstr "Totemia ei voi käynnistää."
+#~ msgid "Xplayer could not startup."
+#~ msgstr "Xplayeria ei voi käynnistää."
 
 #~ msgid "Could not initialize the thread-safe libraries."
 #~ msgstr "Säieturvallisia kirjastoja ei voi alustaa."
 
-#~ msgid "Verify your system installation. Totem will now exit."
-#~ msgstr "Tarkista järjestelmäasennuksesi. Totem sulkeutuu."
+#~ msgid "Verify your system installation. Xplayer will now exit."
+#~ msgstr "Tarkista järjestelmäasennuksesi. Xplayer sulkeutuu."
 
 #~ msgid "- Play movies and songs"
 #~ msgstr "- Näytä elokuvia ja soita musiikkia"
 
-#~ msgid "Totem could not parse the command-line options"
-#~ msgstr "Totem ei voinut tulkita komentorivin valitsimia"
+#~ msgid "Xplayer could not parse the command-line options"
+#~ msgstr "Xplayer ei voinut tulkita komentorivin valitsimia"
 
-#~ msgid "Totem could not initialize the configuration engine."
-#~ msgstr "Totem ei voinut alustaa asetusmoottoria."
+#~ msgid "Xplayer could not initialize the configuration engine."
+#~ msgstr "Xplayer ei voinut alustaa asetusmoottoria."
 
 #~ msgid "Make sure that GNOME is properly installed."
 #~ msgstr "Varmista, että GNOME on oikein asennettu.."
@@ -1402,17 +1402,17 @@ msgstr "Blu-ray"
 #~ msgid "Bemused"
 #~ msgstr "Bemused"
 
-#~ msgid "Control Totem through a mobile phone with a Bemused client"
-#~ msgstr "Ohjaa totemia matkapuhelimesta Bemused-ohjelmalla"
+#~ msgid "Control Xplayer through a mobile phone with a Bemused client"
+#~ msgstr "Ohjaa xplayeria matkapuhelimesta Bemused-ohjelmalla"
 
 #~ msgid "Untitled %d"
 #~ msgstr "Nimetön %d"
 
-#~ msgid "Totem Bemused Server"
-#~ msgstr "Totemin Bemused-palvelin"
+#~ msgid "Xplayer Bemused Server"
+#~ msgstr "Xplayerin Bemused-palvelin"
 
-#~ msgid "Totem Bemused Server version 1.0"
-#~ msgstr "Totemin Bemused-palvelimen versio 1.0"
+#~ msgid "Xplayer Bemused Server version 1.0"
+#~ msgstr "Xplayerin Bemused-palvelimen versio 1.0"
 
 #~ msgid "Instant Messenger status"
 #~ msgstr "Pikaviestimen tila"
@@ -1489,8 +1489,8 @@ msgstr "Blu-ray"
 #~ msgid "No URI to play"
 #~ msgstr "Soitettavaa URI:a ei annettu"
 
-#~ msgid "Totem could not play '%s'"
-#~ msgstr "Totem ei voinut toistaa lähdettä \"%s\"."
+#~ msgid "Xplayer could not play '%s'"
+#~ msgstr "Xplayer ei voinut toistaa lähdettä \"%s\"."
 
 #~ msgid "Opening %s"
 #~ msgstr "Avataan %s"
@@ -1501,11 +1501,11 @@ msgstr "Blu-ray"
 #~ msgid "Browser Plugin using %s"
 #~ msgstr "Selainliitännäinen käyttäen %s"
 
-#~ msgid "Totem Browser Plugin"
-#~ msgstr "Totemin selainliitännäinen"
+#~ msgid "Xplayer Browser Plugin"
+#~ msgstr "Xplayerin selainliitännäinen"
 
-#~ msgid "The Totem plugin could not be started."
-#~ msgstr "Totemin liitännäistä ei voitu käynnistää."
+#~ msgid "The Xplayer plugin could not be started."
+#~ msgstr "Xplayerin liitännäistä ei voitu käynnistää."
 
 #~ msgid "No playlist or playlist empty"
 #~ msgstr "Soittolistaa ei ole tai se on tyhjä"
@@ -1513,8 +1513,8 @@ msgstr "Blu-ray"
 #~ msgid "Could not initialise the thread-safe libraries."
 #~ msgstr "Säieturvallisia kirjastoja ei voi alustaa."
 
-#~ msgid "Verify your system installation. The Totem plugin will now exit."
-#~ msgstr "Tarkista järjestelmäasennuksesi. Totemin liitännäinen suljetaan."
+#~ msgid "Verify your system installation. The Xplayer plugin will now exit."
+#~ msgstr "Tarkista järjestelmäasennuksesi. Xplayerin liitännäinen suljetaan."
 
-#~ msgid "Totem could not eject the optical media."
-#~ msgstr "Totem ei voi työntää optista mediaa ulos."
+#~ msgid "Xplayer could not eject the optical media."
+#~ msgstr "Xplayer ei voi työntää optista mediaa ulos."

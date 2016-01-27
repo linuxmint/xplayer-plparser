@@ -19,34 +19,34 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: ../plparse/totem-disc.c:320 ../plparse/totem-disc.c:461
+#: ../plparse/xplayer-disc.c:320 ../plparse/xplayer-disc.c:461
 #, c-format
 msgid "Failed to mount %s."
 msgstr "Huts egin du %s muntatzean."
 
-#: ../plparse/totem-disc.c:350
+#: ../plparse/xplayer-disc.c:350
 #, c-format
 msgid "No media in drive for device '%s'."
 msgstr "Ez dago euskarririk '%s' gailuan."
 
-#: ../plparse/totem-disc.c:404
+#: ../plparse/xplayer-disc.c:404
 #, c-format
 msgid "Please check that a disc is present in the drive."
 msgstr "Egiaztatu unitatean diskoa dagoela."
 
-#: ../plparse/totem-disc.c:844
+#: ../plparse/xplayer-disc.c:844
 msgid "Audio CD"
 msgstr "Audio CDa"
 
-#: ../plparse/totem-disc.c:846
+#: ../plparse/xplayer-disc.c:846
 msgid "Video CD"
 msgstr "Bideo CDa"
 
-#: ../plparse/totem-disc.c:848
+#: ../plparse/xplayer-disc.c:848
 msgid "DVD"
 msgstr "DVDa"
 
-#: ../plparse/totem-disc.c:850
+#: ../plparse/xplayer-disc.c:850
 msgid "Digital Television"
 msgstr "Telebista digitala"
 

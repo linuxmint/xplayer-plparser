@@ -1,15 +1,15 @@
 noinst_LTLIBRARIES =					\
-	libtotem_glibc.la
+	libxplayer_glibc.la
 
 common_defines = \
 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"	\
 	-DDATADIR=\""$(datadir)"\"			\
 	$(DISABLE_DEPRECATED)
 
-noinst_HEADERS = totem_internal.h
+noinst_HEADERS = xplayer_internal.h
 
-libtotem_glibc_la_SOURCES = stub.c
-libtotem_glibc_la_LIBADD = @LTLIBOBJS@
+libxplayer_glibc_la_SOURCES = stub.c
+libxplayer_glibc_la_LIBADD = @LTLIBOBJS@
 
 EXTRA_DIST = asprintf.c
 

@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: or\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=totem&amp;component=playlist parser\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&amp;component=playlist parser\n"
 "POT-Creation-Date: 2008-11-27 17:18+0000\n"
 "PO-Revision-Date: 2009-03-10 19:31+0530\n"
 "Last-Translator: Manoj Kumar Giri <mgiri@redhat.com>\n"
@@ -20,34 +20,34 @@ msgstr ""
 "\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../plparse/totem-disc.c:319 ../plparse/totem-disc.c:460
+#: ../plparse/xplayer-disc.c:319 ../plparse/xplayer-disc.c:460
 #, c-format
 msgid "Failed to mount %s."
 msgstr "%s କୁ ସ୍ଥାପନ କରିବାରେ ବିଫଳ।"
 
-#: ../plparse/totem-disc.c:349
+#: ../plparse/xplayer-disc.c:349
 #, c-format
 msgid "No media in drive for device '%s'."
 msgstr "'%s' ଉପକରଣ ପାଇଁ ଡ୍ରାଇଭରେ କୌଣସି ସଞ୍ଚାର ମାଧ୍ଯମ ନାହିଁ।"
 
-#: ../plparse/totem-disc.c:403
+#: ../plparse/xplayer-disc.c:403
 #, c-format
 msgid "Please check that a disc is present in the drive."
 msgstr "ଡ୍ରାଇଭରେ ଗୋଟିଏ ଡିସ୍କ ଉପସ୍ଥିତ ଅଛି ବୋଲି ଯାଞ୍ଚ କରନ୍ତୁ।"
 
-#: ../plparse/totem-disc.c:843
+#: ../plparse/xplayer-disc.c:843
 msgid "Audio CD"
 msgstr "ଅଡିଓ ସି.ଡି."
 
-#: ../plparse/totem-disc.c:845
+#: ../plparse/xplayer-disc.c:845
 msgid "Video CD"
 msgstr "ଭିଡିଓ ସି.ଡି."
 
-#: ../plparse/totem-disc.c:847
+#: ../plparse/xplayer-disc.c:847
 msgid "DVD"
 msgstr "DVD"
 
-#: ../plparse/totem-disc.c:849
+#: ../plparse/xplayer-disc.c:849
 msgid "Digital Television"
 msgstr "ଡିଜିଟାଲ ଟେଲିଭିଜନ"
 

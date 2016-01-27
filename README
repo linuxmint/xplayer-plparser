@@ -4,7 +4,7 @@
 
                          playlist parser
 
-totem-pl-parser is a simple GObject-based library to parse a host of
+xplayer-pl-parser is a simple GObject-based library to parse a host of
 playlist formats, as well as save those
 
 News
@@ -22,7 +22,7 @@ BUGS
 ====
 
 Bugs should be filed in GNOME's Bugzilla:
-http://bugzilla.gnome.org/enter_bug.cgi?product=totem&component=playlist%20parser
+http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&component=playlist%20parser
 
 To get a better debug output, run:
 # test-parser --debug
@@ -31,4 +31,4 @@ Contact
 =======
 
 Bastien Nocera <hadess@hadess.net>
-http://www.gnome.org/projects/totem/
+http://www.gnome.org/projects/xplayer/

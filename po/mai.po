@@ -1,4 +1,4 @@
-# translation of totem-pl-parser.master.po to Hindi
+# translation of xplayer-pl-parser.master.po to Hindi
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
@@ -6,8 +6,8 @@
 # Rajesh Ranjan <rajesh672@gmail.com>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: totem-pl-parser.master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=totem&component=playlist parser\n"
+"Project-Id-Version: xplayer-pl-parser.master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&component=playlist parser\n"
 "POT-Creation-Date: 2009-09-10 07:43+0000\n"
 "PO-Revision-Date: 2009-09-19 00:18+0530\n"
 "Last-Translator: Rajesh Ranjan <rajesh672@gmail.com>\n"
@@ -19,34 +19,34 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n!=1);\n\n"
 "\n"
 
-#: ../plparse/totem-disc.c:359 ../plparse/totem-disc.c:501
+#: ../plparse/xplayer-disc.c:359 ../plparse/xplayer-disc.c:501
 #, c-format
 msgid "Failed to mount %s."
 msgstr ""
 
-#: ../plparse/totem-disc.c:390
+#: ../plparse/xplayer-disc.c:390
 #, c-format
 msgid "No media in drive for device '%s'."
 msgstr ""
 
-#: ../plparse/totem-disc.c:444
+#: ../plparse/xplayer-disc.c:444
 #, c-format
 msgid "Please check that a disc is present in the drive."
 msgstr "जाँचू जे डिस्क ड्राइवमे मोजुद अछि"
 
-#: ../plparse/totem-disc.c:885
+#: ../plparse/xplayer-disc.c:885
 msgid "Audio CD"
 msgstr "ऑडियो सीडी"
 
-#: ../plparse/totem-disc.c:887
+#: ../plparse/xplayer-disc.c:887
 msgid "Video CD"
 msgstr "वीडियो सीडी"
 
-#: ../plparse/totem-disc.c:889
+#: ../plparse/xplayer-disc.c:889
 msgid "DVD"
 msgstr "डीवीडी"
 
-#: ../plparse/totem-disc.c:891
+#: ../plparse/xplayer-disc.c:891
 msgid "Digital Television"
 msgstr "डिजिटल टेलिविजन"
 

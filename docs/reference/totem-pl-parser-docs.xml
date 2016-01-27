@@ -6,18 +6,18 @@
 ]>
 <book id="index" xmlns:xi="http://www.w3.org/2003/XInclude">
 	<bookinfo>
-		<title>Totem Playlist Parser Reference Manual</title>
+		<title>Xplayer Playlist Parser Reference Manual</title>
 		<releaseinfo>
-			for totem-pl-parser &version;. The latest version of this documentation can be found online at
-			<ulink role="online-location" url="http://library.gnome.org/devel/totem-pl-parser/">http://library.gnome.org/devel/totem-pl-parser/</ulink>.
+			for xplayer-pl-parser &version;. The latest version of this documentation can be found online at
+			<ulink role="online-location" url="http://library.gnome.org/devel/xplayer-pl-parser/">http://library.gnome.org/devel/xplayer-pl-parser/</ulink>.
 		</releaseinfo>
 	</bookinfo>
 
 	<chapter id="api-reference">
 		<title>API Reference</title>
-		<xi:include href="xml/totem-pl-parser.xml"/>
-		<xi:include href="xml/totem-pl-playlist.xml"/>
-		<xi:include href="xml/totem-pl-playlist-iter.xml"/>
+		<xi:include href="xml/xplayer-pl-parser.xml"/>
+		<xi:include href="xml/xplayer-pl-playlist.xml"/>
+		<xi:include href="xml/xplayer-pl-playlist-iter.xml"/>
 	</chapter>
 
 	<index id="api-index-full">

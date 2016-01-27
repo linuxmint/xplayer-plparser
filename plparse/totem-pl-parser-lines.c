@@ -25,31 +25,31 @@
 #include <string.h>
 #include <glib.h>
 
-#ifndef TOTEM_PL_PARSER_MINI
+#ifndef XPLAYER_PL_PARSER_MINI
 #include <glib/gi18n-lib.h>
 
 #include <gio/gio.h>
 
-#include "totem-pl-parser.h"
-#include "totem-pl-parser-pls.h"
-#endif /* !TOTEM_PL_PARSER_MINI */
+#include "xplayer-pl-parser.h"
+#include "xplayer-pl-parser-pls.h"
+#endif /* !XPLAYER_PL_PARSER_MINI */
 
-#include "totem-pl-parser-mini.h"
-#include "totem-pl-parser-lines.h"
-#include "totem-pl-parser-private.h"
+#include "xplayer-pl-parser-mini.h"
+#include "xplayer-pl-parser-lines.h"
+#include "xplayer-pl-parser-private.h"
 
-#ifndef TOTEM_PL_PARSER_MINI
+#ifndef XPLAYER_PL_PARSER_MINI
 
 #define EXTINF "#EXTINF:"
 #define EXTVLCOPT "#EXTVLCOPT"
 
 static char *
-totem_pl_parser_uri_to_dos (const char *uri, GFile *output)
+xplayer_pl_parser_uri_to_dos (const char *uri, GFile *output)
 {
 	char *retval, *i;
 
 	/* Get a relative URI if there is one */
-	retval = totem_pl_parser_relative (output, uri);
+	retval = xplayer_pl_parser_relative (output, uri);
 
 	if (retval == NULL)
 		retval = g_strdup (uri);
@@ -77,13 +77,13 @@ totem_pl_parser_uri_to_dos (const char *uri, GFile *output)
 }
 
 gboolean
-totem_pl_parser_save_m3u (TotemPlParser    *parser,
-                          TotemPlPlaylist  *playlist,
+xplayer_pl_parser_save_m3u (XplayerPlParser    *parser,
+                          XplayerPlPlaylist  *playlist,
                           GFile            *output,
                           gboolean          dos_compatible,
                           GError          **error)
 {
-        TotemPlPlaylistIter iter;
+        XplayerPlPlaylistIter iter;
 	GFileOutputStream *stream;
 	gboolean valid, success;
 	char *buf;
@@ -96,23 +96,23 @@ totem_pl_parser_save_m3u (TotemPlParser    *parser,
 	cr = dos_compatible ? "\r\n" : "\n";
 
 	buf = g_strdup_printf ("#EXTM3U%s", cr);
-	success = totem_pl_parser_write_string (G_OUTPUT_STREAM (stream), buf, error);
+	success = xplayer_pl_parser_write_string (G_OUTPUT_STREAM (stream), buf, error);
 	g_free (buf);
 	if (success == FALSE)
 		return FALSE;
 
-        valid = totem_pl_playlist_iter_first (playlist, &iter);
+        valid = xplayer_pl_playlist_iter_first (playlist, &iter);
 
         while (valid) {
 		char *uri, *title, *path2;
 		GFile *file;
 
-                totem_pl_playlist_get (playlist, &iter,
-                                       TOTEM_PL_PARSER_FIELD_URI, &uri,
-                                       TOTEM_PL_PARSER_FIELD_TITLE, &title,
+                xplayer_pl_playlist_get (playlist, &iter,
+                                       XPLAYER_PL_PARSER_FIELD_URI, &uri,
+                                       XPLAYER_PL_PARSER_FIELD_TITLE, &title,
                                        NULL);
 
-                valid = totem_pl_playlist_iter_next (playlist, &iter);
+                valid = xplayer_pl_playlist_iter_next (playlist, &iter);
 
                 if (!uri) {
                         g_free (title);
@@ -121,7 +121,7 @@ totem_pl_parser_save_m3u (TotemPlParser    *parser,
 
                 file = g_file_new_for_uri (uri);
 
-		if (totem_pl_parser_scheme_is_ignored (parser, file) != FALSE) {
+		if (xplayer_pl_parser_scheme_is_ignored (parser, file) != FALSE) {
 			g_object_unref (file);
 			g_free (uri);
 			g_free (title);
@@ -131,7 +131,7 @@ totem_pl_parser_save_m3u (TotemPlParser    *parser,
 
 		if (title) {
 			buf = g_strdup_printf (EXTINF",%s%s", title, cr);
-			success = totem_pl_parser_write_string (G_OUTPUT_STREAM (stream), buf, error);
+			success = xplayer_pl_parser_write_string (G_OUTPUT_STREAM (stream), buf, error);
 			g_free (buf);
 			if (success == FALSE) {
 				g_free (title);
@@ -144,7 +144,7 @@ totem_pl_parser_save_m3u (TotemPlParser    *parser,
 		if (dos_compatible == FALSE) {
 			char *tmp;
 
-			tmp = totem_pl_parser_relative (output, uri);
+			tmp = xplayer_pl_parser_relative (output, uri);
 
 			if (tmp == NULL && g_str_has_prefix (uri, "file:")) {
 				path2 = g_filename_from_uri (uri, NULL, NULL);
@@ -152,14 +152,14 @@ totem_pl_parser_save_m3u (TotemPlParser    *parser,
 				path2 = tmp;
 			}
 		} else {
-			path2 = totem_pl_parser_uri_to_dos (uri, output);
+			path2 = xplayer_pl_parser_uri_to_dos (uri, output);
 		}
 
 		buf = g_strdup_printf ("%s%s", path2 ? path2 : uri, cr);
 		g_free (path2);
 		g_free (uri);
 
-		success = totem_pl_parser_write_string (G_OUTPUT_STREAM (stream), buf, error);
+		success = xplayer_pl_parser_write_string (G_OUTPUT_STREAM (stream), buf, error);
 		g_free (buf);
 
 		if (success == FALSE)
@@ -172,7 +172,7 @@ totem_pl_parser_save_m3u (TotemPlParser    *parser,
 }
 
 static void
-totem_pl_parser_parse_ram_uri (TotemPlParser *parser, const char *uri)
+xplayer_pl_parser_parse_ram_uri (XplayerPlParser *parser, const char *uri)
 {
 	char *mark, **params;
 	GString *str;
@@ -181,14 +181,14 @@ totem_pl_parser_parse_ram_uri (TotemPlParser *parser, const char *uri)
 
 	if (g_str_has_prefix (uri, "rtsp://") == FALSE
 	    && g_str_has_prefix (uri, "pnm://") == FALSE) {
-		totem_pl_parser_add_one_uri (parser, uri, NULL);
+		xplayer_pl_parser_add_one_uri (parser, uri, NULL);
 		return;
 	}
 
 	/* Look for "?" */
 	mark = strstr (uri, "?");
 	if (mark == NULL) {
-		totem_pl_parser_add_one_uri (parser, uri, NULL);
+		xplayer_pl_parser_add_one_uri (parser, uri, NULL);
 		return;
 	}
 
@@ -196,7 +196,7 @@ totem_pl_parser_parse_ram_uri (TotemPlParser *parser, const char *uri)
 		char *new_uri;
 
 		new_uri = g_strndup (uri, mark + 1 - uri);
-		totem_pl_parser_add_one_uri (parser, new_uri, NULL);
+		xplayer_pl_parser_add_one_uri (parser, new_uri, NULL);
 		g_free (new_uri);
 		return;
 	}
@@ -233,42 +233,42 @@ totem_pl_parser_parse_ram_uri (TotemPlParser *parser, const char *uri)
 		}
 	}
 
-	totem_pl_parser_add_uri (parser,
-				 TOTEM_PL_PARSER_FIELD_URI, str->str,
-				 TOTEM_PL_PARSER_FIELD_TITLE, title,
-				 TOTEM_PL_PARSER_FIELD_AUTHOR, author,
-				 TOTEM_PL_PARSER_FIELD_COPYRIGHT, copyright,
-				 TOTEM_PL_PARSER_FIELD_ABSTRACT, abstract,
-				 TOTEM_PL_PARSER_FIELD_SCREENSIZE, screensize,
-				 TOTEM_PL_PARSER_FIELD_UI_MODE, mode,
-				 TOTEM_PL_PARSER_FIELD_STARTTIME, start,
-				 TOTEM_PL_PARSER_FIELD_ENDTIME, end,
+	xplayer_pl_parser_add_uri (parser,
+				 XPLAYER_PL_PARSER_FIELD_URI, str->str,
+				 XPLAYER_PL_PARSER_FIELD_TITLE, title,
+				 XPLAYER_PL_PARSER_FIELD_AUTHOR, author,
+				 XPLAYER_PL_PARSER_FIELD_COPYRIGHT, copyright,
+				 XPLAYER_PL_PARSER_FIELD_ABSTRACT, abstract,
+				 XPLAYER_PL_PARSER_FIELD_SCREENSIZE, screensize,
+				 XPLAYER_PL_PARSER_FIELD_UI_MODE, mode,
+				 XPLAYER_PL_PARSER_FIELD_STARTTIME, start,
+				 XPLAYER_PL_PARSER_FIELD_ENDTIME, end,
 				 NULL);
 
 	g_string_free (str, TRUE);
 	g_strfreev (params);
 }
 
-TotemPlParserResult
-totem_pl_parser_add_ram (TotemPlParser *parser, GFile *file, TotemPlParseData *parse_data, gpointer data)
+XplayerPlParserResult
+xplayer_pl_parser_add_ram (XplayerPlParser *parser, GFile *file, XplayerPlParseData *parse_data, gpointer data)
 {
-	gboolean retval = TOTEM_PL_PARSER_RESULT_UNHANDLED;
+	gboolean retval = XPLAYER_PL_PARSER_RESULT_UNHANDLED;
 	char *contents, **lines;
 	gsize size;
 	guint i;
 
 	if (g_file_load_contents (file, NULL, &contents, &size, NULL, NULL) == FALSE)
-		return TOTEM_PL_PARSER_RESULT_ERROR;
+		return XPLAYER_PL_PARSER_RESULT_ERROR;
 
 	lines = g_strsplit_set (contents, "\r\n", 0);
 	g_free (contents);
 
 	for (i = 0; lines[i] != NULL; i++) {
 		/* Empty line */
-		if (totem_pl_parser_line_is_empty (lines[i]) != FALSE)
+		if (xplayer_pl_parser_line_is_empty (lines[i]) != FALSE)
 			continue;
 
-		retval = TOTEM_PL_PARSER_RESULT_SUCCESS;
+		retval = XPLAYER_PL_PARSER_RESULT_SUCCESS;
 
 		/* Either it's a URI, or it has a proper path ... */
 		if (strstr(lines[i], "://") != NULL
@@ -277,8 +277,8 @@ totem_pl_parser_add_ram (TotemPlParser *parser, GFile *file, TotemPlParseData *p
 
 			line_file = g_file_new_for_uri (lines[i]);
 			/* .ram files can contain .smil entries */
-			if (totem_pl_parser_parse_internal (parser, line_file, NULL, parse_data) != TOTEM_PL_PARSER_RESULT_SUCCESS)
-				totem_pl_parser_parse_ram_uri (parser, lines[i]);
+			if (xplayer_pl_parser_parse_internal (parser, line_file, NULL, parse_data) != XPLAYER_PL_PARSER_RESULT_SUCCESS)
+				xplayer_pl_parser_parse_ram_uri (parser, lines[i]);
 			g_object_unref (line_file);
 		} else if (strcmp (lines[i], "--stop--") == 0) {
 			/* For Real Media playlists, handle the stop command */
@@ -289,13 +289,13 @@ totem_pl_parser_add_ram (TotemPlParser *parser, GFile *file, TotemPlParseData *p
 			char *base;
 
 			/* Try with a base */
-			base = totem_pl_parser_base_uri (uri);
+			base = xplayer_pl_parser_base_uri (uri);
 
-			if (totem_pl_parser_parse_internal (parser, lines[i], base) != TOTEM_PL_PARSER_RESULT_SUCCESS)
+			if (xplayer_pl_parser_parse_internal (parser, lines[i], base) != XPLAYER_PL_PARSER_RESULT_SUCCESS)
 			{
 				char *fullpath;
 				fullpath = g_strdup_printf ("%s/%s", base, lines[i]);
-				totem_pl_parser_parse_ram_uri (parser, fullpath);
+				xplayer_pl_parser_parse_ram_uri (parser, fullpath);
 				g_free (fullpath);
 			}
 			g_free (base);
@@ -309,7 +309,7 @@ totem_pl_parser_add_ram (TotemPlParser *parser, GFile *file, TotemPlParseData *p
 }
 
 static const char *
-totem_pl_parser_get_extinfo_title (const char *extinfo)
+xplayer_pl_parser_get_extinfo_title (const char *extinfo)
 {
 	const char *res, *sep;
 
@@ -334,7 +334,7 @@ totem_pl_parser_get_extinfo_title (const char *extinfo)
 }
 
 static char *
-totem_pl_parser_get_extinfo_length (const char *extinfo)
+xplayer_pl_parser_get_extinfo_length (const char *extinfo)
 {
 	char *res, **items;
 
@@ -357,14 +357,14 @@ totem_pl_parser_get_extinfo_length (const char *extinfo)
 	return res;
 }
 
-TotemPlParserResult
-totem_pl_parser_add_m3u (TotemPlParser *parser,
+XplayerPlParserResult
+xplayer_pl_parser_add_m3u (XplayerPlParser *parser,
 			 GFile *file,
 			 GFile *base_file,
-			 TotemPlParseData *parse_data,
+			 XplayerPlParseData *parse_data,
 			 gpointer data)
 {
-	TotemPlParserResult retval = TOTEM_PL_PARSER_RESULT_UNHANDLED;
+	XplayerPlParserResult retval = XPLAYER_PL_PARSER_RESULT_UNHANDLED;
 	char *contents, **lines;
 	gsize size;
 	guint i, num_lines;
@@ -373,13 +373,13 @@ totem_pl_parser_add_m3u (TotemPlParser *parser,
 	char *pl_uri;
 
 	if (g_file_load_contents (file, NULL, &contents, &size, NULL, NULL) == FALSE)
-		return TOTEM_PL_PARSER_RESULT_ERROR;
+		return XPLAYER_PL_PARSER_RESULT_ERROR;
 
 	/* .pls files with a .m3u extension, the nasties */
 	if (g_str_has_prefix (contents, "[playlist]") != FALSE
 			|| g_str_has_prefix (contents, "[Playlist]") != FALSE
 			|| g_str_has_prefix (contents, "[PLAYLIST]") != FALSE) {
-		retval = totem_pl_parser_add_pls_with_contents (parser, file, base_file, contents, parse_data);
+		retval = xplayer_pl_parser_add_pls_with_contents (parser, file, base_file, contents, parse_data);
 		g_free (contents);
 		return retval;
 	}
@@ -411,10 +411,10 @@ totem_pl_parser_add_m3u (TotemPlParser *parser,
 
 	/* Send out the playlist start and get crackin' */
 	pl_uri = g_file_get_uri (file);
-	totem_pl_parser_add_uri (parser,
-				 TOTEM_PL_PARSER_FIELD_IS_PLAYLIST, TRUE,
-				 TOTEM_PL_PARSER_FIELD_URI, pl_uri,
-				 TOTEM_PL_PARSER_FIELD_CONTENT_TYPE, "audio/x-mpegurl",
+	xplayer_pl_parser_add_uri (parser,
+				 XPLAYER_PL_PARSER_FIELD_IS_PLAYLIST, TRUE,
+				 XPLAYER_PL_PARSER_FIELD_URI, pl_uri,
+				 XPLAYER_PL_PARSER_FIELD_CONTENT_TYPE, "audio/x-mpegurl",
 				 NULL);
 
 	for (i = 0; lines[i] != NULL; i++) {
@@ -427,7 +427,7 @@ totem_pl_parser_add_m3u (TotemPlParser *parser,
 		if (line[0] == '\0')
 			continue;
 
-		retval = TOTEM_PL_PARSER_RESULT_SUCCESS;
+		retval = XPLAYER_PL_PARSER_RESULT_SUCCESS;
 
 		/* Ignore leading spaces */
 		for (; g_ascii_isspace (line[0]); line++)
@@ -440,9 +440,9 @@ totem_pl_parser_add_m3u (TotemPlParser *parser,
 			continue;
 		}
 
-		length = totem_pl_parser_get_extinfo_length (extinfo);
+		length = xplayer_pl_parser_get_extinfo_length (extinfo);
 		if (length != NULL)
-			length_num = totem_pl_parser_parse_duration (length, totem_pl_parser_is_debugging_enabled (parser));
+			length_num = xplayer_pl_parser_parse_duration (length, xplayer_pl_parser_is_debugging_enabled (parser));
 		g_free (length);
 
 		/* Either it's a URI, or it has a proper path ... */
@@ -452,9 +452,9 @@ totem_pl_parser_add_m3u (TotemPlParser *parser,
 
 			uri = g_file_new_for_commandline_arg (line);
 			if (length_num < 0 ||
-			    totem_pl_parser_parse_internal (parser, uri, NULL, parse_data) != TOTEM_PL_PARSER_RESULT_SUCCESS) {
-				totem_pl_parser_add_one_uri (parser, line,
-						totem_pl_parser_get_extinfo_title (extinfo));
+			    xplayer_pl_parser_parse_internal (parser, uri, NULL, parse_data) != XPLAYER_PL_PARSER_RESULT_SUCCESS) {
+				xplayer_pl_parser_add_one_uri (parser, line,
+						xplayer_pl_parser_get_extinfo_title (extinfo));
 			}
 			g_object_unref (uri);
 			extinfo = NULL;
@@ -467,8 +467,8 @@ totem_pl_parser_add_m3u (TotemPlParser *parser,
 			lines[i] = g_strdelimit (lines[i], "\\", '/');
 			/* + 2, skip drive letter */
 			uri = g_file_get_child (base_file, line + 2);
-			totem_pl_parser_add_one_file (parser, uri,
-						     totem_pl_parser_get_extinfo_title (extinfo));
+			xplayer_pl_parser_add_one_file (parser, uri,
+						     xplayer_pl_parser_get_extinfo_title (extinfo));
 			g_object_unref (uri);
 			extinfo = NULL;
 		} else if (line[0] == '\\' && line[1] == '\\') {
@@ -481,8 +481,8 @@ totem_pl_parser_add_m3u (TotemPlParser *parser,
 			lines[i] = g_strdelimit (lines[i], "\\", '/');
 			tmpuri = g_strjoin (NULL, "smb:", line, NULL);
 
-			totem_pl_parser_add_one_uri (parser, line,
-					totem_pl_parser_get_extinfo_title (extinfo));
+			xplayer_pl_parser_add_one_uri (parser, line,
+					xplayer_pl_parser_get_extinfo_title (extinfo));
 			extinfo = NULL;
 
 			g_free (tmpuri);
@@ -497,8 +497,8 @@ totem_pl_parser_add_m3u (TotemPlParser *parser,
 				lines[i] = g_strdelimit (lines[i], "\\", '/');
 			uri = g_file_get_child (_base_file, line);
 			g_object_unref (_base_file);
-			totem_pl_parser_add_one_file (parser, uri,
-						     totem_pl_parser_get_extinfo_title (extinfo));
+			xplayer_pl_parser_add_one_file (parser, uri,
+						     xplayer_pl_parser_get_extinfo_title (extinfo));
 			g_object_unref (uri);
 			extinfo = NULL;
 		}
@@ -506,44 +506,44 @@ totem_pl_parser_add_m3u (TotemPlParser *parser,
 
 	g_strfreev (lines);
 
-	totem_pl_parser_playlist_end (parser, pl_uri);
+	xplayer_pl_parser_playlist_end (parser, pl_uri);
 	g_free (pl_uri);
 
 	return retval;
 }
 
-TotemPlParserResult
-totem_pl_parser_add_m4u (TotemPlParser *parser,
+XplayerPlParserResult
+xplayer_pl_parser_add_m4u (XplayerPlParser *parser,
 			 GFile *file,
 			 GFile *base_file,
-			 TotemPlParseData *parse_data,
+			 XplayerPlParseData *parse_data,
 			 gpointer data)
 {
-	return totem_pl_parser_add_m3u (parser, file,
+	return xplayer_pl_parser_add_m3u (parser, file,
 					base_file, parse_data, data);
 }
 
-TotemPlParserResult
-totem_pl_parser_add_ra (TotemPlParser *parser,
+XplayerPlParserResult
+xplayer_pl_parser_add_ra (XplayerPlParser *parser,
 			GFile *file,
 			GFile *base_file,
-			TotemPlParseData *parse_data,
+			XplayerPlParseData *parse_data,
 			gpointer data)
 {
-	if (data == NULL || totem_pl_parser_is_uri_list (data, strlen (data)) == NULL) {
-		totem_pl_parser_add_one_file (parser, file, NULL);
-		return TOTEM_PL_PARSER_RESULT_SUCCESS;
+	if (data == NULL || xplayer_pl_parser_is_uri_list (data, strlen (data)) == NULL) {
+		xplayer_pl_parser_add_one_file (parser, file, NULL);
+		return XPLAYER_PL_PARSER_RESULT_SUCCESS;
 	}
 
-	return totem_pl_parser_add_ram (parser, file, parse_data, NULL);
+	return xplayer_pl_parser_add_ram (parser, file, parse_data, NULL);
 }
 
-#endif /* !TOTEM_PL_PARSER_MINI */
+#endif /* !XPLAYER_PL_PARSER_MINI */
 
 #define CHECK_LEN if (i >= len) { return NULL; }
 
 const char *
-totem_pl_parser_is_uri_list (const char *data, gsize len)
+xplayer_pl_parser_is_uri_list (const char *data, gsize len)
 {
 	guint i = 0;
 

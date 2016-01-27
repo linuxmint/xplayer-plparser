@@ -1,6 +1,6 @@
-# Bangla Translation of the totem-pl-parser
+# Bangla Translation of the xplayer-pl-parser
 # Copyright (C) 2003, 2006, Free Software Foundation, Inc.
-# This file is distributed under the same license as the TOTEM package.
+# This file is distributed under the same license as the XPLAYER package.
 # Runa Bhattacharjee<runa77@softhome.net>, 2003.
 # Khandakar Mujahidul Islam <suzan@bengalinux.org>, 2006.
 # Israt Jahan<israt@ankur.org.bd>, 2010
@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bn\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=totem&component=playlist parser\n"
+"product=xplayer&component=playlist parser\n"
 "POT-Creation-Date: 2010-03-07 23:24+0000\n"
 "PO-Revision-Date: 2010-03-23 15:25+0600\n"
 "Last-Translator: Sadia Afroz <sadia@ankur.org.bd>\n"
@@ -21,35 +21,35 @@ msgstr ""
 "X-Generator: KBabel 1.9.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../plparse/totem-disc.c:359 ../plparse/totem-disc.c:503
+#: ../plparse/xplayer-disc.c:359 ../plparse/xplayer-disc.c:503
 #, c-format
 msgid "Failed to mount %s."
 msgstr "%s মাউন্ট করতে ব্যর্থ।"
 
-#: ../plparse/totem-disc.c:392
+#: ../plparse/xplayer-disc.c:392
 #, c-format
 msgid "No media in drive for device '%s'."
 msgstr "'%s' ডিভাইসের জন্য ড্রাইভে কোনো মিডিয়া নেই।"
 
-#: ../plparse/totem-disc.c:446
+#: ../plparse/xplayer-disc.c:446
 #, c-format
 msgid "Please check that a disc is present in the drive."
 msgstr "অনুগ্রহ করে পরীক্ষা করুন যে ড্রাইভে ডিস্ক বিদ্যমান আছে কিনা।"
 
-#: ../plparse/totem-disc.c:889
+#: ../plparse/xplayer-disc.c:889
 msgid "Audio CD"
 msgstr "অডিও CD"
 
 # ঠিক করেন
-#: ../plparse/totem-disc.c:891
+#: ../plparse/xplayer-disc.c:891
 msgid "Video CD"
 msgstr "ভিডিও CD"
 
-#: ../plparse/totem-disc.c:893
+#: ../plparse/xplayer-disc.c:893
 msgid "DVD"
 msgstr "DVD"
 
-#: ../plparse/totem-disc.c:895
+#: ../plparse/xplayer-disc.c:895
 msgid "Digital Television"
 msgstr "ডিজিটাল টেলিভিশন"
 
@@ -447,7 +447,7 @@ msgstr "ডিজিটাল টেলিভিশন"
 #~ msgstr "স্বয়ংক্রিয়রূপে অ্যাস্পেক্টের অনুপাত নির্ধারণ করে"
 
 # msgstr "_অ্যাস্পেক্টের (আবয়ব) অনুপাত পরিবর্তন করা হোক"
-# ../data/totem.glade.ue:h:71
+# ../data/xplayer.glade.ue:h:71
 #~ msgid "Sets square aspect ratio"
 #~ msgstr "চতুষ্কোন অ্যাস্পেক্ট অনুপাত নির্ধারণ করে"
 
@@ -519,11 +519,11 @@ msgstr "ডিজিটাল টেলিভিশন"
 
 # বাজানো হোক, দেখানো হোক
 # msgstr "চলচ্চিত্র ও গান চালানো হোক" <-- Short cut ;-)
-#~ msgid "Totem Movie Player"
-#~ msgstr "Totem মুভি প্লেয়ার"
+#~ msgid "Xplayer Movie Player"
+#~ msgstr "Xplayer মুভি প্লেয়ার"
 
-#~ msgid "Totem Preferences"
-#~ msgstr "Totem সংক্রান্ত বৈশিষ্ট্য"
+#~ msgid "Xplayer Preferences"
+#~ msgstr "Xplayer সংক্রান্ত বৈশিষ্ট্য"
 
 #~ msgid "Tv-out in fullscreen by Nvidia (NTSC)"
 #~ msgstr "Nvidia সহযোগে সম্পূর্ণ পর্দা জুড়ে টেলিভিশান-আউটপুট (NTSC)"
@@ -840,8 +840,8 @@ msgstr "ডিজিটাল টেলিভিশন"
 #~ msgid "Couldn't load the '%s' interface."
 #~ msgstr "'%s' ইন্টারফেস লোড করা যায়নি।"
 
-#~ msgid "Make sure that Totem is properly installed."
-#~ msgstr "Totem সঠিকভাবে ইনস্টল করা হয়েছে কিনা পরীক্ষা করুন।"
+#~ msgid "Make sure that Xplayer is properly installed."
+#~ msgstr "Xplayer সঠিকভাবে ইনস্টল করা হয়েছে কিনা পরীক্ষা করুন।"
 
 #~ msgid "None"
 #~ msgstr "ফাঁকা"
@@ -849,8 +849,8 @@ msgstr "ডিজিটাল টেলিভিশন"
 #~ msgid "Play Disc '%s'"
 #~ msgstr "'%s' নামক ডিস্ক চালান"
 
-#~ msgid "Totem could not play '%s'."
-#~ msgstr "Totem সহযোগে '%s' চালানো যায়নি।"
+#~ msgid "Xplayer could not play '%s'."
+#~ msgstr "Xplayer সহযোগে '%s' চালানো যায়নি।"
 
 # নিজের নামে আন্ডারস্কোর দিছেন কেন ???@@#!!!
 # msgstr "রুনা ভট্টাচার্য্য <runab77@softhome.net>" <-- ঠিক আছেনা ?
@@ -859,7 +859,7 @@ msgstr "ডিজিটাল টেলিভিশন"
 
 # বাজানো হোক, দেখানো হোক
 # msgstr "চলচ্চিত্র ও গান চালানো হোক" <-- Short cut ;-)
-#~ msgid "Totem Mozilla Plugin"
+#~ msgid "Xplayer Mozilla Plugin"
 #~ msgstr "টোটেম মোজিলা প্লাগ-ইন"
 
 #~ msgid "Copyright © 2002-2006 Bastien Nocera"
@@ -883,7 +883,7 @@ msgstr "ডিজিটাল টেলিভিশন"
 #~ msgid "Menu"
 #~ msgstr "মেনু"
 
-#~ msgid "The Totem plugin could not startup."
+#~ msgid "The Xplayer plugin could not startup."
 #~ msgstr "টোটেম প্লাগ-ইন আরম্ভ করতে ব্যর্থ।"
 
 #~ msgid "No reason."
@@ -892,7 +892,7 @@ msgstr "ডিজিটাল টেলিভিশন"
 #~ msgid "Could not initialise the thread-safe libraries."
 #~ msgstr "থ্রেড-সেফ লাইব্রেরি আরম্ভ করা যায়নি।"
 
-#~ msgid "Verify your system installation. The Totem plugin will now exit."
+#~ msgid "Verify your system installation. The Xplayer plugin will now exit."
 #~ msgstr "আপনার সিস্টেমের ইনস্টলেশন পরীক্ষা করুন। টোটেম প্লাগ-ইন এখন বন্ধ করা হবে।"
 
 #~ msgid "Backend options"
@@ -978,17 +978,17 @@ msgstr "ডিজিটাল টেলিভিশন"
 #~ msgstr "ভিজুয়াল ইফেক্ট সক্রিয় করা হবে কি?"
 
 #~ msgid ""
-#~ "It seems you are running Totem remotely.\n"
+#~ "It seems you are running Xplayer remotely.\n"
 #~ "Are you sure you want to enable the visual effects?"
 #~ msgstr ""
-#~ "সম্ভবত আপনি দূরবর্তী অবস্থান থেকে Totem চালাচ্ছেন।\n"
+#~ "সম্ভবত আপনি দূরবর্তী অবস্থান থেকে Xplayer চালাচ্ছেন।\n"
 #~ "আপনি কি নিশ্চিতরূপে ভিজুয়াল ইফেক্ট সক্রিয় করতে ইচ্ছুক?"
 
 #~ msgid ""
 #~ "The change of this setting will only take effect for the next movie, or "
-#~ "when Totem is restarted."
+#~ "when Xplayer is restarted."
 #~ msgstr ""
-#~ "পরবর্তী চলচ্চিত্র অথবা Totem পুনরায় আরম্ভ করা হলে এই বৈশিষ্ট্যের পরিবর্তনগুলি "
+#~ "পরবর্তী চলচ্চিত্র অথবা Xplayer পুনরায় আরম্ভ করা হলে এই বৈশিষ্ট্যের পরিবর্তনগুলি "
 #~ "প্রয়োগ করা হবে।"
 
 #~ msgid ""
@@ -1002,10 +1002,10 @@ msgstr "ডিজিটাল টেলিভিশন"
 #~ msgstr "ভিজুয়াল ইফেক্ট সংক্রান্ত পরিবর্তন প্রয়োগ করার জন্য রি-স্টার্ট করা আবশ্যক।"
 
 #~ msgid ""
-#~ "The change of audio output type will only take effect when Totem is "
+#~ "The change of audio output type will only take effect when Xplayer is "
 #~ "restarted."
 #~ msgstr ""
-#~ "অডিও আউটপুটের প্রকৃতি সংক্রান্ত পরিবর্তনগুলি প্রয়োগ করার জন্য Totem পুনরায় আরম্ভ করা "
+#~ "অডিও আউটপুটের প্রকৃতি সংক্রান্ত পরিবর্তনগুলি প্রয়োগ করার জন্য Xplayer পুনরায় আরম্ভ করা "
 #~ "আবশ্যক।"
 
 # msgstr "এই পাসওয়ার্ডটি মনে রাখা হবে"
@@ -1183,29 +1183,29 @@ msgstr "ডিজিটাল টেলিভিশন"
 #~ msgid "Paused"
 #~ msgstr "থামানো হয়েছে"
 
-#~ msgid "Totem could not eject the optical media."
-#~ msgstr "Totem'র দ্বারা অপটিকাল মিডিয়া বহিষ্কার করা সম্ভব হয়নি।"
+#~ msgid "Xplayer could not eject the optical media."
+#~ msgstr "Xplayer'র দ্বারা অপটিকাল মিডিয়া বহিষ্কার করা সম্ভব হয়নি।"
 
 #~ msgid ""
-#~ "Totem cannot play this type of media (%s) because you do not have the "
+#~ "Xplayer cannot play this type of media (%s) because you do not have the "
 #~ "appropriate plugins to handle it."
 #~ msgstr ""
-#~ "সঠিক প্লাগ-ইন উপস্থিত না থাকার ফলে Totem'র পক্ষে এই ধরনের মিডিয়া (%s) চালানো "
+#~ "সঠিক প্লাগ-ইন উপস্থিত না থাকার ফলে Xplayer'র পক্ষে এই ধরনের মিডিয়া (%s) চালানো "
 #~ "সম্ভব নয়।"
 
 #~ msgid ""
-#~ "Please install the necessary plugins and restart Totem to be able to play "
+#~ "Please install the necessary plugins and restart Xplayer to be able to play "
 #~ "this media."
-#~ msgstr "এই মিডিয়া চালানোর জন্য সঠিক প্লাগ-ইন ইনস্টল করে Totem পুনরায় চালু করুন।"
+#~ msgstr "এই মিডিয়া চালানোর জন্য সঠিক প্লাগ-ইন ইনস্টল করে Xplayer পুনরায় চালু করুন।"
 
 # msgstr ""
 # "সঠিক প্লাগিন না থাকায় টোটেম এধরনের মিডিয়া চালাতে অক্ষম।\n"
 # "এই মিডিয়া ব্যবহারের জন্য সঠিক প্লাগিন ইনস্টল করে পুনরায় টোটেম চালু করুন।"
 #~ msgid ""
-#~ "Totem could not play this media (%s) although a plugin is present to "
+#~ "Xplayer could not play this media (%s) although a plugin is present to "
 #~ "handle it."
 #~ msgstr ""
-#~ "সঠিক প্লাগ-ইন উপস্থিত থাকা সত্বেও Totem'র দ্বারা এই মিডিয়া (%s) চালানো সম্ভব "
+#~ "সঠিক প্লাগ-ইন উপস্থিত থাকা সত্বেও Xplayer'র দ্বারা এই মিডিয়া (%s) চালানো সম্ভব "
 #~ "হয়নি।"
 
 # msgstr ""
@@ -1217,8 +1217,8 @@ msgstr "ডিজিটাল টেলিভিশন"
 #~ msgstr ""
 #~ "ড্রাইভে ডিস্ক আছে কিনা এবং তা সঠিকভাবে কনফিগার করা হয়েছে কিনা পরীক্ষা করুন।"
 
-#~ msgid "Totem was not able to play this disc."
-#~ msgstr "Totem'র দ্বারা এই ডিস্ক চালানো সম্ভব হয়নি।"
+#~ msgid "Xplayer was not able to play this disc."
+#~ msgstr "Xplayer'র দ্বারা এই ডিস্ক চালানো সম্ভব হয়নি।"
 
 #~ msgid "No File"
 #~ msgstr "ফাইল নেই।"
@@ -1232,8 +1232,8 @@ msgstr "ডিজিটাল টেলিভিশন"
 #~ msgid "Open Location..."
 #~ msgstr "অবস্থান খুলুন..."
 
-#~ msgid "Totem could not display the help contents."
-#~ msgstr "Totem'র দ্বারা সহায়িকার বিষয় বস্তু প্রদর্শন করা যায়নি।"
+#~ msgid "Xplayer could not display the help contents."
+#~ msgstr "Xplayer'র দ্বারা সহায়িকার বিষয় বস্তু প্রদর্শন করা যায়নি।"
 
 #~ msgid "GTK+"
 #~ msgstr "GTK+"
@@ -1246,28 +1246,28 @@ msgstr "ডিজিটাল টেলিভিশন"
 #~ msgid "Movie Player using %s and %s"
 #~ msgstr "%s ও %s প্রয়োগকারী মুভি প্লেয়ার"
 
-#~ msgid "Totem could not get a screenshot of that film."
-#~ msgstr "Totem'র দ্বারা চলচ্চিত্র চালনার ছবি গ্রহণ করা সম্ভব হয়নি।"
+#~ msgid "Xplayer could not get a screenshot of that film."
+#~ msgstr "Xplayer'র দ্বারা চলচ্চিত্র চালনার ছবি গ্রহণ করা সম্ভব হয়নি।"
 
 #~ msgid "This is not supposed to happen; please file a bug report."
 #~ msgstr "এই আচরণ প্রত্যাশিত নয়; অনুগ্রহ করে বাগ-রিপোর্ট নথিভুক্ত করুন"
 
 # পরীক্ষা
-#~ msgid "Totem could not seek in '%s'."
-#~ msgstr "Totem'র দ্বারা '%s'-এ অনুসন্ধান করা যায়নি।"
+#~ msgid "Xplayer could not seek in '%s'."
+#~ msgstr "Xplayer'র দ্বারা '%s'-এ অনুসন্ধান করা যায়নি।"
 
-#~ msgid "Totem could not startup."
-#~ msgstr "Totem আরম্ভ করা যায়নি।"
+#~ msgid "Xplayer could not startup."
+#~ msgstr "Xplayer আরম্ভ করা যায়নি।"
 
 #~ msgid "Could not initialize the thread-safe libraries."
 #~ msgstr "থ্রেড-সেফ লাইব্রেরি চালু করা যায়নি।"
 
-#~ msgid "Verify your system installation. Totem will now exit."
-#~ msgstr "আপনার সিস্টেমের ইনস্টলেশন পরীক্ষা করুন। Totem এখন বন্ধ করা হবে।"
+#~ msgid "Verify your system installation. Xplayer will now exit."
+#~ msgstr "আপনার সিস্টেমের ইনস্টলেশন পরীক্ষা করুন। Xplayer এখন বন্ধ করা হবে।"
 
 # পরীক্ষা
-#~ msgid "Totem could not initialize the configuration engine."
-#~ msgstr "Totem'র দ্বারা এই কনফিগারেশন ইঞ্জিনটি আরম্ভ করা যায়নি।"
+#~ msgid "Xplayer could not initialize the configuration engine."
+#~ msgstr "Xplayer'র দ্বারা এই কনফিগারেশন ইঞ্জিনটি আরম্ভ করা যায়নি।"
 
 #~ msgid "Make sure that GNOME is properly installed."
 #~ msgstr "GNOME সঠিকরূপে ইনস্টল করা হয়েছে কিনা পরীক্ষা করুন।"

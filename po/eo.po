@@ -1,14 +1,14 @@
-# Esperanto translation for totem-pl-parser
+# Esperanto translation for xplayer-pl-parser
 # Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
-# This file is distributed under the same license as the totem-pl-parser package.
+# This file is distributed under the same license as the xplayer-pl-parser package.
 # Donald ROGERS, <dero2648@clear.net.nz>, 2010.
 # Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>, 2010.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: totem-pl-parser\n"
+"Project-Id-Version: xplayer-pl-parser\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=totem&component=playlist parser\n"
+"product=xplayer&component=playlist parser\n"
 "POT-Creation-Date: 2010-06-27 22:31+0000\n"
 "PO-Revision-Date: 2010-07-02 20:25+0200\n"
 "Last-Translator: Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>\n"
@@ -20,33 +20,33 @@ msgstr ""
 "X-Generator: Launchpad (build Unknown)\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: ../plparse/totem-disc.c:359 ../plparse/totem-disc.c:503
+#: ../plparse/xplayer-disc.c:359 ../plparse/xplayer-disc.c:503
 #, c-format
 msgid "Failed to mount %s."
 msgstr "Malsukcesis surmeto de %s."
 
-#: ../plparse/totem-disc.c:392
+#: ../plparse/xplayer-disc.c:392
 #, c-format
 msgid "No media in drive for device '%s'."
 msgstr "Mankas datumportilo en ingo de aparato '%s'."
 
-#: ../plparse/totem-disc.c:446
+#: ../plparse/xplayer-disc.c:446
 #, c-format
 msgid "Please check that a disc is present in the drive."
 msgstr "Bonvolu kontroli ke disko estas en la aparato."
 
-#: ../plparse/totem-disc.c:889
+#: ../plparse/xplayer-disc.c:889
 msgid "Audio CD"
 msgstr "Son-KD"
 
-#: ../plparse/totem-disc.c:891
+#: ../plparse/xplayer-disc.c:891
 msgid "Video CD"
 msgstr "Video-KD"
 
-#: ../plparse/totem-disc.c:893
+#: ../plparse/xplayer-disc.c:893
 msgid "DVD"
 msgstr "DVD"
 
-#: ../plparse/totem-disc.c:895
+#: ../plparse/xplayer-disc.c:895
 msgid "Digital Television"
 msgstr "Cifereca Televido"

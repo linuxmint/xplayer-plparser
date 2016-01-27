@@ -43,7 +43,7 @@
 #define LOG
 */
 
-#include <totem_internal.h>
+#include <xplayer_internal.h>
 #ifdef XINE_COMPILE
 #include <xine/xineutils.h>
 #else

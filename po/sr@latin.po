@@ -1,14 +1,14 @@
-# Serbian translation of totem
+# Serbian translation of xplayer
 # Courtesy of Prevod.org team (http://prevod.org/) -- 2003—2014.
-# This file is distributed under the same license as the totem package.
+# This file is distributed under the same license as the xplayer package.
 # Veljko M. Stanojević <veljko@vms.homelinux.net>
 # Danilo Šegan <danilo@gnome.org>, 2005
 # Andrija Zarić <andrija@gmail.com>, 2005
 # Miroslav Nikolić <miroslavnikolic@rocketmail.com>, 2014.
 msgid ""
 msgstr ""
-"Project-Id-Version: totem\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=totem&"
+"Project-Id-Version: xplayer\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&"
 "keywords=I18N+L10N&component=playlist parser\n"
 "POT-Creation-Date: 2014-02-03 12:30+0000\n"
 "PO-Revision-Date: 2014-02-03 17:58+0200\n"
@@ -22,38 +22,38 @@ msgstr ""
 "n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Project-Style: gnome\n"
 
-#: ../plparse/totem-disc.c:276 ../plparse/totem-disc.c:289
-#: ../plparse/totem-disc.c:533
+#: ../plparse/xplayer-disc.c:276 ../plparse/xplayer-disc.c:289
+#: ../plparse/xplayer-disc.c:533
 #, c-format
 msgid "Failed to mount %s."
 msgstr "Nisam uspeo da prikačim „%s“."
 
-#: ../plparse/totem-disc.c:418
+#: ../plparse/xplayer-disc.c:418
 #, c-format
 msgid "No media in drive for device '%s'."
 msgstr "Nije ubačen medijum u uređaj „%s“."
 
-#: ../plparse/totem-disc.c:476
+#: ../plparse/xplayer-disc.c:476
 #, c-format
 msgid "Please check that a disc is present in the drive."
 msgstr "Proverite da li je disk prisutan u uređaju."
 
-#: ../plparse/totem-disc.c:947
+#: ../plparse/xplayer-disc.c:947
 msgid "Audio CD"
 msgstr "Zvučni CD"
 
-#: ../plparse/totem-disc.c:949
+#: ../plparse/xplayer-disc.c:949
 msgid "Video CD"
 msgstr "Video CD"
 
-#: ../plparse/totem-disc.c:951
+#: ../plparse/xplayer-disc.c:951
 msgid "DVD"
 msgstr "DVD"
 
-#: ../plparse/totem-disc.c:953
+#: ../plparse/xplayer-disc.c:953
 msgid "Digital Television"
 msgstr "Digitalna televizija"
 
-#: ../plparse/totem-disc.c:955
+#: ../plparse/xplayer-disc.c:955
 msgid "Blu-ray"
 msgstr "Blu-rej"

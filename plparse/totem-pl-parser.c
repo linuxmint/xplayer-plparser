@@ -21,24 +21,24 @@
  */
 
 /**
- * SECTION:totem-pl-parser
+ * SECTION:xplayer-pl-parser
  * @short_description: playlist parser
  * @stability: Stable
- * @include: totem-pl-parser.h
+ * @include: xplayer-pl-parser.h
  *
- * #TotemPlParser is a general-purpose playlist parser and writer, with
- * support for several different types of playlist. Note that totem-pl-parser requires a main loop
- * to operate properly (e.g. for the #TotemPlParser::entry-parsed signal to be emitted).
+ * #XplayerPlParser is a general-purpose playlist parser and writer, with
+ * support for several different types of playlist. Note that xplayer-pl-parser requires a main loop
+ * to operate properly (e.g. for the #XplayerPlParser::entry-parsed signal to be emitted).
  *
  * <example>
  *  <title>Reading a Playlist</title>
  *  <programlisting>
- * TotemPlParser *pl = totem_pl_parser_new ();
+ * XplayerPlParser *pl = xplayer_pl_parser_new ();
  * g_object_set (pl, "recurse", FALSE, "disable-unsafe", TRUE, NULL);
  * g_signal_connect (G_OBJECT (pl), "playlist-started", G_CALLBACK (playlist_started), NULL);
  * g_signal_connect (G_OBJECT (pl), "entry-parsed", G_CALLBACK (entry_parsed), NULL);
  *
- * if (totem_pl_parser_parse (pl, "http://example.com/playlist.pls", FALSE) != TOTEM_PL_PARSER_RESULT_SUCCESS)
+ * if (xplayer_pl_parser_parse (pl, "http://example.com/playlist.pls", FALSE) != XPLAYER_PL_PARSER_RESULT_SUCCESS)
  * 	g_error ("Playlist parsing failed.");
  *
  * g_object_unref (pl);
@@ -48,19 +48,19 @@
  * <example>
  *  <title>Reading a Playlist Asynchronously</title>
  *  <programlisting>
- * TotemPlParser *pl = totem_pl_parser_new ();
+ * XplayerPlParser *pl = xplayer_pl_parser_new ();
  * g_object_set (pl, "recurse", FALSE, "disable-unsafe", TRUE, NULL);
  * g_signal_connect (G_OBJECT (pl), "playlist-started", G_CALLBACK (playlist_started), NULL);
  * g_signal_connect (G_OBJECT (pl), "entry-parsed", G_CALLBACK (entry_parsed), NULL);
  *
- * totem_pl_parser_parse_async (pl, "http://example.com/playlist.pls", FALSE, NULL, parse_cb, NULL);
+ * xplayer_pl_parser_parse_async (pl, "http://example.com/playlist.pls", FALSE, NULL, parse_cb, NULL);
  * g_object_unref (pl);
  *
  * static void
- * parse_cb (TotemPlParser *parser, GAsyncResult *result, gpointer user_data)
+ * parse_cb (XplayerPlParser *parser, GAsyncResult *result, gpointer user_data)
  * {
  *	GError *error = NULL;
- * 	if (totem_pl_parser_parse_finish (parser, result, &error) != TOTEM_PL_PARSER_RESULT_SUCCESS) {
+ * 	if (xplayer_pl_parser_parse_finish (parser, result, &error) != XPLAYER_PL_PARSER_RESULT_SUCCESS) {
  * 		g_error ("Playlist parsing failed: %s", error->message);
  * 		g_error_free (error);
  * 	}
@@ -72,9 +72,9 @@
  *  <title>Getting Metadata from Entries</title>
  *  <programlisting>
  * static void
- * entry_parsed (TotemPlParser *parser, const gchar *uri, GHashTable *metadata, gpointer user_data)
+ * entry_parsed (XplayerPlParser *parser, const gchar *uri, GHashTable *metadata, gpointer user_data)
  * {
- * 	gchar *title = g_hash_table_lookup (metadata, TOTEM_PL_PARSER_FIELD_TITLE);
+ * 	gchar *title = g_hash_table_lookup (metadata, XPLAYER_PL_PARSER_FIELD_TITLE);
  * 	if (title != NULL)
  * 		g_message ("Entry title: %s", title);
  * 	else
@@ -88,28 +88,28 @@
  *  <title>Writing a Playlist</title>
  *  <programlisting>
  * {
- * 	TotemPlParser *pl;
- * 	TotemPlPlaylist *playlist;
- * 	TotemPlPlaylistIter iter;
+ * 	XplayerPlParser *pl;
+ * 	XplayerPlPlaylist *playlist;
+ * 	XplayerPlPlaylistIter iter;
  * 	GFile *file;
  *
- * 	pl = totem_pl_parser_new ();
- * 	playlist = totem_pl_playlist_new ();
+ * 	pl = xplayer_pl_parser_new ();
+ * 	playlist = xplayer_pl_playlist_new ();
  * 	file = g_file_new_for_path ("/tmp/playlist.pls");
  *
- * 	totem_pl_playlist_append (playlist, &iter);
- * 	totem_pl_playlist_set (playlist, &iter,
- * 			       TOTEM_PL_PARSER_FIELD_URI, "file:///1.ogg",
- * 			       TOTEM_PL_PARSER_FIELD_TITLE, "1.ogg",
+ * 	xplayer_pl_playlist_append (playlist, &iter);
+ * 	xplayer_pl_playlist_set (playlist, &iter,
+ * 			       XPLAYER_PL_PARSER_FIELD_URI, "file:///1.ogg",
+ * 			       XPLAYER_PL_PARSER_FIELD_TITLE, "1.ogg",
  * 			       NULL);
  *
- * 	totem_pl_playlist_append (playlist, &iter);
- * 	totem_pl_playlist_set (playlist, &iter,
- * 			       TOTEM_PL_PARSER_FIELD_URI, "file:///2.ogg",
+ * 	xplayer_pl_playlist_append (playlist, &iter);
+ * 	xplayer_pl_playlist_set (playlist, &iter,
+ * 			       XPLAYER_PL_PARSER_FIELD_URI, "file:///2.ogg",
  * 			       NULL);
  *
- * 	if (totem_pl_parser_save (pl, playlist, file, "Title",
- * 				  TOTEM_PL_PARSER_PLS, NULL) != TRUE) {
+ * 	if (xplayer_pl_parser_save (pl, playlist, file, "Title",
+ * 				  XPLAYER_PL_PARSER_PLS, NULL) != TRUE) {
  * 		g_error ("Playlist writing failed.");
  * 	}
  *
@@ -129,32 +129,32 @@
 #include <glib/gi18n-lib.h>
 #include <gio/gio.h>
 
-#ifndef TOTEM_PL_PARSER_MINI
+#ifndef XPLAYER_PL_PARSER_MINI
 #include <gobject/gvaluecollector.h>
 
 #ifdef HAVE_GMIME
 #include <gmime/gmime-utils.h>
 #endif
 
-#include "totem-pl-parser.h"
-#include "totemplparser-marshal.h"
-#include "totem-disc.h"
-#endif /* !TOTEM_PL_PARSER_MINI */
+#include "xplayer-pl-parser.h"
+#include "xplayerplparser-marshal.h"
+#include "xplayer-disc.h"
+#endif /* !XPLAYER_PL_PARSER_MINI */
 
-#include "totem-pl-parser-mini.h"
-#include "totem-pl-parser-wm.h"
-#include "totem-pl-parser-qt.h"
-#include "totem-pl-parser-pls.h"
-#include "totem-pl-parser-xspf.h"
-#include "totem-pl-parser-media.h"
-#include "totem-pl-parser-smil.h"
-#include "totem-pl-parser-pla.h"
-#include "totem-pl-parser-podcast.h"
-#include "totem-pl-parser-lines.h"
-#include "totem-pl-parser-misc.h"
-#include "totem-pl-parser-private.h"
-#include "totem-pl-parser-videosite.h"
-#include "totem-pl-parser-amz.h"
+#include "xplayer-pl-parser-mini.h"
+#include "xplayer-pl-parser-wm.h"
+#include "xplayer-pl-parser-qt.h"
+#include "xplayer-pl-parser-pls.h"
+#include "xplayer-pl-parser-xspf.h"
+#include "xplayer-pl-parser-media.h"
+#include "xplayer-pl-parser-smil.h"
+#include "xplayer-pl-parser-pla.h"
+#include "xplayer-pl-parser-podcast.h"
+#include "xplayer-pl-parser-lines.h"
+#include "xplayer-pl-parser-misc.h"
+#include "xplayer-pl-parser-private.h"
+#include "xplayer-pl-parser-videosite.h"
+#include "xplayer-pl-parser-amz.h"
 
 #define READ_CHUNK_SIZE 8192
 #define RECURSE_LEVEL_MAX 4
@@ -163,22 +163,22 @@
 
 typedef const char * (*PlaylistIdenCallback) (const char *data, gsize len);
 
-#ifndef TOTEM_PL_PARSER_MINI
-typedef TotemPlParserResult (*PlaylistCallback) (TotemPlParser *parser, GFile *uri, GFile *base_file, TotemPlParseData *parse_data, gpointer data);
+#ifndef XPLAYER_PL_PARSER_MINI
+typedef XplayerPlParserResult (*PlaylistCallback) (XplayerPlParser *parser, GFile *uri, GFile *base_file, XplayerPlParseData *parse_data, gpointer data);
 #endif
 
 typedef struct {
 	const char *mimetype;
-#ifndef TOTEM_PL_PARSER_MINI
+#ifndef XPLAYER_PL_PARSER_MINI
 	PlaylistCallback func;
 #endif
 	PlaylistIdenCallback iden;
-#ifndef TOTEM_PL_PARSER_MINI
+#ifndef XPLAYER_PL_PARSER_MINI
 	guint unsafe : 1;
 #endif
 } PlaylistTypes;
 
-#ifndef TOTEM_PL_PARSER_MINI
+#ifndef XPLAYER_PL_PARSER_MINI
 #define PLAYLIST_TYPE(mime,cb,identcb,unsafe) { mime, cb, identcb, unsafe }
 #define PLAYLIST_TYPE2(mime,cb,identcb) { mime, cb, identcb }
 #define PLAYLIST_TYPE3(mime) { mime, NULL, NULL, FALSE }
@@ -190,72 +190,72 @@ typedef struct {
 
 /* These ones need a special treatment, mostly parser formats */
 static PlaylistTypes special_types[] = {
-	PLAYLIST_TYPE ("audio/x-mpegurl", totem_pl_parser_add_m3u, NULL, FALSE),
-	PLAYLIST_TYPE ("video/vnd.mpegurl", totem_pl_parser_add_m4u, NULL, FALSE),
-	PLAYLIST_TYPE ("audio/playlist", totem_pl_parser_add_m3u, NULL, FALSE),
-	PLAYLIST_TYPE ("audio/x-scpls", totem_pl_parser_add_pls, NULL, FALSE),
-	PLAYLIST_TYPE ("application/x-smil", totem_pl_parser_add_smil, NULL, FALSE),
-	PLAYLIST_TYPE ("application/smil", totem_pl_parser_add_smil, NULL, FALSE),
-	PLAYLIST_TYPE ("application/vnd.ms-wpl", totem_pl_parser_add_smil, NULL, FALSE),
-	PLAYLIST_TYPE ("video/x-ms-wvx", totem_pl_parser_add_asx, NULL, FALSE),
-	PLAYLIST_TYPE ("audio/x-ms-wax", totem_pl_parser_add_asx, NULL, FALSE),
-	PLAYLIST_TYPE ("application/xspf+xml", totem_pl_parser_add_xspf, NULL, FALSE),
-	PLAYLIST_TYPE ("text/uri-list", totem_pl_parser_add_ra, totem_pl_parser_is_uri_list, FALSE),
-	PLAYLIST_TYPE ("text/x-google-video-pointer", totem_pl_parser_add_gvp, NULL, FALSE),
-	PLAYLIST_TYPE ("text/google-video-pointer", totem_pl_parser_add_gvp, NULL, FALSE),
-	PLAYLIST_TYPE ("audio/x-iriver-pla", totem_pl_parser_add_pla, NULL, FALSE),
-	PLAYLIST_TYPE ("application/atom+xml", totem_pl_parser_add_atom, NULL, FALSE),
-	PLAYLIST_TYPE ("application/rss+xml", totem_pl_parser_add_rss, totem_pl_parser_is_rss, FALSE),
-	PLAYLIST_TYPE ("text/x-opml+xml", totem_pl_parser_add_opml, NULL, FALSE),
-	PLAYLIST_TYPE ("audio/x-amzxml", totem_pl_parser_add_amz, NULL, FALSE),
-#ifndef TOTEM_PL_PARSER_MINI
-	PLAYLIST_TYPE ("application/x-desktop", totem_pl_parser_add_desktop, NULL, TRUE),
-	PLAYLIST_TYPE ("application/x-gnome-app-info", totem_pl_parser_add_desktop, NULL, TRUE),
-	PLAYLIST_TYPE ("application/x-cd-image", totem_pl_parser_add_iso, NULL, TRUE),
-	PLAYLIST_TYPE ("application/x-extension-img", totem_pl_parser_add_iso, NULL, TRUE),
-	PLAYLIST_TYPE ("application/x-cue", totem_pl_parser_add_cue, NULL, TRUE),
-	PLAYLIST_TYPE (DIR_MIME_TYPE, totem_pl_parser_add_directory, NULL, TRUE),
-	PLAYLIST_TYPE (BLOCK_DEVICE_TYPE, totem_pl_parser_add_block, NULL, TRUE),
+	PLAYLIST_TYPE ("audio/x-mpegurl", xplayer_pl_parser_add_m3u, NULL, FALSE),
+	PLAYLIST_TYPE ("video/vnd.mpegurl", xplayer_pl_parser_add_m4u, NULL, FALSE),
+	PLAYLIST_TYPE ("audio/playlist", xplayer_pl_parser_add_m3u, NULL, FALSE),
+	PLAYLIST_TYPE ("audio/x-scpls", xplayer_pl_parser_add_pls, NULL, FALSE),
+	PLAYLIST_TYPE ("application/x-smil", xplayer_pl_parser_add_smil, NULL, FALSE),
+	PLAYLIST_TYPE ("application/smil", xplayer_pl_parser_add_smil, NULL, FALSE),
+	PLAYLIST_TYPE ("application/vnd.ms-wpl", xplayer_pl_parser_add_smil, NULL, FALSE),
+	PLAYLIST_TYPE ("video/x-ms-wvx", xplayer_pl_parser_add_asx, NULL, FALSE),
+	PLAYLIST_TYPE ("audio/x-ms-wax", xplayer_pl_parser_add_asx, NULL, FALSE),
+	PLAYLIST_TYPE ("application/xspf+xml", xplayer_pl_parser_add_xspf, NULL, FALSE),
+	PLAYLIST_TYPE ("text/uri-list", xplayer_pl_parser_add_ra, xplayer_pl_parser_is_uri_list, FALSE),
+	PLAYLIST_TYPE ("text/x-google-video-pointer", xplayer_pl_parser_add_gvp, NULL, FALSE),
+	PLAYLIST_TYPE ("text/google-video-pointer", xplayer_pl_parser_add_gvp, NULL, FALSE),
+	PLAYLIST_TYPE ("audio/x-iriver-pla", xplayer_pl_parser_add_pla, NULL, FALSE),
+	PLAYLIST_TYPE ("application/atom+xml", xplayer_pl_parser_add_atom, NULL, FALSE),
+	PLAYLIST_TYPE ("application/rss+xml", xplayer_pl_parser_add_rss, xplayer_pl_parser_is_rss, FALSE),
+	PLAYLIST_TYPE ("text/x-opml+xml", xplayer_pl_parser_add_opml, NULL, FALSE),
+	PLAYLIST_TYPE ("audio/x-amzxml", xplayer_pl_parser_add_amz, NULL, FALSE),
+#ifndef XPLAYER_PL_PARSER_MINI
+	PLAYLIST_TYPE ("application/x-desktop", xplayer_pl_parser_add_desktop, NULL, TRUE),
+	PLAYLIST_TYPE ("application/x-gnome-app-info", xplayer_pl_parser_add_desktop, NULL, TRUE),
+	PLAYLIST_TYPE ("application/x-cd-image", xplayer_pl_parser_add_iso, NULL, TRUE),
+	PLAYLIST_TYPE ("application/x-extension-img", xplayer_pl_parser_add_iso, NULL, TRUE),
+	PLAYLIST_TYPE ("application/x-cue", xplayer_pl_parser_add_cue, NULL, TRUE),
+	PLAYLIST_TYPE (DIR_MIME_TYPE, xplayer_pl_parser_add_directory, NULL, TRUE),
+	PLAYLIST_TYPE (BLOCK_DEVICE_TYPE, xplayer_pl_parser_add_block, NULL, TRUE),
 #endif
 };
 
 /* These ones are "dual" types, might be a video, might be a parser
  * Please keep the same _is_ functions together */
 static PlaylistTypes dual_types[] = {
-	PLAYLIST_TYPE2 ("audio/x-real-audio", totem_pl_parser_add_ra, totem_pl_parser_is_uri_list),
-	PLAYLIST_TYPE2 ("audio/x-pn-realaudio", totem_pl_parser_add_ra, totem_pl_parser_is_uri_list),
-	PLAYLIST_TYPE2 ("application/ram", totem_pl_parser_add_ra, totem_pl_parser_is_uri_list),
-	PLAYLIST_TYPE2 ("application/vnd.rn-realmedia", totem_pl_parser_add_ra, totem_pl_parser_is_uri_list),
-	PLAYLIST_TYPE2 ("audio/x-pn-realaudio-plugin", totem_pl_parser_add_ra, totem_pl_parser_is_uri_list),
-	PLAYLIST_TYPE2 ("audio/vnd.rn-realaudio", totem_pl_parser_add_ra, totem_pl_parser_is_uri_list),
-	PLAYLIST_TYPE2 ("audio/x-realaudio", totem_pl_parser_add_ra, totem_pl_parser_is_uri_list),
-	PLAYLIST_TYPE2 ("text/plain", totem_pl_parser_add_ra, totem_pl_parser_is_uri_list),
+	PLAYLIST_TYPE2 ("audio/x-real-audio", xplayer_pl_parser_add_ra, xplayer_pl_parser_is_uri_list),
+	PLAYLIST_TYPE2 ("audio/x-pn-realaudio", xplayer_pl_parser_add_ra, xplayer_pl_parser_is_uri_list),
+	PLAYLIST_TYPE2 ("application/ram", xplayer_pl_parser_add_ra, xplayer_pl_parser_is_uri_list),
+	PLAYLIST_TYPE2 ("application/vnd.rn-realmedia", xplayer_pl_parser_add_ra, xplayer_pl_parser_is_uri_list),
+	PLAYLIST_TYPE2 ("audio/x-pn-realaudio-plugin", xplayer_pl_parser_add_ra, xplayer_pl_parser_is_uri_list),
+	PLAYLIST_TYPE2 ("audio/vnd.rn-realaudio", xplayer_pl_parser_add_ra, xplayer_pl_parser_is_uri_list),
+	PLAYLIST_TYPE2 ("audio/x-realaudio", xplayer_pl_parser_add_ra, xplayer_pl_parser_is_uri_list),
+	PLAYLIST_TYPE2 ("text/plain", xplayer_pl_parser_add_ra, xplayer_pl_parser_is_uri_list),
 	PLAYLIST_TYPE2 ("application/x-php", NULL, NULL),
-	PLAYLIST_TYPE2 ("audio/x-ms-asx", totem_pl_parser_add_asx, totem_pl_parser_is_asx),
-	PLAYLIST_TYPE2 ("video/x-ms-asf", totem_pl_parser_add_asf, totem_pl_parser_is_asf),
-	PLAYLIST_TYPE2 ("video/x-ms-wmv", totem_pl_parser_add_asf, totem_pl_parser_is_asf),
-	PLAYLIST_TYPE2 ("audio/x-ms-wma", totem_pl_parser_add_asf, totem_pl_parser_is_asf),
-	PLAYLIST_TYPE2 ("video/quicktime", totem_pl_parser_add_quicktime, totem_pl_parser_is_quicktime),
-	PLAYLIST_TYPE2 ("video/mp4", totem_pl_parser_add_quicktime, totem_pl_parser_is_quicktime),
-	PLAYLIST_TYPE2 ("application/x-quicktime-media-link", totem_pl_parser_add_quicktime, totem_pl_parser_is_quicktime),
-	PLAYLIST_TYPE2 ("application/x-quicktimeplayer", totem_pl_parser_add_quicktime, totem_pl_parser_is_quicktime),
-	PLAYLIST_TYPE2 ("application/xml", totem_pl_parser_add_xml_feed, totem_pl_parser_is_xml_feed),
+	PLAYLIST_TYPE2 ("audio/x-ms-asx", xplayer_pl_parser_add_asx, xplayer_pl_parser_is_asx),
+	PLAYLIST_TYPE2 ("video/x-ms-asf", xplayer_pl_parser_add_asf, xplayer_pl_parser_is_asf),
+	PLAYLIST_TYPE2 ("video/x-ms-wmv", xplayer_pl_parser_add_asf, xplayer_pl_parser_is_asf),
+	PLAYLIST_TYPE2 ("audio/x-ms-wma", xplayer_pl_parser_add_asf, xplayer_pl_parser_is_asf),
+	PLAYLIST_TYPE2 ("video/quicktime", xplayer_pl_parser_add_quicktime, xplayer_pl_parser_is_quicktime),
+	PLAYLIST_TYPE2 ("video/mp4", xplayer_pl_parser_add_quicktime, xplayer_pl_parser_is_quicktime),
+	PLAYLIST_TYPE2 ("application/x-quicktime-media-link", xplayer_pl_parser_add_quicktime, xplayer_pl_parser_is_quicktime),
+	PLAYLIST_TYPE2 ("application/x-quicktimeplayer", xplayer_pl_parser_add_quicktime, xplayer_pl_parser_is_quicktime),
+	PLAYLIST_TYPE2 ("application/xml", xplayer_pl_parser_add_xml_feed, xplayer_pl_parser_is_xml_feed),
 };
 
-static char *totem_pl_parser_mime_type_from_data (gconstpointer data, int len);
+static char *xplayer_pl_parser_mime_type_from_data (gconstpointer data, int len);
 
-#ifndef TOTEM_PL_PARSER_MINI
+#ifndef XPLAYER_PL_PARSER_MINI
 
-static void totem_pl_parser_set_property (GObject *object,
+static void xplayer_pl_parser_set_property (GObject *object,
 					  guint prop_id,
 					  const GValue *value,
 					  GParamSpec *pspec);
-static void totem_pl_parser_get_property (GObject *object,
+static void xplayer_pl_parser_get_property (GObject *object,
 					  guint prop_id,
 					  GValue *value,
 					  GParamSpec *pspec);
 
-struct TotemPlParserPrivate {
+struct XplayerPlParserPrivate {
 	GHashTable *ignore_schemes; /* key = char *, value = boolean */
 	GHashTable *ignore_mimetypes; /*key = char *, value = boolean */
 	GMutex ignore_mutex;
@@ -283,59 +283,59 @@ enum {
 	LAST_SIGNAL
 };
 
-static int totem_pl_parser_table_signals[LAST_SIGNAL];
-static GParamSpecPool *totem_pl_parser_pspec_pool = NULL;
+static int xplayer_pl_parser_table_signals[LAST_SIGNAL];
+static GParamSpecPool *xplayer_pl_parser_pspec_pool = NULL;
 
-static void totem_pl_parser_class_init (TotemPlParserClass *klass);
-static void totem_pl_parser_base_class_finalize	(TotemPlParserClass *klass);
-static void totem_pl_parser_init       (TotemPlParser *parser);
-static void totem_pl_parser_finalize   (GObject *object);
+static void xplayer_pl_parser_class_init (XplayerPlParserClass *klass);
+static void xplayer_pl_parser_base_class_finalize	(XplayerPlParserClass *klass);
+static void xplayer_pl_parser_init       (XplayerPlParser *parser);
+static void xplayer_pl_parser_finalize   (GObject *object);
 
-static gpointer totem_pl_parser_parent_class = NULL;
+static gpointer xplayer_pl_parser_parent_class = NULL;
 
-#define TOTEM_PL_PARSER_GET_PRIVATE(obj) (G_TYPE_INSTANCE_GET_PRIVATE ((obj), TOTEM_TYPE_PL_PARSER, TotemPlParserPrivate))
+#define XPLAYER_PL_PARSER_GET_PRIVATE(obj) (G_TYPE_INSTANCE_GET_PRIVATE ((obj), XPLAYER_TYPE_PL_PARSER, XplayerPlParserPrivate))
 
 GType
-totem_pl_parser_get_type (void)
+xplayer_pl_parser_get_type (void)
 {
 	static volatile gsize g_define_type_id__volatile = 0;
 	if (g_once_init_enter (&g_define_type_id__volatile))
 	{
 		const GTypeInfo g_define_type_info = {
-			sizeof (TotemPlParserClass),
+			sizeof (XplayerPlParserClass),
 			NULL,
-			(GBaseFinalizeFunc) totem_pl_parser_base_class_finalize,
-			(GClassInitFunc) totem_pl_parser_class_init,
+			(GBaseFinalizeFunc) xplayer_pl_parser_base_class_finalize,
+			(GClassInitFunc) xplayer_pl_parser_class_init,
 			NULL,
 			NULL,
-			sizeof (TotemPlParser),
+			sizeof (XplayerPlParser),
 			0,
-			(GInstanceInitFunc) totem_pl_parser_init,
+			(GInstanceInitFunc) xplayer_pl_parser_init,
 		};
-		GType g_define_type_id = g_type_register_static (G_TYPE_OBJECT, "TotemPlParser", &g_define_type_info, 0);
+		GType g_define_type_id = g_type_register_static (G_TYPE_OBJECT, "XplayerPlParser", &g_define_type_info, 0);
 		g_once_init_leave (&g_define_type_id__volatile, g_define_type_id);
 	}
 	return g_define_type_id__volatile;
 }
 
 static void
-totem_pl_parser_class_init (TotemPlParserClass *klass)
+xplayer_pl_parser_class_init (XplayerPlParserClass *klass)
 {
 	GParamSpec *pspec;
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
-	totem_pl_parser_parent_class = g_type_class_peek_parent (klass);
+	xplayer_pl_parser_parent_class = g_type_class_peek_parent (klass);
 
-	g_type_class_add_private (klass, sizeof (TotemPlParserPrivate));
+	g_type_class_add_private (klass, sizeof (XplayerPlParserPrivate));
 
-	object_class->finalize = totem_pl_parser_finalize;
-	object_class->set_property = totem_pl_parser_set_property;
-	object_class->get_property = totem_pl_parser_get_property;
+	object_class->finalize = xplayer_pl_parser_finalize;
+	object_class->set_property = xplayer_pl_parser_set_property;
+	object_class->get_property = xplayer_pl_parser_get_property;
 
 	/* Properties */
 
 	/**
-	 * TotemPlParser:recurse:
+	 * XplayerPlParser:recurse:
 	 *
 	 * If %TRUE, the parser will recursively fetch playlists linked to by
 	 * the current one.
@@ -349,7 +349,7 @@ totem_pl_parser_class_init (TotemPlParserClass *klass)
 							       G_PARAM_READWRITE | G_PARAM_CONSTRUCT));
 
 	/**
-	 * TotemPlParser:debug:
+	 * XplayerPlParser:debug:
 	 *
 	 * If %TRUE, the parser will output debug information.
 	 **/
@@ -362,7 +362,7 @@ totem_pl_parser_class_init (TotemPlParserClass *klass)
 							       G_PARAM_READWRITE));
 
 	/**
-	 * TotemPlParser:force:
+	 * XplayerPlParser:force:
 	 *
 	 * If %TRUE, the parser will attempt to parse a playlist, even if it
 	 * appears to be unsupported (usually because of its filename extension).
@@ -376,7 +376,7 @@ totem_pl_parser_class_init (TotemPlParserClass *klass)
 							       G_PARAM_READWRITE));
 
 	/**
-	 * TotemPlParser:disable-unsafe:
+	 * XplayerPlParser:disable-unsafe:
 	 *
 	 * If %TRUE, the parser will not parse unsafe locations, such as local devices
 	 * and local files if the playlist isn't local. This is useful if the library
@@ -391,23 +391,23 @@ totem_pl_parser_class_init (TotemPlParserClass *klass)
 							       G_PARAM_READWRITE));
 
 	/**
-	 * TotemPlParser::entry-parsed:
+	 * XplayerPlParser::entry-parsed:
 	 * @parser: the object which received the signal
 	 * @uri: the URI of the entry parsed
 	 * @metadata: (type GHashTable) (element-type utf8 utf8): a #GHashTable of metadata relating to the entry added
 	 *
 	 * The ::entry-parsed signal is emitted when a new entry is parsed.
 	 */
-	totem_pl_parser_table_signals[ENTRY_PARSED] =
+	xplayer_pl_parser_table_signals[ENTRY_PARSED] =
 		g_signal_new ("entry-parsed",
 			      G_TYPE_FROM_CLASS (klass),
 			      G_SIGNAL_RUN_LAST,
-			      G_STRUCT_OFFSET (TotemPlParserClass, entry_parsed),
+			      G_STRUCT_OFFSET (XplayerPlParserClass, entry_parsed),
 			      NULL, NULL,
-			      _totemplparser_marshal_VOID__STRING_BOXED,
-			      G_TYPE_NONE, 2, G_TYPE_STRING, TOTEM_TYPE_PL_PARSER_METADATA);
+			      _xplayerplparser_marshal_VOID__STRING_BOXED,
+			      G_TYPE_NONE, 2, G_TYPE_STRING, XPLAYER_TYPE_PL_PARSER_METADATA);
 	/**
-	 * TotemPlParser::playlist-started:
+	 * XplayerPlParser::playlist-started:
 	 * @parser: the object which received the signal
 	 * @uri: the URI of the new playlist started
 	 * @metadata: (type GHashTable) (element-type utf8 utf8): a #GHashTable of metadata relating to the playlist that
@@ -418,182 +418,182 @@ totem_pl_parser_class_init (TotemPlParserClass *klass)
 	 * can be relied on to be called for playlists which support playlist
 	 * metadata, such as title.
 	 */
-	totem_pl_parser_table_signals[PLAYLIST_STARTED] =
+	xplayer_pl_parser_table_signals[PLAYLIST_STARTED] =
 		g_signal_new ("playlist-started",
 			      G_TYPE_FROM_CLASS (klass),
 			      G_SIGNAL_RUN_LAST,
-			      G_STRUCT_OFFSET (TotemPlParserClass, playlist_started),
+			      G_STRUCT_OFFSET (XplayerPlParserClass, playlist_started),
 			      NULL, NULL,
-			      _totemplparser_marshal_VOID__STRING_BOXED,
-			      G_TYPE_NONE, 2, G_TYPE_STRING, TOTEM_TYPE_PL_PARSER_METADATA);
+			      _xplayerplparser_marshal_VOID__STRING_BOXED,
+			      G_TYPE_NONE, 2, G_TYPE_STRING, XPLAYER_TYPE_PL_PARSER_METADATA);
 	/**
-	 * TotemPlParser::playlist-ended:
+	 * XplayerPlParser::playlist-ended:
 	 * @parser: the object which received the signal
 	 * @uri: the URI of the playlist that finished parsing.
 	 *
 	 * The ::playlist-ended signal is emitted when a playlist is finished
-	 * parsing. It is only called when #TotemPlParser::playlist-started
+	 * parsing. It is only called when #XplayerPlParser::playlist-started
 	 * has been called for that playlist.
 	 */
-	totem_pl_parser_table_signals[PLAYLIST_ENDED] =
+	xplayer_pl_parser_table_signals[PLAYLIST_ENDED] =
 		g_signal_new ("playlist-ended",
 			      G_TYPE_FROM_CLASS (klass),
 			      G_SIGNAL_RUN_LAST,
-			      G_STRUCT_OFFSET (TotemPlParserClass, playlist_ended),
+			      G_STRUCT_OFFSET (XplayerPlParserClass, playlist_ended),
 			      NULL, NULL,
 			      g_cclosure_marshal_VOID__STRING,
 			      G_TYPE_NONE, 1, G_TYPE_STRING);
 
 	/* param specs */
-	totem_pl_parser_pspec_pool = g_param_spec_pool_new (FALSE);
+	xplayer_pl_parser_pspec_pool = g_param_spec_pool_new (FALSE);
 	pspec = g_param_spec_string ("url", "url",
 				     "URI to be added", NULL,
 				     G_PARAM_READABLE & G_PARAM_WRITABLE);
-	g_param_spec_pool_insert (totem_pl_parser_pspec_pool, pspec, TOTEM_TYPE_PL_PARSER);
+	g_param_spec_pool_insert (xplayer_pl_parser_pspec_pool, pspec, XPLAYER_TYPE_PL_PARSER);
 	pspec = g_param_spec_string ("title", "title",
 				     "Title of the item to be added", NULL,
 				     G_PARAM_READABLE & G_PARAM_WRITABLE);
-	g_param_spec_pool_insert (totem_pl_parser_pspec_pool, pspec, TOTEM_TYPE_PL_PARSER);
+	g_param_spec_pool_insert (xplayer_pl_parser_pspec_pool, pspec, XPLAYER_TYPE_PL_PARSER);
 	pspec = g_param_spec_string ("author", "author",
 				     "Author of the item to be added", NULL,
 				     G_PARAM_READABLE & G_PARAM_WRITABLE);
-	g_param_spec_pool_insert (totem_pl_parser_pspec_pool, pspec, TOTEM_TYPE_PL_PARSER);
+	g_param_spec_pool_insert (xplayer_pl_parser_pspec_pool, pspec, XPLAYER_TYPE_PL_PARSER);
 	pspec = g_param_spec_string ("genre", "genre",
 				     "Genre of the item to be added", NULL,
 				     G_PARAM_READABLE & G_PARAM_WRITABLE);
-	g_param_spec_pool_insert (totem_pl_parser_pspec_pool, pspec, TOTEM_TYPE_PL_PARSER);
+	g_param_spec_pool_insert (xplayer_pl_parser_pspec_pool, pspec, XPLAYER_TYPE_PL_PARSER);
 	pspec = g_param_spec_string ("album", "album",
 				     "Album of the item to be added", NULL,
 				     G_PARAM_READABLE & G_PARAM_WRITABLE);
-	g_param_spec_pool_insert (totem_pl_parser_pspec_pool, pspec, TOTEM_TYPE_PL_PARSER);
+	g_param_spec_pool_insert (xplayer_pl_parser_pspec_pool, pspec, XPLAYER_TYPE_PL_PARSER);
 	pspec = g_param_spec_string ("base", "base",
 				     "Base URI of the item to be added", NULL,
 				     G_PARAM_READABLE & G_PARAM_WRITABLE);
-	g_param_spec_pool_insert (totem_pl_parser_pspec_pool, pspec, TOTEM_TYPE_PL_PARSER);
+	g_param_spec_pool_insert (xplayer_pl_parser_pspec_pool, pspec, XPLAYER_TYPE_PL_PARSER);
 	pspec = g_param_spec_string ("volume", "volume",
 				     "Default playback volume (in percents)", NULL,
 				     G_PARAM_READABLE & G_PARAM_WRITABLE);
-	g_param_spec_pool_insert (totem_pl_parser_pspec_pool, pspec, TOTEM_TYPE_PL_PARSER);
+	g_param_spec_pool_insert (xplayer_pl_parser_pspec_pool, pspec, XPLAYER_TYPE_PL_PARSER);
 	pspec = g_param_spec_string ("autoplay", "autoplay",
 				     "Whether or not to autoplay the stream", NULL,
 				     G_PARAM_READABLE & G_PARAM_WRITABLE);
-	g_param_spec_pool_insert (totem_pl_parser_pspec_pool, pspec, TOTEM_TYPE_PL_PARSER);
+	g_param_spec_pool_insert (xplayer_pl_parser_pspec_pool, pspec, XPLAYER_TYPE_PL_PARSER);
 	pspec = g_param_spec_string ("duration", "duration",
 				     "String representing the duration of the entry", NULL,
 				     G_PARAM_READABLE & G_PARAM_WRITABLE);
-	g_param_spec_pool_insert (totem_pl_parser_pspec_pool, pspec, TOTEM_TYPE_PL_PARSER);
+	g_param_spec_pool_insert (xplayer_pl_parser_pspec_pool, pspec, XPLAYER_TYPE_PL_PARSER);
 	pspec = g_param_spec_string ("duration-ms", "duration-ms",
 				     "String representing the duration of the entry in milliseconds", NULL,
 				     G_PARAM_READABLE & G_PARAM_WRITABLE);
-	g_param_spec_pool_insert (totem_pl_parser_pspec_pool, pspec, TOTEM_TYPE_PL_PARSER);
+	g_param_spec_pool_insert (xplayer_pl_parser_pspec_pool, pspec, XPLAYER_TYPE_PL_PARSER);
 	pspec = g_param_spec_string ("starttime", "starttime",
 				     "String representing the start time of the stream (initial seek)", NULL,
 				     G_PARAM_READABLE & G_PARAM_WRITABLE);
-	g_param_spec_pool_insert (totem_pl_parser_pspec_pool, pspec, TOTEM_TYPE_PL_PARSER);
+	g_param_spec_pool_insert (xplayer_pl_parser_pspec_pool, pspec, XPLAYER_TYPE_PL_PARSER);
 	pspec = g_param_spec_string ("copyright", "copyright",
 				     "Copyright of the item to be added", NULL,
 				     G_PARAM_READABLE & G_PARAM_WRITABLE);
-	g_param_spec_pool_insert (totem_pl_parser_pspec_pool, pspec, TOTEM_TYPE_PL_PARSER);
+	g_param_spec_pool_insert (xplayer_pl_parser_pspec_pool, pspec, XPLAYER_TYPE_PL_PARSER);
 	pspec = g_param_spec_string ("abstract", "abstract",
 				     "Abstract of the item to be added", NULL,
 				     G_PARAM_READABLE & G_PARAM_WRITABLE);
-	g_param_spec_pool_insert (totem_pl_parser_pspec_pool, pspec, TOTEM_TYPE_PL_PARSER);
+	g_param_spec_pool_insert (xplayer_pl_parser_pspec_pool, pspec, XPLAYER_TYPE_PL_PARSER);
 	pspec = g_param_spec_string ("moreinfo", "moreinfo",
 				     "URI to get more information for item to be added", NULL,
 				     G_PARAM_READABLE & G_PARAM_WRITABLE);
-	g_param_spec_pool_insert (totem_pl_parser_pspec_pool, pspec, TOTEM_TYPE_PL_PARSER);
+	g_param_spec_pool_insert (xplayer_pl_parser_pspec_pool, pspec, XPLAYER_TYPE_PL_PARSER);
 	pspec = g_param_spec_string ("screensize", "screensize",
 				     "String representing the default movie size (double, full or original)", NULL,
 				     G_PARAM_READABLE & G_PARAM_WRITABLE);
-	g_param_spec_pool_insert (totem_pl_parser_pspec_pool, pspec, TOTEM_TYPE_PL_PARSER);
+	g_param_spec_pool_insert (xplayer_pl_parser_pspec_pool, pspec, XPLAYER_TYPE_PL_PARSER);
 	pspec = g_param_spec_string ("ui-mode", "ui-mode",
 				     "String representing the default UI mode (only compact is supported)", NULL,
 				     G_PARAM_READABLE & G_PARAM_WRITABLE);
-	g_param_spec_pool_insert (totem_pl_parser_pspec_pool, pspec, TOTEM_TYPE_PL_PARSER);
+	g_param_spec_pool_insert (xplayer_pl_parser_pspec_pool, pspec, XPLAYER_TYPE_PL_PARSER);
 	pspec = g_param_spec_string ("endtime", "endtime",
 				     "String representing the end time of the stream", NULL,
 				     G_PARAM_READABLE & G_PARAM_WRITABLE);
-	g_param_spec_pool_insert (totem_pl_parser_pspec_pool, pspec, TOTEM_TYPE_PL_PARSER);
+	g_param_spec_pool_insert (xplayer_pl_parser_pspec_pool, pspec, XPLAYER_TYPE_PL_PARSER);
 	pspec = g_param_spec_boolean ("is-playlist", "is-playlist",
 				      "Boolean saying whether the entry pushed is the top-level of a playlist", FALSE,
 				      G_PARAM_READABLE & G_PARAM_WRITABLE);
-	g_param_spec_pool_insert (totem_pl_parser_pspec_pool, pspec, TOTEM_TYPE_PL_PARSER);
+	g_param_spec_pool_insert (xplayer_pl_parser_pspec_pool, pspec, XPLAYER_TYPE_PL_PARSER);
 	pspec = g_param_spec_string ("description", "description",
 				     "String representing the description of the stream", NULL,
 				     G_PARAM_READABLE & G_PARAM_WRITABLE);
-	g_param_spec_pool_insert (totem_pl_parser_pspec_pool, pspec, TOTEM_TYPE_PL_PARSER);
+	g_param_spec_pool_insert (xplayer_pl_parser_pspec_pool, pspec, XPLAYER_TYPE_PL_PARSER);
 	pspec = g_param_spec_string ("publication-date", "publication-date",
 				     "String representing the publication date of the stream", NULL,
 				     G_PARAM_READABLE & G_PARAM_WRITABLE);
-	g_param_spec_pool_insert (totem_pl_parser_pspec_pool, pspec, TOTEM_TYPE_PL_PARSER);
+	g_param_spec_pool_insert (xplayer_pl_parser_pspec_pool, pspec, XPLAYER_TYPE_PL_PARSER);
 	pspec = g_param_spec_string ("filesize", "filesize",
 				     "String representing the filesize of a file", NULL,
 				     G_PARAM_READABLE & G_PARAM_WRITABLE);
-	g_param_spec_pool_insert (totem_pl_parser_pspec_pool, pspec, TOTEM_TYPE_PL_PARSER);
+	g_param_spec_pool_insert (xplayer_pl_parser_pspec_pool, pspec, XPLAYER_TYPE_PL_PARSER);
 	pspec = g_param_spec_string ("language", "language",
 				     "String representing the language of a stream", NULL,
 				     G_PARAM_READABLE & G_PARAM_WRITABLE);
-	g_param_spec_pool_insert (totem_pl_parser_pspec_pool, pspec, TOTEM_TYPE_PL_PARSER);
+	g_param_spec_pool_insert (xplayer_pl_parser_pspec_pool, pspec, XPLAYER_TYPE_PL_PARSER);
 	pspec = g_param_spec_string ("contact", "contact",
 				     "String representing the contact for a playlist", NULL,
 				     G_PARAM_READABLE & G_PARAM_WRITABLE);
-	g_param_spec_pool_insert (totem_pl_parser_pspec_pool, pspec, TOTEM_TYPE_PL_PARSER);
+	g_param_spec_pool_insert (xplayer_pl_parser_pspec_pool, pspec, XPLAYER_TYPE_PL_PARSER);
 	pspec = g_param_spec_string ("image-url", "image-url",
 				     "String representing the location of an image for a playlist", NULL,
 				     G_PARAM_READABLE & G_PARAM_WRITABLE);
-	g_param_spec_pool_insert (totem_pl_parser_pspec_pool, pspec, TOTEM_TYPE_PL_PARSER);
+	g_param_spec_pool_insert (xplayer_pl_parser_pspec_pool, pspec, XPLAYER_TYPE_PL_PARSER);
 	pspec = g_param_spec_object ("gfile-object", "gfile-object",
 				     "Object representing the GFile for an entry", G_TYPE_FILE,
 				     G_PARAM_READABLE & G_PARAM_WRITABLE);
-	g_param_spec_pool_insert (totem_pl_parser_pspec_pool, pspec, TOTEM_TYPE_PL_PARSER);
+	g_param_spec_pool_insert (xplayer_pl_parser_pspec_pool, pspec, XPLAYER_TYPE_PL_PARSER);
 	pspec = g_param_spec_object ("gfile-object-base", "gfile-object-base",
 				     "Object representing the GFile for base URI of an entry", G_TYPE_FILE,
 				     G_PARAM_READABLE & G_PARAM_WRITABLE);
-	g_param_spec_pool_insert (totem_pl_parser_pspec_pool, pspec, TOTEM_TYPE_PL_PARSER);
+	g_param_spec_pool_insert (xplayer_pl_parser_pspec_pool, pspec, XPLAYER_TYPE_PL_PARSER);
 	pspec = g_param_spec_string ("download-url", "download-url",
 				     "String representing the location of a download URI", NULL,
 				     G_PARAM_READABLE & G_PARAM_WRITABLE);
-	g_param_spec_pool_insert (totem_pl_parser_pspec_pool, pspec, TOTEM_TYPE_PL_PARSER);
+	g_param_spec_pool_insert (xplayer_pl_parser_pspec_pool, pspec, XPLAYER_TYPE_PL_PARSER);
 	pspec = g_param_spec_string ("id", "id",
 				     "String representing the identifier for an entry", NULL,
 				     G_PARAM_READABLE & G_PARAM_WRITABLE);
-	g_param_spec_pool_insert (totem_pl_parser_pspec_pool, pspec, TOTEM_TYPE_PL_PARSER);
+	g_param_spec_pool_insert (xplayer_pl_parser_pspec_pool, pspec, XPLAYER_TYPE_PL_PARSER);
 	pspec = g_param_spec_string ("subtitle-uri", "subtitle-uri",
 				     "Subtitle URI to be added", NULL,
 				     G_PARAM_READABLE & G_PARAM_WRITABLE);
-	g_param_spec_pool_insert (totem_pl_parser_pspec_pool, pspec, TOTEM_TYPE_PL_PARSER);
+	g_param_spec_pool_insert (xplayer_pl_parser_pspec_pool, pspec, XPLAYER_TYPE_PL_PARSER);
 	pspec = g_param_spec_string ("content-type", "content-type",
 				     "Content type for the video stream", NULL,
 				     G_PARAM_READABLE & G_PARAM_WRITABLE);
-	g_param_spec_pool_insert (totem_pl_parser_pspec_pool, pspec, TOTEM_TYPE_PL_PARSER);
+	g_param_spec_pool_insert (xplayer_pl_parser_pspec_pool, pspec, XPLAYER_TYPE_PL_PARSER);
 	pspec = g_param_spec_string ("playing", "playing",
 				     "Whether the track is playing", NULL,
 				     G_PARAM_READABLE & G_PARAM_WRITABLE);
-	g_param_spec_pool_insert (totem_pl_parser_pspec_pool, pspec, TOTEM_TYPE_PL_PARSER);
+	g_param_spec_pool_insert (xplayer_pl_parser_pspec_pool, pspec, XPLAYER_TYPE_PL_PARSER);
 }
 
 static void
-totem_pl_parser_base_class_finalize (TotemPlParserClass *klass)
+xplayer_pl_parser_base_class_finalize (XplayerPlParserClass *klass)
 {
 	GList *list, *node;
 
-	list = g_param_spec_pool_list_owned (totem_pl_parser_pspec_pool, G_OBJECT_CLASS_TYPE (klass));
+	list = g_param_spec_pool_list_owned (xplayer_pl_parser_pspec_pool, G_OBJECT_CLASS_TYPE (klass));
 	for (node = list; node; node = node->next) {
 		GParamSpec *pspec = node->data;
 
-		g_param_spec_pool_remove (totem_pl_parser_pspec_pool, pspec);
+		g_param_spec_pool_remove (xplayer_pl_parser_pspec_pool, pspec);
 		g_param_spec_unref (pspec);
 	}
 	g_list_free (list);
 }
 
 static void
-totem_pl_parser_set_property (GObject *object,
+xplayer_pl_parser_set_property (GObject *object,
 			      guint prop_id,
 			      const GValue *value,
 			      GParamSpec *pspec)
 {
-	TotemPlParser *parser = TOTEM_PL_PARSER (object);
+	XplayerPlParser *parser = XPLAYER_PL_PARSER (object);
 
 	switch (prop_id)
 	{
@@ -616,12 +616,12 @@ totem_pl_parser_set_property (GObject *object,
 }
 
 static void
-totem_pl_parser_get_property (GObject *object,
+xplayer_pl_parser_get_property (GObject *object,
 			      guint prop_id,
 			      GValue *value,
 			      GParamSpec *pspec)
 {
-	TotemPlParser *parser = TOTEM_PL_PARSER (object);
+	XplayerPlParser *parser = XPLAYER_PL_PARSER (object);
 
 	switch (prop_id)
 	{
@@ -644,17 +644,17 @@ totem_pl_parser_get_property (GObject *object,
 }
 
 GQuark
-totem_pl_parser_error_quark (void)
+xplayer_pl_parser_error_quark (void)
 {
 	static GQuark quark;
 	if (!quark)
-		quark = g_quark_from_static_string ("totem_pl_parser_error");
+		quark = g_quark_from_static_string ("xplayer_pl_parser_error");
 
 	return quark;
 }
 
 static gpointer
-totem_pl_parser_real_init_i18n (gpointer data)
+xplayer_pl_parser_real_init_i18n (gpointer data)
 {
 	bindtextdomain (GETTEXT_PACKAGE, GNOMELOCALEDIR);
 	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
@@ -662,28 +662,28 @@ totem_pl_parser_real_init_i18n (gpointer data)
 }
 
 static void
-totem_pl_parser_init_i18n (void)
+xplayer_pl_parser_init_i18n (void)
 {
 	static GOnce my_once = G_ONCE_INIT;
-	g_once (&my_once, totem_pl_parser_real_init_i18n, NULL);
+	g_once (&my_once, xplayer_pl_parser_real_init_i18n, NULL);
 }
 
 /**
- * totem_pl_parser_new:
+ * xplayer_pl_parser_new:
  *
- * Creates a #TotemPlParser object.
+ * Creates a #XplayerPlParser object.
  *
- * Return value: a new #TotemPlParser
+ * Return value: a new #XplayerPlParser
  */
-TotemPlParser *
-totem_pl_parser_new (void)
+XplayerPlParser *
+xplayer_pl_parser_new (void)
 {
-	totem_pl_parser_init_i18n ();
-	return TOTEM_PL_PARSER (g_object_new (TOTEM_TYPE_PL_PARSER, NULL));
+	xplayer_pl_parser_init_i18n ();
+	return XPLAYER_PL_PARSER (g_object_new (XPLAYER_TYPE_PL_PARSER, NULL));
 }
 
 typedef struct {
-	TotemPlParser *parser;
+	XplayerPlParser *parser;
 	char *playlist_uri;
 } PlaylistEndedSignalData;
 
@@ -691,7 +691,7 @@ static gboolean
 emit_playlist_ended_signal (PlaylistEndedSignalData *data)
 {
 	g_signal_emit (data->parser,
-		       totem_pl_parser_table_signals[PLAYLIST_ENDED],
+		       xplayer_pl_parser_table_signals[PLAYLIST_ENDED],
 		       0, data->playlist_uri);
 
 	/* Free the data */
@@ -703,15 +703,15 @@ emit_playlist_ended_signal (PlaylistEndedSignalData *data)
 }
 
 /**
- * totem_pl_parser_playlist_end:
- * @parser: a #TotemPlParser
+ * xplayer_pl_parser_playlist_end:
+ * @parser: a #XplayerPlParser
  * @playlist_uri: the playlist URI
  *
- * Emits the #TotemPlParser::playlist-ended signal on @parser for
+ * Emits the #XplayerPlParser::playlist-ended signal on @parser for
  * the playlist @playlist_uri.
  **/
 void
-totem_pl_parser_playlist_end (TotemPlParser *parser, const char *playlist_uri)
+xplayer_pl_parser_playlist_end (XplayerPlParser *parser, const char *playlist_uri)
 {
 	PlaylistEndedSignalData *data;
 
@@ -723,7 +723,7 @@ totem_pl_parser_playlist_end (TotemPlParser *parser, const char *playlist_uri)
 }
 
 static char *
-my_g_file_info_get_mime_type_with_data (GFile *file, gpointer *data, TotemPlParser *parser)
+my_g_file_info_get_mime_type_with_data (GFile *file, gpointer *data, XplayerPlParser *parser)
 {
 	char *buffer;
 	gsize bytes_read;
@@ -783,25 +783,25 @@ my_g_file_info_get_mime_type_with_data (GFile *file, gpointer *data, TotemPlPars
 	buffer[bytes_read] = '\0';
 	*data = buffer;
 
-	return totem_pl_parser_mime_type_from_data (*data, bytes_read);
+	return xplayer_pl_parser_mime_type_from_data (*data, bytes_read);
 }
 
 /**
- * totem_pl_parser_is_debugging_enabled:
- * @parser: a #TotemPlParser
+ * xplayer_pl_parser_is_debugging_enabled:
+ * @parser: a #XplayerPlParser
  *
  * Returns whether debugging is enabled. This is a private method, not exposed by the library.
  *
  * Return value: %TRUE if debugging is enabled, %FALSE otherwise
  **/
 gboolean
-totem_pl_parser_is_debugging_enabled (TotemPlParser *parser)
+xplayer_pl_parser_is_debugging_enabled (XplayerPlParser *parser)
 {
 	return parser->priv->debug;
 }
 
 /**
- * totem_pl_parser_base_uri:
+ * xplayer_pl_parser_base_uri:
  * @uri: a URI
  *
  * Returns the parent URI of @uri.
@@ -809,7 +809,7 @@ totem_pl_parser_is_debugging_enabled (TotemPlParser *parser)
  * Return value: a newly-allocated string containing @uri's parent URI, or %NULL
  **/
 char *
-totem_pl_parser_base_uri (GFile *uri)
+xplayer_pl_parser_base_uri (GFile *uri)
 {
 	GFile *parent;
 	char *ret;
@@ -822,7 +822,7 @@ totem_pl_parser_base_uri (GFile *uri)
 }
 
 /**
- * totem_pl_parser_line_is_empty:
+ * xplayer_pl_parser_line_is_empty:
  * @line: a playlist line to check
  *
  * Checks to see if the given string line is empty or %NULL,
@@ -831,7 +831,7 @@ totem_pl_parser_base_uri (GFile *uri)
  * Return value: %TRUE if @line is empty
  **/
 gboolean
-totem_pl_parser_line_is_empty (const char *line)
+xplayer_pl_parser_line_is_empty (const char *line)
 {
 	guint i;
 
@@ -846,27 +846,27 @@ totem_pl_parser_line_is_empty (const char *line)
 }
 
 /**
- * totem_pl_parser_write_string:
+ * xplayer_pl_parser_write_string:
  * @handle: a #GFileOutputStream to an open file
  * @buf: the string buffer to write out
  * @error: return location for a #GError, or %NULL
  *
  * Writes the string @buf out to the file specified by @handle.
- * Possible error codes are as per totem_pl_parser_write_buffer().
+ * Possible error codes are as per xplayer_pl_parser_write_buffer().
  *
  * Return value: %TRUE on success
  **/
 gboolean
-totem_pl_parser_write_string (GOutputStream *stream, const char *buf, GError **error)
+xplayer_pl_parser_write_string (GOutputStream *stream, const char *buf, GError **error)
 {
 	guint len;
 
 	len = strlen (buf);
-	return totem_pl_parser_write_buffer (stream, buf, len, error);
+	return xplayer_pl_parser_write_buffer (stream, buf, len, error);
 }
 
 /**
- * totem_pl_parser_write_buffer:
+ * xplayer_pl_parser_write_buffer:
  * @stream: a #GFileOutputStream to an open file
  * @buf: the string buffer to write out
  * @len: the length of the string to write out
@@ -879,7 +879,7 @@ totem_pl_parser_write_string (GOutputStream *stream, const char *buf, GError **e
  * Return value: %TRUE on success
  **/
 gboolean
-totem_pl_parser_write_buffer (GOutputStream *stream, const char *buf, guint len, GError **error)
+xplayer_pl_parser_write_buffer (GOutputStream *stream, const char *buf, guint len, GError **error)
 {
 	gsize bytes_written;
 
@@ -895,35 +895,35 @@ totem_pl_parser_write_buffer (GOutputStream *stream, const char *buf, guint len,
 }
 
 /**
- * totem_pl_parser_num_entries:
- * @parser: a #TotemPlParser
- * @playlist: a #TotemPlPlaylist
+ * xplayer_pl_parser_num_entries:
+ * @parser: a #XplayerPlParser
+ * @playlist: a #XplayerPlPlaylist
  *
  * Returns the number of valid entries in @playlist.
  *
  * Return value: the number of entries in the playlist
  **/
 int
-totem_pl_parser_num_entries (TotemPlParser   *parser,
-                             TotemPlPlaylist *playlist)
+xplayer_pl_parser_num_entries (XplayerPlParser   *parser,
+                             XplayerPlPlaylist *playlist)
 {
 	int num_entries, ignored;
-        TotemPlPlaylistIter iter;
+        XplayerPlPlaylistIter iter;
         gboolean valid;
 
-	num_entries = totem_pl_playlist_size (playlist);
-        valid = totem_pl_playlist_iter_first (playlist, &iter);
+	num_entries = xplayer_pl_playlist_size (playlist);
+        valid = xplayer_pl_playlist_iter_first (playlist, &iter);
 	ignored = 0;
 
         while (valid) {
                 gchar *uri;
                 GFile *file;
 
-                totem_pl_playlist_get (playlist, &iter,
-                                       TOTEM_PL_PARSER_FIELD_URI, &uri,
+                xplayer_pl_playlist_get (playlist, &iter,
+                                       XPLAYER_PL_PARSER_FIELD_URI, &uri,
                                        NULL);
 
-                valid = totem_pl_playlist_iter_next (playlist, &iter);
+                valid = xplayer_pl_playlist_iter_next (playlist, &iter);
 
                 if (!uri) {
                         ignored++;
@@ -932,7 +932,7 @@ totem_pl_parser_num_entries (TotemPlParser   *parser,
 
                 file = g_file_new_for_uri (uri);
 
-                if (totem_pl_parser_scheme_is_ignored (parser, file)) {
+                if (xplayer_pl_parser_scheme_is_ignored (parser, file)) {
                         ignored++;
                 }
 
@@ -944,7 +944,7 @@ totem_pl_parser_num_entries (TotemPlParser   *parser,
 }
 
 char *
-totem_pl_parser_relative (GFile *output, const char *filepath)
+xplayer_pl_parser_relative (GFile *output, const char *filepath)
 {
 	GFile *parent, *file;
 	char *retval;
@@ -1011,7 +1011,7 @@ is_probably_dir (const char *filename)
 }
 
 char *
-totem_pl_parser_resolve_uri (GFile *base_gfile,
+xplayer_pl_parser_resolve_uri (GFile *base_gfile,
 			     const char *relative_uri)
 {
 	char *uri, *scheme, *query, *new_relative_uri, *base_uri;
@@ -1095,14 +1095,14 @@ totem_pl_parser_resolve_uri (GFile *base_gfile,
 	}
 }
 
-#ifndef TOTEM_PL_PARSER_MINI
+#ifndef XPLAYER_PL_PARSER_MINI
 /**
- * totem_pl_parser_save:
- * @parser: a #TotemPlParser
- * @playlist: a #TotemPlPlaylist
+ * xplayer_pl_parser_save:
+ * @parser: a #XplayerPlParser
+ * @playlist: a #XplayerPlPlaylist
  * @dest: output #GFile
  * @title: the playlist title
- * @type: a #TotemPlParserType for the outputted playlist
+ * @type: a #XplayerPlParserType for the outputted playlist
  * @error: return loction for a #GError, or %NULL
  *
  * Writes the playlist held by @parser and @playlist out to the path
@@ -1126,49 +1126,49 @@ totem_pl_parser_resolve_uri (GFile *base_gfile,
  * Returns: %TRUE on success
  **/
 gboolean
-totem_pl_parser_save (TotemPlParser      *parser,
-                      TotemPlPlaylist    *playlist,
+xplayer_pl_parser_save (XplayerPlParser      *parser,
+                      XplayerPlPlaylist    *playlist,
                       GFile              *dest,
                       const gchar        *title,
-                      TotemPlParserType   type,
+                      XplayerPlParserType   type,
                       GError            **error)
 {
-        g_return_val_if_fail (TOTEM_IS_PL_PARSER (parser), FALSE);
-        g_return_val_if_fail (TOTEM_IS_PL_PLAYLIST (playlist), FALSE);
+        g_return_val_if_fail (XPLAYER_IS_PL_PARSER (parser), FALSE);
+        g_return_val_if_fail (XPLAYER_IS_PL_PLAYLIST (playlist), FALSE);
         g_return_val_if_fail (G_IS_FILE (dest), FALSE);
 
-        if (totem_pl_playlist_size (playlist) == 0) {
+        if (xplayer_pl_playlist_size (playlist) == 0) {
 		/* FIXME add translation */
 		g_set_error (error,
-			     TOTEM_PL_PARSER_ERROR,
-			     TOTEM_PL_PARSER_ERROR_EMPTY_PLAYLIST,
+			     XPLAYER_PL_PARSER_ERROR,
+			     XPLAYER_PL_PARSER_ERROR_EMPTY_PLAYLIST,
 			     "Playlist selected for saving is empty");
                 return FALSE;
         }
 
         switch (type)
         {
-	case TOTEM_PL_PARSER_PLS:
-		return totem_pl_parser_save_pls (parser, playlist, dest, title, error);
-	case TOTEM_PL_PARSER_M3U:
-	case TOTEM_PL_PARSER_M3U_DOS:
-		return totem_pl_parser_save_m3u (parser, playlist, dest,
-                                                 (type == TOTEM_PL_PARSER_M3U_DOS),
+	case XPLAYER_PL_PARSER_PLS:
+		return xplayer_pl_parser_save_pls (parser, playlist, dest, title, error);
+	case XPLAYER_PL_PARSER_M3U:
+	case XPLAYER_PL_PARSER_M3U_DOS:
+		return xplayer_pl_parser_save_m3u (parser, playlist, dest,
+                                                 (type == XPLAYER_PL_PARSER_M3U_DOS),
                                                  error);
-	case TOTEM_PL_PARSER_XSPF:
-		return totem_pl_parser_save_xspf (parser, playlist, dest, title, error);
-	case TOTEM_PL_PARSER_IRIVER_PLA:
-		return totem_pl_parser_save_pla (parser, playlist, dest, title, error);
+	case XPLAYER_PL_PARSER_XSPF:
+		return xplayer_pl_parser_save_xspf (parser, playlist, dest, title, error);
+	case XPLAYER_PL_PARSER_IRIVER_PLA:
+		return xplayer_pl_parser_save_pla (parser, playlist, dest, title, error);
 	default:
 		g_assert_not_reached ();
 	}
 
 	return FALSE;
 }
-#endif /* TOTEM_PL_PARSER_MINI */
+#endif /* XPLAYER_PL_PARSER_MINI */
 
 /**
- * totem_pl_parser_read_ini_line_int:
+ * xplayer_pl_parser_read_ini_line_int:
  * @lines: a NULL-terminated array of INI lines to read
  * @key: the key to match
  *
@@ -1178,7 +1178,7 @@ totem_pl_parser_save (TotemPlParser      *parser,
  * Return value: the integer value, or -1 on error
  **/
 int
-totem_pl_parser_read_ini_line_int (char **lines, const char *key)
+xplayer_pl_parser_read_ini_line_int (char **lines, const char *key)
 {
 	int retval = -1;
 	int i;
@@ -1210,7 +1210,7 @@ totem_pl_parser_read_ini_line_int (char **lines, const char *key)
 }
 
 /**
- * totem_pl_parser_read_ini_line_string_with_sep:
+ * xplayer_pl_parser_read_ini_line_string_with_sep:
  * @lines: a NULL-terminated array of INI lines to read
  * @key: the key to match
  * @sep: the key-value separator
@@ -1222,7 +1222,7 @@ totem_pl_parser_read_ini_line_int (char **lines, const char *key)
  * Return value: a newly-allocated string value, or %NULL
  **/
 char*
-totem_pl_parser_read_ini_line_string_with_sep (char **lines, const char *key,
+xplayer_pl_parser_read_ini_line_string_with_sep (char **lines, const char *key,
 		const char *sep)
 {
 	char *retval = NULL;
@@ -1255,7 +1255,7 @@ totem_pl_parser_read_ini_line_string_with_sep (char **lines, const char *key,
 }
 
 /**
- * totem_pl_parser_read_ini_line_string:
+ * xplayer_pl_parser_read_ini_line_string:
  * @lines: a NULL-terminated array of INI lines to read
  * @key: the key to match
  *
@@ -1265,15 +1265,15 @@ totem_pl_parser_read_ini_line_string_with_sep (char **lines, const char *key,
  * Return value: a newly-allocated string value, or %NULL
  **/
 char*
-totem_pl_parser_read_ini_line_string (char **lines, const char *key)
+xplayer_pl_parser_read_ini_line_string (char **lines, const char *key)
 {
-	return totem_pl_parser_read_ini_line_string_with_sep (lines, key, "=");
+	return xplayer_pl_parser_read_ini_line_string_with_sep (lines, key, "=");
 }
 
 static void
-totem_pl_parser_init (TotemPlParser *parser)
+xplayer_pl_parser_init (XplayerPlParser *parser)
 {
-	parser->priv = G_TYPE_INSTANCE_GET_PRIVATE (parser, TOTEM_TYPE_PL_PARSER, TotemPlParserPrivate);
+	parser->priv = G_TYPE_INSTANCE_GET_PRIVATE (parser, XPLAYER_TYPE_PL_PARSER, XplayerPlParserPrivate);
 	parser->priv->main_thread = g_thread_self ();
 	g_mutex_init (&parser->priv->ignore_mutex);
 	parser->priv->ignore_schemes = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, NULL);
@@ -1281,9 +1281,9 @@ totem_pl_parser_init (TotemPlParser *parser)
 }
 
 static void
-totem_pl_parser_finalize (GObject *object)
+xplayer_pl_parser_finalize (GObject *object)
 {
-	TotemPlParserPrivate *priv = TOTEM_PL_PARSER (object)->priv;
+	XplayerPlParserPrivate *priv = XPLAYER_PL_PARSER (object)->priv;
 
 	g_return_if_fail (object != NULL);
 	g_return_if_fail (priv != NULL);
@@ -1293,11 +1293,11 @@ totem_pl_parser_finalize (GObject *object)
 
 	g_mutex_clear (&priv->ignore_mutex);
 
-	G_OBJECT_CLASS (totem_pl_parser_parent_class)->finalize (object);
+	G_OBJECT_CLASS (xplayer_pl_parser_parent_class)->finalize (object);
 }
 
 typedef struct {
-	TotemPlParser *parser;
+	XplayerPlParser *parser;
 	guint signal_id;
 	char *uri;
 	GHashTable *metadata;
@@ -1318,7 +1318,7 @@ emit_entry_parsed_signal (EntryParsedSignalData *data)
 }
 
 gboolean
-totem_pl_parser_fix_string (const char  *name,
+xplayer_pl_parser_fix_string (const char  *name,
 			    const char  *value,
 			    char       **ret)
 {
@@ -1334,7 +1334,7 @@ totem_pl_parser_fix_string (const char  *name,
 	}
 
 	/* Remove trailing spaces from titles */
-	if (g_str_equal (name, TOTEM_PL_PARSER_FIELD_TITLE)) {
+	if (g_str_equal (name, XPLAYER_PL_PARSER_FIELD_TITLE)) {
 		if (fixed == NULL)
 			fixed = g_strchomp (g_strdup (value));
 		else
@@ -1347,7 +1347,7 @@ totem_pl_parser_fix_string (const char  *name,
 }
 
 void
-totem_pl_parser_add_hash_table (TotemPlParser *parser,
+xplayer_pl_parser_add_hash_table (XplayerPlParser *parser,
 				GHashTable    *metadata,
 				const char    *uri,
 				gboolean       is_playlist)
@@ -1363,16 +1363,16 @@ totem_pl_parser_add_hash_table (TotemPlParser *parser,
 		data->metadata = g_hash_table_ref (metadata);
 
 		if (is_playlist == FALSE)
-			data->signal_id = totem_pl_parser_table_signals[ENTRY_PARSED];
+			data->signal_id = xplayer_pl_parser_table_signals[ENTRY_PARSED];
 		else
-			data->signal_id = totem_pl_parser_table_signals[PLAYLIST_STARTED];
+			data->signal_id = xplayer_pl_parser_table_signals[PLAYLIST_STARTED];
 
 		CALL_ASYNC (parser, emit_entry_parsed_signal, data);
 	}
 }
 
 static void
-totem_pl_parser_add_uri_valist (TotemPlParser *parser,
+xplayer_pl_parser_add_uri_valist (XplayerPlParser *parser,
 				const gchar *first_property_name,
 				va_list      var_args)
 {
@@ -1395,7 +1395,7 @@ totem_pl_parser_add_uri_valist (TotemPlParser *parser,
 		char *error = NULL;
 		const char *string;
 
-		pspec = g_param_spec_pool_lookup (totem_pl_parser_pspec_pool,
+		pspec = g_param_spec_pool_lookup (xplayer_pl_parser_pspec_pool,
 						  name,
 						  G_OBJECT_TYPE (parser),
 						  FALSE);
@@ -1413,10 +1413,10 @@ totem_pl_parser_add_uri_valist (TotemPlParser *parser,
 			break;
 		}
 
-		if (strcmp (name, TOTEM_PL_PARSER_FIELD_URI) == 0) {
+		if (strcmp (name, XPLAYER_PL_PARSER_FIELD_URI) == 0) {
 			if (uri == NULL)
 				uri = g_value_dup_string (&value);
-		} else if (strcmp (name, TOTEM_PL_PARSER_FIELD_FILE) == 0) {
+		} else if (strcmp (name, XPLAYER_PL_PARSER_FIELD_FILE) == 0) {
 			GFile *file;
 
 			file = g_value_get_object (&value);
@@ -1425,7 +1425,7 @@ totem_pl_parser_add_uri_valist (TotemPlParser *parser,
 			g_value_unset (&value);
 			name = va_arg (var_args, char*);
 			continue;
-		} else if (strcmp (name, TOTEM_PL_PARSER_FIELD_BASE_FILE) == 0) {
+		} else if (strcmp (name, XPLAYER_PL_PARSER_FIELD_BASE_FILE) == 0) {
 			GFile *file;
 			char *base_uri;
 
@@ -1433,13 +1433,13 @@ totem_pl_parser_add_uri_valist (TotemPlParser *parser,
 			base_uri = g_file_get_uri (file);
 
 			g_hash_table_insert (metadata,
-					     g_strdup (TOTEM_PL_PARSER_FIELD_BASE),
+					     g_strdup (XPLAYER_PL_PARSER_FIELD_BASE),
 					     base_uri);
 
 			g_value_unset (&value);
 			name = va_arg (var_args, char*);
 			continue;
-		} else if (strcmp (name, TOTEM_PL_PARSER_FIELD_IS_PLAYLIST) == 0) {
+		} else if (strcmp (name, XPLAYER_PL_PARSER_FIELD_IS_PLAYLIST) == 0) {
 			is_playlist = g_value_get_boolean (&value);
 			g_value_unset (&value);
 			name = va_arg (var_args, char*);
@@ -1451,7 +1451,7 @@ totem_pl_parser_add_uri_valist (TotemPlParser *parser,
 		if (string != NULL && string[0] != '\0') {
 			char *fixed = NULL;
 
-			if (!totem_pl_parser_fix_string (name, string, &fixed)) {
+			if (!xplayer_pl_parser_fix_string (name, string, &fixed)) {
 				g_value_unset (&value);
 				name = va_arg (var_args, char*);
 				continue;
@@ -1471,7 +1471,7 @@ totem_pl_parser_add_uri_valist (TotemPlParser *parser,
 		//FIXME fix this! 396710
 	}
 
-	totem_pl_parser_add_hash_table (parser,
+	xplayer_pl_parser_add_hash_table (parser,
 					metadata,
 					uri,
 					is_playlist);
@@ -1483,8 +1483,8 @@ totem_pl_parser_add_uri_valist (TotemPlParser *parser,
 }
 
 /**
- * totem_pl_parser_add_uri:
- * @parser: a #TotemPlParser
+ * xplayer_pl_parser_add_uri:
+ * @parser: a #XplayerPlParser
  * @first_property_name: the first property name
  * @...: value for the first property, followed optionally by more
  * name/value pairs, followed by %NULL
@@ -1493,39 +1493,39 @@ totem_pl_parser_add_uri_valist (TotemPlParser *parser,
  * and @....
  **/
 void
-totem_pl_parser_add_uri (TotemPlParser *parser,
+xplayer_pl_parser_add_uri (XplayerPlParser *parser,
 			 const char *first_property_name,
 			 ...)
 {
 	va_list var_args;
 	va_start (var_args, first_property_name);
-	totem_pl_parser_add_uri_valist (parser, first_property_name, var_args);
+	xplayer_pl_parser_add_uri_valist (parser, first_property_name, var_args);
 	va_end (var_args);
 }
 
 /**
- * totem_pl_parser_add_one_uri:
- * @parser: a #TotemPlParser
+ * xplayer_pl_parser_add_one_uri:
+ * @parser: a #XplayerPlParser
  * @uri: the entry's URI
  * @title: the entry's title
  *
  * Adds a single URI entry with only URI and title strings to the playlist.
  **/
 void
-totem_pl_parser_add_one_uri (TotemPlParser *parser, const char *uri, const char *title)
+xplayer_pl_parser_add_one_uri (XplayerPlParser *parser, const char *uri, const char *title)
 {
-	totem_pl_parser_add_uri (parser,
-				 TOTEM_PL_PARSER_FIELD_URI, uri,
-				 TOTEM_PL_PARSER_FIELD_TITLE, title,
+	xplayer_pl_parser_add_uri (parser,
+				 XPLAYER_PL_PARSER_FIELD_URI, uri,
+				 XPLAYER_PL_PARSER_FIELD_TITLE, title,
 				 NULL);
 }
 
 void
-totem_pl_parser_add_one_file (TotemPlParser *parser, GFile *file, const char *title)
+xplayer_pl_parser_add_one_file (XplayerPlParser *parser, GFile *file, const char *title)
 {
-	totem_pl_parser_add_uri (parser,
-				 TOTEM_PL_PARSER_FIELD_FILE, file,
-				 TOTEM_PL_PARSER_FIELD_TITLE, title,
+	xplayer_pl_parser_add_uri (parser,
+				 XPLAYER_PL_PARSER_FIELD_FILE, file,
+				 XPLAYER_PL_PARSER_FIELD_TITLE, title,
 				 NULL);
 }
 
@@ -1538,8 +1538,8 @@ static PlaylistTypes ignore_types[] = {
 };
 
 /**
- * totem_pl_parser_scheme_is_ignored:
- * @parser: a #TotemPlParser
+ * xplayer_pl_parser_scheme_is_ignored:
+ * @parser: a #XplayerPlParser
  * @uri: a URI
  *
  * Checks to see if @uri's scheme is in the @parser's list of
@@ -1548,7 +1548,7 @@ static PlaylistTypes ignore_types[] = {
  * Return value: %TRUE if @uri's scheme is ignored
  **/
 gboolean
-totem_pl_parser_scheme_is_ignored (TotemPlParser *parser, GFile *uri)
+xplayer_pl_parser_scheme_is_ignored (XplayerPlParser *parser, GFile *uri)
 {
 	char *scheme;
 	gboolean ret;
@@ -1565,7 +1565,7 @@ totem_pl_parser_scheme_is_ignored (TotemPlParser *parser, GFile *uri)
 }
 
 static gboolean
-totem_pl_parser_mimetype_is_ignored (TotemPlParser *parser,
+xplayer_pl_parser_mimetype_is_ignored (XplayerPlParser *parser,
 				     const char *mimetype)
 {
 	gboolean ret;
@@ -1578,8 +1578,8 @@ totem_pl_parser_mimetype_is_ignored (TotemPlParser *parser,
 }
 
 /**
- * totem_pl_parser_ignore:
- * @parser: a #TotemPlParser
+ * xplayer_pl_parser_ignore:
+ * @parser: a #XplayerPlParser
  * @uri: a URI
  *
  * Checks if the URI should be ignored. URIs are <emphasis>not</emphasis> ignored if:
@@ -1589,20 +1589,20 @@ totem_pl_parser_mimetype_is_ignored (TotemPlParser *parser,
  *  <listitem><para>they have a mimetype which could be a video or a playlist.</para></listitem>
  * </itemizedlist>
  *
- * URIs are automatically ignored if their scheme is ignored as per totem_pl_parser_scheme_is_ignored(),
+ * URIs are automatically ignored if their scheme is ignored as per xplayer_pl_parser_scheme_is_ignored(),
  * and are ignored if all the other tests are inconclusive.
  *
  * Return value: %TRUE if @uri is to be ignored
  **/
 gboolean
-totem_pl_parser_ignore (TotemPlParser *parser, const char *uri)
+xplayer_pl_parser_ignore (XplayerPlParser *parser, const char *uri)
 {
 	char *mimetype;
 	GFile *file;
 	guint i;
 
 	file = g_file_new_for_path (uri);
-	if (totem_pl_parser_scheme_is_ignored (parser, file) != FALSE) {
+	if (xplayer_pl_parser_scheme_is_ignored (parser, file) != FALSE) {
 		g_object_unref (file);
 		return TRUE;
 	}
@@ -1635,14 +1635,14 @@ totem_pl_parser_ignore (TotemPlParser *parser, const char *uri)
 }
 
 /**
- * totem_pl_parser_cleanup_xml:
+ * xplayer_pl_parser_cleanup_xml:
  * @contents: the contents of the file
  *
  * Removes HTML comments from a string representing the contents of an XML file.
  * The function modifies the string in place.
  */
 static void
-totem_pl_parser_cleanup_xml (char *contents)
+xplayer_pl_parser_cleanup_xml (char *contents)
 {
 	char *needle;
 
@@ -1666,7 +1666,7 @@ totem_pl_parser_cleanup_xml (char *contents)
 }
 
 xml_node_t *
-totem_pl_parser_parse_xml_relaxed (char *contents,
+xplayer_pl_parser_parse_xml_relaxed (char *contents,
 				   gsize size)
 {
 	xml_node_t* doc, *node;
@@ -1674,7 +1674,7 @@ totem_pl_parser_parse_xml_relaxed (char *contents,
 	gsize new_size;
 	xml_parser_t *xml_parser;
 
-	totem_pl_parser_cleanup_xml (contents);
+	xplayer_pl_parser_cleanup_xml (contents);
 	xml_parser = xml_parser_init_r (contents, size, XML_PARSER_CASE_INSENSITIVE);
 	if (xml_parser_build_tree_with_options_r (xml_parser, &doc, XML_PARSER_RELAXED | XML_PARSER_MULTI_TEXT) < 0) {
 		xml_parser_finalize_r (xml_parser);
@@ -1720,7 +1720,7 @@ totem_pl_parser_parse_xml_relaxed (char *contents,
 }
 
 static gboolean
-totem_pl_parser_ignore_from_mimetype (TotemPlParser *parser, const char *mimetype)
+xplayer_pl_parser_ignore_from_mimetype (XplayerPlParser *parser, const char *mimetype)
 {
 	guint i;
 
@@ -1738,7 +1738,7 @@ totem_pl_parser_ignore_from_mimetype (TotemPlParser *parser, const char *mimetyp
 }
 
 static PlaylistCallback
-totem_pl_parser_get_function_for_mimetype (const char *mimetype)
+xplayer_pl_parser_get_function_for_mimetype (const char *mimetype)
 {
 	guint i;
 
@@ -1756,20 +1756,20 @@ totem_pl_parser_get_function_for_mimetype (const char *mimetype)
 	return NULL;
 }
 
-TotemPlParserResult
-totem_pl_parser_parse_internal (TotemPlParser *parser,
+XplayerPlParserResult
+xplayer_pl_parser_parse_internal (XplayerPlParser *parser,
 				GFile *file,
 				GFile *base_file,
-				TotemPlParseData *parse_data)
+				XplayerPlParseData *parse_data)
 {
 	char *mimetype;
 	guint i;
 	gpointer data = NULL;
-	TotemPlParserResult ret = TOTEM_PL_PARSER_RESULT_UNHANDLED;
+	XplayerPlParserResult ret = XPLAYER_PL_PARSER_RESULT_UNHANDLED;
 	gboolean found = FALSE;
 
 	if (parse_data->recurse_level > RECURSE_LEVEL_MAX)
-		return TOTEM_PL_PARSER_RESULT_ERROR;
+		return XPLAYER_PL_PARSER_RESULT_ERROR;
 
 	if (g_file_has_uri_scheme (file, "mms") != FALSE
 			|| g_file_has_uri_scheme (file, "rtsp") != FALSE
@@ -1777,7 +1777,7 @@ totem_pl_parser_parse_internal (TotemPlParser *parser,
 			|| g_file_has_uri_scheme (file, "icy") != FALSE
 			|| g_file_has_uri_scheme (file, "pnm") != FALSE) {
 		DEBUG(file, g_print ("URI '%s' is MMS, RTSP, RTMP, PNM or ICY, not a playlist\n", uri));
-		return TOTEM_PL_PARSER_RESULT_UNHANDLED;
+		return XPLAYER_PL_PARSER_RESULT_UNHANDLED;
 	}
 
 	/* Fix up itpc, see http://www.apple.com/itunes/store/podcaststechspecs.html,
@@ -1787,29 +1787,29 @@ totem_pl_parser_parse_internal (TotemPlParser *parser,
 	    || g_file_has_uri_scheme (file, "feed") != FALSE
 	    || g_file_has_uri_scheme (file, "zcast") != FALSE) {
 		DEBUG(file, g_print ("URI '%s' is getting special cased for ITPC/FEED/ZCAST parsing\n", uri));
-		return totem_pl_parser_add_itpc (parser, file, base_file, parse_data, NULL);
+		return xplayer_pl_parser_add_itpc (parser, file, base_file, parse_data, NULL);
 	}
 	if (g_file_has_uri_scheme (file, "zune") != FALSE) {
 		DEBUG(file, g_print ("URI '%s' is getting special cased for ZUNE parsing\n", uri));
-		return totem_pl_parser_add_zune (parser, file, base_file, parse_data, NULL);
+		return xplayer_pl_parser_add_zune (parser, file, base_file, parse_data, NULL);
 	}
 	/* Try itms Podcast references, see itunes.py in PenguinTV */
-	if (totem_pl_parser_is_itms_feed (file) != FALSE) {
+	if (xplayer_pl_parser_is_itms_feed (file) != FALSE) {
 		DEBUG(file, g_print ("URI '%s' is getting special cased for ITMS parsing\n", uri));
-		return totem_pl_parser_add_itms (parser, file, NULL, parse_data, NULL);
+		return xplayer_pl_parser_add_itms (parser, file, NULL, parse_data, NULL);
 	}
 
 	if (!parse_data->recurse && parse_data->recurse_level > 0)
-		return TOTEM_PL_PARSER_RESULT_UNHANDLED;
+		return XPLAYER_PL_PARSER_RESULT_UNHANDLED;
 
 #ifdef HAVE_QUVI
 	/* Should we try to parse it with quvi? */
 	if (g_file_has_uri_scheme (file, "http")) {
 		char *url;
 		url = g_file_get_uri (file);
-		if (url != NULL && totem_pl_parser_is_videosite (url, parser->priv->debug) != FALSE) {
-			ret = totem_pl_parser_add_videosite (parser, file, base_file, parse_data, NULL);
-			if (ret == TOTEM_PL_PARSER_RESULT_SUCCESS)
+		if (url != NULL && xplayer_pl_parser_is_videosite (url, parser->priv->debug) != FALSE) {
+			ret = xplayer_pl_parser_add_videosite (parser, file, base_file, parse_data, NULL);
+			if (ret == XPLAYER_PL_PARSER_RESULT_SUCCESS)
 				return ret;
 		}
 		g_free (url);
@@ -1867,13 +1867,13 @@ totem_pl_parser_parse_internal (TotemPlParser *parser,
 
 	if (mimetype == NULL) {
 		g_free (data);
-		return TOTEM_PL_PARSER_RESULT_UNHANDLED;
+		return XPLAYER_PL_PARSER_RESULT_UNHANDLED;
 	}
 
 	if (strcmp (mimetype, EMPTY_FILE_TYPE) == 0) {
 		g_free (data);
 		g_free (mimetype);
-		return TOTEM_PL_PARSER_RESULT_SUCCESS;
+		return XPLAYER_PL_PARSER_RESULT_SUCCESS;
 	}
 
 	/* If we're at the top-level of the parsing, try to get more
@@ -1888,10 +1888,10 @@ totem_pl_parser_parse_internal (TotemPlParser *parser,
 		DEBUG(file, g_print ("_get_mime_type_with_data for '%s' returned '%s' (was %s)\n", uri, mimetype, AUDIO_MPEG_TYPE));
 	}
 
-	if (totem_pl_parser_mimetype_is_ignored (parser, mimetype) != FALSE) {
+	if (xplayer_pl_parser_mimetype_is_ignored (parser, mimetype) != FALSE) {
 		g_free (mimetype);
 		g_free (data);
-		return TOTEM_PL_PARSER_RESULT_IGNORED;
+		return XPLAYER_PL_PARSER_RESULT_IGNORED;
 	}
 
 	if (parse_data->recurse || parse_data->recurse_level == 0) {
@@ -1904,7 +1904,7 @@ totem_pl_parser_parse_internal (TotemPlParser *parser,
 					DEBUG(file, g_print ("URI '%s' is unsafe so was ignored\n", uri));
 					g_free (mimetype);
 					g_free (data);
-					return TOTEM_PL_PARSER_RESULT_IGNORED;
+					return XPLAYER_PL_PARSER_RESULT_IGNORED;
 				}
 				if (base_file == NULL)
 					base_file = g_file_get_parent (file);
@@ -1937,16 +1937,16 @@ totem_pl_parser_parse_internal (TotemPlParser *parser,
 				    g_content_type_is_a (mimetype, "text/plain") &&
 				    g_content_type_is_a (mimetype, "application/xml") == FALSE) {
 					DEBUG(file, g_print ("Ignoring URI '%s' dual type because '%s' is a text/plain\n", uri, mimetype));
-					ret = TOTEM_PL_PARSER_RESULT_IGNORED;
+					ret = XPLAYER_PL_PARSER_RESULT_IGNORED;
 					g_free (mimetype);
 					mimetype = NULL;
 					break;
 				}
 				/* Now look for the proper function to use */
-				func = totem_pl_parser_get_function_for_mimetype (mimetype);
+				func = xplayer_pl_parser_get_function_for_mimetype (mimetype);
 				if ((func == NULL && mimetype != NULL) || (mimetype == NULL && dual_types[i].func == NULL)) {
 					DEBUG(file, g_print ("Ignoring URI '%s' because we couldn't find a playlist parser for '%s'\n", uri, mimetype));
-					ret = TOTEM_PL_PARSER_RESULT_UNHANDLED;
+					ret = XPLAYER_PL_PARSER_RESULT_UNHANDLED;
 					g_free (mimetype);
 					mimetype = NULL;
 					break;
@@ -1974,20 +1974,20 @@ totem_pl_parser_parse_internal (TotemPlParser *parser,
 		parse_data->recurse_level--;
 	}
 
-	if (ret == TOTEM_PL_PARSER_RESULT_SUCCESS) {
+	if (ret == XPLAYER_PL_PARSER_RESULT_SUCCESS) {
 		g_free (mimetype);
 		return ret;
 	}
 
-	if (totem_pl_parser_ignore_from_mimetype (parser, mimetype) != FALSE) {
+	if (xplayer_pl_parser_ignore_from_mimetype (parser, mimetype) != FALSE) {
 		g_free (mimetype);
-		return TOTEM_PL_PARSER_RESULT_IGNORED;
+		return XPLAYER_PL_PARSER_RESULT_IGNORED;
 	}
 	g_free (mimetype);
 
-	if (ret != TOTEM_PL_PARSER_RESULT_SUCCESS && parse_data->fallback) {
-		totem_pl_parser_add_one_file (parser, file, NULL);
-		return TOTEM_PL_PARSER_RESULT_SUCCESS;
+	if (ret != XPLAYER_PL_PARSER_RESULT_SUCCESS && parse_data->fallback) {
+		xplayer_pl_parser_add_one_file (parser, file, NULL);
+		return XPLAYER_PL_PARSER_RESULT_SUCCESS;
 	}
 
 	return ret;
@@ -2010,26 +2010,26 @@ parse_async_data_free (ParseAsyncData *data)
 static void
 parse_thread (GSimpleAsyncResult *result, GObject *object, GCancellable *cancellable)
 {
-	TotemPlParserResult parse_result;
+	XplayerPlParserResult parse_result;
 	GError *error = NULL;
 	ParseAsyncData *data = g_simple_async_result_get_op_res_gpointer (result);
 
 	/* Check to see if it's been cancelled already */
 	if (g_cancellable_set_error_if_cancelled (cancellable, &error) == TRUE) {
 		g_simple_async_result_set_from_error (result, error);
-		g_simple_async_result_set_op_res_gpointer (result, GUINT_TO_POINTER (TOTEM_PL_PARSER_RESULT_CANCELLED), NULL);
+		g_simple_async_result_set_op_res_gpointer (result, GUINT_TO_POINTER (XPLAYER_PL_PARSER_RESULT_CANCELLED), NULL);
 		g_error_free (error);
 		return;
 	}
 
 	/* Parse and return */
-	parse_result = totem_pl_parser_parse_with_base (TOTEM_PL_PARSER (object), data->uri, data->base, data->fallback);
+	parse_result = xplayer_pl_parser_parse_with_base (XPLAYER_PL_PARSER (object), data->uri, data->base, data->fallback);
 	g_simple_async_result_set_op_res_gpointer (result, GUINT_TO_POINTER (parse_result), NULL);
 }
 
 /**
- * totem_pl_parser_parse_with_base_async:
- * @parser: a #TotemPlParser
+ * xplayer_pl_parser_parse_with_base_async:
+ * @parser: a #XplayerPlParser
  * @uri: the URI of the playlist to parse
  * @base: (allow-none): the base path for relative filenames, or %NULL
  * @fallback: %TRUE if the parser should add the playlist URI to the
@@ -2041,19 +2041,19 @@ parse_thread (GSimpleAsyncResult *result, GObject *object, GCancellable *cancell
  * Starts asynchronous parsing of a playlist given by the absolute URI @uri, using @base to resolve relative paths where appropriate.
  * @parser and @uri are both reffed/copied when this function is called, so can safely be freed after this function returns.
  *
- * For more details, see totem_pl_parser_parse_with_base(), which is the synchronous version of this function.
+ * For more details, see xplayer_pl_parser_parse_with_base(), which is the synchronous version of this function.
  *
- * When the operation is finished, @callback will be called. You can then call totem_pl_parser_parse_finish()
+ * When the operation is finished, @callback will be called. You can then call xplayer_pl_parser_parse_finish()
  * to get the results of the operation.
  **/
 void
-totem_pl_parser_parse_with_base_async (TotemPlParser *parser, const char *uri, const char *base, gboolean fallback,
+xplayer_pl_parser_parse_with_base_async (XplayerPlParser *parser, const char *uri, const char *base, gboolean fallback,
 				       GCancellable *cancellable, GAsyncReadyCallback callback, gpointer user_data)
 {
 	GSimpleAsyncResult *result;
 	ParseAsyncData *data;
 
-	g_return_if_fail (TOTEM_IS_PL_PARSER (parser));
+	g_return_if_fail (XPLAYER_IS_PL_PARSER (parser));
 	g_return_if_fail (uri != NULL);
 	g_return_if_fail (strstr (uri, "://") != NULL);
 
@@ -2062,15 +2062,15 @@ totem_pl_parser_parse_with_base_async (TotemPlParser *parser, const char *uri, c
 	data->base = g_strdup (base);
 	data->fallback = fallback;
 
-	result = g_simple_async_result_new (G_OBJECT (parser), callback, user_data, totem_pl_parser_parse_with_base_async);
+	result = g_simple_async_result_new (G_OBJECT (parser), callback, user_data, xplayer_pl_parser_parse_with_base_async);
 	g_simple_async_result_set_op_res_gpointer (result, data, (GDestroyNotify) parse_async_data_free);
 	g_simple_async_result_run_in_thread (result, (GSimpleAsyncThreadFunc) parse_thread, G_PRIORITY_DEFAULT, cancellable);
 	g_object_unref (result);
 }
 
 /**
- * totem_pl_parser_parse_with_base:
- * @parser: a #TotemPlParser
+ * xplayer_pl_parser_parse_with_base:
+ * @parser: a #XplayerPlParser
  * @uri: the URI of the playlist to parse
  * @base: (allow-none): the base path for relative filenames, or %NULL
  * @fallback: %TRUE if the parser should add the playlist URI to the
@@ -2079,27 +2079,27 @@ totem_pl_parser_parse_with_base_async (TotemPlParser *parser, const char *uri, c
  * Parses a playlist given by the absolute URI @uri, using
  * @base to resolve relative paths where appropriate.
  *
- * Return value: a #TotemPlParserResult
+ * Return value: a #XplayerPlParserResult
  **/
-TotemPlParserResult
-totem_pl_parser_parse_with_base (TotemPlParser *parser, const char *uri,
+XplayerPlParserResult
+xplayer_pl_parser_parse_with_base (XplayerPlParser *parser, const char *uri,
 				 const char *base, gboolean fallback)
 {
 	GFile *file, *base_file;
-	TotemPlParserResult retval;
-	TotemPlParseData data;
+	XplayerPlParserResult retval;
+	XplayerPlParseData data;
 
-	g_return_val_if_fail (TOTEM_IS_PL_PARSER (parser), TOTEM_PL_PARSER_RESULT_UNHANDLED);
-	g_return_val_if_fail (uri != NULL, TOTEM_PL_PARSER_RESULT_UNHANDLED);
+	g_return_val_if_fail (XPLAYER_IS_PL_PARSER (parser), XPLAYER_PL_PARSER_RESULT_UNHANDLED);
+	g_return_val_if_fail (uri != NULL, XPLAYER_PL_PARSER_RESULT_UNHANDLED);
 	g_return_val_if_fail (strstr (uri, "://") != NULL,
-			TOTEM_PL_PARSER_RESULT_ERROR);
+			XPLAYER_PL_PARSER_RESULT_ERROR);
 
 	file = g_file_new_for_uri (uri);
 	base_file = NULL;
 
-	if (totem_pl_parser_scheme_is_ignored (parser, file) != FALSE) {
+	if (xplayer_pl_parser_scheme_is_ignored (parser, file) != FALSE) {
 		g_object_unref (file);
-		return TOTEM_PL_PARSER_RESULT_UNHANDLED;
+		return XPLAYER_PL_PARSER_RESULT_UNHANDLED;
 	}
 
 	/* Use a struct to store copies of the options as set for this parse operation */
@@ -2111,7 +2111,7 @@ totem_pl_parser_parse_with_base (TotemPlParser *parser, const char *uri,
 
 	if (base != NULL)
 		base_file = g_file_new_for_uri (base);
-	retval = totem_pl_parser_parse_internal (parser, file, base_file, &data);
+	retval = xplayer_pl_parser_parse_internal (parser, file, base_file, &data);
 
 	g_object_unref (file);
 	if (base_file != NULL)
@@ -2121,8 +2121,8 @@ totem_pl_parser_parse_with_base (TotemPlParser *parser, const char *uri,
 }
 
 /**
- * totem_pl_parser_parse_async:
- * @parser: a #TotemPlParser
+ * xplayer_pl_parser_parse_async:
+ * @parser: a #XplayerPlParser
  * @uri: the URI of the playlist to parse
  * @fallback: %TRUE if the parser should add the playlist URI to the
  * end of the playlist on parse failure
@@ -2133,41 +2133,41 @@ totem_pl_parser_parse_with_base (TotemPlParser *parser, const char *uri,
  * Starts asynchronous parsing of a playlist given by the absolute URI @uri. @parser and @uri are both reffed/copied
  * when this function is called, so can safely be freed after this function returns.
  *
- * For more details, see totem_pl_parser_parse(), which is the synchronous version of this function.
+ * For more details, see xplayer_pl_parser_parse(), which is the synchronous version of this function.
  *
- * When the operation is finished, @callback will be called. You can then call totem_pl_parser_parse_finish()
+ * When the operation is finished, @callback will be called. You can then call xplayer_pl_parser_parse_finish()
  * to get the results of the operation.
  **/
 void
-totem_pl_parser_parse_async (TotemPlParser *parser, const char *uri, gboolean fallback,
+xplayer_pl_parser_parse_async (XplayerPlParser *parser, const char *uri, gboolean fallback,
 			     GCancellable *cancellable, GAsyncReadyCallback callback, gpointer user_data)
 {
-	totem_pl_parser_parse_with_base_async (parser, uri, NULL, fallback, cancellable, callback, user_data);
+	xplayer_pl_parser_parse_with_base_async (parser, uri, NULL, fallback, cancellable, callback, user_data);
 }
 
 /**
- * totem_pl_parser_parse_finish:
- * @parser: a #TotemPlParser
+ * xplayer_pl_parser_parse_finish:
+ * @parser: a #XplayerPlParser
  * @async_result: a #GAsyncResult
  * @error: a #GError, or %NULL
  *
- * Finishes an asynchronous playlist parsing operation started with totem_pl_parser_parse_async()
- * or totem_pl_parser_parse_with_base_async().
+ * Finishes an asynchronous playlist parsing operation started with xplayer_pl_parser_parse_async()
+ * or xplayer_pl_parser_parse_with_base_async().
  *
- * If parsing of the playlist is cancelled part-way through, %TOTEM_PL_PARSER_RESULT_CANCELLED is returned when
+ * If parsing of the playlist is cancelled part-way through, %XPLAYER_PL_PARSER_RESULT_CANCELLED is returned when
  * this function is called.
  *
- * Return value: a #TotemPlParserResult
+ * Return value: a #XplayerPlParserResult
  **/
-TotemPlParserResult
-totem_pl_parser_parse_finish (TotemPlParser *parser, GAsyncResult *async_result, GError **error)
+XplayerPlParserResult
+xplayer_pl_parser_parse_finish (XplayerPlParser *parser, GAsyncResult *async_result, GError **error)
 {
 	GSimpleAsyncResult *result = G_SIMPLE_ASYNC_RESULT (async_result);
 
-	g_return_val_if_fail (TOTEM_IS_PL_PARSER (parser), FALSE);
+	g_return_val_if_fail (XPLAYER_IS_PL_PARSER (parser), FALSE);
 	g_return_val_if_fail (G_IS_ASYNC_RESULT (async_result), FALSE);
 
-	g_warn_if_fail (g_simple_async_result_get_source_tag (result) == totem_pl_parser_parse_with_base_async);
+	g_warn_if_fail (g_simple_async_result_get_source_tag (result) == xplayer_pl_parser_parse_with_base_async);
 
 	/* Propagate any errors which were caught and return the result; otherwise just return the result */
 	g_simple_async_result_propagate_error (result, error);
@@ -2175,42 +2175,42 @@ totem_pl_parser_parse_finish (TotemPlParser *parser, GAsyncResult *async_result,
 }
 
 /**
- * totem_pl_parser_parse:
- * @parser: a #TotemPlParser
+ * xplayer_pl_parser_parse:
+ * @parser: a #XplayerPlParser
  * @uri: the URI of the playlist to parse
  * @fallback: %TRUE if the parser should add the playlist URI to the
  * end of the playlist on parse failure
  *
  * Parses a playlist given by the absolute URI @uri. This method is
  * synchronous, and will block on (e.g.) network requests to slow
- * servers. totem_pl_parser_parse_async() is recommended instead.
+ * servers. xplayer_pl_parser_parse_async() is recommended instead.
  *
- * Return values are as totem_pl_parser_parse_with_base().
+ * Return values are as xplayer_pl_parser_parse_with_base().
  *
- * Return value: a #TotemPlParserResult
+ * Return value: a #XplayerPlParserResult
  **/
-TotemPlParserResult
-totem_pl_parser_parse (TotemPlParser *parser, const char *uri,
+XplayerPlParserResult
+xplayer_pl_parser_parse (XplayerPlParser *parser, const char *uri,
 		       gboolean fallback)
 {
-	return totem_pl_parser_parse_with_base (parser, uri, NULL, fallback);
+	return xplayer_pl_parser_parse_with_base (parser, uri, NULL, fallback);
 }
 
 /**
- * totem_pl_parser_add_ignored_scheme:
- * @parser: a #TotemPlParser
+ * xplayer_pl_parser_add_ignored_scheme:
+ * @parser: a #XplayerPlParser
  * @scheme: the scheme to ignore
  *
  * Adds a scheme to the list of schemes to ignore, so that
  * any URI using that scheme is ignored during playlist parsing.
  **/
 void
-totem_pl_parser_add_ignored_scheme (TotemPlParser *parser,
+xplayer_pl_parser_add_ignored_scheme (XplayerPlParser *parser,
 		const char *scheme)
 {
 	char *s;
 
-	g_return_if_fail (TOTEM_IS_PL_PARSER (parser));
+	g_return_if_fail (XPLAYER_IS_PL_PARSER (parser));
 
 	g_mutex_lock (&parser->priv->ignore_mutex);
 
@@ -2223,18 +2223,18 @@ totem_pl_parser_add_ignored_scheme (TotemPlParser *parser,
 }
 
 /**
- * totem_pl_parser_add_ignored_mimetype:
- * @parser: a #TotemPlParser
+ * xplayer_pl_parser_add_ignored_mimetype:
+ * @parser: a #XplayerPlParser
  * @mimetype: the mimetype to ignore
  *
  * Adds a mimetype to the list of mimetypes to ignore, so that
  * any URI of that mimetype is ignored during playlist parsing.
  **/
 void
-totem_pl_parser_add_ignored_mimetype (TotemPlParser *parser,
+xplayer_pl_parser_add_ignored_mimetype (XplayerPlParser *parser,
 		const char *mimetype)
 {
-	g_return_if_fail (TOTEM_IS_PL_PARSER (parser));
+	g_return_if_fail (XPLAYER_IS_PL_PARSER (parser));
 
 	g_mutex_lock (&parser->priv->ignore_mutex);
 	g_hash_table_insert (parser->priv->ignore_mimetypes, g_strdup (mimetype), GINT_TO_POINTER (1));
@@ -2242,7 +2242,7 @@ totem_pl_parser_add_ignored_mimetype (TotemPlParser *parser,
 }
 
 /**
- * totem_pl_parser_parse_duration:
+ * xplayer_pl_parser_parse_duration:
  * @duration: the duration string to parse
  * @debug: %TRUE if debug statements should be printed
  *
@@ -2252,7 +2252,7 @@ totem_pl_parser_add_ignored_mimetype (TotemPlParser *parser,
  * Return value: the duration in seconds, or -1 on error
  **/
 gint64
-totem_pl_parser_parse_duration (const char *duration, gboolean debug)
+xplayer_pl_parser_parse_duration (const char *duration, gboolean debug)
 {
 	int hours, minutes, seconds, fractions;
 
@@ -2312,7 +2312,7 @@ totem_pl_parser_parse_duration (const char *duration, gboolean debug)
 
 
 /**
- * totem_pl_parser_parse_date:
+ * xplayer_pl_parser_parse_date:
  * @date_str: the date string to parse
  * @debug: %TRUE if debug statements should be printed
  *
@@ -2322,7 +2322,7 @@ totem_pl_parser_parse_duration (const char *duration, gboolean debug)
  * Return value: the date in seconds, or -1 on error
  **/
 guint64
-totem_pl_parser_parse_date (const char *date_str, gboolean debug)
+xplayer_pl_parser_parse_date (const char *date_str, gboolean debug)
 {
 #ifdef HAVE_GMIME
 	GTimeVal val;
@@ -2342,10 +2342,10 @@ totem_pl_parser_parse_date (const char *date_str, gboolean debug)
 	WARN_NO_GMIME;
 #endif /* HAVE_GMIME */
 }
-#endif /* !TOTEM_PL_PARSER_MINI */
+#endif /* !XPLAYER_PL_PARSER_MINI */
 
 static char *
-totem_pl_parser_mime_type_from_data (gconstpointer data, int len)
+xplayer_pl_parser_mime_type_from_data (gconstpointer data, int len)
 {
 	char *mime_type;
 	gboolean uncertain;
@@ -2400,7 +2400,7 @@ totem_pl_parser_mime_type_from_data (gconstpointer data, int len)
 }
 
 /**
- * totem_pl_parser_can_parse_from_data:
+ * xplayer_pl_parser_can_parse_from_data:
  * @data: the data to check for parsability
  * @len: the length of data to check
  * @debug: %TRUE if debug statements should be printed
@@ -2410,7 +2410,7 @@ totem_pl_parser_mime_type_from_data (gconstpointer data, int len)
  * Return value: %TRUE if @data can be parsed
  **/
 gboolean
-totem_pl_parser_can_parse_from_data (const char *data,
+xplayer_pl_parser_can_parse_from_data (const char *data,
 				     gsize len,
 				     gboolean debug)
 {
@@ -2420,10 +2420,10 @@ totem_pl_parser_can_parse_from_data (const char *data,
 	g_return_val_if_fail (data != NULL, FALSE);
 
 	/* Bad cast! */
-	mimetype = totem_pl_parser_mime_type_from_data ((gpointer) data, (int) len);
+	mimetype = xplayer_pl_parser_mime_type_from_data ((gpointer) data, (int) len);
 
 	if (mimetype == NULL) {
-		D(g_message ("totem_pl_parser_can_parse_from_data couldn't get mimetype"));
+		D(g_message ("xplayer_pl_parser_can_parse_from_data couldn't get mimetype"));
 		return FALSE;
 	}
 
@@ -2458,7 +2458,7 @@ totem_pl_parser_can_parse_from_data (const char *data,
 }
 
 /**
- * totem_pl_parser_can_parse_from_filename:
+ * xplayer_pl_parser_can_parse_from_filename:
  * @filename: the file to check for parsability
  * @debug: %TRUE if debug statements should be printed
  *
@@ -2471,7 +2471,7 @@ totem_pl_parser_can_parse_from_data (const char *data,
  * Return value: %TRUE if @filename can be parsed
  **/
 gboolean
-totem_pl_parser_can_parse_from_filename (const char *filename, gboolean debug)
+xplayer_pl_parser_can_parse_from_filename (const char *filename, gboolean debug)
 {
 	GMappedFile *map;
 	GError *err = NULL;
@@ -2486,7 +2486,7 @@ totem_pl_parser_can_parse_from_filename (const char *filename, gboolean debug)
 		return FALSE;
 	}
 
-	retval = totem_pl_parser_can_parse_from_data
+	retval = xplayer_pl_parser_can_parse_from_data
 		(g_mapped_file_get_contents (map),
 		 g_mapped_file_get_length (map), debug);
 
@@ -2496,7 +2496,7 @@ totem_pl_parser_can_parse_from_filename (const char *filename, gboolean debug)
 }
 
 /**
- * totem_pl_parser_can_parse_from_uri:
+ * xplayer_pl_parser_can_parse_from_uri:
  * @uri: the remote URI to check for parsability
  * @debug: %TRUE if debug statements should be printed
  *
@@ -2507,28 +2507,28 @@ totem_pl_parser_can_parse_from_filename (const char *filename, gboolean debug)
  * Return value: %TRUE if @uri could be parsed
  **/
 gboolean
-totem_pl_parser_can_parse_from_uri (const char *uri, gboolean debug)
+xplayer_pl_parser_can_parse_from_uri (const char *uri, gboolean debug)
 {
-	return totem_pl_parser_is_videosite (uri, debug);
+	return xplayer_pl_parser_is_videosite (uri, debug);
 }
 
-#ifndef TOTEM_PL_PARSER_MINI
+#ifndef XPLAYER_PL_PARSER_MINI
 GType
-totem_pl_parser_metadata_get_type (void)
+xplayer_pl_parser_metadata_get_type (void)
 {
 	static volatile gsize g_define_type_id__volatile = 0;
 	if (g_once_init_enter (&g_define_type_id__volatile))
 	{
 		/* NOTE: This is equivalent to the definition for GHashTable in gboxed.c, in that it uses the same copy/free functions.
-		 * This means that if we box a TotemPlParserMetadata inside a GValue, we can safely unbox it as a GHashTable (and vice-versa).
-		 * This means we can hide TotemPlParserMetadata from introspection, and just pretend it's actually been a GHashTable all along. */
+		 * This means that if we box a XplayerPlParserMetadata inside a GValue, we can safely unbox it as a GHashTable (and vice-versa).
+		 * This means we can hide XplayerPlParserMetadata from introspection, and just pretend it's actually been a GHashTable all along. */
 		GType g_define_type_id = g_boxed_type_register_static (
-		    g_intern_static_string ("TotemPlParserMetadata"),
+		    g_intern_static_string ("XplayerPlParserMetadata"),
 		    (GBoxedCopyFunc) g_hash_table_ref,
 		    (GBoxedFreeFunc) g_hash_table_unref);
 		g_once_init_leave (&g_define_type_id__volatile, g_define_type_id);
 	}
 	return g_define_type_id__volatile;
 }
-#endif /* !TOTEM_PL_PARSER_MINI */
+#endif /* !XPLAYER_PL_PARSER_MINI */
 

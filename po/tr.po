@@ -1,6 +1,6 @@
-# Turkish translation of totem.
-# Copyright (C) 2003 totem's COPYRIGHT HOLDER
-# This file is distributed under the same license as the totem package.
+# Turkish translation of xplayer.
+# Copyright (C) 2003 xplayer's COPYRIGHT HOLDER
+# This file is distributed under the same license as the xplayer package.
 #
 # Caner Baydemir <caner.baydemir@gelecek.com.tr>, 2003.
 # Erçin EKER <ercin.eker@linux.org.tr>, 2005,2007.
@@ -9,7 +9,7 @@
 # Baris Cicek <baris@teamforce.name.tr>, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: totem-pl-parser\n"
+"Project-Id-Version: xplayer-pl-parser\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-02-22 19:35+0200\n"
 "PO-Revision-Date: 2008-09-18 07:57+0300\n"
@@ -20,34 +20,34 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms:  nplurals=1; plural=0;\n"
 
-#: ../plparse/totem-disc.c:357 ../plparse/totem-disc.c:498
+#: ../plparse/xplayer-disc.c:357 ../plparse/xplayer-disc.c:498
 #, c-format
 msgid "Failed to mount %s."
 msgstr "%s bağlanamadı."
 
-#: ../plparse/totem-disc.c:387
+#: ../plparse/xplayer-disc.c:387
 #, c-format
 msgid "No media in drive for device '%s'."
 msgstr "Aygıt '%s' için sürücüde hiçbir ortam yok."
 
-#: ../plparse/totem-disc.c:441
+#: ../plparse/xplayer-disc.c:441
 #, c-format
 msgid "Please check that a disc is present in the drive."
 msgstr "Sürücü içinde bir disk bulunup bulunmadığını kontrol edin."
 
-#: ../plparse/totem-disc.c:880
+#: ../plparse/xplayer-disc.c:880
 msgid "Audio CD"
 msgstr "Ses CD'si"
 
-#: ../plparse/totem-disc.c:882
+#: ../plparse/xplayer-disc.c:882
 msgid "Video CD"
 msgstr "Video CD'si"
 
-#: ../plparse/totem-disc.c:884
+#: ../plparse/xplayer-disc.c:884
 msgid "DVD"
 msgstr "DVD"
 
-#: ../plparse/totem-disc.c:886
+#: ../plparse/xplayer-disc.c:886
 msgid "Digital Television"
 msgstr "Sayısal Televizyon"
 
@@ -288,11 +288,11 @@ msgstr "Sayısal Televizyon"
 #~ msgid "Time:"
 #~ msgstr "Zaman:"
 
-#~ msgid "Totem Movie Player"
-#~ msgstr "Totem Film Oynatıcı"
+#~ msgid "Xplayer Movie Player"
+#~ msgstr "Xplayer Film Oynatıcı"
 
-#~ msgid "Totem Preferences"
-#~ msgstr "Totem Özellikler"
+#~ msgid "Xplayer Preferences"
+#~ msgstr "Xplayer Özellikler"
 
 #~ msgid "Visualisation _size:"
 #~ msgstr "Görsel canlandırma _boyutu:"
@@ -502,21 +502,21 @@ msgstr "Sayısal Televizyon"
 #~ msgid "Couldn't load the '%s' interface."
 #~ msgstr "'%s' arayüzü yüklenemiyor."
 
-#~ msgid "Make sure that Totem is properly installed."
-#~ msgstr "Totem'in düzgün kurulduğundan emin olun."
+#~ msgid "Make sure that Xplayer is properly installed."
+#~ msgstr "Xplayer'in düzgün kurulduğundan emin olun."
 
 #~ msgid ""
-#~ "Totem is free software; you can redistribute it and/or modify it under "
+#~ "Xplayer is free software; you can redistribute it and/or modify it under "
 #~ "the terms of the GNU General Public License as published by the Free "
 #~ "Software Foundation; either version 2 of the License, or (at your option) "
 #~ "any later version."
 #~ msgstr ""
-#~ "Totem özgür yazılımdır; Free Software Foundation tarafınca yayınlanmış "
+#~ "Xplayer özgür yazılımdır; Free Software Foundation tarafınca yayınlanmış "
 #~ "GNU Genel Kamu Lisansı ikinci sürüm ya da (seçiminize istinaden) sonraki "
 #~ "bir sürüm şartlarınca değiştirilebilir ve dağıtılabilir."
 
 #~ msgid ""
-#~ "Totem is distributed in the hope that it will be useful, but WITHOUT ANY "
+#~ "Xplayer is distributed in the hope that it will be useful, but WITHOUT ANY "
 #~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
 #~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 #~ "details."
@@ -528,7 +528,7 @@ msgstr "Sayısal Televizyon"
 
 #~ msgid ""
 #~ "You should have received a copy of the GNU General Public License along "
-#~ "with Totem; if not, write to the Free Software Foundation, Inc., 59 "
+#~ "with Xplayer; if not, write to the Free Software Foundation, Inc., 59 "
 #~ "Temple Place, Suite 330, Boston, MA  02111-1307  USA"
 #~ msgstr ""
 #~ "GNU Genel Kamu Lisansı'nın bir kopyasını GNOME Web Tarayıcısı ile almış "
@@ -536,10 +536,10 @@ msgstr "Sayısal Televizyon"
 #~ "Place, Suite 330, Boston, MA  02111-1307  USA adresine yazın"
 
 #~ msgid ""
-#~ "Totem contains an exception to allow the use of proprietary GStreamer "
+#~ "Xplayer contains an exception to allow the use of proprietary GStreamer "
 #~ "plugins."
 #~ msgstr ""
-#~ "Totem sahipli GStreamer eklentilerini kullanmaya izin vermek için bir "
+#~ "Xplayer sahipli GStreamer eklentilerini kullanmaya izin vermek için bir "
 #~ "farklılık içerir."
 
 #~ msgid "None"
@@ -929,17 +929,17 @@ msgstr "Sayısal Televizyon"
 #~ msgstr "Görsel Efektleri etkinleştir?"
 
 #~ msgid ""
-#~ "It seems you are running Totem remotely.\n"
+#~ "It seems you are running Xplayer remotely.\n"
 #~ "Are you sure you want to enable the visual effects?"
 #~ msgstr ""
-#~ "Öyle görünüyorki Totem'i uzaktan çalıştırıyorsunuz.\n"
+#~ "Öyle görünüyorki Xplayer'i uzaktan çalıştırıyorsunuz.\n"
 #~ "Görsel efektleri etkinleştirmek istediğinize emin misiniz?"
 
 #~ msgid ""
 #~ "The change of this setting will only take effect for the next movie, or "
-#~ "when Totem is restarted."
+#~ "when Xplayer is restarted."
 #~ msgstr ""
-#~ "Bu seçenekte yaptığınız değişiklik anca sonraki filmde ya da Totem "
+#~ "Bu seçenekte yaptığınız değişiklik anca sonraki filmde ya da Xplayer "
 #~ "yeniden başlatıldığında etkin olur."
 
 #~ msgid ""
@@ -947,10 +947,10 @@ msgstr "Sayısal Televizyon"
 #~ msgstr "Görsel efekt değişiminin etkin olması için yeniden başlatma gereki."
 
 #~ msgid ""
-#~ "The change of audio output type will only take effect when Totem is "
+#~ "The change of audio output type will only take effect when Xplayer is "
 #~ "restarted."
 #~ msgstr ""
-#~ "Ses çıkış türünün değiştirilmesi Totem yeniden başlatıldığında etkin olur."
+#~ "Ses çıkış türünün değiştirilmesi Xplayer yeniden başlatıldığında etkin olur."
 
 #~ msgid "Select Subtitle Font"
 #~ msgstr "Altyazı Yazıtipi Seç"
@@ -1126,31 +1126,31 @@ msgstr "Sayısal Televizyon"
 #~ msgid "Paused"
 #~ msgstr "Bekletildi"
 
-#~ msgid "Totem could not eject the optical media."
-#~ msgstr "Totem optik ortamı çıkartamıyor."
+#~ msgid "Xplayer could not eject the optical media."
+#~ msgstr "Xplayer optik ortamı çıkartamıyor."
 
-#~ msgid "Totem could not play '%s'."
-#~ msgstr "Totem '%s'i oynatamadı."
+#~ msgid "Xplayer could not play '%s'."
+#~ msgstr "Xplayer '%s'i oynatamadı."
 
 #~ msgid ""
-#~ "Totem cannot play this type of media (%s) because you do not have the "
+#~ "Xplayer cannot play this type of media (%s) because you do not have the "
 #~ "appropriate plugins to handle it."
 #~ msgstr ""
-#~ "Totem bu türdeki (%s) ortamları oynatamıyor çünkü bu işlem için doğru "
+#~ "Xplayer bu türdeki (%s) ortamları oynatamıyor çünkü bu işlem için doğru "
 #~ "eklentiler kurulu değil."
 
 #~ msgid ""
-#~ "Please install the necessary plugins and restart Totem to be able to play "
+#~ "Please install the necessary plugins and restart Xplayer to be able to play "
 #~ "this media."
 #~ msgstr ""
-#~ "Lütfen bu ortamı oynatmak için gerekli eklentileri kurun ve Totem'i "
+#~ "Lütfen bu ortamı oynatmak için gerekli eklentileri kurun ve Xplayer'i "
 #~ "yeniden başlatın."
 
 #~ msgid ""
-#~ "Totem could not play this media (%s) although a plugin is present to "
+#~ "Xplayer could not play this media (%s) although a plugin is present to "
 #~ "handle it."
 #~ msgstr ""
-#~ "Totem gerekli eklentiler kurulu olmasına rağmen bu ortamı (%s) "
+#~ "Xplayer gerekli eklentiler kurulu olmasına rağmen bu ortamı (%s) "
 #~ "oynatamıyor."
 
 #~ msgid ""
@@ -1160,8 +1160,8 @@ msgstr "Sayısal Televizyon"
 #~ "Sürücünün doğru yapılandırıldığından ve içinde bir ortam bulunup "
 #~ "bulunmadığını kontrol etmek isteyebilirsiniz."
 
-#~ msgid "Totem was not able to play this disc."
-#~ msgstr "Totem bu diski oynatamadı."
+#~ msgid "Xplayer was not able to play this disc."
+#~ msgstr "Xplayer bu diski oynatamadı."
 
 #~ msgid "No reason."
 #~ msgstr "Sebep yok."
@@ -1169,8 +1169,8 @@ msgstr "Sayısal Televizyon"
 #~ msgid "Open Location..."
 #~ msgstr "Konum Aç..."
 
-#~ msgid "Totem could not get a screenshot of that film."
-#~ msgstr "Totem bu filmden bir ekran görüntüsü elde edemedi."
+#~ msgid "Xplayer could not get a screenshot of that film."
+#~ msgstr "Xplayer bu filmden bir ekran görüntüsü elde edemedi."
 
 #~ msgid "This is not supposed to happen; please file a bug report."
 #~ msgstr ""
@@ -1182,14 +1182,14 @@ msgstr "Sayısal Televizyon"
 #~ msgid "No error message"
 #~ msgstr "Hata mesajı yok"
 
-#~ msgid "Totem could not display the help contents."
-#~ msgstr "Totem yardım içeriğini gösteremiyor."
+#~ msgid "Xplayer could not display the help contents."
+#~ msgstr "Xplayer yardım içeriğini gösteremiyor."
 
 #~ msgid "An error occurred"
 #~ msgstr "Bir hata oluştu"
 
-#~ msgid "Totem could not seek in '%s'."
-#~ msgstr "Totem '%s'de atlama yapamadı."
+#~ msgid "Xplayer could not seek in '%s'."
+#~ msgstr "Xplayer '%s'de atlama yapamadı."
 
 #~ msgid "Previous Chapter/Movie"
 #~ msgstr "Önceki Bölüm/Film"
@@ -1200,23 +1200,23 @@ msgstr "Sayısal Televizyon"
 #~ msgid "Next Chapter/Movie"
 #~ msgstr "Sonraki Bölüm/Film"
 
-#~ msgid "Totem could not startup."
-#~ msgstr "Totem başlatılamadı."
+#~ msgid "Xplayer could not startup."
+#~ msgstr "Xplayer başlatılamadı."
 
 #~ msgid "Could not initialize the thread-safe libraries."
 #~ msgstr "Güvenli iş parçacığı kütüphaneleri ilklendirilemiyor."
 
-#~ msgid "Verify your system installation. Totem will now exit."
-#~ msgstr "Kurulumunuzu kontrol edin. Totem şimdi çıkıyor."
+#~ msgid "Verify your system installation. Xplayer will now exit."
+#~ msgstr "Kurulumunuzu kontrol edin. Xplayer şimdi çıkıyor."
 
 #~ msgid "- Play movies and songs"
 #~ msgstr "- Filmleri ve şarkıları oynat"
 
-#~ msgid "Totem could not parse the command-line options"
-#~ msgstr "Totem komut satırı seçeneklerini ayrıştıramadı"
+#~ msgid "Xplayer could not parse the command-line options"
+#~ msgstr "Xplayer komut satırı seçeneklerini ayrıştıramadı"
 
-#~ msgid "Totem could not initialize the configuration engine."
-#~ msgstr "Totem yapılandırma mekanizmasını başlatamadı."
+#~ msgid "Xplayer could not initialize the configuration engine."
+#~ msgstr "Xplayer yapılandırma mekanizmasını başlatamadı."
 
 #~ msgid "Make sure that GNOME is properly installed."
 #~ msgstr "GNOME'un düzgün kurulduğundan emin olun."
@@ -1540,8 +1540,8 @@ msgstr "Sayısal Televizyon"
 #~ msgid "No URI to play"
 #~ msgstr "Oynatılacak URI yok"
 
-#~ msgid "Totem could not play '%s'"
-#~ msgstr "Totem '%s'i oynatamayor"
+#~ msgid "Xplayer could not play '%s'"
+#~ msgstr "Xplayer '%s'i oynatamayor"
 
 #~ msgid "Opening %s"
 #~ msgstr "'%s' açılıyor"
@@ -1549,14 +1549,14 @@ msgstr "Sayısal Televizyon"
 #~ msgid "Browser Plugin using %s"
 #~ msgstr "Tarayıcı eklentisi %s'i kullanıyor"
 
-#~ msgid "Totem Browser Plugin"
-#~ msgstr "Totem Tarayıcı Eklentisi"
+#~ msgid "Xplayer Browser Plugin"
+#~ msgstr "Xplayer Tarayıcı Eklentisi"
 
 #~ msgid "Plugin"
 #~ msgstr "Eklenti"
 
-#~ msgid "The Totem plugin could not startup."
-#~ msgstr "Totem eklentisi başatılamadı."
+#~ msgid "The Xplayer plugin could not startup."
+#~ msgstr "Xplayer eklentisi başatılamadı."
 
 #~ msgid "Menu"
 #~ msgstr "Menü"
@@ -1567,5 +1567,5 @@ msgstr "Sayısal Televizyon"
 #~ msgid "Could not initialise the thread-safe libraries."
 #~ msgstr "Güvenli iş parçacığı kütüphaneleri ilklendirilemiyor."
 
-#~ msgid "Verify your system installation. The Totem plugin will now exit."
-#~ msgstr "Kurulumunuzu kontrol edin. Totem eklentisi şimdi çıkıyor."
+#~ msgid "Verify your system installation. The Xplayer plugin will now exit."
+#~ msgstr "Kurulumunuzu kontrol edin. Xplayer eklentisi şimdi çıkıyor."

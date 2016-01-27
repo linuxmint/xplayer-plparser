@@ -7,7 +7,7 @@
 #include <windows.h>
 #endif
 
-int totem_private_asprintf(char **out, const char *fmt, ...)
+int xplayer_private_asprintf(char **out, const char *fmt, ...)
 {
     va_list ap;
     int ret_status = EOF;

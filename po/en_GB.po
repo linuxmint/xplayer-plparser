@@ -1,13 +1,13 @@
 # English (British) translation.
-# Copyright (C) 2005 THE totem-pl-parser'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the totem-pl-parser package.
+# Copyright (C) 2005 THE xplayer-pl-parser'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the xplayer-pl-parser package.
 # Abigail Brady <morwen@evilmagic.org>, Bastien Nocera <hadess@hadess.net>, 2005.
 # David Lodge <dave@cirt.net>, 2008.
 #
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: totem-pl-parser\n"
+"Project-Id-Version: xplayer-pl-parser\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-02-23 18:13+0000\n"
 "PO-Revision-Date: 2009-02-23 18:13+0000\n"
@@ -18,34 +18,34 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../plparse/totem-disc.c:357 ../plparse/totem-disc.c:498
+#: ../plparse/xplayer-disc.c:357 ../plparse/xplayer-disc.c:498
 #, c-format
 msgid "Failed to mount %s."
 msgstr "Failed to mount %s."
 
-#: ../plparse/totem-disc.c:387
+#: ../plparse/xplayer-disc.c:387
 #, c-format
 msgid "No media in drive for device '%s'."
 msgstr "No media in drive for device '%s'."
 
-#: ../plparse/totem-disc.c:441
+#: ../plparse/xplayer-disc.c:441
 #, c-format
 msgid "Please check that a disc is present in the drive."
 msgstr "Please check that a disc is present in the drive."
 
-#: ../plparse/totem-disc.c:880
+#: ../plparse/xplayer-disc.c:880
 msgid "Audio CD"
 msgstr "Audio CD"
 
-#: ../plparse/totem-disc.c:882
+#: ../plparse/xplayer-disc.c:882
 msgid "Video CD"
 msgstr "Video CD"
 
-#: ../plparse/totem-disc.c:884
+#: ../plparse/xplayer-disc.c:884
 msgid "DVD"
 msgstr "DVD"
 
-#: ../plparse/totem-disc.c:886
+#: ../plparse/xplayer-disc.c:886
 msgid "Digital Television"
 msgstr "Digital Television"
 
@@ -279,11 +279,11 @@ msgstr "Digital Television"
 #~ msgid "Time:"
 #~ msgstr "Time:"
 
-#~ msgid "Totem Movie Player"
-#~ msgstr "Totem Movie Player"
+#~ msgid "Xplayer Movie Player"
+#~ msgstr "Xplayer Movie Player"
 
-#~ msgid "Totem Preferences"
-#~ msgstr "Totem Preferences"
+#~ msgid "Xplayer Preferences"
+#~ msgstr "Xplayer Preferences"
 
 #~ msgid "Visual Effects"
 #~ msgstr "Visual Effects"
@@ -474,45 +474,45 @@ msgstr "Digital Television"
 #~ msgid "Couldn't load the '%s' interface."
 #~ msgstr "Couldn't load the '%s' interface."
 
-#~ msgid "Make sure that Totem is properly installed."
-#~ msgstr "Make sure that Totem is properly installed."
+#~ msgid "Make sure that Xplayer is properly installed."
+#~ msgstr "Make sure that Xplayer is properly installed."
 
 #~ msgid ""
-#~ "Totem is free software; you can redistribute it and/or modify it under "
+#~ "Xplayer is free software; you can redistribute it and/or modify it under "
 #~ "the terms of the GNU General Public License as published by the Free "
 #~ "Software Foundation; either version 2 of the License, or (at your option) "
 #~ "any later version."
 #~ msgstr ""
-#~ "Totem is free software; you can redistribute it and/or modify it under "
+#~ "Xplayer is free software; you can redistribute it and/or modify it under "
 #~ "the terms of the GNU General Public Licence as published by the Free "
 #~ "Software Foundation; either version 2 of the Licence, or (at your option) "
 #~ "any later version."
 
 #~ msgid ""
-#~ "Totem is distributed in the hope that it will be useful, but WITHOUT ANY "
+#~ "Xplayer is distributed in the hope that it will be useful, but WITHOUT ANY "
 #~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
 #~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 #~ "details."
 #~ msgstr ""
-#~ "Totem is distributed in the hope that it will be useful, but WITHOUT ANY "
+#~ "Xplayer is distributed in the hope that it will be useful, but WITHOUT ANY "
 #~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
 #~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public Licence for more "
 #~ "details."
 
 #~ msgid ""
 #~ "You should have received a copy of the GNU General Public License along "
-#~ "with Totem; if not, write to the Free Software Foundation, Inc., 59 "
+#~ "with Xplayer; if not, write to the Free Software Foundation, Inc., 59 "
 #~ "Temple Place, Suite 330, Boston, MA  02111-1307  USA"
 #~ msgstr ""
 #~ "You should have received a copy of the GNU General Public Licence along "
-#~ "with Totem; if not, write to the Free Software Foundation, Inc., 59 "
+#~ "with Xplayer; if not, write to the Free Software Foundation, Inc., 59 "
 #~ "Temple Place, Suite 330, Boston, MA  02111-1307  USA"
 
 #~ msgid ""
-#~ "Totem contains an exception to allow the use of proprietary GStreamer "
+#~ "Xplayer contains an exception to allow the use of proprietary GStreamer "
 #~ "plugins."
 #~ msgstr ""
-#~ "Totem contains an exception to allow the use of proprietary GStreamer "
+#~ "Xplayer contains an exception to allow the use of proprietary GStreamer "
 #~ "plugins."
 
 #~ msgid "None"
@@ -897,18 +897,18 @@ msgstr "Digital Television"
 #~ msgstr "Enable visual effects?"
 
 #~ msgid ""
-#~ "It seems you are running Totem remotely.\n"
+#~ "It seems you are running Xplayer remotely.\n"
 #~ "Are you sure you want to enable the visual effects?"
 #~ msgstr ""
-#~ "It seems you are running Totem remotely.\n"
+#~ "It seems you are running Xplayer remotely.\n"
 #~ "Are you sure you want to enable the visual effects?"
 
 #~ msgid ""
 #~ "The change of this setting will only take effect for the next movie, or "
-#~ "when Totem is restarted."
+#~ "when Xplayer is restarted."
 #~ msgstr ""
 #~ "The change of this setting will only take effect for the next movie, or "
-#~ "when Totem is restarted."
+#~ "when Xplayer is restarted."
 
 #~ msgid ""
 #~ "Changing the visuals effect type will require a restart to take effect."
@@ -916,10 +916,10 @@ msgstr "Digital Television"
 #~ "Changing the visuals effect type will require a restart to take effect."
 
 #~ msgid ""
-#~ "The change of audio output type will only take effect when Totem is "
+#~ "The change of audio output type will only take effect when Xplayer is "
 #~ "restarted."
 #~ msgstr ""
-#~ "The change of audio output type will only take effect when Totem is "
+#~ "The change of audio output type will only take effect when Xplayer is "
 #~ "restarted."
 
 #~ msgid "Preferences"
@@ -1084,31 +1084,31 @@ msgstr "Digital Television"
 #~ msgid "Paused"
 #~ msgstr "Paused"
 
-#~ msgid "Totem could not eject the optical media."
-#~ msgstr "Totem could not eject the optical media."
+#~ msgid "Xplayer could not eject the optical media."
+#~ msgstr "Xplayer could not eject the optical media."
 
-#~ msgid "Totem could not play '%s'."
-#~ msgstr "Totem could not play '%s'."
+#~ msgid "Xplayer could not play '%s'."
+#~ msgstr "Xplayer could not play '%s'."
 
 #~ msgid ""
-#~ "Totem cannot play this type of media (%s) because you do not have the "
+#~ "Xplayer cannot play this type of media (%s) because you do not have the "
 #~ "appropriate plugins to handle it."
 #~ msgstr ""
-#~ "Totem cannot play this type of media (%s) because you do not have the "
+#~ "Xplayer cannot play this type of media (%s) because you do not have the "
 #~ "appropriate plugins to handle it."
 
 #~ msgid ""
-#~ "Please install the necessary plugins and restart Totem to be able to play "
+#~ "Please install the necessary plugins and restart Xplayer to be able to play "
 #~ "this media."
 #~ msgstr ""
-#~ "Please install the necessary plugins and restart Totem to be able to play "
+#~ "Please install the necessary plugins and restart Xplayer to be able to play "
 #~ "this media."
 
 #~ msgid ""
-#~ "Totem could not play this media (%s) although a plugin is present to "
+#~ "Xplayer could not play this media (%s) although a plugin is present to "
 #~ "handle it."
 #~ msgstr ""
-#~ "Totem could not play this media (%s) although a plugin is present to "
+#~ "Xplayer could not play this media (%s) although a plugin is present to "
 #~ "handle it."
 
 #~ msgid ""
@@ -1118,8 +1118,8 @@ msgstr "Digital Television"
 #~ "You might want to check that a disc is present in the drive and that it "
 #~ "is correctly configured."
 
-#~ msgid "Totem was not able to play this disc."
-#~ msgstr "Totem was not able to play this disc."
+#~ msgid "Xplayer was not able to play this disc."
+#~ msgstr "Xplayer was not able to play this disc."
 
 #~ msgid "No reason."
 #~ msgstr "No reason."
@@ -1127,8 +1127,8 @@ msgstr "Digital Television"
 #~ msgid "Open Location..."
 #~ msgstr "Open Location..."
 
-#~ msgid "Totem could not get a screenshot of that film."
-#~ msgstr "Totem could not get a screenshot of that film."
+#~ msgid "Xplayer could not get a screenshot of that film."
+#~ msgstr "Xplayer could not get a screenshot of that film."
 
 #~ msgid "This is not supposed to happen; please file a bug report."
 #~ msgstr "This is not supposed to happen; please file a bug report."
@@ -1139,8 +1139,8 @@ msgstr "Digital Television"
 #~ msgid "No error message"
 #~ msgstr "No error message"
 
-#~ msgid "Totem could not display the help contents."
-#~ msgstr "Totem could not display the help contents."
+#~ msgid "Xplayer could not display the help contents."
+#~ msgstr "Xplayer could not display the help contents."
 
 #~ msgid "An error occurred"
 #~ msgstr "An error occurred"
@@ -1154,23 +1154,23 @@ msgstr "Digital Television"
 #~ msgid "Next Chapter/Movie"
 #~ msgstr "Next Chapter/Movie"
 
-#~ msgid "Totem could not startup."
-#~ msgstr "Totem could not startup."
+#~ msgid "Xplayer could not startup."
+#~ msgstr "Xplayer could not startup."
 
 #~ msgid "Could not initialize the thread-safe libraries."
 #~ msgstr "Could not initialise the thread-safe libraries."
 
-#~ msgid "Verify your system installation. Totem will now exit."
-#~ msgstr "Verify your system installation. Totem will now exit."
+#~ msgid "Verify your system installation. Xplayer will now exit."
+#~ msgstr "Verify your system installation. Xplayer will now exit."
 
 #~ msgid "- Play movies and songs"
 #~ msgstr "- Play movies and songs"
 
-#~ msgid "Totem could not parse the command-line options"
-#~ msgstr "Totem could not parse the command-line options"
+#~ msgid "Xplayer could not parse the command-line options"
+#~ msgstr "Xplayer could not parse the command-line options"
 
-#~ msgid "Totem could not initialize the configuration engine."
-#~ msgstr "Totem could not initialise the configuration engine."
+#~ msgid "Xplayer could not initialize the configuration engine."
+#~ msgstr "Xplayer could not initialise the configuration engine."
 
 #~ msgid "Make sure that GNOME is properly installed."
 #~ msgstr "Make sure that GNOME is properly installed."
@@ -1525,8 +1525,8 @@ msgstr "Digital Television"
 #~ msgid "No URI to play"
 #~ msgstr "No URI to play"
 
-#~ msgid "Totem could not play '%s'"
-#~ msgstr "Totem could not play '%s'"
+#~ msgid "Xplayer could not play '%s'"
+#~ msgstr "Xplayer could not play '%s'"
 
 #~ msgid "Opening %s"
 #~ msgstr "Opening %s"
@@ -1534,11 +1534,11 @@ msgstr "Digital Television"
 #~ msgid "Browser Plugin using %s"
 #~ msgstr "Browser Plugin using %s"
 
-#~ msgid "Totem Browser Plugin"
-#~ msgstr "Totem Browser Plugin"
+#~ msgid "Xplayer Browser Plugin"
+#~ msgstr "Xplayer Browser Plugin"
 
-#~ msgid "The Totem plugin could not startup."
-#~ msgstr "The Totem plugin could not startup."
+#~ msgid "The Xplayer plugin could not startup."
+#~ msgstr "The Xplayer plugin could not startup."
 
 #~ msgid "Menu"
 #~ msgstr "Menu"
@@ -1549,11 +1549,11 @@ msgstr "Digital Television"
 #~ msgid "Could not initialise the thread-safe libraries."
 #~ msgstr "Could not initialise the thread-safe libraries."
 
-#~ msgid "Verify your system installation. The Totem plugin will now exit."
-#~ msgstr "Verify your system installation. The Totem plugin will now exit."
+#~ msgid "Verify your system installation. The Xplayer plugin will now exit."
+#~ msgstr "Verify your system installation. The Xplayer plugin will now exit."
 
-#~ msgid "Totem could not seek in '%s'."
-#~ msgstr "Totem could not seek in '%s'."
+#~ msgid "Xplayer could not seek in '%s'."
+#~ msgstr "Xplayer could not seek in '%s'."
 
 #~ msgid "<b>Audio</b>"
 #~ msgstr "<b>Audio</b>"
@@ -1848,23 +1848,23 @@ msgstr "Digital Television"
 #~ msgid "0 second"
 #~ msgstr "0 second"
 
-#~ msgid "%s - Totem Movie Player"
-#~ msgstr "%s - Totem Movie Player"
+#~ msgid "%s - Xplayer Movie Player"
+#~ msgstr "%s - Xplayer Movie Player"
 
-#~ msgid "Totem"
-#~ msgstr "Totem"
+#~ msgid "Xplayer"
+#~ msgstr "Xplayer"
 
 #~ msgid "Select Files"
 #~ msgstr "Select Files"
 
-#~ msgid "Totem couldn't show the movie properties window."
-#~ msgstr "Totem couldn't show the movie properties window."
+#~ msgid "Xplayer couldn't show the movie properties window."
+#~ msgstr "Xplayer couldn't show the movie properties window."
 
-#~ msgid "Make sure that Totem is correctly installed."
-#~ msgstr "Make sure that Totem is correctly installed."
+#~ msgid "Make sure that Xplayer is correctly installed."
+#~ msgstr "Make sure that Xplayer is correctly installed."
 
-#~ msgid "Totem Video Window"
-#~ msgstr "Totem Video Window"
+#~ msgid "Xplayer Video Window"
+#~ msgstr "Xplayer Video Window"
 
 #~ msgid "Failed to open device %s for reading: %s"
 #~ msgstr "Failed to open device %s for reading: %s"

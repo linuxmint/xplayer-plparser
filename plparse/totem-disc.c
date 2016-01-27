@@ -1,4 +1,4 @@
-/* Totem Disc Content Detection
+/* Xplayer Disc Content Detection
  * Copyright (C) 2004 Ronald Bultje <rbultje@ronald.bitfreak.net>
  * Copyright (C) 2004-2007 Bastien Nocera <hadess@hadess.net>
  *
@@ -17,10 +17,10 @@
  * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
  * Boston, MA 02110-1301  USA.
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission are above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  *
  * Monday 7th February 2005: Christian Schaller: Add exception clause.
  * See license_change file for details.
@@ -28,10 +28,10 @@
  */
 
 /**
- * SECTION:totem-disc
+ * SECTION:xplayer-disc
  * @short_description: disc utility functions
  * @stability: Stable
- * @include: totem-disc.h
+ * @include: xplayer-disc.h
  *
  * This file has various different disc utility functions for getting
  * the media types and labels of discs.
@@ -41,7 +41,7 @@
  * an MRL would be <literal>dvd:///dev/scd0</literal>, which is not a
  * valid URI as far as, for example, GIO is concerned.
  *
- * The rest of the totem-pl-parser API exclusively uses URIs.
+ * The rest of the xplayer-pl-parser API exclusively uses URIs.
  **/
 
 #include "config.h"
@@ -63,8 +63,8 @@
 #include <archive_entry.h>
 #endif /* HAVE_ARCHIVE */
 
-#include "totem-disc.h"
-#include "totem-pl-parser.h"
+#include "xplayer-disc.h"
+#include "xplayer-pl-parser.h"
 
 typedef struct _CdCache {
   /* device node and mountpoint */
@@ -99,7 +99,7 @@ typedef struct _CdCacheCallbackData {
 static void cd_cache_free (CdCache *cache);
 
 static char *
-totem_resolve_symlink (const char *device, GError **error)
+xplayer_resolve_symlink (const char *device, GError **error)
 {
   char *dir, *_link;
   char *f;
@@ -198,7 +198,7 @@ cd_cache_get_dev_from_volumes (GVolumeMonitor *mon, const char *device,
     ddev = g_drive_get_identifier (drive, G_VOLUME_IDENTIFIER_KIND_UNIX_DEVICE);
     if (ddev == NULL)
       continue;
-    resolved = totem_resolve_symlink (ddev, NULL);
+    resolved = xplayer_resolve_symlink (ddev, NULL);
     g_free (ddev);
     if (resolved == NULL)
       continue;
@@ -229,7 +229,7 @@ cd_cache_get_dev_from_volumes (GVolumeMonitor *mon, const char *device,
     ddev = g_volume_get_identifier (vol, G_VOLUME_IDENTIFIER_KIND_UNIX_DEVICE);
     if (ddev == NULL)
       continue;
-    resolved = totem_resolve_symlink (ddev, NULL);
+    resolved = xplayer_resolve_symlink (ddev, NULL);
     g_free (ddev);
     if (resolved == NULL)
       continue;
@@ -272,7 +272,7 @@ cd_cache_check_archive (CdCache *cache,
 			GError **error)
 {
 #ifndef HAVE_LIBARCHIVE
-  g_set_error (error, TOTEM_PL_PARSER_ERROR, TOTEM_PL_PARSER_ERROR_MOUNT_FAILED,
+  g_set_error (error, XPLAYER_PL_PARSER_ERROR, XPLAYER_PL_PARSER_ERROR_MOUNT_FAILED,
 	       _("Failed to mount %s."), filename);
   return FALSE;
 #else
@@ -285,7 +285,7 @@ cd_cache_check_archive (CdCache *cache,
   archive_read_support_format_iso9660(a);
   r = archive_read_open_filename(a, filename, 10240);
   if (r != ARCHIVE_OK) {
-    g_set_error (error, TOTEM_PL_PARSER_ERROR, TOTEM_PL_PARSER_ERROR_MOUNT_FAILED,
+    g_set_error (error, XPLAYER_PL_PARSER_ERROR, XPLAYER_PL_PARSER_ERROR_MOUNT_FAILED,
 		 _("Failed to mount %s."), filename);
     return FALSE;
   }
@@ -407,14 +407,14 @@ cd_cache_new (const char *dev,
 
   /* We have a local device
    * retrieve mountpoint and volume from gio volumes */
-  device = totem_resolve_symlink (local, error);
+  device = xplayer_resolve_symlink (local, error);
   g_free (local);
   if (!device)
     return NULL;
   mon = g_volume_monitor_get ();
   found = cd_cache_get_dev_from_volumes (mon, device, &mountpoint, &volume);
   if (!found) {
-    g_set_error (error, TOTEM_PL_PARSER_ERROR, TOTEM_PL_PARSER_ERROR_NO_DISC,
+    g_set_error (error, XPLAYER_PL_PARSER_ERROR, XPLAYER_PL_PARSER_ERROR_NO_DISC,
 	_("No media in drive for device '%s'."),
 	device);
     g_free (device);
@@ -472,7 +472,7 @@ cd_cache_open_device (CdCache *cache,
   }
 
   if (cd_cache_has_medium (cache) == FALSE) {
-    g_set_error (error, TOTEM_PL_PARSER_ERROR, TOTEM_PL_PARSER_ERROR_NO_DISC,
+    g_set_error (error, XPLAYER_PL_PARSER_ERROR, XPLAYER_PL_PARSER_ERROR_NO_DISC,
 	_("Please check that a disc is present in the drive."));
     return FALSE;
   }
@@ -529,7 +529,7 @@ cd_cache_open_mountpoint (CdCache *cache,
       if (data.error) {
 	g_propagate_error (error, data.error);
       } else {
-	g_set_error (error, TOTEM_PL_PARSER_ERROR, TOTEM_PL_PARSER_ERROR_MOUNT_FAILED,
+	g_set_error (error, XPLAYER_PL_PARSER_ERROR, XPLAYER_PL_PARSER_ERROR_MOUNT_FAILED,
 		     _("Failed to mount %s."), cache->device);
       }
       return FALSE;
@@ -594,7 +594,7 @@ cd_cache_free (CdCache *cache)
   g_free (cache);
 }
 
-static TotemDiscMediaType
+static XplayerDiscMediaType
 cd_cache_disc_is_cdda (CdCache *cache,
 		       GError **error)
 {
@@ -609,7 +609,7 @@ cd_cache_disc_is_cdda (CdCache *cache,
   return MEDIA_TYPE_DATA;
 }
 
-static TotemDiscMediaType
+static XplayerDiscMediaType
 cd_cache_disc_is_vcd (CdCache *cache,
                       GError **error)
 {
@@ -627,7 +627,7 @@ cd_cache_disc_is_vcd (CdCache *cache,
   return MEDIA_TYPE_DATA;
 }
 
-static TotemDiscMediaType
+static XplayerDiscMediaType
 cd_cache_disc_is_dvd (CdCache *cache,
 		      GError **error)
 {
@@ -643,7 +643,7 @@ cd_cache_disc_is_dvd (CdCache *cache,
   return MEDIA_TYPE_DATA;
 }
 
-static TotemDiscMediaType
+static XplayerDiscMediaType
 cd_cache_disc_is_bd (CdCache *cache,
 		     GError **error)
 {
@@ -660,7 +660,7 @@ cd_cache_disc_is_bd (CdCache *cache,
 }
 
 /**
- * totem_cd_mrl_from_type:
+ * xplayer_cd_mrl_from_type:
  * @scheme: a scheme (e.g. "dvd")
  * @dir: a directory URI
  *
@@ -671,7 +671,7 @@ cd_cache_disc_is_bd (CdCache *cache,
  * Return value: a newly-allocated string containing the MRL
  **/
 char *
-totem_cd_mrl_from_type (const char *scheme, const char *dir)
+xplayer_cd_mrl_from_type (const char *scheme, const char *dir)
 {
   char *retval;
 
@@ -687,7 +687,7 @@ totem_cd_mrl_from_type (const char *scheme, const char *dir)
 }
 
 static char *
-totem_cd_dir_get_parent (const char *dir)
+xplayer_cd_dir_get_parent (const char *dir)
 {
   GFile *file, *parent_file;
   char *parent;
@@ -703,30 +703,30 @@ totem_cd_dir_get_parent (const char *dir)
 }
 
 /**
- * totem_cd_detect_type_from_dir:
+ * xplayer_cd_detect_type_from_dir:
  * @dir: a directory URI
  * @mrl: (out) (transfer full) (allow-none): return location for the disc's MRL, or %NULL
  * @error: return location for a #GError, or %NULL
  *
  * Detects the disc's type, given its mount directory URI. If
  * a string pointer is passed to @mrl, it will return the disc's
- * MRL as from totem_cd_mrl_from_type().
+ * MRL as from xplayer_cd_mrl_from_type().
  *
  * Note that this function does synchronous I/O.
  *
- * If no disc is present in the drive, a #TOTEM_PL_PARSER_ERROR_NO_DISC
+ * If no disc is present in the drive, a #XPLAYER_PL_PARSER_ERROR_NO_DISC
  * error will be returned. On unknown mounting errors, a
- * #TOTEM_PL_PARSER_ERROR_MOUNT_FAILED error will be returned. On other
+ * #XPLAYER_PL_PARSER_ERROR_MOUNT_FAILED error will be returned. On other
  * I/O errors, or if resolution of symlinked mount paths failed, a code from
  * #GIOErrorEnum will be returned.
  *
- * Return value: #TotemDiscMediaType corresponding to the disc's type, or #MEDIA_TYPE_ERROR on failure
+ * Return value: #XplayerDiscMediaType corresponding to the disc's type, or #MEDIA_TYPE_ERROR on failure
  **/
-TotemDiscMediaType
-totem_cd_detect_type_from_dir (const char *dir, char **mrl, GError **error)
+XplayerDiscMediaType
+xplayer_cd_detect_type_from_dir (const char *dir, char **mrl, GError **error)
 {
   CdCache *cache;
-  TotemDiscMediaType type;
+  XplayerDiscMediaType type;
 
   g_return_val_if_fail (dir != NULL, MEDIA_TYPE_ERROR);
 
@@ -739,7 +739,7 @@ totem_cd_detect_type_from_dir (const char *dir, char **mrl, GError **error)
     char *parent;
 
     cd_cache_free (cache);
-    parent = totem_cd_dir_get_parent (dir);
+    parent = xplayer_cd_dir_get_parent (dir);
     if (!parent)
       return type;
 
@@ -762,11 +762,11 @@ totem_cd_detect_type_from_dir (const char *dir, char **mrl, GError **error)
   }
 
   if (type == MEDIA_TYPE_DVD) {
-    *mrl = totem_cd_mrl_from_type ("dvd", cache->mountpoint ? cache->mountpoint : cache->device);
+    *mrl = xplayer_cd_mrl_from_type ("dvd", cache->mountpoint ? cache->mountpoint : cache->device);
   } else if (type == MEDIA_TYPE_VCD) {
-    *mrl = totem_cd_mrl_from_type ("vcd", cache->mountpoint);
+    *mrl = xplayer_cd_mrl_from_type ("vcd", cache->mountpoint);
   } else if (type == MEDIA_TYPE_BD) {
-    *mrl = totem_cd_mrl_from_type ("bluray", cache->mountpoint);
+    *mrl = xplayer_cd_mrl_from_type ("bluray", cache->mountpoint);
   }
 
   cd_cache_free (cache);
@@ -775,28 +775,28 @@ totem_cd_detect_type_from_dir (const char *dir, char **mrl, GError **error)
 }
 
 /**
- * totem_cd_detect_type_with_url:
+ * xplayer_cd_detect_type_with_url:
  * @device: a device node path
  * @mrl: (out) (transfer full) (allow-none): return location for the disc's MRL, or %NULL
  * @error: return location for a #GError, or %NULL
  *
  * Detects the disc's type, given its device node path. If
  * a string pointer is passed to @mrl, it will return the disc's
- * MRL as from totem_cd_mrl_from_type().
+ * MRL as from xplayer_cd_mrl_from_type().
  *
  * Note that this function does synchronous I/O.
  *
- * Possible error codes are as per totem_cd_detect_type_from_dir().
+ * Possible error codes are as per xplayer_cd_detect_type_from_dir().
  *
- * Return value: #TotemDiscMediaType corresponding to the disc's type, or #MEDIA_TYPE_ERROR on failure
+ * Return value: #XplayerDiscMediaType corresponding to the disc's type, or #MEDIA_TYPE_ERROR on failure
  **/
-TotemDiscMediaType
-totem_cd_detect_type_with_url (const char *device,
+XplayerDiscMediaType
+xplayer_cd_detect_type_with_url (const char *device,
     			       char      **mrl,
 			       GError     **error)
 {
   CdCache *cache;
-  TotemDiscMediaType type;
+  XplayerDiscMediaType type;
 
   if (mrl != NULL)
     *mrl = NULL;
@@ -831,7 +831,7 @@ totem_cd_detect_type_with_url (const char *device,
 	str = cache->mountpoint ? cache->mountpoint : device;
       else
 	str = cache->device;
-      *mrl = totem_cd_mrl_from_type ("dvd", str);
+      *mrl = xplayer_cd_mrl_from_type ("dvd", str);
     }
     break;
   case MEDIA_TYPE_VCD:
@@ -842,7 +842,7 @@ totem_cd_detect_type_with_url (const char *device,
 	str = cache->mountpoint ? cache->mountpoint : device;
       else
 	str = cache->device;
-      *mrl = totem_cd_mrl_from_type ("vcd", str);
+      *mrl = xplayer_cd_mrl_from_type ("vcd", str);
     }
     break;
   case MEDIA_TYPE_CDDA:
@@ -851,9 +851,9 @@ totem_cd_detect_type_with_url (const char *device,
 
       dev = cache->device ? cache->device : device;
       if (g_str_has_prefix (dev, "/dev/") != FALSE)
-	*mrl = totem_cd_mrl_from_type ("cdda", dev + 5);
+	*mrl = xplayer_cd_mrl_from_type ("cdda", dev + 5);
       else
-	*mrl = totem_cd_mrl_from_type ("cdda", dev);
+	*mrl = xplayer_cd_mrl_from_type ("cdda", dev);
     }
     break;
   case MEDIA_TYPE_BD:
@@ -864,7 +864,7 @@ totem_cd_detect_type_with_url (const char *device,
 	str = cache->mountpoint ? cache->mountpoint : device;
       else
 	str = cache->device;
-      *mrl = totem_cd_mrl_from_type ("bluray", str);
+      *mrl = xplayer_cd_mrl_from_type ("bluray", str);
     }
     break;
   case MEDIA_TYPE_DATA:
@@ -889,25 +889,25 @@ totem_cd_detect_type_with_url (const char *device,
 }
 
 /**
- * totem_cd_detect_type:
+ * xplayer_cd_detect_type:
  * @device: a device node path
  * @error: return location for a #GError, or %NULL
  *
  * Detects the disc's type, given its device node path.
  *
- * Possible error codes are as per totem_cd_detect_type_with_url().
+ * Possible error codes are as per xplayer_cd_detect_type_with_url().
  *
- * Return value: #TotemDiscMediaType corresponding to the disc's type, or #MEDIA_TYPE_ERROR on failure
+ * Return value: #XplayerDiscMediaType corresponding to the disc's type, or #MEDIA_TYPE_ERROR on failure
  **/
-TotemDiscMediaType
-totem_cd_detect_type (const char  *device,
+XplayerDiscMediaType
+xplayer_cd_detect_type (const char  *device,
 		      GError     **error)
 {
-  return totem_cd_detect_type_with_url (device, NULL, error);
+  return xplayer_cd_detect_type_with_url (device, NULL, error);
 }
 
 /**
- * totem_cd_has_medium:
+ * xplayer_cd_has_medium:
  * @device: a device node path
  *
  * Returns whether the disc has a physical medium.
@@ -915,7 +915,7 @@ totem_cd_detect_type (const char  *device,
  * Return value: %TRUE if the disc physically exists
  **/
 gboolean
-totem_cd_has_medium (const char *device)
+xplayer_cd_has_medium (const char *device)
 {
   CdCache *cache;
   gboolean retval = TRUE;
@@ -930,16 +930,16 @@ totem_cd_has_medium (const char *device)
 }
 
 /**
- * totem_cd_get_human_readable_name:
- * @type: a #TotemDiscMediaType
+ * xplayer_cd_get_human_readable_name:
+ * @type: a #XplayerDiscMediaType
  *
  * Returns the human-readable name for the given
- * #TotemDiscMediaType.
+ * #XplayerDiscMediaType.
  *
  * Return value: the disc media type's readable name, which must not be freed, or %NULL for unhandled media types
  **/
 const char *
-totem_cd_get_human_readable_name (TotemDiscMediaType type)
+xplayer_cd_get_human_readable_name (XplayerDiscMediaType type)
 {
   switch (type)
   {
@@ -963,11 +963,11 @@ totem_cd_get_human_readable_name (TotemDiscMediaType type)
 }
 
 GQuark
-totem_disc_media_type_quark (void)
+xplayer_disc_media_type_quark (void)
 {
   static GQuark quark = 0;
   if (!quark)
-    quark = g_quark_from_static_string ("totem_disc_media_type");
+    quark = g_quark_from_static_string ("xplayer_disc_media_type");
 
   return quark;
 }

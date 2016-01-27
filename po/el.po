@@ -1,5 +1,5 @@
-# translation of totem-pl-parser.HEAD.po to Greek
-# This file is distributed under the same license as the totem.HEAD package.
+# translation of xplayer-pl-parser.HEAD.po to Greek
+# This file is distributed under the same license as the xplayer.HEAD package.
 # Copyright (C) Free Software Foundation Inc, 2003
 #
 # Kostas Papadimas <pkst@gnome.org>, 2003, 2005.
@@ -8,8 +8,8 @@
 # Jennie Petoumenou <epetoumenou@gmail.com>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: totem-pl-parser.HEAD\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=totem&amp;component=playlist parser\n"
+"Project-Id-Version: xplayer-pl-parser.HEAD\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&amp;component=playlist parser\n"
 "POT-Creation-Date: 2008-11-27 17:18+0000\n"
 "PO-Revision-Date: 2009-02-28 13:21+0100\n"
 "Last-Translator: Jennie Petoumenou <epetoumenou@gmail.com>\n"
@@ -20,34 +20,34 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../plparse/totem-disc.c:319 ../plparse/totem-disc.c:460
+#: ../plparse/xplayer-disc.c:319 ../plparse/xplayer-disc.c:460
 #, c-format
 msgid "Failed to mount %s."
 msgstr "Αποτυχία προσάρτησης %s."
 
-#: ../plparse/totem-disc.c:349
+#: ../plparse/xplayer-disc.c:349
 #, c-format
 msgid "No media in drive for device '%s'."
 msgstr "Δεν υπάρχει πολυμέσο στον οδηγό της συσκευής '%s'."
 
-#: ../plparse/totem-disc.c:403
+#: ../plparse/xplayer-disc.c:403
 #, c-format
 msgid "Please check that a disc is present in the drive."
 msgstr "Ελέγξτε αν υπάρχει δίσκος στον οδηγό."
 
-#: ../plparse/totem-disc.c:843
+#: ../plparse/xplayer-disc.c:843
 msgid "Audio CD"
 msgstr "CD ήχου"
 
-#: ../plparse/totem-disc.c:845
+#: ../plparse/xplayer-disc.c:845
 msgid "Video CD"
 msgstr "Βίντεο CD"
 
-#: ../plparse/totem-disc.c:847
+#: ../plparse/xplayer-disc.c:847
 msgid "DVD"
 msgstr "DVD"
 
-#: ../plparse/totem-disc.c:849
+#: ../plparse/xplayer-disc.c:849
 msgid "Digital Television"
 msgstr "Ψηφιακή τηλεόραση"
 

@@ -20,49 +20,49 @@
    Author: Bastien Nocera <hadess@hadess.net>
  */
 
-#ifndef TOTEM_PL_PARSER_LINES_H
-#define TOTEM_PL_PARSER_LINES_H
+#ifndef XPLAYER_PL_PARSER_LINES_H
+#define XPLAYER_PL_PARSER_LINES_H
 
 G_BEGIN_DECLS
 
-#ifndef TOTEM_PL_PARSER_MINI
-#include "totem-pl-parser.h"
-#include "totem-pl-parser-private.h"
+#ifndef XPLAYER_PL_PARSER_MINI
+#include "xplayer-pl-parser.h"
+#include "xplayer-pl-parser-private.h"
 #include <gio/gio.h>
 #else
-#include "totem-pl-parser-mini.h"
-#endif /* !TOTEM_PL_PARSER_MINI */
+#include "xplayer-pl-parser-mini.h"
+#endif /* !XPLAYER_PL_PARSER_MINI */
 
-const char * totem_pl_parser_is_uri_list (const char *data, gsize len);
+const char * xplayer_pl_parser_is_uri_list (const char *data, gsize len);
 
-#ifndef TOTEM_PL_PARSER_MINI
-gboolean totem_pl_parser_save_m3u (TotemPlParser *parser,
-                                   TotemPlPlaylist *playlist,
+#ifndef XPLAYER_PL_PARSER_MINI
+gboolean xplayer_pl_parser_save_m3u (XplayerPlParser *parser,
+                                   XplayerPlPlaylist *playlist,
                                    GFile *output,
                                    gboolean dos_compatible,
                                    GError **error);
 
-TotemPlParserResult totem_pl_parser_add_ram (TotemPlParser *parser,
+XplayerPlParserResult xplayer_pl_parser_add_ram (XplayerPlParser *parser,
 					     GFile *file,
-					     TotemPlParseData *parse_data,
+					     XplayerPlParseData *parse_data,
 					     gpointer data);
-TotemPlParserResult totem_pl_parser_add_m3u (TotemPlParser *parser,
-					     GFile *file,
-					     GFile *base_file,
-					     TotemPlParseData *parse_data,
-					     gpointer data);
-TotemPlParserResult totem_pl_parser_add_m4u (TotemPlParser *parser,
+XplayerPlParserResult xplayer_pl_parser_add_m3u (XplayerPlParser *parser,
 					     GFile *file,
 					     GFile *base_file,
-					     TotemPlParseData *parse_data,
+					     XplayerPlParseData *parse_data,
 					     gpointer data);
-TotemPlParserResult totem_pl_parser_add_ra (TotemPlParser *parser,
+XplayerPlParserResult xplayer_pl_parser_add_m4u (XplayerPlParser *parser,
+					     GFile *file,
+					     GFile *base_file,
+					     XplayerPlParseData *parse_data,
+					     gpointer data);
+XplayerPlParserResult xplayer_pl_parser_add_ra (XplayerPlParser *parser,
 					    GFile *file,
 					    GFile *base_file,
-					    TotemPlParseData *parse_data,
+					    XplayerPlParseData *parse_data,
 					    gpointer data);
-#endif /* !TOTEM_PL_PARSER_MINI */
+#endif /* !XPLAYER_PL_PARSER_MINI */
 
 G_END_DECLS
 
-#endif /* TOTEM_PL_PARSER_LINES_H */
+#endif /* XPLAYER_PL_PARSER_LINES_H */

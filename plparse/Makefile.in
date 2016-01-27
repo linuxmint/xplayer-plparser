@@ -81,12 +81,12 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
-@HAVE_QUVI_TRUE@libexec_PROGRAMS = totem-pl-parser-videosite$(EXEEXT)
-@HAVE_INTROSPECTION_TRUE@am__append_1 = TotemPlParser-1.0.gir
+@HAVE_QUVI_TRUE@libexec_PROGRAMS = xplayer-pl-parser-videosite$(EXEEXT)
+@HAVE_INTROSPECTION_TRUE@am__append_1 = XplayerPlParser-1.0.gir
 @HAVE_INTROSPECTION_TRUE@am__append_2 = $(gir_DATA) $(typelib_DATA)
 subdir = plparse
 DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
-	$(srcdir)/totem-pl-parser-features.h.in $(top_srcdir)/depcomp \
+	$(srcdir)/xplayer-pl-parser-features.h.in $(top_srcdir)/depcomp \
 	$(plparserinclude_HEADERS)
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/gtk-doc.m4 \
@@ -98,7 +98,7 @@ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 mkinstalldirs = $(install_sh) -d
 CONFIG_HEADER = $(top_builddir)/config.h
-CONFIG_CLEAN_FILES = totem-pl-parser-features.h
+CONFIG_CLEAN_FILES = xplayer-pl-parser-features.h
 CONFIG_CLEAN_VPATH_FILES =
 am__vpath_adj_setup = srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`;
 am__vpath_adj = case $$p in \
@@ -133,72 +133,72 @@ am__installdirs = "$(DESTDIR)$(libdir)" "$(DESTDIR)$(libexecdir)" \
 	"$(DESTDIR)$(plparserincludedir)"
 LTLIBRARIES = $(lib_LTLIBRARIES)
 am__DEPENDENCIES_1 =
-libtotem_plparser_mini_la_DEPENDENCIES = $(am__DEPENDENCIES_1) \
-	$(top_builddir)/lib/libtotem_glibc.la
-am_libtotem_plparser_mini_la_OBJECTS =  \
-	libtotem_plparser_mini_la-totem-pl-parser.lo \
-	libtotem_plparser_mini_la-totem-pl-parser-lines.lo \
-	libtotem_plparser_mini_la-totem-pl-parser-misc.lo \
-	libtotem_plparser_mini_la-totem-pl-parser-pls.lo \
-	libtotem_plparser_mini_la-totem-pl-parser-podcast.lo \
-	libtotem_plparser_mini_la-totem-pl-parser-qt.lo \
-	libtotem_plparser_mini_la-totem-pl-parser-smil.lo \
-	libtotem_plparser_mini_la-totem-pl-parser-videosite.lo \
-	libtotem_plparser_mini_la-totem-pl-parser-wm.lo \
-	libtotem_plparser_mini_la-totem-pl-parser-xspf.lo \
-	libtotem_plparser_mini_la-totem-pl-parser-amz.lo \
-	libtotem_plparser_mini_la-totem-pl-playlist.lo
-libtotem_plparser_mini_la_OBJECTS =  \
-	$(am_libtotem_plparser_mini_la_OBJECTS)
+libxplayer_plparser_mini_la_DEPENDENCIES = $(am__DEPENDENCIES_1) \
+	$(top_builddir)/lib/libxplayer_glibc.la
+am_libxplayer_plparser_mini_la_OBJECTS =  \
+	libxplayer_plparser_mini_la-xplayer-pl-parser.lo \
+	libxplayer_plparser_mini_la-xplayer-pl-parser-lines.lo \
+	libxplayer_plparser_mini_la-xplayer-pl-parser-misc.lo \
+	libxplayer_plparser_mini_la-xplayer-pl-parser-pls.lo \
+	libxplayer_plparser_mini_la-xplayer-pl-parser-podcast.lo \
+	libxplayer_plparser_mini_la-xplayer-pl-parser-qt.lo \
+	libxplayer_plparser_mini_la-xplayer-pl-parser-smil.lo \
+	libxplayer_plparser_mini_la-xplayer-pl-parser-videosite.lo \
+	libxplayer_plparser_mini_la-xplayer-pl-parser-wm.lo \
+	libxplayer_plparser_mini_la-xplayer-pl-parser-xspf.lo \
+	libxplayer_plparser_mini_la-xplayer-pl-parser-amz.lo \
+	libxplayer_plparser_mini_la-xplayer-pl-playlist.lo
+libxplayer_plparser_mini_la_OBJECTS =  \
+	$(am_libxplayer_plparser_mini_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
 am__v_lt_0 = --silent
 am__v_lt_1 = 
-libtotem_plparser_mini_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
+libxplayer_plparser_mini_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
-	$(libtotem_plparser_mini_la_CFLAGS) $(CFLAGS) \
-	$(libtotem_plparser_mini_la_LDFLAGS) $(LDFLAGS) -o $@
-libtotem_plparser_la_DEPENDENCIES = $(am__DEPENDENCIES_1) \
+	$(libxplayer_plparser_mini_la_CFLAGS) $(CFLAGS) \
+	$(libxplayer_plparser_mini_la_LDFLAGS) $(LDFLAGS) -o $@
+libxplayer_plparser_la_DEPENDENCIES = $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(top_builddir)/lib/libtotem_glibc.la
-am__objects_1 = libtotem_plparser_la-totem-disc.lo \
-	libtotem_plparser_la-totem-pl-parser.lo \
-	libtotem_plparser_la-totem-pl-parser-amz.lo \
-	libtotem_plparser_la-totem-pl-parser-lines.lo \
-	libtotem_plparser_la-totem-pl-parser-media.lo \
-	libtotem_plparser_la-totem-pl-parser-misc.lo \
-	libtotem_plparser_la-totem-pl-parser-pla.lo \
-	libtotem_plparser_la-totem-pl-parser-pls.lo \
-	libtotem_plparser_la-totem-pl-parser-podcast.lo \
-	libtotem_plparser_la-totem-pl-parser-qt.lo \
-	libtotem_plparser_la-totem-pl-parser-smil.lo \
-	libtotem_plparser_la-totem-pl-parser-videosite.lo \
-	libtotem_plparser_la-totem-pl-parser-wm.lo \
-	libtotem_plparser_la-totem-pl-parser-xspf.lo \
-	libtotem_plparser_la-totem-pl-playlist.lo
-dist_libtotem_plparser_la_OBJECTS = $(am__objects_1) \
-	libtotem_plparser_la-xmlparser.lo \
-	libtotem_plparser_la-xmllexer.lo
-am__objects_2 = libtotem_plparser_la-totemplparser-marshal.lo
-am__objects_3 = libtotem_plparser_la-totem-pl-parser-builtins.lo
-nodist_libtotem_plparser_la_OBJECTS = $(am__objects_2) \
+	$(top_builddir)/lib/libxplayer_glibc.la
+am__objects_1 = libxplayer_plparser_la-xplayer-disc.lo \
+	libxplayer_plparser_la-xplayer-pl-parser.lo \
+	libxplayer_plparser_la-xplayer-pl-parser-amz.lo \
+	libxplayer_plparser_la-xplayer-pl-parser-lines.lo \
+	libxplayer_plparser_la-xplayer-pl-parser-media.lo \
+	libxplayer_plparser_la-xplayer-pl-parser-misc.lo \
+	libxplayer_plparser_la-xplayer-pl-parser-pla.lo \
+	libxplayer_plparser_la-xplayer-pl-parser-pls.lo \
+	libxplayer_plparser_la-xplayer-pl-parser-podcast.lo \
+	libxplayer_plparser_la-xplayer-pl-parser-qt.lo \
+	libxplayer_plparser_la-xplayer-pl-parser-smil.lo \
+	libxplayer_plparser_la-xplayer-pl-parser-videosite.lo \
+	libxplayer_plparser_la-xplayer-pl-parser-wm.lo \
+	libxplayer_plparser_la-xplayer-pl-parser-xspf.lo \
+	libxplayer_plparser_la-xplayer-pl-playlist.lo
+dist_libxplayer_plparser_la_OBJECTS = $(am__objects_1) \
+	libxplayer_plparser_la-xmlparser.lo \
+	libxplayer_plparser_la-xmllexer.lo
+am__objects_2 = libxplayer_plparser_la-xplayerplparser-marshal.lo
+am__objects_3 = libxplayer_plparser_la-xplayer-pl-parser-builtins.lo
+nodist_libxplayer_plparser_la_OBJECTS = $(am__objects_2) \
 	$(am__objects_3)
-libtotem_plparser_la_OBJECTS = $(dist_libtotem_plparser_la_OBJECTS) \
-	$(nodist_libtotem_plparser_la_OBJECTS)
-libtotem_plparser_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
+libxplayer_plparser_la_OBJECTS = $(dist_libxplayer_plparser_la_OBJECTS) \
+	$(nodist_libxplayer_plparser_la_OBJECTS)
+libxplayer_plparser_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
-	$(libtotem_plparser_la_CFLAGS) $(CFLAGS) \
-	$(libtotem_plparser_la_LDFLAGS) $(LDFLAGS) -o $@
+	$(libxplayer_plparser_la_CFLAGS) $(CFLAGS) \
+	$(libxplayer_plparser_la_LDFLAGS) $(LDFLAGS) -o $@
 PROGRAMS = $(libexec_PROGRAMS)
-am__totem_pl_parser_videosite_SOURCES_DIST = videosite-parser.c
-@HAVE_QUVI_TRUE@am_totem_pl_parser_videosite_OBJECTS = totem_pl_parser_videosite-videosite-parser.$(OBJEXT)
-totem_pl_parser_videosite_OBJECTS =  \
-	$(am_totem_pl_parser_videosite_OBJECTS)
-@HAVE_QUVI_TRUE@totem_pl_parser_videosite_DEPENDENCIES =  \
+am__xplayer_pl_parser_videosite_SOURCES_DIST = videosite-parser.c
+@HAVE_QUVI_TRUE@am_xplayer_pl_parser_videosite_OBJECTS = xplayer_pl_parser_videosite-videosite-parser.$(OBJEXT)
+xplayer_pl_parser_videosite_OBJECTS =  \
+	$(am_xplayer_pl_parser_videosite_OBJECTS)
+@HAVE_QUVI_TRUE@xplayer_pl_parser_videosite_DEPENDENCIES =  \
 @HAVE_QUVI_TRUE@	$(am__DEPENDENCIES_1)
-totem_pl_parser_videosite_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
+xplayer_pl_parser_videosite_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
-	$(totem_pl_parser_videosite_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
+	$(xplayer_pl_parser_videosite_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
 	$(LDFLAGS) -o $@
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
@@ -234,13 +234,13 @@ AM_V_CCLD = $(am__v_CCLD_@AM_V@)
 am__v_CCLD_ = $(am__v_CCLD_@AM_DEFAULT_V@)
 am__v_CCLD_0 = @echo "  CCLD    " $@;
 am__v_CCLD_1 = 
-SOURCES = $(libtotem_plparser_mini_la_SOURCES) \
-	$(dist_libtotem_plparser_la_SOURCES) \
-	$(nodist_libtotem_plparser_la_SOURCES) \
-	$(totem_pl_parser_videosite_SOURCES)
-DIST_SOURCES = $(libtotem_plparser_mini_la_SOURCES) \
-	$(dist_libtotem_plparser_la_SOURCES) \
-	$(am__totem_pl_parser_videosite_SOURCES_DIST)
+SOURCES = $(libxplayer_plparser_mini_la_SOURCES) \
+	$(dist_libxplayer_plparser_la_SOURCES) \
+	$(nodist_libxplayer_plparser_la_SOURCES) \
+	$(xplayer_pl_parser_videosite_SOURCES)
+DIST_SOURCES = $(libxplayer_plparser_mini_la_SOURCES) \
+	$(dist_libxplayer_plparser_la_SOURCES) \
+	$(am__xplayer_pl_parser_videosite_SOURCES_DIST)
 RECURSIVE_TARGETS = all-recursive check-recursive cscopelist-recursive \
 	ctags-recursive dvi-recursive html-recursive info-recursive \
 	install-data-recursive install-dvi-recursive \
@@ -431,13 +431,13 @@ SED = @SED@
 SET_MAKE = @SET_MAKE@
 SHELL = @SHELL@
 STRIP = @STRIP@
-TOTEM_PLPARSER_CFLAGS = @TOTEM_PLPARSER_CFLAGS@
-TOTEM_PLPARSER_LIBS = @TOTEM_PLPARSER_LIBS@
-TOTEM_PLPARSER_MINI_CFLAGS = @TOTEM_PLPARSER_MINI_CFLAGS@
-TOTEM_PLPARSER_MINI_LIBS = @TOTEM_PLPARSER_MINI_LIBS@
-TOTEM_PL_PARSER_VERSION_MAJOR = @TOTEM_PL_PARSER_VERSION_MAJOR@
-TOTEM_PL_PARSER_VERSION_MICRO = @TOTEM_PL_PARSER_VERSION_MICRO@
-TOTEM_PL_PARSER_VERSION_MINOR = @TOTEM_PL_PARSER_VERSION_MINOR@
+XPLAYER_PLPARSER_CFLAGS = @XPLAYER_PLPARSER_CFLAGS@
+XPLAYER_PLPARSER_LIBS = @XPLAYER_PLPARSER_LIBS@
+XPLAYER_PLPARSER_MINI_CFLAGS = @XPLAYER_PLPARSER_MINI_CFLAGS@
+XPLAYER_PLPARSER_MINI_LIBS = @XPLAYER_PLPARSER_MINI_LIBS@
+XPLAYER_PL_PARSER_VERSION_MAJOR = @XPLAYER_PL_PARSER_VERSION_MAJOR@
+XPLAYER_PL_PARSER_VERSION_MICRO = @XPLAYER_PL_PARSER_VERSION_MICRO@
+XPLAYER_PL_PARSER_VERSION_MINOR = @XPLAYER_PL_PARSER_VERSION_MINOR@
 USEGMIME = @USEGMIME@
 USE_NLS = @USE_NLS@
 VERSION = @VERSION@
@@ -501,65 +501,65 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 SUBDIRS = . tests
 DIST_SUBDIRS = tests
-lib_LTLIBRARIES = libtotem-plparser.la libtotem-plparser-mini.la
-BUILTINFILES = totem-pl-parser-builtins.c totem-pl-parser-builtins.h
-MARSHALFILES = totemplparser-marshal.c totemplparser-marshal.h
+lib_LTLIBRARIES = libxplayer-plparser.la libxplayer-plparser-mini.la
+BUILTINFILES = xplayer-pl-parser-builtins.c xplayer-pl-parser-builtins.h
+MARSHALFILES = xplayerplparser-marshal.c xplayerplparser-marshal.h
 BUILT_SOURCES = $(MARSHALFILES) \
 		$(BUILTINFILES)
 
 plparserincludedir = $(pkgincludedir)/1/plparser
-nodist_plparserinclude_HEADERS = totem-pl-parser-builtins.h
+nodist_plparserinclude_HEADERS = xplayer-pl-parser-builtins.h
 plparserinclude_HEADERS = \
-	totem-pl-parser-features.h		\
-	totem-pl-parser.h			\
-	totem-pl-playlist.h			\
-	totem-pl-parser-mini.h
+	xplayer-pl-parser-features.h		\
+	xplayer-pl-parser.h			\
+	xplayer-pl-playlist.h			\
+	xplayer-pl-parser-mini.h
 
 plparser_sources = \
-	totem-disc.c				\
-	totem-pl-parser.c			\
-	totem-pl-parser-amz.c			\
-	totem-pl-parser-lines.c			\
-	totem-pl-parser-media.c			\
-	totem-pl-parser-misc.c			\
-	totem-pl-parser-pla.c			\
-	totem-pl-parser-pls.c			\
-	totem-pl-parser-podcast.c		\
-	totem-pl-parser-qt.c			\
-	totem-pl-parser-smil.c			\
-	totem-pl-parser-videosite.c		\
-	totem-pl-parser-wm.c			\
-	totem-pl-parser-xspf.c			\
-	totem-pl-playlist.c
+	xplayer-disc.c				\
+	xplayer-pl-parser.c			\
+	xplayer-pl-parser-amz.c			\
+	xplayer-pl-parser-lines.c			\
+	xplayer-pl-parser-media.c			\
+	xplayer-pl-parser-misc.c			\
+	xplayer-pl-parser-pla.c			\
+	xplayer-pl-parser-pls.c			\
+	xplayer-pl-parser-podcast.c		\
+	xplayer-pl-parser-qt.c			\
+	xplayer-pl-parser-smil.c			\
+	xplayer-pl-parser-videosite.c		\
+	xplayer-pl-parser-wm.c			\
+	xplayer-pl-parser-xspf.c			\
+	xplayer-pl-playlist.c
 
-nodist_libtotem_plparser_la_SOURCES = \
+nodist_libxplayer_plparser_la_SOURCES = \
 	$(MARSHALFILES)				\
 	$(BUILTINFILES)
 
-dist_libtotem_plparser_la_SOURCES = \
+dist_libxplayer_plparser_la_SOURCES = \
 	$(plparser_sources)			\
-	totem-disc.h				\
-	totem-pl-parser-features.h		\
-	totem-pl-parser.h			\
-	totem-pl-parser-lines.h			\
-	totem-pl-parser-media.h			\
-	totem-pl-parser-misc.h			\
-	totem-pl-parser-pla.h			\
-	totem-pl-parser-pls.h			\
-	totem-pl-parser-podcast.h		\
-	totem-pl-parser-private.h		\
-	totem-pl-parser-qt.h			\
-	totem-pl-parser-smil.h			\
-	totem-pl-parser-videosite.h		\
-	totem-pl-parser-wm.h			\
-	totem-pl-parser-xspf.h			\
-	totem-pl-playlist.h			\
-	totem-pl-parser-amz.h			\
+	xplayer-disc.h				\
+	xplayer-pl-parser-features.h		\
+	xplayer-pl-parser.h			\
+	xplayer-pl-parser-lines.h			\
+	xplayer-pl-parser-media.h			\
+	xplayer-pl-parser-misc.h			\
+	xplayer-pl-parser-pla.h			\
+	xplayer-pl-parser-pls.h			\
+	xplayer-pl-parser-podcast.h		\
+	xplayer-pl-parser-private.h		\
+	xplayer-pl-parser-qt.h			\
+	xplayer-pl-parser-smil.h			\
+	xplayer-pl-parser-videosite.h		\
+	xplayer-pl-parser-wm.h			\
+	xplayer-pl-parser-xspf.h			\
+	xplayer-pl-playlist.h			\
+	xplayer-pl-parser-amz.h			\
 	xmlparser.h xmlparser.c			\
 	xmllexer.h xmllexer.c			\
 	bswap.h
 
-libtotem_plparser_la_CPPFLAGS = \
+libxplayer_plparser_la_CPPFLAGS = \
 	-I$(top_srcdir)				\
 	-I$(top_srcdir)/lib			\
 	-I$(top_builddir)/plparse		\
@@ -568,8 +568,8 @@ libtotem_plparser_la_CPPFLAGS = \
 	$(DISABLE_DEPRECATED)			\
 	$(AM_CPPFLAGS)
 
-libtotem_plparser_la_CFLAGS = \
-	$(TOTEM_PLPARSER_CFLAGS)	\
+libxplayer_plparser_la_CFLAGS = \
+	$(XPLAYER_PLPARSER_CFLAGS)	\
 	$(ARCHIVE_CFLAGS)		\
 	$(LIBGCRYPT_CFLAGS)		\
 	$(DBUS_CFLAGS)			\
@@ -581,66 +581,66 @@ libtotem_plparser_la_CFLAGS = \
 	-I$(top_srcdir)/lib		\
 	-D_GNU_SOURCE
 
-libtotem_plparser_la_LIBADD = \
-	$(TOTEM_PLPARSER_LIBS)			\
+libxplayer_plparser_la_LIBADD = \
+	$(XPLAYER_PLPARSER_LIBS)			\
 	$(ARCHIVE_LIBS)				\
 	$(LIBGCRYPT_LIBS)			\
-	$(top_builddir)/lib/libtotem_glibc.la
+	$(top_builddir)/lib/libxplayer_glibc.la
 
-libtotem_plparser_la_LDFLAGS = \
+libxplayer_plparser_la_LDFLAGS = \
 	-version-info $(PLPARSER_LT_VERSION)	\
 	-export-symbols $(srcdir)/plparser.symbols \
 	-no-undefined				\
 	$(CODE_COVERAGE_LDFLAGS)		\
 	$(AM_LDFLAGS)
 
-libtotem_plparser_mini_la_SOURCES = \
-	totem-pl-parser-mini.h			\
-	totem-pl-parser.c			\
-	totem-pl-parser-lines.c			\
-	totem-pl-parser-lines.h			\
-	totem-pl-parser-misc.c			\
-	totem-pl-parser-misc.h			\
-	totem-pl-parser-pls.c			\
-	totem-pl-parser-pls.h			\
-	totem-pl-parser-podcast.c		\
-	totem-pl-parser-podcast.h		\
-	totem-pl-parser-private.h		\
-	totem-pl-parser-qt.c			\
-	totem-pl-parser-qt.h			\
-	totem-pl-parser-smil.c			\
-	totem-pl-parser-smil.h			\
-	totem-pl-parser-videosite.c		\
-	totem-pl-parser-videosite.h		\
-	totem-pl-parser-wm.c			\
-	totem-pl-parser-wm.h			\
-	totem-pl-parser-xspf.c			\
-	totem-pl-parser-xspf.h			\
-	totem-pl-parser-amz.h			\
-	totem-pl-parser-amz.c			\
-	totem-pl-playlist.c			\
-	totem-pl-playlist.h
+libxplayer_plparser_mini_la_SOURCES = \
+	xplayer-pl-parser-mini.h			\
+	xplayer-pl-parser.c			\
+	xplayer-pl-parser-lines.c			\
+	xplayer-pl-parser-lines.h			\
+	xplayer-pl-parser-misc.c			\
+	xplayer-pl-parser-misc.h			\
+	xplayer-pl-parser-pls.c			\
+	xplayer-pl-parser-pls.h			\
+	xplayer-pl-parser-podcast.c		\
+	xplayer-pl-parser-podcast.h		\
+	xplayer-pl-parser-private.h		\
+	xplayer-pl-parser-qt.c			\
+	xplayer-pl-parser-qt.h			\
+	xplayer-pl-parser-smil.c			\
+	xplayer-pl-parser-smil.h			\
+	xplayer-pl-parser-videosite.c		\
+	xplayer-pl-parser-videosite.h		\
+	xplayer-pl-parser-wm.c			\
+	xplayer-pl-parser-wm.h			\
+	xplayer-pl-parser-xspf.c			\
+	xplayer-pl-parser-xspf.h			\
+	xplayer-pl-parser-amz.h			\
+	xplayer-pl-parser-amz.c			\
+	xplayer-pl-playlist.c			\
+	xplayer-pl-playlist.h
 
-libtotem_plparser_mini_la_CPPFLAGS = \
+libxplayer_plparser_mini_la_CPPFLAGS = \
 	-I$(top_srcdir)			\
 	-I$(top_srcdir)/lib		\
 	-I$(top_builddir)/plparse	\
-	-DTOTEM_PL_PARSER_MINI		\
+	-DXPLAYER_PL_PARSER_MINI		\
 	-DLIBEXECDIR=\""$(libexecdir)"\"\
 	$(DISABLE_DEPRECATED)		\
 	$(AM_CPPFLAGS)
 
-libtotem_plparser_mini_la_CFLAGS = \
-	$(TOTEM_PLPARSER_MINI_CFLAGS)	\
+libxplayer_plparser_mini_la_CFLAGS = \
+	$(XPLAYER_PLPARSER_MINI_CFLAGS)	\
 	$(WARN_CFLAGS)			\
 	$(CODE_COVERAGE_CFLAGS)		\
 	$(AM_CFLAGS)
 
-libtotem_plparser_mini_la_LIBADD = \
-	$(TOTEM_PLPARSER_MINI_LIBS)		\
-	$(top_builddir)/lib/libtotem_glibc.la
+libxplayer_plparser_mini_la_LIBADD = \
+	$(XPLAYER_PLPARSER_MINI_LIBS)		\
+	$(top_builddir)/lib/libxplayer_glibc.la
 
-libtotem_plparser_mini_la_LDFLAGS = \
+libxplayer_plparser_mini_la_LDFLAGS = \
 	-version-info $(PLPARSER_LT_VERSION)		\
 	-export-symbols $(srcdir)/plparser-mini.symbols	\
 	-no-undefined					\
@@ -650,14 +650,14 @@ libtotem_plparser_mini_la_LDFLAGS = \
 CLEANFILES = $(BUILT_SOURCES) $(am__append_2)
 DISTCLEANFILES = $(CLEANFILES)
 EXTRA_DIST = \
-	totemplparser-marshal.list	\
-	totem-pl-parser-features.h.in	\
+	xplayerplparser-marshal.list	\
+	xplayer-pl-parser-features.h.in	\
 	plparser.symbols		\
 	plparser-mini.symbols
 
-@HAVE_QUVI_TRUE@totem_pl_parser_videosite_SOURCES = videosite-parser.c
-@HAVE_QUVI_TRUE@totem_pl_parser_videosite_CFLAGS = $(QUVI_CFLAGS) -DLIBEXECDIR=\""$(libexecdir)"\"
-@HAVE_QUVI_TRUE@totem_pl_parser_videosite_LDADD = $(QUVI_LIBS)
+@HAVE_QUVI_TRUE@xplayer_pl_parser_videosite_SOURCES = videosite-parser.c
+@HAVE_QUVI_TRUE@xplayer_pl_parser_videosite_CFLAGS = $(QUVI_CFLAGS) -DLIBEXECDIR=\""$(libexecdir)"\"
+@HAVE_QUVI_TRUE@xplayer_pl_parser_videosite_LDADD = $(QUVI_LIBS)
 INTROSPECTION_GIRS = $(am__append_1)
 INTROSPECTION_SCANNER_ARGS = --add-include-path=$(srcdir) --add-include-path=$(builddir) --warn-all
 INTROSPECTION_COMPILER_ARGS = --includedir=$(srcdir)
@@ -665,12 +665,12 @@ INTROSPECTION_COMPILER_ARGS = --includedir=$(srcdir)
 @HAVE_INTROSPECTION_TRUE@	$(plparser_sources)		\
 @HAVE_INTROSPECTION_TRUE@	$(plparserinclude_HEADERS)	\
 @HAVE_INTROSPECTION_TRUE@	$(BUILTINFILES)			\
-@HAVE_INTROSPECTION_TRUE@	totemplparser-marshal.c
+@HAVE_INTROSPECTION_TRUE@	xplayerplparser-marshal.c
 
-@HAVE_INTROSPECTION_TRUE@TotemPlParser_1_0_gir_SCANNERFLAGS = --namespace=TotemPlParser --identifier-prefix=TotemPl --symbol-prefix=totem_pl --identifier-prefix=TotemDisc --symbol-prefix=totem_disc --identifier-prefix=TotemCd --symbol-prefix=totem_cd --nsversion=1.0
-@HAVE_INTROSPECTION_TRUE@TotemPlParser_1_0_gir_INCLUDES = GObject-2.0 Gio-2.0
-@HAVE_INTROSPECTION_TRUE@TotemPlParser_1_0_gir_CFLAGS = \
-@HAVE_INTROSPECTION_TRUE@	$(TOTEM_PLPARSER_CFLAGS)	\
+@HAVE_INTROSPECTION_TRUE@XplayerPlParser_1_0_gir_SCANNERFLAGS = --namespace=XplayerPlParser --identifier-prefix=XplayerPl --symbol-prefix=xplayer_pl --identifier-prefix=XplayerDisc --symbol-prefix=xplayer_disc --identifier-prefix=XplayerCd --symbol-prefix=xplayer_cd --nsversion=1.0
+@HAVE_INTROSPECTION_TRUE@XplayerPlParser_1_0_gir_INCLUDES = GObject-2.0 Gio-2.0
+@HAVE_INTROSPECTION_TRUE@XplayerPlParser_1_0_gir_CFLAGS = \
+@HAVE_INTROSPECTION_TRUE@	$(XPLAYER_PLPARSER_CFLAGS)	\
 @HAVE_INTROSPECTION_TRUE@	$(DBUS_CFLAGS)			\
 @HAVE_INTROSPECTION_TRUE@	$(AM_CFLAGS)			\
 @HAVE_INTROSPECTION_TRUE@	-D_FILE_OFFSET_BITS=64		\
@@ -680,8 +680,8 @@ INTROSPECTION_COMPILER_ARGS = --includedir=$(srcdir)
 @HAVE_INTROSPECTION_TRUE@	-I$(top_builddir)/plparse	\
 @HAVE_INTROSPECTION_TRUE@	-D_GNU_SOURCE
 
-@HAVE_INTROSPECTION_TRUE@TotemPlParser_1_0_gir_LIBS = libtotem-plparser.la
-@HAVE_INTROSPECTION_TRUE@TotemPlParser_1_0_gir_FILES = $(introspection_sources)
+@HAVE_INTROSPECTION_TRUE@XplayerPlParser_1_0_gir_LIBS = libxplayer-plparser.la
+@HAVE_INTROSPECTION_TRUE@XplayerPlParser_1_0_gir_FILES = $(introspection_sources)
 @HAVE_INTROSPECTION_TRUE@girdir = $(datadir)/gir-1.0
 @HAVE_INTROSPECTION_TRUE@gir_DATA = $(INTROSPECTION_GIRS)
 @HAVE_INTROSPECTION_TRUE@typelibdir = $(libdir)/girepository-1.0
@@ -721,7 +721,7 @@ $(top_srcdir)/configure: @MAINTAINER_MODE_TRUE@ $(am__configure_deps)
 $(ACLOCAL_M4): @MAINTAINER_MODE_TRUE@ $(am__aclocal_m4_deps)
 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
 $(am__aclocal_m4_deps):
-totem-pl-parser-features.h: $(top_builddir)/config.status $(srcdir)/totem-pl-parser-features.h.in
+xplayer-pl-parser-features.h: $(top_builddir)/config.status $(srcdir)/xplayer-pl-parser-features.h.in
 	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@
 
 install-libLTLIBRARIES: $(lib_LTLIBRARIES)
@@ -759,11 +759,11 @@ clean-libLTLIBRARIES:
 	  rm -f $${locs}; \
 	}
 
-libtotem-plparser-mini.la: $(libtotem_plparser_mini_la_OBJECTS) $(libtotem_plparser_mini_la_DEPENDENCIES) $(EXTRA_libtotem_plparser_mini_la_DEPENDENCIES) 
-	$(AM_V_CCLD)$(libtotem_plparser_mini_la_LINK) -rpath $(libdir) $(libtotem_plparser_mini_la_OBJECTS) $(libtotem_plparser_mini_la_LIBADD) $(LIBS)
+libxplayer-plparser-mini.la: $(libxplayer_plparser_mini_la_OBJECTS) $(libxplayer_plparser_mini_la_DEPENDENCIES) $(EXTRA_libxplayer_plparser_mini_la_DEPENDENCIES) 
+	$(AM_V_CCLD)$(libxplayer_plparser_mini_la_LINK) -rpath $(libdir) $(libxplayer_plparser_mini_la_OBJECTS) $(libxplayer_plparser_mini_la_LIBADD) $(LIBS)
 
-libtotem-plparser.la: $(libtotem_plparser_la_OBJECTS) $(libtotem_plparser_la_DEPENDENCIES) $(EXTRA_libtotem_plparser_la_DEPENDENCIES) 
-	$(AM_V_CCLD)$(libtotem_plparser_la_LINK) -rpath $(libdir) $(libtotem_plparser_la_OBJECTS) $(libtotem_plparser_la_LIBADD) $(LIBS)
+libxplayer-plparser.la: $(libxplayer_plparser_la_OBJECTS) $(libxplayer_plparser_la_DEPENDENCIES) $(EXTRA_libxplayer_plparser_la_DEPENDENCIES) 
+	$(AM_V_CCLD)$(libxplayer_plparser_la_LINK) -rpath $(libdir) $(libxplayer_plparser_la_OBJECTS) $(libxplayer_plparser_la_LIBADD) $(LIBS)
 install-libexecPROGRAMS: $(libexec_PROGRAMS)
 	@$(NORMAL_INSTALL)
 	@list='$(libexec_PROGRAMS)'; test -n "$(libexecdir)" || list=; \
@@ -814,9 +814,9 @@ clean-libexecPROGRAMS:
 	echo " rm -f" $$list; \
 	rm -f $$list
 
-totem-pl-parser-videosite$(EXEEXT): $(totem_pl_parser_videosite_OBJECTS) $(totem_pl_parser_videosite_DEPENDENCIES) $(EXTRA_totem_pl_parser_videosite_DEPENDENCIES) 
-	@rm -f totem-pl-parser-videosite$(EXEEXT)
-	$(AM_V_CCLD)$(totem_pl_parser_videosite_LINK) $(totem_pl_parser_videosite_OBJECTS) $(totem_pl_parser_videosite_LDADD) $(LIBS)
+xplayer-pl-parser-videosite$(EXEEXT): $(xplayer_pl_parser_videosite_OBJECTS) $(xplayer_pl_parser_videosite_DEPENDENCIES) $(EXTRA_xplayer_pl_parser_videosite_DEPENDENCIES) 
+	@rm -f xplayer-pl-parser-videosite$(EXEEXT)
+	$(AM_V_CCLD)$(xplayer_pl_parser_videosite_LINK) $(xplayer_pl_parser_videosite_OBJECTS) $(xplayer_pl_parser_videosite_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
@@ -824,38 +824,38 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_plparser_la-totem-disc.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_plparser_la-totem-pl-parser-amz.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_plparser_la-totem-pl-parser-builtins.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_plparser_la-totem-pl-parser-lines.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_plparser_la-totem-pl-parser-media.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_plparser_la-totem-pl-parser-misc.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_plparser_la-totem-pl-parser-pla.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_plparser_la-totem-pl-parser-pls.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_plparser_la-totem-pl-parser-podcast.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_plparser_la-totem-pl-parser-qt.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_plparser_la-totem-pl-parser-smil.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_plparser_la-totem-pl-parser-videosite.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_plparser_la-totem-pl-parser-wm.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_plparser_la-totem-pl-parser-xspf.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_plparser_la-totem-pl-parser.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_plparser_la-totem-pl-playlist.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_plparser_la-totemplparser-marshal.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_plparser_la-xmllexer.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_plparser_la-xmlparser.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-amz.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-lines.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-misc.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-pls.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-podcast.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-qt.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-smil.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-videosite.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-wm.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-xspf.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_plparser_mini_la-totem-pl-playlist.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/totem_pl_parser_videosite-videosite-parser.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_plparser_la-xplayer-disc.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-amz.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-builtins.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-lines.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-media.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-misc.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-pla.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-pls.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-podcast.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-qt.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-smil.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-videosite.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-wm.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-xspf.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_plparser_la-xplayer-pl-playlist.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_plparser_la-xplayerplparser-marshal.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_plparser_la-xmllexer.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_plparser_la-xmlparser.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-amz.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-lines.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-misc.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-pls.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-podcast.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-qt.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-smil.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-videosite.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-wm.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-xspf.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-playlist.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/xplayer_pl_parser_videosite-videosite-parser.Po@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\
@@ -881,236 +881,236 @@ distclean-compile:
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LTCOMPILE) -c -o $@ $<
 
-libtotem_plparser_mini_la-totem-pl-parser.lo: totem-pl-parser.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_mini_la_CFLAGS) $(CFLAGS) -MT libtotem_plparser_mini_la-totem-pl-parser.lo -MD -MP -MF $(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser.Tpo -c -o libtotem_plparser_mini_la-totem-pl-parser.lo `test -f 'totem-pl-parser.c' || echo '$(srcdir)/'`totem-pl-parser.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser.Tpo $(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-pl-parser.c' object='libtotem_plparser_mini_la-totem-pl-parser.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_plparser_mini_la-xplayer-pl-parser.lo: xplayer-pl-parser.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_mini_la_CFLAGS) $(CFLAGS) -MT libxplayer_plparser_mini_la-xplayer-pl-parser.lo -MD -MP -MF $(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser.Tpo -c -o libxplayer_plparser_mini_la-xplayer-pl-parser.lo `test -f 'xplayer-pl-parser.c' || echo '$(srcdir)/'`xplayer-pl-parser.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser.Tpo $(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-pl-parser.c' object='libxplayer_plparser_mini_la-xplayer-pl-parser.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_mini_la_CFLAGS) $(CFLAGS) -c -o libtotem_plparser_mini_la-totem-pl-parser.lo `test -f 'totem-pl-parser.c' || echo '$(srcdir)/'`totem-pl-parser.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_mini_la_CFLAGS) $(CFLAGS) -c -o libxplayer_plparser_mini_la-xplayer-pl-parser.lo `test -f 'xplayer-pl-parser.c' || echo '$(srcdir)/'`xplayer-pl-parser.c
 
-libtotem_plparser_mini_la-totem-pl-parser-lines.lo: totem-pl-parser-lines.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_mini_la_CFLAGS) $(CFLAGS) -MT libtotem_plparser_mini_la-totem-pl-parser-lines.lo -MD -MP -MF $(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-lines.Tpo -c -o libtotem_plparser_mini_la-totem-pl-parser-lines.lo `test -f 'totem-pl-parser-lines.c' || echo '$(srcdir)/'`totem-pl-parser-lines.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-lines.Tpo $(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-lines.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-pl-parser-lines.c' object='libtotem_plparser_mini_la-totem-pl-parser-lines.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_plparser_mini_la-xplayer-pl-parser-lines.lo: xplayer-pl-parser-lines.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_mini_la_CFLAGS) $(CFLAGS) -MT libxplayer_plparser_mini_la-xplayer-pl-parser-lines.lo -MD -MP -MF $(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-lines.Tpo -c -o libxplayer_plparser_mini_la-xplayer-pl-parser-lines.lo `test -f 'xplayer-pl-parser-lines.c' || echo '$(srcdir)/'`xplayer-pl-parser-lines.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-lines.Tpo $(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-lines.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-pl-parser-lines.c' object='libxplayer_plparser_mini_la-xplayer-pl-parser-lines.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_mini_la_CFLAGS) $(CFLAGS) -c -o libtotem_plparser_mini_la-totem-pl-parser-lines.lo `test -f 'totem-pl-parser-lines.c' || echo '$(srcdir)/'`totem-pl-parser-lines.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_mini_la_CFLAGS) $(CFLAGS) -c -o libxplayer_plparser_mini_la-xplayer-pl-parser-lines.lo `test -f 'xplayer-pl-parser-lines.c' || echo '$(srcdir)/'`xplayer-pl-parser-lines.c
 
-libtotem_plparser_mini_la-totem-pl-parser-misc.lo: totem-pl-parser-misc.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_mini_la_CFLAGS) $(CFLAGS) -MT libtotem_plparser_mini_la-totem-pl-parser-misc.lo -MD -MP -MF $(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-misc.Tpo -c -o libtotem_plparser_mini_la-totem-pl-parser-misc.lo `test -f 'totem-pl-parser-misc.c' || echo '$(srcdir)/'`totem-pl-parser-misc.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-misc.Tpo $(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-misc.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-pl-parser-misc.c' object='libtotem_plparser_mini_la-totem-pl-parser-misc.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_plparser_mini_la-xplayer-pl-parser-misc.lo: xplayer-pl-parser-misc.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_mini_la_CFLAGS) $(CFLAGS) -MT libxplayer_plparser_mini_la-xplayer-pl-parser-misc.lo -MD -MP -MF $(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-misc.Tpo -c -o libxplayer_plparser_mini_la-xplayer-pl-parser-misc.lo `test -f 'xplayer-pl-parser-misc.c' || echo '$(srcdir)/'`xplayer-pl-parser-misc.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-misc.Tpo $(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-misc.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-pl-parser-misc.c' object='libxplayer_plparser_mini_la-xplayer-pl-parser-misc.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_mini_la_CFLAGS) $(CFLAGS) -c -o libtotem_plparser_mini_la-totem-pl-parser-misc.lo `test -f 'totem-pl-parser-misc.c' || echo '$(srcdir)/'`totem-pl-parser-misc.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_mini_la_CFLAGS) $(CFLAGS) -c -o libxplayer_plparser_mini_la-xplayer-pl-parser-misc.lo `test -f 'xplayer-pl-parser-misc.c' || echo '$(srcdir)/'`xplayer-pl-parser-misc.c
 
-libtotem_plparser_mini_la-totem-pl-parser-pls.lo: totem-pl-parser-pls.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_mini_la_CFLAGS) $(CFLAGS) -MT libtotem_plparser_mini_la-totem-pl-parser-pls.lo -MD -MP -MF $(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-pls.Tpo -c -o libtotem_plparser_mini_la-totem-pl-parser-pls.lo `test -f 'totem-pl-parser-pls.c' || echo '$(srcdir)/'`totem-pl-parser-pls.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-pls.Tpo $(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-pls.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-pl-parser-pls.c' object='libtotem_plparser_mini_la-totem-pl-parser-pls.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_plparser_mini_la-xplayer-pl-parser-pls.lo: xplayer-pl-parser-pls.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_mini_la_CFLAGS) $(CFLAGS) -MT libxplayer_plparser_mini_la-xplayer-pl-parser-pls.lo -MD -MP -MF $(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-pls.Tpo -c -o libxplayer_plparser_mini_la-xplayer-pl-parser-pls.lo `test -f 'xplayer-pl-parser-pls.c' || echo '$(srcdir)/'`xplayer-pl-parser-pls.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-pls.Tpo $(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-pls.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-pl-parser-pls.c' object='libxplayer_plparser_mini_la-xplayer-pl-parser-pls.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_mini_la_CFLAGS) $(CFLAGS) -c -o libtotem_plparser_mini_la-totem-pl-parser-pls.lo `test -f 'totem-pl-parser-pls.c' || echo '$(srcdir)/'`totem-pl-parser-pls.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_mini_la_CFLAGS) $(CFLAGS) -c -o libxplayer_plparser_mini_la-xplayer-pl-parser-pls.lo `test -f 'xplayer-pl-parser-pls.c' || echo '$(srcdir)/'`xplayer-pl-parser-pls.c
 
-libtotem_plparser_mini_la-totem-pl-parser-podcast.lo: totem-pl-parser-podcast.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_mini_la_CFLAGS) $(CFLAGS) -MT libtotem_plparser_mini_la-totem-pl-parser-podcast.lo -MD -MP -MF $(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-podcast.Tpo -c -o libtotem_plparser_mini_la-totem-pl-parser-podcast.lo `test -f 'totem-pl-parser-podcast.c' || echo '$(srcdir)/'`totem-pl-parser-podcast.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-podcast.Tpo $(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-podcast.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-pl-parser-podcast.c' object='libtotem_plparser_mini_la-totem-pl-parser-podcast.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_plparser_mini_la-xplayer-pl-parser-podcast.lo: xplayer-pl-parser-podcast.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_mini_la_CFLAGS) $(CFLAGS) -MT libxplayer_plparser_mini_la-xplayer-pl-parser-podcast.lo -MD -MP -MF $(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-podcast.Tpo -c -o libxplayer_plparser_mini_la-xplayer-pl-parser-podcast.lo `test -f 'xplayer-pl-parser-podcast.c' || echo '$(srcdir)/'`xplayer-pl-parser-podcast.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-podcast.Tpo $(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-podcast.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-pl-parser-podcast.c' object='libxplayer_plparser_mini_la-xplayer-pl-parser-podcast.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_mini_la_CFLAGS) $(CFLAGS) -c -o libtotem_plparser_mini_la-totem-pl-parser-podcast.lo `test -f 'totem-pl-parser-podcast.c' || echo '$(srcdir)/'`totem-pl-parser-podcast.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_mini_la_CFLAGS) $(CFLAGS) -c -o libxplayer_plparser_mini_la-xplayer-pl-parser-podcast.lo `test -f 'xplayer-pl-parser-podcast.c' || echo '$(srcdir)/'`xplayer-pl-parser-podcast.c
 
-libtotem_plparser_mini_la-totem-pl-parser-qt.lo: totem-pl-parser-qt.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_mini_la_CFLAGS) $(CFLAGS) -MT libtotem_plparser_mini_la-totem-pl-parser-qt.lo -MD -MP -MF $(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-qt.Tpo -c -o libtotem_plparser_mini_la-totem-pl-parser-qt.lo `test -f 'totem-pl-parser-qt.c' || echo '$(srcdir)/'`totem-pl-parser-qt.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-qt.Tpo $(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-qt.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-pl-parser-qt.c' object='libtotem_plparser_mini_la-totem-pl-parser-qt.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_plparser_mini_la-xplayer-pl-parser-qt.lo: xplayer-pl-parser-qt.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_mini_la_CFLAGS) $(CFLAGS) -MT libxplayer_plparser_mini_la-xplayer-pl-parser-qt.lo -MD -MP -MF $(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-qt.Tpo -c -o libxplayer_plparser_mini_la-xplayer-pl-parser-qt.lo `test -f 'xplayer-pl-parser-qt.c' || echo '$(srcdir)/'`xplayer-pl-parser-qt.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-qt.Tpo $(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-qt.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-pl-parser-qt.c' object='libxplayer_plparser_mini_la-xplayer-pl-parser-qt.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_mini_la_CFLAGS) $(CFLAGS) -c -o libtotem_plparser_mini_la-totem-pl-parser-qt.lo `test -f 'totem-pl-parser-qt.c' || echo '$(srcdir)/'`totem-pl-parser-qt.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_mini_la_CFLAGS) $(CFLAGS) -c -o libxplayer_plparser_mini_la-xplayer-pl-parser-qt.lo `test -f 'xplayer-pl-parser-qt.c' || echo '$(srcdir)/'`xplayer-pl-parser-qt.c
 
-libtotem_plparser_mini_la-totem-pl-parser-smil.lo: totem-pl-parser-smil.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_mini_la_CFLAGS) $(CFLAGS) -MT libtotem_plparser_mini_la-totem-pl-parser-smil.lo -MD -MP -MF $(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-smil.Tpo -c -o libtotem_plparser_mini_la-totem-pl-parser-smil.lo `test -f 'totem-pl-parser-smil.c' || echo '$(srcdir)/'`totem-pl-parser-smil.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-smil.Tpo $(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-smil.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-pl-parser-smil.c' object='libtotem_plparser_mini_la-totem-pl-parser-smil.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_plparser_mini_la-xplayer-pl-parser-smil.lo: xplayer-pl-parser-smil.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_mini_la_CFLAGS) $(CFLAGS) -MT libxplayer_plparser_mini_la-xplayer-pl-parser-smil.lo -MD -MP -MF $(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-smil.Tpo -c -o libxplayer_plparser_mini_la-xplayer-pl-parser-smil.lo `test -f 'xplayer-pl-parser-smil.c' || echo '$(srcdir)/'`xplayer-pl-parser-smil.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-smil.Tpo $(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-smil.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-pl-parser-smil.c' object='libxplayer_plparser_mini_la-xplayer-pl-parser-smil.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_mini_la_CFLAGS) $(CFLAGS) -c -o libtotem_plparser_mini_la-totem-pl-parser-smil.lo `test -f 'totem-pl-parser-smil.c' || echo '$(srcdir)/'`totem-pl-parser-smil.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_mini_la_CFLAGS) $(CFLAGS) -c -o libxplayer_plparser_mini_la-xplayer-pl-parser-smil.lo `test -f 'xplayer-pl-parser-smil.c' || echo '$(srcdir)/'`xplayer-pl-parser-smil.c
 
-libtotem_plparser_mini_la-totem-pl-parser-videosite.lo: totem-pl-parser-videosite.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_mini_la_CFLAGS) $(CFLAGS) -MT libtotem_plparser_mini_la-totem-pl-parser-videosite.lo -MD -MP -MF $(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-videosite.Tpo -c -o libtotem_plparser_mini_la-totem-pl-parser-videosite.lo `test -f 'totem-pl-parser-videosite.c' || echo '$(srcdir)/'`totem-pl-parser-videosite.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-videosite.Tpo $(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-videosite.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-pl-parser-videosite.c' object='libtotem_plparser_mini_la-totem-pl-parser-videosite.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_plparser_mini_la-xplayer-pl-parser-videosite.lo: xplayer-pl-parser-videosite.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_mini_la_CFLAGS) $(CFLAGS) -MT libxplayer_plparser_mini_la-xplayer-pl-parser-videosite.lo -MD -MP -MF $(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-videosite.Tpo -c -o libxplayer_plparser_mini_la-xplayer-pl-parser-videosite.lo `test -f 'xplayer-pl-parser-videosite.c' || echo '$(srcdir)/'`xplayer-pl-parser-videosite.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-videosite.Tpo $(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-videosite.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-pl-parser-videosite.c' object='libxplayer_plparser_mini_la-xplayer-pl-parser-videosite.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_mini_la_CFLAGS) $(CFLAGS) -c -o libtotem_plparser_mini_la-totem-pl-parser-videosite.lo `test -f 'totem-pl-parser-videosite.c' || echo '$(srcdir)/'`totem-pl-parser-videosite.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_mini_la_CFLAGS) $(CFLAGS) -c -o libxplayer_plparser_mini_la-xplayer-pl-parser-videosite.lo `test -f 'xplayer-pl-parser-videosite.c' || echo '$(srcdir)/'`xplayer-pl-parser-videosite.c
 
-libtotem_plparser_mini_la-totem-pl-parser-wm.lo: totem-pl-parser-wm.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_mini_la_CFLAGS) $(CFLAGS) -MT libtotem_plparser_mini_la-totem-pl-parser-wm.lo -MD -MP -MF $(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-wm.Tpo -c -o libtotem_plparser_mini_la-totem-pl-parser-wm.lo `test -f 'totem-pl-parser-wm.c' || echo '$(srcdir)/'`totem-pl-parser-wm.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-wm.Tpo $(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-wm.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-pl-parser-wm.c' object='libtotem_plparser_mini_la-totem-pl-parser-wm.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_plparser_mini_la-xplayer-pl-parser-wm.lo: xplayer-pl-parser-wm.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_mini_la_CFLAGS) $(CFLAGS) -MT libxplayer_plparser_mini_la-xplayer-pl-parser-wm.lo -MD -MP -MF $(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-wm.Tpo -c -o libxplayer_plparser_mini_la-xplayer-pl-parser-wm.lo `test -f 'xplayer-pl-parser-wm.c' || echo '$(srcdir)/'`xplayer-pl-parser-wm.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-wm.Tpo $(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-wm.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-pl-parser-wm.c' object='libxplayer_plparser_mini_la-xplayer-pl-parser-wm.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_mini_la_CFLAGS) $(CFLAGS) -c -o libtotem_plparser_mini_la-totem-pl-parser-wm.lo `test -f 'totem-pl-parser-wm.c' || echo '$(srcdir)/'`totem-pl-parser-wm.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_mini_la_CFLAGS) $(CFLAGS) -c -o libxplayer_plparser_mini_la-xplayer-pl-parser-wm.lo `test -f 'xplayer-pl-parser-wm.c' || echo '$(srcdir)/'`xplayer-pl-parser-wm.c
 
-libtotem_plparser_mini_la-totem-pl-parser-xspf.lo: totem-pl-parser-xspf.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_mini_la_CFLAGS) $(CFLAGS) -MT libtotem_plparser_mini_la-totem-pl-parser-xspf.lo -MD -MP -MF $(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-xspf.Tpo -c -o libtotem_plparser_mini_la-totem-pl-parser-xspf.lo `test -f 'totem-pl-parser-xspf.c' || echo '$(srcdir)/'`totem-pl-parser-xspf.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-xspf.Tpo $(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-xspf.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-pl-parser-xspf.c' object='libtotem_plparser_mini_la-totem-pl-parser-xspf.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_plparser_mini_la-xplayer-pl-parser-xspf.lo: xplayer-pl-parser-xspf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_mini_la_CFLAGS) $(CFLAGS) -MT libxplayer_plparser_mini_la-xplayer-pl-parser-xspf.lo -MD -MP -MF $(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-xspf.Tpo -c -o libxplayer_plparser_mini_la-xplayer-pl-parser-xspf.lo `test -f 'xplayer-pl-parser-xspf.c' || echo '$(srcdir)/'`xplayer-pl-parser-xspf.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-xspf.Tpo $(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-xspf.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-pl-parser-xspf.c' object='libxplayer_plparser_mini_la-xplayer-pl-parser-xspf.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_mini_la_CFLAGS) $(CFLAGS) -c -o libtotem_plparser_mini_la-totem-pl-parser-xspf.lo `test -f 'totem-pl-parser-xspf.c' || echo '$(srcdir)/'`totem-pl-parser-xspf.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_mini_la_CFLAGS) $(CFLAGS) -c -o libxplayer_plparser_mini_la-xplayer-pl-parser-xspf.lo `test -f 'xplayer-pl-parser-xspf.c' || echo '$(srcdir)/'`xplayer-pl-parser-xspf.c
 
-libtotem_plparser_mini_la-totem-pl-parser-amz.lo: totem-pl-parser-amz.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_mini_la_CFLAGS) $(CFLAGS) -MT libtotem_plparser_mini_la-totem-pl-parser-amz.lo -MD -MP -MF $(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-amz.Tpo -c -o libtotem_plparser_mini_la-totem-pl-parser-amz.lo `test -f 'totem-pl-parser-amz.c' || echo '$(srcdir)/'`totem-pl-parser-amz.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-amz.Tpo $(DEPDIR)/libtotem_plparser_mini_la-totem-pl-parser-amz.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-pl-parser-amz.c' object='libtotem_plparser_mini_la-totem-pl-parser-amz.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_plparser_mini_la-xplayer-pl-parser-amz.lo: xplayer-pl-parser-amz.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_mini_la_CFLAGS) $(CFLAGS) -MT libxplayer_plparser_mini_la-xplayer-pl-parser-amz.lo -MD -MP -MF $(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-amz.Tpo -c -o libxplayer_plparser_mini_la-xplayer-pl-parser-amz.lo `test -f 'xplayer-pl-parser-amz.c' || echo '$(srcdir)/'`xplayer-pl-parser-amz.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-amz.Tpo $(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-parser-amz.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-pl-parser-amz.c' object='libxplayer_plparser_mini_la-xplayer-pl-parser-amz.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_mini_la_CFLAGS) $(CFLAGS) -c -o libtotem_plparser_mini_la-totem-pl-parser-amz.lo `test -f 'totem-pl-parser-amz.c' || echo '$(srcdir)/'`totem-pl-parser-amz.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_mini_la_CFLAGS) $(CFLAGS) -c -o libxplayer_plparser_mini_la-xplayer-pl-parser-amz.lo `test -f 'xplayer-pl-parser-amz.c' || echo '$(srcdir)/'`xplayer-pl-parser-amz.c
 
-libtotem_plparser_mini_la-totem-pl-playlist.lo: totem-pl-playlist.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_mini_la_CFLAGS) $(CFLAGS) -MT libtotem_plparser_mini_la-totem-pl-playlist.lo -MD -MP -MF $(DEPDIR)/libtotem_plparser_mini_la-totem-pl-playlist.Tpo -c -o libtotem_plparser_mini_la-totem-pl-playlist.lo `test -f 'totem-pl-playlist.c' || echo '$(srcdir)/'`totem-pl-playlist.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_plparser_mini_la-totem-pl-playlist.Tpo $(DEPDIR)/libtotem_plparser_mini_la-totem-pl-playlist.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-pl-playlist.c' object='libtotem_plparser_mini_la-totem-pl-playlist.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_plparser_mini_la-xplayer-pl-playlist.lo: xplayer-pl-playlist.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_mini_la_CFLAGS) $(CFLAGS) -MT libxplayer_plparser_mini_la-xplayer-pl-playlist.lo -MD -MP -MF $(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-playlist.Tpo -c -o libxplayer_plparser_mini_la-xplayer-pl-playlist.lo `test -f 'xplayer-pl-playlist.c' || echo '$(srcdir)/'`xplayer-pl-playlist.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-playlist.Tpo $(DEPDIR)/libxplayer_plparser_mini_la-xplayer-pl-playlist.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-pl-playlist.c' object='libxplayer_plparser_mini_la-xplayer-pl-playlist.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_mini_la_CFLAGS) $(CFLAGS) -c -o libtotem_plparser_mini_la-totem-pl-playlist.lo `test -f 'totem-pl-playlist.c' || echo '$(srcdir)/'`totem-pl-playlist.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_mini_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_mini_la_CFLAGS) $(CFLAGS) -c -o libxplayer_plparser_mini_la-xplayer-pl-playlist.lo `test -f 'xplayer-pl-playlist.c' || echo '$(srcdir)/'`xplayer-pl-playlist.c
 
-libtotem_plparser_la-totem-disc.lo: totem-disc.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_la_CFLAGS) $(CFLAGS) -MT libtotem_plparser_la-totem-disc.lo -MD -MP -MF $(DEPDIR)/libtotem_plparser_la-totem-disc.Tpo -c -o libtotem_plparser_la-totem-disc.lo `test -f 'totem-disc.c' || echo '$(srcdir)/'`totem-disc.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_plparser_la-totem-disc.Tpo $(DEPDIR)/libtotem_plparser_la-totem-disc.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-disc.c' object='libtotem_plparser_la-totem-disc.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_plparser_la-xplayer-disc.lo: xplayer-disc.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_la_CFLAGS) $(CFLAGS) -MT libxplayer_plparser_la-xplayer-disc.lo -MD -MP -MF $(DEPDIR)/libxplayer_plparser_la-xplayer-disc.Tpo -c -o libxplayer_plparser_la-xplayer-disc.lo `test -f 'xplayer-disc.c' || echo '$(srcdir)/'`xplayer-disc.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_plparser_la-xplayer-disc.Tpo $(DEPDIR)/libxplayer_plparser_la-xplayer-disc.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-disc.c' object='libxplayer_plparser_la-xplayer-disc.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_la_CFLAGS) $(CFLAGS) -c -o libtotem_plparser_la-totem-disc.lo `test -f 'totem-disc.c' || echo '$(srcdir)/'`totem-disc.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_la_CFLAGS) $(CFLAGS) -c -o libxplayer_plparser_la-xplayer-disc.lo `test -f 'xplayer-disc.c' || echo '$(srcdir)/'`xplayer-disc.c
 
-libtotem_plparser_la-totem-pl-parser.lo: totem-pl-parser.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_la_CFLAGS) $(CFLAGS) -MT libtotem_plparser_la-totem-pl-parser.lo -MD -MP -MF $(DEPDIR)/libtotem_plparser_la-totem-pl-parser.Tpo -c -o libtotem_plparser_la-totem-pl-parser.lo `test -f 'totem-pl-parser.c' || echo '$(srcdir)/'`totem-pl-parser.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_plparser_la-totem-pl-parser.Tpo $(DEPDIR)/libtotem_plparser_la-totem-pl-parser.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-pl-parser.c' object='libtotem_plparser_la-totem-pl-parser.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_plparser_la-xplayer-pl-parser.lo: xplayer-pl-parser.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_la_CFLAGS) $(CFLAGS) -MT libxplayer_plparser_la-xplayer-pl-parser.lo -MD -MP -MF $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser.Tpo -c -o libxplayer_plparser_la-xplayer-pl-parser.lo `test -f 'xplayer-pl-parser.c' || echo '$(srcdir)/'`xplayer-pl-parser.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser.Tpo $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-pl-parser.c' object='libxplayer_plparser_la-xplayer-pl-parser.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_la_CFLAGS) $(CFLAGS) -c -o libtotem_plparser_la-totem-pl-parser.lo `test -f 'totem-pl-parser.c' || echo '$(srcdir)/'`totem-pl-parser.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_la_CFLAGS) $(CFLAGS) -c -o libxplayer_plparser_la-xplayer-pl-parser.lo `test -f 'xplayer-pl-parser.c' || echo '$(srcdir)/'`xplayer-pl-parser.c
 
-libtotem_plparser_la-totem-pl-parser-amz.lo: totem-pl-parser-amz.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_la_CFLAGS) $(CFLAGS) -MT libtotem_plparser_la-totem-pl-parser-amz.lo -MD -MP -MF $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-amz.Tpo -c -o libtotem_plparser_la-totem-pl-parser-amz.lo `test -f 'totem-pl-parser-amz.c' || echo '$(srcdir)/'`totem-pl-parser-amz.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-amz.Tpo $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-amz.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-pl-parser-amz.c' object='libtotem_plparser_la-totem-pl-parser-amz.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_plparser_la-xplayer-pl-parser-amz.lo: xplayer-pl-parser-amz.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_la_CFLAGS) $(CFLAGS) -MT libxplayer_plparser_la-xplayer-pl-parser-amz.lo -MD -MP -MF $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-amz.Tpo -c -o libxplayer_plparser_la-xplayer-pl-parser-amz.lo `test -f 'xplayer-pl-parser-amz.c' || echo '$(srcdir)/'`xplayer-pl-parser-amz.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-amz.Tpo $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-amz.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-pl-parser-amz.c' object='libxplayer_plparser_la-xplayer-pl-parser-amz.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_la_CFLAGS) $(CFLAGS) -c -o libtotem_plparser_la-totem-pl-parser-amz.lo `test -f 'totem-pl-parser-amz.c' || echo '$(srcdir)/'`totem-pl-parser-amz.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_la_CFLAGS) $(CFLAGS) -c -o libxplayer_plparser_la-xplayer-pl-parser-amz.lo `test -f 'xplayer-pl-parser-amz.c' || echo '$(srcdir)/'`xplayer-pl-parser-amz.c
 
-libtotem_plparser_la-totem-pl-parser-lines.lo: totem-pl-parser-lines.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_la_CFLAGS) $(CFLAGS) -MT libtotem_plparser_la-totem-pl-parser-lines.lo -MD -MP -MF $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-lines.Tpo -c -o libtotem_plparser_la-totem-pl-parser-lines.lo `test -f 'totem-pl-parser-lines.c' || echo '$(srcdir)/'`totem-pl-parser-lines.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-lines.Tpo $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-lines.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-pl-parser-lines.c' object='libtotem_plparser_la-totem-pl-parser-lines.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_plparser_la-xplayer-pl-parser-lines.lo: xplayer-pl-parser-lines.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_la_CFLAGS) $(CFLAGS) -MT libxplayer_plparser_la-xplayer-pl-parser-lines.lo -MD -MP -MF $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-lines.Tpo -c -o libxplayer_plparser_la-xplayer-pl-parser-lines.lo `test -f 'xplayer-pl-parser-lines.c' || echo '$(srcdir)/'`xplayer-pl-parser-lines.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-lines.Tpo $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-lines.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-pl-parser-lines.c' object='libxplayer_plparser_la-xplayer-pl-parser-lines.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_la_CFLAGS) $(CFLAGS) -c -o libtotem_plparser_la-totem-pl-parser-lines.lo `test -f 'totem-pl-parser-lines.c' || echo '$(srcdir)/'`totem-pl-parser-lines.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_la_CFLAGS) $(CFLAGS) -c -o libxplayer_plparser_la-xplayer-pl-parser-lines.lo `test -f 'xplayer-pl-parser-lines.c' || echo '$(srcdir)/'`xplayer-pl-parser-lines.c
 
-libtotem_plparser_la-totem-pl-parser-media.lo: totem-pl-parser-media.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_la_CFLAGS) $(CFLAGS) -MT libtotem_plparser_la-totem-pl-parser-media.lo -MD -MP -MF $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-media.Tpo -c -o libtotem_plparser_la-totem-pl-parser-media.lo `test -f 'totem-pl-parser-media.c' || echo '$(srcdir)/'`totem-pl-parser-media.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-media.Tpo $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-media.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-pl-parser-media.c' object='libtotem_plparser_la-totem-pl-parser-media.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_plparser_la-xplayer-pl-parser-media.lo: xplayer-pl-parser-media.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_la_CFLAGS) $(CFLAGS) -MT libxplayer_plparser_la-xplayer-pl-parser-media.lo -MD -MP -MF $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-media.Tpo -c -o libxplayer_plparser_la-xplayer-pl-parser-media.lo `test -f 'xplayer-pl-parser-media.c' || echo '$(srcdir)/'`xplayer-pl-parser-media.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-media.Tpo $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-media.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-pl-parser-media.c' object='libxplayer_plparser_la-xplayer-pl-parser-media.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_la_CFLAGS) $(CFLAGS) -c -o libtotem_plparser_la-totem-pl-parser-media.lo `test -f 'totem-pl-parser-media.c' || echo '$(srcdir)/'`totem-pl-parser-media.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_la_CFLAGS) $(CFLAGS) -c -o libxplayer_plparser_la-xplayer-pl-parser-media.lo `test -f 'xplayer-pl-parser-media.c' || echo '$(srcdir)/'`xplayer-pl-parser-media.c
 
-libtotem_plparser_la-totem-pl-parser-misc.lo: totem-pl-parser-misc.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_la_CFLAGS) $(CFLAGS) -MT libtotem_plparser_la-totem-pl-parser-misc.lo -MD -MP -MF $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-misc.Tpo -c -o libtotem_plparser_la-totem-pl-parser-misc.lo `test -f 'totem-pl-parser-misc.c' || echo '$(srcdir)/'`totem-pl-parser-misc.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-misc.Tpo $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-misc.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-pl-parser-misc.c' object='libtotem_plparser_la-totem-pl-parser-misc.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_plparser_la-xplayer-pl-parser-misc.lo: xplayer-pl-parser-misc.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_la_CFLAGS) $(CFLAGS) -MT libxplayer_plparser_la-xplayer-pl-parser-misc.lo -MD -MP -MF $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-misc.Tpo -c -o libxplayer_plparser_la-xplayer-pl-parser-misc.lo `test -f 'xplayer-pl-parser-misc.c' || echo '$(srcdir)/'`xplayer-pl-parser-misc.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-misc.Tpo $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-misc.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-pl-parser-misc.c' object='libxplayer_plparser_la-xplayer-pl-parser-misc.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_la_CFLAGS) $(CFLAGS) -c -o libtotem_plparser_la-totem-pl-parser-misc.lo `test -f 'totem-pl-parser-misc.c' || echo '$(srcdir)/'`totem-pl-parser-misc.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_la_CFLAGS) $(CFLAGS) -c -o libxplayer_plparser_la-xplayer-pl-parser-misc.lo `test -f 'xplayer-pl-parser-misc.c' || echo '$(srcdir)/'`xplayer-pl-parser-misc.c
 
-libtotem_plparser_la-totem-pl-parser-pla.lo: totem-pl-parser-pla.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_la_CFLAGS) $(CFLAGS) -MT libtotem_plparser_la-totem-pl-parser-pla.lo -MD -MP -MF $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-pla.Tpo -c -o libtotem_plparser_la-totem-pl-parser-pla.lo `test -f 'totem-pl-parser-pla.c' || echo '$(srcdir)/'`totem-pl-parser-pla.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-pla.Tpo $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-pla.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-pl-parser-pla.c' object='libtotem_plparser_la-totem-pl-parser-pla.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_plparser_la-xplayer-pl-parser-pla.lo: xplayer-pl-parser-pla.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_la_CFLAGS) $(CFLAGS) -MT libxplayer_plparser_la-xplayer-pl-parser-pla.lo -MD -MP -MF $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-pla.Tpo -c -o libxplayer_plparser_la-xplayer-pl-parser-pla.lo `test -f 'xplayer-pl-parser-pla.c' || echo '$(srcdir)/'`xplayer-pl-parser-pla.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-pla.Tpo $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-pla.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-pl-parser-pla.c' object='libxplayer_plparser_la-xplayer-pl-parser-pla.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_la_CFLAGS) $(CFLAGS) -c -o libtotem_plparser_la-totem-pl-parser-pla.lo `test -f 'totem-pl-parser-pla.c' || echo '$(srcdir)/'`totem-pl-parser-pla.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_la_CFLAGS) $(CFLAGS) -c -o libxplayer_plparser_la-xplayer-pl-parser-pla.lo `test -f 'xplayer-pl-parser-pla.c' || echo '$(srcdir)/'`xplayer-pl-parser-pla.c
 
-libtotem_plparser_la-totem-pl-parser-pls.lo: totem-pl-parser-pls.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_la_CFLAGS) $(CFLAGS) -MT libtotem_plparser_la-totem-pl-parser-pls.lo -MD -MP -MF $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-pls.Tpo -c -o libtotem_plparser_la-totem-pl-parser-pls.lo `test -f 'totem-pl-parser-pls.c' || echo '$(srcdir)/'`totem-pl-parser-pls.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-pls.Tpo $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-pls.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-pl-parser-pls.c' object='libtotem_plparser_la-totem-pl-parser-pls.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_plparser_la-xplayer-pl-parser-pls.lo: xplayer-pl-parser-pls.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_la_CFLAGS) $(CFLAGS) -MT libxplayer_plparser_la-xplayer-pl-parser-pls.lo -MD -MP -MF $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-pls.Tpo -c -o libxplayer_plparser_la-xplayer-pl-parser-pls.lo `test -f 'xplayer-pl-parser-pls.c' || echo '$(srcdir)/'`xplayer-pl-parser-pls.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-pls.Tpo $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-pls.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-pl-parser-pls.c' object='libxplayer_plparser_la-xplayer-pl-parser-pls.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_la_CFLAGS) $(CFLAGS) -c -o libtotem_plparser_la-totem-pl-parser-pls.lo `test -f 'totem-pl-parser-pls.c' || echo '$(srcdir)/'`totem-pl-parser-pls.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_la_CFLAGS) $(CFLAGS) -c -o libxplayer_plparser_la-xplayer-pl-parser-pls.lo `test -f 'xplayer-pl-parser-pls.c' || echo '$(srcdir)/'`xplayer-pl-parser-pls.c
 
-libtotem_plparser_la-totem-pl-parser-podcast.lo: totem-pl-parser-podcast.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_la_CFLAGS) $(CFLAGS) -MT libtotem_plparser_la-totem-pl-parser-podcast.lo -MD -MP -MF $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-podcast.Tpo -c -o libtotem_plparser_la-totem-pl-parser-podcast.lo `test -f 'totem-pl-parser-podcast.c' || echo '$(srcdir)/'`totem-pl-parser-podcast.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-podcast.Tpo $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-podcast.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-pl-parser-podcast.c' object='libtotem_plparser_la-totem-pl-parser-podcast.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_plparser_la-xplayer-pl-parser-podcast.lo: xplayer-pl-parser-podcast.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_la_CFLAGS) $(CFLAGS) -MT libxplayer_plparser_la-xplayer-pl-parser-podcast.lo -MD -MP -MF $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-podcast.Tpo -c -o libxplayer_plparser_la-xplayer-pl-parser-podcast.lo `test -f 'xplayer-pl-parser-podcast.c' || echo '$(srcdir)/'`xplayer-pl-parser-podcast.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-podcast.Tpo $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-podcast.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-pl-parser-podcast.c' object='libxplayer_plparser_la-xplayer-pl-parser-podcast.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_la_CFLAGS) $(CFLAGS) -c -o libtotem_plparser_la-totem-pl-parser-podcast.lo `test -f 'totem-pl-parser-podcast.c' || echo '$(srcdir)/'`totem-pl-parser-podcast.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_la_CFLAGS) $(CFLAGS) -c -o libxplayer_plparser_la-xplayer-pl-parser-podcast.lo `test -f 'xplayer-pl-parser-podcast.c' || echo '$(srcdir)/'`xplayer-pl-parser-podcast.c
 
-libtotem_plparser_la-totem-pl-parser-qt.lo: totem-pl-parser-qt.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_la_CFLAGS) $(CFLAGS) -MT libtotem_plparser_la-totem-pl-parser-qt.lo -MD -MP -MF $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-qt.Tpo -c -o libtotem_plparser_la-totem-pl-parser-qt.lo `test -f 'totem-pl-parser-qt.c' || echo '$(srcdir)/'`totem-pl-parser-qt.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-qt.Tpo $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-qt.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-pl-parser-qt.c' object='libtotem_plparser_la-totem-pl-parser-qt.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_plparser_la-xplayer-pl-parser-qt.lo: xplayer-pl-parser-qt.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_la_CFLAGS) $(CFLAGS) -MT libxplayer_plparser_la-xplayer-pl-parser-qt.lo -MD -MP -MF $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-qt.Tpo -c -o libxplayer_plparser_la-xplayer-pl-parser-qt.lo `test -f 'xplayer-pl-parser-qt.c' || echo '$(srcdir)/'`xplayer-pl-parser-qt.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-qt.Tpo $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-qt.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-pl-parser-qt.c' object='libxplayer_plparser_la-xplayer-pl-parser-qt.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_la_CFLAGS) $(CFLAGS) -c -o libtotem_plparser_la-totem-pl-parser-qt.lo `test -f 'totem-pl-parser-qt.c' || echo '$(srcdir)/'`totem-pl-parser-qt.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_la_CFLAGS) $(CFLAGS) -c -o libxplayer_plparser_la-xplayer-pl-parser-qt.lo `test -f 'xplayer-pl-parser-qt.c' || echo '$(srcdir)/'`xplayer-pl-parser-qt.c
 
-libtotem_plparser_la-totem-pl-parser-smil.lo: totem-pl-parser-smil.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_la_CFLAGS) $(CFLAGS) -MT libtotem_plparser_la-totem-pl-parser-smil.lo -MD -MP -MF $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-smil.Tpo -c -o libtotem_plparser_la-totem-pl-parser-smil.lo `test -f 'totem-pl-parser-smil.c' || echo '$(srcdir)/'`totem-pl-parser-smil.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-smil.Tpo $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-smil.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-pl-parser-smil.c' object='libtotem_plparser_la-totem-pl-parser-smil.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_plparser_la-xplayer-pl-parser-smil.lo: xplayer-pl-parser-smil.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_la_CFLAGS) $(CFLAGS) -MT libxplayer_plparser_la-xplayer-pl-parser-smil.lo -MD -MP -MF $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-smil.Tpo -c -o libxplayer_plparser_la-xplayer-pl-parser-smil.lo `test -f 'xplayer-pl-parser-smil.c' || echo '$(srcdir)/'`xplayer-pl-parser-smil.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-smil.Tpo $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-smil.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-pl-parser-smil.c' object='libxplayer_plparser_la-xplayer-pl-parser-smil.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_la_CFLAGS) $(CFLAGS) -c -o libtotem_plparser_la-totem-pl-parser-smil.lo `test -f 'totem-pl-parser-smil.c' || echo '$(srcdir)/'`totem-pl-parser-smil.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_la_CFLAGS) $(CFLAGS) -c -o libxplayer_plparser_la-xplayer-pl-parser-smil.lo `test -f 'xplayer-pl-parser-smil.c' || echo '$(srcdir)/'`xplayer-pl-parser-smil.c
 
-libtotem_plparser_la-totem-pl-parser-videosite.lo: totem-pl-parser-videosite.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_la_CFLAGS) $(CFLAGS) -MT libtotem_plparser_la-totem-pl-parser-videosite.lo -MD -MP -MF $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-videosite.Tpo -c -o libtotem_plparser_la-totem-pl-parser-videosite.lo `test -f 'totem-pl-parser-videosite.c' || echo '$(srcdir)/'`totem-pl-parser-videosite.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-videosite.Tpo $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-videosite.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-pl-parser-videosite.c' object='libtotem_plparser_la-totem-pl-parser-videosite.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_plparser_la-xplayer-pl-parser-videosite.lo: xplayer-pl-parser-videosite.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_la_CFLAGS) $(CFLAGS) -MT libxplayer_plparser_la-xplayer-pl-parser-videosite.lo -MD -MP -MF $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-videosite.Tpo -c -o libxplayer_plparser_la-xplayer-pl-parser-videosite.lo `test -f 'xplayer-pl-parser-videosite.c' || echo '$(srcdir)/'`xplayer-pl-parser-videosite.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-videosite.Tpo $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-videosite.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-pl-parser-videosite.c' object='libxplayer_plparser_la-xplayer-pl-parser-videosite.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_la_CFLAGS) $(CFLAGS) -c -o libtotem_plparser_la-totem-pl-parser-videosite.lo `test -f 'totem-pl-parser-videosite.c' || echo '$(srcdir)/'`totem-pl-parser-videosite.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_la_CFLAGS) $(CFLAGS) -c -o libxplayer_plparser_la-xplayer-pl-parser-videosite.lo `test -f 'xplayer-pl-parser-videosite.c' || echo '$(srcdir)/'`xplayer-pl-parser-videosite.c
 
-libtotem_plparser_la-totem-pl-parser-wm.lo: totem-pl-parser-wm.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_la_CFLAGS) $(CFLAGS) -MT libtotem_plparser_la-totem-pl-parser-wm.lo -MD -MP -MF $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-wm.Tpo -c -o libtotem_plparser_la-totem-pl-parser-wm.lo `test -f 'totem-pl-parser-wm.c' || echo '$(srcdir)/'`totem-pl-parser-wm.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-wm.Tpo $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-wm.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-pl-parser-wm.c' object='libtotem_plparser_la-totem-pl-parser-wm.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_plparser_la-xplayer-pl-parser-wm.lo: xplayer-pl-parser-wm.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_la_CFLAGS) $(CFLAGS) -MT libxplayer_plparser_la-xplayer-pl-parser-wm.lo -MD -MP -MF $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-wm.Tpo -c -o libxplayer_plparser_la-xplayer-pl-parser-wm.lo `test -f 'xplayer-pl-parser-wm.c' || echo '$(srcdir)/'`xplayer-pl-parser-wm.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-wm.Tpo $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-wm.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-pl-parser-wm.c' object='libxplayer_plparser_la-xplayer-pl-parser-wm.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_la_CFLAGS) $(CFLAGS) -c -o libtotem_plparser_la-totem-pl-parser-wm.lo `test -f 'totem-pl-parser-wm.c' || echo '$(srcdir)/'`totem-pl-parser-wm.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_la_CFLAGS) $(CFLAGS) -c -o libxplayer_plparser_la-xplayer-pl-parser-wm.lo `test -f 'xplayer-pl-parser-wm.c' || echo '$(srcdir)/'`xplayer-pl-parser-wm.c
 
-libtotem_plparser_la-totem-pl-parser-xspf.lo: totem-pl-parser-xspf.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_la_CFLAGS) $(CFLAGS) -MT libtotem_plparser_la-totem-pl-parser-xspf.lo -MD -MP -MF $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-xspf.Tpo -c -o libtotem_plparser_la-totem-pl-parser-xspf.lo `test -f 'totem-pl-parser-xspf.c' || echo '$(srcdir)/'`totem-pl-parser-xspf.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-xspf.Tpo $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-xspf.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-pl-parser-xspf.c' object='libtotem_plparser_la-totem-pl-parser-xspf.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_plparser_la-xplayer-pl-parser-xspf.lo: xplayer-pl-parser-xspf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_la_CFLAGS) $(CFLAGS) -MT libxplayer_plparser_la-xplayer-pl-parser-xspf.lo -MD -MP -MF $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-xspf.Tpo -c -o libxplayer_plparser_la-xplayer-pl-parser-xspf.lo `test -f 'xplayer-pl-parser-xspf.c' || echo '$(srcdir)/'`xplayer-pl-parser-xspf.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-xspf.Tpo $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-xspf.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-pl-parser-xspf.c' object='libxplayer_plparser_la-xplayer-pl-parser-xspf.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_la_CFLAGS) $(CFLAGS) -c -o libtotem_plparser_la-totem-pl-parser-xspf.lo `test -f 'totem-pl-parser-xspf.c' || echo '$(srcdir)/'`totem-pl-parser-xspf.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_la_CFLAGS) $(CFLAGS) -c -o libxplayer_plparser_la-xplayer-pl-parser-xspf.lo `test -f 'xplayer-pl-parser-xspf.c' || echo '$(srcdir)/'`xplayer-pl-parser-xspf.c
 
-libtotem_plparser_la-totem-pl-playlist.lo: totem-pl-playlist.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_la_CFLAGS) $(CFLAGS) -MT libtotem_plparser_la-totem-pl-playlist.lo -MD -MP -MF $(DEPDIR)/libtotem_plparser_la-totem-pl-playlist.Tpo -c -o libtotem_plparser_la-totem-pl-playlist.lo `test -f 'totem-pl-playlist.c' || echo '$(srcdir)/'`totem-pl-playlist.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_plparser_la-totem-pl-playlist.Tpo $(DEPDIR)/libtotem_plparser_la-totem-pl-playlist.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-pl-playlist.c' object='libtotem_plparser_la-totem-pl-playlist.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_plparser_la-xplayer-pl-playlist.lo: xplayer-pl-playlist.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_la_CFLAGS) $(CFLAGS) -MT libxplayer_plparser_la-xplayer-pl-playlist.lo -MD -MP -MF $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-playlist.Tpo -c -o libxplayer_plparser_la-xplayer-pl-playlist.lo `test -f 'xplayer-pl-playlist.c' || echo '$(srcdir)/'`xplayer-pl-playlist.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-playlist.Tpo $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-playlist.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-pl-playlist.c' object='libxplayer_plparser_la-xplayer-pl-playlist.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_la_CFLAGS) $(CFLAGS) -c -o libtotem_plparser_la-totem-pl-playlist.lo `test -f 'totem-pl-playlist.c' || echo '$(srcdir)/'`totem-pl-playlist.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_la_CFLAGS) $(CFLAGS) -c -o libxplayer_plparser_la-xplayer-pl-playlist.lo `test -f 'xplayer-pl-playlist.c' || echo '$(srcdir)/'`xplayer-pl-playlist.c
 
-libtotem_plparser_la-xmlparser.lo: xmlparser.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_la_CFLAGS) $(CFLAGS) -MT libtotem_plparser_la-xmlparser.lo -MD -MP -MF $(DEPDIR)/libtotem_plparser_la-xmlparser.Tpo -c -o libtotem_plparser_la-xmlparser.lo `test -f 'xmlparser.c' || echo '$(srcdir)/'`xmlparser.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_plparser_la-xmlparser.Tpo $(DEPDIR)/libtotem_plparser_la-xmlparser.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xmlparser.c' object='libtotem_plparser_la-xmlparser.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_plparser_la-xmlparser.lo: xmlparser.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_la_CFLAGS) $(CFLAGS) -MT libxplayer_plparser_la-xmlparser.lo -MD -MP -MF $(DEPDIR)/libxplayer_plparser_la-xmlparser.Tpo -c -o libxplayer_plparser_la-xmlparser.lo `test -f 'xmlparser.c' || echo '$(srcdir)/'`xmlparser.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_plparser_la-xmlparser.Tpo $(DEPDIR)/libxplayer_plparser_la-xmlparser.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xmlparser.c' object='libxplayer_plparser_la-xmlparser.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_la_CFLAGS) $(CFLAGS) -c -o libtotem_plparser_la-xmlparser.lo `test -f 'xmlparser.c' || echo '$(srcdir)/'`xmlparser.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_la_CFLAGS) $(CFLAGS) -c -o libxplayer_plparser_la-xmlparser.lo `test -f 'xmlparser.c' || echo '$(srcdir)/'`xmlparser.c
 
-libtotem_plparser_la-xmllexer.lo: xmllexer.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_la_CFLAGS) $(CFLAGS) -MT libtotem_plparser_la-xmllexer.lo -MD -MP -MF $(DEPDIR)/libtotem_plparser_la-xmllexer.Tpo -c -o libtotem_plparser_la-xmllexer.lo `test -f 'xmllexer.c' || echo '$(srcdir)/'`xmllexer.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_plparser_la-xmllexer.Tpo $(DEPDIR)/libtotem_plparser_la-xmllexer.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xmllexer.c' object='libtotem_plparser_la-xmllexer.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_plparser_la-xmllexer.lo: xmllexer.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_la_CFLAGS) $(CFLAGS) -MT libxplayer_plparser_la-xmllexer.lo -MD -MP -MF $(DEPDIR)/libxplayer_plparser_la-xmllexer.Tpo -c -o libxplayer_plparser_la-xmllexer.lo `test -f 'xmllexer.c' || echo '$(srcdir)/'`xmllexer.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_plparser_la-xmllexer.Tpo $(DEPDIR)/libxplayer_plparser_la-xmllexer.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xmllexer.c' object='libxplayer_plparser_la-xmllexer.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_la_CFLAGS) $(CFLAGS) -c -o libtotem_plparser_la-xmllexer.lo `test -f 'xmllexer.c' || echo '$(srcdir)/'`xmllexer.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_la_CFLAGS) $(CFLAGS) -c -o libxplayer_plparser_la-xmllexer.lo `test -f 'xmllexer.c' || echo '$(srcdir)/'`xmllexer.c
 
-libtotem_plparser_la-totemplparser-marshal.lo: totemplparser-marshal.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_la_CFLAGS) $(CFLAGS) -MT libtotem_plparser_la-totemplparser-marshal.lo -MD -MP -MF $(DEPDIR)/libtotem_plparser_la-totemplparser-marshal.Tpo -c -o libtotem_plparser_la-totemplparser-marshal.lo `test -f 'totemplparser-marshal.c' || echo '$(srcdir)/'`totemplparser-marshal.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_plparser_la-totemplparser-marshal.Tpo $(DEPDIR)/libtotem_plparser_la-totemplparser-marshal.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totemplparser-marshal.c' object='libtotem_plparser_la-totemplparser-marshal.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_plparser_la-xplayerplparser-marshal.lo: xplayerplparser-marshal.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_la_CFLAGS) $(CFLAGS) -MT libxplayer_plparser_la-xplayerplparser-marshal.lo -MD -MP -MF $(DEPDIR)/libxplayer_plparser_la-xplayerplparser-marshal.Tpo -c -o libxplayer_plparser_la-xplayerplparser-marshal.lo `test -f 'xplayerplparser-marshal.c' || echo '$(srcdir)/'`xplayerplparser-marshal.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_plparser_la-xplayerplparser-marshal.Tpo $(DEPDIR)/libxplayer_plparser_la-xplayerplparser-marshal.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayerplparser-marshal.c' object='libxplayer_plparser_la-xplayerplparser-marshal.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_la_CFLAGS) $(CFLAGS) -c -o libtotem_plparser_la-totemplparser-marshal.lo `test -f 'totemplparser-marshal.c' || echo '$(srcdir)/'`totemplparser-marshal.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_la_CFLAGS) $(CFLAGS) -c -o libxplayer_plparser_la-xplayerplparser-marshal.lo `test -f 'xplayerplparser-marshal.c' || echo '$(srcdir)/'`xplayerplparser-marshal.c
 
-libtotem_plparser_la-totem-pl-parser-builtins.lo: totem-pl-parser-builtins.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_la_CFLAGS) $(CFLAGS) -MT libtotem_plparser_la-totem-pl-parser-builtins.lo -MD -MP -MF $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-builtins.Tpo -c -o libtotem_plparser_la-totem-pl-parser-builtins.lo `test -f 'totem-pl-parser-builtins.c' || echo '$(srcdir)/'`totem-pl-parser-builtins.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-builtins.Tpo $(DEPDIR)/libtotem_plparser_la-totem-pl-parser-builtins.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-pl-parser-builtins.c' object='libtotem_plparser_la-totem-pl-parser-builtins.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_plparser_la-xplayer-pl-parser-builtins.lo: xplayer-pl-parser-builtins.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_la_CFLAGS) $(CFLAGS) -MT libxplayer_plparser_la-xplayer-pl-parser-builtins.lo -MD -MP -MF $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-builtins.Tpo -c -o libxplayer_plparser_la-xplayer-pl-parser-builtins.lo `test -f 'xplayer-pl-parser-builtins.c' || echo '$(srcdir)/'`xplayer-pl-parser-builtins.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-builtins.Tpo $(DEPDIR)/libxplayer_plparser_la-xplayer-pl-parser-builtins.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-pl-parser-builtins.c' object='libxplayer_plparser_la-xplayer-pl-parser-builtins.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_plparser_la_CFLAGS) $(CFLAGS) -c -o libtotem_plparser_la-totem-pl-parser-builtins.lo `test -f 'totem-pl-parser-builtins.c' || echo '$(srcdir)/'`totem-pl-parser-builtins.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_plparser_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_plparser_la_CFLAGS) $(CFLAGS) -c -o libxplayer_plparser_la-xplayer-pl-parser-builtins.lo `test -f 'xplayer-pl-parser-builtins.c' || echo '$(srcdir)/'`xplayer-pl-parser-builtins.c
 
-totem_pl_parser_videosite-videosite-parser.o: videosite-parser.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(totem_pl_parser_videosite_CFLAGS) $(CFLAGS) -MT totem_pl_parser_videosite-videosite-parser.o -MD -MP -MF $(DEPDIR)/totem_pl_parser_videosite-videosite-parser.Tpo -c -o totem_pl_parser_videosite-videosite-parser.o `test -f 'videosite-parser.c' || echo '$(srcdir)/'`videosite-parser.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/totem_pl_parser_videosite-videosite-parser.Tpo $(DEPDIR)/totem_pl_parser_videosite-videosite-parser.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='videosite-parser.c' object='totem_pl_parser_videosite-videosite-parser.o' libtool=no @AMDEPBACKSLASH@
+xplayer_pl_parser_videosite-videosite-parser.o: videosite-parser.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(xplayer_pl_parser_videosite_CFLAGS) $(CFLAGS) -MT xplayer_pl_parser_videosite-videosite-parser.o -MD -MP -MF $(DEPDIR)/xplayer_pl_parser_videosite-videosite-parser.Tpo -c -o xplayer_pl_parser_videosite-videosite-parser.o `test -f 'videosite-parser.c' || echo '$(srcdir)/'`videosite-parser.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/xplayer_pl_parser_videosite-videosite-parser.Tpo $(DEPDIR)/xplayer_pl_parser_videosite-videosite-parser.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='videosite-parser.c' object='xplayer_pl_parser_videosite-videosite-parser.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(totem_pl_parser_videosite_CFLAGS) $(CFLAGS) -c -o totem_pl_parser_videosite-videosite-parser.o `test -f 'videosite-parser.c' || echo '$(srcdir)/'`videosite-parser.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(xplayer_pl_parser_videosite_CFLAGS) $(CFLAGS) -c -o xplayer_pl_parser_videosite-videosite-parser.o `test -f 'videosite-parser.c' || echo '$(srcdir)/'`videosite-parser.c
 
-totem_pl_parser_videosite-videosite-parser.obj: videosite-parser.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(totem_pl_parser_videosite_CFLAGS) $(CFLAGS) -MT totem_pl_parser_videosite-videosite-parser.obj -MD -MP -MF $(DEPDIR)/totem_pl_parser_videosite-videosite-parser.Tpo -c -o totem_pl_parser_videosite-videosite-parser.obj `if test -f 'videosite-parser.c'; then $(CYGPATH_W) 'videosite-parser.c'; else $(CYGPATH_W) '$(srcdir)/videosite-parser.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/totem_pl_parser_videosite-videosite-parser.Tpo $(DEPDIR)/totem_pl_parser_videosite-videosite-parser.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='videosite-parser.c' object='totem_pl_parser_videosite-videosite-parser.obj' libtool=no @AMDEPBACKSLASH@
+xplayer_pl_parser_videosite-videosite-parser.obj: videosite-parser.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(xplayer_pl_parser_videosite_CFLAGS) $(CFLAGS) -MT xplayer_pl_parser_videosite-videosite-parser.obj -MD -MP -MF $(DEPDIR)/xplayer_pl_parser_videosite-videosite-parser.Tpo -c -o xplayer_pl_parser_videosite-videosite-parser.obj `if test -f 'videosite-parser.c'; then $(CYGPATH_W) 'videosite-parser.c'; else $(CYGPATH_W) '$(srcdir)/videosite-parser.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/xplayer_pl_parser_videosite-videosite-parser.Tpo $(DEPDIR)/xplayer_pl_parser_videosite-videosite-parser.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='videosite-parser.c' object='xplayer_pl_parser_videosite-videosite-parser.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(totem_pl_parser_videosite_CFLAGS) $(CFLAGS) -c -o totem_pl_parser_videosite-videosite-parser.obj `if test -f 'videosite-parser.c'; then $(CYGPATH_W) 'videosite-parser.c'; else $(CYGPATH_W) '$(srcdir)/videosite-parser.c'; fi`
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(xplayer_pl_parser_videosite_CFLAGS) $(CFLAGS) -c -o xplayer_pl_parser_videosite-videosite-parser.obj `if test -f 'videosite-parser.c'; then $(CYGPATH_W) 'videosite-parser.c'; else $(CYGPATH_W) '$(srcdir)/videosite-parser.c'; fi`
 
 mostlyclean-libtool:
 	-rm -f *.lo
@@ -1499,23 +1499,23 @@ uninstall-am: uninstall-girDATA uninstall-libLTLIBRARIES \
 	uninstall-plparserincludeHEADERS uninstall-typelibDATA
 
 
-totemplparser-marshal.c: totemplparser-marshal.list
-	 $(AM_V_GEN) $(GLIB_GENMARSHAL) --prefix=_totemplparser_marshal --header --body --internal $< > $@
+xplayerplparser-marshal.c: xplayerplparser-marshal.list
+	 $(AM_V_GEN) $(GLIB_GENMARSHAL) --prefix=_xplayerplparser_marshal --header --body --internal $< > $@
 
-totemplparser-marshal.h: totemplparser-marshal.list
-	$(AM_V_GEN) $(GLIB_GENMARSHAL) --prefix=_totemplparser_marshal --header --internal $< > $@
+xplayerplparser-marshal.h: xplayerplparser-marshal.list
+	$(AM_V_GEN) $(GLIB_GENMARSHAL) --prefix=_xplayerplparser_marshal --header --internal $< > $@
 
-totem-pl-parser-builtins.h: totem-pl-parser.h
+xplayer-pl-parser-builtins.h: xplayer-pl-parser.h
 	$(AM_V_GEN) ($(GLIB_MKENUMS) \
-			--fhead "#ifndef __TOTEM_PL_PARSER_BUILTINS_H__\n#define __TOTEM_PL_PARSER_BUILTINS_H__\n\n#include <glib-object.h>\n\nG_BEGIN_DECLS\n" \
+			--fhead "#ifndef __XPLAYER_PL_PARSER_BUILTINS_H__\n#define __XPLAYER_PL_PARSER_BUILTINS_H__\n\n#include <glib-object.h>\n\nG_BEGIN_DECLS\n" \
 			--fprod "/* enumerations from \"@filename@\" */\n" \
-			--vhead "GType @enum_name@_get_type (void) G_GNUC_CONST;\n#define TOTEM_TYPE_@ENUMSHORT@ (@enum_name@_get_type())\n" \
-			--ftail "G_END_DECLS\n\n#endif /* __TOTEM_PL_PARSER_BUILTINS_H__ */" $^ > xgen-$(@F) \
+			--vhead "GType @enum_name@_get_type (void) G_GNUC_CONST;\n#define XPLAYER_TYPE_@ENUMSHORT@ (@enum_name@_get_type())\n" \
+			--ftail "G_END_DECLS\n\n#endif /* __XPLAYER_PL_PARSER_BUILTINS_H__ */" $^ > xgen-$(@F) \
 		&& mv -f xgen-$(@F) $@)
 
-totem-pl-parser-builtins.c: totem-pl-parser.h totem-pl-parser-builtins.h
+xplayer-pl-parser-builtins.c: xplayer-pl-parser.h xplayer-pl-parser-builtins.h
 	$(AM_V_GEN) ($(GLIB_MKENUMS) \
-			--fhead "#include \"totem-pl-parser.h\"\n#include \"totem-pl-parser-builtins.h\"" \
+			--fhead "#include \"xplayer-pl-parser.h\"\n#include \"xplayer-pl-parser-builtins.h\"" \
 			--fprod "\n/* enumerations from \"@filename@\" */" \
 			--vhead "GType\n@enum_name@_get_type (void)\n{\n  static GType etype = 0;\n  if (etype == 0) {\n    static const G@Type@Value values[] = {" \
 			--vprod "      { @VALUENAME@, \"@VALUENAME@\", \"@valuenick@\" }," \
@@ -1525,7 +1525,7 @@ totem-pl-parser-builtins.c: totem-pl-parser.h totem-pl-parser-builtins.h
 # Introspection
 -include $(INTROSPECTION_MAKEFILE)
 
-@HAVE_INTROSPECTION_TRUE@TotemPlParser-1.0.gir: libtotem-plparser.la Makefile totemplparser-marshal.c totemplparser-marshal.h
+@HAVE_INTROSPECTION_TRUE@XplayerPlParser-1.0.gir: libxplayer-plparser.la Makefile xplayerplparser-marshal.c xplayerplparser-marshal.h
 
 @GNOME_CODE_COVERAGE_RULES@
 

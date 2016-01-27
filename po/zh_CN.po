@@ -1,15 +1,15 @@
-# zh_CN translation of totem.
-# Copyright (C) 2003-2004 Totem Team
-# This file is distributed under the same license as the totem package.
+# zh_CN translation of xplayer.
+# Copyright (C) 2003-2004 Xplayer Team
+# This file is distributed under the same license as the xplayer package.
 # Funda Wang <fundawang@linux.net.cn>, 2003-2004.
 # jan2xue <75jan@163.com>, 2004. 周延潮
 # Liu Songhe <jackliu9999@263.net>, 2004.
 # 甘露(Gan Lu) <rhythm.gan@gmail.com>, 2009
 msgid ""
 msgstr ""
-"Project-Id-Version: Totem\n"
+"Project-Id-Version: Xplayer\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=totem&keywords=I18N+L10N&component=playlist parser\n"
+"product=xplayer&keywords=I18N+L10N&component=playlist parser\n"
 "POT-Creation-Date: 2014-01-21 17:48+0000\n"
 "PO-Revision-Date: 2014-01-24 21:50+0800\n"
 "Last-Translator: 甘露(Gan Lu) <rhythm.gan@gmail.com>\n"
@@ -20,39 +20,39 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../plparse/totem-disc.c:276 ../plparse/totem-disc.c:289
-#: ../plparse/totem-disc.c:533
+#: ../plparse/xplayer-disc.c:276 ../plparse/xplayer-disc.c:289
+#: ../plparse/xplayer-disc.c:533
 #, c-format
 msgid "Failed to mount %s."
 msgstr "挂载 %s 失败。"
 
-#: ../plparse/totem-disc.c:418
+#: ../plparse/xplayer-disc.c:418
 #, c-format
 msgid "No media in drive for device '%s'."
 msgstr "设备“%s”的驱动器中没有介质。"
 
-#: ../plparse/totem-disc.c:476
+#: ../plparse/xplayer-disc.c:476
 #, c-format
 msgid "Please check that a disc is present in the drive."
 msgstr "请检查盘片是否位于驱动器中。"
 
-#: ../plparse/totem-disc.c:947
+#: ../plparse/xplayer-disc.c:947
 msgid "Audio CD"
 msgstr "音频 CD"
 
-#: ../plparse/totem-disc.c:949
+#: ../plparse/xplayer-disc.c:949
 msgid "Video CD"
 msgstr "VCD"
 
-#: ../plparse/totem-disc.c:951
+#: ../plparse/xplayer-disc.c:951
 msgid "DVD"
 msgstr "DVD"
 
-#: ../plparse/totem-disc.c:953
+#: ../plparse/xplayer-disc.c:953
 msgid "Digital Television"
 msgstr "数字电视"
 
-#: ../plparse/totem-disc.c:955
+#: ../plparse/xplayer-disc.c:955
 msgid "Blu-ray"
 msgstr "蓝牙"
 

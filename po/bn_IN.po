@@ -1,5 +1,5 @@
 # translation of bn_IN.po to Bengali INDIA
-# This file is distributed under the same license as the TOTEM package.
+# This file is distributed under the same license as the XPLAYER package.
 #
 # Runa Bhattacharjee<runa77@softhome.net>, 2003.
 # Runa Bhattacharjee <runabh@gmail.com>, 2007.
@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bn_IN\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=totem&amp;component=playlist parser\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&amp;component=playlist parser\n"
 "POT-Creation-Date: 2008-11-27 17:18+0000\n"
 "PO-Revision-Date: 2009-01-20 17:52+0530\n"
 "Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
@@ -21,35 +21,35 @@ msgstr ""
 "\n"
 "\n"
 
-#: ../plparse/totem-disc.c:319 ../plparse/totem-disc.c:460
+#: ../plparse/xplayer-disc.c:319 ../plparse/xplayer-disc.c:460
 #, c-format
 msgid "Failed to mount %s."
 msgstr "%s মাউন্ট করতে ব্যর্থ।"
 
-#: ../plparse/totem-disc.c:349
+#: ../plparse/xplayer-disc.c:349
 #, c-format
 msgid "No media in drive for device '%s'."
 msgstr "ডিভাইস '%s'-র জন্য ড্রাইভের মধ্যে কোনো মিডিয়া উপস্থিত নেই।"
 
-#: ../plparse/totem-disc.c:403
+#: ../plparse/xplayer-disc.c:403
 #, c-format
 msgid "Please check that a disc is present in the drive."
 msgstr "ড্রাইভের মধ্যে ডিস্ক উপস্থিত আছে কিনা পরীক্ষা করুন।"
 
-#: ../plparse/totem-disc.c:843
+#: ../plparse/xplayer-disc.c:843
 msgid "Audio CD"
 msgstr "অডিও CD"
 
 # ঠিক করেন
-#: ../plparse/totem-disc.c:845
+#: ../plparse/xplayer-disc.c:845
 msgid "Video CD"
 msgstr "ভিডিও CD"
 
-#: ../plparse/totem-disc.c:847
+#: ../plparse/xplayer-disc.c:847
 msgid "DVD"
 msgstr "DVD"
 
-#: ../plparse/totem-disc.c:849
+#: ../plparse/xplayer-disc.c:849
 msgid "Digital Television"
 msgstr "ডিজিট্যাল টেলিভিশন"
 

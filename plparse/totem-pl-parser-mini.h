@@ -20,21 +20,21 @@
    Author: Bastien Nocera <hadess@hadess.net>
  */
 
-#ifndef TOTEM_PL_PARSER_MINI_H
-#define TOTEM_PL_PARSER_MINI_H
+#ifndef XPLAYER_PL_PARSER_MINI_H
+#define XPLAYER_PL_PARSER_MINI_H
 
 #include <glib.h>
 
 G_BEGIN_DECLS
 
-gboolean totem_pl_parser_can_parse_from_data	 (const char *data,
+gboolean xplayer_pl_parser_can_parse_from_data	 (const char *data,
  						  gsize len,
 						  gboolean debug);
-gboolean totem_pl_parser_can_parse_from_filename (const char *filename,
+gboolean xplayer_pl_parser_can_parse_from_filename (const char *filename,
 						  gboolean debug);
-gboolean totem_pl_parser_can_parse_from_uri (const char *uri,
+gboolean xplayer_pl_parser_can_parse_from_uri (const char *uri,
 					     gboolean debug);
 
 G_END_DECLS
 
-#endif /* TOTEM_PL_PARSER_MINI_H */
+#endif /* XPLAYER_PL_PARSER_MINI_H */

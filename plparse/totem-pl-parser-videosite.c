@@ -24,18 +24,18 @@
 #include <string.h>
 #include <glib.h>
 
-#include "totem-pl-parser-mini.h"
-#include "totem-pl-parser-videosite.h"
-#include "totem-pl-parser-private.h"
+#include "xplayer-pl-parser-mini.h"
+#include "xplayer-pl-parser-videosite.h"
+#include "xplayer-pl-parser-private.h"
 
 #define BASE 20
 
 gboolean
-totem_pl_parser_is_videosite (const char *uri, gboolean debug)
+xplayer_pl_parser_is_videosite (const char *uri, gboolean debug)
 {
 #ifdef HAVE_QUVI
 	const char *args[] = {
-		LIBEXECDIR "/totem-pl-parser-videosite",
+		LIBEXECDIR "/xplayer-pl-parser-videosite",
 		"--check",
 		"--url",
 		NULL,
@@ -64,18 +64,18 @@ totem_pl_parser_is_videosite (const char *uri, gboolean debug)
 #endif /* HAVE_QUVI */
 }
 
-#ifndef TOTEM_PL_PARSER_MINI
+#ifndef XPLAYER_PL_PARSER_MINI
 
-TotemPlParserResult
-totem_pl_parser_add_videosite (TotemPlParser *parser,
+XplayerPlParserResult
+xplayer_pl_parser_add_videosite (XplayerPlParser *parser,
 			       GFile *file,
 			       GFile *base_file,
-			       TotemPlParseData *parse_data,
+			       XplayerPlParseData *parse_data,
 			       gpointer data)
 {
 #ifdef HAVE_QUVI
 	const char *args[] = {
-		LIBEXECDIR "/totem-pl-parser-videosite",
+		LIBEXECDIR "/xplayer-pl-parser-videosite",
 		"--url",
 		NULL,
 		NULL
@@ -100,17 +100,17 @@ totem_pl_parser_add_videosite (TotemPlParser *parser,
 		      NULL,
 		      NULL,
 		      NULL);
-	if (totem_pl_parser_is_debugging_enabled (parser))
+	if (xplayer_pl_parser_is_debugging_enabled (parser))
 		g_print ("Parsing videosite for URI '%s' returned '%s'\n", uri, out);
 
 	if (out != NULL) {
-		if (g_str_equal (out, "TOTEM_PL_PARSER_RESULT_ERROR"))
-			return TOTEM_PL_PARSER_RESULT_ERROR;
-		if (g_str_equal (out, "TOTEM_PL_PARSER_RESULT_UNHANDLED"))
-			return TOTEM_PL_PARSER_RESULT_UNHANDLED;
+		if (g_str_equal (out, "XPLAYER_PL_PARSER_RESULT_ERROR"))
+			return XPLAYER_PL_PARSER_RESULT_ERROR;
+		if (g_str_equal (out, "XPLAYER_PL_PARSER_RESULT_UNHANDLED"))
+			return XPLAYER_PL_PARSER_RESULT_UNHANDLED;
 	} else {
-		/* totem-pl-parser-videosite failed to launch */
-		return TOTEM_PL_PARSER_RESULT_ERROR;
+		/* xplayer-pl-parser-videosite failed to launch */
+		return XPLAYER_PL_PARSER_RESULT_ERROR;
 	}
 
 	ht = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, g_free);
@@ -120,7 +120,7 @@ totem_pl_parser_add_videosite (TotemPlParser *parser,
 		char **line;
 
 		line = g_strsplit (lines[i], "=", 2);
-		if (g_strcmp0 (line[0], TOTEM_PL_PARSER_FIELD_URI) == 0) {
+		if (g_strcmp0 (line[0], XPLAYER_PL_PARSER_FIELD_URI) == 0) {
 			if (new_uri == NULL)
 				new_uri = g_strdup (line[1]);
 		} else {
@@ -130,14 +130,14 @@ totem_pl_parser_add_videosite (TotemPlParser *parser,
 	}
 	g_strfreev (lines);
 
-	totem_pl_parser_add_hash_table (parser, ht, new_uri, FALSE);
+	xplayer_pl_parser_add_hash_table (parser, ht, new_uri, FALSE);
 	g_free (new_uri);
 
-	return TOTEM_PL_PARSER_RESULT_SUCCESS;
+	return XPLAYER_PL_PARSER_RESULT_SUCCESS;
 #else
-	return TOTEM_PL_PARSER_RESULT_UNHANDLED;
+	return XPLAYER_PL_PARSER_RESULT_UNHANDLED;
 #endif /* !HAVE_QUVI */
 }
 
-#endif /* !TOTEM_PL_PARSER_MINI */
+#endif /* !XPLAYER_PL_PARSER_MINI */
 

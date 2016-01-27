@@ -1,5 +1,5 @@
 # translation of nn.po to Norwegian Nynorsk
-# This file is distributed under the same license as the totem-pl-parser package.
+# This file is distributed under the same license as the xplayer-pl-parser package.
 # Copyright (C) 2006, 2008, The free software foundation
 #
 # Åsmund Skjæveland <aasmunds@fys.uio.no>, 2006.
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nn\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug."
-"cgi?product=totem&component=playlist parser\n"
+"cgi?product=xplayer&component=playlist parser\n"
 "POT-Creation-Date: 2009-04-17 18:07+0000\n"
 "PO-Revision-Date: 2009-12-19 01:56+0100\n"
 "Last-Translator: Eirik U. Birkeland <eirbir@gmail.com>\n"
@@ -19,34 +19,34 @@ msgstr ""
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 1.0\n"
 
-#: ../plparse/totem-disc.c:357 ../plparse/totem-disc.c:499, c-format
+#: ../plparse/xplayer-disc.c:357 ../plparse/xplayer-disc.c:499, c-format
 #| msgid "Failed to mount %s"
 msgid "Failed to mount %s."
 msgstr "Klarte ikkje montera %s."
 
-#: ../plparse/totem-disc.c:388
+#: ../plparse/xplayer-disc.c:388
 #, c-format
 msgid "No media in drive for device '%s'."
 msgstr "Ingen medium i stasjonen for eininga «%s»."
 
-#: ../plparse/totem-disc.c:442
+#: ../plparse/xplayer-disc.c:442
 #, c-format
 msgid "Please check that a disc is present in the drive."
 msgstr "Sjå til at det står ei plate i stasjonen."
 
-#: ../plparse/totem-disc.c:881
+#: ../plparse/xplayer-disc.c:881
 msgid "Audio CD"
 msgstr "Lyd-CD"
 
-#: ../plparse/totem-disc.c:883
+#: ../plparse/xplayer-disc.c:883
 msgid "Video CD"
 msgstr "Video-CD"
 
-#: ../plparse/totem-disc.c:885
+#: ../plparse/xplayer-disc.c:885
 msgid "DVD"
 msgstr "DVD"
 
-#: ../plparse/totem-disc.c:887
+#: ../plparse/xplayer-disc.c:887
 msgid "Digital Television"
 msgstr "Digital-TV"
 
@@ -473,11 +473,11 @@ msgstr "Digital-TV"
 #~ msgid "Time:"
 #~ msgstr "Tid:"
 
-#~ msgid "Totem Movie Player"
-#~ msgstr "Totem filmspelar"
+#~ msgid "Xplayer Movie Player"
+#~ msgstr "Xplayer filmspelar"
 
-#~ msgid "Totem Preferences"
-#~ msgstr "Brukarval for Totem"
+#~ msgid "Xplayer Preferences"
+#~ msgstr "Brukarval for Xplayer"
 
 #~ msgid "Tv-out in fullscreen by Nvidia (NTSC)"
 #~ msgstr "TV-ut i fullskjerm med Nvidia (NTSC)"
@@ -749,8 +749,8 @@ msgstr "Digital-TV"
 #~ msgid "Couldn't load the '%s' interface."
 #~ msgstr "Klarte ikkje å lasta grensesnittet «%s»."
 
-#~ msgid "Make sure that Totem is properly installed."
-#~ msgstr "Kontroller at Totem er installert ordentleg."
+#~ msgid "Make sure that Xplayer is properly installed."
+#~ msgstr "Kontroller at Xplayer er installert ordentleg."
 
 #~ msgid "None"
 #~ msgstr "Ingen"
@@ -822,31 +822,31 @@ msgstr "Digital-TV"
 #~ msgstr "Bruk visuelle effektar?"
 
 #~ msgid ""
-#~ "It seems you are running Totem remotely.\n"
+#~ "It seems you are running Xplayer remotely.\n"
 #~ "Are you sure you want to enable the visual effects?"
 #~ msgstr ""
-#~ "Det ser ut til at du køyrer Totem over nettverk.\n"
+#~ "Det ser ut til at du køyrer Xplayer over nettverk.\n"
 #~ "Vil du bruka visuelle effektar?"
 
 #~ msgid ""
 #~ "The change of this setting will only take effect for the next movie, or "
-#~ "when Totem is restarted."
+#~ "when Xplayer is restarted."
 #~ msgstr ""
-#~ "Denne endringa vil verta aktiv når neste film startar eller når Totem "
+#~ "Denne endringa vil verta aktiv når neste film startar eller når Xplayer "
 #~ "vert starta på nytt."
 
 #~ msgid ""
 #~ "Switching on or off this type of TV-Out requires a restart to take effect."
-#~ msgstr "Å slå av eller på denne typen TV-ut krev ein omstart av Totem."
+#~ msgstr "Å slå av eller på denne typen TV-ut krev ein omstart av Xplayer."
 
 #~ msgid ""
 #~ "Changing the visuals effect type will require a restart to take effect."
-#~ msgstr "Byte av visuell effekt krev ein omstart av Totem."
+#~ msgstr "Byte av visuell effekt krev ein omstart av Xplayer."
 
 #~ msgid ""
-#~ "The change of audio output type will only take effect when Totem is "
+#~ "The change of audio output type will only take effect when Xplayer is "
 #~ "restarted."
-#~ msgstr "Endring av type lyd ut krev ein omstart av Totem."
+#~ msgstr "Endring av type lyd ut krev ein omstart av Xplayer."
 
 #~ msgid "Select Subtitle Font"
 #~ msgstr "Vel skrifttype til teksting"
@@ -917,31 +917,31 @@ msgstr "Digital-TV"
 #~ msgid "Paused"
 #~ msgstr "Pausa"
 
-#~ msgid "Totem could not eject the optical media."
-#~ msgstr "Totem klarte ikkje å løysa ut optisk media."
+#~ msgid "Xplayer could not eject the optical media."
+#~ msgstr "Xplayer klarte ikkje å løysa ut optisk media."
 
-#~ msgid "Totem could not play '%s'."
-#~ msgstr "Totem klarte ikkje å spela «%s»."
+#~ msgid "Xplayer could not play '%s'."
+#~ msgstr "Xplayer klarte ikkje å spela «%s»."
 
 #~ msgid ""
-#~ "Totem cannot play this type of media (%s) because you do not have the "
+#~ "Xplayer cannot play this type of media (%s) because you do not have the "
 #~ "appropriate plugins to handle it."
 #~ msgstr ""
-#~ "Totem kan ikkje spela denne typen media (%s) fordi du ikkje har tillegga "
+#~ "Xplayer kan ikkje spela denne typen media (%s) fordi du ikkje har tillegga "
 #~ "som trengst for å handsama det."
 
 #~ msgid ""
-#~ "Please install the necessary plugins and restart Totem to be able to play "
+#~ "Please install the necessary plugins and restart Xplayer to be able to play "
 #~ "this media."
 #~ msgstr ""
-#~ "Installer dei naudsynte tillegga og start Totem på nytt for å spela av "
+#~ "Installer dei naudsynte tillegga og start Xplayer på nytt for å spela av "
 #~ "dette mediet."
 
 #~ msgid ""
-#~ "Totem could not play this media (%s) although a plugin is present to "
+#~ "Xplayer could not play this media (%s) although a plugin is present to "
 #~ "handle it."
 #~ msgstr ""
-#~ "Totem kunne ikkje spela av dette mediet (%s) sjølv om eit tillegg til det "
+#~ "Xplayer kunne ikkje spela av dette mediet (%s) sjølv om eit tillegg til det "
 #~ "finst."
 
 #~ msgid ""
@@ -951,8 +951,8 @@ msgstr "Digital-TV"
 #~ "Du bør kontroller at det står ei plate i stasjonen og at han er stilt inn "
 #~ "rett."
 
-#~ msgid "Totem was not able to play this disc."
-#~ msgstr "Totem klarte ikkje å spela denne plata."
+#~ msgid "Xplayer was not able to play this disc."
+#~ msgstr "Xplayer klarte ikkje å spela denne plata."
 
 #~ msgid "No reason."
 #~ msgstr "Ingen grunn."
@@ -969,14 +969,14 @@ msgstr "Digital-TV"
 #~ msgid "Open Location..."
 #~ msgstr "Opna adresse ..."
 
-#~ msgid "Totem could not display the help contents."
-#~ msgstr "Totem klarte ikkje å visa hjelpinnhaldet."
+#~ msgid "Xplayer could not display the help contents."
+#~ msgstr "Xplayer klarte ikkje å visa hjelpinnhaldet."
 
 #~ msgid "Movie Player using %s"
 #~ msgstr "Filmavspelar brukar %s"
 
-#~ msgid "Totem"
-#~ msgstr "Totem"
+#~ msgid "Xplayer"
+#~ msgstr "Xplayer"
 
 #~ msgid "Copyright © 2002-2005 Bastien Nocera"
 #~ msgstr "Copyright © 2002-2005 Bastien Nocera"
@@ -987,32 +987,32 @@ msgstr "Digital-TV"
 #~ "\n"
 #~ "Send feilmeldingar og kommentarar til <i18n-nn@lister.ping.uio.no>"
 
-#~ msgid "Totem could not get a screenshot of that film."
-#~ msgstr "Totem klarte ikkje å ta skjermbilete av den filmen."
+#~ msgid "Xplayer could not get a screenshot of that film."
+#~ msgstr "Xplayer klarte ikkje å ta skjermbilete av den filmen."
 
 #~ msgid "This is not supposed to happen; please file a bug report."
 #~ msgstr "Det burde ikkje skje. Ver snill og send ei feilmelding."
 
-#~ msgid "Totem couldn't show the movie properties window."
-#~ msgstr "Totem klarte ikkje å visa vindauget med filmeigenskapar."
+#~ msgid "Xplayer couldn't show the movie properties window."
+#~ msgstr "Xplayer klarte ikkje å visa vindauget med filmeigenskapar."
 
-#~ msgid "Make sure that Totem is correctly installed."
-#~ msgstr "Kontroller at totem er ordentleg installert."
+#~ msgid "Make sure that Xplayer is correctly installed."
+#~ msgstr "Kontroller at xplayer er ordentleg installert."
 
-#~ msgid "Totem could not seek in '%s'."
-#~ msgstr "Totem klarte ikkje å søka i «%s»."
+#~ msgid "Xplayer could not seek in '%s'."
+#~ msgstr "Xplayer klarte ikkje å søka i «%s»."
 
-#~ msgid "Totem could not startup."
-#~ msgstr "Totem klarte ikkje å starta."
+#~ msgid "Xplayer could not startup."
+#~ msgstr "Xplayer klarte ikkje å starta."
 
 #~ msgid "Could not initialize the thread-safe libraries."
 #~ msgstr "Klarte ikkje å starta trådsikre bibliotek."
 
-#~ msgid "Verify your system installation. Totem will now exit."
-#~ msgstr "Kontroller systeminstallasjonen din. Totem vil avslutta no."
+#~ msgid "Verify your system installation. Xplayer will now exit."
+#~ msgstr "Kontroller systeminstallasjonen din. Xplayer vil avslutta no."
 
-#~ msgid "Totem could not initialize the configuration engine."
-#~ msgstr "Totem klarte ikkje å starta oppsettsmotoren."
+#~ msgid "Xplayer could not initialize the configuration engine."
+#~ msgstr "Xplayer klarte ikkje å starta oppsettsmotoren."
 
 #~ msgid "Make sure that GNOME is properly installed."
 #~ msgstr "Kontroller at GNOME er ordentleg installert."
@@ -1079,8 +1079,8 @@ msgstr "Digital-TV"
 #~ "Klarte ikkje å lasta hovudgrensesnittet (vanity.glade).\n"
 #~ "Kontroller at Vanity er ordentleg installert."
 
-#~ msgid "Totem Video Window"
-#~ msgstr "Totem videovindauge"
+#~ msgid "Xplayer Video Window"
+#~ msgstr "Xplayer videovindauge"
 
 #~ msgid ""
 #~ "The requested audio output was not found. Please select another audio "

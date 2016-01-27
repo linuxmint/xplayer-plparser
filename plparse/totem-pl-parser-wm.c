@@ -25,24 +25,24 @@
 #include <string.h>
 #include <glib.h>
 
-#ifndef TOTEM_PL_PARSER_MINI
+#ifndef XPLAYER_PL_PARSER_MINI
 #include "xmlparser.h"
 
-#include "totem-pl-parser.h"
-#include "totem-disc.h"
-#endif /* !TOTEM_PL_PARSER_MINI */
+#include "xplayer-pl-parser.h"
+#include "xplayer-disc.h"
+#endif /* !XPLAYER_PL_PARSER_MINI */
 
-#include "totem-pl-parser-mini.h"
-#include "totem-pl-parser-wm.h"
-#include "totem-pl-parser-lines.h"
-#include "totem-pl-parser-private.h"
+#include "xplayer-pl-parser-mini.h"
+#include "xplayer-pl-parser-wm.h"
+#include "xplayer-pl-parser-lines.h"
+#include "xplayer-pl-parser-private.h"
 
 #define ASX_NEEDLE "<ASX"
 #define ASX_NEEDLE2 "<asx"
 #define ASX_NEEDLE3 "<Asx"
 
 const char *
-totem_pl_parser_is_asx (const char *data, gsize len)
+xplayer_pl_parser_is_asx (const char *data, gsize len)
 {
 	if (len == 0)
 		return NULL;
@@ -61,7 +61,7 @@ totem_pl_parser_is_asx (const char *data, gsize len)
 }
 
 const char *
-totem_pl_parser_is_asf (const char *data, gsize len)
+xplayer_pl_parser_is_asf (const char *data, gsize len)
 {
 	if (len == 0)
 		return NULL;
@@ -72,39 +72,39 @@ totem_pl_parser_is_asf (const char *data, gsize len)
 		return ASF_REF_MIME_TYPE;
 	}
 
-	return totem_pl_parser_is_asx (data, len);
+	return xplayer_pl_parser_is_asx (data, len);
 }
 
-#ifndef TOTEM_PL_PARSER_MINI
+#ifndef XPLAYER_PL_PARSER_MINI
 
-static TotemPlParserResult
-totem_pl_parser_add_asf_reference_parser (TotemPlParser *parser,
+static XplayerPlParserResult
+xplayer_pl_parser_add_asf_reference_parser (XplayerPlParser *parser,
 					  GFile *file,
 					  GFile *base_file,
-					  TotemPlParseData *parse_data,
+					  XplayerPlParseData *parse_data,
 					  gpointer data)
 {
 	char *contents, **lines, *ref;
 	gsize size;
 
 	if (g_file_load_contents (file, NULL, &contents, &size, NULL, NULL) == FALSE)
-		return TOTEM_PL_PARSER_RESULT_ERROR;
+		return XPLAYER_PL_PARSER_RESULT_ERROR;
 
 	lines = g_strsplit_set (contents, "\n\r", 0);
 	g_free (contents);
 
 	/* Try to get Ref1 first */
-	ref = totem_pl_parser_read_ini_line_string (lines, "Ref1");
+	ref = xplayer_pl_parser_read_ini_line_string (lines, "Ref1");
 	if (ref == NULL) {
 		g_strfreev (lines);
-		return totem_pl_parser_add_asx (parser, file, base_file, parse_data, data);
+		return xplayer_pl_parser_add_asx (parser, file, base_file, parse_data, data);
 	}
 
 	/* change http to mmsh, thanks Microsoft */
 	if (g_str_has_prefix (ref, "http") != FALSE)
 		memcpy(ref, "mmsh", 4);
 
-	totem_pl_parser_add_one_uri (parser, ref, NULL);
+	xplayer_pl_parser_add_one_uri (parser, ref, NULL);
 	g_free (ref);
 
 	/* Don't try to get Ref2, as it's only ever
@@ -112,42 +112,42 @@ totem_pl_parser_add_asf_reference_parser (TotemPlParser *parser,
 
 	g_strfreev (lines);
 
-	return TOTEM_PL_PARSER_RESULT_SUCCESS;
+	return XPLAYER_PL_PARSER_RESULT_SUCCESS;
 }
 
-static TotemPlParserResult
-totem_pl_parser_add_asf_parser (TotemPlParser *parser,
+static XplayerPlParserResult
+xplayer_pl_parser_add_asf_parser (XplayerPlParser *parser,
 				GFile *file,
 				GFile *base_file,
-				TotemPlParseData *parse_data,
+				XplayerPlParseData *parse_data,
 				gpointer data)
 {
-	TotemPlParserResult retval = TOTEM_PL_PARSER_RESULT_UNHANDLED;
+	XplayerPlParserResult retval = XPLAYER_PL_PARSER_RESULT_UNHANDLED;
 	char *contents, *ref;
 	gsize size;
 
 	/* NSC files are handled directly by GStreamer */
 	if (g_str_has_prefix (data, "[Address]") != FALSE)
-		return TOTEM_PL_PARSER_RESULT_UNHANDLED;
+		return XPLAYER_PL_PARSER_RESULT_UNHANDLED;
 
 	if (g_str_has_prefix (data, "ASF ") == FALSE) {
-		return totem_pl_parser_add_asf_reference_parser (parser, file, base_file, parse_data, data);
+		return xplayer_pl_parser_add_asf_reference_parser (parser, file, base_file, parse_data, data);
 	}
 
 	if (g_file_load_contents (file, NULL, &contents, &size, NULL, NULL) == FALSE)
-		return TOTEM_PL_PARSER_RESULT_ERROR;
+		return XPLAYER_PL_PARSER_RESULT_ERROR;
 
 	if (size <= 4) {
 		g_free (contents);
-		return TOTEM_PL_PARSER_RESULT_ERROR;
+		return XPLAYER_PL_PARSER_RESULT_ERROR;
 	}
 
 	/* Skip 'ASF ' */
 	ref = contents + 4;
 	if (g_str_has_prefix (ref, "http") != FALSE) {
 		memcpy(ref, "mmsh", 4);
-		totem_pl_parser_add_one_uri (parser, ref, NULL);
-		retval = TOTEM_PL_PARSER_RESULT_SUCCESS;
+		xplayer_pl_parser_add_one_uri (parser, ref, NULL);
+		retval = XPLAYER_PL_PARSER_RESULT_SUCCESS;
 	}
 
 	g_free (contents);
@@ -156,10 +156,10 @@ totem_pl_parser_add_asf_parser (TotemPlParser *parser,
 }
 
 static gboolean
-parse_asx_entry (TotemPlParser *parser, GFile *base_file, xml_node_t *parent, TotemPlParseData *parse_data)
+parse_asx_entry (XplayerPlParser *parser, GFile *base_file, xml_node_t *parent, XplayerPlParseData *parse_data)
 {
 	xml_node_t *node;
-	TotemPlParserResult retval = TOTEM_PL_PARSER_RESULT_SUCCESS;
+	XplayerPlParserResult retval = XPLAYER_PL_PARSER_RESULT_SUCCESS;
 	GFile *resolved;
 	char *resolved_uri;
 	const char *uri;
@@ -244,32 +244,32 @@ parse_asx_entry (TotemPlParser *parser, GFile *base_file, xml_node_t *parent, To
 				continue;
 
 			/* We ignore items that are the buffering images */
-			retval = TOTEM_PL_PARSER_RESULT_IGNORED;
+			retval = XPLAYER_PL_PARSER_RESULT_IGNORED;
 			goto bail;
 		}
 	}
 
 	if (uri == NULL)
-		return TOTEM_PL_PARSER_RESULT_ERROR;
+		return XPLAYER_PL_PARSER_RESULT_ERROR;
 
-	resolved_uri = totem_pl_parser_resolve_uri (base_file, uri);
+	resolved_uri = xplayer_pl_parser_resolve_uri (base_file, uri);
 	resolved = g_file_new_for_uri (resolved_uri);
 	g_free (resolved_uri);
 
 	/* .asx files can contain references to other .asx files */
-	retval = totem_pl_parser_parse_internal (parser, resolved, NULL, parse_data);
-	if (retval != TOTEM_PL_PARSER_RESULT_SUCCESS) {
-		totem_pl_parser_add_uri (parser,
-					 TOTEM_PL_PARSER_FIELD_FILE, resolved,
-					 TOTEM_PL_PARSER_FIELD_TITLE, title,
-					 TOTEM_PL_PARSER_FIELD_ABSTRACT, abstract,
-					 TOTEM_PL_PARSER_FIELD_COPYRIGHT, copyright,
-					 TOTEM_PL_PARSER_FIELD_AUTHOR, author,
-					 TOTEM_PL_PARSER_FIELD_STARTTIME, starttime,
-					 TOTEM_PL_PARSER_FIELD_DURATION, duration,
-					 TOTEM_PL_PARSER_FIELD_MOREINFO, moreinfo,
+	retval = xplayer_pl_parser_parse_internal (parser, resolved, NULL, parse_data);
+	if (retval != XPLAYER_PL_PARSER_RESULT_SUCCESS) {
+		xplayer_pl_parser_add_uri (parser,
+					 XPLAYER_PL_PARSER_FIELD_FILE, resolved,
+					 XPLAYER_PL_PARSER_FIELD_TITLE, title,
+					 XPLAYER_PL_PARSER_FIELD_ABSTRACT, abstract,
+					 XPLAYER_PL_PARSER_FIELD_COPYRIGHT, copyright,
+					 XPLAYER_PL_PARSER_FIELD_AUTHOR, author,
+					 XPLAYER_PL_PARSER_FIELD_STARTTIME, starttime,
+					 XPLAYER_PL_PARSER_FIELD_DURATION, duration,
+					 XPLAYER_PL_PARSER_FIELD_MOREINFO, moreinfo,
 					 NULL);
-		retval = TOTEM_PL_PARSER_RESULT_SUCCESS;
+		retval = XPLAYER_PL_PARSER_RESULT_SUCCESS;
 	}
 	g_object_unref (resolved);
 
@@ -278,9 +278,9 @@ bail:
 }
 
 static gboolean
-parse_asx_entryref (TotemPlParser *parser, GFile *base_file, xml_node_t *node, TotemPlParseData *parse_data)
+parse_asx_entryref (XplayerPlParser *parser, GFile *base_file, xml_node_t *node, XplayerPlParseData *parse_data)
 {
-	TotemPlParserResult retval = TOTEM_PL_PARSER_RESULT_SUCCESS;
+	XplayerPlParserResult retval = XPLAYER_PL_PARSER_RESULT_SUCCESS;
 	const char *uri;
 	GFile *resolved;
 	char *resolved_uri;
@@ -288,19 +288,19 @@ parse_asx_entryref (TotemPlParser *parser, GFile *base_file, xml_node_t *node, T
 	uri = xml_parser_get_property (node, "href");
 
 	if (uri == NULL)
-		return TOTEM_PL_PARSER_RESULT_ERROR;
+		return XPLAYER_PL_PARSER_RESULT_ERROR;
 
-	resolved_uri = totem_pl_parser_resolve_uri (base_file, uri);
+	resolved_uri = xplayer_pl_parser_resolve_uri (base_file, uri);
 	resolved = g_file_new_for_uri (resolved_uri);
 	g_free (resolved_uri);
 
 	/* .asx files can contain references to other .asx files */
-	retval = totem_pl_parser_parse_internal (parser, resolved, NULL, parse_data);
-	if (retval != TOTEM_PL_PARSER_RESULT_SUCCESS) {
-		totem_pl_parser_add_uri (parser,
-					 TOTEM_PL_PARSER_FIELD_FILE, resolved,
+	retval = xplayer_pl_parser_parse_internal (parser, resolved, NULL, parse_data);
+	if (retval != XPLAYER_PL_PARSER_RESULT_SUCCESS) {
+		xplayer_pl_parser_add_uri (parser,
+					 XPLAYER_PL_PARSER_FIELD_FILE, resolved,
 					 NULL);
-		retval = TOTEM_PL_PARSER_RESULT_SUCCESS;
+		retval = XPLAYER_PL_PARSER_RESULT_SUCCESS;
 	}
 	g_object_unref (resolved);
 
@@ -308,12 +308,12 @@ parse_asx_entryref (TotemPlParser *parser, GFile *base_file, xml_node_t *node, T
 }
 
 static gboolean
-parse_asx_entries (TotemPlParser *parser, const char *uri, GFile *base_file, xml_node_t *parent, TotemPlParseData *parse_data)
+parse_asx_entries (XplayerPlParser *parser, const char *uri, GFile *base_file, xml_node_t *parent, XplayerPlParseData *parse_data)
 {
 	char *title = NULL;
 	GFile *new_base;
 	xml_node_t *node;
-	TotemPlParserResult retval = TOTEM_PL_PARSER_RESULT_ERROR;
+	XplayerPlParserResult retval = XPLAYER_PL_PARSER_RESULT_ERROR;
 
 	new_base = NULL;
 
@@ -324,10 +324,10 @@ parse_asx_entries (TotemPlParser *parser, const char *uri, GFile *base_file, xml
 		if (g_ascii_strcasecmp (node->name, "title") == 0) {
 			g_free (title);
 			title = g_strdup (node->data);
-			totem_pl_parser_add_uri (parser,
-						 TOTEM_PL_PARSER_FIELD_IS_PLAYLIST, TRUE,
-						 TOTEM_PL_PARSER_FIELD_URI, uri,
-						 TOTEM_PL_PARSER_FIELD_TITLE, title,
+			xplayer_pl_parser_add_uri (parser,
+						 XPLAYER_PL_PARSER_FIELD_IS_PLAYLIST, TRUE,
+						 XPLAYER_PL_PARSER_FIELD_URI, uri,
+						 XPLAYER_PL_PARSER_FIELD_TITLE, title,
 						 NULL);
 		}
 		if (g_ascii_strcasecmp (node->name, "base") == 0) {
@@ -349,52 +349,52 @@ parse_asx_entries (TotemPlParser *parser, const char *uri, GFile *base_file, xml
 		if (g_ascii_strcasecmp (node->name, "entry") == 0) {
 			/* Whee! found an entry here, find the REF and TITLE */
 			if (parse_asx_entry (parser, new_base ? new_base : base_file, node, parse_data) != FALSE)
-				retval = TOTEM_PL_PARSER_RESULT_SUCCESS;
+				retval = XPLAYER_PL_PARSER_RESULT_SUCCESS;
 		}
 		if (g_ascii_strcasecmp (node->name, "entryref") == 0) {
 			/* Found an entryref, extract the REF attribute */
 			if (parse_asx_entryref (parser, new_base ? new_base : base_file, node, parse_data) != FALSE)
-				retval = TOTEM_PL_PARSER_RESULT_SUCCESS;
+				retval = XPLAYER_PL_PARSER_RESULT_SUCCESS;
 		}
 		if (g_ascii_strcasecmp (node->name, "repeat") == 0) {
 			/* Repeat at the top-level */
 			if (parse_asx_entries (parser, uri, new_base ? new_base : base_file, node, parse_data) != FALSE)
-				retval = TOTEM_PL_PARSER_RESULT_SUCCESS;
+				retval = XPLAYER_PL_PARSER_RESULT_SUCCESS;
 		}
 	}
 
 	if (new_base != NULL)
 		g_object_unref (new_base);
 	if (title != NULL)
-		totem_pl_parser_playlist_end (parser, uri);
+		xplayer_pl_parser_playlist_end (parser, uri);
 	g_free (title);
 
 	return retval;
 }
 
-TotemPlParserResult
-totem_pl_parser_add_asx (TotemPlParser *parser,
+XplayerPlParserResult
+xplayer_pl_parser_add_asx (XplayerPlParser *parser,
 			 GFile *file,
 			 GFile *base_file,
-			 TotemPlParseData *parse_data,
+			 XplayerPlParseData *parse_data,
 			 gpointer data)
 {
 	xml_node_t* doc;
 	char *contents, *uri;
 	gsize size;
-	TotemPlParserResult retval = TOTEM_PL_PARSER_RESULT_UNHANDLED;
+	XplayerPlParserResult retval = XPLAYER_PL_PARSER_RESULT_UNHANDLED;
 
-	if (data != NULL && totem_pl_parser_is_uri_list (data, strlen (data)) != FALSE) {
-		return totem_pl_parser_add_ram (parser, file, parse_data, data);
+	if (data != NULL && xplayer_pl_parser_is_uri_list (data, strlen (data)) != FALSE) {
+		return xplayer_pl_parser_add_ram (parser, file, parse_data, data);
 	}
 
 	if (g_file_load_contents (file, NULL, &contents, &size, NULL, NULL) == FALSE)
-		return TOTEM_PL_PARSER_RESULT_ERROR;
+		return XPLAYER_PL_PARSER_RESULT_ERROR;
 
-	doc = totem_pl_parser_parse_xml_relaxed (contents, size);
+	doc = xplayer_pl_parser_parse_xml_relaxed (contents, size);
 	if (doc == NULL) {
 		g_free (contents);
-		return TOTEM_PL_PARSER_RESULT_ERROR;
+		return XPLAYER_PL_PARSER_RESULT_ERROR;
 	}
 
 	/* If the document has no name */
@@ -402,13 +402,13 @@ totem_pl_parser_add_asx (TotemPlParser *parser,
 	    || g_ascii_strcasecmp (doc->name , "asx") != 0) {
 		g_free (contents);
 		xml_parser_free_tree (doc);
-		return TOTEM_PL_PARSER_RESULT_ERROR;
+		return XPLAYER_PL_PARSER_RESULT_ERROR;
 	}
 
 	uri = g_file_get_uri (file);
 
 	if (parse_asx_entries (parser, uri, base_file, doc, parse_data) != FALSE)
-		retval = TOTEM_PL_PARSER_RESULT_SUCCESS;
+		retval = XPLAYER_PL_PARSER_RESULT_SUCCESS;
 
 	g_free (uri);
 	g_free (contents);
@@ -417,25 +417,25 @@ totem_pl_parser_add_asx (TotemPlParser *parser,
 	return retval;
 }
 
-TotemPlParserResult
-totem_pl_parser_add_asf (TotemPlParser *parser,
+XplayerPlParserResult
+xplayer_pl_parser_add_asf (XplayerPlParser *parser,
 			 GFile *file,
 			 GFile *base_file,
-			 TotemPlParseData *parse_data,
+			 XplayerPlParseData *parse_data,
 			 gpointer data)
 {
 	if (data == NULL) {
-		totem_pl_parser_add_one_file (parser, file, NULL);
-		return TOTEM_PL_PARSER_RESULT_SUCCESS;
+		xplayer_pl_parser_add_one_file (parser, file, NULL);
+		return XPLAYER_PL_PARSER_RESULT_SUCCESS;
 	}
 
-	if (totem_pl_parser_is_asf (data, strlen (data)) == FALSE) {
-		totem_pl_parser_add_one_file (parser, file, NULL);
-		return TOTEM_PL_PARSER_RESULT_SUCCESS;
+	if (xplayer_pl_parser_is_asf (data, strlen (data)) == FALSE) {
+		xplayer_pl_parser_add_one_file (parser, file, NULL);
+		return XPLAYER_PL_PARSER_RESULT_SUCCESS;
 	}
 
-	return totem_pl_parser_add_asf_parser (parser, file, base_file, parse_data, data);
+	return xplayer_pl_parser_add_asf_parser (parser, file, base_file, parse_data, data);
 }
 
-#endif /* !TOTEM_PL_PARSER_MINI */
+#endif /* !XPLAYER_PL_PARSER_MINI */
 
