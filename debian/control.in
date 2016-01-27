@@ -1,9 +1,7 @@
 Source: xplayer-pl-parser
 Section: libs
 Priority: optional
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-XSBC-Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Uploaders: @GNOME_TEAM@
+Maintainer: Linux Mint <root@linuxmint.com>
 Build-Depends: debhelper (>= 8),
                autotools-dev,
                cdbs (>= 0.4.90),
@@ -20,8 +18,6 @@ Build-Depends: debhelper (>= 8),
                libgirepository1.0-dev (>= 0.10.7-1~),
                gobject-introspection (>= 0.9.12-4~)
 Standards-Version: 3.9.4
-Vcs-Svn: svn://anonscm.debian.org/pkg-gnome/desktop/unstable/xplayer-pl-parser
-Vcs-Browser: http://anonscm.debian.org/viewvc/pkg-gnome/desktop/unstable/xplayer-pl-parser
 
 Package: libxplayer-plparser-dev
 Section: libdevel

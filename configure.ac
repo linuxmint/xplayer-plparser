@@ -1,12 +1,12 @@
 AC_PREREQ(2.62)
 
-m4_define(xplayer_version_major, 3)
-m4_define(xplayer_version_minor, 10)
-m4_define(xplayer_version_micro, 2)
+m4_define(xplayer_version_major, 1)
+m4_define(xplayer_version_minor, 0)
+m4_define(xplayer_version_micro, 0)
 
 AC_INIT([xplayer-pl-parser],
         [xplayer_version_major.xplayer_version_minor.xplayer_version_micro],
-        [http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer-pl-parser&component=General])
+        [http://github.com/linuxmint/xplayer-plparser])
 
 AC_CONFIG_SRCDIR([plparse/xplayer-pl-parser.c])
 AC_CONFIG_HEADERS([config.h])
