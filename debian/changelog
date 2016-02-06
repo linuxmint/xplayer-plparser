@@ -1,3 +1,9 @@
+xplayer-pl-parser (1.0.1) sarah; urgency=medium
+
+  * 1.0.1
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sat, 06 Feb 2016 16:36:18 +0000
+
 xplayer-pl-parser (1.0.0) sarah; urgency=medium
 
   * Initial version
