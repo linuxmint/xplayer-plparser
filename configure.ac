@@ -2,7 +2,7 @@ AC_PREREQ(2.62)
 
 m4_define(xplayer_version_major, 1)
 m4_define(xplayer_version_minor, 0)
-m4_define(xplayer_version_micro, 1)
+m4_define(xplayer_version_micro, 2)
 
 AC_INIT([xplayer-pl-parser],
         [xplayer_version_major.xplayer_version_minor.xplayer_version_micro],
