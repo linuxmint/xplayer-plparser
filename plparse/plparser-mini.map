@@ -1,0 +1,9 @@
+LIBXPLAYER_PL_PARSER_MINI_1.0 {
+  global:
+    xplayer_pl_parser_can_parse_from_data; xplayer_pl_parser_can_parse_from_filename; xplayer_pl_parser_can_parse_from_uri;
+
+  local:
+    *;
+};
+
+

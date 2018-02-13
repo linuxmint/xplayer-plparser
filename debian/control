@@ -3,7 +3,7 @@ Section: libs
 Priority: optional
 Maintainer: Linux Mint <root@linuxmint.com>
 Build-Depends: debhelper (>= 8),
-               autotools-dev,
+               meson,
                cdbs (>= 0.4.90),
                gnome-pkg-tools,
                intltool (>= 0.35),
