@@ -4,7 +4,7 @@ project('xplayer-pl-parser', 'c',
           'buildtype=debugoptimized',
           'warning_level=1',
         ],
-        meson_version : '>= 0.40.1',
+        meson_version : '>= 0.37.1',
         license: 'LGPLv2.0+')
 
 # Before making a release, the plparser_lt_version string should be modified.
