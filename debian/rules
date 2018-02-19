@@ -1,11 +1,43 @@
 #!/usr/bin/make -f
 
-include /usr/share/cdbs/1/rules/debhelper.mk
-include /usr/share/cdbs/1/class/gnome.mk
 -include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
 
 libxplayer-plparserN := $(shell sed -rn 's/^Package:[[:space:]]*(libxplayer-plparser[0-9]+)[[:space:]]*$$/\1/p' debian/control)
 
-DEB_DH_MAKESHLIBS_ARGS_$(libxplayer-plparserN) += -V -- -c4
+# https://lists.debian.org/debian-devel/2017/09/msg00006.html
+# https://github.com/mesonbuild/meson/issues/2268
+export LC_ALL=C.UTF-8
 
-DEB_CONFIGURE_EXTRA_FLAGS += --enable-gtk-doc
+CONFIGURE_EXTRA_FLAGS = \
+		--prefix=/usr \
+		--libdir=/usr/lib \
+		-Denable-gtk-doc=true \
+		-Denable-libarchive=yes \
+		-Denable-libgcrypt=yes
+
+export LDFLAGS+=-Wl,-z,defs -Wl,-O1 -Wl,--as-needed
+
+
+%:
+	dh $@ --parallel --with gir
+
+override_dh_auto_configure:
+	mkdir -p build
+	meson build $(CONFIGURE_EXTRA_FLAGS)
+
+override_dh_auto_build:
+	ninja -C build
+
+override_dh_auto_test:
+	# ninja -C build test
+
+override_dh_strip:
+	dh_strip --dbg-package=libxplayer-plparser-dbg
+
+override_dh_auto_install:
+	DESTDIR=${CURDIR}/debian/tmp \
+	ninja -C build install
+
+override_dh_makeshlibs:
+	dh_makeshlibs -p $(libxplayer-plparserN) -V -- -c4
+	dh_makeshlibs --remaining-packages
