@@ -1,4 +1,4 @@
-/* 
+/*
    Copyright (C) 2007 Bastien Nocera <hadess@hadess.net>
 
    The Gnome Library is free software; you can redistribute it and/or
@@ -614,7 +614,7 @@ xplayer_pl_parser_load_http_itunes (const char *uri,
 	if (debug)
 		g_print ("Loading ITMS playlist '%s'\n", uri);
 
-	session = soup_session_sync_new_with_options (
+	session = soup_session_new_with_options (
 	    SOUP_SESSION_ADD_FEATURE_BY_TYPE, SOUP_TYPE_CONTENT_DECODER,
 	    SOUP_SESSION_USER_AGENT, "iTunes/10.0.0",
 	    SOUP_SESSION_ACCEPT_LANGUAGE_AUTO, TRUE,
@@ -910,4 +910,3 @@ xplayer_pl_parser_add_opml (XplayerPlParser *parser,
 }
 
 #endif /* !XPLAYER_PL_PARSER_MINI */
-
