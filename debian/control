@@ -10,7 +10,7 @@ Build-Depends: debhelper (>= 8),
                libxml-parser-perl,
                libglib2.0-dev (>= 2.31.0),
                libxml2-dev,
-               libgmime-2.6-dev,
+               libgmime-3.0-dev,
                libsoup-gnome2.4-dev (>= 2.43.0),
                libarchive-dev (>= 3.0),
                libgcrypt20-dev,
@@ -28,7 +28,7 @@ Depends: ${misc:Depends},
          gir1.2-xplayer-plparser-1.0 (= ${binary:Version}),
          libglib2.0-dev,
          libxml2-dev,
-         libgmime-2.6-dev,
+         libgmime-3.0-dev,
          libarchive-dev
 Replaces: libxplayer-plparser10
 Description: Xplayer Playlist Parser library - development files

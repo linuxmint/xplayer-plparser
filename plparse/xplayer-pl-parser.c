@@ -2337,7 +2337,7 @@ xplayer_pl_parser_parse_date (const char *date_str, gboolean debug)
 	}
 	D(g_message ("Failed to parse duration '%s' using the ISO8601 parser", date_str));
 	/* Fall back to RFC 2822 date parsing */
-	return g_mime_utils_header_decode_date (date_str, NULL);
+	return g_mime_utils_header_decode_date (date_str);
 #else
 	WARN_NO_GMIME;
 #endif /* HAVE_GMIME */

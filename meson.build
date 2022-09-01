@@ -148,11 +148,7 @@ if enable_gmime
        description: 'GMime 3.0 available in the system')
      pkgconf.set('GMIME', 'gmime-3.0')
    else
-     gmime_dep = dependency('gmime-2.6', required : false)
-     if not gmime_dep.found()
-       error('libgmime is required to compile xplayer-pl-parser.')
-     endif
-     pkgconf.set('GMIME', 'gmime-2.6')
+     error('libgmime is required to compile xplayer-pl-parser.')
    endif
    pkgconf.set('USEGMIME', 'yes')
    cdata.set('HAVE_GMIME', true,
