@@ -1,5 +1,5 @@
 project('xplayer-pl-parser', 'c',
-        version: '1.0.2', # Don't forget to also change plparser_lt_version!
+        version: '1.0.3', # Don't forget to also change plparser_lt_version!
         default_options: [
           'buildtype=debugoptimized',
           'warning_level=1',

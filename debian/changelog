@@ -1,3 +1,18 @@
+xplayer-pl-parser (1.0.3) vanessa; urgency=medium
+
+  [ Clement Lefebvre ]
+  * Remove hadess from MAINTAINERS
+  * Add CI configuration
+
+  [ Leigh Scott ]
+  * Port to meson (#3)
+
+  [ Clement Lefebvre ]
+  * CI: Update targets
+  * Bump gmime dependency to version 3.0
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 01 Sep 2022 20:03:58 +0100
+
 xplayer-pl-parser (1.0.2) sarah; urgency=medium
 
   [ gogogogi ]
